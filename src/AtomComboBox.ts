@@ -34,7 +34,7 @@ export default class Root extends AtomXFControl {
 
     public readonly items: AtomList<any> = new AtomList<any>();
 
-    public itemsSource: (fetchEvent: IFetchEvent) => Promise<any[]> | any[];
+    public itemsSource: (fetchEvent: IFetchEvent) => Promise<any[]> | any[] = null;
 
     public valueFunc: ((item: any) => any) = null;
 
