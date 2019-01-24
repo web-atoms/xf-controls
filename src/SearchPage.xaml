@@ -20,8 +20,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ContentView
-                        ControlTemplate="{ this.viewModel.comboBox.itemTemplate }"
-                        eventTapGesture="{{ () => this.viewModel.close($data) }">
+                        ControlTemplate="${ this.viewModel.comboBox.itemTemplate }"
+                        eventTapGesture="${ () => this.viewModel.close($data) }">
                     </ContentView>
                 </DataTemplate>
             </ListView.ItemTemplate>

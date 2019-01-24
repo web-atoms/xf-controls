@@ -160,7 +160,7 @@ export default class Root extends AtomXFControl {
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <ContentControl
+            <ContentView
                 x:Name="content"/>
         </Grid>`);
 
@@ -169,6 +169,6 @@ export default class Root extends AtomXFControl {
         const content = this.find("content");
 
         this.bind(content, "DataContext", [["this", "selectedItem"]], false, null, this);
-        this.bind(content, "ContentTemplate", [["this", "itemTemplate"]], false, null, this);
+        this.bind(content, "ControlTemplate", [["this", "itemTemplate"]], false, null, this);
     }
 }

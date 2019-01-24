@@ -71,11 +71,13 @@ function Root_e2_Creator(__creator: any): any {
 
                     
 
-                    this.loadXaml(`	<ContentView ControlTemplate="{ this.viewModel.comboBox.itemTemplate }" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e1"></ContentView>`);
+                    this.loadXaml(`	<ContentView xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e1"></ContentView>`);
 
                     
             const e1 = this.find("e1");
             
+                this.setPrimitiveValue(e1, "ControlTemplate",  this.viewModel.comboBox.itemTemplate );
+
             this.runAfterInit( () =>
             this.setLocalValue(e1, "eventTapGesture",  () => this.viewModel.close((this.data)) ) );
 
