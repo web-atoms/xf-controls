@@ -2,6 +2,7 @@
         xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:wa="clr-namespace:WebAtoms;assembly=WebAtoms"
         xmlns:SearchPageViewModel="js-import-def:~src/view-models/SearchPageViewModel"
         viewModel="${ this.resolve(SearchPageViewModel) }"
         Title="[$viewModel.title]">
@@ -19,10 +20,10 @@
             ItemsSource="[$viewModel.comboBox.items]">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ContentView
-                        ControlTemplate="${ this.viewModel.comboBox.itemTemplate }"
+                    <wa:AtomView
+                        DataTemplate="${ this.viewModel.comboBox.itemTemplate }"
                         eventTapGesture="${ () => this.viewModel.close($data) }">
-                    </ContentView>
+                    </wa:AtomView>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

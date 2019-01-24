@@ -154,13 +154,16 @@ export default class Root extends AtomXFControl {
     }
 
     protected createElement(): void {
-        this.loadXaml(`	<Grid xmlns:js="js-binder" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e2">
+        this.loadXaml(`	<Grid xmlns:js="js-binder"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:atom="clr-namespace:WebAtoms;assembly=WebAtoms"
+        x:Name="e2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <ContentView
+            <atom:AtomView
                 x:Name="content"/>
         </Grid>`);
 
@@ -169,6 +172,6 @@ export default class Root extends AtomXFControl {
         const content = this.find("content");
 
         this.bind(content, "DataContext", [["this", "selectedItem"]], false, null, this);
-        this.bind(content, "ControlTemplate", [["this", "itemTemplate"]], false, null, this);
+        this.bind(content, "DataTemplate", [["this", "itemTemplate"]], false, null, this);
     }
 }
