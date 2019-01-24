@@ -14,7 +14,7 @@ import ReferenceService from "web-atoms-core/dist/services/ReferenceService";
 
 export default class Root extends AtomXFControl {
 
-    public itemTemplate: IClassOf<AtomXFControl>;
+    public itemTemplate: IClassOf<AtomXFControl> = null;
 
     public itemHostTemplate: IClassOf<AtomXFControl> = SearchPage;
 
