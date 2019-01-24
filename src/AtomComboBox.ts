@@ -171,7 +171,7 @@ export default class Root extends AtomXFControl {
 
         const content = this.find("content");
 
-        this.bind(content, "DataContext", [["this", "selectedItem"]], false, null, this);
+        this.bind(content, "BindingContext", [["this", "selectedItem"]], false, null, this);
         this.bind(content, "DataTemplate", [["this", "itemTemplate"]], false, null, this);
     }
 }
