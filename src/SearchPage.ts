@@ -79,10 +79,11 @@ function Root_e2_Creator(__creator: any): any {
                     
             const e1 = this.find("e1");
             
-                this.setPrimitiveValue(e1, "DataTemplate",  this.viewModel.comboBox.itemTemplate );
+            this.runAfterInit( () =>
+            this.setLocalValue(e1, "DataTemplate",  (((this.viewModel) ? this.viewModel.comboBox : undefined) ? this.viewModel.comboBox.itemTemplate : undefined) ) );
 
             this.runAfterInit( () =>
-            this.setLocalValue(e1, "eventTapGesture",  () => this.viewModel.close((this.data)) ) );
+            this.setLocalValue(e1, "eventTapGesture",  () => (this.viewModel).close((this.data)) ) );
 
                 }
             }

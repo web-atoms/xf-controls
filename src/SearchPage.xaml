@@ -21,8 +21,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <wa:AtomView
-                        DataTemplate="${ this.viewModel.comboBox.itemTemplate }"
-                        eventTapGesture="${ () => this.viewModel.close($data) }">
+                        DataTemplate="${ $viewModel.comboBox.itemTemplate }"
+                        eventTapGesture="${ () => $viewModel.close($data) }">
                     </wa:AtomView>
                 </DataTemplate>
             </ListView.ItemTemplate>

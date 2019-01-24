@@ -75,13 +75,14 @@ export default class Root extends AtomXFControl {
             // tslint:disable-next-line:triple-equals
             if (e != "cancelled") {
                 // tslint:disable-next-line:no-console
-                console.warn(e);
+                console.error(e);
             }
         }
     }
 
     public onPropertyChanged(name: string): void {
         switch (name) {
+            case "itemsSource":
             case "searchText":
             case "value":
                 this.onSearchTextChanged();
