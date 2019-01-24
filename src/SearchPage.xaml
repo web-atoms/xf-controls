@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Entry
             Text="$[viewModel.comboBox.searchText]"
-            IsVisible="{ $viewModel.comboBox.searchEnabled }"
+            IsVisible="${ $viewModel.comboBox.searchEnabled }"
             />
         <ListView
             Grid.Row="1"

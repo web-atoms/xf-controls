@@ -13,7 +13,7 @@
 
                     
 
-                    this.loadXaml(`	<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e3">
+                    this.loadXaml(`	<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:wa="clr-namespace:WebAtoms;assembly=WebAtoms" x:Name="e3">
 	  
 	  <Grid>
 	    
@@ -25,7 +25,7 @@
 	      
 	    </Grid.RowDefinitions>
 	    
-	    <Entry IsVisible="{ $viewModel.comboBox.searchEnabled }" x:Name="e1"/>
+	    <Entry x:Name="e1"/>
 	    
 	    <ListView Grid.Row="1" x:Name="e2">
 	      
@@ -40,6 +40,9 @@
             const e1 = this.find("e1");
             
             this.bind(e1, "Text",  [["viewModel","comboBox","searchText"]], true  );
+
+            this.runAfterInit( () =>
+            this.setLocalValue(e1, "IsVisible",  (((this.viewModel) ? this.viewModel.comboBox : undefined) ? this.viewModel.comboBox.searchEnabled : undefined) ) );
 
 
             const e2 = this.find("e2");
@@ -67,16 +70,16 @@ function Root_e2_Creator(__creator: any): any {
                 protected create(): void {
                     super.create();
 
-                    this.element = this.createControl("Xamarin.Forms.ContentView");
+                    this.element = this.createControl("WebAtoms.AtomView");
 
                     
 
-                    this.loadXaml(`	<ContentView xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e1"></ContentView>`);
+                    this.loadXaml(`	<wa:AtomView xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:wa="clr-namespace:WebAtoms;assembly=WebAtoms" x:Name="e1"></wa:AtomView>`);
 
                     
             const e1 = this.find("e1");
             
-                this.setPrimitiveValue(e1, "ControlTemplate",  this.viewModel.comboBox.itemTemplate );
+                this.setPrimitiveValue(e1, "DataTemplate",  this.viewModel.comboBox.itemTemplate );
 
             this.runAfterInit( () =>
             this.setLocalValue(e1, "eventTapGesture",  () => this.viewModel.close((this.data)) ) );
