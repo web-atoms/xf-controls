@@ -65,7 +65,7 @@ export default class Root extends AtomXFControl {
 
             this.previousItem = this.selectedItem;
 
-            this.onSearchTextChanged();
+            this.onSearchTextChanged(true);
 
             const value = await ns.openPage(`app://class/${iht.key}`, {
                 "ref:comboBox": parent
@@ -87,7 +87,7 @@ export default class Root extends AtomXFControl {
             case "itemsSource":
             case "searchText":
             case "value":
-                this.onSearchTextChanged();
+                this.onSearchTextChanged(true);
                 break;
             case "selectedItem":
                 const si = this.selectedItem;
@@ -99,10 +99,12 @@ export default class Root extends AtomXFControl {
         }
     }
 
-    protected onSearchTextChanged(): void {
+    protected onSearchTextChanged(force: boolean = false): void {
 
-        if (this.lastSearchText === this.searchText) {
-            return;
+        if (!force) {
+            if (this.lastSearchText === this.searchText) {
+                return;
+            }
         }
 
         this.lastSearchText = this.searchText;
