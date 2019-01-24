@@ -19,10 +19,10 @@
             ItemsSource="[$viewModel.comboBox.items]">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ContentControl
-                        ContentTemplate="{ this.viewModel.comboBox.itemTemplate }"
+                    <ContentView
+                        ControlTemplate="{ this.viewModel.comboBox.itemTemplate }"
                         eventTapGesture="{{ () => this.viewModel.close($data) }">
-                    </ContentControl>
+                    </ContentView>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

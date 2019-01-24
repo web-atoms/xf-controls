@@ -67,11 +67,11 @@ function Root_e2_Creator(__creator: any): any {
                 protected create(): void {
                     super.create();
 
-                    this.element = this.createControl("Xamarin.Forms.ContentControl");
+                    this.element = this.createControl("Xamarin.Forms.ContentView");
 
                     
 
-                    this.loadXaml(`	<ContentControl ContentTemplate="{ this.viewModel.comboBox.itemTemplate }" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e1"></ContentControl>`);
+                    this.loadXaml(`	<ContentView ControlTemplate="{ this.viewModel.comboBox.itemTemplate }" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" x:Name="e1"></ContentView>`);
 
                     
             const e1 = this.find("e1");
