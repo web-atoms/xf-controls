@@ -65,6 +65,8 @@ export default class Root extends AtomXFControl {
 
             this.previousItem = this.selectedItem;
 
+            this.onSearchTextChanged();
+
             const value = await ns.openPage(`app://class/${iht.key}`, {
                 "ref:comboBox": parent
             });
