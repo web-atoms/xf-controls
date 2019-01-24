@@ -6,17 +6,22 @@
         xmlns:SearchPageViewModel="js-import-def:~src/view-models/SearchPageViewModel"
         viewModel="${ this.resolve(SearchPageViewModel) }"
         Title="[$viewModel.title]">
-    <Grid>
+    <Grid Margin="10" BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
         <Entry
             Text="$[viewModel.comboBox.searchText]"
             IsVisible="${ $viewModel.comboBox.searchEnabled }"
             />
         <ListView
             Grid.Row="1"
+            Grid.ColumnSpan="2"
             ItemsSource="[$viewModel.comboBox.items]">
             <ListView.ItemTemplate>
                 <DataTemplate>

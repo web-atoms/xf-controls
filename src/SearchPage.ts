@@ -15,7 +15,7 @@
 
                     this.loadXaml(`	<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:wa="clr-namespace:WebAtoms;assembly=WebAtoms" x:Name="e3">
 	  
-	  <Grid>
+	  <Grid Margin="10" BackgroundColor="White">
 	    
 	    <Grid.RowDefinitions>
 	      
@@ -25,9 +25,17 @@
 	      
 	    </Grid.RowDefinitions>
 	    
+	    <Grid.ColumnDefinitions>
+	      
+	      <ColumnDefinition/>
+	      
+	      <ColumnDefinition Width="Auto"/>
+	      
+	    </Grid.ColumnDefinitions>
+	    
 	    <Entry x:Name="e1"/>
 	    
-	    <ListView Grid.Row="1" x:Name="e2">
+	    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="e2">
 	      
 	      
 	    </ListView>
