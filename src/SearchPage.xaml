@@ -1,0 +1,30 @@
+<pages:PopupPage
+        xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:SearchPageViewModel="js-import-def:~src/view-models/SearchPageViewModel"
+        viewModel="${ this.resolve(SearchPageViewModel) }"
+        Title="[$viewModel.title]">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Entry
+            Text="$[viewModel.comboBox.searchText]"
+            IsVisible="{ $viewModel.comboBox.searchEnabled }"
+            />
+        <ListView
+            Grid.Row="1"
+            ItemsSource="[$viewModel.comboBox.items]">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl
+                        ContentTemplate="{ this.viewModel.comboBox.itemTemplate }"
+                        eventTapGesture="{{ () => this.viewModel.close($data) }">
+                    </ContentControl>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</pages:PopupPage>
