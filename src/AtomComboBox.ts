@@ -182,10 +182,10 @@ export default class Root extends AtomXFControl {
                 // console.log(`Creating ComboBox Template for ${s ? "Item" : "Label"}`);
                 return s ? it : lt;
             }, this);
-        // // tslint:disable-next-line:no-console
-        // console.log(`AtomComboBox: ${
-        //     this.itemTemplate !== undefined} ${
-        //    this.selectedItem !== undefined} ${this.labelTemplate !== undefined}`);
+        // tslint:disable-next-line:no-console
+        console.log(`AtomComboBox: ${
+            this.itemTemplate !== undefined} ${
+            this.selectedItem !== undefined} ${this.labelTemplate !== undefined}`);
         this.bind(this.element, "BindingContext", [["this", "selectedItem"]], false, null, this);
     }
 }
