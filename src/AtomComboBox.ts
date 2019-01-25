@@ -18,6 +18,8 @@ export default class Root extends AtomXFControl {
 
     public itemHostTemplate: IClassOf<AtomXFControl> = SearchPage;
 
+    public labelTemplate: IClassOf<AtomXFControl> = LabelTemplateCreator(this);
+
     @BindableProperty
     public selectedItem: any = null;
 
@@ -155,37 +157,31 @@ export default class Root extends AtomXFControl {
     }
 
     protected preCreate(): void {
-        this.element = this.createControl("Xamarin.Forms.Grid");
+        this.element = this.createControl("WebAtoms.AtomView");
     }
 
     protected createElement(): void {
-        this.loadXaml(`	<Grid xmlns:js="js-binder"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns="http://xamarin.com/schemas/2014/forms"
-        xmlns:atom="clr-namespace:WebAtoms;assembly=WebAtoms"
-        x:Name="e2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <atom:AtomView
-                x:Name="content"/>
-            <Label
-                x:Name="placeholder"
-                />
-        </Grid>`);
 
         this.setPrimitiveValue(this.element, "eventTapGesture", () => this.app.runAsync(() => this.openWindow()));
 
-        const content = this.find("content");
-
-        const placeholder = this.find("placeholder");
-
-        this.bind(placeholder, "Text", [["this", "label"]], false, null, this);
-        this.bind(placeholder, "IsVisible", [["this", "selectedItem"]], false, (v) => v ? true : false, this);
-
-        this.bind(content, "IsVisible", [["this", "selectedItem"]], false, (v) => !v ? true : false, this);
-        this.bind(content, "DataTemplate", [["this", "itemTemplate"]], false, null, this);
-        this.bind(content, "BindingContext", [["this", "selectedItem"]], false, null, this);
+        this.bind(this.element, "DataTemplate",
+            [["this", "selectedItem"],
+            ["this", "itemTemplate"],
+            ["this", "labelTemplate"]],
+            false, (s, it, lt) => s ? it : lt, this);
+        this.bind(this.element, "BindingContext", [["this", "selectedItem"]], false, null, this);
     }
+}
+
+// tslint:disable-next-line:variable-name
+function LabelTemplateCreator(__creator: any) {
+    return class LabelTemplate extends AtomXFControl {
+
+        public create(): void {
+            super.create();
+            this.element = this.createControl("Xamarin.Forms.Label");
+            this.bind(this.element, "Text", [["this", "label"]], false, null, __creator);
+        }
+
+    };
 }
