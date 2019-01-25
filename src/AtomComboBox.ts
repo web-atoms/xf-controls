@@ -27,7 +27,7 @@ export default class Root extends AtomXFControl {
     public value: any;
 
     @BindableProperty
-    public label: any;
+    public label: any = "Select";
 
     @BindableProperty
     public searchText: string = null;
@@ -170,12 +170,21 @@ export default class Root extends AtomXFControl {
             </Grid.ColumnDefinitions>
             <atom:AtomView
                 x:Name="content"/>
+            <Label
+                x:Name="placeholder"
+                />
         </Grid>`);
 
         this.setPrimitiveValue(this.element, "eventTapGesture", () => this.app.runAsync(() => this.openWindow()));
 
         const content = this.find("content");
 
+        const placeholder = this.find("placeholder");
+
+        this.bind(placeholder, "Text", [["this", "label"]], false, null, this);
+        this.bind(placeholder, "IsVisible", [["this", "selectedItem"]], false, (v) => v ? true : false, this);
+
+        this.bind(content, "IsVisible", [["this", "selectedItem"]], false, (v) => !v ? true : false, this);
         this.bind(content, "DataTemplate", [["this", "itemTemplate"]], false, null, this);
         this.bind(content, "BindingContext", [["this", "selectedItem"]], false, null, this);
     }
