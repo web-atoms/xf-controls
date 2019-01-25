@@ -23,7 +23,7 @@ export default class Root extends AtomXFControl {
     @BindableProperty
     public labelTemplate: IClassOf<AtomXFControl> = LabelTemplateCreator(this);
 
-    @BindableProperty
+    // @BindableProperty
     public selectedItem: any = null;
 
     public previousItem: any;
