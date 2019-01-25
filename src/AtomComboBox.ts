@@ -152,7 +152,7 @@ export default class Root extends AtomXFControl {
             }
 
             if (!this.selectedItem) {
-                this.selectedItem = this.items[0];
+                this.selectedItem = this.items[0] || null;
             }
 
         });
@@ -168,17 +168,17 @@ export default class Root extends AtomXFControl {
         this.setPrimitiveValue(this.element, "eventTapGesture", () => this.app.runAsync(() => this.openWindow()));
 
         this.bind(this.element, "DataTemplate",
-            [["this", "selectedItem"],
-            ["this", "itemTemplate"],
-            ["this", "labelTemplate"]],
+            [
+                ["this", "selectedItem"],
+                ["this", "itemTemplate"],
+                ["this", "labelTemplate"]
+            ],
             false, (s, it, lt) => {
                 // tslint:disable-next-line:no-console
                 console.log(`Creating ComboBox Template for ${s ? "Item" : "Label"}`);
                 return s ? it : lt;
             }, this);
         this.bind(this.element, "BindingContext", [["this", "selectedItem"]], false, null, this);
-        // tslint:disable-next-line:no-console
-        console.log(`Binding complete`);
     }
 }
 
