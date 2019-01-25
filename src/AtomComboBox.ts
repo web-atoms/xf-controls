@@ -177,6 +177,8 @@ export default class Root extends AtomXFControl {
                 return s ? it : lt;
             }, this);
         this.bind(this.element, "BindingContext", [["this", "selectedItem"]], false, null, this);
+        // tslint:disable-next-line:no-console
+        console.log(`Binding complete`);
     }
 }
 
