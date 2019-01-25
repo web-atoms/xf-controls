@@ -153,9 +153,9 @@ export default class Root extends AtomXFControl {
                 this.items.replace(items || []);
             }
 
-            if (!this.selectedItem) {
-                this.selectedItem = this.items[0] || null;
-            }
+            // if (!this.selectedItem) {
+            //     this.selectedItem = this.items[0] || null;
+            // }
 
         });
 
