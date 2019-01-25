@@ -55,10 +55,6 @@ export default class Root extends AtomXFControl {
         if (this.created) {
             return;
         }
-        // dirty hack..
-        if (this.selectedItem === undefined) {
-            this.selectedItem = null;
-        }
         this.createElement();
         this.created = true;
     }
@@ -171,6 +167,10 @@ export default class Root extends AtomXFControl {
 
         this.setPrimitiveValue(this.element, "eventTapGesture", () => this.app.runAsync(() => this.openWindow()));
 
+        // dirty hack..
+        if (this.selectedItem === undefined) {
+            this.selectedItem = null;
+        }
         this.bind(this.element, "DataTemplate",
             [
                 ["this", "selectedItem"],
