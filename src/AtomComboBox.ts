@@ -14,10 +14,13 @@ import ReferenceService from "web-atoms-core/dist/services/ReferenceService";
 
 export default class Root extends AtomXFControl {
 
+    @BindableProperty
     public itemTemplate: IClassOf<AtomXFControl> = null;
 
+    @BindableProperty
     public itemHostTemplate: IClassOf<AtomXFControl> = SearchPage;
 
+    @BindableProperty
     public labelTemplate: IClassOf<AtomXFControl> = LabelTemplateCreator(this);
 
     @BindableProperty
