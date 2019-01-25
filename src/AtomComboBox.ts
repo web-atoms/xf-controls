@@ -12,6 +12,8 @@ import { default as SearchPage } from "./SearchPage";
 
 import ReferenceService from "web-atoms-core/dist/services/ReferenceService";
 
+export type Factory = () => AtomXFControl;
+
 export default class Root extends AtomXFControl {
 
     @BindableProperty
@@ -21,7 +23,7 @@ export default class Root extends AtomXFControl {
     public itemHostTemplate: IClassOf<AtomXFControl> = SearchPage;
 
     @BindableProperty
-    public labelTemplate: IClassOf<AtomXFControl> = LabelTemplateCreator(this);
+    public labelTemplate: Factory = (() => new (LabelTemplateCreator(this))(this.app));
 
     // @BindableProperty
     public selectedItem: any = null;
@@ -178,14 +180,8 @@ export default class Root extends AtomXFControl {
                 ["this", "labelTemplate"]
             ],
             false, (s, it, lt) => {
-                // // tslint:disable-next-line:no-console
-                // console.log(`Creating ComboBox Template for ${s ? "Item" : "Label"}`);
                 return s ? it : lt;
             }, this);
-        // tslint:disable-next-line:no-console
-        console.log(`AtomComboBox: ${
-            this.itemTemplate !== undefined} ${
-            this.selectedItem !== undefined} ${this.labelTemplate !== undefined}`);
         this.bind(this.element, "BindingContext", [["this", "selectedItem"]], false, null, this);
     }
 }
