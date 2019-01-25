@@ -6,6 +6,10 @@
 
         export default class Root extends AtomXFControl {
 
+                
+
+                
+
                 protected create(): void {
                     super.create();
 
@@ -35,7 +39,7 @@
 	    
 	    <Entry x:Name="e1"/>
 	    
-	    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="e2">
+	    <ListView Grid.Row="1" Grid.ColumnSpan="2" CachingStrategy="RecycleElement" ItemsSource="{$viewModel.comboBox.items}" x:Name="e2">
 	      
 	      
 	    </ListView>
@@ -55,10 +59,8 @@
 
             const e2 = this.find("e2");
             
-            this.setTemplate(e2, "ItemTemplate", () => new (Root_e2_Creator(this))(this.app));
-            
-
-            this.bind(e2, "ItemsSource",  [["viewModel","comboBox","items"]], false , (v1) => (v1) );
+        this.setLocalValue(e2, "ItemTemplate", () => new (Root_e2_Creator(this))(this.app));
+        
 
 
             const e3 = this.find("e3");
@@ -74,6 +76,10 @@
 // template
 function Root_e2_Creator(__creator: any): any {
     return class Root_e2 extends AtomXFControl {
+
+                
+
+                
 
                 protected create(): void {
                     super.create();
