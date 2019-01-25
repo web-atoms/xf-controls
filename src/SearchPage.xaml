@@ -23,7 +23,7 @@
             Grid.Row="1"
             Grid.ColumnSpan="2"
             CachingStrategy="RecycleElement"
-            ItemsSource="{$viewModel.comboBox.items}">
+            ItemsSource="${$viewModel.comboBox.items}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <wa:AtomView

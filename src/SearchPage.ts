@@ -39,7 +39,7 @@
 	    
 	    <Entry x:Name="e1"/>
 	    
-	    <ListView Grid.Row="1" Grid.ColumnSpan="2" CachingStrategy="RecycleElement" ItemsSource="{$viewModel.comboBox.items}" x:Name="e2">
+	    <ListView Grid.Row="1" Grid.ColumnSpan="2" CachingStrategy="RecycleElement" x:Name="e2">
 	      
 	      
 	    </ListView>
@@ -61,6 +61,9 @@
             
         this.setLocalValue(e2, "ItemTemplate", () => new (Root_e2_Creator(this))(this.app));
         
+
+            this.runAfterInit( () =>
+            this.setLocalValue(e2, "ItemsSource", (((this.viewModel) ? this.viewModel.comboBox : undefined) ? this.viewModel.comboBox.items : undefined)) );
 
 
             const e3 = this.find("e3");
