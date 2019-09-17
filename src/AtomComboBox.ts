@@ -10,6 +10,8 @@ import { BindableProperty } from "web-atoms-core/dist/core/BindableProperty";
 
 import { default as SearchPage } from "./SearchPage";
 
+import { App } from "web-atoms-core/dist/App";
+import { AtomBridge } from "web-atoms-core/dist/core/AtomBridge";
 import ReferenceService from "web-atoms-core/dist/services/ReferenceService";
 
 export type Factory = () => AtomXFControl;
@@ -53,6 +55,10 @@ export default class Root extends AtomXFControl {
     private lastSearchText: string = undefined;
 
     private cancelToken: CancelToken = null;
+
+    constructor(app: App, e?: any) {
+        super(app, e || AtomBridge.instance.create("WebAtoms.AtomView"));
+    }
 
     public onUpdateUI() {
         if (this.created) {
@@ -162,10 +168,6 @@ export default class Root extends AtomXFControl {
 
     }
 
-    protected preCreate(): void {
-        this.element = this.createControl("WebAtoms.AtomView");
-    }
-
     protected createElement(): void {
 
         this.setPrimitiveValue(this.element, "eventTapGesture", () => this.app.runAsync(() => this.openWindow()));
@@ -191,9 +193,12 @@ export default class Root extends AtomXFControl {
 function LabelTemplateCreator(__creator: any) {
     return class LabelTemplate extends AtomXFControl {
 
+        constructor(app: App, e?: any) {
+            super(app, e || AtomBridge.instance.create("Xamarin.Forms.Label"));
+        }
+
         public create(): void {
             super.create();
-            this.element = this.createControl("Xamarin.Forms.Label");
             this.bind(this.element, "Text", [["this", "label"]], false, null, __creator);
         }
 
