@@ -2,7 +2,10 @@
 	import { AtomXFControl } from "web-atoms-core/dist/xf/controls/AtomXFControl";
 	import { AtomBridge } from "web-atoms-core/dist/core/AtomBridge";
 	import SearchPageViewModel from "./view-models/SearchPageViewModel";
+	declare var UMD: any;
+	const __moduleName = this.filename;
 	export default class Root extends AtomXFControl {
+		public static readonly _$_url = __moduleName ;
 		
 		constructor(app: any, e?: any) {
 			super(app, e || AtomBridge.instance.create("Rg.Plugins.Popup.Pages.PopupPage"));
