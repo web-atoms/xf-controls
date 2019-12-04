@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/web-atoms/xf-controls#readme",
   "dependencies": {
-    "web-atoms-core": "^1.0.908"
+    "@web-atoms/core": "^1.0.908"
   }
 }

@@ -1,6 +1,6 @@
 	// tslint:disable
-	import { AtomXFControl } from "web-atoms-core/dist/xf/controls/AtomXFControl";
-	import { AtomBridge } from "web-atoms-core/dist/core/AtomBridge";
+	import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+	import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 	import SearchPageViewModel from "./view-models/SearchPageViewModel";
 	declare var UMD: any;
 	const __moduleName = this.filename;

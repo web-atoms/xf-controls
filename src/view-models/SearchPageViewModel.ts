@@ -1,4 +1,4 @@
-import { AtomWindowViewModel } from "web-atoms-core/dist/view-model/AtomWindowViewModel";
+import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowViewModel";
 
 export default class SearchPageViewModel extends AtomWindowViewModel  {
 

@@ -1,18 +1,18 @@
-import { CancelToken, IClassOf } from "web-atoms-core/dist/core/types";
-import { NavigationService } from "web-atoms-core/dist/services/NavigationService";
-import { AtomXFControl } from "web-atoms-core/dist/xf/controls/AtomXFControl";
+import { CancelToken, IClassOf } from "@web-atoms/core/dist/core/types";
+import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
+import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 
-import { AtomList } from "web-atoms-core/dist/core/AtomList";
+import { AtomList } from "@web-atoms/core/dist/core/AtomList";
 
-import IFetchEvent from "web-atoms-core/dist/core/IFetchEvent";
+import IFetchEvent from "@web-atoms/core/dist/core/IFetchEvent";
 
-import { BindableProperty } from "web-atoms-core/dist/core/BindableProperty";
+import { BindableProperty } from "@web-atoms/core/dist/core/BindableProperty";
 
 import { default as SearchPage } from "./SearchPage";
 
-import { App } from "web-atoms-core/dist/App";
-import { AtomBridge } from "web-atoms-core/dist/core/AtomBridge";
-import ReferenceService from "web-atoms-core/dist/services/ReferenceService";
+import { App } from "@web-atoms/core/dist/App";
+import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import ReferenceService from "@web-atoms/core/dist/services/ReferenceService";
 
 export type Factory = () => AtomXFControl;
 
