@@ -17,18 +17,15 @@ export default class SearchPage extends AtomXFControl {
 		this.render(<PopupPage>
 			<Grid
 				margin="10"
-				backgroundColor="White"
-				rowDefinitions={
-				<RowDefinitionCollection>
+				backgroundColor="White">
+				<Grid.RowDefinitions>
 					<RowDefinition height="Auto"/>
 					<RowDefinition/>
-				</RowDefinitionCollection>}
-				columnDefinitions={
-					<ColumnDefinitionCollection>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
 					<ColumnDefinition/>
 					<ColumnDefinition width="Auto"/>
-					</ColumnDefinitionCollection>}
-				>
+				</Grid.ColumnDefinitions>
 				<Entry
 					text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}
 					isVisible={Bind.oneWay(() => this.viewModel.comboBox.searchEnabled)}/>
