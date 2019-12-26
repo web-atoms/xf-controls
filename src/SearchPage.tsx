@@ -2,7 +2,7 @@ import Bind from "@web-atoms/core/dist/core/xnode/Bind";
 import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { PopupPage } from "./controls/RgPluginsPopup";
-import { ColumnDefinition, Entry, Grid, ListView, RowDefinition } from "./controls/XF";
+import { ColumnDefinition, Entry, Grid, GridColumnSpan, GridRow, ListView, RowDefinition } from "./controls/XF";
 import SearchPageViewModel from "./view-models/SearchPageViewModel";
 
 export default class SearchPage extends AtomXFControl {
@@ -29,10 +29,7 @@ export default class SearchPage extends AtomXFControl {
 					text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}
 					isVisible={Bind.oneWay(() => this.viewModel.comboBox.searchEnabled)}/>
 				<ListView
-					{ ... {
-						"Grid.Row": 1,
-						"Grid.ColumnSpan": 2
-					}}
+					{ ... GridRow(1), GridColumnSpan(2) }
 					cachingStrategy="RecycleElement"
 					itemsSource={Bind.oneTime(() => this.viewModel.comboBox.items)}
 					itemTemplate={Bind.oneTime(() => this.viewModel.comboBox.itemTemplate)}/>
