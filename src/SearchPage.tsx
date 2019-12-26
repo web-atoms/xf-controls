@@ -3,7 +3,7 @@ import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { PopupPage } from "./controls/RgPluginsPopup";
 // tslint:disable-next-line: max-line-length
-import { ColumnDefinition, Entry, Grid, GridColumnSpan, GridRow, ListView, RowDefinition, ColumnDefinitionCollection, RowDefinitionCollection } from "./controls/XF";
+import { ColumnDefinition, ColumnDefinitionCollection, Entry, Grid, GridColumnSpan, GridRow, ListView, RowDefinition, RowDefinitionCollection } from "./controls/XF";
 import SearchPageViewModel from "./view-models/SearchPageViewModel";
 
 export default class SearchPage extends AtomXFControl {
