@@ -12,7 +12,9 @@
         "lib": [
             "es6",
             "dom"
-        ]
+        ],
+        "jsx": "react",
+        "jsxFactory": "XNode.create",
     },
     "include": [
         "src/**/*"
