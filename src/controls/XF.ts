@@ -142,14 +142,23 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
-    /** AbsoluteLayout */
-    export const AbsoluteLayout = XNode.prepare<IAbsoluteLayout>("Xamarin.Forms.AbsoluteLayout;Xamarin.Forms.Core");
     
+    export interface IAbsoluteLayoutConstructor {
+        (a?: Partial<IAbsoluteLayout>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty */
-    export function AbsoluteLayoutLayoutFlags(v) { return { "Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core": v  } }
+    LayoutFlags?(v: any): { "Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core": any  };
     
     /** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty */
-    export function AbsoluteLayoutLayoutBounds(v) { return { "Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core": v  } }
+    LayoutBounds?(v: any): { "Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core": any  }
+    }
+    
+    /** AbsoluteLayout */
+    export const AbsoluteLayout: IAbsoluteLayoutConstructor = XNode.prepare<IAbsoluteLayout>("Xamarin.Forms.AbsoluteLayout;Xamarin.Forms.Core");
+    
+    AbsoluteLayout.LayoutFlags = (v) => ({ "Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core": v  }) ;
+    
+    AbsoluteLayout.LayoutBounds = (v) => ({ "Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IActivityIndicator {
@@ -290,8 +299,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IActivityIndicatorConstructor {
+        (a?: Partial<IActivityIndicator>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ActivityIndicator */
-    export const ActivityIndicator = XNode.prepare<IActivityIndicator>("Xamarin.Forms.ActivityIndicator;Xamarin.Forms.Core");
+    export const ActivityIndicator: IActivityIndicatorConstructor = XNode.prepare<IActivityIndicator>("Xamarin.Forms.ActivityIndicator;Xamarin.Forms.Core");
     
     
     
@@ -331,8 +346,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IApplicationConstructor {
+        (a?: Partial<IApplication>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Application */
-    export const Application = XNode.prepare<IApplication>("Xamarin.Forms.Application;Xamarin.Forms.Core");
+    export const Application: IApplicationConstructor = XNode.prepare<IApplication>("Xamarin.Forms.Application;Xamarin.Forms.Core");
     
     
     
@@ -378,8 +399,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IAppLinkEntryConstructor {
+        (a?: Partial<IAppLinkEntry>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** AppLinkEntry */
-    export const AppLinkEntry = XNode.prepare<IAppLinkEntry>("Xamarin.Forms.AppLinkEntry;Xamarin.Forms.Core");
+    export const AppLinkEntry: IAppLinkEntryConstructor = XNode.prepare<IAppLinkEntry>("Xamarin.Forms.AppLinkEntry;Xamarin.Forms.Core");
     
     
     
@@ -410,8 +437,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IBaseMenuItemConstructor {
+        (a?: Partial<IBaseMenuItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** BaseMenuItem */
-    export const BaseMenuItem = XNode.prepare<IBaseMenuItem>("Xamarin.Forms.BaseMenuItem;Xamarin.Forms.Core");
+    export const BaseMenuItem: IBaseMenuItemConstructor = XNode.prepare<IBaseMenuItem>("Xamarin.Forms.BaseMenuItem;Xamarin.Forms.Core");
     
     
     
@@ -553,8 +586,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IBoxViewConstructor {
+        (a?: Partial<IBoxView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** BoxView */
-    export const BoxView = XNode.prepare<IBoxView>("Xamarin.Forms.BoxView;Xamarin.Forms.Core");
+    export const BoxView: IBoxViewConstructor = XNode.prepare<IBoxView>("Xamarin.Forms.BoxView;Xamarin.Forms.Core");
     
     
     
@@ -741,8 +780,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IButtonConstructor {
+        (a?: Partial<IButton>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Button */
-    export const Button = XNode.prepare<IButton>("Xamarin.Forms.Button;Xamarin.Forms.Core");
+    export const Button: IButtonConstructor = XNode.prepare<IButton>("Xamarin.Forms.Button;Xamarin.Forms.Core");
     
     
     
@@ -911,8 +956,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ICarouselPageConstructor {
+        (a?: Partial<ICarouselPage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** CarouselPage */
-    export const CarouselPage = XNode.prepare<ICarouselPage>("Xamarin.Forms.CarouselPage;Xamarin.Forms.Core");
+    export const CarouselPage: ICarouselPageConstructor = XNode.prepare<ICarouselPage>("Xamarin.Forms.CarouselPage;Xamarin.Forms.Core");
     
     
     
@@ -952,8 +1003,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface ICellConstructor {
+        (a?: Partial<ICell>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Cell */
-    export const Cell = XNode.prepare<ICell>("Xamarin.Forms.Cell;Xamarin.Forms.Core");
+    export const Cell: ICellConstructor = XNode.prepare<ICell>("Xamarin.Forms.Cell;Xamarin.Forms.Core");
     
     
     
@@ -1017,8 +1074,14 @@ export interface IAbsoluteLayout {
     xAlign?: any;
         [key: string]: any;
     }
+    
+    export interface IEntryCellConstructor {
+        (a?: Partial<IEntryCell>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** EntryCell */
-    export const EntryCell = XNode.prepare<IEntryCell>("Xamarin.Forms.EntryCell;Xamarin.Forms.Core");
+    export const EntryCell: IEntryCellConstructor = XNode.prepare<IEntryCell>("Xamarin.Forms.EntryCell;Xamarin.Forms.Core");
     
     
     
@@ -1079,8 +1142,14 @@ export interface IAbsoluteLayout {
     textColor?: any;
         [key: string]: any;
     }
+    
+    export interface IImageCellConstructor {
+        (a?: Partial<IImageCell>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ImageCell */
-    export const ImageCell = XNode.prepare<IImageCell>("Xamarin.Forms.ImageCell;Xamarin.Forms.Core");
+    export const ImageCell: IImageCellConstructor = XNode.prepare<IImageCell>("Xamarin.Forms.ImageCell;Xamarin.Forms.Core");
     
     
     
@@ -1129,8 +1198,14 @@ export interface IAbsoluteLayout {
     text?: any;
         [key: string]: any;
     }
+    
+    export interface ISwitchCellConstructor {
+        (a?: Partial<ISwitchCell>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SwitchCell */
-    export const SwitchCell = XNode.prepare<ISwitchCell>("Xamarin.Forms.SwitchCell;Xamarin.Forms.Core");
+    export const SwitchCell: ISwitchCellConstructor = XNode.prepare<ISwitchCell>("Xamarin.Forms.SwitchCell;Xamarin.Forms.Core");
     
     
     
@@ -1188,8 +1263,14 @@ export interface IAbsoluteLayout {
     textColor?: any;
         [key: string]: any;
     }
+    
+    export interface ITextCellConstructor {
+        (a?: Partial<ITextCell>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TextCell */
-    export const TextCell = XNode.prepare<ITextCell>("Xamarin.Forms.TextCell;Xamarin.Forms.Core");
+    export const TextCell: ITextCellConstructor = XNode.prepare<ITextCell>("Xamarin.Forms.TextCell;Xamarin.Forms.Core");
     
     
     
@@ -1232,8 +1313,14 @@ export interface IAbsoluteLayout {
     view?: any;
         [key: string]: any;
     }
+    
+    export interface IViewCellConstructor {
+        (a?: Partial<IViewCell>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ViewCell */
-    export const ViewCell = XNode.prepare<IViewCell>("Xamarin.Forms.ViewCell;Xamarin.Forms.Core");
+    export const ViewCell: IViewCellConstructor = XNode.prepare<IViewCell>("Xamarin.Forms.ViewCell;Xamarin.Forms.Core");
     
     
     
@@ -1375,8 +1462,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ICheckBoxConstructor {
+        (a?: Partial<ICheckBox>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** CheckBox */
-    export const CheckBox = XNode.prepare<ICheckBox>("Xamarin.Forms.CheckBox;Xamarin.Forms.Core");
+    export const CheckBox: ICheckBoxConstructor = XNode.prepare<ICheckBox>("Xamarin.Forms.CheckBox;Xamarin.Forms.Core");
     
     
     
@@ -1419,8 +1512,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IClickGestureRecognizerConstructor {
+        (a?: Partial<IClickGestureRecognizer>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ClickGestureRecognizer */
-    export const ClickGestureRecognizer = XNode.prepare<IClickGestureRecognizer>("Xamarin.Forms.ClickGestureRecognizer;Xamarin.Forms.Core");
+    export const ClickGestureRecognizer: IClickGestureRecognizerConstructor = XNode.prepare<IClickGestureRecognizer>("Xamarin.Forms.ClickGestureRecognizer;Xamarin.Forms.Core");
     
     
     
@@ -1436,8 +1535,14 @@ export interface IAbsoluteLayout {
     width?: any;
         [key: string]: any;
     }
+    
+    export interface IColumnDefinitionConstructor {
+        (a?: Partial<IColumnDefinition>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ColumnDefinition */
-    export const ColumnDefinition = XNode.prepare<IColumnDefinition>("Xamarin.Forms.ColumnDefinition;Xamarin.Forms.Core");
+    export const ColumnDefinition: IColumnDefinitionConstructor = XNode.prepare<IColumnDefinition>("Xamarin.Forms.ColumnDefinition;Xamarin.Forms.Core");
     
     
     
@@ -1447,8 +1552,14 @@ export interface IAbsoluteLayout {
     item?: any;
         [key: string]: any;
     }
+    
+    export interface IColumnDefinitionCollectionConstructor {
+        (a?: Partial<IColumnDefinitionCollection>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ColumnDefinitionCollection */
-    export const ColumnDefinitionCollection = XNode.prepare<IColumnDefinitionCollection>("Xamarin.Forms.ColumnDefinitionCollection;Xamarin.Forms.Core");
+    export const ColumnDefinitionCollection: IColumnDefinitionCollectionConstructor = XNode.prepare<IColumnDefinitionCollection>("Xamarin.Forms.ColumnDefinitionCollection;Xamarin.Forms.Core");
     
     
     
@@ -1611,8 +1722,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IContentPageConstructor {
+        (a?: Partial<IContentPage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ContentPage */
-    export const ContentPage = XNode.prepare<IContentPage>("Xamarin.Forms.ContentPage;Xamarin.Forms.Core");
+    export const ContentPage: IContentPageConstructor = XNode.prepare<IContentPage>("Xamarin.Forms.ContentPage;Xamarin.Forms.Core");
     
     
     
@@ -1760,8 +1877,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IContentPresenterConstructor {
+        (a?: Partial<IContentPresenter>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ContentPresenter */
-    export const ContentPresenter = XNode.prepare<IContentPresenter>("Xamarin.Forms.ContentPresenter;Xamarin.Forms.Core");
+    export const ContentPresenter: IContentPresenterConstructor = XNode.prepare<IContentPresenter>("Xamarin.Forms.ContentPresenter;Xamarin.Forms.Core");
     
     
     
@@ -1912,8 +2035,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IContentViewConstructor {
+        (a?: Partial<IContentView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ContentView */
-    export const ContentView = XNode.prepare<IContentView>("Xamarin.Forms.ContentView;Xamarin.Forms.Core");
+    export const ContentView: IContentViewConstructor = XNode.prepare<IContentView>("Xamarin.Forms.ContentView;Xamarin.Forms.Core");
     
     
     
@@ -2076,8 +2205,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IDatePickerConstructor {
+        (a?: Partial<IDatePicker>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** DatePicker */
-    export const DatePicker = XNode.prepare<IDatePicker>("Xamarin.Forms.DatePicker;Xamarin.Forms.Core");
+    export const DatePicker: IDatePickerConstructor = XNode.prepare<IDatePicker>("Xamarin.Forms.DatePicker;Xamarin.Forms.Core");
     
     
     
@@ -2255,8 +2390,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IEditorConstructor {
+        (a?: Partial<IEditor>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Editor */
-    export const Editor = XNode.prepare<IEditor>("Xamarin.Forms.Editor;Xamarin.Forms.Core");
+    export const Editor: IEditorConstructor = XNode.prepare<IEditor>("Xamarin.Forms.Editor;Xamarin.Forms.Core");
     
     
     
@@ -2290,11 +2431,18 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
-    /** Element */
-    export const Element = XNode.prepare<IElement>("Xamarin.Forms.Element;Xamarin.Forms.Core");
     
+    export interface IElementConstructor {
+        (a?: Partial<IElement>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property Element.Menu of Type BindableProperty */
-    export function ElementMenu(v) { return { "Xamarin.Forms.Element:Menu;Xamarin.Forms.Core": v  } }
+    Menu?(v: any): { "Xamarin.Forms.Element:Menu;Xamarin.Forms.Core": any  }
+    }
+    
+    /** Element */
+    export const Element: IElementConstructor = XNode.prepare<IElement>("Xamarin.Forms.Element;Xamarin.Forms.Core");
+    
+    Element.Menu = (v) => ({ "Xamarin.Forms.Element:Menu;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IEntry {
@@ -2495,8 +2643,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IEntryConstructor {
+        (a?: Partial<IEntry>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Entry */
-    export const Entry = XNode.prepare<IEntry>("Xamarin.Forms.Entry;Xamarin.Forms.Core");
+    export const Entry: IEntryConstructor = XNode.prepare<IEntry>("Xamarin.Forms.Entry;Xamarin.Forms.Core");
     
     
     
@@ -2530,8 +2684,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IFileImageSourceConstructor {
+        (a?: Partial<IFileImageSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** FileImageSource */
-    export const FileImageSource = XNode.prepare<IFileImageSource>("Xamarin.Forms.FileImageSource;Xamarin.Forms.Core");
+    export const FileImageSource: IFileImageSourceConstructor = XNode.prepare<IFileImageSource>("Xamarin.Forms.FileImageSource;Xamarin.Forms.Core");
     
     
     
@@ -2694,23 +2854,38 @@ export interface IAbsoluteLayout {
     wrap?: any;
         [key: string]: any;
     }
-    /** FlexLayout */
-    export const FlexLayout = XNode.prepare<IFlexLayout>("Xamarin.Forms.FlexLayout;Xamarin.Forms.Core");
     
+    export interface IFlexLayoutConstructor {
+        (a?: Partial<IFlexLayout>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property FlexLayout.Order of Type BindableProperty */
-    export function FlexLayoutOrder(v) { return { "Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core": v  } }
+    Order?(v: any): { "Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core": any  };
     
     /** Attached Property FlexLayout.Grow of Type BindableProperty */
-    export function FlexLayoutGrow(v) { return { "Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core": v  } }
+    Grow?(v: any): { "Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core": any  };
     
     /** Attached Property FlexLayout.Shrink of Type BindableProperty */
-    export function FlexLayoutShrink(v) { return { "Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core": v  } }
+    Shrink?(v: any): { "Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core": any  };
     
     /** Attached Property FlexLayout.AlignSelf of Type BindableProperty */
-    export function FlexLayoutAlignSelf(v) { return { "Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core": v  } }
+    AlignSelf?(v: any): { "Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core": any  };
     
     /** Attached Property FlexLayout.Basis of Type BindableProperty */
-    export function FlexLayoutBasis(v) { return { "Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core": v  } }
+    Basis?(v: any): { "Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core": any  }
+    }
+    
+    /** FlexLayout */
+    export const FlexLayout: IFlexLayoutConstructor = XNode.prepare<IFlexLayout>("Xamarin.Forms.FlexLayout;Xamarin.Forms.Core");
+    
+    FlexLayout.Order = (v) => ({ "Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core": v  }) ;
+    
+    FlexLayout.Grow = (v) => ({ "Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core": v  }) ;
+    
+    FlexLayout.Shrink = (v) => ({ "Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core": v  }) ;
+    
+    FlexLayout.AlignSelf = (v) => ({ "Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core": v  }) ;
+    
+    FlexLayout.Basis = (v) => ({ "Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IFontImageSource {
@@ -2752,8 +2927,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IFontImageSourceConstructor {
+        (a?: Partial<IFontImageSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** FontImageSource */
-    export const FontImageSource = XNode.prepare<IFontImageSource>("Xamarin.Forms.FontImageSource;Xamarin.Forms.Core");
+    export const FontImageSource: IFontImageSourceConstructor = XNode.prepare<IFontImageSource>("Xamarin.Forms.FontImageSource;Xamarin.Forms.Core");
     
     
     
@@ -2784,8 +2965,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IFormattedStringConstructor {
+        (a?: Partial<IFormattedString>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** FormattedString */
-    export const FormattedString = XNode.prepare<IFormattedString>("Xamarin.Forms.FormattedString;Xamarin.Forms.Core");
+    export const FormattedString: IFormattedStringConstructor = XNode.prepare<IFormattedString>("Xamarin.Forms.FormattedString;Xamarin.Forms.Core");
     
     
     
@@ -2948,8 +3135,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IFrameConstructor {
+        (a?: Partial<IFrame>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Frame */
-    export const Frame = XNode.prepare<IFrame>("Xamarin.Forms.Frame;Xamarin.Forms.Core");
+    export const Frame: IFrameConstructor = XNode.prepare<IFrame>("Xamarin.Forms.Frame;Xamarin.Forms.Core");
     
     
     
@@ -2980,8 +3173,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IGestureElementConstructor {
+        (a?: Partial<IGestureElement>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** GestureElement */
-    export const GestureElement = XNode.prepare<IGestureElement>("Xamarin.Forms.GestureElement;Xamarin.Forms.Core");
+    export const GestureElement: IGestureElementConstructor = XNode.prepare<IGestureElement>("Xamarin.Forms.GestureElement;Xamarin.Forms.Core");
     
     
     
@@ -3012,8 +3211,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IGestureRecognizerConstructor {
+        (a?: Partial<IGestureRecognizer>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** GestureRecognizer */
-    export const GestureRecognizer = XNode.prepare<IGestureRecognizer>("Xamarin.Forms.GestureRecognizer;Xamarin.Forms.Core");
+    export const GestureRecognizer: IGestureRecognizerConstructor = XNode.prepare<IGestureRecognizer>("Xamarin.Forms.GestureRecognizer;Xamarin.Forms.Core");
     
     
     
@@ -3170,20 +3375,33 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
-    /** Grid */
-    export const Grid = XNode.prepare<IGrid>("Xamarin.Forms.Grid;Xamarin.Forms.Core");
     
+    export interface IGridConstructor {
+        (a?: Partial<IGrid>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property Grid.Row of Type BindableProperty */
-    export function GridRow(v) { return { "Xamarin.Forms.Grid:Row;Xamarin.Forms.Core": v  } }
+    Row?(v: any): { "Xamarin.Forms.Grid:Row;Xamarin.Forms.Core": any  };
     
     /** Attached Property Grid.RowSpan of Type BindableProperty */
-    export function GridRowSpan(v) { return { "Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core": v  } }
+    RowSpan?(v: any): { "Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core": any  };
     
     /** Attached Property Grid.Column of Type BindableProperty */
-    export function GridColumn(v) { return { "Xamarin.Forms.Grid:Column;Xamarin.Forms.Core": v  } }
+    Column?(v: any): { "Xamarin.Forms.Grid:Column;Xamarin.Forms.Core": any  };
     
     /** Attached Property Grid.ColumnSpan of Type BindableProperty */
-    export function GridColumnSpan(v) { return { "Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core": v  } }
+    ColumnSpan?(v: any): { "Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core": any  }
+    }
+    
+    /** Grid */
+    export const Grid: IGridConstructor = XNode.prepare<IGrid>("Xamarin.Forms.Grid;Xamarin.Forms.Core");
+    
+    Grid.Row = (v) => ({ "Xamarin.Forms.Grid:Row;Xamarin.Forms.Core": v  }) ;
+    
+    Grid.RowSpan = (v) => ({ "Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core": v  }) ;
+    
+    Grid.Column = (v) => ({ "Xamarin.Forms.Grid:Column;Xamarin.Forms.Core": v  }) ;
+    
+    Grid.ColumnSpan = (v) => ({ "Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IHtmlWebViewSource {
@@ -3201,8 +3419,14 @@ export interface IAbsoluteLayout {
     html?: any;
         [key: string]: any;
     }
+    
+    export interface IHtmlWebViewSourceConstructor {
+        (a?: Partial<IHtmlWebViewSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** HtmlWebViewSource */
-    export const HtmlWebViewSource = XNode.prepare<IHtmlWebViewSource>("Xamarin.Forms.HtmlWebViewSource;Xamarin.Forms.Core");
+    export const HtmlWebViewSource: IHtmlWebViewSourceConstructor = XNode.prepare<IHtmlWebViewSource>("Xamarin.Forms.HtmlWebViewSource;Xamarin.Forms.Core");
     
     
     
@@ -3350,8 +3574,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IImageConstructor {
+        (a?: Partial<IImage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Image */
-    export const Image = XNode.prepare<IImage>("Xamarin.Forms.Image;Xamarin.Forms.Core");
+    export const Image: IImageConstructor = XNode.prepare<IImage>("Xamarin.Forms.Image;Xamarin.Forms.Core");
     
     
     
@@ -3514,8 +3744,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IImageButtonConstructor {
+        (a?: Partial<IImageButton>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ImageButton */
-    export const ImageButton = XNode.prepare<IImageButton>("Xamarin.Forms.ImageButton;Xamarin.Forms.Core");
+    export const ImageButton: IImageButtonConstructor = XNode.prepare<IImageButton>("Xamarin.Forms.ImageButton;Xamarin.Forms.Core");
     
     
     
@@ -3546,8 +3782,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IImageSourceConstructor {
+        (a?: Partial<IImageSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ImageSource */
-    export const ImageSource = XNode.prepare<IImageSource>("Xamarin.Forms.ImageSource;Xamarin.Forms.Core");
+    export const ImageSource: IImageSourceConstructor = XNode.prepare<IImageSource>("Xamarin.Forms.ImageSource;Xamarin.Forms.Core");
     
     
     
@@ -3728,11 +3970,18 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
-    /** IndicatorView */
-    export const IndicatorView = XNode.prepare<IIndicatorView>("Xamarin.Forms.IndicatorView;Xamarin.Forms.Core");
     
+    export interface IIndicatorViewConstructor {
+        (a?: Partial<IIndicatorView>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property IndicatorView.ItemsSourceBy of Type BindableProperty */
-    export function IndicatorViewItemsSourceBy(v) { return { "Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core": v  } }
+    ItemsSourceBy?(v: any): { "Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core": any  }
+    }
+    
+    /** IndicatorView */
+    export const IndicatorView: IIndicatorViewConstructor = XNode.prepare<IIndicatorView>("Xamarin.Forms.IndicatorView;Xamarin.Forms.Core");
+    
+    IndicatorView.ItemsSourceBy = (v) => ({ "Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IInputView {
@@ -3894,8 +4143,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IInputViewConstructor {
+        (a?: Partial<IInputView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** InputView */
-    export const InputView = XNode.prepare<IInputView>("Xamarin.Forms.InputView;Xamarin.Forms.Core");
+    export const InputView: IInputViewConstructor = XNode.prepare<IInputView>("Xamarin.Forms.InputView;Xamarin.Forms.Core");
     
     
     
@@ -3908,8 +4163,14 @@ export interface IAbsoluteLayout {
     dispatcher?: any;
         [key: string]: any;
     }
+    
+    export interface IBehaviorConstructor {
+        (a?: Partial<IBehavior>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Behavior */
-    export const Behavior = XNode.prepare<IBehavior>("Xamarin.Forms.Behavior;Xamarin.Forms.Core");
+    export const Behavior: IBehaviorConstructor = XNode.prepare<IBehavior>("Xamarin.Forms.Behavior;Xamarin.Forms.Core");
     
     
     
@@ -3928,8 +4189,14 @@ export interface IAbsoluteLayout {
     value?: any;
         [key: string]: any;
     }
+    
+    export interface IDataTriggerConstructor {
+        (a?: Partial<IDataTrigger>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** DataTrigger */
-    export const DataTrigger = XNode.prepare<IDataTrigger>("Xamarin.Forms.DataTrigger;Xamarin.Forms.Core");
+    export const DataTrigger: IDataTriggerConstructor = XNode.prepare<IDataTrigger>("Xamarin.Forms.DataTrigger;Xamarin.Forms.Core");
     
     
     
@@ -3945,8 +4212,14 @@ export interface IAbsoluteLayout {
     event?: any;
         [key: string]: any;
     }
+    
+    export interface IEventTriggerConstructor {
+        (a?: Partial<IEventTrigger>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** EventTrigger */
-    export const EventTrigger = XNode.prepare<IEventTrigger>("Xamarin.Forms.EventTrigger;Xamarin.Forms.Core");
+    export const EventTrigger: IEventTriggerConstructor = XNode.prepare<IEventTrigger>("Xamarin.Forms.EventTrigger;Xamarin.Forms.Core");
     
     
     
@@ -3959,8 +4232,14 @@ export interface IAbsoluteLayout {
     dispatcher?: any;
         [key: string]: any;
     }
+    
+    export interface IMultiTriggerConstructor {
+        (a?: Partial<IMultiTrigger>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** MultiTrigger */
-    export const MultiTrigger = XNode.prepare<IMultiTrigger>("Xamarin.Forms.MultiTrigger;Xamarin.Forms.Core");
+    export const MultiTrigger: IMultiTriggerConstructor = XNode.prepare<IMultiTrigger>("Xamarin.Forms.MultiTrigger;Xamarin.Forms.Core");
     
     
     
@@ -3979,8 +4258,14 @@ export interface IAbsoluteLayout {
     value?: any;
         [key: string]: any;
     }
+    
+    export interface ITriggerConstructor {
+        (a?: Partial<ITrigger>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Trigger */
-    export const Trigger = XNode.prepare<ITrigger>("Xamarin.Forms.Trigger;Xamarin.Forms.Core");
+    export const Trigger: ITriggerConstructor = XNode.prepare<ITrigger>("Xamarin.Forms.Trigger;Xamarin.Forms.Core");
     
     
     
@@ -3996,8 +4281,14 @@ export interface IAbsoluteLayout {
     isSealed?: any;
         [key: string]: any;
     }
+    
+    export interface ITriggerBaseConstructor {
+        (a?: Partial<ITriggerBase>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TriggerBase */
-    export const TriggerBase = XNode.prepare<ITriggerBase>("Xamarin.Forms.TriggerBase;Xamarin.Forms.Core");
+    export const TriggerBase: ITriggerBaseConstructor = XNode.prepare<ITriggerBase>("Xamarin.Forms.TriggerBase;Xamarin.Forms.Core");
     
     
     
@@ -4199,8 +4490,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ICarouselViewConstructor {
+        (a?: Partial<ICarouselView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** CarouselView */
-    export const CarouselView = XNode.prepare<ICarouselView>("Xamarin.Forms.CarouselView;Xamarin.Forms.Core");
+    export const CarouselView: ICarouselViewConstructor = XNode.prepare<ICarouselView>("Xamarin.Forms.CarouselView;Xamarin.Forms.Core");
     
     
     
@@ -4408,8 +4705,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ICollectionViewConstructor {
+        (a?: Partial<ICollectionView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** CollectionView */
-    export const CollectionView = XNode.prepare<ICollectionView>("Xamarin.Forms.CollectionView;Xamarin.Forms.Core");
+    export const CollectionView: ICollectionViewConstructor = XNode.prepare<ICollectionView>("Xamarin.Forms.CollectionView;Xamarin.Forms.Core");
     
     
     
@@ -4437,8 +4740,14 @@ export interface IAbsoluteLayout {
     verticalItemSpacing?: any;
         [key: string]: any;
     }
+    
+    export interface IGridItemsLayoutConstructor {
+        (a?: Partial<IGridItemsLayout>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** GridItemsLayout */
-    export const GridItemsLayout = XNode.prepare<IGridItemsLayout>("Xamarin.Forms.GridItemsLayout;Xamarin.Forms.Core");
+    export const GridItemsLayout: IGridItemsLayoutConstructor = XNode.prepare<IGridItemsLayout>("Xamarin.Forms.GridItemsLayout;Xamarin.Forms.Core");
     
     
     
@@ -4646,8 +4955,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IGroupableItemsViewConstructor {
+        (a?: Partial<IGroupableItemsView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** GroupableItemsView */
-    export const GroupableItemsView = XNode.prepare<IGroupableItemsView>("Xamarin.Forms.GroupableItemsView;Xamarin.Forms.Core");
+    export const GroupableItemsView: IGroupableItemsViewConstructor = XNode.prepare<IGroupableItemsView>("Xamarin.Forms.GroupableItemsView;Xamarin.Forms.Core");
     
     
     
@@ -4666,8 +4981,14 @@ export interface IAbsoluteLayout {
     snapPointsType?: any;
         [key: string]: any;
     }
+    
+    export interface IItemsLayoutConstructor {
+        (a?: Partial<IItemsLayout>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ItemsLayout */
-    export const ItemsLayout = XNode.prepare<IItemsLayout>("Xamarin.Forms.ItemsLayout;Xamarin.Forms.Core");
+    export const ItemsLayout: IItemsLayoutConstructor = XNode.prepare<IItemsLayout>("Xamarin.Forms.ItemsLayout;Xamarin.Forms.Core");
     
     
     
@@ -4833,8 +5154,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IItemsViewConstructor {
+        (a?: Partial<IItemsView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ItemsView */
-    export const ItemsView = XNode.prepare<IItemsView>("Xamarin.Forms.ItemsView;Xamarin.Forms.Core");
+    export const ItemsView: IItemsViewConstructor = XNode.prepare<IItemsView>("Xamarin.Forms.ItemsView;Xamarin.Forms.Core");
     
     
     
@@ -4856,8 +5183,14 @@ export interface IAbsoluteLayout {
     snapPointsType?: any;
         [key: string]: any;
     }
+    
+    export interface ILinearItemsLayoutConstructor {
+        (a?: Partial<ILinearItemsLayout>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** LinearItemsLayout */
-    export const LinearItemsLayout = XNode.prepare<ILinearItemsLayout>("Xamarin.Forms.LinearItemsLayout;Xamarin.Forms.Core");
+    export const LinearItemsLayout: ILinearItemsLayoutConstructor = XNode.prepare<ILinearItemsLayout>("Xamarin.Forms.LinearItemsLayout;Xamarin.Forms.Core");
     
     
     
@@ -5056,8 +5389,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ISelectableItemsViewConstructor {
+        (a?: Partial<ISelectableItemsView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SelectableItemsView */
-    export const SelectableItemsView = XNode.prepare<ISelectableItemsView>("Xamarin.Forms.SelectableItemsView;Xamarin.Forms.Core");
+    export const SelectableItemsView: ISelectableItemsViewConstructor = XNode.prepare<ISelectableItemsView>("Xamarin.Forms.SelectableItemsView;Xamarin.Forms.Core");
     
     
     
@@ -5241,8 +5580,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IStructuredItemsViewConstructor {
+        (a?: Partial<IStructuredItemsView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** StructuredItemsView */
-    export const StructuredItemsView = XNode.prepare<IStructuredItemsView>("Xamarin.Forms.StructuredItemsView;Xamarin.Forms.Core");
+    export const StructuredItemsView: IStructuredItemsViewConstructor = XNode.prepare<IStructuredItemsView>("Xamarin.Forms.StructuredItemsView;Xamarin.Forms.Core");
     
     
     
@@ -5432,8 +5777,14 @@ export interface IAbsoluteLayout {
     yAlign?: any;
         [key: string]: any;
     }
+    
+    export interface ILabelConstructor {
+        (a?: Partial<ILabel>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Label */
-    export const Label = XNode.prepare<ILabel>("Xamarin.Forms.Label;Xamarin.Forms.Core");
+    export const Label: ILabelConstructor = XNode.prepare<ILabel>("Xamarin.Forms.Label;Xamarin.Forms.Core");
     
     
     
@@ -5578,8 +5929,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ILayoutConstructor {
+        (a?: Partial<ILayout>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Layout */
-    export const Layout = XNode.prepare<ILayout>("Xamarin.Forms.Layout;Xamarin.Forms.Core");
+    export const Layout: ILayoutConstructor = XNode.prepare<ILayout>("Xamarin.Forms.Layout;Xamarin.Forms.Core");
     
     
     
@@ -5787,8 +6144,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IListViewConstructor {
+        (a?: Partial<IListView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ListView */
-    export const ListView = XNode.prepare<IListView>("Xamarin.Forms.ListView;Xamarin.Forms.Core");
+    export const ListView: IListViewConstructor = XNode.prepare<IListView>("Xamarin.Forms.ListView;Xamarin.Forms.Core");
     
     
     
@@ -5969,8 +6332,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IMasterDetailPageConstructor {
+        (a?: Partial<IMasterDetailPage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** MasterDetailPage */
-    export const MasterDetailPage = XNode.prepare<IMasterDetailPage>("Xamarin.Forms.MasterDetailPage;Xamarin.Forms.Core");
+    export const MasterDetailPage: IMasterDetailPageConstructor = XNode.prepare<IMasterDetailPage>("Xamarin.Forms.MasterDetailPage;Xamarin.Forms.Core");
     
     
     
@@ -6007,8 +6376,14 @@ export interface IAbsoluteLayout {
     text?: any;
         [key: string]: any;
     }
+    
+    export interface IMenuConstructor {
+        (a?: Partial<IMenu>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Menu */
-    export const Menu = XNode.prepare<IMenu>("Xamarin.Forms.Menu;Xamarin.Forms.Core");
+    export const Menu: IMenuConstructor = XNode.prepare<IMenu>("Xamarin.Forms.Menu;Xamarin.Forms.Core");
     
     
     
@@ -6060,11 +6435,18 @@ export interface IAbsoluteLayout {
     text?: any;
         [key: string]: any;
     }
-    /** MenuItem */
-    export const MenuItem = XNode.prepare<IMenuItem>("Xamarin.Forms.MenuItem;Xamarin.Forms.Core");
     
+    export interface IMenuItemConstructor {
+        (a?: Partial<IMenuItem>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property MenuItem.Accelerator of Type BindableProperty */
-    export function MenuItemAccelerator(v) { return { "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": v  } }
+    Accelerator?(v: any): { "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": any  }
+    }
+    
+    /** MenuItem */
+    export const MenuItem: IMenuItemConstructor = XNode.prepare<IMenuItem>("Xamarin.Forms.MenuItem;Xamarin.Forms.Core");
+    
+    MenuItem.Accelerator = (v) => ({ "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": v  }) ;
     
     
     export interface INavigationPage {
@@ -6235,26 +6617,43 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
-    /** NavigationPage */
-    export const NavigationPage = XNode.prepare<INavigationPage>("Xamarin.Forms.NavigationPage;Xamarin.Forms.Core");
     
+    export interface INavigationPageConstructor {
+        (a?: Partial<INavigationPage>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property NavigationPage.BackButtonTitle of Type BindableProperty */
-    export function NavigationPageBackButtonTitle(v) { return { "Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core": v  } }
+    BackButtonTitle?(v: any): { "Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core": any  };
     
     /** Attached Property NavigationPage.HasNavigationBar of Type BindableProperty */
-    export function NavigationPageHasNavigationBar(v) { return { "Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core": v  } }
+    HasNavigationBar?(v: any): { "Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core": any  };
     
     /** Attached Property NavigationPage.HasBackButton of Type BindableProperty */
-    export function NavigationPageHasBackButton(v) { return { "Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core": v  } }
+    HasBackButton?(v: any): { "Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core": any  };
     
     /** Attached Property NavigationPage.TitleIconImageSource of Type BindableProperty */
-    export function NavigationPageTitleIconImageSource(v) { return { "Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core": v  } }
+    TitleIconImageSource?(v: any): { "Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core": any  };
     
     /** Attached Property NavigationPage.TitleIcon of Type BindableProperty */
-    export function NavigationPageTitleIcon(v) { return { "Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core": v  } }
+    TitleIcon?(v: any): { "Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core": any  };
     
     /** Attached Property NavigationPage.TitleView of Type BindableProperty */
-    export function NavigationPageTitleView(v) { return { "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": v  } }
+    TitleView?(v: any): { "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": any  }
+    }
+    
+    /** NavigationPage */
+    export const NavigationPage: INavigationPageConstructor = XNode.prepare<INavigationPage>("Xamarin.Forms.NavigationPage;Xamarin.Forms.Core");
+    
+    NavigationPage.BackButtonTitle = (v) => ({ "Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core": v  }) ;
+    
+    NavigationPage.HasNavigationBar = (v) => ({ "Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core": v  }) ;
+    
+    NavigationPage.HasBackButton = (v) => ({ "Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core": v  }) ;
+    
+    NavigationPage.TitleIconImageSource = (v) => ({ "Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core": v  }) ;
+    
+    NavigationPage.TitleIcon = (v) => ({ "Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core": v  }) ;
+    
+    NavigationPage.TitleView = (v) => ({ "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IOpenGLView {
@@ -6395,8 +6794,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IOpenGLViewConstructor {
+        (a?: Partial<IOpenGLView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** OpenGLView */
-    export const OpenGLView = XNode.prepare<IOpenGLView>("Xamarin.Forms.OpenGLView;Xamarin.Forms.Core");
+    export const OpenGLView: IOpenGLViewConstructor = XNode.prepare<IOpenGLView>("Xamarin.Forms.OpenGLView;Xamarin.Forms.Core");
     
     
     
@@ -6553,8 +6958,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IPageConstructor {
+        (a?: Partial<IPage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Page */
-    export const Page = XNode.prepare<IPage>("Xamarin.Forms.Page;Xamarin.Forms.Core");
+    export const Page: IPageConstructor = XNode.prepare<IPage>("Xamarin.Forms.Page;Xamarin.Forms.Core");
     
     
     
@@ -6588,8 +6999,14 @@ export interface IAbsoluteLayout {
     touchPoints?: any;
         [key: string]: any;
     }
+    
+    export interface IPanGestureRecognizerConstructor {
+        (a?: Partial<IPanGestureRecognizer>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** PanGestureRecognizer */
-    export const PanGestureRecognizer = XNode.prepare<IPanGestureRecognizer>("Xamarin.Forms.PanGestureRecognizer;Xamarin.Forms.Core");
+    export const PanGestureRecognizer: IPanGestureRecognizerConstructor = XNode.prepare<IPanGestureRecognizer>("Xamarin.Forms.PanGestureRecognizer;Xamarin.Forms.Core");
     
     
     
@@ -6758,8 +7175,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IPickerConstructor {
+        (a?: Partial<IPicker>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Picker */
-    export const Picker = XNode.prepare<IPicker>("Xamarin.Forms.Picker;Xamarin.Forms.Core");
+    export const Picker: IPickerConstructor = XNode.prepare<IPicker>("Xamarin.Forms.Picker;Xamarin.Forms.Core");
     
     
     
@@ -6793,8 +7216,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IPinchGestureRecognizerConstructor {
+        (a?: Partial<IPinchGestureRecognizer>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** PinchGestureRecognizer */
-    export const PinchGestureRecognizer = XNode.prepare<IPinchGestureRecognizer>("Xamarin.Forms.PinchGestureRecognizer;Xamarin.Forms.Core");
+    export const PinchGestureRecognizer: IPinchGestureRecognizerConstructor = XNode.prepare<IPinchGestureRecognizer>("Xamarin.Forms.PinchGestureRecognizer;Xamarin.Forms.Core");
     
     
     
@@ -6936,8 +7365,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IProgressBarConstructor {
+        (a?: Partial<IProgressBar>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ProgressBar */
-    export const ProgressBar = XNode.prepare<IProgressBar>("Xamarin.Forms.ProgressBar;Xamarin.Forms.Core");
+    export const ProgressBar: IProgressBarConstructor = XNode.prepare<IProgressBar>("Xamarin.Forms.ProgressBar;Xamarin.Forms.Core");
     
     
     
@@ -7100,8 +7535,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IRefreshViewConstructor {
+        (a?: Partial<IRefreshView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** RefreshView */
-    export const RefreshView = XNode.prepare<IRefreshView>("Xamarin.Forms.RefreshView;Xamarin.Forms.Core");
+    export const RefreshView: IRefreshViewConstructor = XNode.prepare<IRefreshView>("Xamarin.Forms.RefreshView;Xamarin.Forms.Core");
     
     
     
@@ -7246,23 +7687,38 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
-    /** RelativeLayout */
-    export const RelativeLayout = XNode.prepare<IRelativeLayout>("Xamarin.Forms.RelativeLayout;Xamarin.Forms.Core");
     
+    export interface IRelativeLayoutConstructor {
+        (a?: Partial<IRelativeLayout>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property RelativeLayout.XConstraint of Type BindableProperty */
-    export function RelativeLayoutXConstraint(v) { return { "Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core": v  } }
+    XConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core": any  };
     
     /** Attached Property RelativeLayout.YConstraint of Type BindableProperty */
-    export function RelativeLayoutYConstraint(v) { return { "Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core": v  } }
+    YConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core": any  };
     
     /** Attached Property RelativeLayout.WidthConstraint of Type BindableProperty */
-    export function RelativeLayoutWidthConstraint(v) { return { "Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core": v  } }
+    WidthConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core": any  };
     
     /** Attached Property RelativeLayout.HeightConstraint of Type BindableProperty */
-    export function RelativeLayoutHeightConstraint(v) { return { "Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core": v  } }
+    HeightConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core": any  };
     
     /** Attached Property RelativeLayout.BoundsConstraint of Type BindableProperty */
-    export function RelativeLayoutBoundsConstraint(v) { return { "Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core": v  } }
+    BoundsConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core": any  }
+    }
+    
+    /** RelativeLayout */
+    export const RelativeLayout: IRelativeLayoutConstructor = XNode.prepare<IRelativeLayout>("Xamarin.Forms.RelativeLayout;Xamarin.Forms.Core");
+    
+    RelativeLayout.XConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core": v  }) ;
+    
+    RelativeLayout.YConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core": v  }) ;
+    
+    RelativeLayout.WidthConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core": v  }) ;
+    
+    RelativeLayout.HeightConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core": v  }) ;
+    
+    RelativeLayout.BoundsConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IRowDefinition {
@@ -7277,8 +7733,14 @@ export interface IAbsoluteLayout {
     height?: any;
         [key: string]: any;
     }
+    
+    export interface IRowDefinitionConstructor {
+        (a?: Partial<IRowDefinition>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** RowDefinition */
-    export const RowDefinition = XNode.prepare<IRowDefinition>("Xamarin.Forms.RowDefinition;Xamarin.Forms.Core");
+    export const RowDefinition: IRowDefinitionConstructor = XNode.prepare<IRowDefinition>("Xamarin.Forms.RowDefinition;Xamarin.Forms.Core");
     
     
     
@@ -7288,8 +7750,14 @@ export interface IAbsoluteLayout {
     item?: any;
         [key: string]: any;
     }
+    
+    export interface IRowDefinitionCollectionConstructor {
+        (a?: Partial<IRowDefinitionCollection>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** RowDefinitionCollection */
-    export const RowDefinitionCollection = XNode.prepare<IRowDefinitionCollection>("Xamarin.Forms.RowDefinitionCollection;Xamarin.Forms.Core");
+    export const RowDefinitionCollection: IRowDefinitionCollectionConstructor = XNode.prepare<IRowDefinitionCollection>("Xamarin.Forms.RowDefinitionCollection;Xamarin.Forms.Core");
     
     
     
@@ -7458,8 +7926,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IScrollViewConstructor {
+        (a?: Partial<IScrollView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ScrollView */
-    export const ScrollView = XNode.prepare<IScrollView>("Xamarin.Forms.ScrollView;Xamarin.Forms.Core");
+    export const ScrollView: IScrollViewConstructor = XNode.prepare<IScrollView>("Xamarin.Forms.ScrollView;Xamarin.Forms.Core");
     
     
     
@@ -7646,8 +8120,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ISearchBarConstructor {
+        (a?: Partial<ISearchBar>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SearchBar */
-    export const SearchBar = XNode.prepare<ISearchBar>("Xamarin.Forms.SearchBar;Xamarin.Forms.Core");
+    export const SearchBar: ISearchBarConstructor = XNode.prepare<ISearchBar>("Xamarin.Forms.SearchBar;Xamarin.Forms.Core");
     
     
     
@@ -7675,8 +8155,14 @@ export interface IAbsoluteLayout {
     textOverride?: any;
         [key: string]: any;
     }
+    
+    export interface IBackButtonBehaviorConstructor {
+        (a?: Partial<IBackButtonBehavior>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** BackButtonBehavior */
-    export const BackButtonBehavior = XNode.prepare<IBackButtonBehavior>("Xamarin.Forms.BackButtonBehavior;Xamarin.Forms.Core");
+    export const BackButtonBehavior: IBackButtonBehaviorConstructor = XNode.prepare<IBackButtonBehavior>("Xamarin.Forms.BackButtonBehavior;Xamarin.Forms.Core");
     
     
     
@@ -7740,8 +8226,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IBaseShellItemConstructor {
+        (a?: Partial<IBaseShellItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** BaseShellItem */
-    export const BaseShellItem = XNode.prepare<IBaseShellItem>("Xamarin.Forms.BaseShellItem;Xamarin.Forms.Core");
+    export const BaseShellItem: IBaseShellItemConstructor = XNode.prepare<IBaseShellItem>("Xamarin.Forms.BaseShellItem;Xamarin.Forms.Core");
     
     
     
@@ -7784,8 +8276,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface INavigableElementConstructor {
+        (a?: Partial<INavigableElement>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** NavigableElement */
-    export const NavigableElement = XNode.prepare<INavigableElement>("Xamarin.Forms.NavigableElement;Xamarin.Forms.Core");
+    export const NavigableElement: INavigableElementConstructor = XNode.prepare<INavigableElement>("Xamarin.Forms.NavigableElement;Xamarin.Forms.Core");
     
     
     
@@ -7897,8 +8395,14 @@ export interface IAbsoluteLayout {
     verticalTextAlignment?: any;
         [key: string]: any;
     }
+    
+    export interface ISearchHandlerConstructor {
+        (a?: Partial<ISearchHandler>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SearchHandler */
-    export const SearchHandler = XNode.prepare<ISearchHandler>("Xamarin.Forms.SearchHandler;Xamarin.Forms.Core");
+    export const SearchHandler: ISearchHandlerConstructor = XNode.prepare<ISearchHandler>("Xamarin.Forms.SearchHandler;Xamarin.Forms.Core");
     
     
     
@@ -8094,65 +8598,108 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
-    /** Shell */
-    export const Shell = XNode.prepare<IShell>("Xamarin.Forms.Shell;Xamarin.Forms.Core");
     
+    export interface IShellConstructor {
+        (a?: Partial<IShell>, ... nodes: XNode[]): XNode;
+        
     /** Attached Property Shell.BackButtonBehavior of Type BindableProperty */
-    export function ShellBackButtonBehavior(v) { return { "Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core": v  } }
+    BackButtonBehavior?(v: any): { "Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.FlyoutBehavior of Type BindableProperty */
-    export function ShellFlyoutBehavior(v) { return { "Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core": v  } }
+    FlyoutBehavior?(v: any): { "Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.NavBarIsVisible of Type BindableProperty */
-    export function ShellNavBarIsVisible(v) { return { "Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core": v  } }
+    NavBarIsVisible?(v: any): { "Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.NavBarHasShadow of Type BindableProperty */
-    export function ShellNavBarHasShadow(v) { return { "Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core": v  } }
+    NavBarHasShadow?(v: any): { "Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.SearchHandler of Type BindableProperty */
-    export function ShellSearchHandler(v) { return { "Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core": v  } }
+    SearchHandler?(v: any): { "Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TabBarIsVisible of Type BindableProperty */
-    export function ShellTabBarIsVisible(v) { return { "Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core": v  } }
+    TabBarIsVisible?(v: any): { "Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TitleView of Type BindableProperty */
-    export function ShellTitleView(v) { return { "Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core": v  } }
+    TitleView?(v: any): { "Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.MenuItemTemplate of Type BindableProperty */
-    export function ShellMenuItemTemplate(v) { return { "Xamarin.Forms.Shell:MenuItemTemplate;Xamarin.Forms.Core": v  } }
+    MenuItemTemplate?(v: any): { "Xamarin.Forms.Shell:MenuItemTemplate;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.ItemTemplate of Type BindableProperty */
-    export function ShellItemTemplate(v) { return { "Xamarin.Forms.Shell:ItemTemplate;Xamarin.Forms.Core": v  } }
+    ItemTemplate?(v: any): { "Xamarin.Forms.Shell:ItemTemplate;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.BackgroundColor of Type BindableProperty */
-    export function ShellBackgroundColor(v) { return { "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": v  } }
+    BackgroundColor?(v: any): { "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.DisabledColor of Type BindableProperty */
-    export function ShellDisabledColor(v) { return { "Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core": v  } }
+    DisabledColor?(v: any): { "Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.ForegroundColor of Type BindableProperty */
-    export function ShellForegroundColor(v) { return { "Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core": v  } }
+    ForegroundColor?(v: any): { "Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TabBarBackgroundColor of Type BindableProperty */
-    export function ShellTabBarBackgroundColor(v) { return { "Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core": v  } }
+    TabBarBackgroundColor?(v: any): { "Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TabBarDisabledColor of Type BindableProperty */
-    export function ShellTabBarDisabledColor(v) { return { "Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core": v  } }
+    TabBarDisabledColor?(v: any): { "Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TabBarForegroundColor of Type BindableProperty */
-    export function ShellTabBarForegroundColor(v) { return { "Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core": v  } }
+    TabBarForegroundColor?(v: any): { "Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TabBarTitleColor of Type BindableProperty */
-    export function ShellTabBarTitleColor(v) { return { "Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core": v  } }
+    TabBarTitleColor?(v: any): { "Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TabBarUnselectedColor of Type BindableProperty */
-    export function ShellTabBarUnselectedColor(v) { return { "Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core": v  } }
+    TabBarUnselectedColor?(v: any): { "Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.TitleColor of Type BindableProperty */
-    export function ShellTitleColor(v) { return { "Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core": v  } }
+    TitleColor?(v: any): { "Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core": any  };
     
     /** Attached Property Shell.UnselectedColor of Type BindableProperty */
-    export function ShellUnselectedColor(v) { return { "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": v  } }
+    UnselectedColor?(v: any): { "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": any  }
+    }
+    
+    /** Shell */
+    export const Shell: IShellConstructor = XNode.prepare<IShell>("Xamarin.Forms.Shell;Xamarin.Forms.Core");
+    
+    Shell.BackButtonBehavior = (v) => ({ "Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.FlyoutBehavior = (v) => ({ "Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.NavBarIsVisible = (v) => ({ "Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.NavBarHasShadow = (v) => ({ "Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.SearchHandler = (v) => ({ "Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TabBarIsVisible = (v) => ({ "Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TitleView = (v) => ({ "Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.MenuItemTemplate = (v) => ({ "Xamarin.Forms.Shell:MenuItemTemplate;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.ItemTemplate = (v) => ({ "Xamarin.Forms.Shell:ItemTemplate;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.BackgroundColor = (v) => ({ "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.DisabledColor = (v) => ({ "Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.ForegroundColor = (v) => ({ "Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TabBarBackgroundColor = (v) => ({ "Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TabBarDisabledColor = (v) => ({ "Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TabBarForegroundColor = (v) => ({ "Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TabBarTitleColor = (v) => ({ "Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TabBarUnselectedColor = (v) => ({ "Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.TitleColor = (v) => ({ "Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core": v  }) ;
+    
+    Shell.UnselectedColor = (v) => ({ "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": v  }) ;
     
     
     export interface IShellContent {
@@ -8221,8 +8768,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IShellContentConstructor {
+        (a?: Partial<IShellContent>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ShellContent */
-    export const ShellContent = XNode.prepare<IShellContent>("Xamarin.Forms.ShellContent;Xamarin.Forms.Core");
+    export const ShellContent: IShellContentConstructor = XNode.prepare<IShellContent>("Xamarin.Forms.ShellContent;Xamarin.Forms.Core");
     
     
     
@@ -8289,8 +8842,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IShellGroupItemConstructor {
+        (a?: Partial<IShellGroupItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ShellGroupItem */
-    export const ShellGroupItem = XNode.prepare<IShellGroupItem>("Xamarin.Forms.ShellGroupItem;Xamarin.Forms.Core");
+    export const ShellGroupItem: IShellGroupItemConstructor = XNode.prepare<IShellGroupItem>("Xamarin.Forms.ShellGroupItem;Xamarin.Forms.Core");
     
     
     
@@ -8360,8 +8919,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IFlyoutItemConstructor {
+        (a?: Partial<IFlyoutItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** FlyoutItem */
-    export const FlyoutItem = XNode.prepare<IFlyoutItem>("Xamarin.Forms.FlyoutItem;Xamarin.Forms.Core");
+    export const FlyoutItem: IFlyoutItemConstructor = XNode.prepare<IFlyoutItem>("Xamarin.Forms.FlyoutItem;Xamarin.Forms.Core");
     
     
     
@@ -8431,8 +8996,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface ITabBarConstructor {
+        (a?: Partial<ITabBar>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TabBar */
-    export const TabBar = XNode.prepare<ITabBar>("Xamarin.Forms.TabBar;Xamarin.Forms.Core");
+    export const TabBar: ITabBarConstructor = XNode.prepare<ITabBar>("Xamarin.Forms.TabBar;Xamarin.Forms.Core");
     
     
     
@@ -8502,8 +9073,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IShellItemConstructor {
+        (a?: Partial<IShellItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ShellItem */
-    export const ShellItem = XNode.prepare<IShellItem>("Xamarin.Forms.ShellItem;Xamarin.Forms.Core");
+    export const ShellItem: IShellItemConstructor = XNode.prepare<IShellItem>("Xamarin.Forms.ShellItem;Xamarin.Forms.Core");
     
     
     
@@ -8573,8 +9150,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface ITabConstructor {
+        (a?: Partial<ITab>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Tab */
-    export const Tab = XNode.prepare<ITab>("Xamarin.Forms.Tab;Xamarin.Forms.Core");
+    export const Tab: ITabConstructor = XNode.prepare<ITab>("Xamarin.Forms.Tab;Xamarin.Forms.Core");
     
     
     
@@ -8644,8 +9227,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface IShellSectionConstructor {
+        (a?: Partial<IShellSection>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ShellSection */
-    export const ShellSection = XNode.prepare<IShellSection>("Xamarin.Forms.ShellSection;Xamarin.Forms.Core");
+    export const ShellSection: IShellSectionConstructor = XNode.prepare<IShellSection>("Xamarin.Forms.ShellSection;Xamarin.Forms.Core");
     
     
     
@@ -8811,8 +9400,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ISliderConstructor {
+        (a?: Partial<ISlider>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Slider */
-    export const Slider = XNode.prepare<ISlider>("Xamarin.Forms.Slider;Xamarin.Forms.Core");
+    export const Slider: ISliderConstructor = XNode.prepare<ISlider>("Xamarin.Forms.Slider;Xamarin.Forms.Core");
     
     
     
@@ -8879,8 +9474,14 @@ export interface IAbsoluteLayout {
     textDecorations?: any;
         [key: string]: any;
     }
+    
+    export interface ISpanConstructor {
+        (a?: Partial<ISpan>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Span */
-    export const Span = XNode.prepare<ISpan>("Xamarin.Forms.Span;Xamarin.Forms.Core");
+    export const Span: ISpanConstructor = XNode.prepare<ISpan>("Xamarin.Forms.Span;Xamarin.Forms.Core");
     
     
     
@@ -9031,8 +9632,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IStackLayoutConstructor {
+        (a?: Partial<IStackLayout>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** StackLayout */
-    export const StackLayout = XNode.prepare<IStackLayout>("Xamarin.Forms.StackLayout;Xamarin.Forms.Core");
+    export const StackLayout: IStackLayoutConstructor = XNode.prepare<IStackLayout>("Xamarin.Forms.StackLayout;Xamarin.Forms.Core");
     
     
     
@@ -9180,8 +9787,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IStepperConstructor {
+        (a?: Partial<IStepper>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Stepper */
-    export const Stepper = XNode.prepare<IStepper>("Xamarin.Forms.Stepper;Xamarin.Forms.Core");
+    export const Stepper: IStepperConstructor = XNode.prepare<IStepper>("Xamarin.Forms.Stepper;Xamarin.Forms.Core");
     
     
     
@@ -9215,8 +9828,14 @@ export interface IAbsoluteLayout {
     styleId?: any;
         [key: string]: any;
     }
+    
+    export interface IStreamImageSourceConstructor {
+        (a?: Partial<IStreamImageSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** StreamImageSource */
-    export const StreamImageSource = XNode.prepare<IStreamImageSource>("Xamarin.Forms.StreamImageSource;Xamarin.Forms.Core");
+    export const StreamImageSource: IStreamImageSourceConstructor = XNode.prepare<IStreamImageSource>("Xamarin.Forms.StreamImageSource;Xamarin.Forms.Core");
     
     
     
@@ -9259,8 +9878,14 @@ export interface IAbsoluteLayout {
     threshold?: any;
         [key: string]: any;
     }
+    
+    export interface ISwipeGestureRecognizerConstructor {
+        (a?: Partial<ISwipeGestureRecognizer>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SwipeGestureRecognizer */
-    export const SwipeGestureRecognizer = XNode.prepare<ISwipeGestureRecognizer>("Xamarin.Forms.SwipeGestureRecognizer;Xamarin.Forms.Core");
+    export const SwipeGestureRecognizer: ISwipeGestureRecognizerConstructor = XNode.prepare<ISwipeGestureRecognizer>("Xamarin.Forms.SwipeGestureRecognizer;Xamarin.Forms.Core");
     
     
     
@@ -9315,8 +9940,14 @@ export interface IAbsoluteLayout {
     text?: any;
         [key: string]: any;
     }
+    
+    export interface ISwipeItemConstructor {
+        (a?: Partial<ISwipeItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SwipeItem */
-    export const SwipeItem = XNode.prepare<ISwipeItem>("Xamarin.Forms.SwipeItem;Xamarin.Forms.Core");
+    export const SwipeItem: ISwipeItemConstructor = XNode.prepare<ISwipeItem>("Xamarin.Forms.SwipeItem;Xamarin.Forms.Core");
     
     
     
@@ -9356,8 +9987,14 @@ export interface IAbsoluteLayout {
     swipeBehaviorOnInvoked?: any;
         [key: string]: any;
     }
+    
+    export interface ISwipeItemsConstructor {
+        (a?: Partial<ISwipeItems>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SwipeItems */
-    export const SwipeItems = XNode.prepare<ISwipeItems>("Xamarin.Forms.SwipeItems;Xamarin.Forms.Core");
+    export const SwipeItems: ISwipeItemsConstructor = XNode.prepare<ISwipeItems>("Xamarin.Forms.SwipeItems;Xamarin.Forms.Core");
     
     
     
@@ -9514,8 +10151,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ISwipeItemViewConstructor {
+        (a?: Partial<ISwipeItemView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SwipeItemView */
-    export const SwipeItemView = XNode.prepare<ISwipeItemView>("Xamarin.Forms.SwipeItemView;Xamarin.Forms.Core");
+    export const SwipeItemView: ISwipeItemViewConstructor = XNode.prepare<ISwipeItemView>("Xamarin.Forms.SwipeItemView;Xamarin.Forms.Core");
     
     
     
@@ -9678,8 +10321,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ISwipeViewConstructor {
+        (a?: Partial<ISwipeView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** SwipeView */
-    export const SwipeView = XNode.prepare<ISwipeView>("Xamarin.Forms.SwipeView;Xamarin.Forms.Core");
+    export const SwipeView: ISwipeViewConstructor = XNode.prepare<ISwipeView>("Xamarin.Forms.SwipeView;Xamarin.Forms.Core");
     
     
     
@@ -9824,8 +10473,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ISwitchConstructor {
+        (a?: Partial<ISwitch>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** Switch */
-    export const Switch = XNode.prepare<ISwitch>("Xamarin.Forms.Switch;Xamarin.Forms.Core");
+    export const Switch: ISwitchConstructor = XNode.prepare<ISwitch>("Xamarin.Forms.Switch;Xamarin.Forms.Core");
     
     
     
@@ -10006,8 +10661,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ITabbedPageConstructor {
+        (a?: Partial<ITabbedPage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TabbedPage */
-    export const TabbedPage = XNode.prepare<ITabbedPage>("Xamarin.Forms.TabbedPage;Xamarin.Forms.Core");
+    export const TabbedPage: ITabbedPageConstructor = XNode.prepare<ITabbedPage>("Xamarin.Forms.TabbedPage;Xamarin.Forms.Core");
     
     
     
@@ -10029,8 +10690,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface ITableRootConstructor {
+        (a?: Partial<ITableRoot>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TableRoot */
-    export const TableRoot = XNode.prepare<ITableRoot>("Xamarin.Forms.TableRoot;Xamarin.Forms.Core");
+    export const TableRoot: ITableRootConstructor = XNode.prepare<ITableRoot>("Xamarin.Forms.TableRoot;Xamarin.Forms.Core");
     
     
     
@@ -10052,8 +10719,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface ITableSectionConstructor {
+        (a?: Partial<ITableSection>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TableSection */
-    export const TableSection = XNode.prepare<ITableSection>("Xamarin.Forms.TableSection;Xamarin.Forms.Core");
+    export const TableSection: ITableSectionConstructor = XNode.prepare<ITableSection>("Xamarin.Forms.TableSection;Xamarin.Forms.Core");
     
     
     
@@ -10072,8 +10745,14 @@ export interface IAbsoluteLayout {
     title?: any;
         [key: string]: any;
     }
+    
+    export interface ITableSectionBaseConstructor {
+        (a?: Partial<ITableSectionBase>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TableSectionBase */
-    export const TableSectionBase = XNode.prepare<ITableSectionBase>("Xamarin.Forms.TableSectionBase;Xamarin.Forms.Core");
+    export const TableSectionBase: ITableSectionBaseConstructor = XNode.prepare<ITableSectionBase>("Xamarin.Forms.TableSectionBase;Xamarin.Forms.Core");
     
     
     
@@ -10224,8 +10903,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ITableViewConstructor {
+        (a?: Partial<ITableView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TableView */
-    export const TableView = XNode.prepare<ITableView>("Xamarin.Forms.TableView;Xamarin.Forms.Core");
+    export const TableView: ITableViewConstructor = XNode.prepare<ITableView>("Xamarin.Forms.TableView;Xamarin.Forms.Core");
     
     
     
@@ -10271,8 +10956,14 @@ export interface IAbsoluteLayout {
     tappedCallbackParameter?: any;
         [key: string]: any;
     }
+    
+    export interface ITapGestureRecognizerConstructor {
+        (a?: Partial<ITapGestureRecognizer>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TapGestureRecognizer */
-    export const TapGestureRecognizer = XNode.prepare<ITapGestureRecognizer>("Xamarin.Forms.TapGestureRecognizer;Xamarin.Forms.Core");
+    export const TapGestureRecognizer: ITapGestureRecognizerConstructor = XNode.prepare<ITapGestureRecognizer>("Xamarin.Forms.TapGestureRecognizer;Xamarin.Forms.Core");
     
     
     
@@ -10432,8 +11123,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ITemplatedPageConstructor {
+        (a?: Partial<ITemplatedPage>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TemplatedPage */
-    export const TemplatedPage = XNode.prepare<ITemplatedPage>("Xamarin.Forms.TemplatedPage;Xamarin.Forms.Core");
+    export const TemplatedPage: ITemplatedPageConstructor = XNode.prepare<ITemplatedPage>("Xamarin.Forms.TemplatedPage;Xamarin.Forms.Core");
     
     
     
@@ -10581,8 +11278,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ITemplatedViewConstructor {
+        (a?: Partial<ITemplatedView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TemplatedView */
-    export const TemplatedView = XNode.prepare<ITemplatedView>("Xamarin.Forms.TemplatedView;Xamarin.Forms.Core");
+    export const TemplatedView: ITemplatedViewConstructor = XNode.prepare<ITemplatedView>("Xamarin.Forms.TemplatedView;Xamarin.Forms.Core");
     
     
     
@@ -10739,8 +11442,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface ITimePickerConstructor {
+        (a?: Partial<ITimePicker>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** TimePicker */
-    export const TimePicker = XNode.prepare<ITimePicker>("Xamarin.Forms.TimePicker;Xamarin.Forms.Core");
+    export const TimePicker: ITimePickerConstructor = XNode.prepare<ITimePicker>("Xamarin.Forms.TimePicker;Xamarin.Forms.Core");
     
     
     
@@ -10801,8 +11510,14 @@ export interface IAbsoluteLayout {
     text?: any;
         [key: string]: any;
     }
+    
+    export interface IToolbarItemConstructor {
+        (a?: Partial<IToolbarItem>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** ToolbarItem */
-    export const ToolbarItem = XNode.prepare<IToolbarItem>("Xamarin.Forms.ToolbarItem;Xamarin.Forms.Core");
+    export const ToolbarItem: IToolbarItemConstructor = XNode.prepare<IToolbarItem>("Xamarin.Forms.ToolbarItem;Xamarin.Forms.Core");
     
     
     
@@ -10842,8 +11557,14 @@ export interface IAbsoluteLayout {
     uri?: any;
         [key: string]: any;
     }
+    
+    export interface IUriImageSourceConstructor {
+        (a?: Partial<IUriImageSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** UriImageSource */
-    export const UriImageSource = XNode.prepare<IUriImageSource>("Xamarin.Forms.UriImageSource;Xamarin.Forms.Core");
+    export const UriImageSource: IUriImageSourceConstructor = XNode.prepare<IUriImageSource>("Xamarin.Forms.UriImageSource;Xamarin.Forms.Core");
     
     
     
@@ -10859,8 +11580,14 @@ export interface IAbsoluteLayout {
     url?: any;
         [key: string]: any;
     }
+    
+    export interface IUrlWebViewSourceConstructor {
+        (a?: Partial<IUrlWebViewSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** UrlWebViewSource */
-    export const UrlWebViewSource = XNode.prepare<IUrlWebViewSource>("Xamarin.Forms.UrlWebViewSource;Xamarin.Forms.Core");
+    export const UrlWebViewSource: IUrlWebViewSourceConstructor = XNode.prepare<IUrlWebViewSource>("Xamarin.Forms.UrlWebViewSource;Xamarin.Forms.Core");
     
     
     
@@ -10996,8 +11723,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IViewConstructor {
+        (a?: Partial<IView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** View */
-    export const View = XNode.prepare<IView>("Xamarin.Forms.View;Xamarin.Forms.Core");
+    export const View: IViewConstructor = XNode.prepare<IView>("Xamarin.Forms.View;Xamarin.Forms.Core");
     
     
     
@@ -11139,8 +11872,14 @@ export interface IAbsoluteLayout {
     y?: any;
         [key: string]: any;
     }
+    
+    export interface IVisualElementConstructor {
+        (a?: Partial<IVisualElement>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** VisualElement */
-    export const VisualElement = XNode.prepare<IVisualElement>("Xamarin.Forms.VisualElement;Xamarin.Forms.Core");
+    export const VisualElement: IVisualElementConstructor = XNode.prepare<IVisualElement>("Xamarin.Forms.VisualElement;Xamarin.Forms.Core");
     
     
     
@@ -11279,8 +12018,14 @@ export interface IAbsoluteLayout {
     widthRequest?: any;
         [key: string]: any;
     }
+    
+    export interface IWebViewConstructor {
+        (a?: Partial<IWebView>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** WebView */
-    export const WebView = XNode.prepare<IWebView>("Xamarin.Forms.WebView;Xamarin.Forms.Core");
+    export const WebView: IWebViewConstructor = XNode.prepare<IWebView>("Xamarin.Forms.WebView;Xamarin.Forms.Core");
     
     
     
@@ -11293,7 +12038,13 @@ export interface IAbsoluteLayout {
     dispatcher?: any;
         [key: string]: any;
     }
+    
+    export interface IWebViewSourceConstructor {
+        (a?: Partial<IWebViewSource>, ... nodes: XNode[]): XNode;
+        
+    }
+    
     /** WebViewSource */
-    export const WebViewSource = XNode.prepare<IWebViewSource>("Xamarin.Forms.WebViewSource;Xamarin.Forms.Core");
+    export const WebViewSource: IWebViewSourceConstructor = XNode.prepare<IWebViewSource>("Xamarin.Forms.WebViewSource;Xamarin.Forms.Core");
     
     
