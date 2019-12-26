@@ -2,7 +2,8 @@ import Bind from "@web-atoms/core/dist/core/xnode/Bind";
 import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { PopupPage } from "./controls/RgPluginsPopup";
-import { ColumnDefinition, Entry, Grid, GridColumnSpan, GridRow, ListView, RowDefinition } from "./controls/XF";
+// tslint:disable-next-line: max-line-length
+import { ColumnDefinition, Entry, Grid, GridColumnSpan, GridRow, ListView, RowDefinition, ColumnDefinitionCollection, RowDefinitionCollection } from "./controls/XF";
 import SearchPageViewModel from "./view-models/SearchPageViewModel";
 
 export default class SearchPage extends AtomXFControl {
@@ -17,13 +18,16 @@ export default class SearchPage extends AtomXFControl {
 			<Grid
 				margin="10"
 				backgroundColor="White"
-				rowDefinitions={[
-					<RowDefinition height="Auto"/>,
-					<RowDefinition/>]}
-				columnDefinitions={[
-					<ColumnDefinition/>,
+				rowDefinitions={
+				<RowDefinitionCollection>
+					<RowDefinition height="Auto"/>
+					<RowDefinition/>
+				</RowDefinitionCollection>}
+				columnDefinitions={
+					<ColumnDefinitionCollection>
+					<ColumnDefinition/>
 					<ColumnDefinition width="Auto"/>
-				]}
+					</ColumnDefinitionCollection>}
 				>
 				<Entry
 					text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}

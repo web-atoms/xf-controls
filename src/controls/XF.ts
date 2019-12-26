@@ -1441,6 +1441,17 @@ export interface IAbsoluteLayout {
     
     
     
+    export interface IColumnDefinitionCollection {
+        
+    /** Property Item of Type ColumnDefinition */
+    item?: any;
+        [key: string]: any;
+    }
+    /** ColumnDefinitionCollection */
+    export const ColumnDefinitionCollection = XNode.prepare<IColumnDefinitionCollection>("Xamarin.Forms.ColumnDefinitionCollection;Xamarin.Forms.Core");
+    
+    
+    
     export interface IContentPage {
         
     /** Property AnchorX of Type Double */
@@ -7268,6 +7279,17 @@ export interface IAbsoluteLayout {
     }
     /** RowDefinition */
     export const RowDefinition = XNode.prepare<IRowDefinition>("Xamarin.Forms.RowDefinition;Xamarin.Forms.Core");
+    
+    
+    
+    export interface IRowDefinitionCollection {
+        
+    /** Property Item of Type RowDefinition */
+    item?: any;
+        [key: string]: any;
+    }
+    /** RowDefinitionCollection */
+    export const RowDefinitionCollection = XNode.prepare<IRowDefinitionCollection>("Xamarin.Forms.RowDefinitionCollection;Xamarin.Forms.Core");
     
     
     
