@@ -419,6 +419,9 @@ export interface IAbsoluteLayout {
     /** Property Application.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Application.MainPage of Type Xamarin.Forms.Page */
+    MainPage?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Application.Properties of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Properties?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -431,6 +434,8 @@ export interface IAbsoluteLayout {
     
     
     Application.Effects = XNode.prepare("Xamarin.Forms.Application:Effects;Xamarin.Forms.Core");
+    
+    Application.MainPage = XNode.prepare("Xamarin.Forms.Application:MainPage;Xamarin.Forms.Core");
     
     Application.Properties = XNode.prepare("Xamarin.Forms.Application:Properties;Xamarin.Forms.Core");
     
@@ -488,7 +493,10 @@ export interface IAbsoluteLayout {
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property AppLinkEntry.KeyValues of Type System.Collections.Generic.KeyValuePair`2[System.String,System.String] */
-    KeyValues?: ( a: any, ... nodes: XNode[]) => XNode
+    KeyValues?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property AppLinkEntry.Thumbnail of Type Xamarin.Forms.ImageSource */
+    Thumbnail?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** AppLinkEntry */
@@ -498,6 +506,8 @@ export interface IAbsoluteLayout {
     AppLinkEntry.Effects = XNode.prepare("Xamarin.Forms.AppLinkEntry:Effects;Xamarin.Forms.Core");
     
     AppLinkEntry.KeyValues = XNode.prepare("Xamarin.Forms.AppLinkEntry:KeyValues;Xamarin.Forms.Core");
+    
+    AppLinkEntry.Thumbnail = XNode.prepare("Xamarin.Forms.AppLinkEntry:Thumbnail;Xamarin.Forms.Core");
     
     
     export interface IBaseMenuItem {
@@ -919,6 +929,9 @@ export interface IAbsoluteLayout {
     /** Property Button.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
     GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Button.ImageSource of Type Xamarin.Forms.ImageSource */
+    ImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Button.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -938,6 +951,8 @@ export interface IAbsoluteLayout {
     Button.Effects = XNode.prepare("Xamarin.Forms.Button:Effects;Xamarin.Forms.Core");
     
     Button.GestureRecognizers = XNode.prepare("Xamarin.Forms.Button:GestureRecognizers;Xamarin.Forms.Core");
+    
+    Button.ImageSource = XNode.prepare("Xamarin.Forms.Button:ImageSource;Xamarin.Forms.Core");
     
     Button.Resources = XNode.prepare("Xamarin.Forms.Button:Resources;Xamarin.Forms.Core");
     
@@ -1116,14 +1131,23 @@ export interface IAbsoluteLayout {
         (a?: Partial<ICarouselPage>, ... nodes: XNode[]): XNode;
         
         
+    /** Property CarouselPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property CarouselPage.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property CarouselPage.Children of Type Xamarin.Forms.ContentPage */
     Children?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property CarouselPage.CurrentPage of Type Xamarin.Forms.ContentPage */
+    CurrentPage?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property CarouselPage.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property CarouselPage.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property CarouselPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
     ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -1145,11 +1169,17 @@ export interface IAbsoluteLayout {
     export const CarouselPage: ICarouselPageConstructor = XNode.prepare<ICarouselPage>("Xamarin.Forms.CarouselPage;Xamarin.Forms.Core");
     
     
+    CarouselPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:BackgroundImageSource;Xamarin.Forms.Core");
+    
     CarouselPage.Behaviors = XNode.prepare("Xamarin.Forms.CarouselPage:Behaviors;Xamarin.Forms.Core");
     
     CarouselPage.Children = XNode.prepare("Xamarin.Forms.CarouselPage:Children;Xamarin.Forms.Core");
     
+    CarouselPage.CurrentPage = XNode.prepare("Xamarin.Forms.CarouselPage:CurrentPage;Xamarin.Forms.Core");
+    
     CarouselPage.Effects = XNode.prepare("Xamarin.Forms.CarouselPage:Effects;Xamarin.Forms.Core");
+    
+    CarouselPage.IconImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:IconImageSource;Xamarin.Forms.Core");
     
     CarouselPage.ItemTemplate = XNode.prepare("Xamarin.Forms.CarouselPage:ItemTemplate;Xamarin.Forms.Core");
     
@@ -1366,7 +1396,10 @@ export interface IAbsoluteLayout {
     ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ImageCell.Effects of Type Xamarin.Forms.Effect */
-    Effects?: ( a: any, ... nodes: XNode[]) => XNode
+    Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ImageCell.ImageSource of Type Xamarin.Forms.ImageSource */
+    ImageSource?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** ImageCell */
@@ -1376,6 +1409,8 @@ export interface IAbsoluteLayout {
     ImageCell.ContextActions = XNode.prepare("Xamarin.Forms.ImageCell:ContextActions;Xamarin.Forms.Core");
     
     ImageCell.Effects = XNode.prepare("Xamarin.Forms.ImageCell:Effects;Xamarin.Forms.Core");
+    
+    ImageCell.ImageSource = XNode.prepare("Xamarin.Forms.ImageCell:ImageSource;Xamarin.Forms.Core");
     
     
     export interface ISwitchCell {
@@ -1567,7 +1602,10 @@ export interface IAbsoluteLayout {
     ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ViewCell.Effects of Type Xamarin.Forms.Effect */
-    Effects?: ( a: any, ... nodes: XNode[]) => XNode
+    Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ViewCell.View of Type Xamarin.Forms.View */
+    View?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** ViewCell */
@@ -1577,6 +1615,8 @@ export interface IAbsoluteLayout {
     ViewCell.ContextActions = XNode.prepare("Xamarin.Forms.ViewCell:ContextActions;Xamarin.Forms.Core");
     
     ViewCell.Effects = XNode.prepare("Xamarin.Forms.ViewCell:Effects;Xamarin.Forms.Core");
+    
+    ViewCell.View = XNode.prepare("Xamarin.Forms.ViewCell:View;Xamarin.Forms.Core");
     
     
     export interface ICheckBox {
@@ -2021,14 +2061,23 @@ export interface IAbsoluteLayout {
         (a?: Partial<IContentPage>, ... nodes: XNode[]): XNode;
         
         
+    /** Property ContentPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ContentPage.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ContentPage.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ContentPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
     ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ContentPage.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ContentPage.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ContentPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -2047,11 +2096,17 @@ export interface IAbsoluteLayout {
     export const ContentPage: IContentPageConstructor = XNode.prepare<IContentPage>("Xamarin.Forms.ContentPage;Xamarin.Forms.Core");
     
     
+    ContentPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.ContentPage:BackgroundImageSource;Xamarin.Forms.Core");
+    
     ContentPage.Behaviors = XNode.prepare("Xamarin.Forms.ContentPage:Behaviors;Xamarin.Forms.Core");
+    
+    ContentPage.Content = XNode.prepare("Xamarin.Forms.ContentPage:Content;Xamarin.Forms.Core");
     
     ContentPage.ControlTemplate = XNode.prepare("Xamarin.Forms.ContentPage:ControlTemplate;Xamarin.Forms.Core");
     
     ContentPage.Effects = XNode.prepare("Xamarin.Forms.ContentPage:Effects;Xamarin.Forms.Core");
+    
+    ContentPage.IconImageSource = XNode.prepare("Xamarin.Forms.ContentPage:IconImageSource;Xamarin.Forms.Core");
     
     ContentPage.Resources = XNode.prepare("Xamarin.Forms.ContentPage:Resources;Xamarin.Forms.Core");
     
@@ -2214,6 +2269,9 @@ export interface IAbsoluteLayout {
     /** Property ContentPresenter.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property ContentPresenter.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ContentPresenter.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -2235,6 +2293,8 @@ export interface IAbsoluteLayout {
     
     
     ContentPresenter.Behaviors = XNode.prepare("Xamarin.Forms.ContentPresenter:Behaviors;Xamarin.Forms.Core");
+    
+    ContentPresenter.Content = XNode.prepare("Xamarin.Forms.ContentPresenter:Content;Xamarin.Forms.Core");
     
     ContentPresenter.Effects = XNode.prepare("Xamarin.Forms.ContentPresenter:Effects;Xamarin.Forms.Core");
     
@@ -2402,6 +2462,9 @@ export interface IAbsoluteLayout {
     /** Property ContentView.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property ContentView.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ContentView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
     ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -2426,6 +2489,8 @@ export interface IAbsoluteLayout {
     
     
     ContentView.Behaviors = XNode.prepare("Xamarin.Forms.ContentView:Behaviors;Xamarin.Forms.Core");
+    
+    ContentView.Content = XNode.prepare("Xamarin.Forms.ContentView:Content;Xamarin.Forms.Core");
     
     ContentView.ControlTemplate = XNode.prepare("Xamarin.Forms.ContentView:ControlTemplate;Xamarin.Forms.Core");
     
@@ -3687,6 +3752,9 @@ export interface IAbsoluteLayout {
     /** Property Frame.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Frame.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Frame.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
     ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -3711,6 +3779,8 @@ export interface IAbsoluteLayout {
     
     
     Frame.Behaviors = XNode.prepare("Xamarin.Forms.Frame:Behaviors;Xamarin.Forms.Core");
+    
+    Frame.Content = XNode.prepare("Xamarin.Forms.Frame:Content;Xamarin.Forms.Core");
     
     Frame.ControlTemplate = XNode.prepare("Xamarin.Forms.Frame:ControlTemplate;Xamarin.Forms.Core");
     
@@ -4232,6 +4302,9 @@ export interface IAbsoluteLayout {
     /** Property Image.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Image.Source of Type Xamarin.Forms.ImageSource */
+    Source?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Image.StyleClass of Type System.String */
     StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -4250,6 +4323,8 @@ export interface IAbsoluteLayout {
     Image.GestureRecognizers = XNode.prepare("Xamarin.Forms.Image:GestureRecognizers;Xamarin.Forms.Core");
     
     Image.Resources = XNode.prepare("Xamarin.Forms.Image:Resources;Xamarin.Forms.Core");
+    
+    Image.Source = XNode.prepare("Xamarin.Forms.Image:Source;Xamarin.Forms.Core");
     
     Image.StyleClass = XNode.prepare("Xamarin.Forms.Image:StyleClass;Xamarin.Forms.Core");
     
@@ -4432,6 +4507,9 @@ export interface IAbsoluteLayout {
     /** Property ImageButton.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property ImageButton.Source of Type Xamarin.Forms.ImageSource */
+    Source?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ImageButton.StyleClass of Type System.String */
     StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -4450,6 +4528,8 @@ export interface IAbsoluteLayout {
     ImageButton.GestureRecognizers = XNode.prepare("Xamarin.Forms.ImageButton:GestureRecognizers;Xamarin.Forms.Core");
     
     ImageButton.Resources = XNode.prepare("Xamarin.Forms.ImageButton:Resources;Xamarin.Forms.Core");
+    
+    ImageButton.Source = XNode.prepare("Xamarin.Forms.ImageButton:Source;Xamarin.Forms.Core");
     
     ImageButton.StyleClass = XNode.prepare("Xamarin.Forms.ImageButton:StyleClass;Xamarin.Forms.Core");
     
@@ -4695,6 +4775,9 @@ export interface IAbsoluteLayout {
     /** Property IndicatorView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
     GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property IndicatorView.IndicatorLayout of Type Xamarin.Forms.Layout`1[Xamarin.Forms.View] */
+    IndicatorLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property IndicatorView.IndicatorTemplate of Type Xamarin.Forms.DataTemplate */
     IndicatorTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -4720,6 +4803,8 @@ export interface IAbsoluteLayout {
     IndicatorView.Effects = XNode.prepare("Xamarin.Forms.IndicatorView:Effects;Xamarin.Forms.Core");
     
     IndicatorView.GestureRecognizers = XNode.prepare("Xamarin.Forms.IndicatorView:GestureRecognizers;Xamarin.Forms.Core");
+    
+    IndicatorView.IndicatorLayout = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorLayout;Xamarin.Forms.Core");
     
     IndicatorView.IndicatorTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorTemplate;Xamarin.Forms.Core");
     
@@ -6967,6 +7052,9 @@ export interface IAbsoluteLayout {
     /** Property Label.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Label.FormattedText of Type Xamarin.Forms.FormattedString */
+    FormattedText?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Label.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
     GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -6987,6 +7075,8 @@ export interface IAbsoluteLayout {
     Label.Behaviors = XNode.prepare("Xamarin.Forms.Label:Behaviors;Xamarin.Forms.Core");
     
     Label.Effects = XNode.prepare("Xamarin.Forms.Label:Effects;Xamarin.Forms.Core");
+    
+    Label.FormattedText = XNode.prepare("Xamarin.Forms.Label:FormattedText;Xamarin.Forms.Core");
     
     Label.GestureRecognizers = XNode.prepare("Xamarin.Forms.Label:GestureRecognizers;Xamarin.Forms.Core");
     
@@ -7626,11 +7716,23 @@ export interface IAbsoluteLayout {
         (a?: Partial<IMasterDetailPage>, ... nodes: XNode[]): XNode;
         
         
+    /** Property MasterDetailPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property MasterDetailPage.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property MasterDetailPage.Detail of Type Xamarin.Forms.Page */
+    Detail?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property MasterDetailPage.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property MasterDetailPage.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property MasterDetailPage.Master of Type Xamarin.Forms.Page */
+    Master?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property MasterDetailPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -7649,9 +7751,17 @@ export interface IAbsoluteLayout {
     export const MasterDetailPage: IMasterDetailPageConstructor = XNode.prepare<IMasterDetailPage>("Xamarin.Forms.MasterDetailPage;Xamarin.Forms.Core");
     
     
+    MasterDetailPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:BackgroundImageSource;Xamarin.Forms.Core");
+    
     MasterDetailPage.Behaviors = XNode.prepare("Xamarin.Forms.MasterDetailPage:Behaviors;Xamarin.Forms.Core");
     
+    MasterDetailPage.Detail = XNode.prepare("Xamarin.Forms.MasterDetailPage:Detail;Xamarin.Forms.Core");
+    
     MasterDetailPage.Effects = XNode.prepare("Xamarin.Forms.MasterDetailPage:Effects;Xamarin.Forms.Core");
+    
+    MasterDetailPage.IconImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:IconImageSource;Xamarin.Forms.Core");
+    
+    MasterDetailPage.Master = XNode.prepare("Xamarin.Forms.MasterDetailPage:Master;Xamarin.Forms.Core");
     
     MasterDetailPage.Resources = XNode.prepare("Xamarin.Forms.MasterDetailPage:Resources;Xamarin.Forms.Core");
     
@@ -7777,7 +7887,10 @@ export interface IAbsoluteLayout {
     Accelerator?(v: any): { "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": any  }
         
     /** Property MenuItem.Effects of Type Xamarin.Forms.Effect */
-    Effects?: ( a: any, ... nodes: XNode[]) => XNode
+    Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property MenuItem.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** MenuItem */
@@ -7786,6 +7899,8 @@ export interface IAbsoluteLayout {
     MenuItem.Accelerator = (v) => ({ "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": v  }) ;
     
     MenuItem.Effects = XNode.prepare("Xamarin.Forms.MenuItem:Effects;Xamarin.Forms.Core");
+    
+    MenuItem.IconImageSource = XNode.prepare("Xamarin.Forms.MenuItem:IconImageSource;Xamarin.Forms.Core");
     
     
     export interface INavigationPage {
@@ -7978,14 +8093,26 @@ export interface IAbsoluteLayout {
     /** Attached Property NavigationPage.TitleView of Type BindableProperty */
     TitleView?(v: any): { "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": any  }
         
+    /** Property NavigationPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property NavigationPage.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property NavigationPage.CurrentPage of Type Xamarin.Forms.Page */
+    CurrentPage?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property NavigationPage.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property NavigationPage.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property NavigationPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property NavigationPage.RootPage of Type Xamarin.Forms.Page */
+    RootPage?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property NavigationPage.StyleClass of Type System.String */
     StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -8012,11 +8139,19 @@ export interface IAbsoluteLayout {
     
     NavigationPage.TitleView = (v) => ({ "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": v  }) ;
     
+    NavigationPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:BackgroundImageSource;Xamarin.Forms.Core");
+    
     NavigationPage.Behaviors = XNode.prepare("Xamarin.Forms.NavigationPage:Behaviors;Xamarin.Forms.Core");
+    
+    NavigationPage.CurrentPage = XNode.prepare("Xamarin.Forms.NavigationPage:CurrentPage;Xamarin.Forms.Core");
     
     NavigationPage.Effects = XNode.prepare("Xamarin.Forms.NavigationPage:Effects;Xamarin.Forms.Core");
     
+    NavigationPage.IconImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:IconImageSource;Xamarin.Forms.Core");
+    
     NavigationPage.Resources = XNode.prepare("Xamarin.Forms.NavigationPage:Resources;Xamarin.Forms.Core");
+    
+    NavigationPage.RootPage = XNode.prepare("Xamarin.Forms.NavigationPage:RootPage;Xamarin.Forms.Core");
     
     NavigationPage.StyleClass = XNode.prepare("Xamarin.Forms.NavigationPage:StyleClass;Xamarin.Forms.Core");
     
@@ -8362,11 +8497,17 @@ export interface IAbsoluteLayout {
         (a?: Partial<IPage>, ... nodes: XNode[]): XNode;
         
         
+    /** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Page.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property Page.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property Page.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -8385,9 +8526,13 @@ export interface IAbsoluteLayout {
     export const Page: IPageConstructor = XNode.prepare<IPage>("Xamarin.Forms.Page;Xamarin.Forms.Core");
     
     
+    Page.BackgroundImageSource = XNode.prepare("Xamarin.Forms.Page:BackgroundImageSource;Xamarin.Forms.Core");
+    
     Page.Behaviors = XNode.prepare("Xamarin.Forms.Page:Behaviors;Xamarin.Forms.Core");
     
     Page.Effects = XNode.prepare("Xamarin.Forms.Page:Effects;Xamarin.Forms.Core");
+    
+    Page.IconImageSource = XNode.prepare("Xamarin.Forms.Page:IconImageSource;Xamarin.Forms.Core");
     
     Page.Resources = XNode.prepare("Xamarin.Forms.Page:Resources;Xamarin.Forms.Core");
     
@@ -9047,6 +9192,9 @@ export interface IAbsoluteLayout {
     /** Property RefreshView.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property RefreshView.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property RefreshView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
     ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -9071,6 +9219,8 @@ export interface IAbsoluteLayout {
     
     
     RefreshView.Behaviors = XNode.prepare("Xamarin.Forms.RefreshView:Behaviors;Xamarin.Forms.Core");
+    
+    RefreshView.Content = XNode.prepare("Xamarin.Forms.RefreshView:Content;Xamarin.Forms.Core");
     
     RefreshView.ControlTemplate = XNode.prepare("Xamarin.Forms.RefreshView:ControlTemplate;Xamarin.Forms.Core");
     
@@ -9512,6 +9662,9 @@ export interface IAbsoluteLayout {
     /** Property ScrollView.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property ScrollView.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ScrollView.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -9533,6 +9686,8 @@ export interface IAbsoluteLayout {
     
     
     ScrollView.Behaviors = XNode.prepare("Xamarin.Forms.ScrollView:Behaviors;Xamarin.Forms.Core");
+    
+    ScrollView.Content = XNode.prepare("Xamarin.Forms.ScrollView:Content;Xamarin.Forms.Core");
     
     ScrollView.Effects = XNode.prepare("Xamarin.Forms.ScrollView:Effects;Xamarin.Forms.Core");
     
@@ -9798,12 +9953,15 @@ export interface IAbsoluteLayout {
         (a?: Partial<IBackButtonBehavior>, ... nodes: XNode[]): XNode;
         
         
+    /** Property BackButtonBehavior.IconOverride of Type Xamarin.Forms.ImageSource */
+    IconOverride?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** BackButtonBehavior */
     export const BackButtonBehavior: IBackButtonBehaviorConstructor = XNode.prepare<IBackButtonBehavior>("Xamarin.Forms.BackButtonBehavior;Xamarin.Forms.Core");
     
     
+    BackButtonBehavior.IconOverride = XNode.prepare("Xamarin.Forms.BackButtonBehavior:IconOverride;Xamarin.Forms.Core");
     
     
     export interface IBaseShellItem {
@@ -9874,6 +10032,12 @@ export interface IAbsoluteLayout {
     /** Property BaseShellItem.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property BaseShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property BaseShellItem.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property BaseShellItem.StyleClass of Type System.String */
     StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
     }
@@ -9883,6 +10047,10 @@ export interface IAbsoluteLayout {
     
     
     BaseShellItem.Effects = XNode.prepare("Xamarin.Forms.BaseShellItem:Effects;Xamarin.Forms.Core");
+    
+    BaseShellItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.BaseShellItem:FlyoutIcon;Xamarin.Forms.Core");
+    
+    BaseShellItem.Icon = XNode.prepare("Xamarin.Forms.BaseShellItem:Icon;Xamarin.Forms.Core");
     
     BaseShellItem.StyleClass = XNode.prepare("Xamarin.Forms.BaseShellItem:StyleClass;Xamarin.Forms.Core");
     
@@ -10060,15 +10228,30 @@ export interface IAbsoluteLayout {
         (a?: Partial<ISearchHandler>, ... nodes: XNode[]): XNode;
         
         
+    /** Property SearchHandler.ClearIcon of Type Xamarin.Forms.ImageSource */
+    ClearIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property SearchHandler.ClearPlaceholderIcon of Type Xamarin.Forms.ImageSource */
+    ClearPlaceholderIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property SearchHandler.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-    ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode
+    ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property SearchHandler.QueryIcon of Type Xamarin.Forms.ImageSource */
+    QueryIcon?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** SearchHandler */
     export const SearchHandler: ISearchHandlerConstructor = XNode.prepare<ISearchHandler>("Xamarin.Forms.SearchHandler;Xamarin.Forms.Core");
     
     
+    SearchHandler.ClearIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearIcon;Xamarin.Forms.Core");
+    
+    SearchHandler.ClearPlaceholderIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearPlaceholderIcon;Xamarin.Forms.Core");
+    
     SearchHandler.ItemTemplate = XNode.prepare("Xamarin.Forms.SearchHandler:ItemTemplate;Xamarin.Forms.Core");
+    
+    SearchHandler.QueryIcon = XNode.prepare("Xamarin.Forms.SearchHandler:QueryIcon;Xamarin.Forms.Core");
     
     
     export interface IShell {
@@ -10318,14 +10501,29 @@ export interface IAbsoluteLayout {
     /** Attached Property Shell.UnselectedColor of Type BindableProperty */
     UnselectedColor?(v: any): { "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": any  }
         
+    /** Property Shell.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Shell.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
+    CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property Shell.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Shell.FlyoutBackgroundImage of Type Xamarin.Forms.ImageSource */
+    FlyoutBackgroundImage?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Shell.FlyoutHeaderTemplate of Type Xamarin.Forms.DataTemplate */
     FlyoutHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property Shell.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property Shell.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property Shell.Items of Type Xamarin.Forms.ShellItem */
     Items?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -10386,11 +10584,21 @@ export interface IAbsoluteLayout {
     
     Shell.UnselectedColor = (v) => ({ "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": v  }) ;
     
+    Shell.BackgroundImageSource = XNode.prepare("Xamarin.Forms.Shell:BackgroundImageSource;Xamarin.Forms.Core");
+    
     Shell.Behaviors = XNode.prepare("Xamarin.Forms.Shell:Behaviors;Xamarin.Forms.Core");
+    
+    Shell.CurrentItem = XNode.prepare("Xamarin.Forms.Shell:CurrentItem;Xamarin.Forms.Core");
     
     Shell.Effects = XNode.prepare("Xamarin.Forms.Shell:Effects;Xamarin.Forms.Core");
     
+    Shell.FlyoutBackgroundImage = XNode.prepare("Xamarin.Forms.Shell:FlyoutBackgroundImage;Xamarin.Forms.Core");
+    
     Shell.FlyoutHeaderTemplate = XNode.prepare("Xamarin.Forms.Shell:FlyoutHeaderTemplate;Xamarin.Forms.Core");
+    
+    Shell.FlyoutIcon = XNode.prepare("Xamarin.Forms.Shell:FlyoutIcon;Xamarin.Forms.Core");
+    
+    Shell.IconImageSource = XNode.prepare("Xamarin.Forms.Shell:IconImageSource;Xamarin.Forms.Core");
     
     Shell.Items = XNode.prepare("Xamarin.Forms.Shell:Items;Xamarin.Forms.Core");
     
@@ -10484,6 +10692,12 @@ export interface IAbsoluteLayout {
     /** Property ShellContent.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property ShellContent.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ShellContent.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ShellContent.MenuItems of Type Xamarin.Forms.MenuItem */
     MenuItems?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -10498,6 +10712,10 @@ export interface IAbsoluteLayout {
     ShellContent.ContentTemplate = XNode.prepare("Xamarin.Forms.ShellContent:ContentTemplate;Xamarin.Forms.Core");
     
     ShellContent.Effects = XNode.prepare("Xamarin.Forms.ShellContent:Effects;Xamarin.Forms.Core");
+    
+    ShellContent.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellContent:FlyoutIcon;Xamarin.Forms.Core");
+    
+    ShellContent.Icon = XNode.prepare("Xamarin.Forms.ShellContent:Icon;Xamarin.Forms.Core");
     
     ShellContent.MenuItems = XNode.prepare("Xamarin.Forms.ShellContent:MenuItems;Xamarin.Forms.Core");
     
@@ -10575,6 +10793,12 @@ export interface IAbsoluteLayout {
     /** Property ShellGroupItem.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property ShellGroupItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ShellGroupItem.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ShellGroupItem.StyleClass of Type System.String */
     StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
     }
@@ -10584,6 +10808,10 @@ export interface IAbsoluteLayout {
     
     
     ShellGroupItem.Effects = XNode.prepare("Xamarin.Forms.ShellGroupItem:Effects;Xamarin.Forms.Core");
+    
+    ShellGroupItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellGroupItem:FlyoutIcon;Xamarin.Forms.Core");
+    
+    ShellGroupItem.Icon = XNode.prepare("Xamarin.Forms.ShellGroupItem:Icon;Xamarin.Forms.Core");
     
     ShellGroupItem.StyleClass = XNode.prepare("Xamarin.Forms.ShellGroupItem:StyleClass;Xamarin.Forms.Core");
     
@@ -10659,8 +10887,17 @@ export interface IAbsoluteLayout {
         (a?: Partial<IFlyoutItem>, ... nodes: XNode[]): XNode;
         
         
+    /** Property FlyoutItem.CurrentItem of Type Xamarin.Forms.ShellSection */
+    CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property FlyoutItem.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property FlyoutItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property FlyoutItem.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property FlyoutItem.Items of Type Xamarin.Forms.ShellSection */
     Items?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -10673,7 +10910,13 @@ export interface IAbsoluteLayout {
     export const FlyoutItem: IFlyoutItemConstructor = XNode.prepare<IFlyoutItem>("Xamarin.Forms.FlyoutItem;Xamarin.Forms.Core");
     
     
+    FlyoutItem.CurrentItem = XNode.prepare("Xamarin.Forms.FlyoutItem:CurrentItem;Xamarin.Forms.Core");
+    
     FlyoutItem.Effects = XNode.prepare("Xamarin.Forms.FlyoutItem:Effects;Xamarin.Forms.Core");
+    
+    FlyoutItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.FlyoutItem:FlyoutIcon;Xamarin.Forms.Core");
+    
+    FlyoutItem.Icon = XNode.prepare("Xamarin.Forms.FlyoutItem:Icon;Xamarin.Forms.Core");
     
     FlyoutItem.Items = XNode.prepare("Xamarin.Forms.FlyoutItem:Items;Xamarin.Forms.Core");
     
@@ -10751,8 +10994,17 @@ export interface IAbsoluteLayout {
         (a?: Partial<ITabBar>, ... nodes: XNode[]): XNode;
         
         
+    /** Property TabBar.CurrentItem of Type Xamarin.Forms.ShellSection */
+    CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property TabBar.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property TabBar.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property TabBar.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property TabBar.Items of Type Xamarin.Forms.ShellSection */
     Items?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -10765,7 +11017,13 @@ export interface IAbsoluteLayout {
     export const TabBar: ITabBarConstructor = XNode.prepare<ITabBar>("Xamarin.Forms.TabBar;Xamarin.Forms.Core");
     
     
+    TabBar.CurrentItem = XNode.prepare("Xamarin.Forms.TabBar:CurrentItem;Xamarin.Forms.Core");
+    
     TabBar.Effects = XNode.prepare("Xamarin.Forms.TabBar:Effects;Xamarin.Forms.Core");
+    
+    TabBar.FlyoutIcon = XNode.prepare("Xamarin.Forms.TabBar:FlyoutIcon;Xamarin.Forms.Core");
+    
+    TabBar.Icon = XNode.prepare("Xamarin.Forms.TabBar:Icon;Xamarin.Forms.Core");
     
     TabBar.Items = XNode.prepare("Xamarin.Forms.TabBar:Items;Xamarin.Forms.Core");
     
@@ -10843,8 +11101,17 @@ export interface IAbsoluteLayout {
         (a?: Partial<IShellItem>, ... nodes: XNode[]): XNode;
         
         
+    /** Property ShellItem.CurrentItem of Type Xamarin.Forms.ShellSection */
+    CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ShellItem.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ShellItem.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ShellItem.Items of Type Xamarin.Forms.ShellSection */
     Items?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -10857,7 +11124,13 @@ export interface IAbsoluteLayout {
     export const ShellItem: IShellItemConstructor = XNode.prepare<IShellItem>("Xamarin.Forms.ShellItem;Xamarin.Forms.Core");
     
     
+    ShellItem.CurrentItem = XNode.prepare("Xamarin.Forms.ShellItem:CurrentItem;Xamarin.Forms.Core");
+    
     ShellItem.Effects = XNode.prepare("Xamarin.Forms.ShellItem:Effects;Xamarin.Forms.Core");
+    
+    ShellItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellItem:FlyoutIcon;Xamarin.Forms.Core");
+    
+    ShellItem.Icon = XNode.prepare("Xamarin.Forms.ShellItem:Icon;Xamarin.Forms.Core");
     
     ShellItem.Items = XNode.prepare("Xamarin.Forms.ShellItem:Items;Xamarin.Forms.Core");
     
@@ -10935,8 +11208,17 @@ export interface IAbsoluteLayout {
         (a?: Partial<ITab>, ... nodes: XNode[]): XNode;
         
         
+    /** Property Tab.CurrentItem of Type Xamarin.Forms.ShellContent */
+    CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Tab.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property Tab.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property Tab.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property Tab.Items of Type Xamarin.Forms.ShellContent */
     Items?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -10949,7 +11231,13 @@ export interface IAbsoluteLayout {
     export const Tab: ITabConstructor = XNode.prepare<ITab>("Xamarin.Forms.Tab;Xamarin.Forms.Core");
     
     
+    Tab.CurrentItem = XNode.prepare("Xamarin.Forms.Tab:CurrentItem;Xamarin.Forms.Core");
+    
     Tab.Effects = XNode.prepare("Xamarin.Forms.Tab:Effects;Xamarin.Forms.Core");
+    
+    Tab.FlyoutIcon = XNode.prepare("Xamarin.Forms.Tab:FlyoutIcon;Xamarin.Forms.Core");
+    
+    Tab.Icon = XNode.prepare("Xamarin.Forms.Tab:Icon;Xamarin.Forms.Core");
     
     Tab.Items = XNode.prepare("Xamarin.Forms.Tab:Items;Xamarin.Forms.Core");
     
@@ -11027,8 +11315,17 @@ export interface IAbsoluteLayout {
         (a?: Partial<IShellSection>, ... nodes: XNode[]): XNode;
         
         
+    /** Property ShellSection.CurrentItem of Type Xamarin.Forms.ShellContent */
+    CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property ShellSection.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ShellSection.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+    FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ShellSection.Icon of Type Xamarin.Forms.ImageSource */
+    Icon?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property ShellSection.Items of Type Xamarin.Forms.ShellContent */
     Items?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -11041,7 +11338,13 @@ export interface IAbsoluteLayout {
     export const ShellSection: IShellSectionConstructor = XNode.prepare<IShellSection>("Xamarin.Forms.ShellSection;Xamarin.Forms.Core");
     
     
+    ShellSection.CurrentItem = XNode.prepare("Xamarin.Forms.ShellSection:CurrentItem;Xamarin.Forms.Core");
+    
     ShellSection.Effects = XNode.prepare("Xamarin.Forms.ShellSection:Effects;Xamarin.Forms.Core");
+    
+    ShellSection.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellSection:FlyoutIcon;Xamarin.Forms.Core");
+    
+    ShellSection.Icon = XNode.prepare("Xamarin.Forms.ShellSection:Icon;Xamarin.Forms.Core");
     
     ShellSection.Items = XNode.prepare("Xamarin.Forms.ShellSection:Items;Xamarin.Forms.Core");
     
@@ -11230,6 +11533,9 @@ export interface IAbsoluteLayout {
     /** Property Slider.StyleClass of Type System.String */
     StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property Slider.ThumbImageSource of Type Xamarin.Forms.ImageSource */
+    ThumbImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property Slider.Triggers of Type Xamarin.Forms.TriggerBase */
     Triggers?: ( a: any, ... nodes: XNode[]) => XNode
     }
@@ -11247,6 +11553,8 @@ export interface IAbsoluteLayout {
     Slider.Resources = XNode.prepare("Xamarin.Forms.Slider:Resources;Xamarin.Forms.Core");
     
     Slider.StyleClass = XNode.prepare("Xamarin.Forms.Slider:StyleClass;Xamarin.Forms.Core");
+    
+    Slider.ThumbImageSource = XNode.prepare("Xamarin.Forms.Slider:ThumbImageSource;Xamarin.Forms.Core");
     
     Slider.Triggers = XNode.prepare("Xamarin.Forms.Slider:Triggers;Xamarin.Forms.Core");
     
@@ -11871,7 +12179,10 @@ export interface IAbsoluteLayout {
         
         
     /** Property SwipeItem.Effects of Type Xamarin.Forms.Effect */
-    Effects?: ( a: any, ... nodes: XNode[]) => XNode
+    Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property SwipeItem.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** SwipeItem */
@@ -11879,6 +12190,8 @@ export interface IAbsoluteLayout {
     
     
     SwipeItem.Effects = XNode.prepare("Xamarin.Forms.SwipeItem:Effects;Xamarin.Forms.Core");
+    
+    SwipeItem.IconImageSource = XNode.prepare("Xamarin.Forms.SwipeItem:IconImageSource;Xamarin.Forms.Core");
     
     
     export interface ISwipeItems {
@@ -12094,6 +12407,9 @@ export interface IAbsoluteLayout {
     /** Property SwipeItemView.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property SwipeItemView.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property SwipeItemView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
     ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -12118,6 +12434,8 @@ export interface IAbsoluteLayout {
     
     
     SwipeItemView.Behaviors = XNode.prepare("Xamarin.Forms.SwipeItemView:Behaviors;Xamarin.Forms.Core");
+    
+    SwipeItemView.Content = XNode.prepare("Xamarin.Forms.SwipeItemView:Content;Xamarin.Forms.Core");
     
     SwipeItemView.ControlTemplate = XNode.prepare("Xamarin.Forms.SwipeItemView:ControlTemplate;Xamarin.Forms.Core");
     
@@ -12302,6 +12620,9 @@ export interface IAbsoluteLayout {
     /** Property SwipeView.BottomItems of Type Xamarin.Forms.ISwipeItem */
     BottomItems?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property SwipeView.Content of Type Xamarin.Forms.View */
+    Content?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property SwipeView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
     ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -12337,6 +12658,8 @@ export interface IAbsoluteLayout {
     SwipeView.Behaviors = XNode.prepare("Xamarin.Forms.SwipeView:Behaviors;Xamarin.Forms.Core");
     
     SwipeView.BottomItems = XNode.prepare("Xamarin.Forms.SwipeView:BottomItems;Xamarin.Forms.Core");
+    
+    SwipeView.Content = XNode.prepare("Xamarin.Forms.SwipeView:Content;Xamarin.Forms.Core");
     
     SwipeView.ControlTemplate = XNode.prepare("Xamarin.Forms.SwipeView:ControlTemplate;Xamarin.Forms.Core");
     
@@ -12721,14 +13044,23 @@ export interface IAbsoluteLayout {
         (a?: Partial<ITabbedPage>, ... nodes: XNode[]): XNode;
         
         
+    /** Property TabbedPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property TabbedPage.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property TabbedPage.Children of Type Xamarin.Forms.Page */
     Children?: ( a: any, ... nodes: XNode[]) => XNode;
     
+    /** Property TabbedPage.CurrentPage of Type Xamarin.Forms.Page */
+    CurrentPage?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property TabbedPage.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property TabbedPage.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property TabbedPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
     ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -12750,11 +13082,17 @@ export interface IAbsoluteLayout {
     export const TabbedPage: ITabbedPageConstructor = XNode.prepare<ITabbedPage>("Xamarin.Forms.TabbedPage;Xamarin.Forms.Core");
     
     
+    TabbedPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:BackgroundImageSource;Xamarin.Forms.Core");
+    
     TabbedPage.Behaviors = XNode.prepare("Xamarin.Forms.TabbedPage:Behaviors;Xamarin.Forms.Core");
     
     TabbedPage.Children = XNode.prepare("Xamarin.Forms.TabbedPage:Children;Xamarin.Forms.Core");
     
+    TabbedPage.CurrentPage = XNode.prepare("Xamarin.Forms.TabbedPage:CurrentPage;Xamarin.Forms.Core");
+    
     TabbedPage.Effects = XNode.prepare("Xamarin.Forms.TabbedPage:Effects;Xamarin.Forms.Core");
+    
+    TabbedPage.IconImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:IconImageSource;Xamarin.Forms.Core");
     
     TabbedPage.ItemTemplate = XNode.prepare("Xamarin.Forms.TabbedPage:ItemTemplate;Xamarin.Forms.Core");
     
@@ -12824,12 +13162,15 @@ export interface IAbsoluteLayout {
         (a?: Partial<ITableSection>, ... nodes: XNode[]): XNode;
         
         
+    /** Property TableSection.Item of Type Xamarin.Forms.Cell */
+    Item?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** TableSection */
     export const TableSection: ITableSectionConstructor = XNode.prepare<ITableSection>("Xamarin.Forms.TableSection;Xamarin.Forms.Core");
     
     
+    TableSection.Item = XNode.prepare("Xamarin.Forms.TableSection:Item;Xamarin.Forms.Core");
     
     
     export interface ITableSectionBase {
@@ -13272,6 +13613,9 @@ export interface IAbsoluteLayout {
         (a?: Partial<ITemplatedPage>, ... nodes: XNode[]): XNode;
         
         
+    /** Property TemplatedPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+    BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+    
     /** Property TemplatedPage.Behaviors of Type Xamarin.Forms.Behavior */
     Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
     
@@ -13280,6 +13624,9 @@ export interface IAbsoluteLayout {
     
     /** Property TemplatedPage.Effects of Type Xamarin.Forms.Effect */
     Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property TemplatedPage.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
     
     /** Property TemplatedPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
     Resources?: ( a: any, ... nodes: XNode[]) => XNode;
@@ -13298,11 +13645,15 @@ export interface IAbsoluteLayout {
     export const TemplatedPage: ITemplatedPageConstructor = XNode.prepare<ITemplatedPage>("Xamarin.Forms.TemplatedPage;Xamarin.Forms.Core");
     
     
+    TemplatedPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:BackgroundImageSource;Xamarin.Forms.Core");
+    
     TemplatedPage.Behaviors = XNode.prepare("Xamarin.Forms.TemplatedPage:Behaviors;Xamarin.Forms.Core");
     
     TemplatedPage.ControlTemplate = XNode.prepare("Xamarin.Forms.TemplatedPage:ControlTemplate;Xamarin.Forms.Core");
     
     TemplatedPage.Effects = XNode.prepare("Xamarin.Forms.TemplatedPage:Effects;Xamarin.Forms.Core");
+    
+    TemplatedPage.IconImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:IconImageSource;Xamarin.Forms.Core");
     
     TemplatedPage.Resources = XNode.prepare("Xamarin.Forms.TemplatedPage:Resources;Xamarin.Forms.Core");
     
@@ -13760,7 +14111,10 @@ export interface IAbsoluteLayout {
         
         
     /** Property ToolbarItem.Effects of Type Xamarin.Forms.Effect */
-    Effects?: ( a: any, ... nodes: XNode[]) => XNode
+    Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+    
+    /** Property ToolbarItem.IconImageSource of Type Xamarin.Forms.ImageSource */
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
     }
     
     /** ToolbarItem */
@@ -13768,6 +14122,8 @@ export interface IAbsoluteLayout {
     
     
     ToolbarItem.Effects = XNode.prepare("Xamarin.Forms.ToolbarItem:Effects;Xamarin.Forms.Core");
+    
+    ToolbarItem.IconImageSource = XNode.prepare("Xamarin.Forms.ToolbarItem:IconImageSource;Xamarin.Forms.Core");
     
     
     export interface IUriImageSource {
