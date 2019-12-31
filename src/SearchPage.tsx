@@ -1,5 +1,5 @@
-import Bind from "@web-atoms/core/dist/core/xnode/Bind";
-import XNode from "@web-atoms/core/dist/core/xnode/XNode";
+import Bind from "@web-atoms/core/dist/core/Bind";
+import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { PopupPage } from "./controls/RgPluginsPopup";
 // tslint:disable-next-line: max-line-length
