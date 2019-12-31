@@ -1,5 +1,5 @@
 //tslint:disable
-import XNode from "@web-atoms/core/dist/core/xnode/XNode";
+import XNode from "@web-atoms/core/dist/core/XNode";
 
 export interface IAbsoluteLayout {
     
