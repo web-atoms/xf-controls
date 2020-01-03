@@ -12,11 +12,14 @@ import { default as SearchPage } from "./SearchPage";
 
 import { App } from "@web-atoms/core/dist/App";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import XNode from "@web-atoms/core/dist/core/XNode";
 import ReferenceService from "@web-atoms/core/dist/services/ReferenceService";
 
 export type Factory = () => AtomXFControl;
 
 export default class Root extends AtomXFControl {
+
+    public static itemTemplate = XNode.prepare("itemTemplate", true, true);
 
     @BindableProperty
     public itemTemplate: IClassOf<AtomXFControl> = null;
