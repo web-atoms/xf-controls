@@ -42,3 +42,23 @@ export const AtomListView: IAtomListViewConstructor = XNode.prepare("WebAtoms.At
 
 AtomListView.ItemTemplate = XNode.prepare("WebAtoms.AtomListView:ItemTemplate;WebAtoms", true, true);
 
+export interface IAtomRepeater extends IListView {
+
+}
+
+export interface IAtomRepeaterConstructor {
+    (a?: Partial<IAtomRepeater>, node?: XNode): XNode;
+    ItemTemplate: (a?: any, ... nodes: XNode[]) => XNode;
+}
+
+export const AtomRepeater: IAtomRepeaterConstructor = XNode.prepare("WebAtoms.AtomRepeater;WebAtoms") as any;
+AtomRepeater.ItemTemplate = XNode.prepare("WebAtoms.AtomRepeater:ItemTemplate;WebAtoms", true, true);
+
+const WA = {
+    AtomListView,
+    AtomRepeater,
+    AtomToolbarItem,
+    AtomView
+};
+
+export default WA;
