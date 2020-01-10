@@ -3,6 +3,7 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 
 export interface IAtomView {
     dataTemplate?: any;
+    [key: string]: any;
 }
 
 export interface IAtomViewConstructor {
@@ -16,6 +17,7 @@ AtomView.dataTemplate = XNode.prepare("WebAtoms.AtomView:DataTemplate;WebAtoms",
 
 
 export interface IAtomToolbarItem {
+    [key: string]: any;
 }
 
 export interface IAtomToolbarItemConstructor {
