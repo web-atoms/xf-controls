@@ -35,10 +35,10 @@ export interface IAtomListView extends IListView {
 
 export interface IAtomListViewConstructor {
     (a?: Partial<IAtomListView>, node?: XNode): XNode;
-    DataTemplate: (a?: any, ... nodes: XNode[]) => XNode;
+    ItemTemplate: (a?: any, ... nodes: XNode[]) => XNode;
 }
 
 export const AtomListView: IAtomListViewConstructor = XNode.prepare("WebAtoms.AtomListView;WebAtoms") as any;
 
-AtomListView.DataTemplate = XNode.prepare("WebAtoms.AtomListView:DataTemplate;WebAtoms", true, true);
+AtomListView.ItemTemplate = XNode.prepare("WebAtoms.AtomListView:ItemTemplate;WebAtoms", true, true);
 
