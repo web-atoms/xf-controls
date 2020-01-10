@@ -9909,6 +9909,28 @@ SearchBar.StyleClass = XNode.prepare("Xamarin.Forms.SearchBar:StyleClass;Xamarin
 SearchBar.Triggers = XNode.prepare("Xamarin.Forms.SearchBar:Triggers;Xamarin.Forms.Core", true, false);
 
 
+export interface ISetter {
+    
+/** Property Property of Type BindableProperty */
+property?: any;
+
+/** Property Value of Type Object */
+value?: any;
+    [key: string]: any;
+}
+
+export interface ISetterConstructor {
+    (a?: Partial<ISetter>, ... nodes: XNode[]): XNode;
+    
+    
+}
+
+/** Setter */
+export const Setter: ISetterConstructor = XNode.prepare<ISetter>("Xamarin.Forms.Setter;Xamarin.Forms.Core");
+
+
+
+
 export interface IBackButtonBehavior {
     
 /** Property BindingContext of Type Object */
@@ -14847,6 +14869,7 @@ const XF = { AbsoluteLayout,
 	RowDefinition,
 	ScrollView,
 	SearchBar,
+	Setter,
 	BackButtonBehavior,
 	BaseShellItem,
 	NavigableElement,
