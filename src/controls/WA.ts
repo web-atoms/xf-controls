@@ -13,3 +13,16 @@ export interface IAtomViewConstructor {
 export const AtomView: IAtomViewConstructor = XNode.prepare("WebAtoms.AtomView;WebAtoms") as any;
 
 AtomView.dataTemplate = XNode.prepare("WebAtoms.AtomView:DataTemplate;WebAtoms", true, true);
+
+
+export interface IAtomToolbarItem {
+}
+
+export interface IAtomToolbarItemConstructor {
+    (a?: Partial<IAtomToolbarItem>, node?: XNode): XNode;
+//     dataTemplate: (a?: any, ... nodes: XNode[]) => XNode;
+}
+
+export const AtomToolbarItem: IAtomToolbarItemConstructor = XNode.prepare("WebAtoms.AtomToolbarItem;WebAtoms") as any;
+
+// AtomView.dataTemplate = XNode.prepare("WebAtoms.AtomView:DataTemplate;WebAtoms", true, true);
