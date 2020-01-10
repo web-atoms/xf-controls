@@ -9909,28 +9909,6 @@ SearchBar.StyleClass = XNode.prepare("Xamarin.Forms.SearchBar:StyleClass;Xamarin
 SearchBar.Triggers = XNode.prepare("Xamarin.Forms.SearchBar:Triggers;Xamarin.Forms.Core", true, false);
 
 
-export interface ISetter {
-    
-/** Property Property of Type BindableProperty */
-property?: any;
-
-/** Property Value of Type Object */
-value?: any;
-    [key: string]: any;
-}
-
-export interface ISetterConstructor {
-    (a?: Partial<ISetter>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** Setter */
-export const Setter: ISetterConstructor = XNode.prepare<ISetter>("Xamarin.Forms.Setter;Xamarin.Forms.Core");
-
-
-
-
 export interface IBackButtonBehavior {
     
 /** Property BindingContext of Type Object */
@@ -12072,62 +12050,6 @@ export const StreamImageSource: IStreamImageSourceConstructor = XNode.prepare<IS
 
 
 StreamImageSource.Effects = XNode.prepare("Xamarin.Forms.StreamImageSource:Effects;Xamarin.Forms.Core", true, false);
-
-
-export interface IStyle {
-    
-/** Property ApplyToDerivedTypes of Type Boolean */
-applyToDerivedTypes?: any;
-
-/** Property BasedOn of Type Style */
-basedOn?: any;
-
-/** Property BaseResourceKey of Type String */
-baseResourceKey?: any;
-
-/** Property Behaviors of Type IList`1 */
-behaviors?: any;
-
-/** Property CanCascade of Type Boolean */
-canCascade?: any;
-
-/** Property Class of Type String */
-class?: any;
-
-/** Property Setters of Type IList`1 */
-setters?: any;
-
-/** Property TargetType of Type Type */
-targetType?: any;
-
-/** Property Triggers of Type IList`1 */
-triggers?: any;
-    [key: string]: any;
-}
-
-export interface IStyleConstructor {
-    (a?: Partial<IStyle>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Style.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Style.Setters of Type Xamarin.Forms.Setter */
-Setters?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Style.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Style */
-export const Style: IStyleConstructor = XNode.prepare<IStyle>("Xamarin.Forms.Style;Xamarin.Forms.Core");
-
-
-Style.Behaviors = XNode.prepare("Xamarin.Forms.Style:Behaviors;Xamarin.Forms.Core", true, false);
-
-Style.Setters = XNode.prepare("Xamarin.Forms.Style:Setters;Xamarin.Forms.Core", true, false);
-
-Style.Triggers = XNode.prepare("Xamarin.Forms.Style:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwipeGestureRecognizer {
@@ -14809,6 +14731,23 @@ export interface IWebViewSourceConstructor {
 export const WebViewSource: IWebViewSourceConstructor = XNode.prepare<IWebViewSource>("Xamarin.Forms.WebViewSource;Xamarin.Forms.Core");
 
 
+
+
+export interface IStyleSheet {
+    text: string;
+    [key: string]: any;
+}
+
+export interface IStyleSheetConstructor {
+    (a?: Partial<IStyleSheet>, ... nodes: XNode[]): XNode;
+    
+    
+}
+
+/** StyleSheet */
+export const StyleSheet: IStyleSheetConstructor = XNode.prepare<IStyleSheet>("Xamarin.Forms.StyleSheets.StyleSheet;Xamarin.Forms.Core");
+
+
 const XF = { AbsoluteLayout,
 	ActivityIndicator,
 	Application,
@@ -14881,7 +14820,6 @@ const XF = { AbsoluteLayout,
 	RowDefinition,
 	ScrollView,
 	SearchBar,
-	Setter,
 	BackButtonBehavior,
 	BaseShellItem,
 	NavigableElement,
@@ -14899,7 +14837,6 @@ const XF = { AbsoluteLayout,
 	StackLayout,
 	Stepper,
 	StreamImageSource,
-	Style,
 	SwipeGestureRecognizer,
 	SwipeItem,
 	SwipeItems,
@@ -14921,6 +14858,7 @@ const XF = { AbsoluteLayout,
 	View,
 	VisualElement,
 	WebView,
-	WebViewSource
+	WebViewSource,
+	StyleSheet
 };
 export default XF;
