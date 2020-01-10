@@ -12085,11 +12085,23 @@ basedOn?: any;
 /** Property BaseResourceKey of Type String */
 baseResourceKey?: any;
 
+/** Property Behaviors of Type IList`1 */
+behaviors?: any;
+
 /** Property CanCascade of Type Boolean */
 canCascade?: any;
 
 /** Property Class of Type String */
 class?: any;
+
+/** Property Setters of Type IList`1 */
+setters?: any;
+
+/** Property TargetType of Type Type */
+targetType?: any;
+
+/** Property Triggers of Type IList`1 */
+triggers?: any;
     [key: string]: any;
 }
 
