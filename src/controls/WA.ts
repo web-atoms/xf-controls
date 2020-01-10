@@ -40,5 +40,5 @@ export interface IAtomListViewConstructor {
 
 export const AtomListView: IAtomListViewConstructor = XNode.prepare("WebAtoms.AtomListView;WebAtoms") as any;
 
-AtomView.DataTemplate = XNode.prepare("WebAtoms.AtomListView:DataTemplate;WebAtoms", true, true);
+AtomListView.DataTemplate = XNode.prepare("WebAtoms.AtomListView:DataTemplate;WebAtoms", true, true);
 
