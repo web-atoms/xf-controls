@@ -70,7 +70,7 @@ AtomForm.FieldStyle = XNode.prepare("WebAtoms.Controls.AtomForm:FieldStyle;WebAt
 
 export interface IAtomField {
     label?: string | Bind;
-    required?: boolean | Bind;
+    isRequired?: boolean | Bind;
     labelColor?: string | Bind;
     error?: string | Bind;
     errorColor?: string | Bind;
