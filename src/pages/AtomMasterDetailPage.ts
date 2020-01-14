@@ -1,6 +1,6 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { MasterDetailPage } from "../XF";
+import { MasterDetailPage } from "../controls/XF";
 
 export default class AtomMasterDetailPage extends AtomXFControl {
 

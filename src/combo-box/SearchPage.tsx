@@ -1,10 +1,10 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { PopupPage } from "./controls/RgPluginsPopup";
+import { PopupPage } from "../controls/RgPluginsPopup";
 // tslint:disable-next-line: max-line-length
-import { ColumnDefinition, Entry, Grid, ListView, RowDefinition } from "./controls/XF";
-import SearchPageViewModel from "./view-models/SearchPageViewModel";
+import { ColumnDefinition, Entry, Grid, ListView, RowDefinition } from "../controls/XF";
+import SearchPageViewModel from "./SearchPageViewModel";
 
 export default class SearchPage extends AtomXFControl {
 
