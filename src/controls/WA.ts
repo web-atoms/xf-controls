@@ -83,6 +83,17 @@ export interface IAtomFieldConstructor {
 
 const AtomField: IAtomFieldConstructor = XNode.prepare("WebAtoms.Controls.AtomField;WebAtoms") as any;
 
+export interface IAtomTemplateSelector {
+    selector: (data: any) => number | Bind;
+}
+
+export interface IAtomTemplateSelectorConstructor {
+    (a?: Partial<IAtomTemplateSelector>, ... node: XNode[]): XNode;
+    Templates: (a?: any, ... node: XNode[]) => XNode;
+}
+
+const AtomTemplateSelector: IAtomTemplateSelectorConstructor = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector;WebAtoms") as any;
+AtomTemplateSelector.Templates = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:Templates;WebAtoms");
 
 const WA = {
     AtomListView,
@@ -90,7 +101,8 @@ const WA = {
     AtomToolbarItem,
     AtomView,
     AtomForm,
-    AtomField
+    AtomField,
+    AtomTemplateSelector
 };
 
 export default WA;
