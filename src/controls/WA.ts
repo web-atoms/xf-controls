@@ -93,7 +93,7 @@ export interface IAtomTemplateSelectorConstructor {
 }
 
 const AtomTemplateSelector: IAtomTemplateSelectorConstructor = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector;WebAtoms") as any;
-AtomTemplateSelector.Templates = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:Templates;WebAtoms");
+AtomTemplateSelector.Templates = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:Templates;WebAtoms", true, true);
 
 const WA = {
     AtomListView,
