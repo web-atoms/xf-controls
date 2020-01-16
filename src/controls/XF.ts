@@ -554,6 +554,36 @@ const BaseMenuItem: IBaseMenuItemConstructor = XNode.prepare<IBaseMenuItem>("Xam
 BaseMenuItem.Effects = XNode.prepare("Xamarin.Forms.BaseMenuItem:Effects;Xamarin.Forms.Core", true, false);
 
 
+export interface IBindableLayout {
+    
+    [key: string]: any;
+}
+
+export interface IBindableLayoutConstructor {
+    (a?: Partial<IBindableLayout>, ... nodes: XNode[]): XNode;
+    
+/** Attached Property BindableLayout.ItemsSource of Type BindableProperty */
+ItemsSource?(v: any): { "Xamarin.Forms.BindableLayout:ItemsSource;Xamarin.Forms.Core": any  };
+
+/** Attached Property BindableLayout.ItemTemplate of Type BindableProperty */
+ItemTemplate?(v: any): { "Xamarin.Forms.BindableLayout:ItemTemplate;Xamarin.Forms.Core": any  };
+
+/** Attached Property BindableLayout.ItemTemplateSelector of Type BindableProperty */
+ItemTemplateSelector?(v: any): { "Xamarin.Forms.BindableLayout:ItemTemplateSelector;Xamarin.Forms.Core": any  }
+    
+}
+
+/** BindableLayout */
+const BindableLayout: IBindableLayoutConstructor = XNode.prepare<IBindableLayout>("Xamarin.Forms.BindableLayout;Xamarin.Forms.Core");
+
+BindableLayout.ItemsSource = (v) => ({ "Xamarin.Forms.BindableLayout:ItemsSource;Xamarin.Forms.Core": v  }) ;
+
+BindableLayout.ItemTemplate = (v) => ({ "Xamarin.Forms.BindableLayout:ItemTemplate;Xamarin.Forms.Core": v  }) ;
+
+BindableLayout.ItemTemplateSelector = (v) => ({ "Xamarin.Forms.BindableLayout:ItemTemplateSelector;Xamarin.Forms.Core": v  }) ;
+
+
+
 export interface IBindableObject {
     
 /** Property BindingContext of Type Object */
@@ -2510,6 +2540,7 @@ ContentView.Triggers = XNode.prepare("Xamarin.Forms.ContentView:Triggers;Xamarin
 
 
 export interface IControlTemplate {
+    
     [key: string]: any;
 }
 
@@ -2526,6 +2557,7 @@ const ControlTemplate: IControlTemplateConstructor = XNode.prepare<IControlTempl
 
 
 export interface IDataTemplate {
+    
     [key: string]: any;
 }
 
@@ -2550,6 +2582,7 @@ DataTemplate.Values = XNode.prepare("Xamarin.Forms.DataTemplate:Values;Xamarin.F
 
 
 export interface IDataTemplateSelector {
+    
     [key: string]: any;
 }
 
@@ -14798,6 +14831,7 @@ const WebViewSource: IWebViewSourceConstructor = XNode.prepare<IWebViewSource>("
 
 
 export interface IStyleSheet {
+    
     [key: string]: any;
 }
 
@@ -14816,6 +14850,7 @@ const XF = { AbsoluteLayout,
 	Application,
 	AppLinkEntry,
 	BaseMenuItem,
+	BindableLayout,
 	BindableObject,
 	BoxView,
 	Button,
