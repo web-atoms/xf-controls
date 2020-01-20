@@ -1,6 +1,6 @@
 //tslint:disable
 import XNode from "@web-atoms/core/dist/core/XNode";
-import { IListView } from "./XF";
+import { IListView, IToolbarItem } from "./XF";
 import Bind from "@web-atoms/core/dist/core/Bind";
 
 export interface IAtomView {
@@ -18,16 +18,18 @@ export const AtomView: IAtomViewConstructor = XNode.prepare("WebAtoms.Controls.A
 AtomView.DataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:DataTemplate;WebAtoms", true, true);
 
 
-export interface IAtomToolbarItem {
+export interface IAtomToolbarItem extends IToolbarItem {
     [key: string]: any;
 }
 
 export interface IAtomToolbarItemConstructor {
     (a?: Partial<IAtomToolbarItem>, node?: XNode): XNode;
+    IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 //     dataTemplate: (a?: any, ... nodes: XNode[]) => XNode;
 }
 
 export const AtomToolbarItem: IAtomToolbarItemConstructor = XNode.prepare("WebAtoms.Controls.AtomToolbarItem;WebAtoms") as any;
+AtomToolbarItem.IconImageSource = XNode.prepare("Xamarin.Forms.ToolbarItem:IconImageSource;Xamarin.Forms.Core", true, false);
 
 // AtomView.dataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:DataTemplate;WebAtoms", true, true);
 export interface IAtomListView extends IListView {
