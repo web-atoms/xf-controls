@@ -14,17 +14,19 @@ import { App } from "@web-atoms/core/dist/App";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import ReferenceService from "@web-atoms/core/dist/services/ReferenceService";
+import XF from "../controls/XF";
 
 export type Factory = () => AtomXFControl;
 
-export default class Root extends AtomXFControl {
+export default class AtomChooser extends AtomXFControl {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
 
-    @BindableProperty
-    public itemTemplate: IClassOf<AtomXFControl> = null;
+    public static emptyTemplate = XNode.prepare("itemTemplate", true, true);
 
-    @BindableProperty
+    public itemTemplate: IClassOf<AtomXFControl> = null;
+    public emptyTemplate: IClassOf<AtomXFControl> = null;
+
     public itemHostTemplate: IClassOf<AtomXFControl> = SearchPage;
 
     @BindableProperty
@@ -197,7 +199,7 @@ function LabelTemplateCreator(__creator: any) {
     return class LabelTemplate extends AtomXFControl {
 
         constructor(app: App, e?: any) {
-            super(app, e || AtomBridge.instance.create("Xamarin.Forms.Label"));
+            super(app, e || AtomBridge.instance.create(XF.Label));
         }
 
         public create(): void {

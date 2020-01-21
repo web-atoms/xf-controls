@@ -11,11 +11,13 @@ export interface IAtomView {
 export interface IAtomViewConstructor {
     (a?: Partial<IAtomView>, node?: XNode): XNode;
     DataTemplate: (a?: any, ... nodes: XNode[]) => XNode;
+    EmptyDataTemplate: (a?: any, ... nodes: XNode[]) => XNode;
 }
 
-export const AtomView: IAtomViewConstructor = XNode.prepare("WebAtoms.Controls.AtomView;WebAtoms") as any;
+export const AtomView: IAtomViewConstructor = XNode.prepare("WebAtoms.Controls.AtomView;WebAtoms.XF") as any;
 
-AtomView.DataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:DataTemplate;WebAtoms", true, true);
+AtomView.DataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:DataTemplate;WebAtoms.XF", true, true);
+AtomView.EmptyDataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:EmptyDataTemplate;WebAtoms.XF", true, true);
 
 
 export interface IAtomToolbarItem extends IToolbarItem {
@@ -28,10 +30,10 @@ export interface IAtomToolbarItemConstructor {
 //     dataTemplate: (a?: any, ... nodes: XNode[]) => XNode;
 }
 
-export const AtomToolbarItem: IAtomToolbarItemConstructor = XNode.prepare("WebAtoms.Controls.AtomToolbarItem;WebAtoms") as any;
+export const AtomToolbarItem: IAtomToolbarItemConstructor = XNode.prepare("WebAtoms.Controls.AtomToolbarItem;WebAtoms.XF") as any;
 AtomToolbarItem.IconImageSource = XNode.prepare("Xamarin.Forms.ToolbarItem:IconImageSource;Xamarin.Forms.Core", true, false);
 
-// AtomView.dataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:DataTemplate;WebAtoms", true, true);
+// AtomView.dataTemplate = XNode.prepare("WebAtoms.Controls.AtomView:DataTemplate;WebAtoms.XF", true, true);
 export interface IAtomListView extends IListView {
     [key: string]: any;
 }
@@ -41,9 +43,9 @@ export interface IAtomListViewConstructor {
     ItemTemplate: (a?: any, ... nodes: XNode[]) => XNode;
 }
 
-export const AtomListView: IAtomListViewConstructor = XNode.prepare("WebAtoms.Controls.AtomListView;WebAtoms") as any;
+export const AtomListView: IAtomListViewConstructor = XNode.prepare("WebAtoms.Controls.AtomListView;WebAtoms.XF") as any;
 
-AtomListView.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomListView:ItemTemplate;WebAtoms", true, true);
+AtomListView.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomListView:ItemTemplate;WebAtoms.XF", true, true);
 
 export interface IAtomRepeater extends IListView {
 
@@ -54,8 +56,8 @@ export interface IAtomRepeaterConstructor {
     ItemTemplate: (a?: any, ... nodes: XNode[]) => XNode;
 }
 
-export const AtomRepeater: IAtomRepeaterConstructor = XNode.prepare("WebAtoms.Controls.AtomRepeater;WebAtoms") as any;
-AtomRepeater.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomRepeater:ItemTemplate;WebAtoms", true, true);
+export const AtomRepeater: IAtomRepeaterConstructor = XNode.prepare("WebAtoms.Controls.AtomRepeater;WebAtoms.XF") as any;
+AtomRepeater.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomRepeater:ItemTemplate;WebAtoms.XF", true, true);
 
 export interface IAtomForm {
     submitCommand?: any;
@@ -66,8 +68,8 @@ export interface IAtomFormConstructor {
     FieldStyle: (a?: any, ... node: XNode[]) => XNode;
 }
 
-const AtomForm: IAtomFormConstructor = XNode.prepare("WebAtoms.Controls.AtomForm;WebAtoms") as any;
-AtomForm.FieldStyle = XNode.prepare("WebAtoms.Controls.AtomForm:FieldStyle;WebAtoms", true, true);
+const AtomForm: IAtomFormConstructor = XNode.prepare("WebAtoms.Controls.AtomForm;WebAtoms.XF") as any;
+AtomForm.FieldStyle = XNode.prepare("WebAtoms.Controls.AtomForm:FieldStyle;WebAtoms.XF", true, true);
 
 
 export interface IAtomField {
@@ -83,7 +85,7 @@ export interface IAtomFieldConstructor {
     (a?: Partial<IAtomField>, node?: XNode): XNode;
 }
 
-const AtomField: IAtomFieldConstructor = XNode.prepare("WebAtoms.Controls.AtomField;WebAtoms") as any;
+const AtomField: IAtomFieldConstructor = XNode.prepare("WebAtoms.Controls.AtomField;WebAtoms.XF") as any;
 
 export interface IAtomTemplateSelector {
     selector: (data: any) => number | Bind;
@@ -95,9 +97,9 @@ export interface IAtomTemplateSelectorConstructor {
     TemplateSelector: (a?: any, ... node: XNode[]) => XNode;
 }
 
-const AtomTemplateSelector: IAtomTemplateSelectorConstructor = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector;WebAtoms") as any;
-AtomTemplateSelector.Templates = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:Templates;WebAtoms", true, true);
-AtomTemplateSelector.TemplateSelector = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:TemplateSelector;WebAtoms", true, false);
+const AtomTemplateSelector: IAtomTemplateSelectorConstructor = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector;WebAtoms.XF") as any;
+AtomTemplateSelector.Templates = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:Templates;WebAtoms.XF", true, true);
+AtomTemplateSelector.TemplateSelector = XNode.prepare("WebAtoms.Controls.AtomTemplateSelector:TemplateSelector;WebAtoms.XF", true, false);
 
 const WA = {
     AtomListView,
