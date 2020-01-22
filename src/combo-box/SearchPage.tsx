@@ -28,7 +28,7 @@ export default class SearchPage extends AtomXFControl {
 				</XF.Grid.ColumnDefinitions>
 				<XF.Entry
 					text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}
-					isVisible={Bind.oneWay(() => this.viewModel.comboBox.searchEnabled)}/>
+					isVisible={Bind.oneWay(() => this.viewModel.comboBox.showSearch)}/>
 				<XF.ListView
 					{ ... XF.Grid.Row(1) }
 					{ ...  XF.Grid.ColumnSpan(2) }

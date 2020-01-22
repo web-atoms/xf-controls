@@ -22,7 +22,7 @@ export default class AtomChooser extends AtomXFControl {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
 
-    public static emptyTemplate = XNode.prepare("itemTemplate", true, true);
+    public static emptyTemplate = XNode.prepare("emptyTemplate", true, true);
 
     public itemTemplate: IClassOf<AtomXFControl> = null;
     public emptyTemplate: IClassOf<AtomXFControl> = null;

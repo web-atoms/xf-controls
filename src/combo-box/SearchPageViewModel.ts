@@ -1,11 +1,15 @@
 import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowViewModel";
+import AtomComboBox from "./AtomComboBox";
 
 export default class SearchPageViewModel extends AtomWindowViewModel  {
 
-    public comboBox: any;
+
+    public selectedItem: any;
+
+    public comboBox: AtomComboBox;
 
     public init(): Promise<void> {
-        this.comboBox.windowViewModel = this;
+        (this.comboBox as any).windowViewModel = this;
         return super.init();
     }
 
