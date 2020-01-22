@@ -3,6 +3,7 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import { IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import { PopupPage } from "../controls/RgPluginsPopup";
 import WA from "../controls/WA";
 import XF from "../controls/XF";
 import AtomXFLink from "../link/AtomXFLink";
@@ -10,7 +11,6 @@ import AtomContentPage from "../pages/AtomContentPage";
 import AtomPopupPage from "../pages/AtomPopupPage";
 import SearchPageViewModel from "./SearchPageViewModel";
 import SelectionList from "./SelectionList";
-import { PopupPage } from "../controls/RgPluginsPopup";
 
 export default class AtomComboBox extends AtomXFControl {
 

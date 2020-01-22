@@ -3,7 +3,6 @@ import AtomComboBox from "./AtomComboBox";
 
 export default class SearchPageViewModel extends AtomWindowViewModel  {
 
-
     public selectedItem: any;
 
     public comboBox: AtomComboBox;
