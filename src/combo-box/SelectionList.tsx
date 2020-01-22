@@ -11,16 +11,18 @@ export default class SelectionList extends AtomContentView {
 
     public create() {
         this.render(<XF.Grid>
+
             <XF.Grid.RowDefinitions>
                 <XF.RowDefinition height="Auto"/>
                 <XF.RowDefinition/>
             </XF.Grid.RowDefinitions>
             <XF.SearchBar
-                isVisible={() => this.viewModel.comboBox.showSearch}
+                isVisible={Bind.oneWay(() => this.viewModel.comboBox.showSearch)}
                 text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}
                 />
             <XF.CollectionView
                 { ... XF.Grid.Row(1) }
+                itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
                 selectionMode="Single"
                 selectedItem={Bind.twoWays(() => this.viewModel.selectedItem)}
                 eventSelectionChanged={Bind.event(() => this.viewModel.close(this.viewModel.selectedItem) )}

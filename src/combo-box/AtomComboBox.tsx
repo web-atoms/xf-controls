@@ -46,7 +46,7 @@ export default class AtomComboBox extends AtomXFControl {
 
     protected preCreate() {
         this.prompt = "Select";
-        this.showSearch = false;
+        this.showSearch = true;
         this.showAsPopup = true;
         this.searchText = "";
         this.items = null;
@@ -87,7 +87,6 @@ export default class AtomComboBox extends AtomXFControl {
                 emptyDataTemplate={Bind.oneWay(() => this.promptTemplate)}/>
 
             <AtomXFLink
-                for={XF.Button}
                 { ... XF.Grid.Column(1)}
                 // source={Bind.oneWay(() => this.dropDownImage)}
                 text="Change"
@@ -130,9 +129,13 @@ class SearchPopupPage extends AtomPopupPage {
 
         this.render(
             <PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
-            <WA.AtomView
-                bindingContext="Empty"
-                dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
+                <XF.Grid>
+                    <XF.Label
+                        text={Bind.oneWay(() => this.viewModel.title)}/>
+                    <WA.AtomView
+                        bindingContext="Empty"
+                        dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
+            </XF.Grid>
         </PopupPage>);
     }
 }
