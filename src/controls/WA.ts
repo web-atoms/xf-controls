@@ -61,6 +61,7 @@ AtomRepeater.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomRepeater:ItemTe
 
 export interface IAtomForm {
     submitCommand?: any;
+    [key: string]: any;
 }
 
 export interface IAtomFormConstructor {
@@ -79,6 +80,7 @@ export interface IAtomField {
     error?: string | Bind;
     errorColor?: string | Bind;
     errorBackgroundColor?: string | Bind;
+    [key: string]: any;
 }
 
 export interface IAtomFieldConstructor {
