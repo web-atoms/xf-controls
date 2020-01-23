@@ -11,6 +11,7 @@ import AtomContentPage from "../pages/AtomContentPage";
 import AtomPopupPage from "../pages/AtomPopupPage";
 import SearchPageViewModel from "./SearchPageViewModel";
 import SelectionList from "./SelectionList";
+import Colors from "@web-atoms/core/dist/core/Colors";
 
 export default class AtomComboBox extends AtomXFControl {
 
@@ -73,7 +74,12 @@ export default class AtomComboBox extends AtomXFControl {
             {/** Default Item Template */}
             <AtomComboBox.itemTemplate>
                 <XF.DataTemplate>
-                    <XF.Label text={Bind.oneWay((x) => x.data.label || x.data)}/>
+                    <XF.Label
+                        text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
+                        backgroundColor={Bind.oneWay((x) => x.data === x.viewModel.comboBox.selectedItem
+                            ? Colors.lightBlue
+                            : Colors.white )}
+                        />
                 </XF.DataTemplate>
             </AtomComboBox.itemTemplate>
 
@@ -95,8 +101,11 @@ export default class AtomComboBox extends AtomXFControl {
             <AtomXFLink
                 { ... XF.Grid.Column(1)}
                 // source={Bind.oneWay(() => this.dropDownImage)}
+                // for={XF.ImageButton.toString()}
+                // source="res://WebAtoms.XF/Images.DropDownImage.png"
                 text="Change"
                 page={Bind.oneWay(() => this.showAsPopup ? SearchPopupPage : SearchPage )}
+                eventResult={Bind.event((s, e) => this.selectedItem = e.detail)}
                 parameters={Bind.oneWay(() => ({
                     "title": this.prompt,
                     "ref:selectedItem": this.selectedItem,
@@ -137,14 +146,14 @@ class SearchPopupPage extends AtomPopupPage {
             <PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
                 <XF.Grid>
                     <XF.Grid.RowDefinitions>
-                        <XF.RowDefinition/>
+                        <XF.RowDefinition height={20} />
                         <XF.RowDefinition height="auto"/>
-                        <XF.RowDefinition/>
+                        <XF.RowDefinition height={50} />
                     </XF.Grid.RowDefinitions>
                     <XF.Grid.ColumnDefinitions>
-                        <XF.ColumnDefinition/>
+                        <XF.ColumnDefinition width={50} />
                         <XF.ColumnDefinition width="auto"/>
-                        <XF.ColumnDefinition/>
+                        <XF.ColumnDefinition width={50}/>
                     </XF.Grid.ColumnDefinitions>
                     <XF.Grid
                         padding={5}
@@ -156,10 +165,20 @@ class SearchPopupPage extends AtomPopupPage {
                             <XF.RowDefinition height="auto"/>
                             <XF.RowDefinition/>
                         </XF.Grid.RowDefinitions>
+                        <XF.Grid.ColumnDefinitions>
+                            <XF.ColumnDefinition/>
+                            <XF.ColumnDefinition width="auto"/>
+                        </XF.Grid.ColumnDefinitions>
                     <XF.Label
                         text={Bind.oneWay(() => this.viewModel.title)}/>
+                    <XF.ImageButton
+                        { ... XF.Grid.Column(1) }
+                        source="res://WebAtoms.XF/Images.DeleteImage.png"
+                        command={Bind.event(() => this.viewModel.cancel())}
+                        />
                     <WA.AtomView
                         { ... XF.Grid.Row(1) }
+                        { ... XF.Grid.ColumnSpan(2) }
                         emptyDataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
                     </XF.Grid>
             </XF.Grid>

@@ -27,7 +27,13 @@ export default class SelectionList extends AtomContentView {
                     itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
                     selectionMode="Single"
                     selectedItem={Bind.twoWays(() => this.viewModel.selectedItem)}
-                    eventSelectionChanged={Bind.event(() => this.viewModel.close(this.viewModel.selectedItem) )}
+                    eventSelectionChanged={Bind.event(() => {
+                        // tslint:disable-next-line: no-console
+                        console.log(`Selection event`);
+                        setTimeout(() => {
+                            this.viewModel.close(this.viewModel.selectedItem);
+                        }, 10);
+                    })}
                     itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
                 </XF.CollectionView>
             </XF.Grid>
