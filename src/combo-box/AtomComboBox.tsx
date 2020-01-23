@@ -54,7 +54,7 @@ export default class AtomComboBox extends AtomXFControl {
         this.promptTemplate = null;
         this.itemTemplate = null;
         this.dropDownImage = "res://WebAtoms.XF/Images.DropDownImage.png";
-        this.selectionViewTemplate = SelectionList;
+        this.selectionViewTemplate = null;
     }
 
     protected create() {
@@ -76,6 +76,12 @@ export default class AtomComboBox extends AtomXFControl {
                     <XF.Label text={Bind.oneWay((x) => x.data.label || x.data)}/>
                 </XF.DataTemplate>
             </AtomComboBox.itemTemplate>
+
+            <AtomComboBox.selectionViewTemplate>
+                <XF.DataTemplate>
+                    <SelectionList/>
+                </XF.DataTemplate>
+            </AtomComboBox.selectionViewTemplate>
 
             <XF.Grid.ColumnDefinitions>
                 <XF.ColumnDefinition/>
@@ -130,11 +136,32 @@ class SearchPopupPage extends AtomPopupPage {
         this.render(
             <PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
                 <XF.Grid>
+                    <XF.Grid.RowDefinitions>
+                        <XF.RowDefinition/>
+                        <XF.RowDefinition height="auto"/>
+                        <XF.RowDefinition/>
+                    </XF.Grid.RowDefinitions>
+                    <XF.Grid.ColumnDefinitions>
+                        <XF.ColumnDefinition/>
+                        <XF.ColumnDefinition width="auto"/>
+                        <XF.ColumnDefinition/>
+                    </XF.Grid.ColumnDefinitions>
+                    <XF.Grid
+                        padding={5}
+                        backgroundColor="white"
+                        { ... XF.Grid.Column(1) }
+                        { ... XF.Grid.Row(1) }
+                        >
+                        <XF.Grid.RowDefinitions>
+                            <XF.RowDefinition height="auto"/>
+                            <XF.RowDefinition/>
+                        </XF.Grid.RowDefinitions>
                     <XF.Label
                         text={Bind.oneWay(() => this.viewModel.title)}/>
                     <WA.AtomView
-                        bindingContext="Empty"
-                        dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
+                        { ... XF.Grid.Row(1) }
+                        emptyDataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
+                    </XF.Grid>
             </XF.Grid>
         </PopupPage>);
     }
