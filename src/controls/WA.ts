@@ -49,7 +49,7 @@ AtomListView.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomListView:ItemTe
 
 const GroupBy = {
     ItemsSource:
-        XNode.prepare("WebAtoms.Controls.GroupBy:ItemsSource;WebAtoms")
+        (n: any) => ({ "WebAtoms.Controls.GroupBy:ItemsSource;WebAtoms": n})
 };
 
 export interface IAtomRepeater extends IListView {
