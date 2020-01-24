@@ -4,6 +4,7 @@ import Colors from "@web-atoms/core/dist/core/Colors";
 import { PropertyBinding } from "@web-atoms/core/dist/core/PropertyBinding";
 import { IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { PopupPage } from "../clr/RgPluginsPopup";
 import WA from "../clr/WA";
@@ -92,7 +93,8 @@ export default class AtomXFComboBox extends AtomXFControl {
             {/** Default Prompt Template */}
             <AtomXFComboBox.promptTemplate>
                 <XF.DataTemplate>
-                    <XF.Label text={Bind.oneWay(() => this.prompt)}/>
+                    <XF.Label
+                        text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
             </AtomXFComboBox.promptTemplate>
 
@@ -119,25 +121,28 @@ export default class AtomXFComboBox extends AtomXFControl {
                 <XF.ColumnDefinition width="Auto"/>
             </XF.Grid.ColumnDefinitions>
             <WA.AtomView
+                padding={5}
                 bindingContext={Bind.oneWay(() => this.selectedItem)}
                 dataTemplate={Bind.oneWay(() => this.itemTemplate)}
                 emptyDataTemplate={Bind.oneWay(() => this.promptTemplate)}/>
 
-            <AtomXFLink
-                { ... XF.Grid.Column(1)}
-                // source={Bind.oneWay(() => this.dropDownImage)}
-                // for={XF.ImageButton.toString()}
-                // source="res://WebAtoms.XF/Images.DropDownImage.png"
-                text="Change"
-                page={Bind.oneWay(() => this.showAsPopup ? SearchPopupPage : SearchPage )}
-                eventResult={Bind.event((s, e) => this.selectedItem = e.detail)}
-                parameters={Bind.oneWay(() => ({
-                    "title": this.prompt,
-                    "ref:selectedItem": this.selectedItem,
-                    "ref:comboBox": this
-                }))}
-                />
+            <XF.ImageButton
+                { ... XF.Grid.Column(1) }
+                heightRequest={40}
+                widthRequest={40}
+                source="res://WebAtoms.XF/Images.DropDownImage.png"
+                command={() => this.app.runAsync(() => this.openPopup())}/>
         </XF.Grid>);
+    }
+
+    protected async openPopup() {
+        const ns = this.resolve(NavigationService as any) as NavigationService;
+        const r = await ns.openPage(this.showAsPopup ? SearchPopupPage : SearchPage, {
+            "title": this.prompt,
+            "ref:selectedItem": this.selectedItem,
+            "ref:comboBox": this
+        });
+        this.selectedItem = r;
     }
 
 }
@@ -172,12 +177,12 @@ class SearchPopupPage extends AtomXFPopupPage {
                 <XF.Grid>
                     <XF.Grid.RowDefinitions>
                         <XF.RowDefinition height={20} />
-                        <XF.RowDefinition height="auto"/>
+                        <XF.RowDefinition/>
                         <XF.RowDefinition height={50} />
                     </XF.Grid.RowDefinitions>
                     <XF.Grid.ColumnDefinitions>
                         <XF.ColumnDefinition width={50} />
-                        <XF.ColumnDefinition width="auto"/>
+                        <XF.ColumnDefinition/>
                         <XF.ColumnDefinition width={50}/>
                     </XF.Grid.ColumnDefinitions>
                     <XF.Grid
@@ -187,12 +192,12 @@ class SearchPopupPage extends AtomXFPopupPage {
                         { ... XF.Grid.Row(1) }
                         >
                         <XF.Grid.RowDefinitions>
-                            <XF.RowDefinition height="auto"/>
+                            <XF.RowDefinition height={30}/>
                             <XF.RowDefinition/>
                         </XF.Grid.RowDefinitions>
                         <XF.Grid.ColumnDefinitions>
                             <XF.ColumnDefinition/>
-                            <XF.ColumnDefinition width="auto"/>
+                            <XF.ColumnDefinition width={30}/>
                         </XF.Grid.ColumnDefinitions>
                     <XF.Label
                         text={Bind.oneWay(() => this.viewModel.title)}/>
