@@ -47,6 +47,11 @@ export const AtomListView: IAtomListViewConstructor = XNode.prepare("WebAtoms.Co
 
 AtomListView.ItemTemplate = XNode.prepare("WebAtoms.Controls.AtomListView:ItemTemplate;WebAtoms.XF", true, true);
 
+const GroupBy = {
+    ItemsSource:
+        XNode.prepare("WebAtoms.Controls.GroupBy:ItemsSource;WebAtoms")
+};
+
 export interface IAtomRepeater extends IListView {
 
 }
@@ -110,7 +115,8 @@ const WA = {
     AtomView,
     AtomForm,
     AtomField,
-    AtomTemplateSelector
+    AtomTemplateSelector,
+    GroupBy
 };
 
 export default WA;
