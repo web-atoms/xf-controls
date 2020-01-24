@@ -14,7 +14,7 @@ import { App } from "@web-atoms/core/dist/App";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import ReferenceService from "@web-atoms/core/dist/services/ReferenceService";
-import XF from "../controls/XF";
+import XF from "../clr/XF";
 
 export type Factory = () => AtomXFControl;
 

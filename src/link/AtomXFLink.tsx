@@ -5,7 +5,7 @@ import { CancelToken } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { IPageOptions, NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import XF from "../controls/XF";
+import XF from "../clr/XF";
 
 export default class AtomXFLink extends AtomXFControl {
 
@@ -53,8 +53,8 @@ export default class AtomXFLink extends AtomXFControl {
 
         super.preCreate();
 
-        this.render(<XF.Label>
-            <XF.Label.GestureRecognizers>
+        this.render(<XF.View>
+            <XF.View.GestureRecognizers>
                 <XF.TapGestureRecognizer
                     command={Bind.event(() => {
                         // tslint:disable-next-line: no-console
@@ -65,8 +65,8 @@ export default class AtomXFLink extends AtomXFControl {
                         return this.app.runAsync(() => this.openPopup());
                     })}
                     />
-            </XF.Label.GestureRecognizers>
-        </XF.Label>);
+            </XF.View.GestureRecognizers>
+        </XF.View>);
 
         // this.bindEvent(
         //     this.element,

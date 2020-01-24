@@ -1,8 +1,8 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { PopupPage } from "../controls/RgPluginsPopup";
+import { PopupPage } from "../clr/RgPluginsPopup";
 
-export default class AtomPopupPage extends AtomXFControl {
+export default class AtomXFPopupPage extends AtomXFControl {
 
     constructor(a: any, e?: any) {
         super(a, e || AtomBridge.instance.create(PopupPage));

@@ -1,6 +1,6 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import XF from "./controls/XF";
+import XF from "./clr/XF";
 
 export default class AtomContentView extends AtomXFControl {
 

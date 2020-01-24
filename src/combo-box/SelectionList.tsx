@@ -2,7 +2,7 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import AtomContentView from "../AtomContentView";
-import XF from "../controls/XF";
+import XF from "../clr/XF";
 import SearchPageViewModel from "./SearchPageViewModel";
 
 export default class SelectionList extends AtomContentView {
@@ -32,7 +32,7 @@ export default class SelectionList extends AtomContentView {
                         console.log(`Selection event`);
                         setTimeout(() => {
                             this.viewModel.close(this.viewModel.selectedItem);
-                        }, 10);
+                        }, 250);
                     })}
                     itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
                 </XF.CollectionView>
