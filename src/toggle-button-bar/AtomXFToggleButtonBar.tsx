@@ -87,15 +87,18 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
             </AtomXFToggleButtonBar.itemTemplate>
             <XF.StackLayout
                 orientation="Horizontal"
-                { ... XF.BindableLayout.itemTemplate(<XF.DataTemplate><WA.AtomView
-                    dataTemplate={Bind.oneWay(() => this.itemTemplate)}>
-                    <XF.View.gestureRecognizers>
-                        <XF.TapGestureRecognizer
-                            command={Bind.event((x) => this.selectedItem = x.data)}
-                            />
-                    </XF.View.gestureRecognizers>
-                </WA.AtomView></XF.DataTemplate>) }
                 { ... XF.BindableLayout.itemsSource(Bind.oneWay(() => this.items)) }>
+                <XF.BindableLayout.itemTemplate>
+                    <XF.DataTemplate>
+                        <WA.AtomView
+                            dataTemplate={Bind.oneWay(() => this.itemTemplate)}>
+                            <XF.View.gestureRecognizers>
+                                <XF.TapGestureRecognizer
+                                command={Bind.event((x) => this.selectedItem = x.data)}/>
+                        </XF.View.gestureRecognizers>
+                    </WA.AtomView>
+                    </XF.DataTemplate>
+                </XF.BindableLayout.itemTemplate>
             </XF.StackLayout>
         </XF.Frame>);
     }
