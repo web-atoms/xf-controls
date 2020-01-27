@@ -149,53 +149,53 @@ export interface IAbsoluteLayoutConstructor {
     (a?: Partial<IAbsoluteLayout>, ... nodes: XNode[]): XNode;
     
 /** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty */
-LayoutFlags?(v: any): { "Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core": any  };
+layoutFlags?(v: any);
 
 /** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty */
-LayoutBounds?(v: any): { "Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core": any  }
+layoutBounds?(v: any)
     
 /** Property AbsoluteLayout.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AbsoluteLayout.Children of Type Xamarin.Forms.View */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AbsoluteLayout.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AbsoluteLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AbsoluteLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AbsoluteLayout.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AbsoluteLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** AbsoluteLayout */
 const AbsoluteLayout: IAbsoluteLayoutConstructor = XNode.prepare<IAbsoluteLayout>("Xamarin.Forms.AbsoluteLayout;Xamarin.Forms.Core", false, false);
 
-AbsoluteLayout.LayoutFlags = (v) => ({ "Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core": v  }) ;
+AbsoluteLayout.layoutFlags = XNode.prepare("Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core", true) as any ;
 
-AbsoluteLayout.LayoutBounds = (v) => ({ "Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core": v  }) ;
+AbsoluteLayout.layoutBounds = XNode.prepare("Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core", true) as any ;
 
-AbsoluteLayout.Behaviors = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Behaviors;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.behaviors = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Behaviors;Xamarin.Forms.Core", true, false);
 
-AbsoluteLayout.Children = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Children;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.children = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Children;Xamarin.Forms.Core", true, false);
 
-AbsoluteLayout.Effects = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Effects;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.effects = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Effects;Xamarin.Forms.Core", true, false);
 
-AbsoluteLayout.GestureRecognizers = XNode.prepare("Xamarin.Forms.AbsoluteLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.AbsoluteLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-AbsoluteLayout.Resources = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Resources;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.resources = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Resources;Xamarin.Forms.Core", true, false);
 
-AbsoluteLayout.StyleClass = XNode.prepare("Xamarin.Forms.AbsoluteLayout:StyleClass;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.styleClass = XNode.prepare("Xamarin.Forms.AbsoluteLayout:StyleClass;Xamarin.Forms.Core", true, false);
 
-AbsoluteLayout.Triggers = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Triggers;Xamarin.Forms.Core", true, false);
+AbsoluteLayout.triggers = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IActivityIndicator {
@@ -343,39 +343,39 @@ export interface IActivityIndicatorConstructor {
     
     
 /** Property ActivityIndicator.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ActivityIndicator.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ActivityIndicator.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ActivityIndicator.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ActivityIndicator.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ActivityIndicator.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ActivityIndicator */
 const ActivityIndicator: IActivityIndicatorConstructor = XNode.prepare<IActivityIndicator>("Xamarin.Forms.ActivityIndicator;Xamarin.Forms.Core", false, false);
 
 
-ActivityIndicator.Behaviors = XNode.prepare("Xamarin.Forms.ActivityIndicator:Behaviors;Xamarin.Forms.Core", true, false);
+ActivityIndicator.behaviors = XNode.prepare("Xamarin.Forms.ActivityIndicator:Behaviors;Xamarin.Forms.Core", true, false);
 
-ActivityIndicator.Effects = XNode.prepare("Xamarin.Forms.ActivityIndicator:Effects;Xamarin.Forms.Core", true, false);
+ActivityIndicator.effects = XNode.prepare("Xamarin.Forms.ActivityIndicator:Effects;Xamarin.Forms.Core", true, false);
 
-ActivityIndicator.GestureRecognizers = XNode.prepare("Xamarin.Forms.ActivityIndicator:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ActivityIndicator.gestureRecognizers = XNode.prepare("Xamarin.Forms.ActivityIndicator:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ActivityIndicator.Resources = XNode.prepare("Xamarin.Forms.ActivityIndicator:Resources;Xamarin.Forms.Core", true, false);
+ActivityIndicator.resources = XNode.prepare("Xamarin.Forms.ActivityIndicator:Resources;Xamarin.Forms.Core", true, false);
 
-ActivityIndicator.StyleClass = XNode.prepare("Xamarin.Forms.ActivityIndicator:StyleClass;Xamarin.Forms.Core", true, false);
+ActivityIndicator.styleClass = XNode.prepare("Xamarin.Forms.ActivityIndicator:StyleClass;Xamarin.Forms.Core", true, false);
 
-ActivityIndicator.Triggers = XNode.prepare("Xamarin.Forms.ActivityIndicator:Triggers;Xamarin.Forms.Core", true, false);
+ActivityIndicator.triggers = XNode.prepare("Xamarin.Forms.ActivityIndicator:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IApplication {
@@ -421,29 +421,29 @@ export interface IApplicationConstructor {
     
     
 /** Property Application.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Application.MainPage of Type Xamarin.Forms.Page */
-MainPage?: ( a: any, ... nodes: XNode[]) => XNode;
+mainPage?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Application.Properties of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Properties?: ( a: any, ... nodes: XNode[]) => XNode;
+properties?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Application.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode
+resources?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Application */
 const Application: IApplicationConstructor = XNode.prepare<IApplication>("Xamarin.Forms.Application;Xamarin.Forms.Core", false, false);
 
 
-Application.Effects = XNode.prepare("Xamarin.Forms.Application:Effects;Xamarin.Forms.Core", true, false);
+Application.effects = XNode.prepare("Xamarin.Forms.Application:Effects;Xamarin.Forms.Core", true, false);
 
-Application.MainPage = XNode.prepare("Xamarin.Forms.Application:MainPage;Xamarin.Forms.Core", true, false);
+Application.mainPage = XNode.prepare("Xamarin.Forms.Application:MainPage;Xamarin.Forms.Core", true, false);
 
-Application.Properties = XNode.prepare("Xamarin.Forms.Application:Properties;Xamarin.Forms.Core", true, false);
+Application.properties = XNode.prepare("Xamarin.Forms.Application:Properties;Xamarin.Forms.Core", true, false);
 
-Application.Resources = XNode.prepare("Xamarin.Forms.Application:Resources;Xamarin.Forms.Core", true, false);
+Application.resources = XNode.prepare("Xamarin.Forms.Application:Resources;Xamarin.Forms.Core", true, false);
 
 
 export interface IAppLinkEntry {
@@ -495,24 +495,24 @@ export interface IAppLinkEntryConstructor {
     
     
 /** Property AppLinkEntry.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AppLinkEntry.KeyValues of Type System.Collections.Generic.KeyValuePair`2[System.String,System.String] */
-KeyValues?: ( a: any, ... nodes: XNode[]) => XNode;
+keyValues?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property AppLinkEntry.Thumbnail of Type Xamarin.Forms.ImageSource */
-Thumbnail?: ( a: any, ... nodes: XNode[]) => XNode
+thumbnail?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** AppLinkEntry */
 const AppLinkEntry: IAppLinkEntryConstructor = XNode.prepare<IAppLinkEntry>("Xamarin.Forms.AppLinkEntry;Xamarin.Forms.Core", false, false);
 
 
-AppLinkEntry.Effects = XNode.prepare("Xamarin.Forms.AppLinkEntry:Effects;Xamarin.Forms.Core", true, false);
+AppLinkEntry.effects = XNode.prepare("Xamarin.Forms.AppLinkEntry:Effects;Xamarin.Forms.Core", true, false);
 
-AppLinkEntry.KeyValues = XNode.prepare("Xamarin.Forms.AppLinkEntry:KeyValues;Xamarin.Forms.Core", true, false);
+AppLinkEntry.keyValues = XNode.prepare("Xamarin.Forms.AppLinkEntry:KeyValues;Xamarin.Forms.Core", true, false);
 
-AppLinkEntry.Thumbnail = XNode.prepare("Xamarin.Forms.AppLinkEntry:Thumbnail;Xamarin.Forms.Core", true, false);
+AppLinkEntry.thumbnail = XNode.prepare("Xamarin.Forms.AppLinkEntry:Thumbnail;Xamarin.Forms.Core", true, false);
 
 
 export interface IBaseMenuItem {
@@ -549,14 +549,14 @@ export interface IBaseMenuItemConstructor {
     
     
 /** Property BaseMenuItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** BaseMenuItem */
 const BaseMenuItem: IBaseMenuItemConstructor = XNode.prepare<IBaseMenuItem>("Xamarin.Forms.BaseMenuItem;Xamarin.Forms.Core", false, false);
 
 
-BaseMenuItem.Effects = XNode.prepare("Xamarin.Forms.BaseMenuItem:Effects;Xamarin.Forms.Core", true, false);
+BaseMenuItem.effects = XNode.prepare("Xamarin.Forms.BaseMenuItem:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IBindableLayout {
@@ -569,24 +569,24 @@ export interface IBindableLayoutConstructor {
     (a?: Partial<IBindableLayout>, ... nodes: XNode[]): XNode;
     
 /** Attached Property BindableLayout.ItemsSource of Type BindableProperty */
-ItemsSource?(v: any): { "Xamarin.Forms.BindableLayout:ItemsSource;Xamarin.Forms.Core": any  };
+itemsSource?(v: any);
 
 /** Attached Property BindableLayout.ItemTemplate of Type BindableProperty */
-ItemTemplate?(v: any): { "Xamarin.Forms.BindableLayout:ItemTemplate;Xamarin.Forms.Core": any  };
+itemTemplate?(v: any);
 
 /** Attached Property BindableLayout.ItemTemplateSelector of Type BindableProperty */
-ItemTemplateSelector?(v: any): { "Xamarin.Forms.BindableLayout:ItemTemplateSelector;Xamarin.Forms.Core": any  }
+itemTemplateSelector?(v: any)
     
 }
 
 /** BindableLayout */
 const BindableLayout: IBindableLayoutConstructor = XNode.prepare<IBindableLayout>("Xamarin.Forms.BindableLayout;Xamarin.Forms.Core", false, false);
 
-BindableLayout.ItemsSource = (v) => ({ "Xamarin.Forms.BindableLayout:ItemsSource;Xamarin.Forms.Core": v  }) ;
+BindableLayout.itemsSource = XNode.prepare("Xamarin.Forms.BindableLayout:ItemsSource;Xamarin.Forms.Core", true) as any ;
 
-BindableLayout.ItemTemplate = (v) => ({ "Xamarin.Forms.BindableLayout:ItemTemplate;Xamarin.Forms.Core": v  }) ;
+BindableLayout.itemTemplate = XNode.prepare("Xamarin.Forms.BindableLayout:ItemTemplate;Xamarin.Forms.Core", true) as any ;
 
-BindableLayout.ItemTemplateSelector = (v) => ({ "Xamarin.Forms.BindableLayout:ItemTemplateSelector;Xamarin.Forms.Core": v  }) ;
+BindableLayout.itemTemplateSelector = XNode.prepare("Xamarin.Forms.BindableLayout:ItemTemplateSelector;Xamarin.Forms.Core", true) as any ;
 
 
 
@@ -758,39 +758,39 @@ export interface IBoxViewConstructor {
     
     
 /** Property BoxView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BoxView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BoxView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BoxView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BoxView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BoxView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** BoxView */
 const BoxView: IBoxViewConstructor = XNode.prepare<IBoxView>("Xamarin.Forms.BoxView;Xamarin.Forms.Core", false, false);
 
 
-BoxView.Behaviors = XNode.prepare("Xamarin.Forms.BoxView:Behaviors;Xamarin.Forms.Core", true, false);
+BoxView.behaviors = XNode.prepare("Xamarin.Forms.BoxView:Behaviors;Xamarin.Forms.Core", true, false);
 
-BoxView.Effects = XNode.prepare("Xamarin.Forms.BoxView:Effects;Xamarin.Forms.Core", true, false);
+BoxView.effects = XNode.prepare("Xamarin.Forms.BoxView:Effects;Xamarin.Forms.Core", true, false);
 
-BoxView.GestureRecognizers = XNode.prepare("Xamarin.Forms.BoxView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+BoxView.gestureRecognizers = XNode.prepare("Xamarin.Forms.BoxView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-BoxView.Resources = XNode.prepare("Xamarin.Forms.BoxView:Resources;Xamarin.Forms.Core", true, false);
+BoxView.resources = XNode.prepare("Xamarin.Forms.BoxView:Resources;Xamarin.Forms.Core", true, false);
 
-BoxView.StyleClass = XNode.prepare("Xamarin.Forms.BoxView:StyleClass;Xamarin.Forms.Core", true, false);
+BoxView.styleClass = XNode.prepare("Xamarin.Forms.BoxView:StyleClass;Xamarin.Forms.Core", true, false);
 
-BoxView.Triggers = XNode.prepare("Xamarin.Forms.BoxView:Triggers;Xamarin.Forms.Core", true, false);
+BoxView.triggers = XNode.prepare("Xamarin.Forms.BoxView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IButton {
@@ -983,44 +983,44 @@ export interface IButtonConstructor {
     
     
 /** Property Button.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Button.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Button.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Button.ImageSource of Type Xamarin.Forms.ImageSource */
-ImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+imageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Button.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Button.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Button.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Button */
 const Button: IButtonConstructor = XNode.prepare<IButton>("Xamarin.Forms.Button;Xamarin.Forms.Core", false, false);
 
 
-Button.Behaviors = XNode.prepare("Xamarin.Forms.Button:Behaviors;Xamarin.Forms.Core", true, false);
+Button.behaviors = XNode.prepare("Xamarin.Forms.Button:Behaviors;Xamarin.Forms.Core", true, false);
 
-Button.Effects = XNode.prepare("Xamarin.Forms.Button:Effects;Xamarin.Forms.Core", true, false);
+Button.effects = XNode.prepare("Xamarin.Forms.Button:Effects;Xamarin.Forms.Core", true, false);
 
-Button.GestureRecognizers = XNode.prepare("Xamarin.Forms.Button:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Button.gestureRecognizers = XNode.prepare("Xamarin.Forms.Button:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Button.ImageSource = XNode.prepare("Xamarin.Forms.Button:ImageSource;Xamarin.Forms.Core", true, false);
+Button.imageSource = XNode.prepare("Xamarin.Forms.Button:ImageSource;Xamarin.Forms.Core", true, false);
 
-Button.Resources = XNode.prepare("Xamarin.Forms.Button:Resources;Xamarin.Forms.Core", true, false);
+Button.resources = XNode.prepare("Xamarin.Forms.Button:Resources;Xamarin.Forms.Core", true, false);
 
-Button.StyleClass = XNode.prepare("Xamarin.Forms.Button:StyleClass;Xamarin.Forms.Core", true, false);
+Button.styleClass = XNode.prepare("Xamarin.Forms.Button:StyleClass;Xamarin.Forms.Core", true, false);
 
-Button.Triggers = XNode.prepare("Xamarin.Forms.Button:Triggers;Xamarin.Forms.Core", true, false);
+Button.triggers = XNode.prepare("Xamarin.Forms.Button:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ICarouselPage {
@@ -1195,64 +1195,64 @@ export interface ICarouselPageConstructor {
     
     
 /** Property CarouselPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.Children of Type Xamarin.Forms.ContentPage */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.CurrentPage of Type Xamarin.Forms.ContentPage */
-CurrentPage?: ( a: any, ... nodes: XNode[]) => XNode;
+currentPage?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselPage.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** CarouselPage */
 const CarouselPage: ICarouselPageConstructor = XNode.prepare<ICarouselPage>("Xamarin.Forms.CarouselPage;Xamarin.Forms.Core", false, false);
 
 
-CarouselPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+CarouselPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-CarouselPage.Behaviors = XNode.prepare("Xamarin.Forms.CarouselPage:Behaviors;Xamarin.Forms.Core", true, false);
+CarouselPage.behaviors = XNode.prepare("Xamarin.Forms.CarouselPage:Behaviors;Xamarin.Forms.Core", true, false);
 
-CarouselPage.Children = XNode.prepare("Xamarin.Forms.CarouselPage:Children;Xamarin.Forms.Core", true, false);
+CarouselPage.children = XNode.prepare("Xamarin.Forms.CarouselPage:Children;Xamarin.Forms.Core", true, false);
 
-CarouselPage.CurrentPage = XNode.prepare("Xamarin.Forms.CarouselPage:CurrentPage;Xamarin.Forms.Core", true, false);
+CarouselPage.currentPage = XNode.prepare("Xamarin.Forms.CarouselPage:CurrentPage;Xamarin.Forms.Core", true, false);
 
-CarouselPage.Effects = XNode.prepare("Xamarin.Forms.CarouselPage:Effects;Xamarin.Forms.Core", true, false);
+CarouselPage.effects = XNode.prepare("Xamarin.Forms.CarouselPage:Effects;Xamarin.Forms.Core", true, false);
 
-CarouselPage.IconImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:IconImageSource;Xamarin.Forms.Core", true, false);
+CarouselPage.iconImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:IconImageSource;Xamarin.Forms.Core", true, false);
 
-CarouselPage.ItemTemplate = XNode.prepare("Xamarin.Forms.CarouselPage:ItemTemplate;Xamarin.Forms.Core", true, true);
+CarouselPage.itemTemplate = XNode.prepare("Xamarin.Forms.CarouselPage:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-CarouselPage.Resources = XNode.prepare("Xamarin.Forms.CarouselPage:Resources;Xamarin.Forms.Core", true, false);
+CarouselPage.resources = XNode.prepare("Xamarin.Forms.CarouselPage:Resources;Xamarin.Forms.Core", true, false);
 
-CarouselPage.StyleClass = XNode.prepare("Xamarin.Forms.CarouselPage:StyleClass;Xamarin.Forms.Core", true, false);
+CarouselPage.styleClass = XNode.prepare("Xamarin.Forms.CarouselPage:StyleClass;Xamarin.Forms.Core", true, false);
 
-CarouselPage.ToolbarItems = XNode.prepare("Xamarin.Forms.CarouselPage:ToolbarItems;Xamarin.Forms.Core", true, false);
+CarouselPage.toolbarItems = XNode.prepare("Xamarin.Forms.CarouselPage:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-CarouselPage.Triggers = XNode.prepare("Xamarin.Forms.CarouselPage:Triggers;Xamarin.Forms.Core", true, false);
+CarouselPage.triggers = XNode.prepare("Xamarin.Forms.CarouselPage:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ICell {
@@ -1298,19 +1298,19 @@ export interface ICellConstructor {
     
     
 /** Property Cell.ContextActions of Type Xamarin.Forms.MenuItem */
-ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
+contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Cell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Cell */
 const Cell: ICellConstructor = XNode.prepare<ICell>("Xamarin.Forms.Cell;Xamarin.Forms.Core", false, false);
 
 
-Cell.ContextActions = XNode.prepare("Xamarin.Forms.Cell:ContextActions;Xamarin.Forms.Core", true, false);
+Cell.contextActions = XNode.prepare("Xamarin.Forms.Cell:ContextActions;Xamarin.Forms.Core", true, false);
 
-Cell.Effects = XNode.prepare("Xamarin.Forms.Cell:Effects;Xamarin.Forms.Core", true, false);
+Cell.effects = XNode.prepare("Xamarin.Forms.Cell:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IEntryCell {
@@ -1380,19 +1380,19 @@ export interface IEntryCellConstructor {
     
     
 /** Property EntryCell.ContextActions of Type Xamarin.Forms.MenuItem */
-ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
+contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property EntryCell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** EntryCell */
 const EntryCell: IEntryCellConstructor = XNode.prepare<IEntryCell>("Xamarin.Forms.EntryCell;Xamarin.Forms.Core", false, false);
 
 
-EntryCell.ContextActions = XNode.prepare("Xamarin.Forms.EntryCell:ContextActions;Xamarin.Forms.Core", true, false);
+EntryCell.contextActions = XNode.prepare("Xamarin.Forms.EntryCell:ContextActions;Xamarin.Forms.Core", true, false);
 
-EntryCell.Effects = XNode.prepare("Xamarin.Forms.EntryCell:Effects;Xamarin.Forms.Core", true, false);
+EntryCell.effects = XNode.prepare("Xamarin.Forms.EntryCell:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IImageCell {
@@ -1459,24 +1459,24 @@ export interface IImageCellConstructor {
     
     
 /** Property ImageCell.ContextActions of Type Xamarin.Forms.MenuItem */
-ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
+contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageCell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageCell.ImageSource of Type Xamarin.Forms.ImageSource */
-ImageSource?: ( a: any, ... nodes: XNode[]) => XNode
+imageSource?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ImageCell */
 const ImageCell: IImageCellConstructor = XNode.prepare<IImageCell>("Xamarin.Forms.ImageCell;Xamarin.Forms.Core", false, false);
 
 
-ImageCell.ContextActions = XNode.prepare("Xamarin.Forms.ImageCell:ContextActions;Xamarin.Forms.Core", true, false);
+ImageCell.contextActions = XNode.prepare("Xamarin.Forms.ImageCell:ContextActions;Xamarin.Forms.Core", true, false);
 
-ImageCell.Effects = XNode.prepare("Xamarin.Forms.ImageCell:Effects;Xamarin.Forms.Core", true, false);
+ImageCell.effects = XNode.prepare("Xamarin.Forms.ImageCell:Effects;Xamarin.Forms.Core", true, false);
 
-ImageCell.ImageSource = XNode.prepare("Xamarin.Forms.ImageCell:ImageSource;Xamarin.Forms.Core", true, false);
+ImageCell.imageSource = XNode.prepare("Xamarin.Forms.ImageCell:ImageSource;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwitchCell {
@@ -1531,19 +1531,19 @@ export interface ISwitchCellConstructor {
     
     
 /** Property SwitchCell.ContextActions of Type Xamarin.Forms.MenuItem */
-ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
+contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwitchCell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SwitchCell */
 const SwitchCell: ISwitchCellConstructor = XNode.prepare<ISwitchCell>("Xamarin.Forms.SwitchCell;Xamarin.Forms.Core", false, false);
 
 
-SwitchCell.ContextActions = XNode.prepare("Xamarin.Forms.SwitchCell:ContextActions;Xamarin.Forms.Core", true, false);
+SwitchCell.contextActions = XNode.prepare("Xamarin.Forms.SwitchCell:ContextActions;Xamarin.Forms.Core", true, false);
 
-SwitchCell.Effects = XNode.prepare("Xamarin.Forms.SwitchCell:Effects;Xamarin.Forms.Core", true, false);
+SwitchCell.effects = XNode.prepare("Xamarin.Forms.SwitchCell:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface ITextCell {
@@ -1607,19 +1607,19 @@ export interface ITextCellConstructor {
     
     
 /** Property TextCell.ContextActions of Type Xamarin.Forms.MenuItem */
-ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
+contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TextCell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TextCell */
 const TextCell: ITextCellConstructor = XNode.prepare<ITextCell>("Xamarin.Forms.TextCell;Xamarin.Forms.Core", false, false);
 
 
-TextCell.ContextActions = XNode.prepare("Xamarin.Forms.TextCell:ContextActions;Xamarin.Forms.Core", true, false);
+TextCell.contextActions = XNode.prepare("Xamarin.Forms.TextCell:ContextActions;Xamarin.Forms.Core", true, false);
 
-TextCell.Effects = XNode.prepare("Xamarin.Forms.TextCell:Effects;Xamarin.Forms.Core", true, false);
+TextCell.effects = XNode.prepare("Xamarin.Forms.TextCell:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IViewCell {
@@ -1668,24 +1668,24 @@ export interface IViewCellConstructor {
     
     
 /** Property ViewCell.ContextActions of Type Xamarin.Forms.MenuItem */
-ContextActions?: ( a: any, ... nodes: XNode[]) => XNode;
+contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ViewCell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ViewCell.View of Type Xamarin.Forms.View */
-View?: ( a: any, ... nodes: XNode[]) => XNode
+view?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ViewCell */
 const ViewCell: IViewCellConstructor = XNode.prepare<IViewCell>("Xamarin.Forms.ViewCell;Xamarin.Forms.Core", false, false);
 
 
-ViewCell.ContextActions = XNode.prepare("Xamarin.Forms.ViewCell:ContextActions;Xamarin.Forms.Core", true, false);
+ViewCell.contextActions = XNode.prepare("Xamarin.Forms.ViewCell:ContextActions;Xamarin.Forms.Core", true, false);
 
-ViewCell.Effects = XNode.prepare("Xamarin.Forms.ViewCell:Effects;Xamarin.Forms.Core", true, false);
+ViewCell.effects = XNode.prepare("Xamarin.Forms.ViewCell:Effects;Xamarin.Forms.Core", true, false);
 
-ViewCell.View = XNode.prepare("Xamarin.Forms.ViewCell:View;Xamarin.Forms.Core", true, false);
+ViewCell.view = XNode.prepare("Xamarin.Forms.ViewCell:View;Xamarin.Forms.Core", true, false);
 
 
 export interface ICheckBox {
@@ -1833,39 +1833,39 @@ export interface ICheckBoxConstructor {
     
     
 /** Property CheckBox.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CheckBox.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CheckBox.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CheckBox.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CheckBox.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CheckBox.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** CheckBox */
 const CheckBox: ICheckBoxConstructor = XNode.prepare<ICheckBox>("Xamarin.Forms.CheckBox;Xamarin.Forms.Core", false, false);
 
 
-CheckBox.Behaviors = XNode.prepare("Xamarin.Forms.CheckBox:Behaviors;Xamarin.Forms.Core", true, false);
+CheckBox.behaviors = XNode.prepare("Xamarin.Forms.CheckBox:Behaviors;Xamarin.Forms.Core", true, false);
 
-CheckBox.Effects = XNode.prepare("Xamarin.Forms.CheckBox:Effects;Xamarin.Forms.Core", true, false);
+CheckBox.effects = XNode.prepare("Xamarin.Forms.CheckBox:Effects;Xamarin.Forms.Core", true, false);
 
-CheckBox.GestureRecognizers = XNode.prepare("Xamarin.Forms.CheckBox:GestureRecognizers;Xamarin.Forms.Core", true, false);
+CheckBox.gestureRecognizers = XNode.prepare("Xamarin.Forms.CheckBox:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-CheckBox.Resources = XNode.prepare("Xamarin.Forms.CheckBox:Resources;Xamarin.Forms.Core", true, false);
+CheckBox.resources = XNode.prepare("Xamarin.Forms.CheckBox:Resources;Xamarin.Forms.Core", true, false);
 
-CheckBox.StyleClass = XNode.prepare("Xamarin.Forms.CheckBox:StyleClass;Xamarin.Forms.Core", true, false);
+CheckBox.styleClass = XNode.prepare("Xamarin.Forms.CheckBox:StyleClass;Xamarin.Forms.Core", true, false);
 
-CheckBox.Triggers = XNode.prepare("Xamarin.Forms.CheckBox:Triggers;Xamarin.Forms.Core", true, false);
+CheckBox.triggers = XNode.prepare("Xamarin.Forms.CheckBox:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IClickGestureRecognizer {
@@ -1914,14 +1914,14 @@ export interface IClickGestureRecognizerConstructor {
     
     
 /** Property ClickGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ClickGestureRecognizer */
 const ClickGestureRecognizer: IClickGestureRecognizerConstructor = XNode.prepare<IClickGestureRecognizer>("Xamarin.Forms.ClickGestureRecognizer;Xamarin.Forms.Core", false, false);
 
 
-ClickGestureRecognizer.Effects = XNode.prepare("Xamarin.Forms.ClickGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
+ClickGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.ClickGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IColumnDefinition {
@@ -2116,59 +2116,59 @@ export interface IContentPageConstructor {
     
     
 /** Property ContentPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPage.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ContentPage */
 const ContentPage: IContentPageConstructor = XNode.prepare<IContentPage>("Xamarin.Forms.ContentPage;Xamarin.Forms.Core", false, false);
 
 
-ContentPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.ContentPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+ContentPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.ContentPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-ContentPage.Behaviors = XNode.prepare("Xamarin.Forms.ContentPage:Behaviors;Xamarin.Forms.Core", true, false);
+ContentPage.behaviors = XNode.prepare("Xamarin.Forms.ContentPage:Behaviors;Xamarin.Forms.Core", true, false);
 
-ContentPage.Content = XNode.prepare("Xamarin.Forms.ContentPage:Content;Xamarin.Forms.Core", true, false);
+ContentPage.content = XNode.prepare("Xamarin.Forms.ContentPage:Content;Xamarin.Forms.Core", true, false);
 
-ContentPage.ControlTemplate = XNode.prepare("Xamarin.Forms.ContentPage:ControlTemplate;Xamarin.Forms.Core", true, true);
+ContentPage.controlTemplate = XNode.prepare("Xamarin.Forms.ContentPage:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-ContentPage.Effects = XNode.prepare("Xamarin.Forms.ContentPage:Effects;Xamarin.Forms.Core", true, false);
+ContentPage.effects = XNode.prepare("Xamarin.Forms.ContentPage:Effects;Xamarin.Forms.Core", true, false);
 
-ContentPage.IconImageSource = XNode.prepare("Xamarin.Forms.ContentPage:IconImageSource;Xamarin.Forms.Core", true, false);
+ContentPage.iconImageSource = XNode.prepare("Xamarin.Forms.ContentPage:IconImageSource;Xamarin.Forms.Core", true, false);
 
-ContentPage.Resources = XNode.prepare("Xamarin.Forms.ContentPage:Resources;Xamarin.Forms.Core", true, false);
+ContentPage.resources = XNode.prepare("Xamarin.Forms.ContentPage:Resources;Xamarin.Forms.Core", true, false);
 
-ContentPage.StyleClass = XNode.prepare("Xamarin.Forms.ContentPage:StyleClass;Xamarin.Forms.Core", true, false);
+ContentPage.styleClass = XNode.prepare("Xamarin.Forms.ContentPage:StyleClass;Xamarin.Forms.Core", true, false);
 
-ContentPage.ToolbarItems = XNode.prepare("Xamarin.Forms.ContentPage:ToolbarItems;Xamarin.Forms.Core", true, false);
+ContentPage.toolbarItems = XNode.prepare("Xamarin.Forms.ContentPage:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-ContentPage.Triggers = XNode.prepare("Xamarin.Forms.ContentPage:Triggers;Xamarin.Forms.Core", true, false);
+ContentPage.triggers = XNode.prepare("Xamarin.Forms.ContentPage:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IContentPresenter {
@@ -2322,44 +2322,44 @@ export interface IContentPresenterConstructor {
     
     
 /** Property ContentPresenter.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPresenter.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPresenter.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPresenter.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPresenter.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPresenter.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentPresenter.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ContentPresenter */
 const ContentPresenter: IContentPresenterConstructor = XNode.prepare<IContentPresenter>("Xamarin.Forms.ContentPresenter;Xamarin.Forms.Core", false, false);
 
 
-ContentPresenter.Behaviors = XNode.prepare("Xamarin.Forms.ContentPresenter:Behaviors;Xamarin.Forms.Core", true, false);
+ContentPresenter.behaviors = XNode.prepare("Xamarin.Forms.ContentPresenter:Behaviors;Xamarin.Forms.Core", true, false);
 
-ContentPresenter.Content = XNode.prepare("Xamarin.Forms.ContentPresenter:Content;Xamarin.Forms.Core", true, false);
+ContentPresenter.content = XNode.prepare("Xamarin.Forms.ContentPresenter:Content;Xamarin.Forms.Core", true, false);
 
-ContentPresenter.Effects = XNode.prepare("Xamarin.Forms.ContentPresenter:Effects;Xamarin.Forms.Core", true, false);
+ContentPresenter.effects = XNode.prepare("Xamarin.Forms.ContentPresenter:Effects;Xamarin.Forms.Core", true, false);
 
-ContentPresenter.GestureRecognizers = XNode.prepare("Xamarin.Forms.ContentPresenter:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ContentPresenter.gestureRecognizers = XNode.prepare("Xamarin.Forms.ContentPresenter:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ContentPresenter.Resources = XNode.prepare("Xamarin.Forms.ContentPresenter:Resources;Xamarin.Forms.Core", true, false);
+ContentPresenter.resources = XNode.prepare("Xamarin.Forms.ContentPresenter:Resources;Xamarin.Forms.Core", true, false);
 
-ContentPresenter.StyleClass = XNode.prepare("Xamarin.Forms.ContentPresenter:StyleClass;Xamarin.Forms.Core", true, false);
+ContentPresenter.styleClass = XNode.prepare("Xamarin.Forms.ContentPresenter:StyleClass;Xamarin.Forms.Core", true, false);
 
-ContentPresenter.Triggers = XNode.prepare("Xamarin.Forms.ContentPresenter:Triggers;Xamarin.Forms.Core", true, false);
+ContentPresenter.triggers = XNode.prepare("Xamarin.Forms.ContentPresenter:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IContentView {
@@ -2516,49 +2516,49 @@ export interface IContentViewConstructor {
     
     
 /** Property ContentView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ContentView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ContentView */
 const ContentView: IContentViewConstructor = XNode.prepare<IContentView>("Xamarin.Forms.ContentView;Xamarin.Forms.Core", false, false);
 
 
-ContentView.Behaviors = XNode.prepare("Xamarin.Forms.ContentView:Behaviors;Xamarin.Forms.Core", true, false);
+ContentView.behaviors = XNode.prepare("Xamarin.Forms.ContentView:Behaviors;Xamarin.Forms.Core", true, false);
 
-ContentView.Content = XNode.prepare("Xamarin.Forms.ContentView:Content;Xamarin.Forms.Core", true, false);
+ContentView.content = XNode.prepare("Xamarin.Forms.ContentView:Content;Xamarin.Forms.Core", true, false);
 
-ContentView.ControlTemplate = XNode.prepare("Xamarin.Forms.ContentView:ControlTemplate;Xamarin.Forms.Core", true, true);
+ContentView.controlTemplate = XNode.prepare("Xamarin.Forms.ContentView:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-ContentView.Effects = XNode.prepare("Xamarin.Forms.ContentView:Effects;Xamarin.Forms.Core", true, false);
+ContentView.effects = XNode.prepare("Xamarin.Forms.ContentView:Effects;Xamarin.Forms.Core", true, false);
 
-ContentView.GestureRecognizers = XNode.prepare("Xamarin.Forms.ContentView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ContentView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ContentView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ContentView.Resources = XNode.prepare("Xamarin.Forms.ContentView:Resources;Xamarin.Forms.Core", true, false);
+ContentView.resources = XNode.prepare("Xamarin.Forms.ContentView:Resources;Xamarin.Forms.Core", true, false);
 
-ContentView.StyleClass = XNode.prepare("Xamarin.Forms.ContentView:StyleClass;Xamarin.Forms.Core", true, false);
+ContentView.styleClass = XNode.prepare("Xamarin.Forms.ContentView:StyleClass;Xamarin.Forms.Core", true, false);
 
-ContentView.Triggers = XNode.prepare("Xamarin.Forms.ContentView:Triggers;Xamarin.Forms.Core", true, false);
+ContentView.triggers = XNode.prepare("Xamarin.Forms.ContentView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IControlTemplate {
@@ -2590,19 +2590,19 @@ export interface IDataTemplateConstructor {
     
     
 /** Property DataTemplate.Bindings of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase] */
-Bindings?: ( a: any, ... nodes: XNode[]) => XNode;
+bindings?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DataTemplate.Values of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,System.Object] */
-Values?: ( a: any, ... nodes: XNode[]) => XNode
+values?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** DataTemplate */
 const DataTemplate: IDataTemplateConstructor = XNode.prepare<IDataTemplate>("Xamarin.Forms.DataTemplate;Xamarin.Forms.Core", false, true);
 
 
-DataTemplate.Bindings = XNode.prepare("Xamarin.Forms.DataTemplate:Bindings;Xamarin.Forms.Core", true, false);
+DataTemplate.bindings = XNode.prepare("Xamarin.Forms.DataTemplate:Bindings;Xamarin.Forms.Core", true, false);
 
-DataTemplate.Values = XNode.prepare("Xamarin.Forms.DataTemplate:Values;Xamarin.Forms.Core", true, false);
+DataTemplate.values = XNode.prepare("Xamarin.Forms.DataTemplate:Values;Xamarin.Forms.Core", true, false);
 
 
 export interface IDataTemplateSelector {
@@ -2616,19 +2616,19 @@ export interface IDataTemplateSelectorConstructor {
     
     
 /** Property DataTemplateSelector.Bindings of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase] */
-Bindings?: ( a: any, ... nodes: XNode[]) => XNode;
+bindings?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DataTemplateSelector.Values of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,System.Object] */
-Values?: ( a: any, ... nodes: XNode[]) => XNode
+values?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** DataTemplateSelector */
 const DataTemplateSelector: IDataTemplateSelectorConstructor = XNode.prepare<IDataTemplateSelector>("Xamarin.Forms.DataTemplateSelector;Xamarin.Forms.Core", false, false);
 
 
-DataTemplateSelector.Bindings = XNode.prepare("Xamarin.Forms.DataTemplateSelector:Bindings;Xamarin.Forms.Core", true, false);
+DataTemplateSelector.bindings = XNode.prepare("Xamarin.Forms.DataTemplateSelector:Bindings;Xamarin.Forms.Core", true, false);
 
-DataTemplateSelector.Values = XNode.prepare("Xamarin.Forms.DataTemplateSelector:Values;Xamarin.Forms.Core", true, false);
+DataTemplateSelector.values = XNode.prepare("Xamarin.Forms.DataTemplateSelector:Values;Xamarin.Forms.Core", true, false);
 
 
 export interface IDatePicker {
@@ -2797,39 +2797,39 @@ export interface IDatePickerConstructor {
     
     
 /** Property DatePicker.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DatePicker.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DatePicker.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DatePicker.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DatePicker.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DatePicker.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** DatePicker */
 const DatePicker: IDatePickerConstructor = XNode.prepare<IDatePicker>("Xamarin.Forms.DatePicker;Xamarin.Forms.Core", false, false);
 
 
-DatePicker.Behaviors = XNode.prepare("Xamarin.Forms.DatePicker:Behaviors;Xamarin.Forms.Core", true, false);
+DatePicker.behaviors = XNode.prepare("Xamarin.Forms.DatePicker:Behaviors;Xamarin.Forms.Core", true, false);
 
-DatePicker.Effects = XNode.prepare("Xamarin.Forms.DatePicker:Effects;Xamarin.Forms.Core", true, false);
+DatePicker.effects = XNode.prepare("Xamarin.Forms.DatePicker:Effects;Xamarin.Forms.Core", true, false);
 
-DatePicker.GestureRecognizers = XNode.prepare("Xamarin.Forms.DatePicker:GestureRecognizers;Xamarin.Forms.Core", true, false);
+DatePicker.gestureRecognizers = XNode.prepare("Xamarin.Forms.DatePicker:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-DatePicker.Resources = XNode.prepare("Xamarin.Forms.DatePicker:Resources;Xamarin.Forms.Core", true, false);
+DatePicker.resources = XNode.prepare("Xamarin.Forms.DatePicker:Resources;Xamarin.Forms.Core", true, false);
 
-DatePicker.StyleClass = XNode.prepare("Xamarin.Forms.DatePicker:StyleClass;Xamarin.Forms.Core", true, false);
+DatePicker.styleClass = XNode.prepare("Xamarin.Forms.DatePicker:StyleClass;Xamarin.Forms.Core", true, false);
 
-DatePicker.Triggers = XNode.prepare("Xamarin.Forms.DatePicker:Triggers;Xamarin.Forms.Core", true, false);
+DatePicker.triggers = XNode.prepare("Xamarin.Forms.DatePicker:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IEditor {
@@ -3013,39 +3013,39 @@ export interface IEditorConstructor {
     
     
 /** Property Editor.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Editor.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Editor.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Editor.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Editor.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Editor.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Editor */
 const Editor: IEditorConstructor = XNode.prepare<IEditor>("Xamarin.Forms.Editor;Xamarin.Forms.Core", false, false);
 
 
-Editor.Behaviors = XNode.prepare("Xamarin.Forms.Editor:Behaviors;Xamarin.Forms.Core", true, false);
+Editor.behaviors = XNode.prepare("Xamarin.Forms.Editor:Behaviors;Xamarin.Forms.Core", true, false);
 
-Editor.Effects = XNode.prepare("Xamarin.Forms.Editor:Effects;Xamarin.Forms.Core", true, false);
+Editor.effects = XNode.prepare("Xamarin.Forms.Editor:Effects;Xamarin.Forms.Core", true, false);
 
-Editor.GestureRecognizers = XNode.prepare("Xamarin.Forms.Editor:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Editor.gestureRecognizers = XNode.prepare("Xamarin.Forms.Editor:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Editor.Resources = XNode.prepare("Xamarin.Forms.Editor:Resources;Xamarin.Forms.Core", true, false);
+Editor.resources = XNode.prepare("Xamarin.Forms.Editor:Resources;Xamarin.Forms.Core", true, false);
 
-Editor.StyleClass = XNode.prepare("Xamarin.Forms.Editor:StyleClass;Xamarin.Forms.Core", true, false);
+Editor.styleClass = XNode.prepare("Xamarin.Forms.Editor:StyleClass;Xamarin.Forms.Core", true, false);
 
-Editor.Triggers = XNode.prepare("Xamarin.Forms.Editor:Triggers;Xamarin.Forms.Core", true, false);
+Editor.triggers = XNode.prepare("Xamarin.Forms.Editor:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IElement {
@@ -3084,18 +3084,18 @@ export interface IElementConstructor {
     (a?: Partial<IElement>, ... nodes: XNode[]): XNode;
     
 /** Attached Property Element.Menu of Type BindableProperty */
-Menu?(v: any): { "Xamarin.Forms.Element:Menu;Xamarin.Forms.Core": any  }
+menu?(v: any)
     
 /** Property Element.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Element */
 const Element: IElementConstructor = XNode.prepare<IElement>("Xamarin.Forms.Element;Xamarin.Forms.Core", false, false);
 
-Element.Menu = (v) => ({ "Xamarin.Forms.Element:Menu;Xamarin.Forms.Core": v  }) ;
+Element.menu = XNode.prepare("Xamarin.Forms.Element:Menu;Xamarin.Forms.Core", true) as any ;
 
-Element.Effects = XNode.prepare("Xamarin.Forms.Element:Effects;Xamarin.Forms.Core", true, false);
+Element.effects = XNode.prepare("Xamarin.Forms.Element:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IEntry {
@@ -3303,39 +3303,39 @@ export interface IEntryConstructor {
     
     
 /** Property Entry.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Entry.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Entry.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Entry.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Entry.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Entry.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Entry */
 const Entry: IEntryConstructor = XNode.prepare<IEntry>("Xamarin.Forms.Entry;Xamarin.Forms.Core", false, false);
 
 
-Entry.Behaviors = XNode.prepare("Xamarin.Forms.Entry:Behaviors;Xamarin.Forms.Core", true, false);
+Entry.behaviors = XNode.prepare("Xamarin.Forms.Entry:Behaviors;Xamarin.Forms.Core", true, false);
 
-Entry.Effects = XNode.prepare("Xamarin.Forms.Entry:Effects;Xamarin.Forms.Core", true, false);
+Entry.effects = XNode.prepare("Xamarin.Forms.Entry:Effects;Xamarin.Forms.Core", true, false);
 
-Entry.GestureRecognizers = XNode.prepare("Xamarin.Forms.Entry:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Entry.gestureRecognizers = XNode.prepare("Xamarin.Forms.Entry:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Entry.Resources = XNode.prepare("Xamarin.Forms.Entry:Resources;Xamarin.Forms.Core", true, false);
+Entry.resources = XNode.prepare("Xamarin.Forms.Entry:Resources;Xamarin.Forms.Core", true, false);
 
-Entry.StyleClass = XNode.prepare("Xamarin.Forms.Entry:StyleClass;Xamarin.Forms.Core", true, false);
+Entry.styleClass = XNode.prepare("Xamarin.Forms.Entry:StyleClass;Xamarin.Forms.Core", true, false);
 
-Entry.Triggers = XNode.prepare("Xamarin.Forms.Entry:Triggers;Xamarin.Forms.Core", true, false);
+Entry.triggers = XNode.prepare("Xamarin.Forms.Entry:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IFileImageSource {
@@ -3375,14 +3375,14 @@ export interface IFileImageSourceConstructor {
     
     
 /** Property FileImageSource.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** FileImageSource */
 const FileImageSource: IFileImageSourceConstructor = XNode.prepare<IFileImageSource>("Xamarin.Forms.FileImageSource;Xamarin.Forms.Core", false, false);
 
 
-FileImageSource.Effects = XNode.prepare("Xamarin.Forms.FileImageSource:Effects;Xamarin.Forms.Core", true, false);
+FileImageSource.effects = XNode.prepare("Xamarin.Forms.FileImageSource:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IFlexLayout {
@@ -3550,68 +3550,68 @@ export interface IFlexLayoutConstructor {
     (a?: Partial<IFlexLayout>, ... nodes: XNode[]): XNode;
     
 /** Attached Property FlexLayout.Order of Type BindableProperty */
-Order?(v: any): { "Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core": any  };
+order?(v: any);
 
 /** Attached Property FlexLayout.Grow of Type BindableProperty */
-Grow?(v: any): { "Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core": any  };
+grow?(v: any);
 
 /** Attached Property FlexLayout.Shrink of Type BindableProperty */
-Shrink?(v: any): { "Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core": any  };
+shrink?(v: any);
 
 /** Attached Property FlexLayout.AlignSelf of Type BindableProperty */
-AlignSelf?(v: any): { "Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core": any  };
+alignSelf?(v: any);
 
 /** Attached Property FlexLayout.Basis of Type BindableProperty */
-Basis?(v: any): { "Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core": any  }
+basis?(v: any)
     
 /** Property FlexLayout.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlexLayout.Children of Type Xamarin.Forms.View */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlexLayout.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlexLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlexLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlexLayout.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlexLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** FlexLayout */
 const FlexLayout: IFlexLayoutConstructor = XNode.prepare<IFlexLayout>("Xamarin.Forms.FlexLayout;Xamarin.Forms.Core", false, false);
 
-FlexLayout.Order = (v) => ({ "Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core": v  }) ;
+FlexLayout.order = XNode.prepare("Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core", true) as any ;
 
-FlexLayout.Grow = (v) => ({ "Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core": v  }) ;
+FlexLayout.grow = XNode.prepare("Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core", true) as any ;
 
-FlexLayout.Shrink = (v) => ({ "Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core": v  }) ;
+FlexLayout.shrink = XNode.prepare("Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core", true) as any ;
 
-FlexLayout.AlignSelf = (v) => ({ "Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core": v  }) ;
+FlexLayout.alignSelf = XNode.prepare("Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core", true) as any ;
 
-FlexLayout.Basis = (v) => ({ "Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core": v  }) ;
+FlexLayout.basis = XNode.prepare("Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core", true) as any ;
 
-FlexLayout.Behaviors = XNode.prepare("Xamarin.Forms.FlexLayout:Behaviors;Xamarin.Forms.Core", true, false);
+FlexLayout.behaviors = XNode.prepare("Xamarin.Forms.FlexLayout:Behaviors;Xamarin.Forms.Core", true, false);
 
-FlexLayout.Children = XNode.prepare("Xamarin.Forms.FlexLayout:Children;Xamarin.Forms.Core", true, false);
+FlexLayout.children = XNode.prepare("Xamarin.Forms.FlexLayout:Children;Xamarin.Forms.Core", true, false);
 
-FlexLayout.Effects = XNode.prepare("Xamarin.Forms.FlexLayout:Effects;Xamarin.Forms.Core", true, false);
+FlexLayout.effects = XNode.prepare("Xamarin.Forms.FlexLayout:Effects;Xamarin.Forms.Core", true, false);
 
-FlexLayout.GestureRecognizers = XNode.prepare("Xamarin.Forms.FlexLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
+FlexLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.FlexLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-FlexLayout.Resources = XNode.prepare("Xamarin.Forms.FlexLayout:Resources;Xamarin.Forms.Core", true, false);
+FlexLayout.resources = XNode.prepare("Xamarin.Forms.FlexLayout:Resources;Xamarin.Forms.Core", true, false);
 
-FlexLayout.StyleClass = XNode.prepare("Xamarin.Forms.FlexLayout:StyleClass;Xamarin.Forms.Core", true, false);
+FlexLayout.styleClass = XNode.prepare("Xamarin.Forms.FlexLayout:StyleClass;Xamarin.Forms.Core", true, false);
 
-FlexLayout.Triggers = XNode.prepare("Xamarin.Forms.FlexLayout:Triggers;Xamarin.Forms.Core", true, false);
+FlexLayout.triggers = XNode.prepare("Xamarin.Forms.FlexLayout:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IFontImageSource {
@@ -3660,14 +3660,14 @@ export interface IFontImageSourceConstructor {
     
     
 /** Property FontImageSource.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** FontImageSource */
 const FontImageSource: IFontImageSourceConstructor = XNode.prepare<IFontImageSource>("Xamarin.Forms.FontImageSource;Xamarin.Forms.Core", false, false);
 
 
-FontImageSource.Effects = XNode.prepare("Xamarin.Forms.FontImageSource:Effects;Xamarin.Forms.Core", true, false);
+FontImageSource.effects = XNode.prepare("Xamarin.Forms.FontImageSource:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IFormattedString {
@@ -3704,19 +3704,19 @@ export interface IFormattedStringConstructor {
     
     
 /** Property FormattedString.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FormattedString.Spans of Type Xamarin.Forms.Span */
-Spans?: ( a: any, ... nodes: XNode[]) => XNode
+spans?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** FormattedString */
 const FormattedString: IFormattedStringConstructor = XNode.prepare<IFormattedString>("Xamarin.Forms.FormattedString;Xamarin.Forms.Core", false, false);
 
 
-FormattedString.Effects = XNode.prepare("Xamarin.Forms.FormattedString:Effects;Xamarin.Forms.Core", true, false);
+FormattedString.effects = XNode.prepare("Xamarin.Forms.FormattedString:Effects;Xamarin.Forms.Core", true, false);
 
-FormattedString.Spans = XNode.prepare("Xamarin.Forms.FormattedString:Spans;Xamarin.Forms.Core", true, false);
+FormattedString.spans = XNode.prepare("Xamarin.Forms.FormattedString:Spans;Xamarin.Forms.Core", true, false);
 
 
 export interface IFrame {
@@ -3885,49 +3885,49 @@ export interface IFrameConstructor {
     
     
 /** Property Frame.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Frame.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Frame */
 const Frame: IFrameConstructor = XNode.prepare<IFrame>("Xamarin.Forms.Frame;Xamarin.Forms.Core", false, false);
 
 
-Frame.Behaviors = XNode.prepare("Xamarin.Forms.Frame:Behaviors;Xamarin.Forms.Core", true, false);
+Frame.behaviors = XNode.prepare("Xamarin.Forms.Frame:Behaviors;Xamarin.Forms.Core", true, false);
 
-Frame.Content = XNode.prepare("Xamarin.Forms.Frame:Content;Xamarin.Forms.Core", true, false);
+Frame.content = XNode.prepare("Xamarin.Forms.Frame:Content;Xamarin.Forms.Core", true, false);
 
-Frame.ControlTemplate = XNode.prepare("Xamarin.Forms.Frame:ControlTemplate;Xamarin.Forms.Core", true, true);
+Frame.controlTemplate = XNode.prepare("Xamarin.Forms.Frame:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-Frame.Effects = XNode.prepare("Xamarin.Forms.Frame:Effects;Xamarin.Forms.Core", true, false);
+Frame.effects = XNode.prepare("Xamarin.Forms.Frame:Effects;Xamarin.Forms.Core", true, false);
 
-Frame.GestureRecognizers = XNode.prepare("Xamarin.Forms.Frame:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Frame.gestureRecognizers = XNode.prepare("Xamarin.Forms.Frame:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Frame.Resources = XNode.prepare("Xamarin.Forms.Frame:Resources;Xamarin.Forms.Core", true, false);
+Frame.resources = XNode.prepare("Xamarin.Forms.Frame:Resources;Xamarin.Forms.Core", true, false);
 
-Frame.StyleClass = XNode.prepare("Xamarin.Forms.Frame:StyleClass;Xamarin.Forms.Core", true, false);
+Frame.styleClass = XNode.prepare("Xamarin.Forms.Frame:StyleClass;Xamarin.Forms.Core", true, false);
 
-Frame.Triggers = XNode.prepare("Xamarin.Forms.Frame:Triggers;Xamarin.Forms.Core", true, false);
+Frame.triggers = XNode.prepare("Xamarin.Forms.Frame:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IGestureElement {
@@ -3964,19 +3964,19 @@ export interface IGestureElementConstructor {
     
     
 /** Property GestureElement.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GestureElement.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** GestureElement */
 const GestureElement: IGestureElementConstructor = XNode.prepare<IGestureElement>("Xamarin.Forms.GestureElement;Xamarin.Forms.Core", false, false);
 
 
-GestureElement.Effects = XNode.prepare("Xamarin.Forms.GestureElement:Effects;Xamarin.Forms.Core", true, false);
+GestureElement.effects = XNode.prepare("Xamarin.Forms.GestureElement:Effects;Xamarin.Forms.Core", true, false);
 
-GestureElement.GestureRecognizers = XNode.prepare("Xamarin.Forms.GestureElement:GestureRecognizers;Xamarin.Forms.Core", true, false);
+GestureElement.gestureRecognizers = XNode.prepare("Xamarin.Forms.GestureElement:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
 
 export interface IGestureRecognizer {
@@ -4013,14 +4013,14 @@ export interface IGestureRecognizerConstructor {
     
     
 /** Property GestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** GestureRecognizer */
 const GestureRecognizer: IGestureRecognizerConstructor = XNode.prepare<IGestureRecognizer>("Xamarin.Forms.GestureRecognizer;Xamarin.Forms.Core", false, false);
 
 
-GestureRecognizer.Effects = XNode.prepare("Xamarin.Forms.GestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
+GestureRecognizer.effects = XNode.prepare("Xamarin.Forms.GestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IGrid {
@@ -4182,73 +4182,73 @@ export interface IGridConstructor {
     (a?: Partial<IGrid>, ... nodes: XNode[]): XNode;
     
 /** Attached Property Grid.Row of Type BindableProperty */
-Row?(v: any): { "Xamarin.Forms.Grid:Row;Xamarin.Forms.Core": any  };
+row?(v: any);
 
 /** Attached Property Grid.RowSpan of Type BindableProperty */
-RowSpan?(v: any): { "Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core": any  };
+rowSpan?(v: any);
 
 /** Attached Property Grid.Column of Type BindableProperty */
-Column?(v: any): { "Xamarin.Forms.Grid:Column;Xamarin.Forms.Core": any  };
+column?(v: any);
 
 /** Attached Property Grid.ColumnSpan of Type BindableProperty */
-ColumnSpan?(v: any): { "Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core": any  }
+columnSpan?(v: any)
     
 /** Property Grid.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.Children of Type Xamarin.Forms.View */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.ColumnDefinitions of Type Xamarin.Forms.ColumnDefinition */
-ColumnDefinitions?: ( a: any, ... nodes: XNode[]) => XNode;
+columnDefinitions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.RowDefinitions of Type Xamarin.Forms.RowDefinition */
-RowDefinitions?: ( a: any, ... nodes: XNode[]) => XNode;
+rowDefinitions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Grid.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Grid */
 const Grid: IGridConstructor = XNode.prepare<IGrid>("Xamarin.Forms.Grid;Xamarin.Forms.Core", false, false);
 
-Grid.Row = (v) => ({ "Xamarin.Forms.Grid:Row;Xamarin.Forms.Core": v  }) ;
+Grid.row = XNode.prepare("Xamarin.Forms.Grid:Row;Xamarin.Forms.Core", true) as any ;
 
-Grid.RowSpan = (v) => ({ "Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core": v  }) ;
+Grid.rowSpan = XNode.prepare("Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core", true) as any ;
 
-Grid.Column = (v) => ({ "Xamarin.Forms.Grid:Column;Xamarin.Forms.Core": v  }) ;
+Grid.column = XNode.prepare("Xamarin.Forms.Grid:Column;Xamarin.Forms.Core", true) as any ;
 
-Grid.ColumnSpan = (v) => ({ "Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core": v  }) ;
+Grid.columnSpan = XNode.prepare("Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core", true) as any ;
 
-Grid.Behaviors = XNode.prepare("Xamarin.Forms.Grid:Behaviors;Xamarin.Forms.Core", true, false);
+Grid.behaviors = XNode.prepare("Xamarin.Forms.Grid:Behaviors;Xamarin.Forms.Core", true, false);
 
-Grid.Children = XNode.prepare("Xamarin.Forms.Grid:Children;Xamarin.Forms.Core", true, false);
+Grid.children = XNode.prepare("Xamarin.Forms.Grid:Children;Xamarin.Forms.Core", true, false);
 
-Grid.ColumnDefinitions = XNode.prepare("Xamarin.Forms.Grid:ColumnDefinitions;Xamarin.Forms.Core", true, false);
+Grid.columnDefinitions = XNode.prepare("Xamarin.Forms.Grid:ColumnDefinitions;Xamarin.Forms.Core", true, false);
 
-Grid.Effects = XNode.prepare("Xamarin.Forms.Grid:Effects;Xamarin.Forms.Core", true, false);
+Grid.effects = XNode.prepare("Xamarin.Forms.Grid:Effects;Xamarin.Forms.Core", true, false);
 
-Grid.GestureRecognizers = XNode.prepare("Xamarin.Forms.Grid:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Grid.gestureRecognizers = XNode.prepare("Xamarin.Forms.Grid:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Grid.Resources = XNode.prepare("Xamarin.Forms.Grid:Resources;Xamarin.Forms.Core", true, false);
+Grid.resources = XNode.prepare("Xamarin.Forms.Grid:Resources;Xamarin.Forms.Core", true, false);
 
-Grid.RowDefinitions = XNode.prepare("Xamarin.Forms.Grid:RowDefinitions;Xamarin.Forms.Core", true, false);
+Grid.rowDefinitions = XNode.prepare("Xamarin.Forms.Grid:RowDefinitions;Xamarin.Forms.Core", true, false);
 
-Grid.StyleClass = XNode.prepare("Xamarin.Forms.Grid:StyleClass;Xamarin.Forms.Core", true, false);
+Grid.styleClass = XNode.prepare("Xamarin.Forms.Grid:StyleClass;Xamarin.Forms.Core", true, false);
 
-Grid.Triggers = XNode.prepare("Xamarin.Forms.Grid:Triggers;Xamarin.Forms.Core", true, false);
+Grid.triggers = XNode.prepare("Xamarin.Forms.Grid:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IHtmlWebViewSource {
@@ -4431,44 +4431,44 @@ export interface IImageConstructor {
     
     
 /** Property Image.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Image.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Image.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Image.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Image.Source of Type Xamarin.Forms.ImageSource */
-Source?: ( a: any, ... nodes: XNode[]) => XNode;
+source?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Image.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Image.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Image */
 const Image: IImageConstructor = XNode.prepare<IImage>("Xamarin.Forms.Image;Xamarin.Forms.Core", false, false);
 
 
-Image.Behaviors = XNode.prepare("Xamarin.Forms.Image:Behaviors;Xamarin.Forms.Core", true, false);
+Image.behaviors = XNode.prepare("Xamarin.Forms.Image:Behaviors;Xamarin.Forms.Core", true, false);
 
-Image.Effects = XNode.prepare("Xamarin.Forms.Image:Effects;Xamarin.Forms.Core", true, false);
+Image.effects = XNode.prepare("Xamarin.Forms.Image:Effects;Xamarin.Forms.Core", true, false);
 
-Image.GestureRecognizers = XNode.prepare("Xamarin.Forms.Image:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Image.gestureRecognizers = XNode.prepare("Xamarin.Forms.Image:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Image.Resources = XNode.prepare("Xamarin.Forms.Image:Resources;Xamarin.Forms.Core", true, false);
+Image.resources = XNode.prepare("Xamarin.Forms.Image:Resources;Xamarin.Forms.Core", true, false);
 
-Image.Source = XNode.prepare("Xamarin.Forms.Image:Source;Xamarin.Forms.Core", true, false);
+Image.source = XNode.prepare("Xamarin.Forms.Image:Source;Xamarin.Forms.Core", true, false);
 
-Image.StyleClass = XNode.prepare("Xamarin.Forms.Image:StyleClass;Xamarin.Forms.Core", true, false);
+Image.styleClass = XNode.prepare("Xamarin.Forms.Image:StyleClass;Xamarin.Forms.Core", true, false);
 
-Image.Triggers = XNode.prepare("Xamarin.Forms.Image:Triggers;Xamarin.Forms.Core", true, false);
+Image.triggers = XNode.prepare("Xamarin.Forms.Image:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IImageButton {
@@ -4637,44 +4637,44 @@ export interface IImageButtonConstructor {
     
     
 /** Property ImageButton.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageButton.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageButton.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageButton.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageButton.Source of Type Xamarin.Forms.ImageSource */
-Source?: ( a: any, ... nodes: XNode[]) => XNode;
+source?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageButton.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ImageButton.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ImageButton */
 const ImageButton: IImageButtonConstructor = XNode.prepare<IImageButton>("Xamarin.Forms.ImageButton;Xamarin.Forms.Core", false, false);
 
 
-ImageButton.Behaviors = XNode.prepare("Xamarin.Forms.ImageButton:Behaviors;Xamarin.Forms.Core", true, false);
+ImageButton.behaviors = XNode.prepare("Xamarin.Forms.ImageButton:Behaviors;Xamarin.Forms.Core", true, false);
 
-ImageButton.Effects = XNode.prepare("Xamarin.Forms.ImageButton:Effects;Xamarin.Forms.Core", true, false);
+ImageButton.effects = XNode.prepare("Xamarin.Forms.ImageButton:Effects;Xamarin.Forms.Core", true, false);
 
-ImageButton.GestureRecognizers = XNode.prepare("Xamarin.Forms.ImageButton:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ImageButton.gestureRecognizers = XNode.prepare("Xamarin.Forms.ImageButton:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ImageButton.Resources = XNode.prepare("Xamarin.Forms.ImageButton:Resources;Xamarin.Forms.Core", true, false);
+ImageButton.resources = XNode.prepare("Xamarin.Forms.ImageButton:Resources;Xamarin.Forms.Core", true, false);
 
-ImageButton.Source = XNode.prepare("Xamarin.Forms.ImageButton:Source;Xamarin.Forms.Core", true, false);
+ImageButton.source = XNode.prepare("Xamarin.Forms.ImageButton:Source;Xamarin.Forms.Core", true, false);
 
-ImageButton.StyleClass = XNode.prepare("Xamarin.Forms.ImageButton:StyleClass;Xamarin.Forms.Core", true, false);
+ImageButton.styleClass = XNode.prepare("Xamarin.Forms.ImageButton:StyleClass;Xamarin.Forms.Core", true, false);
 
-ImageButton.Triggers = XNode.prepare("Xamarin.Forms.ImageButton:Triggers;Xamarin.Forms.Core", true, false);
+ImageButton.triggers = XNode.prepare("Xamarin.Forms.ImageButton:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IImageSource {
@@ -4711,14 +4711,14 @@ export interface IImageSourceConstructor {
     
     
 /** Property ImageSource.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ImageSource */
 const ImageSource: IImageSourceConstructor = XNode.prepare<IImageSource>("Xamarin.Forms.ImageSource;Xamarin.Forms.Core", false, false);
 
 
-ImageSource.Effects = XNode.prepare("Xamarin.Forms.ImageSource:Effects;Xamarin.Forms.Core", true, false);
+ImageSource.effects = XNode.prepare("Xamarin.Forms.ImageSource:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IIndicatorView {
@@ -4904,58 +4904,58 @@ export interface IIndicatorViewConstructor {
     (a?: Partial<IIndicatorView>, ... nodes: XNode[]): XNode;
     
 /** Attached Property IndicatorView.ItemsSourceBy of Type BindableProperty */
-ItemsSourceBy?(v: any): { "Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core": any  }
+itemsSourceBy?(v: any)
     
 /** Property IndicatorView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.IndicatorLayout of Type Xamarin.Forms.Layout`1[Xamarin.Forms.View] */
-IndicatorLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+indicatorLayout?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.IndicatorTemplate of Type Xamarin.Forms.DataTemplate */
-IndicatorTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+indicatorTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property IndicatorView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** IndicatorView */
 const IndicatorView: IIndicatorViewConstructor = XNode.prepare<IIndicatorView>("Xamarin.Forms.IndicatorView;Xamarin.Forms.Core", false, false);
 
-IndicatorView.ItemsSourceBy = (v) => ({ "Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core": v  }) ;
+IndicatorView.itemsSourceBy = XNode.prepare("Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core", true) as any ;
 
-IndicatorView.Behaviors = XNode.prepare("Xamarin.Forms.IndicatorView:Behaviors;Xamarin.Forms.Core", true, false);
+IndicatorView.behaviors = XNode.prepare("Xamarin.Forms.IndicatorView:Behaviors;Xamarin.Forms.Core", true, false);
 
-IndicatorView.ControlTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:ControlTemplate;Xamarin.Forms.Core", true, true);
+IndicatorView.controlTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-IndicatorView.Effects = XNode.prepare("Xamarin.Forms.IndicatorView:Effects;Xamarin.Forms.Core", true, false);
+IndicatorView.effects = XNode.prepare("Xamarin.Forms.IndicatorView:Effects;Xamarin.Forms.Core", true, false);
 
-IndicatorView.GestureRecognizers = XNode.prepare("Xamarin.Forms.IndicatorView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+IndicatorView.gestureRecognizers = XNode.prepare("Xamarin.Forms.IndicatorView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-IndicatorView.IndicatorLayout = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorLayout;Xamarin.Forms.Core", true, false);
+IndicatorView.indicatorLayout = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorLayout;Xamarin.Forms.Core", true, false);
 
-IndicatorView.IndicatorTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorTemplate;Xamarin.Forms.Core", true, true);
+IndicatorView.indicatorTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorTemplate;Xamarin.Forms.Core", true, true);
 
-IndicatorView.Resources = XNode.prepare("Xamarin.Forms.IndicatorView:Resources;Xamarin.Forms.Core", true, false);
+IndicatorView.resources = XNode.prepare("Xamarin.Forms.IndicatorView:Resources;Xamarin.Forms.Core", true, false);
 
-IndicatorView.StyleClass = XNode.prepare("Xamarin.Forms.IndicatorView:StyleClass;Xamarin.Forms.Core", true, false);
+IndicatorView.styleClass = XNode.prepare("Xamarin.Forms.IndicatorView:StyleClass;Xamarin.Forms.Core", true, false);
 
-IndicatorView.Triggers = XNode.prepare("Xamarin.Forms.IndicatorView:Triggers;Xamarin.Forms.Core", true, false);
+IndicatorView.triggers = XNode.prepare("Xamarin.Forms.IndicatorView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IInputView {
@@ -5124,39 +5124,39 @@ export interface IInputViewConstructor {
     
     
 /** Property InputView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property InputView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property InputView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property InputView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property InputView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property InputView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** InputView */
 const InputView: IInputViewConstructor = XNode.prepare<IInputView>("Xamarin.Forms.InputView;Xamarin.Forms.Core", false, false);
 
 
-InputView.Behaviors = XNode.prepare("Xamarin.Forms.InputView:Behaviors;Xamarin.Forms.Core", true, false);
+InputView.behaviors = XNode.prepare("Xamarin.Forms.InputView:Behaviors;Xamarin.Forms.Core", true, false);
 
-InputView.Effects = XNode.prepare("Xamarin.Forms.InputView:Effects;Xamarin.Forms.Core", true, false);
+InputView.effects = XNode.prepare("Xamarin.Forms.InputView:Effects;Xamarin.Forms.Core", true, false);
 
-InputView.GestureRecognizers = XNode.prepare("Xamarin.Forms.InputView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+InputView.gestureRecognizers = XNode.prepare("Xamarin.Forms.InputView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-InputView.Resources = XNode.prepare("Xamarin.Forms.InputView:Resources;Xamarin.Forms.Core", true, false);
+InputView.resources = XNode.prepare("Xamarin.Forms.InputView:Resources;Xamarin.Forms.Core", true, false);
 
-InputView.StyleClass = XNode.prepare("Xamarin.Forms.InputView:StyleClass;Xamarin.Forms.Core", true, false);
+InputView.styleClass = XNode.prepare("Xamarin.Forms.InputView:StyleClass;Xamarin.Forms.Core", true, false);
 
-InputView.Triggers = XNode.prepare("Xamarin.Forms.InputView:Triggers;Xamarin.Forms.Core", true, false);
+InputView.triggers = XNode.prepare("Xamarin.Forms.InputView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IBehavior {
@@ -5204,24 +5204,24 @@ export interface IDataTriggerConstructor {
     
     
 /** Property DataTrigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-EnterActions?: ( a: any, ... nodes: XNode[]) => XNode;
+enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DataTrigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-ExitActions?: ( a: any, ... nodes: XNode[]) => XNode;
+exitActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property DataTrigger.Setters of Type Xamarin.Forms.Setter */
-Setters?: ( a: any, ... nodes: XNode[]) => XNode
+setters?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** DataTrigger */
 const DataTrigger: IDataTriggerConstructor = XNode.prepare<IDataTrigger>("Xamarin.Forms.DataTrigger;Xamarin.Forms.Core", false, false);
 
 
-DataTrigger.EnterActions = XNode.prepare("Xamarin.Forms.DataTrigger:EnterActions;Xamarin.Forms.Core", true, false);
+DataTrigger.enterActions = XNode.prepare("Xamarin.Forms.DataTrigger:EnterActions;Xamarin.Forms.Core", true, false);
 
-DataTrigger.ExitActions = XNode.prepare("Xamarin.Forms.DataTrigger:ExitActions;Xamarin.Forms.Core", true, false);
+DataTrigger.exitActions = XNode.prepare("Xamarin.Forms.DataTrigger:ExitActions;Xamarin.Forms.Core", true, false);
 
-DataTrigger.Setters = XNode.prepare("Xamarin.Forms.DataTrigger:Setters;Xamarin.Forms.Core", true, false);
+DataTrigger.setters = XNode.prepare("Xamarin.Forms.DataTrigger:Setters;Xamarin.Forms.Core", true, false);
 
 
 export interface IEventTrigger {
@@ -5243,24 +5243,24 @@ export interface IEventTriggerConstructor {
     
     
 /** Property EventTrigger.Actions of Type Xamarin.Forms.TriggerAction */
-Actions?: ( a: any, ... nodes: XNode[]) => XNode;
+actions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property EventTrigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-EnterActions?: ( a: any, ... nodes: XNode[]) => XNode;
+enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property EventTrigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-ExitActions?: ( a: any, ... nodes: XNode[]) => XNode
+exitActions?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** EventTrigger */
 const EventTrigger: IEventTriggerConstructor = XNode.prepare<IEventTrigger>("Xamarin.Forms.EventTrigger;Xamarin.Forms.Core", false, false);
 
 
-EventTrigger.Actions = XNode.prepare("Xamarin.Forms.EventTrigger:Actions;Xamarin.Forms.Core", true, false);
+EventTrigger.actions = XNode.prepare("Xamarin.Forms.EventTrigger:Actions;Xamarin.Forms.Core", true, false);
 
-EventTrigger.EnterActions = XNode.prepare("Xamarin.Forms.EventTrigger:EnterActions;Xamarin.Forms.Core", true, false);
+EventTrigger.enterActions = XNode.prepare("Xamarin.Forms.EventTrigger:EnterActions;Xamarin.Forms.Core", true, false);
 
-EventTrigger.ExitActions = XNode.prepare("Xamarin.Forms.EventTrigger:ExitActions;Xamarin.Forms.Core", true, false);
+EventTrigger.exitActions = XNode.prepare("Xamarin.Forms.EventTrigger:ExitActions;Xamarin.Forms.Core", true, false);
 
 
 export interface IMultiTrigger {
@@ -5279,29 +5279,29 @@ export interface IMultiTriggerConstructor {
     
     
 /** Property MultiTrigger.Conditions of Type Xamarin.Forms.Condition */
-Conditions?: ( a: any, ... nodes: XNode[]) => XNode;
+conditions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MultiTrigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-EnterActions?: ( a: any, ... nodes: XNode[]) => XNode;
+enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MultiTrigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-ExitActions?: ( a: any, ... nodes: XNode[]) => XNode;
+exitActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MultiTrigger.Setters of Type Xamarin.Forms.Setter */
-Setters?: ( a: any, ... nodes: XNode[]) => XNode
+setters?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** MultiTrigger */
 const MultiTrigger: IMultiTriggerConstructor = XNode.prepare<IMultiTrigger>("Xamarin.Forms.MultiTrigger;Xamarin.Forms.Core", false, false);
 
 
-MultiTrigger.Conditions = XNode.prepare("Xamarin.Forms.MultiTrigger:Conditions;Xamarin.Forms.Core", true, false);
+MultiTrigger.conditions = XNode.prepare("Xamarin.Forms.MultiTrigger:Conditions;Xamarin.Forms.Core", true, false);
 
-MultiTrigger.EnterActions = XNode.prepare("Xamarin.Forms.MultiTrigger:EnterActions;Xamarin.Forms.Core", true, false);
+MultiTrigger.enterActions = XNode.prepare("Xamarin.Forms.MultiTrigger:EnterActions;Xamarin.Forms.Core", true, false);
 
-MultiTrigger.ExitActions = XNode.prepare("Xamarin.Forms.MultiTrigger:ExitActions;Xamarin.Forms.Core", true, false);
+MultiTrigger.exitActions = XNode.prepare("Xamarin.Forms.MultiTrigger:ExitActions;Xamarin.Forms.Core", true, false);
 
-MultiTrigger.Setters = XNode.prepare("Xamarin.Forms.MultiTrigger:Setters;Xamarin.Forms.Core", true, false);
+MultiTrigger.setters = XNode.prepare("Xamarin.Forms.MultiTrigger:Setters;Xamarin.Forms.Core", true, false);
 
 
 export interface ITrigger {
@@ -5326,24 +5326,24 @@ export interface ITriggerConstructor {
     
     
 /** Property Trigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-EnterActions?: ( a: any, ... nodes: XNode[]) => XNode;
+enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Trigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-ExitActions?: ( a: any, ... nodes: XNode[]) => XNode;
+exitActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Trigger.Setters of Type Xamarin.Forms.Setter */
-Setters?: ( a: any, ... nodes: XNode[]) => XNode
+setters?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Trigger */
 const Trigger: ITriggerConstructor = XNode.prepare<ITrigger>("Xamarin.Forms.Trigger;Xamarin.Forms.Core", false, false);
 
 
-Trigger.EnterActions = XNode.prepare("Xamarin.Forms.Trigger:EnterActions;Xamarin.Forms.Core", true, false);
+Trigger.enterActions = XNode.prepare("Xamarin.Forms.Trigger:EnterActions;Xamarin.Forms.Core", true, false);
 
-Trigger.ExitActions = XNode.prepare("Xamarin.Forms.Trigger:ExitActions;Xamarin.Forms.Core", true, false);
+Trigger.exitActions = XNode.prepare("Xamarin.Forms.Trigger:ExitActions;Xamarin.Forms.Core", true, false);
 
-Trigger.Setters = XNode.prepare("Xamarin.Forms.Trigger:Setters;Xamarin.Forms.Core", true, false);
+Trigger.setters = XNode.prepare("Xamarin.Forms.Trigger:Setters;Xamarin.Forms.Core", true, false);
 
 
 export interface ITriggerBase {
@@ -5365,19 +5365,19 @@ export interface ITriggerBaseConstructor {
     
     
 /** Property TriggerBase.EnterActions of Type Xamarin.Forms.TriggerAction */
-EnterActions?: ( a: any, ... nodes: XNode[]) => XNode;
+enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TriggerBase.ExitActions of Type Xamarin.Forms.TriggerAction */
-ExitActions?: ( a: any, ... nodes: XNode[]) => XNode
+exitActions?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TriggerBase */
 const TriggerBase: ITriggerBaseConstructor = XNode.prepare<ITriggerBase>("Xamarin.Forms.TriggerBase;Xamarin.Forms.Core", false, false);
 
 
-TriggerBase.EnterActions = XNode.prepare("Xamarin.Forms.TriggerBase:EnterActions;Xamarin.Forms.Core", true, false);
+TriggerBase.enterActions = XNode.prepare("Xamarin.Forms.TriggerBase:EnterActions;Xamarin.Forms.Core", true, false);
 
-TriggerBase.ExitActions = XNode.prepare("Xamarin.Forms.TriggerBase:ExitActions;Xamarin.Forms.Core", true, false);
+TriggerBase.exitActions = XNode.prepare("Xamarin.Forms.TriggerBase:ExitActions;Xamarin.Forms.Core", true, false);
 
 
 export interface ICarouselView {
@@ -5585,54 +5585,54 @@ export interface ICarouselViewConstructor {
     
     
 /** Property CarouselView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-EmptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode;
+triggers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CarouselView.VisibleViews of Type Xamarin.Forms.View */
-VisibleViews?: ( a: any, ... nodes: XNode[]) => XNode
+visibleViews?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** CarouselView */
 const CarouselView: ICarouselViewConstructor = XNode.prepare<ICarouselView>("Xamarin.Forms.CarouselView;Xamarin.Forms.Core", false, false);
 
 
-CarouselView.Behaviors = XNode.prepare("Xamarin.Forms.CarouselView:Behaviors;Xamarin.Forms.Core", true, false);
+CarouselView.behaviors = XNode.prepare("Xamarin.Forms.CarouselView:Behaviors;Xamarin.Forms.Core", true, false);
 
-CarouselView.Effects = XNode.prepare("Xamarin.Forms.CarouselView:Effects;Xamarin.Forms.Core", true, false);
+CarouselView.effects = XNode.prepare("Xamarin.Forms.CarouselView:Effects;Xamarin.Forms.Core", true, false);
 
-CarouselView.EmptyViewTemplate = XNode.prepare("Xamarin.Forms.CarouselView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
+CarouselView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.CarouselView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
-CarouselView.GestureRecognizers = XNode.prepare("Xamarin.Forms.CarouselView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+CarouselView.gestureRecognizers = XNode.prepare("Xamarin.Forms.CarouselView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-CarouselView.ItemTemplate = XNode.prepare("Xamarin.Forms.CarouselView:ItemTemplate;Xamarin.Forms.Core", true, true);
+CarouselView.itemTemplate = XNode.prepare("Xamarin.Forms.CarouselView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-CarouselView.Resources = XNode.prepare("Xamarin.Forms.CarouselView:Resources;Xamarin.Forms.Core", true, false);
+CarouselView.resources = XNode.prepare("Xamarin.Forms.CarouselView:Resources;Xamarin.Forms.Core", true, false);
 
-CarouselView.StyleClass = XNode.prepare("Xamarin.Forms.CarouselView:StyleClass;Xamarin.Forms.Core", true, false);
+CarouselView.styleClass = XNode.prepare("Xamarin.Forms.CarouselView:StyleClass;Xamarin.Forms.Core", true, false);
 
-CarouselView.Triggers = XNode.prepare("Xamarin.Forms.CarouselView:Triggers;Xamarin.Forms.Core", true, false);
+CarouselView.triggers = XNode.prepare("Xamarin.Forms.CarouselView:Triggers;Xamarin.Forms.Core", true, false);
 
-CarouselView.VisibleViews = XNode.prepare("Xamarin.Forms.CarouselView:VisibleViews;Xamarin.Forms.Core", true, false);
+CarouselView.visibleViews = XNode.prepare("Xamarin.Forms.CarouselView:VisibleViews;Xamarin.Forms.Core", true, false);
 
 
 export interface ICollectionView {
@@ -5846,79 +5846,79 @@ export interface ICollectionViewConstructor {
     
     
 /** Property CollectionView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-EmptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-FooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.GroupFooterTemplate of Type Xamarin.Forms.DataTemplate */
-GroupFooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+groupFooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-GroupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+groupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-HeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-ItemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.SelectedItems of Type System.Object */
-SelectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
+selectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property CollectionView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** CollectionView */
 const CollectionView: ICollectionViewConstructor = XNode.prepare<ICollectionView>("Xamarin.Forms.CollectionView;Xamarin.Forms.Core", false, false);
 
 
-CollectionView.Behaviors = XNode.prepare("Xamarin.Forms.CollectionView:Behaviors;Xamarin.Forms.Core", true, false);
+CollectionView.behaviors = XNode.prepare("Xamarin.Forms.CollectionView:Behaviors;Xamarin.Forms.Core", true, false);
 
-CollectionView.Effects = XNode.prepare("Xamarin.Forms.CollectionView:Effects;Xamarin.Forms.Core", true, false);
+CollectionView.effects = XNode.prepare("Xamarin.Forms.CollectionView:Effects;Xamarin.Forms.Core", true, false);
 
-CollectionView.EmptyViewTemplate = XNode.prepare("Xamarin.Forms.CollectionView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
+CollectionView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.CollectionView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
-CollectionView.FooterTemplate = XNode.prepare("Xamarin.Forms.CollectionView:FooterTemplate;Xamarin.Forms.Core", true, true);
+CollectionView.footerTemplate = XNode.prepare("Xamarin.Forms.CollectionView:FooterTemplate;Xamarin.Forms.Core", true, true);
 
-CollectionView.GestureRecognizers = XNode.prepare("Xamarin.Forms.CollectionView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+CollectionView.gestureRecognizers = XNode.prepare("Xamarin.Forms.CollectionView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-CollectionView.GroupFooterTemplate = XNode.prepare("Xamarin.Forms.CollectionView:GroupFooterTemplate;Xamarin.Forms.Core", true, true);
+CollectionView.groupFooterTemplate = XNode.prepare("Xamarin.Forms.CollectionView:GroupFooterTemplate;Xamarin.Forms.Core", true, true);
 
-CollectionView.GroupHeaderTemplate = XNode.prepare("Xamarin.Forms.CollectionView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
+CollectionView.groupHeaderTemplate = XNode.prepare("Xamarin.Forms.CollectionView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
 
-CollectionView.HeaderTemplate = XNode.prepare("Xamarin.Forms.CollectionView:HeaderTemplate;Xamarin.Forms.Core", true, true);
+CollectionView.headerTemplate = XNode.prepare("Xamarin.Forms.CollectionView:HeaderTemplate;Xamarin.Forms.Core", true, true);
 
-CollectionView.ItemsLayout = XNode.prepare("Xamarin.Forms.CollectionView:ItemsLayout;Xamarin.Forms.Core", true, false);
+CollectionView.itemsLayout = XNode.prepare("Xamarin.Forms.CollectionView:ItemsLayout;Xamarin.Forms.Core", true, false);
 
-CollectionView.ItemTemplate = XNode.prepare("Xamarin.Forms.CollectionView:ItemTemplate;Xamarin.Forms.Core", true, true);
+CollectionView.itemTemplate = XNode.prepare("Xamarin.Forms.CollectionView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-CollectionView.Resources = XNode.prepare("Xamarin.Forms.CollectionView:Resources;Xamarin.Forms.Core", true, false);
+CollectionView.resources = XNode.prepare("Xamarin.Forms.CollectionView:Resources;Xamarin.Forms.Core", true, false);
 
-CollectionView.SelectedItems = XNode.prepare("Xamarin.Forms.CollectionView:SelectedItems;Xamarin.Forms.Core", true, false);
+CollectionView.selectedItems = XNode.prepare("Xamarin.Forms.CollectionView:SelectedItems;Xamarin.Forms.Core", true, false);
 
-CollectionView.StyleClass = XNode.prepare("Xamarin.Forms.CollectionView:StyleClass;Xamarin.Forms.Core", true, false);
+CollectionView.styleClass = XNode.prepare("Xamarin.Forms.CollectionView:StyleClass;Xamarin.Forms.Core", true, false);
 
-CollectionView.Triggers = XNode.prepare("Xamarin.Forms.CollectionView:Triggers;Xamarin.Forms.Core", true, false);
+CollectionView.triggers = XNode.prepare("Xamarin.Forms.CollectionView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IGridItemsLayout {
@@ -6170,79 +6170,79 @@ export interface IGroupableItemsViewConstructor {
     
     
 /** Property GroupableItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-EmptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-FooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.GroupFooterTemplate of Type Xamarin.Forms.DataTemplate */
-GroupFooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+groupFooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-GroupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+groupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-HeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-ItemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.SelectedItems of Type System.Object */
-SelectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
+selectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property GroupableItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** GroupableItemsView */
 const GroupableItemsView: IGroupableItemsViewConstructor = XNode.prepare<IGroupableItemsView>("Xamarin.Forms.GroupableItemsView;Xamarin.Forms.Core", false, false);
 
 
-GroupableItemsView.Behaviors = XNode.prepare("Xamarin.Forms.GroupableItemsView:Behaviors;Xamarin.Forms.Core", true, false);
+GroupableItemsView.behaviors = XNode.prepare("Xamarin.Forms.GroupableItemsView:Behaviors;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.Effects = XNode.prepare("Xamarin.Forms.GroupableItemsView:Effects;Xamarin.Forms.Core", true, false);
+GroupableItemsView.effects = XNode.prepare("Xamarin.Forms.GroupableItemsView:Effects;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.EmptyViewTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
+GroupableItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
-GroupableItemsView.FooterTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
+GroupableItemsView.footerTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
 
-GroupableItemsView.GestureRecognizers = XNode.prepare("Xamarin.Forms.GroupableItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+GroupableItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.GroupableItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.GroupFooterTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:GroupFooterTemplate;Xamarin.Forms.Core", true, true);
+GroupableItemsView.groupFooterTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:GroupFooterTemplate;Xamarin.Forms.Core", true, true);
 
-GroupableItemsView.GroupHeaderTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
+GroupableItemsView.groupHeaderTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
 
-GroupableItemsView.HeaderTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
+GroupableItemsView.headerTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
 
-GroupableItemsView.ItemsLayout = XNode.prepare("Xamarin.Forms.GroupableItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
+GroupableItemsView.itemsLayout = XNode.prepare("Xamarin.Forms.GroupableItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.ItemTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
+GroupableItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-GroupableItemsView.Resources = XNode.prepare("Xamarin.Forms.GroupableItemsView:Resources;Xamarin.Forms.Core", true, false);
+GroupableItemsView.resources = XNode.prepare("Xamarin.Forms.GroupableItemsView:Resources;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.SelectedItems = XNode.prepare("Xamarin.Forms.GroupableItemsView:SelectedItems;Xamarin.Forms.Core", true, false);
+GroupableItemsView.selectedItems = XNode.prepare("Xamarin.Forms.GroupableItemsView:SelectedItems;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.StyleClass = XNode.prepare("Xamarin.Forms.GroupableItemsView:StyleClass;Xamarin.Forms.Core", true, false);
+GroupableItemsView.styleClass = XNode.prepare("Xamarin.Forms.GroupableItemsView:StyleClass;Xamarin.Forms.Core", true, false);
 
-GroupableItemsView.Triggers = XNode.prepare("Xamarin.Forms.GroupableItemsView:Triggers;Xamarin.Forms.Core", true, false);
+GroupableItemsView.triggers = XNode.prepare("Xamarin.Forms.GroupableItemsView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IItemsLayout {
@@ -6443,49 +6443,49 @@ export interface IItemsViewConstructor {
     
     
 /** Property ItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-EmptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ItemsView */
 const ItemsView: IItemsViewConstructor = XNode.prepare<IItemsView>("Xamarin.Forms.ItemsView;Xamarin.Forms.Core", false, false);
 
 
-ItemsView.Behaviors = XNode.prepare("Xamarin.Forms.ItemsView:Behaviors;Xamarin.Forms.Core", true, false);
+ItemsView.behaviors = XNode.prepare("Xamarin.Forms.ItemsView:Behaviors;Xamarin.Forms.Core", true, false);
 
-ItemsView.Effects = XNode.prepare("Xamarin.Forms.ItemsView:Effects;Xamarin.Forms.Core", true, false);
+ItemsView.effects = XNode.prepare("Xamarin.Forms.ItemsView:Effects;Xamarin.Forms.Core", true, false);
 
-ItemsView.EmptyViewTemplate = XNode.prepare("Xamarin.Forms.ItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
+ItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.ItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
-ItemsView.GestureRecognizers = XNode.prepare("Xamarin.Forms.ItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ItemsView.ItemTemplate = XNode.prepare("Xamarin.Forms.ItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
+ItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.ItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-ItemsView.Resources = XNode.prepare("Xamarin.Forms.ItemsView:Resources;Xamarin.Forms.Core", true, false);
+ItemsView.resources = XNode.prepare("Xamarin.Forms.ItemsView:Resources;Xamarin.Forms.Core", true, false);
 
-ItemsView.StyleClass = XNode.prepare("Xamarin.Forms.ItemsView:StyleClass;Xamarin.Forms.Core", true, false);
+ItemsView.styleClass = XNode.prepare("Xamarin.Forms.ItemsView:StyleClass;Xamarin.Forms.Core", true, false);
 
-ItemsView.Triggers = XNode.prepare("Xamarin.Forms.ItemsView:Triggers;Xamarin.Forms.Core", true, false);
+ItemsView.triggers = XNode.prepare("Xamarin.Forms.ItemsView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ILinearItemsLayout {
@@ -6722,69 +6722,69 @@ export interface ISelectableItemsViewConstructor {
     
     
 /** Property SelectableItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-EmptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-FooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-HeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-ItemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.SelectedItems of Type System.Object */
-SelectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
+selectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SelectableItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SelectableItemsView */
 const SelectableItemsView: ISelectableItemsViewConstructor = XNode.prepare<ISelectableItemsView>("Xamarin.Forms.SelectableItemsView;Xamarin.Forms.Core", false, false);
 
 
-SelectableItemsView.Behaviors = XNode.prepare("Xamarin.Forms.SelectableItemsView:Behaviors;Xamarin.Forms.Core", true, false);
+SelectableItemsView.behaviors = XNode.prepare("Xamarin.Forms.SelectableItemsView:Behaviors;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.Effects = XNode.prepare("Xamarin.Forms.SelectableItemsView:Effects;Xamarin.Forms.Core", true, false);
+SelectableItemsView.effects = XNode.prepare("Xamarin.Forms.SelectableItemsView:Effects;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.EmptyViewTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
+SelectableItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
-SelectableItemsView.FooterTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
+SelectableItemsView.footerTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
 
-SelectableItemsView.GestureRecognizers = XNode.prepare("Xamarin.Forms.SelectableItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+SelectableItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.SelectableItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.HeaderTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
+SelectableItemsView.headerTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
 
-SelectableItemsView.ItemsLayout = XNode.prepare("Xamarin.Forms.SelectableItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
+SelectableItemsView.itemsLayout = XNode.prepare("Xamarin.Forms.SelectableItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.ItemTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
+SelectableItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-SelectableItemsView.Resources = XNode.prepare("Xamarin.Forms.SelectableItemsView:Resources;Xamarin.Forms.Core", true, false);
+SelectableItemsView.resources = XNode.prepare("Xamarin.Forms.SelectableItemsView:Resources;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.SelectedItems = XNode.prepare("Xamarin.Forms.SelectableItemsView:SelectedItems;Xamarin.Forms.Core", true, false);
+SelectableItemsView.selectedItems = XNode.prepare("Xamarin.Forms.SelectableItemsView:SelectedItems;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.StyleClass = XNode.prepare("Xamarin.Forms.SelectableItemsView:StyleClass;Xamarin.Forms.Core", true, false);
+SelectableItemsView.styleClass = XNode.prepare("Xamarin.Forms.SelectableItemsView:StyleClass;Xamarin.Forms.Core", true, false);
 
-SelectableItemsView.Triggers = XNode.prepare("Xamarin.Forms.SelectableItemsView:Triggers;Xamarin.Forms.Core", true, false);
+SelectableItemsView.triggers = XNode.prepare("Xamarin.Forms.SelectableItemsView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IStructuredItemsView {
@@ -6974,64 +6974,64 @@ export interface IStructuredItemsViewConstructor {
     
     
 /** Property StructuredItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-EmptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-FooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-HeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-ItemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StructuredItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** StructuredItemsView */
 const StructuredItemsView: IStructuredItemsViewConstructor = XNode.prepare<IStructuredItemsView>("Xamarin.Forms.StructuredItemsView;Xamarin.Forms.Core", false, false);
 
 
-StructuredItemsView.Behaviors = XNode.prepare("Xamarin.Forms.StructuredItemsView:Behaviors;Xamarin.Forms.Core", true, false);
+StructuredItemsView.behaviors = XNode.prepare("Xamarin.Forms.StructuredItemsView:Behaviors;Xamarin.Forms.Core", true, false);
 
-StructuredItemsView.Effects = XNode.prepare("Xamarin.Forms.StructuredItemsView:Effects;Xamarin.Forms.Core", true, false);
+StructuredItemsView.effects = XNode.prepare("Xamarin.Forms.StructuredItemsView:Effects;Xamarin.Forms.Core", true, false);
 
-StructuredItemsView.EmptyViewTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
+StructuredItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
-StructuredItemsView.FooterTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
+StructuredItemsView.footerTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
 
-StructuredItemsView.GestureRecognizers = XNode.prepare("Xamarin.Forms.StructuredItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+StructuredItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.StructuredItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-StructuredItemsView.HeaderTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
+StructuredItemsView.headerTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
 
-StructuredItemsView.ItemsLayout = XNode.prepare("Xamarin.Forms.StructuredItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
+StructuredItemsView.itemsLayout = XNode.prepare("Xamarin.Forms.StructuredItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
 
-StructuredItemsView.ItemTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
+StructuredItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-StructuredItemsView.Resources = XNode.prepare("Xamarin.Forms.StructuredItemsView:Resources;Xamarin.Forms.Core", true, false);
+StructuredItemsView.resources = XNode.prepare("Xamarin.Forms.StructuredItemsView:Resources;Xamarin.Forms.Core", true, false);
 
-StructuredItemsView.StyleClass = XNode.prepare("Xamarin.Forms.StructuredItemsView:StyleClass;Xamarin.Forms.Core", true, false);
+StructuredItemsView.styleClass = XNode.prepare("Xamarin.Forms.StructuredItemsView:StyleClass;Xamarin.Forms.Core", true, false);
 
-StructuredItemsView.Triggers = XNode.prepare("Xamarin.Forms.StructuredItemsView:Triggers;Xamarin.Forms.Core", true, false);
+StructuredItemsView.triggers = XNode.prepare("Xamarin.Forms.StructuredItemsView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ILabel {
@@ -7227,44 +7227,44 @@ export interface ILabelConstructor {
     
     
 /** Property Label.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Label.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Label.FormattedText of Type Xamarin.Forms.FormattedString */
-FormattedText?: ( a: any, ... nodes: XNode[]) => XNode;
+formattedText?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Label.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Label.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Label.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Label.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Label */
 const Label: ILabelConstructor = XNode.prepare<ILabel>("Xamarin.Forms.Label;Xamarin.Forms.Core", false, false);
 
 
-Label.Behaviors = XNode.prepare("Xamarin.Forms.Label:Behaviors;Xamarin.Forms.Core", true, false);
+Label.behaviors = XNode.prepare("Xamarin.Forms.Label:Behaviors;Xamarin.Forms.Core", true, false);
 
-Label.Effects = XNode.prepare("Xamarin.Forms.Label:Effects;Xamarin.Forms.Core", true, false);
+Label.effects = XNode.prepare("Xamarin.Forms.Label:Effects;Xamarin.Forms.Core", true, false);
 
-Label.FormattedText = XNode.prepare("Xamarin.Forms.Label:FormattedText;Xamarin.Forms.Core", true, false);
+Label.formattedText = XNode.prepare("Xamarin.Forms.Label:FormattedText;Xamarin.Forms.Core", true, false);
 
-Label.GestureRecognizers = XNode.prepare("Xamarin.Forms.Label:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Label.gestureRecognizers = XNode.prepare("Xamarin.Forms.Label:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Label.Resources = XNode.prepare("Xamarin.Forms.Label:Resources;Xamarin.Forms.Core", true, false);
+Label.resources = XNode.prepare("Xamarin.Forms.Label:Resources;Xamarin.Forms.Core", true, false);
 
-Label.StyleClass = XNode.prepare("Xamarin.Forms.Label:StyleClass;Xamarin.Forms.Core", true, false);
+Label.styleClass = XNode.prepare("Xamarin.Forms.Label:StyleClass;Xamarin.Forms.Core", true, false);
 
-Label.Triggers = XNode.prepare("Xamarin.Forms.Label:Triggers;Xamarin.Forms.Core", true, false);
+Label.triggers = XNode.prepare("Xamarin.Forms.Label:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ILayout {
@@ -7415,39 +7415,39 @@ export interface ILayoutConstructor {
     
     
 /** Property Layout.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Layout.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Layout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Layout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Layout.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Layout.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Layout */
 const Layout: ILayoutConstructor = XNode.prepare<ILayout>("Xamarin.Forms.Layout;Xamarin.Forms.Core", false, false);
 
 
-Layout.Behaviors = XNode.prepare("Xamarin.Forms.Layout:Behaviors;Xamarin.Forms.Core", true, false);
+Layout.behaviors = XNode.prepare("Xamarin.Forms.Layout:Behaviors;Xamarin.Forms.Core", true, false);
 
-Layout.Effects = XNode.prepare("Xamarin.Forms.Layout:Effects;Xamarin.Forms.Core", true, false);
+Layout.effects = XNode.prepare("Xamarin.Forms.Layout:Effects;Xamarin.Forms.Core", true, false);
 
-Layout.GestureRecognizers = XNode.prepare("Xamarin.Forms.Layout:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Layout.gestureRecognizers = XNode.prepare("Xamarin.Forms.Layout:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Layout.Resources = XNode.prepare("Xamarin.Forms.Layout:Resources;Xamarin.Forms.Core", true, false);
+Layout.resources = XNode.prepare("Xamarin.Forms.Layout:Resources;Xamarin.Forms.Core", true, false);
 
-Layout.StyleClass = XNode.prepare("Xamarin.Forms.Layout:StyleClass;Xamarin.Forms.Core", true, false);
+Layout.styleClass = XNode.prepare("Xamarin.Forms.Layout:StyleClass;Xamarin.Forms.Core", true, false);
 
-Layout.Triggers = XNode.prepare("Xamarin.Forms.Layout:Triggers;Xamarin.Forms.Core", true, false);
+Layout.triggers = XNode.prepare("Xamarin.Forms.Layout:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IListView {
@@ -7661,59 +7661,59 @@ export interface IListViewConstructor {
     
     
 /** Property ListView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-FooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-GroupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+groupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-HeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ListView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ListView */
 const ListView: IListViewConstructor = XNode.prepare<IListView>("Xamarin.Forms.ListView;Xamarin.Forms.Core", false, false);
 
 
-ListView.Behaviors = XNode.prepare("Xamarin.Forms.ListView:Behaviors;Xamarin.Forms.Core", true, false);
+ListView.behaviors = XNode.prepare("Xamarin.Forms.ListView:Behaviors;Xamarin.Forms.Core", true, false);
 
-ListView.Effects = XNode.prepare("Xamarin.Forms.ListView:Effects;Xamarin.Forms.Core", true, false);
+ListView.effects = XNode.prepare("Xamarin.Forms.ListView:Effects;Xamarin.Forms.Core", true, false);
 
-ListView.FooterTemplate = XNode.prepare("Xamarin.Forms.ListView:FooterTemplate;Xamarin.Forms.Core", true, true);
+ListView.footerTemplate = XNode.prepare("Xamarin.Forms.ListView:FooterTemplate;Xamarin.Forms.Core", true, true);
 
-ListView.GestureRecognizers = XNode.prepare("Xamarin.Forms.ListView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ListView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ListView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ListView.GroupHeaderTemplate = XNode.prepare("Xamarin.Forms.ListView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
+ListView.groupHeaderTemplate = XNode.prepare("Xamarin.Forms.ListView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
 
-ListView.HeaderTemplate = XNode.prepare("Xamarin.Forms.ListView:HeaderTemplate;Xamarin.Forms.Core", true, true);
+ListView.headerTemplate = XNode.prepare("Xamarin.Forms.ListView:HeaderTemplate;Xamarin.Forms.Core", true, true);
 
-ListView.ItemTemplate = XNode.prepare("Xamarin.Forms.ListView:ItemTemplate;Xamarin.Forms.Core", true, true);
+ListView.itemTemplate = XNode.prepare("Xamarin.Forms.ListView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-ListView.Resources = XNode.prepare("Xamarin.Forms.ListView:Resources;Xamarin.Forms.Core", true, false);
+ListView.resources = XNode.prepare("Xamarin.Forms.ListView:Resources;Xamarin.Forms.Core", true, false);
 
-ListView.StyleClass = XNode.prepare("Xamarin.Forms.ListView:StyleClass;Xamarin.Forms.Core", true, false);
+ListView.styleClass = XNode.prepare("Xamarin.Forms.ListView:StyleClass;Xamarin.Forms.Core", true, false);
 
-ListView.Triggers = XNode.prepare("Xamarin.Forms.ListView:Triggers;Xamarin.Forms.Core", true, false);
+ListView.triggers = XNode.prepare("Xamarin.Forms.ListView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IMasterDetailPage {
@@ -7900,59 +7900,59 @@ export interface IMasterDetailPageConstructor {
     
     
 /** Property MasterDetailPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.Detail of Type Xamarin.Forms.Page */
-Detail?: ( a: any, ... nodes: XNode[]) => XNode;
+detail?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.Master of Type Xamarin.Forms.Page */
-Master?: ( a: any, ... nodes: XNode[]) => XNode;
+master?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MasterDetailPage.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** MasterDetailPage */
 const MasterDetailPage: IMasterDetailPageConstructor = XNode.prepare<IMasterDetailPage>("Xamarin.Forms.MasterDetailPage;Xamarin.Forms.Core", false, false);
 
 
-MasterDetailPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+MasterDetailPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.Behaviors = XNode.prepare("Xamarin.Forms.MasterDetailPage:Behaviors;Xamarin.Forms.Core", true, false);
+MasterDetailPage.behaviors = XNode.prepare("Xamarin.Forms.MasterDetailPage:Behaviors;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.Detail = XNode.prepare("Xamarin.Forms.MasterDetailPage:Detail;Xamarin.Forms.Core", true, false);
+MasterDetailPage.detail = XNode.prepare("Xamarin.Forms.MasterDetailPage:Detail;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.Effects = XNode.prepare("Xamarin.Forms.MasterDetailPage:Effects;Xamarin.Forms.Core", true, false);
+MasterDetailPage.effects = XNode.prepare("Xamarin.Forms.MasterDetailPage:Effects;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.IconImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:IconImageSource;Xamarin.Forms.Core", true, false);
+MasterDetailPage.iconImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:IconImageSource;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.Master = XNode.prepare("Xamarin.Forms.MasterDetailPage:Master;Xamarin.Forms.Core", true, false);
+MasterDetailPage.master = XNode.prepare("Xamarin.Forms.MasterDetailPage:Master;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.Resources = XNode.prepare("Xamarin.Forms.MasterDetailPage:Resources;Xamarin.Forms.Core", true, false);
+MasterDetailPage.resources = XNode.prepare("Xamarin.Forms.MasterDetailPage:Resources;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.StyleClass = XNode.prepare("Xamarin.Forms.MasterDetailPage:StyleClass;Xamarin.Forms.Core", true, false);
+MasterDetailPage.styleClass = XNode.prepare("Xamarin.Forms.MasterDetailPage:StyleClass;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.ToolbarItems = XNode.prepare("Xamarin.Forms.MasterDetailPage:ToolbarItems;Xamarin.Forms.Core", true, false);
+MasterDetailPage.toolbarItems = XNode.prepare("Xamarin.Forms.MasterDetailPage:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-MasterDetailPage.Triggers = XNode.prepare("Xamarin.Forms.MasterDetailPage:Triggers;Xamarin.Forms.Core", true, false);
+MasterDetailPage.triggers = XNode.prepare("Xamarin.Forms.MasterDetailPage:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IMenu {
@@ -7995,24 +7995,24 @@ export interface IMenuConstructor {
     
     
 /** Property Menu.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Menu.Item of Type Xamarin.Forms.Menu */
-Item?: ( a: any, ... nodes: XNode[]) => XNode;
+item?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Menu.Items of Type Xamarin.Forms.MenuItem */
-Items?: ( a: any, ... nodes: XNode[]) => XNode
+items?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Menu */
 const Menu: IMenuConstructor = XNode.prepare<IMenu>("Xamarin.Forms.Menu;Xamarin.Forms.Core", false, false);
 
 
-Menu.Effects = XNode.prepare("Xamarin.Forms.Menu:Effects;Xamarin.Forms.Core", true, false);
+Menu.effects = XNode.prepare("Xamarin.Forms.Menu:Effects;Xamarin.Forms.Core", true, false);
 
-Menu.Item = XNode.prepare("Xamarin.Forms.Menu:Item;Xamarin.Forms.Core", true, false);
+Menu.item = XNode.prepare("Xamarin.Forms.Menu:Item;Xamarin.Forms.Core", true, false);
 
-Menu.Items = XNode.prepare("Xamarin.Forms.Menu:Items;Xamarin.Forms.Core", true, false);
+Menu.items = XNode.prepare("Xamarin.Forms.Menu:Items;Xamarin.Forms.Core", true, false);
 
 
 export interface IMenuItem {
@@ -8069,23 +8069,23 @@ export interface IMenuItemConstructor {
     (a?: Partial<IMenuItem>, ... nodes: XNode[]): XNode;
     
 /** Attached Property MenuItem.Accelerator of Type BindableProperty */
-Accelerator?(v: any): { "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": any  }
+accelerator?(v: any)
     
 /** Property MenuItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property MenuItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** MenuItem */
 const MenuItem: IMenuItemConstructor = XNode.prepare<IMenuItem>("Xamarin.Forms.MenuItem;Xamarin.Forms.Core", false, false);
 
-MenuItem.Accelerator = (v) => ({ "Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core": v  }) ;
+MenuItem.accelerator = XNode.prepare("Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core", true) as any ;
 
-MenuItem.Effects = XNode.prepare("Xamarin.Forms.MenuItem:Effects;Xamarin.Forms.Core", true, false);
+MenuItem.effects = XNode.prepare("Xamarin.Forms.MenuItem:Effects;Xamarin.Forms.Core", true, false);
 
-MenuItem.IconImageSource = XNode.prepare("Xamarin.Forms.MenuItem:IconImageSource;Xamarin.Forms.Core", true, false);
+MenuItem.iconImageSource = XNode.prepare("Xamarin.Forms.MenuItem:IconImageSource;Xamarin.Forms.Core", true, false);
 
 
 export interface INavigationPage {
@@ -8262,88 +8262,88 @@ export interface INavigationPageConstructor {
     (a?: Partial<INavigationPage>, ... nodes: XNode[]): XNode;
     
 /** Attached Property NavigationPage.BackButtonTitle of Type BindableProperty */
-BackButtonTitle?(v: any): { "Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core": any  };
+backButtonTitle?(v: any);
 
 /** Attached Property NavigationPage.HasNavigationBar of Type BindableProperty */
-HasNavigationBar?(v: any): { "Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core": any  };
+hasNavigationBar?(v: any);
 
 /** Attached Property NavigationPage.HasBackButton of Type BindableProperty */
-HasBackButton?(v: any): { "Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core": any  };
+hasBackButton?(v: any);
 
 /** Attached Property NavigationPage.TitleIconImageSource of Type BindableProperty */
-TitleIconImageSource?(v: any): { "Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core": any  };
+titleIconImageSource?(v: any);
 
 /** Attached Property NavigationPage.TitleIcon of Type BindableProperty */
-TitleIcon?(v: any): { "Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core": any  };
+titleIcon?(v: any);
 
 /** Attached Property NavigationPage.TitleView of Type BindableProperty */
-TitleView?(v: any): { "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": any  }
+titleView?(v: any)
     
 /** Property NavigationPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.CurrentPage of Type Xamarin.Forms.Page */
-CurrentPage?: ( a: any, ... nodes: XNode[]) => XNode;
+currentPage?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.RootPage of Type Xamarin.Forms.Page */
-RootPage?: ( a: any, ... nodes: XNode[]) => XNode;
+rootPage?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigationPage.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** NavigationPage */
 const NavigationPage: INavigationPageConstructor = XNode.prepare<INavigationPage>("Xamarin.Forms.NavigationPage;Xamarin.Forms.Core", false, false);
 
-NavigationPage.BackButtonTitle = (v) => ({ "Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core": v  }) ;
+NavigationPage.backButtonTitle = XNode.prepare("Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core", true) as any ;
 
-NavigationPage.HasNavigationBar = (v) => ({ "Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core": v  }) ;
+NavigationPage.hasNavigationBar = XNode.prepare("Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core", true) as any ;
 
-NavigationPage.HasBackButton = (v) => ({ "Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core": v  }) ;
+NavigationPage.hasBackButton = XNode.prepare("Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core", true) as any ;
 
-NavigationPage.TitleIconImageSource = (v) => ({ "Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core": v  }) ;
+NavigationPage.titleIconImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core", true) as any ;
 
-NavigationPage.TitleIcon = (v) => ({ "Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core": v  }) ;
+NavigationPage.titleIcon = XNode.prepare("Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core", true) as any ;
 
-NavigationPage.TitleView = (v) => ({ "Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core": v  }) ;
+NavigationPage.titleView = XNode.prepare("Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core", true) as any ;
 
-NavigationPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+NavigationPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-NavigationPage.Behaviors = XNode.prepare("Xamarin.Forms.NavigationPage:Behaviors;Xamarin.Forms.Core", true, false);
+NavigationPage.behaviors = XNode.prepare("Xamarin.Forms.NavigationPage:Behaviors;Xamarin.Forms.Core", true, false);
 
-NavigationPage.CurrentPage = XNode.prepare("Xamarin.Forms.NavigationPage:CurrentPage;Xamarin.Forms.Core", true, false);
+NavigationPage.currentPage = XNode.prepare("Xamarin.Forms.NavigationPage:CurrentPage;Xamarin.Forms.Core", true, false);
 
-NavigationPage.Effects = XNode.prepare("Xamarin.Forms.NavigationPage:Effects;Xamarin.Forms.Core", true, false);
+NavigationPage.effects = XNode.prepare("Xamarin.Forms.NavigationPage:Effects;Xamarin.Forms.Core", true, false);
 
-NavigationPage.IconImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:IconImageSource;Xamarin.Forms.Core", true, false);
+NavigationPage.iconImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:IconImageSource;Xamarin.Forms.Core", true, false);
 
-NavigationPage.Resources = XNode.prepare("Xamarin.Forms.NavigationPage:Resources;Xamarin.Forms.Core", true, false);
+NavigationPage.resources = XNode.prepare("Xamarin.Forms.NavigationPage:Resources;Xamarin.Forms.Core", true, false);
 
-NavigationPage.RootPage = XNode.prepare("Xamarin.Forms.NavigationPage:RootPage;Xamarin.Forms.Core", true, false);
+NavigationPage.rootPage = XNode.prepare("Xamarin.Forms.NavigationPage:RootPage;Xamarin.Forms.Core", true, false);
 
-NavigationPage.StyleClass = XNode.prepare("Xamarin.Forms.NavigationPage:StyleClass;Xamarin.Forms.Core", true, false);
+NavigationPage.styleClass = XNode.prepare("Xamarin.Forms.NavigationPage:StyleClass;Xamarin.Forms.Core", true, false);
 
-NavigationPage.ToolbarItems = XNode.prepare("Xamarin.Forms.NavigationPage:ToolbarItems;Xamarin.Forms.Core", true, false);
+NavigationPage.toolbarItems = XNode.prepare("Xamarin.Forms.NavigationPage:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-NavigationPage.Triggers = XNode.prepare("Xamarin.Forms.NavigationPage:Triggers;Xamarin.Forms.Core", true, false);
+NavigationPage.triggers = XNode.prepare("Xamarin.Forms.NavigationPage:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IOpenGLView {
@@ -8491,39 +8491,39 @@ export interface IOpenGLViewConstructor {
     
     
 /** Property OpenGLView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property OpenGLView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property OpenGLView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property OpenGLView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property OpenGLView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property OpenGLView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** OpenGLView */
 const OpenGLView: IOpenGLViewConstructor = XNode.prepare<IOpenGLView>("Xamarin.Forms.OpenGLView;Xamarin.Forms.Core", false, false);
 
 
-OpenGLView.Behaviors = XNode.prepare("Xamarin.Forms.OpenGLView:Behaviors;Xamarin.Forms.Core", true, false);
+OpenGLView.behaviors = XNode.prepare("Xamarin.Forms.OpenGLView:Behaviors;Xamarin.Forms.Core", true, false);
 
-OpenGLView.Effects = XNode.prepare("Xamarin.Forms.OpenGLView:Effects;Xamarin.Forms.Core", true, false);
+OpenGLView.effects = XNode.prepare("Xamarin.Forms.OpenGLView:Effects;Xamarin.Forms.Core", true, false);
 
-OpenGLView.GestureRecognizers = XNode.prepare("Xamarin.Forms.OpenGLView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+OpenGLView.gestureRecognizers = XNode.prepare("Xamarin.Forms.OpenGLView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-OpenGLView.Resources = XNode.prepare("Xamarin.Forms.OpenGLView:Resources;Xamarin.Forms.Core", true, false);
+OpenGLView.resources = XNode.prepare("Xamarin.Forms.OpenGLView:Resources;Xamarin.Forms.Core", true, false);
 
-OpenGLView.StyleClass = XNode.prepare("Xamarin.Forms.OpenGLView:StyleClass;Xamarin.Forms.Core", true, false);
+OpenGLView.styleClass = XNode.prepare("Xamarin.Forms.OpenGLView:StyleClass;Xamarin.Forms.Core", true, false);
 
-OpenGLView.Triggers = XNode.prepare("Xamarin.Forms.OpenGLView:Triggers;Xamarin.Forms.Core", true, false);
+OpenGLView.triggers = XNode.prepare("Xamarin.Forms.OpenGLView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IPage {
@@ -8686,49 +8686,49 @@ export interface IPageConstructor {
     
     
 /** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Page.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Page */
 const Page: IPageConstructor = XNode.prepare<IPage>("Xamarin.Forms.Page;Xamarin.Forms.Core", false, false);
 
 
-Page.BackgroundImageSource = XNode.prepare("Xamarin.Forms.Page:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+Page.backgroundImageSource = XNode.prepare("Xamarin.Forms.Page:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-Page.Behaviors = XNode.prepare("Xamarin.Forms.Page:Behaviors;Xamarin.Forms.Core", true, false);
+Page.behaviors = XNode.prepare("Xamarin.Forms.Page:Behaviors;Xamarin.Forms.Core", true, false);
 
-Page.Effects = XNode.prepare("Xamarin.Forms.Page:Effects;Xamarin.Forms.Core", true, false);
+Page.effects = XNode.prepare("Xamarin.Forms.Page:Effects;Xamarin.Forms.Core", true, false);
 
-Page.IconImageSource = XNode.prepare("Xamarin.Forms.Page:IconImageSource;Xamarin.Forms.Core", true, false);
+Page.iconImageSource = XNode.prepare("Xamarin.Forms.Page:IconImageSource;Xamarin.Forms.Core", true, false);
 
-Page.Resources = XNode.prepare("Xamarin.Forms.Page:Resources;Xamarin.Forms.Core", true, false);
+Page.resources = XNode.prepare("Xamarin.Forms.Page:Resources;Xamarin.Forms.Core", true, false);
 
-Page.StyleClass = XNode.prepare("Xamarin.Forms.Page:StyleClass;Xamarin.Forms.Core", true, false);
+Page.styleClass = XNode.prepare("Xamarin.Forms.Page:StyleClass;Xamarin.Forms.Core", true, false);
 
-Page.ToolbarItems = XNode.prepare("Xamarin.Forms.Page:ToolbarItems;Xamarin.Forms.Core", true, false);
+Page.toolbarItems = XNode.prepare("Xamarin.Forms.Page:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-Page.Triggers = XNode.prepare("Xamarin.Forms.Page:Triggers;Xamarin.Forms.Core", true, false);
+Page.triggers = XNode.prepare("Xamarin.Forms.Page:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IPanGestureRecognizer {
@@ -8768,14 +8768,14 @@ export interface IPanGestureRecognizerConstructor {
     
     
 /** Property PanGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** PanGestureRecognizer */
 const PanGestureRecognizer: IPanGestureRecognizerConstructor = XNode.prepare<IPanGestureRecognizer>("Xamarin.Forms.PanGestureRecognizer;Xamarin.Forms.Core", false, false);
 
 
-PanGestureRecognizer.Effects = XNode.prepare("Xamarin.Forms.PanGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
+PanGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.PanGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IPicker {
@@ -8950,44 +8950,44 @@ export interface IPickerConstructor {
     
     
 /** Property Picker.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Picker.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Picker.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Picker.Items of Type System.String */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Picker.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Picker.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Picker.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Picker */
 const Picker: IPickerConstructor = XNode.prepare<IPicker>("Xamarin.Forms.Picker;Xamarin.Forms.Core", false, false);
 
 
-Picker.Behaviors = XNode.prepare("Xamarin.Forms.Picker:Behaviors;Xamarin.Forms.Core", true, false);
+Picker.behaviors = XNode.prepare("Xamarin.Forms.Picker:Behaviors;Xamarin.Forms.Core", true, false);
 
-Picker.Effects = XNode.prepare("Xamarin.Forms.Picker:Effects;Xamarin.Forms.Core", true, false);
+Picker.effects = XNode.prepare("Xamarin.Forms.Picker:Effects;Xamarin.Forms.Core", true, false);
 
-Picker.GestureRecognizers = XNode.prepare("Xamarin.Forms.Picker:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Picker.gestureRecognizers = XNode.prepare("Xamarin.Forms.Picker:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Picker.Items = XNode.prepare("Xamarin.Forms.Picker:Items;Xamarin.Forms.Core", true, false);
+Picker.items = XNode.prepare("Xamarin.Forms.Picker:Items;Xamarin.Forms.Core", true, false);
 
-Picker.Resources = XNode.prepare("Xamarin.Forms.Picker:Resources;Xamarin.Forms.Core", true, false);
+Picker.resources = XNode.prepare("Xamarin.Forms.Picker:Resources;Xamarin.Forms.Core", true, false);
 
-Picker.StyleClass = XNode.prepare("Xamarin.Forms.Picker:StyleClass;Xamarin.Forms.Core", true, false);
+Picker.styleClass = XNode.prepare("Xamarin.Forms.Picker:StyleClass;Xamarin.Forms.Core", true, false);
 
-Picker.Triggers = XNode.prepare("Xamarin.Forms.Picker:Triggers;Xamarin.Forms.Core", true, false);
+Picker.triggers = XNode.prepare("Xamarin.Forms.Picker:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IPinchGestureRecognizer {
@@ -9027,14 +9027,14 @@ export interface IPinchGestureRecognizerConstructor {
     
     
 /** Property PinchGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** PinchGestureRecognizer */
 const PinchGestureRecognizer: IPinchGestureRecognizerConstructor = XNode.prepare<IPinchGestureRecognizer>("Xamarin.Forms.PinchGestureRecognizer;Xamarin.Forms.Core", false, false);
 
 
-PinchGestureRecognizer.Effects = XNode.prepare("Xamarin.Forms.PinchGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
+PinchGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.PinchGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IProgressBar {
@@ -9182,39 +9182,39 @@ export interface IProgressBarConstructor {
     
     
 /** Property ProgressBar.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ProgressBar.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ProgressBar.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ProgressBar.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ProgressBar.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ProgressBar.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ProgressBar */
 const ProgressBar: IProgressBarConstructor = XNode.prepare<IProgressBar>("Xamarin.Forms.ProgressBar;Xamarin.Forms.Core", false, false);
 
 
-ProgressBar.Behaviors = XNode.prepare("Xamarin.Forms.ProgressBar:Behaviors;Xamarin.Forms.Core", true, false);
+ProgressBar.behaviors = XNode.prepare("Xamarin.Forms.ProgressBar:Behaviors;Xamarin.Forms.Core", true, false);
 
-ProgressBar.Effects = XNode.prepare("Xamarin.Forms.ProgressBar:Effects;Xamarin.Forms.Core", true, false);
+ProgressBar.effects = XNode.prepare("Xamarin.Forms.ProgressBar:Effects;Xamarin.Forms.Core", true, false);
 
-ProgressBar.GestureRecognizers = XNode.prepare("Xamarin.Forms.ProgressBar:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ProgressBar.gestureRecognizers = XNode.prepare("Xamarin.Forms.ProgressBar:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ProgressBar.Resources = XNode.prepare("Xamarin.Forms.ProgressBar:Resources;Xamarin.Forms.Core", true, false);
+ProgressBar.resources = XNode.prepare("Xamarin.Forms.ProgressBar:Resources;Xamarin.Forms.Core", true, false);
 
-ProgressBar.StyleClass = XNode.prepare("Xamarin.Forms.ProgressBar:StyleClass;Xamarin.Forms.Core", true, false);
+ProgressBar.styleClass = XNode.prepare("Xamarin.Forms.ProgressBar:StyleClass;Xamarin.Forms.Core", true, false);
 
-ProgressBar.Triggers = XNode.prepare("Xamarin.Forms.ProgressBar:Triggers;Xamarin.Forms.Core", true, false);
+ProgressBar.triggers = XNode.prepare("Xamarin.Forms.ProgressBar:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IRefreshView {
@@ -9383,49 +9383,49 @@ export interface IRefreshViewConstructor {
     
     
 /** Property RefreshView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RefreshView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** RefreshView */
 const RefreshView: IRefreshViewConstructor = XNode.prepare<IRefreshView>("Xamarin.Forms.RefreshView;Xamarin.Forms.Core", false, false);
 
 
-RefreshView.Behaviors = XNode.prepare("Xamarin.Forms.RefreshView:Behaviors;Xamarin.Forms.Core", true, false);
+RefreshView.behaviors = XNode.prepare("Xamarin.Forms.RefreshView:Behaviors;Xamarin.Forms.Core", true, false);
 
-RefreshView.Content = XNode.prepare("Xamarin.Forms.RefreshView:Content;Xamarin.Forms.Core", true, false);
+RefreshView.content = XNode.prepare("Xamarin.Forms.RefreshView:Content;Xamarin.Forms.Core", true, false);
 
-RefreshView.ControlTemplate = XNode.prepare("Xamarin.Forms.RefreshView:ControlTemplate;Xamarin.Forms.Core", true, true);
+RefreshView.controlTemplate = XNode.prepare("Xamarin.Forms.RefreshView:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-RefreshView.Effects = XNode.prepare("Xamarin.Forms.RefreshView:Effects;Xamarin.Forms.Core", true, false);
+RefreshView.effects = XNode.prepare("Xamarin.Forms.RefreshView:Effects;Xamarin.Forms.Core", true, false);
 
-RefreshView.GestureRecognizers = XNode.prepare("Xamarin.Forms.RefreshView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+RefreshView.gestureRecognizers = XNode.prepare("Xamarin.Forms.RefreshView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-RefreshView.Resources = XNode.prepare("Xamarin.Forms.RefreshView:Resources;Xamarin.Forms.Core", true, false);
+RefreshView.resources = XNode.prepare("Xamarin.Forms.RefreshView:Resources;Xamarin.Forms.Core", true, false);
 
-RefreshView.StyleClass = XNode.prepare("Xamarin.Forms.RefreshView:StyleClass;Xamarin.Forms.Core", true, false);
+RefreshView.styleClass = XNode.prepare("Xamarin.Forms.RefreshView:StyleClass;Xamarin.Forms.Core", true, false);
 
-RefreshView.Triggers = XNode.prepare("Xamarin.Forms.RefreshView:Triggers;Xamarin.Forms.Core", true, false);
+RefreshView.triggers = XNode.prepare("Xamarin.Forms.RefreshView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IRelativeLayout {
@@ -9575,68 +9575,68 @@ export interface IRelativeLayoutConstructor {
     (a?: Partial<IRelativeLayout>, ... nodes: XNode[]): XNode;
     
 /** Attached Property RelativeLayout.XConstraint of Type BindableProperty */
-XConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core": any  };
+xConstraint?(v: any);
 
 /** Attached Property RelativeLayout.YConstraint of Type BindableProperty */
-YConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core": any  };
+yConstraint?(v: any);
 
 /** Attached Property RelativeLayout.WidthConstraint of Type BindableProperty */
-WidthConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core": any  };
+widthConstraint?(v: any);
 
 /** Attached Property RelativeLayout.HeightConstraint of Type BindableProperty */
-HeightConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core": any  };
+heightConstraint?(v: any);
 
 /** Attached Property RelativeLayout.BoundsConstraint of Type BindableProperty */
-BoundsConstraint?(v: any): { "Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core": any  }
+boundsConstraint?(v: any)
     
 /** Property RelativeLayout.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RelativeLayout.Children of Type Xamarin.Forms.View */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RelativeLayout.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RelativeLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RelativeLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RelativeLayout.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property RelativeLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** RelativeLayout */
 const RelativeLayout: IRelativeLayoutConstructor = XNode.prepare<IRelativeLayout>("Xamarin.Forms.RelativeLayout;Xamarin.Forms.Core", false, false);
 
-RelativeLayout.XConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core": v  }) ;
+RelativeLayout.xConstraint = XNode.prepare("Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core", true) as any ;
 
-RelativeLayout.YConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core": v  }) ;
+RelativeLayout.yConstraint = XNode.prepare("Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core", true) as any ;
 
-RelativeLayout.WidthConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core": v  }) ;
+RelativeLayout.widthConstraint = XNode.prepare("Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core", true) as any ;
 
-RelativeLayout.HeightConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core": v  }) ;
+RelativeLayout.heightConstraint = XNode.prepare("Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core", true) as any ;
 
-RelativeLayout.BoundsConstraint = (v) => ({ "Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core": v  }) ;
+RelativeLayout.boundsConstraint = XNode.prepare("Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core", true) as any ;
 
-RelativeLayout.Behaviors = XNode.prepare("Xamarin.Forms.RelativeLayout:Behaviors;Xamarin.Forms.Core", true, false);
+RelativeLayout.behaviors = XNode.prepare("Xamarin.Forms.RelativeLayout:Behaviors;Xamarin.Forms.Core", true, false);
 
-RelativeLayout.Children = XNode.prepare("Xamarin.Forms.RelativeLayout:Children;Xamarin.Forms.Core", true, false);
+RelativeLayout.children = XNode.prepare("Xamarin.Forms.RelativeLayout:Children;Xamarin.Forms.Core", true, false);
 
-RelativeLayout.Effects = XNode.prepare("Xamarin.Forms.RelativeLayout:Effects;Xamarin.Forms.Core", true, false);
+RelativeLayout.effects = XNode.prepare("Xamarin.Forms.RelativeLayout:Effects;Xamarin.Forms.Core", true, false);
 
-RelativeLayout.GestureRecognizers = XNode.prepare("Xamarin.Forms.RelativeLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
+RelativeLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.RelativeLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-RelativeLayout.Resources = XNode.prepare("Xamarin.Forms.RelativeLayout:Resources;Xamarin.Forms.Core", true, false);
+RelativeLayout.resources = XNode.prepare("Xamarin.Forms.RelativeLayout:Resources;Xamarin.Forms.Core", true, false);
 
-RelativeLayout.StyleClass = XNode.prepare("Xamarin.Forms.RelativeLayout:StyleClass;Xamarin.Forms.Core", true, false);
+RelativeLayout.styleClass = XNode.prepare("Xamarin.Forms.RelativeLayout:StyleClass;Xamarin.Forms.Core", true, false);
 
-RelativeLayout.Triggers = XNode.prepare("Xamarin.Forms.RelativeLayout:Triggers;Xamarin.Forms.Core", true, false);
+RelativeLayout.triggers = XNode.prepare("Xamarin.Forms.RelativeLayout:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IRowDefinition {
@@ -9837,44 +9837,44 @@ export interface IScrollViewConstructor {
     
     
 /** Property ScrollView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ScrollView.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ScrollView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ScrollView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ScrollView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ScrollView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ScrollView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ScrollView */
 const ScrollView: IScrollViewConstructor = XNode.prepare<IScrollView>("Xamarin.Forms.ScrollView;Xamarin.Forms.Core", false, false);
 
 
-ScrollView.Behaviors = XNode.prepare("Xamarin.Forms.ScrollView:Behaviors;Xamarin.Forms.Core", true, false);
+ScrollView.behaviors = XNode.prepare("Xamarin.Forms.ScrollView:Behaviors;Xamarin.Forms.Core", true, false);
 
-ScrollView.Content = XNode.prepare("Xamarin.Forms.ScrollView:Content;Xamarin.Forms.Core", true, false);
+ScrollView.content = XNode.prepare("Xamarin.Forms.ScrollView:Content;Xamarin.Forms.Core", true, false);
 
-ScrollView.Effects = XNode.prepare("Xamarin.Forms.ScrollView:Effects;Xamarin.Forms.Core", true, false);
+ScrollView.effects = XNode.prepare("Xamarin.Forms.ScrollView:Effects;Xamarin.Forms.Core", true, false);
 
-ScrollView.GestureRecognizers = XNode.prepare("Xamarin.Forms.ScrollView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+ScrollView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ScrollView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-ScrollView.Resources = XNode.prepare("Xamarin.Forms.ScrollView:Resources;Xamarin.Forms.Core", true, false);
+ScrollView.resources = XNode.prepare("Xamarin.Forms.ScrollView:Resources;Xamarin.Forms.Core", true, false);
 
-ScrollView.StyleClass = XNode.prepare("Xamarin.Forms.ScrollView:StyleClass;Xamarin.Forms.Core", true, false);
+ScrollView.styleClass = XNode.prepare("Xamarin.Forms.ScrollView:StyleClass;Xamarin.Forms.Core", true, false);
 
-ScrollView.Triggers = XNode.prepare("Xamarin.Forms.ScrollView:Triggers;Xamarin.Forms.Core", true, false);
+ScrollView.triggers = XNode.prepare("Xamarin.Forms.ScrollView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ISearchBar {
@@ -10067,39 +10067,39 @@ export interface ISearchBarConstructor {
     
     
 /** Property SearchBar.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchBar.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchBar.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchBar.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchBar.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchBar.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SearchBar */
 const SearchBar: ISearchBarConstructor = XNode.prepare<ISearchBar>("Xamarin.Forms.SearchBar;Xamarin.Forms.Core", false, false);
 
 
-SearchBar.Behaviors = XNode.prepare("Xamarin.Forms.SearchBar:Behaviors;Xamarin.Forms.Core", true, false);
+SearchBar.behaviors = XNode.prepare("Xamarin.Forms.SearchBar:Behaviors;Xamarin.Forms.Core", true, false);
 
-SearchBar.Effects = XNode.prepare("Xamarin.Forms.SearchBar:Effects;Xamarin.Forms.Core", true, false);
+SearchBar.effects = XNode.prepare("Xamarin.Forms.SearchBar:Effects;Xamarin.Forms.Core", true, false);
 
-SearchBar.GestureRecognizers = XNode.prepare("Xamarin.Forms.SearchBar:GestureRecognizers;Xamarin.Forms.Core", true, false);
+SearchBar.gestureRecognizers = XNode.prepare("Xamarin.Forms.SearchBar:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-SearchBar.Resources = XNode.prepare("Xamarin.Forms.SearchBar:Resources;Xamarin.Forms.Core", true, false);
+SearchBar.resources = XNode.prepare("Xamarin.Forms.SearchBar:Resources;Xamarin.Forms.Core", true, false);
 
-SearchBar.StyleClass = XNode.prepare("Xamarin.Forms.SearchBar:StyleClass;Xamarin.Forms.Core", true, false);
+SearchBar.styleClass = XNode.prepare("Xamarin.Forms.SearchBar:StyleClass;Xamarin.Forms.Core", true, false);
 
-SearchBar.Triggers = XNode.prepare("Xamarin.Forms.SearchBar:Triggers;Xamarin.Forms.Core", true, false);
+SearchBar.triggers = XNode.prepare("Xamarin.Forms.SearchBar:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IBackButtonBehavior {
@@ -10133,14 +10133,14 @@ export interface IBackButtonBehaviorConstructor {
     
     
 /** Property BackButtonBehavior.IconOverride of Type Xamarin.Forms.ImageSource */
-IconOverride?: ( a: any, ... nodes: XNode[]) => XNode
+iconOverride?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** BackButtonBehavior */
 const BackButtonBehavior: IBackButtonBehaviorConstructor = XNode.prepare<IBackButtonBehavior>("Xamarin.Forms.BackButtonBehavior;Xamarin.Forms.Core", false, false);
 
 
-BackButtonBehavior.IconOverride = XNode.prepare("Xamarin.Forms.BackButtonBehavior:IconOverride;Xamarin.Forms.Core", true, false);
+BackButtonBehavior.iconOverride = XNode.prepare("Xamarin.Forms.BackButtonBehavior:IconOverride;Xamarin.Forms.Core", true, false);
 
 
 export interface IBaseShellItem {
@@ -10210,29 +10210,29 @@ export interface IBaseShellItemConstructor {
     
     
 /** Property BaseShellItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BaseShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BaseShellItem.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property BaseShellItem.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** BaseShellItem */
 const BaseShellItem: IBaseShellItemConstructor = XNode.prepare<IBaseShellItem>("Xamarin.Forms.BaseShellItem;Xamarin.Forms.Core", false, false);
 
 
-BaseShellItem.Effects = XNode.prepare("Xamarin.Forms.BaseShellItem:Effects;Xamarin.Forms.Core", true, false);
+BaseShellItem.effects = XNode.prepare("Xamarin.Forms.BaseShellItem:Effects;Xamarin.Forms.Core", true, false);
 
-BaseShellItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.BaseShellItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
+BaseShellItem.flyoutIcon = XNode.prepare("Xamarin.Forms.BaseShellItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-BaseShellItem.Icon = XNode.prepare("Xamarin.Forms.BaseShellItem:Icon;Xamarin.Forms.Core", true, false);
+BaseShellItem.icon = XNode.prepare("Xamarin.Forms.BaseShellItem:Icon;Xamarin.Forms.Core", true, false);
 
-BaseShellItem.StyleClass = XNode.prepare("Xamarin.Forms.BaseShellItem:StyleClass;Xamarin.Forms.Core", true, false);
+BaseShellItem.styleClass = XNode.prepare("Xamarin.Forms.BaseShellItem:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface INavigableElement {
@@ -10281,19 +10281,19 @@ export interface INavigableElementConstructor {
     
     
 /** Property NavigableElement.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property NavigableElement.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** NavigableElement */
 const NavigableElement: INavigableElementConstructor = XNode.prepare<INavigableElement>("Xamarin.Forms.NavigableElement;Xamarin.Forms.Core", false, false);
 
 
-NavigableElement.Effects = XNode.prepare("Xamarin.Forms.NavigableElement:Effects;Xamarin.Forms.Core", true, false);
+NavigableElement.effects = XNode.prepare("Xamarin.Forms.NavigableElement:Effects;Xamarin.Forms.Core", true, false);
 
-NavigableElement.StyleClass = XNode.prepare("Xamarin.Forms.NavigableElement:StyleClass;Xamarin.Forms.Core", true, false);
+NavigableElement.styleClass = XNode.prepare("Xamarin.Forms.NavigableElement:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface ISearchHandler {
@@ -10411,29 +10411,29 @@ export interface ISearchHandlerConstructor {
     
     
 /** Property SearchHandler.ClearIcon of Type Xamarin.Forms.ImageSource */
-ClearIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+clearIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchHandler.ClearPlaceholderIcon of Type Xamarin.Forms.ImageSource */
-ClearPlaceholderIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+clearPlaceholderIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchHandler.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SearchHandler.QueryIcon of Type Xamarin.Forms.ImageSource */
-QueryIcon?: ( a: any, ... nodes: XNode[]) => XNode
+queryIcon?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SearchHandler */
 const SearchHandler: ISearchHandlerConstructor = XNode.prepare<ISearchHandler>("Xamarin.Forms.SearchHandler;Xamarin.Forms.Core", false, false);
 
 
-SearchHandler.ClearIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearIcon;Xamarin.Forms.Core", true, false);
+SearchHandler.clearIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearIcon;Xamarin.Forms.Core", true, false);
 
-SearchHandler.ClearPlaceholderIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearPlaceholderIcon;Xamarin.Forms.Core", true, false);
+SearchHandler.clearPlaceholderIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearPlaceholderIcon;Xamarin.Forms.Core", true, false);
 
-SearchHandler.ItemTemplate = XNode.prepare("Xamarin.Forms.SearchHandler:ItemTemplate;Xamarin.Forms.Core", true, true);
+SearchHandler.itemTemplate = XNode.prepare("Xamarin.Forms.SearchHandler:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-SearchHandler.QueryIcon = XNode.prepare("Xamarin.Forms.SearchHandler:QueryIcon;Xamarin.Forms.Core", true, false);
+SearchHandler.queryIcon = XNode.prepare("Xamarin.Forms.SearchHandler:QueryIcon;Xamarin.Forms.Core", true, false);
 
 
 export interface IShell {
@@ -10634,173 +10634,173 @@ export interface IShellConstructor {
     (a?: Partial<IShell>, ... nodes: XNode[]): XNode;
     
 /** Attached Property Shell.BackButtonBehavior of Type BindableProperty */
-BackButtonBehavior?(v: any): { "Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core": any  };
+backButtonBehavior?(v: any);
 
 /** Attached Property Shell.FlyoutBehavior of Type BindableProperty */
-FlyoutBehavior?(v: any): { "Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core": any  };
+flyoutBehavior?(v: any);
 
 /** Attached Property Shell.NavBarIsVisible of Type BindableProperty */
-NavBarIsVisible?(v: any): { "Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core": any  };
+navBarIsVisible?(v: any);
 
 /** Attached Property Shell.NavBarHasShadow of Type BindableProperty */
-NavBarHasShadow?(v: any): { "Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core": any  };
+navBarHasShadow?(v: any);
 
 /** Attached Property Shell.SearchHandler of Type BindableProperty */
-SearchHandler?(v: any): { "Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core": any  };
+searchHandler?(v: any);
 
 /** Attached Property Shell.TabBarIsVisible of Type BindableProperty */
-TabBarIsVisible?(v: any): { "Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core": any  };
+tabBarIsVisible?(v: any);
 
 /** Attached Property Shell.TitleView of Type BindableProperty */
-TitleView?(v: any): { "Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core": any  };
+titleView?(v: any);
 
 /** Attached Property Shell.BackgroundColor of Type BindableProperty */
-BackgroundColor?(v: any): { "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": any  };
+backgroundColor?(v: any);
 
 /** Attached Property Shell.DisabledColor of Type BindableProperty */
-DisabledColor?(v: any): { "Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core": any  };
+disabledColor?(v: any);
 
 /** Attached Property Shell.ForegroundColor of Type BindableProperty */
-ForegroundColor?(v: any): { "Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core": any  };
+foregroundColor?(v: any);
 
 /** Attached Property Shell.TabBarBackgroundColor of Type BindableProperty */
-TabBarBackgroundColor?(v: any): { "Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core": any  };
+tabBarBackgroundColor?(v: any);
 
 /** Attached Property Shell.TabBarDisabledColor of Type BindableProperty */
-TabBarDisabledColor?(v: any): { "Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core": any  };
+tabBarDisabledColor?(v: any);
 
 /** Attached Property Shell.TabBarForegroundColor of Type BindableProperty */
-TabBarForegroundColor?(v: any): { "Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core": any  };
+tabBarForegroundColor?(v: any);
 
 /** Attached Property Shell.TabBarTitleColor of Type BindableProperty */
-TabBarTitleColor?(v: any): { "Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core": any  };
+tabBarTitleColor?(v: any);
 
 /** Attached Property Shell.TabBarUnselectedColor of Type BindableProperty */
-TabBarUnselectedColor?(v: any): { "Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core": any  };
+tabBarUnselectedColor?(v: any);
 
 /** Attached Property Shell.TitleColor of Type BindableProperty */
-TitleColor?(v: any): { "Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core": any  };
+titleColor?(v: any);
 
 /** Attached Property Shell.UnselectedColor of Type BindableProperty */
-UnselectedColor?(v: any): { "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": any  };
+unselectedColor?(v: any);
 
 /** Attached Property Shell.BackgroundColor of Type BindableProperty */
-BackgroundColor?(v: any): { "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": any  }
+backgroundColor?(v: any)
     
 /** Property Shell.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
-CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.FlyoutBackgroundImage of Type Xamarin.Forms.ImageSource */
-FlyoutBackgroundImage?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutBackgroundImage?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.FlyoutHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-FlyoutHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.Items of Type Xamarin.Forms.ShellItem */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.MenuItemTemplate of Type Xamarin.Forms.DataTemplate */
-MenuItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+menuItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Shell.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Shell */
 const Shell: IShellConstructor = XNode.prepare<IShell>("Xamarin.Forms.Shell;Xamarin.Forms.Core", false, false);
 
-Shell.BackButtonBehavior = (v) => ({ "Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core": v  }) ;
+Shell.backButtonBehavior = XNode.prepare("Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core", true) as any ;
 
-Shell.FlyoutBehavior = (v) => ({ "Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core": v  }) ;
+Shell.flyoutBehavior = XNode.prepare("Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core", true) as any ;
 
-Shell.NavBarIsVisible = (v) => ({ "Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core": v  }) ;
+Shell.navBarIsVisible = XNode.prepare("Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core", true) as any ;
 
-Shell.NavBarHasShadow = (v) => ({ "Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core": v  }) ;
+Shell.navBarHasShadow = XNode.prepare("Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core", true) as any ;
 
-Shell.SearchHandler = (v) => ({ "Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core": v  }) ;
+Shell.searchHandler = XNode.prepare("Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core", true) as any ;
 
-Shell.TabBarIsVisible = (v) => ({ "Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core": v  }) ;
+Shell.tabBarIsVisible = XNode.prepare("Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core", true) as any ;
 
-Shell.TitleView = (v) => ({ "Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core": v  }) ;
+Shell.titleView = XNode.prepare("Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core", true) as any ;
 
-Shell.BackgroundColor = (v) => ({ "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": v  }) ;
+Shell.backgroundColor = XNode.prepare("Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.DisabledColor = (v) => ({ "Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core": v  }) ;
+Shell.disabledColor = XNode.prepare("Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.ForegroundColor = (v) => ({ "Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core": v  }) ;
+Shell.foregroundColor = XNode.prepare("Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.TabBarBackgroundColor = (v) => ({ "Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core": v  }) ;
+Shell.tabBarBackgroundColor = XNode.prepare("Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.TabBarDisabledColor = (v) => ({ "Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core": v  }) ;
+Shell.tabBarDisabledColor = XNode.prepare("Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.TabBarForegroundColor = (v) => ({ "Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core": v  }) ;
+Shell.tabBarForegroundColor = XNode.prepare("Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.TabBarTitleColor = (v) => ({ "Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core": v  }) ;
+Shell.tabBarTitleColor = XNode.prepare("Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.TabBarUnselectedColor = (v) => ({ "Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core": v  }) ;
+Shell.tabBarUnselectedColor = XNode.prepare("Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.TitleColor = (v) => ({ "Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core": v  }) ;
+Shell.titleColor = XNode.prepare("Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.UnselectedColor = (v) => ({ "Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core": v  }) ;
+Shell.unselectedColor = XNode.prepare("Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.BackgroundColor = (v) => ({ "Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core": v  }) ;
+Shell.backgroundColor = XNode.prepare("Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core", true) as any ;
 
-Shell.BackgroundImageSource = XNode.prepare("Xamarin.Forms.Shell:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+Shell.backgroundImageSource = XNode.prepare("Xamarin.Forms.Shell:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-Shell.Behaviors = XNode.prepare("Xamarin.Forms.Shell:Behaviors;Xamarin.Forms.Core", true, false);
+Shell.behaviors = XNode.prepare("Xamarin.Forms.Shell:Behaviors;Xamarin.Forms.Core", true, false);
 
-Shell.CurrentItem = XNode.prepare("Xamarin.Forms.Shell:CurrentItem;Xamarin.Forms.Core", true, false);
+Shell.currentItem = XNode.prepare("Xamarin.Forms.Shell:CurrentItem;Xamarin.Forms.Core", true, false);
 
-Shell.Effects = XNode.prepare("Xamarin.Forms.Shell:Effects;Xamarin.Forms.Core", true, false);
+Shell.effects = XNode.prepare("Xamarin.Forms.Shell:Effects;Xamarin.Forms.Core", true, false);
 
-Shell.FlyoutBackgroundImage = XNode.prepare("Xamarin.Forms.Shell:FlyoutBackgroundImage;Xamarin.Forms.Core", true, false);
+Shell.flyoutBackgroundImage = XNode.prepare("Xamarin.Forms.Shell:FlyoutBackgroundImage;Xamarin.Forms.Core", true, false);
 
-Shell.FlyoutHeaderTemplate = XNode.prepare("Xamarin.Forms.Shell:FlyoutHeaderTemplate;Xamarin.Forms.Core", true, true);
+Shell.flyoutHeaderTemplate = XNode.prepare("Xamarin.Forms.Shell:FlyoutHeaderTemplate;Xamarin.Forms.Core", true, true);
 
-Shell.FlyoutIcon = XNode.prepare("Xamarin.Forms.Shell:FlyoutIcon;Xamarin.Forms.Core", true, false);
+Shell.flyoutIcon = XNode.prepare("Xamarin.Forms.Shell:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-Shell.IconImageSource = XNode.prepare("Xamarin.Forms.Shell:IconImageSource;Xamarin.Forms.Core", true, false);
+Shell.iconImageSource = XNode.prepare("Xamarin.Forms.Shell:IconImageSource;Xamarin.Forms.Core", true, false);
 
-Shell.Items = XNode.prepare("Xamarin.Forms.Shell:Items;Xamarin.Forms.Core", true, false);
+Shell.items = XNode.prepare("Xamarin.Forms.Shell:Items;Xamarin.Forms.Core", true, false);
 
-Shell.ItemTemplate = XNode.prepare("Xamarin.Forms.Shell:ItemTemplate;Xamarin.Forms.Core", true, true);
+Shell.itemTemplate = XNode.prepare("Xamarin.Forms.Shell:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-Shell.MenuItemTemplate = XNode.prepare("Xamarin.Forms.Shell:MenuItemTemplate;Xamarin.Forms.Core", true, true);
+Shell.menuItemTemplate = XNode.prepare("Xamarin.Forms.Shell:MenuItemTemplate;Xamarin.Forms.Core", true, true);
 
-Shell.Resources = XNode.prepare("Xamarin.Forms.Shell:Resources;Xamarin.Forms.Core", true, false);
+Shell.resources = XNode.prepare("Xamarin.Forms.Shell:Resources;Xamarin.Forms.Core", true, false);
 
-Shell.StyleClass = XNode.prepare("Xamarin.Forms.Shell:StyleClass;Xamarin.Forms.Core", true, false);
+Shell.styleClass = XNode.prepare("Xamarin.Forms.Shell:StyleClass;Xamarin.Forms.Core", true, false);
 
-Shell.ToolbarItems = XNode.prepare("Xamarin.Forms.Shell:ToolbarItems;Xamarin.Forms.Core", true, false);
+Shell.toolbarItems = XNode.prepare("Xamarin.Forms.Shell:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-Shell.Triggers = XNode.prepare("Xamarin.Forms.Shell:Triggers;Xamarin.Forms.Core", true, false);
+Shell.triggers = XNode.prepare("Xamarin.Forms.Shell:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IShellContent {
@@ -10876,39 +10876,39 @@ export interface IShellContentConstructor {
     
     
 /** Property ShellContent.ContentTemplate of Type Xamarin.Forms.DataTemplate */
-ContentTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+contentTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellContent.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellContent.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellContent.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellContent.MenuItems of Type Xamarin.Forms.MenuItem */
-MenuItems?: ( a: any, ... nodes: XNode[]) => XNode;
+menuItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellContent.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ShellContent */
 const ShellContent: IShellContentConstructor = XNode.prepare<IShellContent>("Xamarin.Forms.ShellContent;Xamarin.Forms.Core", false, false);
 
 
-ShellContent.ContentTemplate = XNode.prepare("Xamarin.Forms.ShellContent:ContentTemplate;Xamarin.Forms.Core", true, true);
+ShellContent.contentTemplate = XNode.prepare("Xamarin.Forms.ShellContent:ContentTemplate;Xamarin.Forms.Core", true, true);
 
-ShellContent.Effects = XNode.prepare("Xamarin.Forms.ShellContent:Effects;Xamarin.Forms.Core", true, false);
+ShellContent.effects = XNode.prepare("Xamarin.Forms.ShellContent:Effects;Xamarin.Forms.Core", true, false);
 
-ShellContent.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellContent:FlyoutIcon;Xamarin.Forms.Core", true, false);
+ShellContent.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellContent:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-ShellContent.Icon = XNode.prepare("Xamarin.Forms.ShellContent:Icon;Xamarin.Forms.Core", true, false);
+ShellContent.icon = XNode.prepare("Xamarin.Forms.ShellContent:Icon;Xamarin.Forms.Core", true, false);
 
-ShellContent.MenuItems = XNode.prepare("Xamarin.Forms.ShellContent:MenuItems;Xamarin.Forms.Core", true, false);
+ShellContent.menuItems = XNode.prepare("Xamarin.Forms.ShellContent:MenuItems;Xamarin.Forms.Core", true, false);
 
-ShellContent.StyleClass = XNode.prepare("Xamarin.Forms.ShellContent:StyleClass;Xamarin.Forms.Core", true, false);
+ShellContent.styleClass = XNode.prepare("Xamarin.Forms.ShellContent:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface IShellGroupItem {
@@ -10981,29 +10981,29 @@ export interface IShellGroupItemConstructor {
     
     
 /** Property ShellGroupItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellGroupItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellGroupItem.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellGroupItem.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ShellGroupItem */
 const ShellGroupItem: IShellGroupItemConstructor = XNode.prepare<IShellGroupItem>("Xamarin.Forms.ShellGroupItem;Xamarin.Forms.Core", false, false);
 
 
-ShellGroupItem.Effects = XNode.prepare("Xamarin.Forms.ShellGroupItem:Effects;Xamarin.Forms.Core", true, false);
+ShellGroupItem.effects = XNode.prepare("Xamarin.Forms.ShellGroupItem:Effects;Xamarin.Forms.Core", true, false);
 
-ShellGroupItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellGroupItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
+ShellGroupItem.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellGroupItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-ShellGroupItem.Icon = XNode.prepare("Xamarin.Forms.ShellGroupItem:Icon;Xamarin.Forms.Core", true, false);
+ShellGroupItem.icon = XNode.prepare("Xamarin.Forms.ShellGroupItem:Icon;Xamarin.Forms.Core", true, false);
 
-ShellGroupItem.StyleClass = XNode.prepare("Xamarin.Forms.ShellGroupItem:StyleClass;Xamarin.Forms.Core", true, false);
+ShellGroupItem.styleClass = XNode.prepare("Xamarin.Forms.ShellGroupItem:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface IFlyoutItem {
@@ -11079,39 +11079,39 @@ export interface IFlyoutItemConstructor {
     
     
 /** Property FlyoutItem.CurrentItem of Type Xamarin.Forms.ShellSection */
-CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlyoutItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlyoutItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlyoutItem.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlyoutItem.Items of Type Xamarin.Forms.ShellSection */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property FlyoutItem.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** FlyoutItem */
 const FlyoutItem: IFlyoutItemConstructor = XNode.prepare<IFlyoutItem>("Xamarin.Forms.FlyoutItem;Xamarin.Forms.Core", false, false);
 
 
-FlyoutItem.CurrentItem = XNode.prepare("Xamarin.Forms.FlyoutItem:CurrentItem;Xamarin.Forms.Core", true, false);
+FlyoutItem.currentItem = XNode.prepare("Xamarin.Forms.FlyoutItem:CurrentItem;Xamarin.Forms.Core", true, false);
 
-FlyoutItem.Effects = XNode.prepare("Xamarin.Forms.FlyoutItem:Effects;Xamarin.Forms.Core", true, false);
+FlyoutItem.effects = XNode.prepare("Xamarin.Forms.FlyoutItem:Effects;Xamarin.Forms.Core", true, false);
 
-FlyoutItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.FlyoutItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
+FlyoutItem.flyoutIcon = XNode.prepare("Xamarin.Forms.FlyoutItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-FlyoutItem.Icon = XNode.prepare("Xamarin.Forms.FlyoutItem:Icon;Xamarin.Forms.Core", true, false);
+FlyoutItem.icon = XNode.prepare("Xamarin.Forms.FlyoutItem:Icon;Xamarin.Forms.Core", true, false);
 
-FlyoutItem.Items = XNode.prepare("Xamarin.Forms.FlyoutItem:Items;Xamarin.Forms.Core", true, false);
+FlyoutItem.items = XNode.prepare("Xamarin.Forms.FlyoutItem:Items;Xamarin.Forms.Core", true, false);
 
-FlyoutItem.StyleClass = XNode.prepare("Xamarin.Forms.FlyoutItem:StyleClass;Xamarin.Forms.Core", true, false);
+FlyoutItem.styleClass = XNode.prepare("Xamarin.Forms.FlyoutItem:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface ITabBar {
@@ -11187,39 +11187,39 @@ export interface ITabBarConstructor {
     
     
 /** Property TabBar.CurrentItem of Type Xamarin.Forms.ShellSection */
-CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabBar.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabBar.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabBar.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabBar.Items of Type Xamarin.Forms.ShellSection */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabBar.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TabBar */
 const TabBar: ITabBarConstructor = XNode.prepare<ITabBar>("Xamarin.Forms.TabBar;Xamarin.Forms.Core", false, false);
 
 
-TabBar.CurrentItem = XNode.prepare("Xamarin.Forms.TabBar:CurrentItem;Xamarin.Forms.Core", true, false);
+TabBar.currentItem = XNode.prepare("Xamarin.Forms.TabBar:CurrentItem;Xamarin.Forms.Core", true, false);
 
-TabBar.Effects = XNode.prepare("Xamarin.Forms.TabBar:Effects;Xamarin.Forms.Core", true, false);
+TabBar.effects = XNode.prepare("Xamarin.Forms.TabBar:Effects;Xamarin.Forms.Core", true, false);
 
-TabBar.FlyoutIcon = XNode.prepare("Xamarin.Forms.TabBar:FlyoutIcon;Xamarin.Forms.Core", true, false);
+TabBar.flyoutIcon = XNode.prepare("Xamarin.Forms.TabBar:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-TabBar.Icon = XNode.prepare("Xamarin.Forms.TabBar:Icon;Xamarin.Forms.Core", true, false);
+TabBar.icon = XNode.prepare("Xamarin.Forms.TabBar:Icon;Xamarin.Forms.Core", true, false);
 
-TabBar.Items = XNode.prepare("Xamarin.Forms.TabBar:Items;Xamarin.Forms.Core", true, false);
+TabBar.items = XNode.prepare("Xamarin.Forms.TabBar:Items;Xamarin.Forms.Core", true, false);
 
-TabBar.StyleClass = XNode.prepare("Xamarin.Forms.TabBar:StyleClass;Xamarin.Forms.Core", true, false);
+TabBar.styleClass = XNode.prepare("Xamarin.Forms.TabBar:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface IShellItem {
@@ -11295,39 +11295,39 @@ export interface IShellItemConstructor {
     
     
 /** Property ShellItem.CurrentItem of Type Xamarin.Forms.ShellSection */
-CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellItem.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellItem.Items of Type Xamarin.Forms.ShellSection */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellItem.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ShellItem */
 const ShellItem: IShellItemConstructor = XNode.prepare<IShellItem>("Xamarin.Forms.ShellItem;Xamarin.Forms.Core", false, false);
 
 
-ShellItem.CurrentItem = XNode.prepare("Xamarin.Forms.ShellItem:CurrentItem;Xamarin.Forms.Core", true, false);
+ShellItem.currentItem = XNode.prepare("Xamarin.Forms.ShellItem:CurrentItem;Xamarin.Forms.Core", true, false);
 
-ShellItem.Effects = XNode.prepare("Xamarin.Forms.ShellItem:Effects;Xamarin.Forms.Core", true, false);
+ShellItem.effects = XNode.prepare("Xamarin.Forms.ShellItem:Effects;Xamarin.Forms.Core", true, false);
 
-ShellItem.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
+ShellItem.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-ShellItem.Icon = XNode.prepare("Xamarin.Forms.ShellItem:Icon;Xamarin.Forms.Core", true, false);
+ShellItem.icon = XNode.prepare("Xamarin.Forms.ShellItem:Icon;Xamarin.Forms.Core", true, false);
 
-ShellItem.Items = XNode.prepare("Xamarin.Forms.ShellItem:Items;Xamarin.Forms.Core", true, false);
+ShellItem.items = XNode.prepare("Xamarin.Forms.ShellItem:Items;Xamarin.Forms.Core", true, false);
 
-ShellItem.StyleClass = XNode.prepare("Xamarin.Forms.ShellItem:StyleClass;Xamarin.Forms.Core", true, false);
+ShellItem.styleClass = XNode.prepare("Xamarin.Forms.ShellItem:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface ITab {
@@ -11403,39 +11403,39 @@ export interface ITabConstructor {
     
     
 /** Property Tab.CurrentItem of Type Xamarin.Forms.ShellContent */
-CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Tab.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Tab.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Tab.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Tab.Items of Type Xamarin.Forms.ShellContent */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Tab.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Tab */
 const Tab: ITabConstructor = XNode.prepare<ITab>("Xamarin.Forms.Tab;Xamarin.Forms.Core", false, false);
 
 
-Tab.CurrentItem = XNode.prepare("Xamarin.Forms.Tab:CurrentItem;Xamarin.Forms.Core", true, false);
+Tab.currentItem = XNode.prepare("Xamarin.Forms.Tab:CurrentItem;Xamarin.Forms.Core", true, false);
 
-Tab.Effects = XNode.prepare("Xamarin.Forms.Tab:Effects;Xamarin.Forms.Core", true, false);
+Tab.effects = XNode.prepare("Xamarin.Forms.Tab:Effects;Xamarin.Forms.Core", true, false);
 
-Tab.FlyoutIcon = XNode.prepare("Xamarin.Forms.Tab:FlyoutIcon;Xamarin.Forms.Core", true, false);
+Tab.flyoutIcon = XNode.prepare("Xamarin.Forms.Tab:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-Tab.Icon = XNode.prepare("Xamarin.Forms.Tab:Icon;Xamarin.Forms.Core", true, false);
+Tab.icon = XNode.prepare("Xamarin.Forms.Tab:Icon;Xamarin.Forms.Core", true, false);
 
-Tab.Items = XNode.prepare("Xamarin.Forms.Tab:Items;Xamarin.Forms.Core", true, false);
+Tab.items = XNode.prepare("Xamarin.Forms.Tab:Items;Xamarin.Forms.Core", true, false);
 
-Tab.StyleClass = XNode.prepare("Xamarin.Forms.Tab:StyleClass;Xamarin.Forms.Core", true, false);
+Tab.styleClass = XNode.prepare("Xamarin.Forms.Tab:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface IShellSection {
@@ -11511,39 +11511,39 @@ export interface IShellSectionConstructor {
     
     
 /** Property ShellSection.CurrentItem of Type Xamarin.Forms.ShellContent */
-CurrentItem?: ( a: any, ... nodes: XNode[]) => XNode;
+currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellSection.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellSection.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-FlyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellSection.Icon of Type Xamarin.Forms.ImageSource */
-Icon?: ( a: any, ... nodes: XNode[]) => XNode;
+icon?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellSection.Items of Type Xamarin.Forms.ShellContent */
-Items?: ( a: any, ... nodes: XNode[]) => XNode;
+items?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ShellSection.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ShellSection */
 const ShellSection: IShellSectionConstructor = XNode.prepare<IShellSection>("Xamarin.Forms.ShellSection;Xamarin.Forms.Core", false, false);
 
 
-ShellSection.CurrentItem = XNode.prepare("Xamarin.Forms.ShellSection:CurrentItem;Xamarin.Forms.Core", true, false);
+ShellSection.currentItem = XNode.prepare("Xamarin.Forms.ShellSection:CurrentItem;Xamarin.Forms.Core", true, false);
 
-ShellSection.Effects = XNode.prepare("Xamarin.Forms.ShellSection:Effects;Xamarin.Forms.Core", true, false);
+ShellSection.effects = XNode.prepare("Xamarin.Forms.ShellSection:Effects;Xamarin.Forms.Core", true, false);
 
-ShellSection.FlyoutIcon = XNode.prepare("Xamarin.Forms.ShellSection:FlyoutIcon;Xamarin.Forms.Core", true, false);
+ShellSection.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellSection:FlyoutIcon;Xamarin.Forms.Core", true, false);
 
-ShellSection.Icon = XNode.prepare("Xamarin.Forms.ShellSection:Icon;Xamarin.Forms.Core", true, false);
+ShellSection.icon = XNode.prepare("Xamarin.Forms.ShellSection:Icon;Xamarin.Forms.Core", true, false);
 
-ShellSection.Items = XNode.prepare("Xamarin.Forms.ShellSection:Items;Xamarin.Forms.Core", true, false);
+ShellSection.items = XNode.prepare("Xamarin.Forms.ShellSection:Items;Xamarin.Forms.Core", true, false);
 
-ShellSection.StyleClass = XNode.prepare("Xamarin.Forms.ShellSection:StyleClass;Xamarin.Forms.Core", true, false);
+ShellSection.styleClass = XNode.prepare("Xamarin.Forms.ShellSection:StyleClass;Xamarin.Forms.Core", true, false);
 
 
 export interface ISlider {
@@ -11715,44 +11715,44 @@ export interface ISliderConstructor {
     
     
 /** Property Slider.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Slider.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Slider.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Slider.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Slider.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Slider.ThumbImageSource of Type Xamarin.Forms.ImageSource */
-ThumbImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+thumbImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Slider.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Slider */
 const Slider: ISliderConstructor = XNode.prepare<ISlider>("Xamarin.Forms.Slider;Xamarin.Forms.Core", false, false);
 
 
-Slider.Behaviors = XNode.prepare("Xamarin.Forms.Slider:Behaviors;Xamarin.Forms.Core", true, false);
+Slider.behaviors = XNode.prepare("Xamarin.Forms.Slider:Behaviors;Xamarin.Forms.Core", true, false);
 
-Slider.Effects = XNode.prepare("Xamarin.Forms.Slider:Effects;Xamarin.Forms.Core", true, false);
+Slider.effects = XNode.prepare("Xamarin.Forms.Slider:Effects;Xamarin.Forms.Core", true, false);
 
-Slider.GestureRecognizers = XNode.prepare("Xamarin.Forms.Slider:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Slider.gestureRecognizers = XNode.prepare("Xamarin.Forms.Slider:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Slider.Resources = XNode.prepare("Xamarin.Forms.Slider:Resources;Xamarin.Forms.Core", true, false);
+Slider.resources = XNode.prepare("Xamarin.Forms.Slider:Resources;Xamarin.Forms.Core", true, false);
 
-Slider.StyleClass = XNode.prepare("Xamarin.Forms.Slider:StyleClass;Xamarin.Forms.Core", true, false);
+Slider.styleClass = XNode.prepare("Xamarin.Forms.Slider:StyleClass;Xamarin.Forms.Core", true, false);
 
-Slider.ThumbImageSource = XNode.prepare("Xamarin.Forms.Slider:ThumbImageSource;Xamarin.Forms.Core", true, false);
+Slider.thumbImageSource = XNode.prepare("Xamarin.Forms.Slider:ThumbImageSource;Xamarin.Forms.Core", true, false);
 
-Slider.Triggers = XNode.prepare("Xamarin.Forms.Slider:Triggers;Xamarin.Forms.Core", true, false);
+Slider.triggers = XNode.prepare("Xamarin.Forms.Slider:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ISpan {
@@ -11825,19 +11825,19 @@ export interface ISpanConstructor {
     
     
 /** Property Span.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Span.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Span */
 const Span: ISpanConstructor = XNode.prepare<ISpan>("Xamarin.Forms.Span;Xamarin.Forms.Core", false, false);
 
 
-Span.Effects = XNode.prepare("Xamarin.Forms.Span:Effects;Xamarin.Forms.Core", true, false);
+Span.effects = XNode.prepare("Xamarin.Forms.Span:Effects;Xamarin.Forms.Core", true, false);
 
-Span.GestureRecognizers = XNode.prepare("Xamarin.Forms.Span:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Span.gestureRecognizers = XNode.prepare("Xamarin.Forms.Span:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
 
 export interface IStackLayout {
@@ -11994,44 +11994,44 @@ export interface IStackLayoutConstructor {
     
     
 /** Property StackLayout.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StackLayout.Children of Type Xamarin.Forms.View */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StackLayout.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StackLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StackLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StackLayout.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property StackLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** StackLayout */
 const StackLayout: IStackLayoutConstructor = XNode.prepare<IStackLayout>("Xamarin.Forms.StackLayout;Xamarin.Forms.Core", false, false);
 
 
-StackLayout.Behaviors = XNode.prepare("Xamarin.Forms.StackLayout:Behaviors;Xamarin.Forms.Core", true, false);
+StackLayout.behaviors = XNode.prepare("Xamarin.Forms.StackLayout:Behaviors;Xamarin.Forms.Core", true, false);
 
-StackLayout.Children = XNode.prepare("Xamarin.Forms.StackLayout:Children;Xamarin.Forms.Core", true, false);
+StackLayout.children = XNode.prepare("Xamarin.Forms.StackLayout:Children;Xamarin.Forms.Core", true, false);
 
-StackLayout.Effects = XNode.prepare("Xamarin.Forms.StackLayout:Effects;Xamarin.Forms.Core", true, false);
+StackLayout.effects = XNode.prepare("Xamarin.Forms.StackLayout:Effects;Xamarin.Forms.Core", true, false);
 
-StackLayout.GestureRecognizers = XNode.prepare("Xamarin.Forms.StackLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
+StackLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.StackLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-StackLayout.Resources = XNode.prepare("Xamarin.Forms.StackLayout:Resources;Xamarin.Forms.Core", true, false);
+StackLayout.resources = XNode.prepare("Xamarin.Forms.StackLayout:Resources;Xamarin.Forms.Core", true, false);
 
-StackLayout.StyleClass = XNode.prepare("Xamarin.Forms.StackLayout:StyleClass;Xamarin.Forms.Core", true, false);
+StackLayout.styleClass = XNode.prepare("Xamarin.Forms.StackLayout:StyleClass;Xamarin.Forms.Core", true, false);
 
-StackLayout.Triggers = XNode.prepare("Xamarin.Forms.StackLayout:Triggers;Xamarin.Forms.Core", true, false);
+StackLayout.triggers = XNode.prepare("Xamarin.Forms.StackLayout:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IStepper {
@@ -12185,39 +12185,39 @@ export interface IStepperConstructor {
     
     
 /** Property Stepper.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Stepper.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Stepper.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Stepper.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Stepper.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Stepper.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Stepper */
 const Stepper: IStepperConstructor = XNode.prepare<IStepper>("Xamarin.Forms.Stepper;Xamarin.Forms.Core", false, false);
 
 
-Stepper.Behaviors = XNode.prepare("Xamarin.Forms.Stepper:Behaviors;Xamarin.Forms.Core", true, false);
+Stepper.behaviors = XNode.prepare("Xamarin.Forms.Stepper:Behaviors;Xamarin.Forms.Core", true, false);
 
-Stepper.Effects = XNode.prepare("Xamarin.Forms.Stepper:Effects;Xamarin.Forms.Core", true, false);
+Stepper.effects = XNode.prepare("Xamarin.Forms.Stepper:Effects;Xamarin.Forms.Core", true, false);
 
-Stepper.GestureRecognizers = XNode.prepare("Xamarin.Forms.Stepper:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Stepper.gestureRecognizers = XNode.prepare("Xamarin.Forms.Stepper:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Stepper.Resources = XNode.prepare("Xamarin.Forms.Stepper:Resources;Xamarin.Forms.Core", true, false);
+Stepper.resources = XNode.prepare("Xamarin.Forms.Stepper:Resources;Xamarin.Forms.Core", true, false);
 
-Stepper.StyleClass = XNode.prepare("Xamarin.Forms.Stepper:StyleClass;Xamarin.Forms.Core", true, false);
+Stepper.styleClass = XNode.prepare("Xamarin.Forms.Stepper:StyleClass;Xamarin.Forms.Core", true, false);
 
-Stepper.Triggers = XNode.prepare("Xamarin.Forms.Stepper:Triggers;Xamarin.Forms.Core", true, false);
+Stepper.triggers = XNode.prepare("Xamarin.Forms.Stepper:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IStreamImageSource {
@@ -12257,14 +12257,14 @@ export interface IStreamImageSourceConstructor {
     
     
 /** Property StreamImageSource.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** StreamImageSource */
 const StreamImageSource: IStreamImageSourceConstructor = XNode.prepare<IStreamImageSource>("Xamarin.Forms.StreamImageSource;Xamarin.Forms.Core", false, false);
 
 
-StreamImageSource.Effects = XNode.prepare("Xamarin.Forms.StreamImageSource:Effects;Xamarin.Forms.Core", true, false);
+StreamImageSource.effects = XNode.prepare("Xamarin.Forms.StreamImageSource:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwipeGestureRecognizer {
@@ -12313,14 +12313,14 @@ export interface ISwipeGestureRecognizerConstructor {
     
     
 /** Property SwipeGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SwipeGestureRecognizer */
 const SwipeGestureRecognizer: ISwipeGestureRecognizerConstructor = XNode.prepare<ISwipeGestureRecognizer>("Xamarin.Forms.SwipeGestureRecognizer;Xamarin.Forms.Core", false, false);
 
 
-SwipeGestureRecognizer.Effects = XNode.prepare("Xamarin.Forms.SwipeGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
+SwipeGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.SwipeGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwipeItem {
@@ -12381,19 +12381,19 @@ export interface ISwipeItemConstructor {
     
     
 /** Property SwipeItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SwipeItem */
 const SwipeItem: ISwipeItemConstructor = XNode.prepare<ISwipeItem>("Xamarin.Forms.SwipeItem;Xamarin.Forms.Core", false, false);
 
 
-SwipeItem.Effects = XNode.prepare("Xamarin.Forms.SwipeItem:Effects;Xamarin.Forms.Core", true, false);
+SwipeItem.effects = XNode.prepare("Xamarin.Forms.SwipeItem:Effects;Xamarin.Forms.Core", true, false);
 
-SwipeItem.IconImageSource = XNode.prepare("Xamarin.Forms.SwipeItem:IconImageSource;Xamarin.Forms.Core", true, false);
+SwipeItem.iconImageSource = XNode.prepare("Xamarin.Forms.SwipeItem:IconImageSource;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwipeItems {
@@ -12439,14 +12439,14 @@ export interface ISwipeItemsConstructor {
     
     
 /** Property SwipeItems.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SwipeItems */
 const SwipeItems: ISwipeItemsConstructor = XNode.prepare<ISwipeItems>("Xamarin.Forms.SwipeItems;Xamarin.Forms.Core", false, false);
 
 
-SwipeItems.Effects = XNode.prepare("Xamarin.Forms.SwipeItems:Effects;Xamarin.Forms.Core", true, false);
+SwipeItems.effects = XNode.prepare("Xamarin.Forms.SwipeItems:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwipeItemView {
@@ -12609,49 +12609,49 @@ export interface ISwipeItemViewConstructor {
     
     
 /** Property SwipeItemView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeItemView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SwipeItemView */
 const SwipeItemView: ISwipeItemViewConstructor = XNode.prepare<ISwipeItemView>("Xamarin.Forms.SwipeItemView;Xamarin.Forms.Core", false, false);
 
 
-SwipeItemView.Behaviors = XNode.prepare("Xamarin.Forms.SwipeItemView:Behaviors;Xamarin.Forms.Core", true, false);
+SwipeItemView.behaviors = XNode.prepare("Xamarin.Forms.SwipeItemView:Behaviors;Xamarin.Forms.Core", true, false);
 
-SwipeItemView.Content = XNode.prepare("Xamarin.Forms.SwipeItemView:Content;Xamarin.Forms.Core", true, false);
+SwipeItemView.content = XNode.prepare("Xamarin.Forms.SwipeItemView:Content;Xamarin.Forms.Core", true, false);
 
-SwipeItemView.ControlTemplate = XNode.prepare("Xamarin.Forms.SwipeItemView:ControlTemplate;Xamarin.Forms.Core", true, true);
+SwipeItemView.controlTemplate = XNode.prepare("Xamarin.Forms.SwipeItemView:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-SwipeItemView.Effects = XNode.prepare("Xamarin.Forms.SwipeItemView:Effects;Xamarin.Forms.Core", true, false);
+SwipeItemView.effects = XNode.prepare("Xamarin.Forms.SwipeItemView:Effects;Xamarin.Forms.Core", true, false);
 
-SwipeItemView.GestureRecognizers = XNode.prepare("Xamarin.Forms.SwipeItemView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+SwipeItemView.gestureRecognizers = XNode.prepare("Xamarin.Forms.SwipeItemView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-SwipeItemView.Resources = XNode.prepare("Xamarin.Forms.SwipeItemView:Resources;Xamarin.Forms.Core", true, false);
+SwipeItemView.resources = XNode.prepare("Xamarin.Forms.SwipeItemView:Resources;Xamarin.Forms.Core", true, false);
 
-SwipeItemView.StyleClass = XNode.prepare("Xamarin.Forms.SwipeItemView:StyleClass;Xamarin.Forms.Core", true, false);
+SwipeItemView.styleClass = XNode.prepare("Xamarin.Forms.SwipeItemView:StyleClass;Xamarin.Forms.Core", true, false);
 
-SwipeItemView.Triggers = XNode.prepare("Xamarin.Forms.SwipeItemView:Triggers;Xamarin.Forms.Core", true, false);
+SwipeItemView.triggers = XNode.prepare("Xamarin.Forms.SwipeItemView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwipeView {
@@ -12820,69 +12820,69 @@ export interface ISwipeViewConstructor {
     
     
 /** Property SwipeView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.BottomItems of Type Xamarin.Forms.ISwipeItem */
-BottomItems?: ( a: any, ... nodes: XNode[]) => XNode;
+bottomItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.Content of Type Xamarin.Forms.View */
-Content?: ( a: any, ... nodes: XNode[]) => XNode;
+content?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.LeftItems of Type Xamarin.Forms.ISwipeItem */
-LeftItems?: ( a: any, ... nodes: XNode[]) => XNode;
+leftItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.RightItems of Type Xamarin.Forms.ISwipeItem */
-RightItems?: ( a: any, ... nodes: XNode[]) => XNode;
+rightItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.TopItems of Type Xamarin.Forms.ISwipeItem */
-TopItems?: ( a: any, ... nodes: XNode[]) => XNode;
+topItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property SwipeView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** SwipeView */
 const SwipeView: ISwipeViewConstructor = XNode.prepare<ISwipeView>("Xamarin.Forms.SwipeView;Xamarin.Forms.Core", false, false);
 
 
-SwipeView.Behaviors = XNode.prepare("Xamarin.Forms.SwipeView:Behaviors;Xamarin.Forms.Core", true, false);
+SwipeView.behaviors = XNode.prepare("Xamarin.Forms.SwipeView:Behaviors;Xamarin.Forms.Core", true, false);
 
-SwipeView.BottomItems = XNode.prepare("Xamarin.Forms.SwipeView:BottomItems;Xamarin.Forms.Core", true, false);
+SwipeView.bottomItems = XNode.prepare("Xamarin.Forms.SwipeView:BottomItems;Xamarin.Forms.Core", true, false);
 
-SwipeView.Content = XNode.prepare("Xamarin.Forms.SwipeView:Content;Xamarin.Forms.Core", true, false);
+SwipeView.content = XNode.prepare("Xamarin.Forms.SwipeView:Content;Xamarin.Forms.Core", true, false);
 
-SwipeView.ControlTemplate = XNode.prepare("Xamarin.Forms.SwipeView:ControlTemplate;Xamarin.Forms.Core", true, true);
+SwipeView.controlTemplate = XNode.prepare("Xamarin.Forms.SwipeView:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-SwipeView.Effects = XNode.prepare("Xamarin.Forms.SwipeView:Effects;Xamarin.Forms.Core", true, false);
+SwipeView.effects = XNode.prepare("Xamarin.Forms.SwipeView:Effects;Xamarin.Forms.Core", true, false);
 
-SwipeView.GestureRecognizers = XNode.prepare("Xamarin.Forms.SwipeView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+SwipeView.gestureRecognizers = XNode.prepare("Xamarin.Forms.SwipeView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-SwipeView.LeftItems = XNode.prepare("Xamarin.Forms.SwipeView:LeftItems;Xamarin.Forms.Core", true, false);
+SwipeView.leftItems = XNode.prepare("Xamarin.Forms.SwipeView:LeftItems;Xamarin.Forms.Core", true, false);
 
-SwipeView.Resources = XNode.prepare("Xamarin.Forms.SwipeView:Resources;Xamarin.Forms.Core", true, false);
+SwipeView.resources = XNode.prepare("Xamarin.Forms.SwipeView:Resources;Xamarin.Forms.Core", true, false);
 
-SwipeView.RightItems = XNode.prepare("Xamarin.Forms.SwipeView:RightItems;Xamarin.Forms.Core", true, false);
+SwipeView.rightItems = XNode.prepare("Xamarin.Forms.SwipeView:RightItems;Xamarin.Forms.Core", true, false);
 
-SwipeView.StyleClass = XNode.prepare("Xamarin.Forms.SwipeView:StyleClass;Xamarin.Forms.Core", true, false);
+SwipeView.styleClass = XNode.prepare("Xamarin.Forms.SwipeView:StyleClass;Xamarin.Forms.Core", true, false);
 
-SwipeView.TopItems = XNode.prepare("Xamarin.Forms.SwipeView:TopItems;Xamarin.Forms.Core", true, false);
+SwipeView.topItems = XNode.prepare("Xamarin.Forms.SwipeView:TopItems;Xamarin.Forms.Core", true, false);
 
-SwipeView.Triggers = XNode.prepare("Xamarin.Forms.SwipeView:Triggers;Xamarin.Forms.Core", true, false);
+SwipeView.triggers = XNode.prepare("Xamarin.Forms.SwipeView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ISwitch {
@@ -13033,39 +13033,39 @@ export interface ISwitchConstructor {
     
     
 /** Property Switch.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Switch.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Switch.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Switch.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Switch.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property Switch.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** Switch */
 const Switch: ISwitchConstructor = XNode.prepare<ISwitch>("Xamarin.Forms.Switch;Xamarin.Forms.Core", false, false);
 
 
-Switch.Behaviors = XNode.prepare("Xamarin.Forms.Switch:Behaviors;Xamarin.Forms.Core", true, false);
+Switch.behaviors = XNode.prepare("Xamarin.Forms.Switch:Behaviors;Xamarin.Forms.Core", true, false);
 
-Switch.Effects = XNode.prepare("Xamarin.Forms.Switch:Effects;Xamarin.Forms.Core", true, false);
+Switch.effects = XNode.prepare("Xamarin.Forms.Switch:Effects;Xamarin.Forms.Core", true, false);
 
-Switch.GestureRecognizers = XNode.prepare("Xamarin.Forms.Switch:GestureRecognizers;Xamarin.Forms.Core", true, false);
+Switch.gestureRecognizers = XNode.prepare("Xamarin.Forms.Switch:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-Switch.Resources = XNode.prepare("Xamarin.Forms.Switch:Resources;Xamarin.Forms.Core", true, false);
+Switch.resources = XNode.prepare("Xamarin.Forms.Switch:Resources;Xamarin.Forms.Core", true, false);
 
-Switch.StyleClass = XNode.prepare("Xamarin.Forms.Switch:StyleClass;Xamarin.Forms.Core", true, false);
+Switch.styleClass = XNode.prepare("Xamarin.Forms.Switch:StyleClass;Xamarin.Forms.Core", true, false);
 
-Switch.Triggers = XNode.prepare("Xamarin.Forms.Switch:Triggers;Xamarin.Forms.Core", true, false);
+Switch.triggers = XNode.prepare("Xamarin.Forms.Switch:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ITabbedPage {
@@ -13252,64 +13252,64 @@ export interface ITabbedPageConstructor {
     
     
 /** Property TabbedPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.Children of Type Xamarin.Forms.Page */
-Children?: ( a: any, ... nodes: XNode[]) => XNode;
+children?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.CurrentPage of Type Xamarin.Forms.Page */
-CurrentPage?: ( a: any, ... nodes: XNode[]) => XNode;
+currentPage?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-ItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TabbedPage.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TabbedPage */
 const TabbedPage: ITabbedPageConstructor = XNode.prepare<ITabbedPage>("Xamarin.Forms.TabbedPage;Xamarin.Forms.Core", false, false);
 
 
-TabbedPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+TabbedPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-TabbedPage.Behaviors = XNode.prepare("Xamarin.Forms.TabbedPage:Behaviors;Xamarin.Forms.Core", true, false);
+TabbedPage.behaviors = XNode.prepare("Xamarin.Forms.TabbedPage:Behaviors;Xamarin.Forms.Core", true, false);
 
-TabbedPage.Children = XNode.prepare("Xamarin.Forms.TabbedPage:Children;Xamarin.Forms.Core", true, false);
+TabbedPage.children = XNode.prepare("Xamarin.Forms.TabbedPage:Children;Xamarin.Forms.Core", true, false);
 
-TabbedPage.CurrentPage = XNode.prepare("Xamarin.Forms.TabbedPage:CurrentPage;Xamarin.Forms.Core", true, false);
+TabbedPage.currentPage = XNode.prepare("Xamarin.Forms.TabbedPage:CurrentPage;Xamarin.Forms.Core", true, false);
 
-TabbedPage.Effects = XNode.prepare("Xamarin.Forms.TabbedPage:Effects;Xamarin.Forms.Core", true, false);
+TabbedPage.effects = XNode.prepare("Xamarin.Forms.TabbedPage:Effects;Xamarin.Forms.Core", true, false);
 
-TabbedPage.IconImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:IconImageSource;Xamarin.Forms.Core", true, false);
+TabbedPage.iconImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:IconImageSource;Xamarin.Forms.Core", true, false);
 
-TabbedPage.ItemTemplate = XNode.prepare("Xamarin.Forms.TabbedPage:ItemTemplate;Xamarin.Forms.Core", true, true);
+TabbedPage.itemTemplate = XNode.prepare("Xamarin.Forms.TabbedPage:ItemTemplate;Xamarin.Forms.Core", true, true);
 
-TabbedPage.Resources = XNode.prepare("Xamarin.Forms.TabbedPage:Resources;Xamarin.Forms.Core", true, false);
+TabbedPage.resources = XNode.prepare("Xamarin.Forms.TabbedPage:Resources;Xamarin.Forms.Core", true, false);
 
-TabbedPage.StyleClass = XNode.prepare("Xamarin.Forms.TabbedPage:StyleClass;Xamarin.Forms.Core", true, false);
+TabbedPage.styleClass = XNode.prepare("Xamarin.Forms.TabbedPage:StyleClass;Xamarin.Forms.Core", true, false);
 
-TabbedPage.ToolbarItems = XNode.prepare("Xamarin.Forms.TabbedPage:ToolbarItems;Xamarin.Forms.Core", true, false);
+TabbedPage.toolbarItems = XNode.prepare("Xamarin.Forms.TabbedPage:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-TabbedPage.Triggers = XNode.prepare("Xamarin.Forms.TabbedPage:Triggers;Xamarin.Forms.Core", true, false);
+TabbedPage.triggers = XNode.prepare("Xamarin.Forms.TabbedPage:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ITableRoot {
@@ -13337,14 +13337,14 @@ export interface ITableRootConstructor {
     
     
 /** Property TableRoot.Item of Type Xamarin.Forms.Cell */
-Item?: ( a: any, ... nodes: XNode[]) => XNode
+item?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TableRoot */
 const TableRoot: ITableRootConstructor = XNode.prepare<ITableRoot>("Xamarin.Forms.TableRoot;Xamarin.Forms.Core", false, false);
 
 
-TableRoot.Item = XNode.prepare("Xamarin.Forms.TableRoot:Item;Xamarin.Forms.Core", true, false);
+TableRoot.item = XNode.prepare("Xamarin.Forms.TableRoot:Item;Xamarin.Forms.Core", true, false);
 
 
 export interface ITableSection {
@@ -13372,14 +13372,14 @@ export interface ITableSectionConstructor {
     
     
 /** Property TableSection.Item of Type Xamarin.Forms.Cell */
-Item?: ( a: any, ... nodes: XNode[]) => XNode
+item?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TableSection */
 const TableSection: ITableSectionConstructor = XNode.prepare<ITableSection>("Xamarin.Forms.TableSection;Xamarin.Forms.Core", false, false);
 
 
-TableSection.Item = XNode.prepare("Xamarin.Forms.TableSection:Item;Xamarin.Forms.Core", true, false);
+TableSection.item = XNode.prepare("Xamarin.Forms.TableSection:Item;Xamarin.Forms.Core", true, false);
 
 
 export interface ITableSectionBase {
@@ -13565,44 +13565,44 @@ export interface ITableViewConstructor {
     
     
 /** Property TableView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TableView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TableView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TableView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TableView.Root of Type Xamarin.Forms.TableSection */
-Root?: ( a: any, ... nodes: XNode[]) => XNode;
+root?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TableView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TableView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TableView */
 const TableView: ITableViewConstructor = XNode.prepare<ITableView>("Xamarin.Forms.TableView;Xamarin.Forms.Core", false, false);
 
 
-TableView.Behaviors = XNode.prepare("Xamarin.Forms.TableView:Behaviors;Xamarin.Forms.Core", true, false);
+TableView.behaviors = XNode.prepare("Xamarin.Forms.TableView:Behaviors;Xamarin.Forms.Core", true, false);
 
-TableView.Effects = XNode.prepare("Xamarin.Forms.TableView:Effects;Xamarin.Forms.Core", true, false);
+TableView.effects = XNode.prepare("Xamarin.Forms.TableView:Effects;Xamarin.Forms.Core", true, false);
 
-TableView.GestureRecognizers = XNode.prepare("Xamarin.Forms.TableView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+TableView.gestureRecognizers = XNode.prepare("Xamarin.Forms.TableView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-TableView.Resources = XNode.prepare("Xamarin.Forms.TableView:Resources;Xamarin.Forms.Core", true, false);
+TableView.resources = XNode.prepare("Xamarin.Forms.TableView:Resources;Xamarin.Forms.Core", true, false);
 
-TableView.Root = XNode.prepare("Xamarin.Forms.TableView:Root;Xamarin.Forms.Core", true, false);
+TableView.root = XNode.prepare("Xamarin.Forms.TableView:Root;Xamarin.Forms.Core", true, false);
 
-TableView.StyleClass = XNode.prepare("Xamarin.Forms.TableView:StyleClass;Xamarin.Forms.Core", true, false);
+TableView.styleClass = XNode.prepare("Xamarin.Forms.TableView:StyleClass;Xamarin.Forms.Core", true, false);
 
-TableView.Triggers = XNode.prepare("Xamarin.Forms.TableView:Triggers;Xamarin.Forms.Core", true, false);
+TableView.triggers = XNode.prepare("Xamarin.Forms.TableView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ITapGestureRecognizer {
@@ -13654,14 +13654,14 @@ export interface ITapGestureRecognizerConstructor {
     
     
 /** Property TapGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TapGestureRecognizer */
 const TapGestureRecognizer: ITapGestureRecognizerConstructor = XNode.prepare<ITapGestureRecognizer>("Xamarin.Forms.TapGestureRecognizer;Xamarin.Forms.Core", false, false);
 
 
-TapGestureRecognizer.Effects = XNode.prepare("Xamarin.Forms.TapGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
+TapGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.TapGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface ITemplatedPage {
@@ -13827,54 +13827,54 @@ export interface ITemplatedPageConstructor {
     
     
 /** Property TemplatedPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-BackgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-ToolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedPage.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TemplatedPage */
 const TemplatedPage: ITemplatedPageConstructor = XNode.prepare<ITemplatedPage>("Xamarin.Forms.TemplatedPage;Xamarin.Forms.Core", false, false);
 
 
-TemplatedPage.BackgroundImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
+TemplatedPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.Behaviors = XNode.prepare("Xamarin.Forms.TemplatedPage:Behaviors;Xamarin.Forms.Core", true, false);
+TemplatedPage.behaviors = XNode.prepare("Xamarin.Forms.TemplatedPage:Behaviors;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.ControlTemplate = XNode.prepare("Xamarin.Forms.TemplatedPage:ControlTemplate;Xamarin.Forms.Core", true, true);
+TemplatedPage.controlTemplate = XNode.prepare("Xamarin.Forms.TemplatedPage:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-TemplatedPage.Effects = XNode.prepare("Xamarin.Forms.TemplatedPage:Effects;Xamarin.Forms.Core", true, false);
+TemplatedPage.effects = XNode.prepare("Xamarin.Forms.TemplatedPage:Effects;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.IconImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:IconImageSource;Xamarin.Forms.Core", true, false);
+TemplatedPage.iconImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:IconImageSource;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.Resources = XNode.prepare("Xamarin.Forms.TemplatedPage:Resources;Xamarin.Forms.Core", true, false);
+TemplatedPage.resources = XNode.prepare("Xamarin.Forms.TemplatedPage:Resources;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.StyleClass = XNode.prepare("Xamarin.Forms.TemplatedPage:StyleClass;Xamarin.Forms.Core", true, false);
+TemplatedPage.styleClass = XNode.prepare("Xamarin.Forms.TemplatedPage:StyleClass;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.ToolbarItems = XNode.prepare("Xamarin.Forms.TemplatedPage:ToolbarItems;Xamarin.Forms.Core", true, false);
+TemplatedPage.toolbarItems = XNode.prepare("Xamarin.Forms.TemplatedPage:ToolbarItems;Xamarin.Forms.Core", true, false);
 
-TemplatedPage.Triggers = XNode.prepare("Xamarin.Forms.TemplatedPage:Triggers;Xamarin.Forms.Core", true, false);
+TemplatedPage.triggers = XNode.prepare("Xamarin.Forms.TemplatedPage:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ITemplatedView {
@@ -14028,44 +14028,44 @@ export interface ITemplatedViewConstructor {
     
     
 /** Property TemplatedView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-ControlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TemplatedView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TemplatedView */
 const TemplatedView: ITemplatedViewConstructor = XNode.prepare<ITemplatedView>("Xamarin.Forms.TemplatedView;Xamarin.Forms.Core", false, false);
 
 
-TemplatedView.Behaviors = XNode.prepare("Xamarin.Forms.TemplatedView:Behaviors;Xamarin.Forms.Core", true, false);
+TemplatedView.behaviors = XNode.prepare("Xamarin.Forms.TemplatedView:Behaviors;Xamarin.Forms.Core", true, false);
 
-TemplatedView.ControlTemplate = XNode.prepare("Xamarin.Forms.TemplatedView:ControlTemplate;Xamarin.Forms.Core", true, true);
+TemplatedView.controlTemplate = XNode.prepare("Xamarin.Forms.TemplatedView:ControlTemplate;Xamarin.Forms.Core", true, true);
 
-TemplatedView.Effects = XNode.prepare("Xamarin.Forms.TemplatedView:Effects;Xamarin.Forms.Core", true, false);
+TemplatedView.effects = XNode.prepare("Xamarin.Forms.TemplatedView:Effects;Xamarin.Forms.Core", true, false);
 
-TemplatedView.GestureRecognizers = XNode.prepare("Xamarin.Forms.TemplatedView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+TemplatedView.gestureRecognizers = XNode.prepare("Xamarin.Forms.TemplatedView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-TemplatedView.Resources = XNode.prepare("Xamarin.Forms.TemplatedView:Resources;Xamarin.Forms.Core", true, false);
+TemplatedView.resources = XNode.prepare("Xamarin.Forms.TemplatedView:Resources;Xamarin.Forms.Core", true, false);
 
-TemplatedView.StyleClass = XNode.prepare("Xamarin.Forms.TemplatedView:StyleClass;Xamarin.Forms.Core", true, false);
+TemplatedView.styleClass = XNode.prepare("Xamarin.Forms.TemplatedView:StyleClass;Xamarin.Forms.Core", true, false);
 
-TemplatedView.Triggers = XNode.prepare("Xamarin.Forms.TemplatedView:Triggers;Xamarin.Forms.Core", true, false);
+TemplatedView.triggers = XNode.prepare("Xamarin.Forms.TemplatedView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface ITimePicker {
@@ -14228,39 +14228,39 @@ export interface ITimePickerConstructor {
     
     
 /** Property TimePicker.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TimePicker.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TimePicker.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TimePicker.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TimePicker.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property TimePicker.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** TimePicker */
 const TimePicker: ITimePickerConstructor = XNode.prepare<ITimePicker>("Xamarin.Forms.TimePicker;Xamarin.Forms.Core", false, false);
 
 
-TimePicker.Behaviors = XNode.prepare("Xamarin.Forms.TimePicker:Behaviors;Xamarin.Forms.Core", true, false);
+TimePicker.behaviors = XNode.prepare("Xamarin.Forms.TimePicker:Behaviors;Xamarin.Forms.Core", true, false);
 
-TimePicker.Effects = XNode.prepare("Xamarin.Forms.TimePicker:Effects;Xamarin.Forms.Core", true, false);
+TimePicker.effects = XNode.prepare("Xamarin.Forms.TimePicker:Effects;Xamarin.Forms.Core", true, false);
 
-TimePicker.GestureRecognizers = XNode.prepare("Xamarin.Forms.TimePicker:GestureRecognizers;Xamarin.Forms.Core", true, false);
+TimePicker.gestureRecognizers = XNode.prepare("Xamarin.Forms.TimePicker:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-TimePicker.Resources = XNode.prepare("Xamarin.Forms.TimePicker:Resources;Xamarin.Forms.Core", true, false);
+TimePicker.resources = XNode.prepare("Xamarin.Forms.TimePicker:Resources;Xamarin.Forms.Core", true, false);
 
-TimePicker.StyleClass = XNode.prepare("Xamarin.Forms.TimePicker:StyleClass;Xamarin.Forms.Core", true, false);
+TimePicker.styleClass = XNode.prepare("Xamarin.Forms.TimePicker:StyleClass;Xamarin.Forms.Core", true, false);
 
-TimePicker.Triggers = XNode.prepare("Xamarin.Forms.TimePicker:Triggers;Xamarin.Forms.Core", true, false);
+TimePicker.triggers = XNode.prepare("Xamarin.Forms.TimePicker:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IToolbarItem {
@@ -14327,19 +14327,19 @@ export interface IToolbarItemConstructor {
     
     
 /** Property ToolbarItem.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property ToolbarItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-IconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
+iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** ToolbarItem */
 const ToolbarItem: IToolbarItemConstructor = XNode.prepare<IToolbarItem>("Xamarin.Forms.ToolbarItem;Xamarin.Forms.Core", false, false);
 
 
-ToolbarItem.Effects = XNode.prepare("Xamarin.Forms.ToolbarItem:Effects;Xamarin.Forms.Core", true, false);
+ToolbarItem.effects = XNode.prepare("Xamarin.Forms.ToolbarItem:Effects;Xamarin.Forms.Core", true, false);
 
-ToolbarItem.IconImageSource = XNode.prepare("Xamarin.Forms.ToolbarItem:IconImageSource;Xamarin.Forms.Core", true, false);
+ToolbarItem.iconImageSource = XNode.prepare("Xamarin.Forms.ToolbarItem:IconImageSource;Xamarin.Forms.Core", true, false);
 
 
 export interface IUriImageSource {
@@ -14385,14 +14385,14 @@ export interface IUriImageSourceConstructor {
     
     
 /** Property UriImageSource.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode
+effects?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** UriImageSource */
 const UriImageSource: IUriImageSourceConstructor = XNode.prepare<IUriImageSource>("Xamarin.Forms.UriImageSource;Xamarin.Forms.Core", false, false);
 
 
-UriImageSource.Effects = XNode.prepare("Xamarin.Forms.UriImageSource:Effects;Xamarin.Forms.Core", true, false);
+UriImageSource.effects = XNode.prepare("Xamarin.Forms.UriImageSource:Effects;Xamarin.Forms.Core", true, false);
 
 
 export interface IUrlWebViewSource {
@@ -14560,39 +14560,39 @@ export interface IViewConstructor {
     
     
 /** Property View.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property View.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property View.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property View.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property View.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property View.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** View */
 const View: IViewConstructor = XNode.prepare<IView>("Xamarin.Forms.View;Xamarin.Forms.Core", false, false);
 
 
-View.Behaviors = XNode.prepare("Xamarin.Forms.View:Behaviors;Xamarin.Forms.Core", true, false);
+View.behaviors = XNode.prepare("Xamarin.Forms.View:Behaviors;Xamarin.Forms.Core", true, false);
 
-View.Effects = XNode.prepare("Xamarin.Forms.View:Effects;Xamarin.Forms.Core", true, false);
+View.effects = XNode.prepare("Xamarin.Forms.View:Effects;Xamarin.Forms.Core", true, false);
 
-View.GestureRecognizers = XNode.prepare("Xamarin.Forms.View:GestureRecognizers;Xamarin.Forms.Core", true, false);
+View.gestureRecognizers = XNode.prepare("Xamarin.Forms.View:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-View.Resources = XNode.prepare("Xamarin.Forms.View:Resources;Xamarin.Forms.Core", true, false);
+View.resources = XNode.prepare("Xamarin.Forms.View:Resources;Xamarin.Forms.Core", true, false);
 
-View.StyleClass = XNode.prepare("Xamarin.Forms.View:StyleClass;Xamarin.Forms.Core", true, false);
+View.styleClass = XNode.prepare("Xamarin.Forms.View:StyleClass;Xamarin.Forms.Core", true, false);
 
-View.Triggers = XNode.prepare("Xamarin.Forms.View:Triggers;Xamarin.Forms.Core", true, false);
+View.triggers = XNode.prepare("Xamarin.Forms.View:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IVisualElement {
@@ -14740,34 +14740,34 @@ export interface IVisualElementConstructor {
     
     
 /** Property VisualElement.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property VisualElement.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property VisualElement.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property VisualElement.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property VisualElement.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** VisualElement */
 const VisualElement: IVisualElementConstructor = XNode.prepare<IVisualElement>("Xamarin.Forms.VisualElement;Xamarin.Forms.Core", false, false);
 
 
-VisualElement.Behaviors = XNode.prepare("Xamarin.Forms.VisualElement:Behaviors;Xamarin.Forms.Core", true, false);
+VisualElement.behaviors = XNode.prepare("Xamarin.Forms.VisualElement:Behaviors;Xamarin.Forms.Core", true, false);
 
-VisualElement.Effects = XNode.prepare("Xamarin.Forms.VisualElement:Effects;Xamarin.Forms.Core", true, false);
+VisualElement.effects = XNode.prepare("Xamarin.Forms.VisualElement:Effects;Xamarin.Forms.Core", true, false);
 
-VisualElement.Resources = XNode.prepare("Xamarin.Forms.VisualElement:Resources;Xamarin.Forms.Core", true, false);
+VisualElement.resources = XNode.prepare("Xamarin.Forms.VisualElement:Resources;Xamarin.Forms.Core", true, false);
 
-VisualElement.StyleClass = XNode.prepare("Xamarin.Forms.VisualElement:StyleClass;Xamarin.Forms.Core", true, false);
+VisualElement.styleClass = XNode.prepare("Xamarin.Forms.VisualElement:StyleClass;Xamarin.Forms.Core", true, false);
 
-VisualElement.Triggers = XNode.prepare("Xamarin.Forms.VisualElement:Triggers;Xamarin.Forms.Core", true, false);
+VisualElement.triggers = XNode.prepare("Xamarin.Forms.VisualElement:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IWebView {
@@ -14912,39 +14912,39 @@ export interface IWebViewConstructor {
     
     
 /** Property WebView.Behaviors of Type Xamarin.Forms.Behavior */
-Behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property WebView.Effects of Type Xamarin.Forms.Effect */
-Effects?: ( a: any, ... nodes: XNode[]) => XNode;
+effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property WebView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-GestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property WebView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-Resources?: ( a: any, ... nodes: XNode[]) => XNode;
+resources?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property WebView.StyleClass of Type System.String */
-StyleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
 
 /** Property WebView.Triggers of Type Xamarin.Forms.TriggerBase */
-Triggers?: ( a: any, ... nodes: XNode[]) => XNode
+triggers?: ( a: any, ... nodes: XNode[]) => XNode
 }
 
 /** WebView */
 const WebView: IWebViewConstructor = XNode.prepare<IWebView>("Xamarin.Forms.WebView;Xamarin.Forms.Core", false, false);
 
 
-WebView.Behaviors = XNode.prepare("Xamarin.Forms.WebView:Behaviors;Xamarin.Forms.Core", true, false);
+WebView.behaviors = XNode.prepare("Xamarin.Forms.WebView:Behaviors;Xamarin.Forms.Core", true, false);
 
-WebView.Effects = XNode.prepare("Xamarin.Forms.WebView:Effects;Xamarin.Forms.Core", true, false);
+WebView.effects = XNode.prepare("Xamarin.Forms.WebView:Effects;Xamarin.Forms.Core", true, false);
 
-WebView.GestureRecognizers = XNode.prepare("Xamarin.Forms.WebView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+WebView.gestureRecognizers = XNode.prepare("Xamarin.Forms.WebView:GestureRecognizers;Xamarin.Forms.Core", true, false);
 
-WebView.Resources = XNode.prepare("Xamarin.Forms.WebView:Resources;Xamarin.Forms.Core", true, false);
+WebView.resources = XNode.prepare("Xamarin.Forms.WebView:Resources;Xamarin.Forms.Core", true, false);
 
-WebView.StyleClass = XNode.prepare("Xamarin.Forms.WebView:StyleClass;Xamarin.Forms.Core", true, false);
+WebView.styleClass = XNode.prepare("Xamarin.Forms.WebView:StyleClass;Xamarin.Forms.Core", true, false);
 
-WebView.Triggers = XNode.prepare("Xamarin.Forms.WebView:Triggers;Xamarin.Forms.Core", true, false);
+WebView.triggers = XNode.prepare("Xamarin.Forms.WebView:Triggers;Xamarin.Forms.Core", true, false);
 
 
 export interface IWebViewSource {

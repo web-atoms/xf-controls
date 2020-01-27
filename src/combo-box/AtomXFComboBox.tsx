@@ -116,10 +116,10 @@ export default class AtomXFComboBox extends AtomXFControl {
                 </XF.DataTemplate>
             </AtomXFComboBox.selectionViewTemplate>
 
-            <XF.Grid.ColumnDefinitions>
+            <XF.Grid.columnDefinitions>
                 <XF.ColumnDefinition/>
                 <XF.ColumnDefinition width="Auto"/>
-            </XF.Grid.ColumnDefinitions>
+            </XF.Grid.columnDefinitions>
             <WA.AtomView
                 padding={5}
                 bindingContext={Bind.oneWay(() => this.selectedItem)}
@@ -127,7 +127,7 @@ export default class AtomXFComboBox extends AtomXFControl {
                 emptyDataTemplate={Bind.oneWay(() => this.promptTemplate)}/>
 
             <XF.ImageButton
-                { ... XF.Grid.Column(1) }
+                { ... XF.Grid.column(1) }
                 heightRequest={40}
                 widthRequest={40}
                 source="res://WebAtoms.XF/Images.DropDownImage.png"
@@ -175,40 +175,40 @@ class SearchPopupPage extends AtomXFPopupPage {
         this.render(
             <PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
                 <XF.Grid>
-                    <XF.Grid.RowDefinitions>
+                    <XF.Grid.rowDefinitions>
                         <XF.RowDefinition height={20} />
                         <XF.RowDefinition/>
                         <XF.RowDefinition height={50} />
-                    </XF.Grid.RowDefinitions>
-                    <XF.Grid.ColumnDefinitions>
+                    </XF.Grid.rowDefinitions>
+                    <XF.Grid.columnDefinitions>
                         <XF.ColumnDefinition width={50} />
                         <XF.ColumnDefinition/>
                         <XF.ColumnDefinition width={50}/>
-                    </XF.Grid.ColumnDefinitions>
+                    </XF.Grid.columnDefinitions>
                     <XF.Grid
                         padding={5}
                         backgroundColor="white"
-                        { ... XF.Grid.Column(1) }
-                        { ... XF.Grid.Row(1) }
+                        { ... XF.Grid.column(1) }
+                        { ... XF.Grid.row(1) }
                         >
-                        <XF.Grid.RowDefinitions>
+                        <XF.Grid.rowDefinitions>
                             <XF.RowDefinition height={30}/>
                             <XF.RowDefinition/>
-                        </XF.Grid.RowDefinitions>
-                        <XF.Grid.ColumnDefinitions>
+                        </XF.Grid.rowDefinitions>
+                        <XF.Grid.columnDefinitions>
                             <XF.ColumnDefinition/>
                             <XF.ColumnDefinition width={30}/>
-                        </XF.Grid.ColumnDefinitions>
+                        </XF.Grid.columnDefinitions>
                     <XF.Label
                         text={Bind.oneWay(() => this.viewModel.title)}/>
                     <XF.ImageButton
-                        { ... XF.Grid.Column(1) }
+                        { ... XF.Grid.column(1) }
                         source="res://WebAtoms.XF/Images.DeleteImage.png"
                         command={Bind.event(() => this.viewModel.cancel())}
                         />
                     <WA.AtomView
-                        { ... XF.Grid.Row(1) }
-                        { ... XF.Grid.ColumnSpan(2) }
+                        { ... XF.Grid.row(1) }
+                        { ... XF.Grid.columnSpan(2) }
                         emptyDataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
                     </XF.Grid>
             </XF.Grid>

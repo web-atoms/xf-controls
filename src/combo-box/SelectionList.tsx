@@ -14,16 +14,16 @@ export default class SelectionList extends AtomContentView {
         <XF.ContentPage>
                 <XF.Grid>
 
-                <XF.Grid.RowDefinitions>
+                <XF.Grid.rowDefinitions>
                     <XF.RowDefinition height="Auto"/>
                     <XF.RowDefinition/>
-                </XF.Grid.RowDefinitions>
+                </XF.Grid.rowDefinitions>
                 <XF.SearchBar
                     isVisible={Bind.oneWay(() => this.viewModel.comboBox.showSearch)}
                     text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}
                     />
                 <XF.CollectionView
-                    { ... XF.Grid.Row(1) }
+                    { ... XF.Grid.row(1) }
                     itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
                     selectionMode="Single"
                     selectedItem={Bind.twoWays(() => this.viewModel.selectedItem)}

@@ -17,15 +17,15 @@ export default class ToggleButtonBarTests extends AtomXFContentPage {
 
         this.render(<XF.ContentPage>
             <XF.Grid>
-                <XF.Grid.RowDefinitions>
+                <XF.Grid.rowDefinitions>
                     <XF.RowDefinition height="auto" />
                     <XF.RowDefinition/>
-                </XF.Grid.RowDefinitions>
+                </XF.Grid.rowDefinitions>
                 <AtomXFToggleButtonBar
                     items={Bind.oneWay(() => this.gender)}
                     value={Bind.twoWays(() => this.selectedGender)}/>
                 <XF.Label
-                    { ... XF.Grid.Row(1) }
+                    { ... XF.Grid.row(1) }
                     text={Bind.oneWay(() => this.selectedGender)}
                     />
             </XF.Grid>

@@ -54,7 +54,7 @@ export default class AtomXFLink extends AtomXFControl {
         super.preCreate();
 
         this.render(<XF.View>
-            <XF.View.GestureRecognizers>
+            <XF.View.gestureRecognizers>
                 <XF.TapGestureRecognizer
                     command={Bind.event(() => {
                         // tslint:disable-next-line: no-console
@@ -65,7 +65,7 @@ export default class AtomXFLink extends AtomXFControl {
                         return this.app.runAsync(() => this.openPopup());
                     })}
                     />
-            </XF.View.GestureRecognizers>
+            </XF.View.gestureRecognizers>
         </XF.View>);
 
         // this.bindEvent(
