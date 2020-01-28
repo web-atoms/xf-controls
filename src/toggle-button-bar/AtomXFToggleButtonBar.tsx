@@ -74,11 +74,11 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
                             padding={10}
                             text={Bind.oneWay((x) => x.data ? x.data[x.localViewModel.owner.labelPath] : ".")}
                             backgroundColor={Bind.oneWay((x) =>
-                                x.data === x.localViewModel.owner.selectedItem
+                                x.data === this.selectedItem
                                 ? Colors.black
                                 : Colors.white )}
                             textColor={Bind.oneWay((x) =>
-                                x.data !== x.localViewModel.owner.selectedItem
+                                x.data !== this.selectedItem
                                 ? Colors.black
                                 : Colors.white )}
                             />
