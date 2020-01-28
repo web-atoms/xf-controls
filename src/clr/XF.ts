@@ -2013,7 +2013,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Width of Type GridLength */
-width?: /*GridLength*/ any;
+width?: "Auto" | number | string | Bind;
     [key: string]: any;
 }
 
@@ -9932,7 +9932,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Height of Type GridLength */
-height?: /*GridLength*/ any;
+height?: "Auto" | number | string | Bind;
     [key: string]: any;
 }
 
