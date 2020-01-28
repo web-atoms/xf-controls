@@ -1,36 +1,37 @@
 //tslint:disable
 import XNode from "@web-atoms/core/dist/core/XNode";
+import Bind from "@web-atoms/core/dist/core/Bind";import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 
 
 export interface IAbsoluteLayout {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -39,55 +40,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -99,22 +100,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -123,25 +124,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -207,16 +208,16 @@ export interface IActivityIndicator {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -225,13 +226,13 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Color of Type Color */
-color?: any;
+color?: ColorItem | string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -240,52 +241,52 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsRunning of Type Boolean */
-isRunning?: any;
+isRunning?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -297,22 +298,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -321,25 +322,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -392,13 +393,13 @@ export interface IApplication {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property EffectControlProvider of Type IEffectControlProvider */
 effectControlProvider?: any;
@@ -410,7 +411,7 @@ mainPage?: any;
 navigationProxy?: any;
 
 /** Property PanGestureId of Type Int32 */
-panGestureId?: any;
+panGestureId?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -422,7 +423,7 @@ platform?: any;
 resources?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -468,16 +469,16 @@ export interface IAppLinkEntry {
 appLinkUri?: any;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Description of Type String */
-description?: any;
+description?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -486,7 +487,7 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property IsLinkActive of Type Boolean */
-isLinkActive?: any;
+isLinkActive?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -495,13 +496,13 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Thumbnail of Type ImageSource */
-thumbnail?: any;
+thumbnail?: /*ImageSource*/ any;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -539,13 +540,13 @@ export interface IBaseMenuItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -560,7 +561,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -640,16 +641,16 @@ export interface IBoxView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -658,16 +659,16 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Color of Type Color */
-color?: any;
+color?: ColorItem | string | null | Bind;
 
 /** Property CornerRadius of Type CornerRadius */
-cornerRadius?: any;
+cornerRadius?: /*CornerRadius*/ any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -676,49 +677,49 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -730,22 +731,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -754,25 +755,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -825,37 +826,37 @@ export interface IButton {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property BorderColor of Type Color */
-borderColor?: any;
+borderColor?: ColorItem | string | null | Bind;
 
 /** Property BorderRadius of Type Int32 */
-borderRadius?: any;
+borderRadius?: number | Bind;
 
 /** Property BorderWidth of Type Double */
-borderWidth?: any;
+borderWidth?: number | Bind;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -864,13 +865,13 @@ command?: any;
 commandParameter?: any;
 
 /** Property ContentLayout of Type ButtonContentLayout */
-contentLayout?: any;
+contentLayout?: /*ButtonContentLayout*/ any;
 
 /** Property CornerRadius of Type Int32 */
-cornerRadius?: any;
+cornerRadius?: number | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -879,70 +880,70 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Font of Type Font */
-font?: any;
+font?: /*Font*/ any;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Image of Type FileImageSource */
-image?: any;
+image?: /*FileImageSource*/ any;
 
 /** Property ImageSource of Type ImageSource */
-imageSource?: any;
+imageSource?: /*ImageSource*/ any;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -954,22 +955,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -978,31 +979,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -1060,22 +1061,22 @@ export interface ICarouselPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -1084,16 +1085,16 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property CurrentPage of Type ContentPage */
 currentPage?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1102,43 +1103,43 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
@@ -1147,19 +1148,19 @@ itemsSource?: any;
 itemTemplate?: any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1171,22 +1172,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
@@ -1198,28 +1199,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -1297,13 +1298,13 @@ export interface ICell {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1312,13 +1313,13 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: any;
+isContextActionsLegacyModeEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1327,7 +1328,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -1360,13 +1361,13 @@ export interface IEntryCell {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1375,46 +1376,46 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: any;
+horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: any;
+isContextActionsLegacyModeEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Keyboard of Type Keyboard */
-keyboard?: any;
+keyboard?: /*Keyboard*/ any;
 
 /** Property Label of Type String */
-label?: any;
+label?: string | null | Bind;
 
 /** Property LabelColor of Type Color */
-labelColor?: any;
+labelColor?: ColorItem | string | null | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
 
 /** Property Placeholder of Type String */
-placeholder?: any;
+placeholder?: string | null | Bind;
 
 /** Property Platform of Type IPlatform */
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: any;
+verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property XAlign of Type TextAlignment */
-xAlign?: any;
+xAlign?: "Start" | "Center" | "End" | Bind;
     [key: string]: any;
 }
 
@@ -1447,13 +1448,13 @@ export interface IImageCell {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -1462,10 +1463,10 @@ command?: any;
 commandParameter?: any;
 
 /** Property Detail of Type String */
-detail?: any;
+detail?: string | null | Bind;
 
 /** Property DetailColor of Type Color */
-detailColor?: any;
+detailColor?: ColorItem | string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1474,16 +1475,16 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property ImageSource of Type ImageSource */
-imageSource?: any;
+imageSource?: /*ImageSource*/ any;
 
 /** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: any;
+isContextActionsLegacyModeEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1492,13 +1493,13 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
     [key: string]: any;
 }
 
@@ -1536,13 +1537,13 @@ export interface ISwitchCell {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1551,19 +1552,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: any;
+isContextActionsLegacyModeEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property On of Type Boolean */
-on?: any;
+on?: boolean | Bind;
 
 /** Property OnColor of Type Color */
-onColor?: any;
+onColor?: ColorItem | string | null | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1572,10 +1573,10 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -1608,13 +1609,13 @@ export interface ITextCell {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -1623,10 +1624,10 @@ command?: any;
 commandParameter?: any;
 
 /** Property Detail of Type String */
-detail?: any;
+detail?: string | null | Bind;
 
 /** Property DetailColor of Type Color */
-detailColor?: any;
+detailColor?: ColorItem | string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1635,13 +1636,13 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: any;
+isContextActionsLegacyModeEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1650,13 +1651,13 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
     [key: string]: any;
 }
 
@@ -1689,13 +1690,13 @@ export interface IViewCell {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1704,13 +1705,13 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: any;
+isContextActionsLegacyModeEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1719,7 +1720,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property View of Type View */
 view?: any;
@@ -1760,16 +1761,16 @@ export interface ICheckBox {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -1778,13 +1779,13 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Color of Type Color */
-color?: any;
+color?: ColorItem | string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -1793,52 +1794,52 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsChecked of Type Boolean */
-isChecked?: any;
+isChecked?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1850,22 +1851,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -1874,25 +1875,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -1945,16 +1946,16 @@ export interface IClickGestureRecognizer {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property Buttons of Type ButtonsMask */
-buttons?: any;
+buttons?: "Primary" | "Secondary" | Bind;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -1969,7 +1970,7 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property NumberOfClicksRequired of Type Int32 */
-numberOfClicksRequired?: any;
+numberOfClicksRequired?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -1978,7 +1979,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -2012,7 +2013,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Width of Type GridLength */
-width?: any;
+width?: /*GridLength*/ any;
     [key: string]: any;
 }
 
@@ -2032,22 +2033,22 @@ export interface IContentPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -2056,10 +2057,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property Content of Type View */
 content?: any;
@@ -2068,7 +2069,7 @@ content?: any;
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -2077,58 +2078,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -2140,22 +2141,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -2164,28 +2165,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -2258,34 +2259,34 @@ export interface IContentPresenter {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Content of Type View */
 content?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -2294,55 +2295,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -2354,22 +2355,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -2378,25 +2379,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -2454,28 +2455,28 @@ export interface IContentView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Content of Type View */
 content?: any;
@@ -2484,7 +2485,7 @@ content?: any;
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -2493,55 +2494,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -2553,22 +2554,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -2577,25 +2578,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -2728,34 +2729,34 @@ export interface IDatePicker {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Date of Type DateTime */
 date?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -2764,49 +2765,49 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property Format of Type String */
-format?: any;
+format?: string | null | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaximumDate of Type DateTime */
 maximumDate?: any;
@@ -2815,16 +2816,16 @@ maximumDate?: any;
 minimumDate?: any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -2836,22 +2837,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -2860,28 +2861,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -2934,34 +2935,34 @@ export interface IEditor {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property AutoSize of Type EditorAutoSizeOption */
-autoSize?: any;
+autoSize?: "Disabled" | "TextChanges" | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -2970,82 +2971,82 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsReadOnly of Type Boolean */
-isReadOnly?: any;
+isReadOnly?: boolean | Bind;
 
 /** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: any;
+isSpellCheckEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsTextPredictionEnabled of Type Boolean */
-isTextPredictionEnabled?: any;
+isTextPredictionEnabled?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Keyboard of Type Keyboard */
-keyboard?: any;
+keyboard?: /*Keyboard*/ any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaxLength of Type Int32 */
-maxLength?: any;
+maxLength?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
 
 /** Property Placeholder of Type String */
-placeholder?: any;
+placeholder?: string | null | Bind;
 
 /** Property PlaceholderColor of Type Color */
-placeholderColor?: any;
+placeholderColor?: ColorItem | string | null | Bind;
 
 /** Property Platform of Type IPlatform */
 platform?: any;
@@ -3054,22 +3055,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -3078,31 +3079,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -3155,13 +3156,13 @@ export interface IElement {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3179,7 +3180,7 @@ platform?: any;
 realParent?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -3207,37 +3208,37 @@ export interface IEntry {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ClearButtonVisibility of Type ClearButtonVisibility */
-clearButtonVisibility?: any;
+clearButtonVisibility?: "Never" | "WhileEditing" | Bind;
 
 /** Property CursorPosition of Type Int32 */
-cursorPosition?: any;
+cursorPosition?: number | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3246,88 +3247,88 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: any;
+horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPassword of Type Boolean */
-isPassword?: any;
+isPassword?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsReadOnly of Type Boolean */
-isReadOnly?: any;
+isReadOnly?: boolean | Bind;
 
 /** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: any;
+isSpellCheckEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsTextPredictionEnabled of Type Boolean */
-isTextPredictionEnabled?: any;
+isTextPredictionEnabled?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Keyboard of Type Keyboard */
-keyboard?: any;
+keyboard?: /*Keyboard*/ any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaxLength of Type Int32 */
-maxLength?: any;
+maxLength?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
 
 /** Property Placeholder of Type String */
-placeholder?: any;
+placeholder?: string | null | Bind;
 
 /** Property PlaceholderColor of Type Color */
-placeholderColor?: any;
+placeholderColor?: ColorItem | string | null | Bind;
 
 /** Property Platform of Type IPlatform */
 platform?: any;
@@ -3342,28 +3343,28 @@ returnCommand?: any;
 returnCommandParameter?: any;
 
 /** Property ReturnType of Type ReturnType */
-returnType?: any;
+returnType?: "Default" | "Done" | "Go" | "Next" | "Search" | "Send" | Bind;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectionLength of Type Int32 */
-selectionLength?: any;
+selectionLength?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -3372,34 +3373,34 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: any;
+verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -3452,13 +3453,13 @@ export interface IFileImageSource {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3467,7 +3468,7 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property File of Type String */
-file?: any;
+file?: string | null | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -3476,7 +3477,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -3504,40 +3505,40 @@ export interface IFlexLayout {
     
     
 /** Property AlignContent of Type FlexAlignContent */
-alignContent?: any;
+alignContent?: "Stretch" | "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
 
 /** Property AlignItems of Type FlexAlignItems */
-alignItems?: any;
+alignItems?: "Stretch" | "Center" | "Start" | "End" | Bind;
 
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Direction of Type FlexDirection */
-direction?: any;
+direction?: "Row" | "RowReverse" | "Column" | "ColumnReverse" | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3546,58 +3547,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property JustifyContent of Type FlexJustify */
-justifyContent?: any;
+justifyContent?: "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -3606,28 +3607,28 @@ parent?: any;
 platform?: any;
 
 /** Property Position of Type FlexPosition */
-position?: any;
+position?: "Relative" | "Absolute" | Bind;
 
 /** Property Resources of Type ResourceDictionary */
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -3636,28 +3637,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
 
 /** Property Wrap of Type FlexWrap */
-wrap?: any;
+wrap?: "NoWrap" | "Wrap" | "Reverse" | Bind;
     [key: string]: any;
 }
 
@@ -3738,16 +3739,16 @@ export interface IFontImageSource {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Color of Type Color */
-color?: any;
+color?: ColorItem | string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3756,10 +3757,10 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property Glyph of Type String */
-glyph?: any;
+glyph?: string | null | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -3768,10 +3769,10 @@ parent?: any;
 platform?: any;
 
 /** Property Size of Type Double */
-size?: any;
+size?: number | Bind;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -3799,13 +3800,13 @@ export interface IFormattedString {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3820,7 +3821,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -3853,31 +3854,31 @@ export interface IFrame {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property BorderColor of Type Color */
-borderColor?: any;
+borderColor?: ColorItem | string | null | Bind;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Content of Type View */
 content?: any;
@@ -3886,10 +3887,10 @@ content?: any;
 controlTemplate?: any;
 
 /** Property CornerRadius of Type Single */
-cornerRadius?: any;
+cornerRadius?: number | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -3898,61 +3899,61 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HasShadow of Type Boolean */
-hasShadow?: any;
+hasShadow?: boolean | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property OutlineColor of Type Color */
-outlineColor?: any;
+outlineColor?: ColorItem | string | null | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -3964,22 +3965,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -3988,25 +3989,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -4069,13 +4070,13 @@ export interface IGestureElement {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4090,7 +4091,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -4123,13 +4124,13 @@ export interface IGestureRecognizer {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4144,7 +4145,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -4172,37 +4173,37 @@ export interface IGrid {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ColumnDefinitions of Type ColumnDefinitionCollection */
 columnDefinitions?: any;
 
 /** Property ColumnSpacing of Type Double */
-columnSpacing?: any;
+columnSpacing?: number | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4211,55 +4212,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -4271,28 +4272,28 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property RowDefinitions of Type RowDefinitionCollection */
 rowDefinitions?: any;
 
 /** Property RowSpacing of Type Double */
-rowSpacing?: any;
+rowSpacing?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -4301,25 +4302,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -4405,7 +4406,7 @@ export interface IHtmlWebViewSource {
     
     
 /** Property BaseUrl of Type String */
-baseUrl?: any;
+baseUrl?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -4414,7 +4415,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Html of Type String */
-html?: any;
+html?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -4434,19 +4435,19 @@ export interface IImage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property Aspect of Type Aspect */
-aspect?: any;
+aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -4455,10 +4456,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4467,55 +4468,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsAnimationPlaying of Type Boolean */
-isAnimationPlaying?: any;
+isAnimationPlaying?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsOpaque of Type Boolean */
-isOpaque?: any;
+isOpaque?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -4527,25 +4528,25 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Source of Type ImageSource */
-source?: any;
+source?: /*ImageSource*/ any;
 
 /** Property Style of Type Style */
 style?: any;
@@ -4554,25 +4555,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -4630,34 +4631,34 @@ export interface IImageButton {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property Aspect of Type Aspect */
-aspect?: any;
+aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property BorderColor of Type Color */
-borderColor?: any;
+borderColor?: ColorItem | string | null | Bind;
 
 /** Property BorderWidth of Type Double */
-borderWidth?: any;
+borderWidth?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -4666,10 +4667,10 @@ command?: any;
 commandParameter?: any;
 
 /** Property CornerRadius of Type Int32 */
-cornerRadius?: any;
+cornerRadius?: number | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4678,55 +4679,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsOpaque of Type Boolean */
-isOpaque?: any;
+isOpaque?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -4738,25 +4739,25 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Source of Type ImageSource */
-source?: any;
+source?: /*ImageSource*/ any;
 
 /** Property Style of Type Style */
 style?: any;
@@ -4765,25 +4766,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -4841,13 +4842,13 @@ export interface IImageSource {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4862,7 +4863,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -4890,37 +4891,37 @@ export interface IIndicatorView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ControlTemplate of Type ControlTemplate */
 controlTemplate?: any;
 
 /** Property Count of Type Int32 */
-count?: any;
+count?: number | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -4929,79 +4930,79 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HideSingle of Type Boolean */
-hideSingle?: any;
+hideSingle?: boolean | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property IndicatorColor of Type Color */
-indicatorColor?: any;
+indicatorColor?: ColorItem | string | null | Bind;
 
 /** Property IndicatorLayout of Type Layout`1 */
 indicatorLayout?: any;
 
 /** Property IndicatorSize of Type Double */
-indicatorSize?: any;
+indicatorSize?: number | Bind;
 
 /** Property IndicatorsShape of Type IndicatorShape */
-indicatorsShape?: any;
+indicatorsShape?: "Circle" | "Square" | Bind;
 
 /** Property IndicatorTemplate of Type DataTemplate */
 indicatorTemplate?: any;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaximumVisible of Type Int32 */
-maximumVisible?: any;
+maximumVisible?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -5010,31 +5011,31 @@ parent?: any;
 platform?: any;
 
 /** Property Position of Type Int32 */
-position?: any;
+position?: number | Bind;
 
 /** Property Resources of Type ResourceDictionary */
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedIndicatorColor of Type Color */
-selectedIndicatorColor?: any;
+selectedIndicatorColor?: ColorItem | string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -5043,25 +5044,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -5134,31 +5135,31 @@ export interface IInputView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -5167,70 +5168,70 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsReadOnly of Type Boolean */
-isReadOnly?: any;
+isReadOnly?: boolean | Bind;
 
 /** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: any;
+isSpellCheckEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Keyboard of Type Keyboard */
-keyboard?: any;
+keyboard?: /*Keyboard*/ any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaxLength of Type Int32 */
-maxLength?: any;
+maxLength?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
 
 /** Property Placeholder of Type String */
-placeholder?: any;
+placeholder?: string | null | Bind;
 
 /** Property PlaceholderColor of Type Color */
-placeholderColor?: any;
+placeholderColor?: ColorItem | string | null | Bind;
 
 /** Property Platform of Type IPlatform */
 platform?: any;
@@ -5239,22 +5240,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -5263,31 +5264,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -5411,7 +5412,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Event of Type String */
-event?: any;
+event?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -5491,7 +5492,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Property of Type BindableProperty */
-property?: any;
+property?: /*BindableProperty*/ any;
 
 /** Property Value of Type Object */
 value?: any;
@@ -5533,7 +5534,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property IsSealed of Type Boolean */
-isSealed?: any;
+isSealed?: boolean | Bind;
     [key: string]: any;
 }
 
@@ -5561,16 +5562,16 @@ export interface ICarouselView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -5579,7 +5580,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property CurrentItem of Type Object */
 currentItem?: any;
@@ -5591,7 +5592,7 @@ currentItemChangedCommand?: any;
 currentItemChangedCommandParameter?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -5606,49 +5607,49 @@ emptyView?: any;
 emptyViewTemplate?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBounceEnabled of Type Boolean */
-isBounceEnabled?: any;
+isBounceEnabled?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsScrollAnimated of Type Boolean */
-isScrollAnimated?: any;
+isScrollAnimated?: boolean | Bind;
 
 /** Property IsScrolling of Type Boolean */
-isScrolling?: any;
+isScrolling?: boolean | Bind;
 
 /** Property IsSwipeEnabled of Type Boolean */
-isSwipeEnabled?: any;
+isSwipeEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemsLayout of Type LinearItemsLayout */
 itemsLayout?: any;
@@ -5657,37 +5658,37 @@ itemsLayout?: any;
 itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: any;
+itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
 
 /** Property PeekAreaInsets of Type Thickness */
-peekAreaInsets?: any;
+peekAreaInsets?: /*Thickness*/ any;
 
 /** Property Platform of Type IPlatform */
 platform?: any;
 
 /** Property Position of Type Int32 */
-position?: any;
+position?: number | Bind;
 
 /** Property PositionChangedCommand of Type ICommand */
 positionChangedCommand?: any;
@@ -5696,7 +5697,7 @@ positionChangedCommand?: any;
 positionChangedCommandParameter?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: any;
+remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
 remainingItemsThresholdReachedCommand?: any;
@@ -5708,22 +5709,22 @@ remainingItemsThresholdReachedCommandParameter?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -5732,28 +5733,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -5821,16 +5822,16 @@ export interface ICollectionView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -5839,10 +5840,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -5857,7 +5858,7 @@ emptyView?: any;
 emptyViewTemplate?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Footer of Type Object */
 footer?: any;
@@ -5878,67 +5879,67 @@ header?: any;
 headerTemplate?: any;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsGrouped of Type Boolean */
-isGrouped?: any;
+isGrouped?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: any;
+itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
 
 /** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: any;
+itemsLayout?: /*IItemsLayout*/ any;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: any;
+itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -5947,7 +5948,7 @@ parent?: any;
 platform?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: any;
+remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
 remainingItemsThresholdReachedCommand?: any;
@@ -5959,22 +5960,22 @@ remainingItemsThresholdReachedCommandParameter?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
@@ -5989,7 +5990,7 @@ selectionChangedCommand?: any;
 selectionChangedCommandParameter?: any;
 
 /** Property SelectionMode of Type SelectionMode */
-selectionMode?: any;
+selectionMode?: "None" | "Single" | "Multiple" | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -5998,28 +5999,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -6118,19 +6119,19 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property HorizontalItemSpacing of Type Double */
-horizontalItemSpacing?: any;
+horizontalItemSpacing?: number | Bind;
 
 /** Property SnapPointsAlignment of Type SnapPointsAlignment */
-snapPointsAlignment?: any;
+snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property SnapPointsType of Type SnapPointsType */
-snapPointsType?: any;
+snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
 
 /** Property Span of Type Int32 */
-span?: any;
+span?: number | Bind;
 
 /** Property VerticalItemSpacing of Type Double */
-verticalItemSpacing?: any;
+verticalItemSpacing?: number | Bind;
     [key: string]: any;
 }
 
@@ -6150,16 +6151,16 @@ export interface IGroupableItemsView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -6168,10 +6169,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -6186,7 +6187,7 @@ emptyView?: any;
 emptyViewTemplate?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Footer of Type Object */
 footer?: any;
@@ -6207,67 +6208,67 @@ header?: any;
 headerTemplate?: any;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsGrouped of Type Boolean */
-isGrouped?: any;
+isGrouped?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: any;
+itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
 
 /** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: any;
+itemsLayout?: /*IItemsLayout*/ any;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: any;
+itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -6276,7 +6277,7 @@ parent?: any;
 platform?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: any;
+remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
 remainingItemsThresholdReachedCommand?: any;
@@ -6288,22 +6289,22 @@ remainingItemsThresholdReachedCommandParameter?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
@@ -6318,7 +6319,7 @@ selectionChangedCommand?: any;
 selectionChangedCommandParameter?: any;
 
 /** Property SelectionMode of Type SelectionMode */
-selectionMode?: any;
+selectionMode?: "None" | "Single" | "Multiple" | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -6327,28 +6328,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -6447,10 +6448,10 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property SnapPointsAlignment of Type SnapPointsAlignment */
-snapPointsAlignment?: any;
+snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property SnapPointsType of Type SnapPointsType */
-snapPointsType?: any;
+snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
     [key: string]: any;
 }
 
@@ -6470,16 +6471,16 @@ export interface IItemsView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -6488,10 +6489,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -6506,61 +6507,61 @@ emptyView?: any;
 emptyViewTemplate?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: any;
+itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -6569,7 +6570,7 @@ parent?: any;
 platform?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: any;
+remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
 remainingItemsThresholdReachedCommand?: any;
@@ -6581,22 +6582,22 @@ remainingItemsThresholdReachedCommandParameter?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -6605,28 +6606,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -6695,13 +6696,13 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property ItemSpacing of Type Double */
-itemSpacing?: any;
+itemSpacing?: number | Bind;
 
 /** Property SnapPointsAlignment of Type SnapPointsAlignment */
-snapPointsAlignment?: any;
+snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property SnapPointsType of Type SnapPointsType */
-snapPointsType?: any;
+snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
     [key: string]: any;
 }
 
@@ -6721,16 +6722,16 @@ export interface ISelectableItemsView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -6739,10 +6740,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -6757,7 +6758,7 @@ emptyView?: any;
 emptyViewTemplate?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Footer of Type Object */
 footer?: any;
@@ -6772,64 +6773,64 @@ header?: any;
 headerTemplate?: any;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: any;
+itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
 
 /** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: any;
+itemsLayout?: /*IItemsLayout*/ any;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: any;
+itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -6838,7 +6839,7 @@ parent?: any;
 platform?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: any;
+remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
 remainingItemsThresholdReachedCommand?: any;
@@ -6850,22 +6851,22 @@ remainingItemsThresholdReachedCommandParameter?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
@@ -6880,7 +6881,7 @@ selectionChangedCommand?: any;
 selectionChangedCommandParameter?: any;
 
 /** Property SelectionMode of Type SelectionMode */
-selectionMode?: any;
+selectionMode?: "None" | "Single" | "Multiple" | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -6889,28 +6890,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -6993,16 +6994,16 @@ export interface IStructuredItemsView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -7011,10 +7012,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -7029,7 +7030,7 @@ emptyView?: any;
 emptyViewTemplate?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Footer of Type Object */
 footer?: any;
@@ -7044,64 +7045,64 @@ header?: any;
 headerTemplate?: any;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: any;
+itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
 
 /** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: any;
+itemsLayout?: /*IItemsLayout*/ any;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: any;
+itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -7110,7 +7111,7 @@ parent?: any;
 platform?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: any;
+remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
 remainingItemsThresholdReachedCommand?: any;
@@ -7122,22 +7123,22 @@ remainingItemsThresholdReachedCommandParameter?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -7146,28 +7147,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -7245,31 +7246,31 @@ export interface ILabel {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -7278,79 +7279,79 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Font of Type Font */
-font?: any;
+font?: /*Font*/ any;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property FormattedText of Type FormattedString */
 formattedText?: any;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: any;
+horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property LineBreakMode of Type LineBreakMode */
-lineBreakMode?: any;
+lineBreakMode?: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | Bind;
 
 /** Property LineHeight of Type Double */
-lineHeight?: any;
+lineHeight?: number | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaxLines of Type Int32 */
-maxLines?: any;
+maxLines?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -7362,22 +7363,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -7386,46 +7387,46 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TextDecorations of Type TextDecorations */
-textDecorations?: any;
+textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
 
 /** Property TextType of Type TextType */
-textType?: any;
+textType?: "Text" | "Html" | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: any;
+verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
 
 /** Property XAlign of Type TextAlignment */
-xAlign?: any;
+xAlign?: "Start" | "Center" | "End" | Bind;
 
 /** Property YAlign of Type TextAlignment */
-yAlign?: any;
+yAlign?: "Start" | "Center" | "End" | Bind;
     [key: string]: any;
 }
 
@@ -7483,31 +7484,31 @@ export interface ILayout {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -7516,55 +7517,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -7576,22 +7577,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -7600,25 +7601,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -7671,31 +7672,31 @@ export interface IListView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CachingStrategy of Type ListViewCachingStrategy */
-cachingStrategy?: any;
+cachingStrategy?: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -7704,7 +7705,7 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Footer of Type Object */
 footer?: any;
@@ -7722,7 +7723,7 @@ groupHeaderTemplate?: any;
 groupShortNameBinding?: any;
 
 /** Property HasUnevenRows of Type Boolean */
-hasUnevenRows?: any;
+hasUnevenRows?: boolean | Bind;
 
 /** Property Header of Type Object */
 header?: any;
@@ -7731,43 +7732,43 @@ header?: any;
 headerTemplate?: any;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsGroupingEnabled of Type Boolean */
-isGroupingEnabled?: any;
+isGroupingEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsPullToRefreshEnabled of Type Boolean */
-isPullToRefreshEnabled?: any;
+isPullToRefreshEnabled?: boolean | Bind;
 
 /** Property IsRefreshing of Type Boolean */
-isRefreshing?: any;
+isRefreshing?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
@@ -7776,19 +7777,19 @@ itemsSource?: any;
 itemTemplate?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -7797,49 +7798,49 @@ parent?: any;
 platform?: any;
 
 /** Property RefreshAllowed of Type Boolean */
-refreshAllowed?: any;
+refreshAllowed?: boolean | Bind;
 
 /** Property RefreshCommand of Type ICommand */
 refreshCommand?: any;
 
 /** Property RefreshControlColor of Type Color */
-refreshControlColor?: any;
+refreshControlColor?: ColorItem | string | null | Bind;
 
 /** Property Resources of Type ResourceDictionary */
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property RowHeight of Type Int32 */
-rowHeight?: any;
+rowHeight?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
 
 /** Property SelectionMode of Type ListViewSelectionMode */
-selectionMode?: any;
+selectionMode?: "None" | "Single" | Bind;
 
 /** Property SeparatorColor of Type Color */
-separatorColor?: any;
+separatorColor?: ColorItem | string | null | Bind;
 
 /** Property SeparatorVisibility of Type SeparatorVisibility */
-separatorVisibility?: any;
+separatorVisibility?: "Default" | "None" | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -7848,28 +7849,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -7942,46 +7943,46 @@ export interface IMasterDetailPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CanChangeIsPresented of Type Boolean */
-canChangeIsPresented?: any;
+canChangeIsPresented?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property Detail of Type Page */
 detail?: any;
 
 /** Property DetailBounds of Type Rectangle */
-detailBounds?: any;
+detailBounds?: "Zero" | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -7990,73 +7991,73 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsGestureEnabled of Type Boolean */
-isGestureEnabled?: any;
+isGestureEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsPresented of Type Boolean */
-isPresented?: any;
+isPresented?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Master of Type Page */
 master?: any;
 
 /** Property MasterBehavior of Type MasterBehavior */
-masterBehavior?: any;
+masterBehavior?: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | Bind;
 
 /** Property MasterBounds of Type Rectangle */
-masterBounds?: any;
+masterBounds?: "Zero" | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -8068,22 +8069,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -8092,28 +8093,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -8186,13 +8187,13 @@ export interface IMenu {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -8210,10 +8211,10 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -8251,13 +8252,13 @@ export interface IMenuItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -8272,16 +8273,16 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IsDestructive of Type Boolean */
-isDestructive?: any;
+isDestructive?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -8290,10 +8291,10 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -8329,28 +8330,28 @@ export interface INavigationPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BarBackgroundColor of Type Color */
-barBackgroundColor?: any;
+barBackgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BarTextColor of Type Color */
-barTextColor?: any;
+barTextColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -8359,16 +8360,16 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property CurrentPage of Type Page */
 currentPage?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -8377,58 +8378,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -8443,22 +8444,22 @@ resources?: any;
 rootPage?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -8467,31 +8468,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Tint of Type Color */
-tint?: any;
+tint?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -8592,16 +8593,16 @@ export interface IOpenGLView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -8610,10 +8611,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -8622,46 +8623,46 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HasRenderLoop of Type Boolean */
-hasRenderLoop?: any;
+hasRenderLoop?: boolean | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -8670,7 +8671,7 @@ navigation?: any;
 onDisplay?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -8682,22 +8683,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -8706,25 +8707,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -8777,22 +8778,22 @@ export interface IPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -8801,13 +8802,13 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -8816,58 +8817,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -8879,22 +8880,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -8903,28 +8904,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -8987,13 +8988,13 @@ export interface IPanGestureRecognizer {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9008,10 +9009,10 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TouchPoints of Type Int32 */
-touchPoints?: any;
+touchPoints?: number | Bind;
     [key: string]: any;
 }
 
@@ -9039,31 +9040,31 @@ export interface IPicker {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9072,43 +9073,43 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemDisplayBinding of Type BindingBase */
 itemDisplayBinding?: any;
@@ -9117,19 +9118,19 @@ itemDisplayBinding?: any;
 itemsSource?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -9141,25 +9142,25 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedIndex of Type Int32 */
-selectedIndex?: any;
+selectedIndex?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
@@ -9171,34 +9172,34 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property TitleColor of Type Color */
-titleColor?: any;
+titleColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -9256,13 +9257,13 @@ export interface IPinchGestureRecognizer {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9271,7 +9272,7 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property IsPinching of Type Boolean */
-isPinching?: any;
+isPinching?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -9280,7 +9281,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -9308,16 +9309,16 @@ export interface IProgressBar {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -9326,10 +9327,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9338,49 +9339,49 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -9389,31 +9390,31 @@ parent?: any;
 platform?: any;
 
 /** Property Progress of Type Double */
-progress?: any;
+progress?: number | Bind;
 
 /** Property ProgressColor of Type Color */
-progressColor?: any;
+progressColor?: ColorItem | string | null | Bind;
 
 /** Property Resources of Type ResourceDictionary */
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -9422,25 +9423,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -9493,28 +9494,28 @@ export interface IRefreshView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -9529,7 +9530,7 @@ content?: any;
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9538,58 +9539,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsRefreshing of Type Boolean */
-isRefreshing?: any;
+isRefreshing?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -9598,28 +9599,28 @@ parent?: any;
 platform?: any;
 
 /** Property RefreshColor of Type Color */
-refreshColor?: any;
+refreshColor?: ColorItem | string | null | Bind;
 
 /** Property Resources of Type ResourceDictionary */
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -9628,25 +9629,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -9709,31 +9710,31 @@ export interface IRelativeLayout {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9742,55 +9743,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -9802,22 +9803,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -9826,25 +9827,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -9931,7 +9932,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Height of Type GridLength */
-height?: any;
+height?: /*GridLength*/ any;
     [key: string]: any;
 }
 
@@ -9951,37 +9952,37 @@ export interface IScrollView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Content of Type View */
 content?: any;
 
 /** Property ContentSize of Type Size */
-contentSize?: any;
+contentSize?: "Zero" | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -9990,64 +9991,64 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: any;
+horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property LayoutAreaOverride of Type Rectangle */
-layoutAreaOverride?: any;
+layoutAreaOverride?: "Zero" | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Orientation of Type ScrollOrientation */
-orientation?: any;
+orientation?: "Vertical" | "Horizontal" | "Both" | "Neither" | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -10059,28 +10060,28 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property ScrollX of Type Double */
-scrollX?: any;
+scrollX?: number | Bind;
 
 /** Property ScrollY of Type Double */
-scrollY?: any;
+scrollY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -10089,28 +10090,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: any;
+verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -10168,34 +10169,34 @@ export interface ISearchBar {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CancelButtonColor of Type Color */
-cancelButtonColor?: any;
+cancelButtonColor?: ColorItem | string | null | Bind;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -10204,82 +10205,82 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: any;
+horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsReadOnly of Type Boolean */
-isReadOnly?: any;
+isReadOnly?: boolean | Bind;
 
 /** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: any;
+isSpellCheckEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Keyboard of Type Keyboard */
-keyboard?: any;
+keyboard?: /*Keyboard*/ any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MaxLength of Type Int32 */
-maxLength?: any;
+maxLength?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
 
 /** Property Placeholder of Type String */
-placeholder?: any;
+placeholder?: string | null | Bind;
 
 /** Property PlaceholderColor of Type Color */
-placeholderColor?: any;
+placeholderColor?: ColorItem | string | null | Bind;
 
 /** Property Platform of Type IPlatform */
 platform?: any;
@@ -10288,22 +10289,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SearchCommand of Type ICommand */
 searchCommand?: any;
@@ -10318,34 +10319,34 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: any;
+verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -10410,13 +10411,13 @@ commandParameter?: any;
 dispatcher?: any;
 
 /** Property IconOverride of Type ImageSource */
-iconOverride?: any;
+iconOverride?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property TextOverride of Type String */
-textOverride?: any;
+textOverride?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -10439,7 +10440,7 @@ export interface IBaseShellItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -10448,7 +10449,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -10457,16 +10458,16 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -10478,7 +10479,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -10487,13 +10488,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -10536,7 +10537,7 @@ export interface INavigableElement {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -10545,7 +10546,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -10569,7 +10570,7 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -10602,25 +10603,25 @@ export interface ISearchHandler {
     
     
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CancelButtonColor of Type Color */
-cancelButtonColor?: any;
+cancelButtonColor?: ColorItem | string | null | Bind;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property ClearIcon of Type ImageSource */
-clearIcon?: any;
+clearIcon?: /*ImageSource*/ any;
 
 /** Property ClearIconHelpText of Type String */
-clearIconHelpText?: any;
+clearIconHelpText?: string | null | Bind;
 
 /** Property ClearIconName of Type String */
-clearIconName?: any;
+clearIconName?: string | null | Bind;
 
 /** Property ClearPlaceholderCommand of Type ICommand */
 clearPlaceholderCommand?: any;
@@ -10629,16 +10630,16 @@ clearPlaceholderCommand?: any;
 clearPlaceholderCommandParameter?: any;
 
 /** Property ClearPlaceholderEnabled of Type Boolean */
-clearPlaceholderEnabled?: any;
+clearPlaceholderEnabled?: boolean | Bind;
 
 /** Property ClearPlaceholderHelpText of Type String */
-clearPlaceholderHelpText?: any;
+clearPlaceholderHelpText?: string | null | Bind;
 
 /** Property ClearPlaceholderIcon of Type ImageSource */
-clearPlaceholderIcon?: any;
+clearPlaceholderIcon?: /*ImageSource*/ any;
 
 /** Property ClearPlaceholderName of Type String */
-clearPlaceholderName?: any;
+clearPlaceholderName?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -10650,22 +10651,22 @@ commandParameter?: any;
 dispatcher?: any;
 
 /** Property DisplayMemberName of Type String */
-displayMemberName?: any;
+displayMemberName?: string | null | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: any;
+horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property IsSearchEnabled of Type Boolean */
-isSearchEnabled?: any;
+isSearchEnabled?: boolean | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
@@ -10674,37 +10675,37 @@ itemsSource?: any;
 itemTemplate?: any;
 
 /** Property Keyboard of Type Keyboard */
-keyboard?: any;
+keyboard?: /*Keyboard*/ any;
 
 /** Property Placeholder of Type String */
-placeholder?: any;
+placeholder?: string | null | Bind;
 
 /** Property PlaceholderColor of Type Color */
-placeholderColor?: any;
+placeholderColor?: ColorItem | string | null | Bind;
 
 /** Property Query of Type String */
-query?: any;
+query?: string | null | Bind;
 
 /** Property QueryIcon of Type ImageSource */
-queryIcon?: any;
+queryIcon?: /*ImageSource*/ any;
 
 /** Property QueryIconHelpText of Type String */
-queryIconHelpText?: any;
+queryIconHelpText?: string | null | Bind;
 
 /** Property QueryIconName of Type String */
-queryIconName?: any;
+queryIconName?: string | null | Bind;
 
 /** Property SearchBoxVisibility of Type SearchBoxVisibility */
-searchBoxVisibility?: any;
+searchBoxVisibility?: "Hidden" | "Collapsible" | "Expanded" | Bind;
 
 /** Property ShowsResults of Type Boolean */
-showsResults?: any;
+showsResults?: boolean | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: any;
+verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
     [key: string]: any;
 }
 
@@ -10742,22 +10743,22 @@ export interface IShell {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -10766,16 +10767,16 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property CurrentItem of Type ShellItem */
 currentItem?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -10784,73 +10785,73 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FlyoutBackgroundColor of Type Color */
-flyoutBackgroundColor?: any;
+flyoutBackgroundColor?: ColorItem | string | null | Bind;
 
 /** Property FlyoutBackgroundImage of Type ImageSource */
-flyoutBackgroundImage?: any;
+flyoutBackgroundImage?: /*ImageSource*/ any;
 
 /** Property FlyoutBackgroundImageAspect of Type Aspect */
-flyoutBackgroundImageAspect?: any;
+flyoutBackgroundImageAspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
 
 /** Property FlyoutBehavior of Type FlyoutBehavior */
-flyoutBehavior?: any;
+flyoutBehavior?: "Disabled" | "Flyout" | "Locked" | Bind;
 
 /** Property FlyoutHeader of Type Object */
 flyoutHeader?: any;
 
 /** Property FlyoutHeaderBehavior of Type FlyoutHeaderBehavior */
-flyoutHeaderBehavior?: any;
+flyoutHeaderBehavior?: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | Bind;
 
 /** Property FlyoutHeaderTemplate of Type DataTemplate */
 flyoutHeaderTemplate?: any;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property FlyoutIsPresented of Type Boolean */
-flyoutIsPresented?: any;
+flyoutIsPresented?: boolean | Bind;
 
 /** Property FlyoutVerticalScrollMode of Type ScrollMode */
-flyoutVerticalScrollMode?: any;
+flyoutVerticalScrollMode?: "Disabled" | "Enabled" | "Auto" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
 itemTemplate?: any;
@@ -10859,19 +10860,19 @@ itemTemplate?: any;
 menuItemTemplate?: any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -10883,22 +10884,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -10907,28 +10908,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -11114,7 +11115,7 @@ export interface IShellContent {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11123,7 +11124,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Content of Type Object */
 content?: any;
@@ -11138,16 +11139,16 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11159,7 +11160,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11168,13 +11169,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11227,7 +11228,7 @@ export interface IShellGroupItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11236,7 +11237,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -11245,19 +11246,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: any;
+flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11269,7 +11270,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11278,13 +11279,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11327,7 +11328,7 @@ export interface IFlyoutItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11336,7 +11337,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property CurrentItem of Type ShellSection */
 currentItem?: any;
@@ -11348,19 +11349,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: any;
+flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11372,7 +11373,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11381,13 +11382,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11440,7 +11441,7 @@ export interface ITabBar {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11449,7 +11450,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property CurrentItem of Type ShellSection */
 currentItem?: any;
@@ -11461,19 +11462,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: any;
+flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11485,7 +11486,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11494,13 +11495,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11553,7 +11554,7 @@ export interface IShellItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11562,7 +11563,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property CurrentItem of Type ShellSection */
 currentItem?: any;
@@ -11574,19 +11575,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: any;
+flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11598,7 +11599,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11607,13 +11608,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11666,7 +11667,7 @@ export interface ITab {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11675,7 +11676,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property CurrentItem of Type ShellContent */
 currentItem?: any;
@@ -11687,19 +11688,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: any;
+flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11711,7 +11712,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11720,13 +11721,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11779,7 +11780,7 @@ export interface IShellSection {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11788,7 +11789,7 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property CurrentItem of Type ShellContent */
 currentItem?: any;
@@ -11800,19 +11801,19 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: any;
+flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: any;
+flyoutIcon?: /*ImageSource*/ any;
 
 /** Property Icon of Type ImageSource */
-icon?: any;
+icon?: /*ImageSource*/ any;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
@@ -11824,7 +11825,7 @@ parent?: any;
 platform?: any;
 
 /** Property Route of Type String */
-route?: any;
+route?: string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -11833,13 +11834,13 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -11892,16 +11893,16 @@ export interface ISlider {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -11910,10 +11911,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -11928,61 +11929,61 @@ dragStartedCommand?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property Maximum of Type Double */
-maximum?: any;
+maximum?: number | Bind;
 
 /** Property MaximumTrackColor of Type Color */
-maximumTrackColor?: any;
+maximumTrackColor?: ColorItem | string | null | Bind;
 
 /** Property Minimum of Type Double */
-minimum?: any;
+minimum?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumTrackColor of Type Color */
-minimumTrackColor?: any;
+minimumTrackColor?: ColorItem | string | null | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -11994,22 +11995,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -12018,37 +12019,37 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property ThumbColor of Type Color */
-thumbColor?: any;
+thumbColor?: ColorItem | string | null | Bind;
 
 /** Property ThumbImage of Type FileImageSource */
-thumbImage?: any;
+thumbImage?: /*FileImageSource*/ any;
 
 /** Property ThumbImageSource of Type ImageSource */
-thumbImageSource?: any;
+thumbImageSource?: /*ImageSource*/ any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Value of Type Double */
-value?: any;
+value?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -12106,19 +12107,19 @@ export interface ISpan {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12127,22 +12128,22 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Font of Type Font */
-font?: any;
+font?: /*Font*/ any;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property ForegroundColor of Type Color */
-foregroundColor?: any;
+foregroundColor?: ColorItem | string | null | Bind;
 
 /** Property LineHeight of Type Double */
-lineHeight?: any;
+lineHeight?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -12154,16 +12155,16 @@ platform?: any;
 style?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property TextDecorations of Type TextDecorations */
-textDecorations?: any;
+textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
     [key: string]: any;
 }
 
@@ -12196,31 +12197,31 @@ export interface IStackLayout {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12229,58 +12230,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Orientation of Type StackOrientation */
-orientation?: any;
+orientation?: "Vertical" | "Horizontal" | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -12292,25 +12293,25 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Spacing of Type Double */
-spacing?: any;
+spacing?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -12319,25 +12320,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -12395,16 +12396,16 @@ export interface IStepper {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -12413,10 +12414,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12425,58 +12426,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Increment of Type Double */
-increment?: any;
+increment?: number | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property Maximum of Type Double */
-maximum?: any;
+maximum?: number | Bind;
 
 /** Property Minimum of Type Double */
-minimum?: any;
+minimum?: number | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -12488,22 +12489,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -12512,28 +12513,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Value of Type Double */
-value?: any;
+value?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -12586,13 +12587,13 @@ export interface IStreamImageSource {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12610,7 +12611,7 @@ platform?: any;
 stream?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -12638,13 +12639,13 @@ export interface ISwipeGestureRecognizer {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -12653,7 +12654,7 @@ command?: any;
 commandParameter?: any;
 
 /** Property Direction of Type SwipeDirection */
-direction?: any;
+direction?: "Right" | "Left" | "Up" | "Down" | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12668,7 +12669,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Threshold of Type UInt32 */
 threshold?: any;
@@ -12699,16 +12700,16 @@ export interface ISwipeItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -12723,16 +12724,16 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IsDestructive of Type Boolean */
-isDestructive?: any;
+isDestructive?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -12741,10 +12742,10 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -12777,13 +12778,13 @@ export interface ISwipeItems {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12795,7 +12796,7 @@ effectControlProvider?: any;
 item?: any;
 
 /** Property Mode of Type SwipeMode */
-mode?: any;
+mode?: "Reveal" | "Execute" | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -12804,10 +12805,10 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property SwipeBehaviorOnInvoked of Type SwipeBehaviorOnInvoked */
-swipeBehaviorOnInvoked?: any;
+swipeBehaviorOnInvoked?: "Auto" | "Close" | "RemainOpen" | Bind;
     [key: string]: any;
 }
 
@@ -12835,28 +12836,28 @@ export interface ISwipeItemView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -12871,7 +12872,7 @@ content?: any;
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -12880,55 +12881,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -12940,22 +12941,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -12964,25 +12965,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -13045,16 +13046,16 @@ export interface ISwipeView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -13063,13 +13064,13 @@ bindingContext?: any;
 bottomItems?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Content of Type View */
 content?: any;
@@ -13078,7 +13079,7 @@ content?: any;
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -13087,58 +13088,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property LeftItems of Type SwipeItems */
 leftItems?: any;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -13153,22 +13154,22 @@ resources?: any;
 rightItems?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -13177,28 +13178,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TopItems of Type SwipeItems */
 topItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -13281,16 +13282,16 @@ export interface ISwitch {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -13299,10 +13300,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -13311,55 +13312,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsToggled of Type Boolean */
-isToggled?: any;
+isToggled?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property OnColor of Type Color */
-onColor?: any;
+onColor?: ColorItem | string | null | Bind;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -13371,22 +13372,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -13395,28 +13396,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property ThumbColor of Type Color */
-thumbColor?: any;
+thumbColor?: ColorItem | string | null | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -13469,28 +13470,28 @@ export interface ITabbedPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BarBackgroundColor of Type Color */
-barBackgroundColor?: any;
+barBackgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BarTextColor of Type Color */
-barTextColor?: any;
+barTextColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -13499,16 +13500,16 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property CurrentPage of Type Page */
 currentPage?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -13517,43 +13518,43 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
 itemsSource?: any;
@@ -13562,19 +13563,19 @@ itemsSource?: any;
 itemTemplate?: any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -13586,28 +13587,28 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property SelectedItem of Type Object */
 selectedItem?: any;
 
 /** Property SelectedTabColor of Type Color */
-selectedTabColor?: any;
+selectedTabColor?: ColorItem | string | null | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -13616,31 +13617,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property UnselectedTabColor of Type Color */
-unselectedTabColor?: any;
+unselectedTabColor?: ColorItem | string | null | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -13727,10 +13728,10 @@ dispatcher?: any;
 item?: any;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -13762,10 +13763,10 @@ dispatcher?: any;
 item?: any;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -13794,10 +13795,10 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -13817,16 +13818,16 @@ export interface ITableView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -13835,10 +13836,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -13847,49 +13848,49 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HasUnevenRows of Type Boolean */
-hasUnevenRows?: any;
+hasUnevenRows?: boolean | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property Intent of Type TableIntent */
-intent?: any;
+intent?: "Menu" | "Settings" | "Form" | "Data" | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Model of Type TableModel */
 model?: any;
@@ -13898,7 +13899,7 @@ model?: any;
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -13913,25 +13914,25 @@ resources?: any;
 root?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property RowHeight of Type Int32 */
-rowHeight?: any;
+rowHeight?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -13940,25 +13941,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -14016,13 +14017,13 @@ export interface ITapGestureRecognizer {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -14037,7 +14038,7 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property NumberOfTapsRequired of Type Int32 */
-numberOfTapsRequired?: any;
+numberOfTapsRequired?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -14046,7 +14047,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TappedCallback of Type Action`2 */
 tappedCallback?: any;
@@ -14080,22 +14081,22 @@ export interface ITemplatedPage {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BackgroundImage of Type String */
-backgroundImage?: any;
+backgroundImage?: string | null | Bind;
 
 /** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: any;
+backgroundImageSource?: /*ImageSource*/ any;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -14104,16 +14105,16 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ContainerArea of Type Rectangle */
-containerArea?: any;
+containerArea?: "Zero" | Bind;
 
 /** Property ControlTemplate of Type ControlTemplate */
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -14122,58 +14123,58 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: any;
+ignoresContainerArea?: boolean | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsBusy of Type Boolean */
-isBusy?: any;
+isBusy?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -14185,22 +14186,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -14209,28 +14210,28 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property Title of Type String */
-title?: any;
+title?: string | null | Bind;
 
 /** Property ToolbarItems of Type IList`1 */
 toolbarItems?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -14298,34 +14299,34 @@ export interface ITemplatedView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: any;
+cascadeInputTransparent?: boolean | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property ControlTemplate of Type ControlTemplate */
 controlTemplate?: any;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -14334,55 +14335,55 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: any;
+isClippedToBounds?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: any;
+padding?: /*Thickness*/ any;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -14394,22 +14395,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -14418,25 +14419,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -14494,31 +14495,31 @@ export interface ITimePicker {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: any;
+characterSpacing?: number | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -14527,61 +14528,61 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: any;
+fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: any;
+fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: any;
+fontSize?: number | Bind;
 
 /** Property Format of Type String */
-format?: any;
+format?: string | null | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -14593,22 +14594,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -14617,31 +14618,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: any;
+textColor?: ColorItem | string | null | Bind;
 
 /** Property Time of Type TimeSpan */
 time?: any;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -14694,13 +14695,13 @@ export interface IToolbarItem {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Command of Type ICommand */
 command?: any;
@@ -14715,22 +14716,22 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property Icon of Type FileImageSource */
-icon?: any;
+icon?: /*FileImageSource*/ any;
 
 /** Property IconImageSource of Type ImageSource */
-iconImageSource?: any;
+iconImageSource?: /*ImageSource*/ any;
 
 /** Property IsDestructive of Type Boolean */
-isDestructive?: any;
+isDestructive?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property Name of Type String */
-name?: any;
+name?: string | null | Bind;
 
 /** Property Order of Type ToolbarItemOrder */
-order?: any;
+order?: "Default" | "Primary" | "Secondary" | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -14739,13 +14740,13 @@ parent?: any;
 platform?: any;
 
 /** Property Priority of Type Int32 */
-priority?: any;
+priority?: number | Bind;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Text of Type String */
-text?: any;
+text?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -14778,7 +14779,7 @@ export interface IUriImageSource {
     
     
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -14787,10 +14788,10 @@ bindingContext?: any;
 cacheValidity?: any;
 
 /** Property CachingEnabled of Type Boolean */
-cachingEnabled?: any;
+cachingEnabled?: boolean | Bind;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -14805,7 +14806,7 @@ parent?: any;
 platform?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property Uri of Type Uri */
 uri?: any;
@@ -14842,7 +14843,7 @@ bindingContext?: any;
 dispatcher?: any;
 
 /** Property Url of Type String */
-url?: any;
+url?: string | null | Bind;
     [key: string]: any;
 }
 
@@ -14862,16 +14863,16 @@ export interface IView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -14880,10 +14881,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -14892,49 +14893,49 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -14946,22 +14947,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -14970,25 +14971,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
@@ -15041,31 +15042,31 @@ export interface IVisualElement {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
 
 /** Property Bounds of Type Rectangle */
-bounds?: any;
+bounds?: "Zero" | Bind;
 
 /** Property class of Type IList`1 */
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -15074,46 +15075,46 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property Height of Type Double */
-height?: any;
+height?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -15125,22 +15126,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Style of Type Style */
 style?: any;
@@ -15149,31 +15150,31 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property Width of Type Double */
-width?: any;
+width?: number | Bind;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
 
 /** Property X of Type Double */
-x?: any;
+x?: number | Bind;
 
 /** Property Y of Type Double */
-y?: any;
+y?: number | Bind;
     [key: string]: any;
 }
 
@@ -15221,16 +15222,16 @@ export interface IWebView {
     
     
 /** Property AnchorX of Type Double */
-anchorX?: any;
+anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: any;
+anchorY?: number | Bind;
 
 /** Property AutomationId of Type String */
-automationId?: any;
+automationId?: string | null | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: any;
+backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BindingContext of Type Object */
 bindingContext?: any;
@@ -15239,10 +15240,10 @@ bindingContext?: any;
 class?: any;
 
 /** Property ClassId of Type String */
-classId?: any;
+classId?: string | null | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: any;
+disableLayout?: boolean | Bind;
 
 /** Property Dispatcher of Type IDispatcher */
 dispatcher?: any;
@@ -15251,49 +15252,49 @@ dispatcher?: any;
 effectControlProvider?: any;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: any;
+flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: any;
+heightRequest?: number | Bind;
 
 /** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: any;
+horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: any;
+inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: any;
+isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: any;
+isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: any;
+isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: any;
+isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: any;
+isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: any;
+isVisible?: boolean | Bind;
 
 /** Property Margin of Type Thickness */
-margin?: any;
+margin?: /*Thickness*/ any;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: any;
+minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: any;
+minimumWidthRequest?: number | Bind;
 
 /** Property Navigation of Type INavigation */
 navigation?: any;
 
 /** Property Opacity of Type Double */
-opacity?: any;
+opacity?: number | Bind;
 
 /** Property Parent of Type Element */
 parent?: any;
@@ -15305,22 +15306,22 @@ platform?: any;
 resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: any;
+rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: any;
+rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: any;
+rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: any;
+scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: any;
+scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: any;
+scaleY?: number | Bind;
 
 /** Property Source of Type WebViewSource */
 source?: any;
@@ -15332,25 +15333,25 @@ style?: any;
 styleClass?: any;
 
 /** Property StyleId of Type String */
-styleId?: any;
+styleId?: string | null | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: any;
+tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: any;
+translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: any;
+translationY?: number | Bind;
 
 /** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: any;
+verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: any;
+visual?: /*IVisual*/ any;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: any;
+widthRequest?: number | Bind;
     [key: string]: any;
 }
 
