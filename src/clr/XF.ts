@@ -5774,6 +5774,9 @@ emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 /** Property CarouselView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
 gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
 
+/** Property CarouselView.ItemsLayout of Type Xamarin.Forms.LinearItemsLayout */
+itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+
 /** Property CarouselView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
 itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
 
@@ -5804,6 +5807,8 @@ CarouselView.effects = XNode.prepare("Xamarin.Forms.CarouselView:Effects;Xamarin
 CarouselView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.CarouselView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
 
 CarouselView.gestureRecognizers = XNode.prepare("Xamarin.Forms.CarouselView:GestureRecognizers;Xamarin.Forms.Core", true, false);
+
+CarouselView.itemsLayout = XNode.prepare("Xamarin.Forms.CarouselView:ItemsLayout;Xamarin.Forms.Core", true, false);
 
 CarouselView.itemTemplate = XNode.prepare("Xamarin.Forms.CarouselView:ItemTemplate;Xamarin.Forms.Core", true, true);
 
