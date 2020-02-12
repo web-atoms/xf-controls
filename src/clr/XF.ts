@@ -8333,6 +8333,9 @@ MenuItem.menu = XNode.prepare("Xamarin.Forms.MenuItem:Menu;Xamarin.Forms.Core", 
 
 export interface INavigationPage {
     
+/** Constructor Parameter (root) of type Page */
+root: any;
+
     
 /** Property AnchorX of Type Double */
 anchorX?: number | Bind;
