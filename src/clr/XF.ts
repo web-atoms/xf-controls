@@ -7,7 +7,7 @@ const XFNS1 = XNode.namespace("Xamarin.Forms.StyleSheets","Xamarin.Forms.Core")
 
 
 @XFNS0("AbsoluteLayout")
-class AbsoluteLayout extends RootObject {
+class AbsoluteLayout extends Layout {
     
 /** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty*/
 public static layoutFlags = XNode.attached();
@@ -400,7 +400,7 @@ public textColor?: ColorItem | string | null | Bind;
 
 
 @XFNS0("CarouselPage")
-class CarouselPage extends RootObject {
+class CarouselPage extends Page {
     
     
 /** Property CarouselPage.Children of Type Xamarin.Forms.ContentPage */
@@ -922,7 +922,7 @@ public file?: string | null | Bind;
 
 
 @XFNS0("FlexLayout")
-class FlexLayout extends RootObject {
+class FlexLayout extends Layout {
     
 /** Attached Property FlexLayout.Order of Type BindableProperty*/
 public static order = XNode.attached();
@@ -1031,7 +1031,7 @@ public static gestureRecognizers = XNode.property()
 
 
 @XFNS0("Grid")
-class Grid extends RootObject {
+class Grid extends Layout {
     
 /** Attached Property Grid.Row of Type BindableProperty*/
 public static row = XNode.attached();
@@ -1577,7 +1577,7 @@ public yAlign?: "Start" | "Center" | "End" | Bind;
 
 
 @XFNS0("ListView")
-class ListView extends RootObject {
+class ListView extends View {
     
     
 /** Property ListView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
@@ -1922,7 +1922,7 @@ public refreshColor?: ColorItem | string | null | Bind;
 
 
 @XFNS0("RelativeLayout")
-class RelativeLayout extends RootObject {
+class RelativeLayout extends Layout {
     
 /** Attached Property RelativeLayout.XConstraint of Type BindableProperty*/
 public static xConstraint = XNode.attached();
@@ -2512,7 +2512,7 @@ public textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
 
 
 @XFNS0("StackLayout")
-class StackLayout extends RootObject {
+class StackLayout extends Layout {
     
     
 /** Property StackLayout.Children of Type Xamarin.Forms.View */
@@ -2669,7 +2669,7 @@ public thumbColor?: ColorItem | string | null | Bind;
 
 
 @XFNS0("TabbedPage")
-class TabbedPage extends RootObject {
+class TabbedPage extends Page {
     
     
 /** Property TabbedPage.Children of Type Xamarin.Forms.Page */
@@ -2709,7 +2709,7 @@ public unselectedTabColor?: ColorItem | string | null | Bind;
 
 
 @XFNS0("TableRoot")
-class TableRoot extends RootObject {
+class TableRoot extends TableSectionBase {
     
     
 /** Property TableRoot.Item of Type Xamarin.Forms.Cell */
@@ -2722,7 +2722,7 @@ public item?: any;
 
 
 @XFNS0("TableSection")
-class TableSection extends RootObject {
+class TableSection extends TableSectionBase {
     
     
 /** Property TableSection.Item of Type Xamarin.Forms.Cell */
