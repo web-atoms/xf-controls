@@ -11,7 +11,7 @@ class AtomView extends RootObject {
     public static emptyDataTemplate = XNode.template();
 }
 
-@NSAtoms("AtomToolbrItem")
+@NSAtoms("AtomToolbarItem")
 class AtomToolbarItem extends XF.ToolbarItem {
 
     public static iconImageSource = XNode.template();
@@ -42,19 +42,19 @@ class AtomForm extends RootObject {
 @NSAtoms("AtomField")
 class AtomField extends RootObject {
 
-    public label?: string | Bind;
-    public isRequired?: boolean | Bind;
-    public labelColor?: string | Bind;
-    public error?: string | Bind;
-    public errorColor?: string | Bind;
-    public errorBackgroundColor?: string | Bind;
+    public label?: string;
+    public isRequired?: boolean;
+    public labelColor?: string;
+    public error?: string;
+    public errorColor?: string;
+    public errorBackgroundColor?: string;
 }
 
 @NSAtoms("AtomTemplateSelector")
 class AtomTemplateSelector extends RootObject {
     public static templates = XNode.template();
     public static templateSelector = XNode.attached();
-    selector: (data: any) => number | Bind;
+    selector: (data: any) => number;
 }
 
 const WA = {
