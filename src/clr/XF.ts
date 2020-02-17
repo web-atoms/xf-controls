@@ -6,24 +6,6 @@ const XFNS0 = XNode.namespace("Xamarin.Forms","Xamarin.Forms.Core")
 const XFNS1 = XNode.namespace("Xamarin.Forms.StyleSheets","Xamarin.Forms.Core")
 
 
-@XFNS0("AbsoluteLayout")
-class AbsoluteLayout extends Layout {
-    
-/** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty*/
-public static layoutFlags = XNode.attached();
-
-
-/** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty*/
-public static layoutBounds = XNode.attached();
-
-    
-/** Property AbsoluteLayout.Children of Type Xamarin.Forms.View */
-public static children = XNode.property()
-    
-    
-}
-
-
 @XFNS0("BindableObject")
 class BindableObject extends RootObject {
     
@@ -228,6 +210,41 @@ public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" 
 }
 
 
+@XFNS0("Layout")
+class Layout extends View {
+    
+    
+    
+    
+/** Property CascadeInputTransparent of Type Boolean */
+public cascadeInputTransparent?: boolean | Bind;
+
+/** Property IsClippedToBounds of Type Boolean */
+public isClippedToBounds?: boolean | Bind;
+
+/** Property Padding of Type Thickness */
+public padding?: /*Thickness*/ any;
+}
+
+
+@XFNS0("AbsoluteLayout")
+class AbsoluteLayout extends Layout {
+    
+/** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty*/
+public static layoutFlags = XNode.attached();
+
+
+/** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty*/
+public static layoutBounds = XNode.attached();
+
+    
+/** Property AbsoluteLayout.Children of Type Xamarin.Forms.View */
+public static children = XNode.property()
+    
+    
+}
+
+
 @XFNS0("ActivityIndicator")
 class ActivityIndicator extends View {
     
@@ -396,6 +413,52 @@ public text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
+}
+
+
+@XFNS0("Page")
+class Page extends VisualElement {
+    
+    
+/** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+public static backgroundImageSource = XNode.property();
+
+/** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
+public static iconImageSource = XNode.property();
+
+/** Property Page.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
+public static toolbarItems = XNode.property()
+    
+    
+/** Property BackgroundImage of Type String */
+public backgroundImage?: string | null | Bind;
+
+/** Property BackgroundImageSource of Type ImageSource */
+public backgroundImageSource?: /*ImageSource*/ any;
+
+/** Property ContainerArea of Type Rectangle */
+public containerArea?: "Zero" | Bind;
+
+/** Property Icon of Type FileImageSource */
+public icon?: /*FileImageSource*/ any;
+
+/** Property IconImageSource of Type ImageSource */
+public iconImageSource?: /*ImageSource*/ any;
+
+/** Property IgnoresContainerArea of Type Boolean */
+public ignoresContainerArea?: boolean | Bind;
+
+/** Property IsBusy of Type Boolean */
+public isBusy?: boolean | Bind;
+
+/** Property Padding of Type Thickness */
+public padding?: /*Thickness*/ any;
+
+/** Property Title of Type String */
+public title?: string | null | Bind;
+
+/** Property ToolbarItems of Type IList`1 */
+public toolbarItems?: any;
 }
 
 
@@ -601,52 +664,6 @@ public width?: "Auto" | number | string | Bind;
 }
 
 
-@XFNS0("Page")
-class Page extends VisualElement {
-    
-    
-/** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-public static backgroundImageSource = XNode.property();
-
-/** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
-public static iconImageSource = XNode.property();
-
-/** Property Page.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-public static toolbarItems = XNode.property()
-    
-    
-/** Property BackgroundImage of Type String */
-public backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-public backgroundImageSource?: /*ImageSource*/ any;
-
-/** Property ContainerArea of Type Rectangle */
-public containerArea?: "Zero" | Bind;
-
-/** Property Icon of Type FileImageSource */
-public icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-public iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-public ignoresContainerArea?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-public isBusy?: boolean | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Title of Type String */
-public title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-public toolbarItems?: any;
-}
-
-
 @XFNS0("TemplatedPage")
 class TemplatedPage extends Page {
     
@@ -670,23 +687,6 @@ public static content = XNode.property()
     
 /** Property Content of Type View */
 public content?: any;
-}
-
-
-@XFNS0("Layout")
-class Layout extends View {
-    
-    
-    
-    
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
 }
 
 
@@ -2708,6 +2708,20 @@ public unselectedTabColor?: ColorItem | string | null | Bind;
 }
 
 
+@XFNS0("TableSectionBase")
+class TableSectionBase extends BindableObject {
+    
+    
+    
+    
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
+
+/** Property Title of Type String */
+public title?: string | null | Bind;
+}
+
+
 @XFNS0("TableRoot")
 class TableRoot extends TableSectionBase {
     
@@ -2731,20 +2745,6 @@ public static item = XNode.property()
     
 /** Property Item of Type Cell */
 public item?: any;
-}
-
-
-@XFNS0("TableSectionBase")
-class TableSectionBase extends BindableObject {
-    
-    
-    
-    
-/** Property TextColor of Type Color */
-public textColor?: ColorItem | string | null | Bind;
-
-/** Property Title of Type String */
-public title?: string | null | Bind;
 }
 
 
@@ -2888,12 +2888,13 @@ class StyleSheet extends RootObject {
     
     
 }
-const XF = { AbsoluteLayout,
-	BindableObject,
+const XF = { BindableObject,
 	Element,
 	NavigableElement,
 	VisualElement,
 	View,
+	Layout,
+	AbsoluteLayout,
 	ActivityIndicator,
 	Application,
 	AppLinkEntry,
@@ -2901,6 +2902,7 @@ const XF = { AbsoluteLayout,
 	BindableLayout,
 	BoxView,
 	Button,
+	Page,
 	CarouselPage,
 	Cell,
 	EntryCell,
@@ -2912,10 +2914,8 @@ const XF = { AbsoluteLayout,
 	GestureRecognizer,
 	ClickGestureRecognizer,
 	ColumnDefinition,
-	Page,
 	TemplatedPage,
 	ContentPage,
-	Layout,
 	ContentPresenter,
 	TemplatedView,
 	ContentView,
@@ -2993,9 +2993,9 @@ const XF = { AbsoluteLayout,
 	SwipeView,
 	Switch,
 	TabbedPage,
+	TableSectionBase,
 	TableRoot,
 	TableSection,
-	TableSectionBase,
 	TableView,
 	TapGestureRecognizer,
 	TimePicker,
