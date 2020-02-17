@@ -1,7 +1,14 @@
 //tslint:disable
-import XNode from "@web-atoms/core/dist/core/XNode";
-import { IListView, IToolbarItem } from "./XF";
+import XNode, { RootObject } from "@web-atoms/core/dist/core/XNode";
+import XF, { IListView, IToolbarItem } from "./XF";
 import Bind from "@web-atoms/core/dist/core/Bind";
+
+const NSAtoms = XNode.namespace("WebAtoms.Controls", "WebAtoms.XF");
+
+@NSAtoms("AtomView")
+class AtomView extends RootObject {
+    public static dataTemplate = XNode.template(XF.DataTemplate);
+}
 
 export interface IAtomView {
     dataTemplate?: any;
