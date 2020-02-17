@@ -1,20 +1,16 @@
-import { CancelToken, IClassOf } from "@web-atoms/core/dist/core/types";
-import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
-import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-
-import { AtomList } from "@web-atoms/core/dist/core/AtomList";
-
-import IFetchEvent from "@web-atoms/core/dist/core/IFetchEvent";
-
-import { BindableProperty } from "@web-atoms/core/dist/core/BindableProperty";
-
-import { default as SearchPage } from "./SearchPage";
-
 import { App } from "@web-atoms/core/dist/App";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import { AtomList } from "@web-atoms/core/dist/core/AtomList";
+import { BindableProperty } from "@web-atoms/core/dist/core/BindableProperty";
+import IFetchEvent from "@web-atoms/core/dist/core/IFetchEvent";
+import { CancelToken, IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import ReferenceService from "@web-atoms/core/dist/services/ReferenceService";
+import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import WA from "../clr/WA";
 import XF from "../clr/XF";
+import { default as SearchPage } from "./SearchPage";
 
 export type Factory = () => AtomXFControl;
 
@@ -62,7 +58,7 @@ export default class AtomChooser extends AtomXFControl {
     private cancelToken: CancelToken = null;
 
     constructor(app: App, e?: any) {
-        super(app, e || AtomBridge.instance.create("WebAtoms.AtomView"));
+        super(app, e || AtomBridge.instance.create(WA.AtomView));
     }
 
     public onUpdateUI() {

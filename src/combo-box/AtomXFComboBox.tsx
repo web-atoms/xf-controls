@@ -86,7 +86,7 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     protected create() {
 
-        const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
+        // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
 
         this.render(<XF.Grid>
 

@@ -1,11 +1,7 @@
 import XNode from "@web-atoms/core/dist/core/XNode";
-import { IContentPage } from "./XF";
+import XF from "./XF";
 
-export interface IPopupPage extends IContentPage {
-    [key: string]: any;
+const NSRG = XNode.namespace("Rg.Plugins.Popup.Pages","Rg.Plugins.Popup");
+
+export class PopupPage extends XF.ContentPage {
 }
-
-export type IPopupPageConstructor = (a?: Partial<IPopupPage>, node?: XNode) => XNode;
-
-export const PopupPage: IPopupPageConstructor =
-    XNode.prepare("Rg.Plugins.Popup.Pages.PopupPage;Rg.Plugins.Popup") as any;

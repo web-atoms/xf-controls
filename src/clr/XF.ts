@@ -1,15519 +1,2966 @@
 //tslint:disable
-import XNode from "@web-atoms/core/dist/core/XNode";
+import XNode, { RootObject } from "@web-atoms/core/dist/core/XNode";
 import Bind from "@web-atoms/core/dist/core/Bind";import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 
+const XFNS0 = XNode.namespace("Xamarin.Forms","Xamarin.Forms.Core")
+const XFNS1 = XNode.namespace("Xamarin.Forms.StyleSheets","Xamarin.Forms.Core")
 
-export interface IAbsoluteLayout {
+
+@XFNS0("AbsoluteLayout")
+class AbsoluteLayout extends RootObject {
     
+/** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty*/
+public static layoutFlags = XNode.attached();
+
+
+/** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty*/
+public static layoutBounds = XNode.attached();
+
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IAbsoluteLayoutConstructor {
-    (a?: Partial<IAbsoluteLayout>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty */
-layoutFlags?(v: any);
-
-/** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty */
-layoutBounds?(v: any)
-    
-/** Property AbsoluteLayout.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property AbsoluteLayout.Children of Type Xamarin.Forms.View */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AbsoluteLayout.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AbsoluteLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AbsoluteLayout.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AbsoluteLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AbsoluteLayout.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AbsoluteLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+public static children = XNode.property()
+    
+    
 }
 
-/** AbsoluteLayout */
-const AbsoluteLayout: IAbsoluteLayoutConstructor = XNode.prepare<IAbsoluteLayout>("Xamarin.Forms.AbsoluteLayout;Xamarin.Forms.Core", false, false);
 
-AbsoluteLayout.layoutFlags = XNode.attached("Xamarin.Forms.AbsoluteLayout:LayoutFlags;Xamarin.Forms.Core");
-
-AbsoluteLayout.layoutBounds = XNode.attached("Xamarin.Forms.AbsoluteLayout:LayoutBounds;Xamarin.Forms.Core");
-
-AbsoluteLayout.behaviors = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Behaviors;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.children = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Children;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.effects = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Effects;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.AbsoluteLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.menu = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Menu;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.resources = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Resources;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.styleClass = XNode.prepare("Xamarin.Forms.AbsoluteLayout:StyleClass;Xamarin.Forms.Core", true, false);
-
-AbsoluteLayout.triggers = XNode.prepare("Xamarin.Forms.AbsoluteLayout:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IActivityIndicator {
+@XFNS0("BindableObject")
+class BindableObject extends RootObject {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
+    
+    
 /** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Color of Type Color */
-color?: ColorItem | string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
+public bindingContext?: any;
 
 /** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsRunning of Type Boolean */
-isRunning?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public dispatcher?: any;
 }
 
-export interface IActivityIndicatorConstructor {
-    (a?: Partial<IActivityIndicator>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ActivityIndicator.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
-/** Property ActivityIndicator.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ActivityIndicator.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ActivityIndicator.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ActivityIndicator.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ActivityIndicator.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ActivityIndicator.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ActivityIndicator */
-const ActivityIndicator: IActivityIndicatorConstructor = XNode.prepare<IActivityIndicator>("Xamarin.Forms.ActivityIndicator;Xamarin.Forms.Core", false, false);
-
-
-ActivityIndicator.behaviors = XNode.prepare("Xamarin.Forms.ActivityIndicator:Behaviors;Xamarin.Forms.Core", true, false);
-
-ActivityIndicator.effects = XNode.prepare("Xamarin.Forms.ActivityIndicator:Effects;Xamarin.Forms.Core", true, false);
-
-ActivityIndicator.gestureRecognizers = XNode.prepare("Xamarin.Forms.ActivityIndicator:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ActivityIndicator.menu = XNode.prepare("Xamarin.Forms.ActivityIndicator:Menu;Xamarin.Forms.Core", true, false);
-
-ActivityIndicator.resources = XNode.prepare("Xamarin.Forms.ActivityIndicator:Resources;Xamarin.Forms.Core", true, false);
-
-ActivityIndicator.styleClass = XNode.prepare("Xamarin.Forms.ActivityIndicator:StyleClass;Xamarin.Forms.Core", true, false);
-
-ActivityIndicator.triggers = XNode.prepare("Xamarin.Forms.ActivityIndicator:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IApplication {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property MainPage of Type Page */
-mainPage?: any;
-
-/** Property NavigationProxy of Type NavigationProxy */
-navigationProxy?: any;
-
-/** Property PanGestureId of Type Int32 */
-panGestureId?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IApplicationConstructor {
-    (a?: Partial<IApplication>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Application.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Application.MainPage of Type Xamarin.Forms.Page */
-mainPage?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Application.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Application.Properties of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-properties?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Application.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Application */
-const Application: IApplicationConstructor = XNode.prepare<IApplication>("Xamarin.Forms.Application;Xamarin.Forms.Core", false, false);
-
-
-Application.effects = XNode.prepare("Xamarin.Forms.Application:Effects;Xamarin.Forms.Core", true, false);
-
-Application.mainPage = XNode.prepare("Xamarin.Forms.Application:MainPage;Xamarin.Forms.Core", true, false);
-
-Application.menu = XNode.prepare("Xamarin.Forms.Application:Menu;Xamarin.Forms.Core", true, false);
-
-Application.properties = XNode.prepare("Xamarin.Forms.Application:Properties;Xamarin.Forms.Core", true, false);
-
-Application.resources = XNode.prepare("Xamarin.Forms.Application:Resources;Xamarin.Forms.Core", true, false);
-
-
-export interface IAppLinkEntry {
-    
-    
-/** Property AppLinkUri of Type Uri */
-appLinkUri?: any;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Description of Type String */
-description?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property IsLinkActive of Type Boolean */
-isLinkActive?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Thumbnail of Type ImageSource */
-thumbnail?: /*ImageSource*/ any;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IAppLinkEntryConstructor {
-    (a?: Partial<IAppLinkEntry>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property AppLinkEntry.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AppLinkEntry.KeyValues of Type System.Collections.Generic.KeyValuePair`2[System.String,System.String] */
-keyValues?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AppLinkEntry.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property AppLinkEntry.Thumbnail of Type Xamarin.Forms.ImageSource */
-thumbnail?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** AppLinkEntry */
-const AppLinkEntry: IAppLinkEntryConstructor = XNode.prepare<IAppLinkEntry>("Xamarin.Forms.AppLinkEntry;Xamarin.Forms.Core", false, false);
-
-
-AppLinkEntry.effects = XNode.prepare("Xamarin.Forms.AppLinkEntry:Effects;Xamarin.Forms.Core", true, false);
-
-AppLinkEntry.keyValues = XNode.prepare("Xamarin.Forms.AppLinkEntry:KeyValues;Xamarin.Forms.Core", true, false);
-
-AppLinkEntry.menu = XNode.prepare("Xamarin.Forms.AppLinkEntry:Menu;Xamarin.Forms.Core", true, false);
-
-AppLinkEntry.thumbnail = XNode.prepare("Xamarin.Forms.AppLinkEntry:Thumbnail;Xamarin.Forms.Core", true, false);
-
-
-export interface IBaseMenuItem {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IBaseMenuItemConstructor {
-    (a?: Partial<IBaseMenuItem>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property BaseMenuItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BaseMenuItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** BaseMenuItem */
-const BaseMenuItem: IBaseMenuItemConstructor = XNode.prepare<IBaseMenuItem>("Xamarin.Forms.BaseMenuItem;Xamarin.Forms.Core", false, false);
-
-
-BaseMenuItem.effects = XNode.prepare("Xamarin.Forms.BaseMenuItem:Effects;Xamarin.Forms.Core", true, false);
-
-BaseMenuItem.menu = XNode.prepare("Xamarin.Forms.BaseMenuItem:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IBindableLayout {
-    
-    
-    [key: string]: any;
-}
-
-export interface IBindableLayoutConstructor {
-    (a?: Partial<IBindableLayout>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property BindableLayout.ItemsSource of Type BindableProperty */
-itemsSource?(v: any)
-    
-/** Property BindableLayout.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BindableLayout.ItemTemplateSelector of Type Xamarin.Forms.DataTemplateSelector */
-itemTemplateSelector?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** BindableLayout */
-const BindableLayout: IBindableLayoutConstructor = XNode.prepare<IBindableLayout>("Xamarin.Forms.BindableLayout;Xamarin.Forms.Core", false, false);
-
-BindableLayout.itemsSource = XNode.attached("Xamarin.Forms.BindableLayout:ItemsSource;Xamarin.Forms.Core");
-
-BindableLayout.itemTemplate = XNode.prepare("Xamarin.Forms.BindableLayout:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-BindableLayout.itemTemplateSelector = XNode.prepare("Xamarin.Forms.BindableLayout:ItemTemplateSelector;Xamarin.Forms.Core", true, true);
-
-
-export interface IBindableObject {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-    [key: string]: any;
-}
-
-export interface IBindableObjectConstructor {
-    (a?: Partial<IBindableObject>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** BindableObject */
-const BindableObject: IBindableObjectConstructor = XNode.prepare<IBindableObject>("Xamarin.Forms.BindableObject;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IBoxView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Color of Type Color */
-color?: ColorItem | string | null | Bind;
-
-/** Property CornerRadius of Type CornerRadius */
-cornerRadius?: /*CornerRadius*/ any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IBoxViewConstructor {
-    (a?: Partial<IBoxView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property BoxView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BoxView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BoxView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BoxView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BoxView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BoxView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BoxView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** BoxView */
-const BoxView: IBoxViewConstructor = XNode.prepare<IBoxView>("Xamarin.Forms.BoxView;Xamarin.Forms.Core", false, false);
-
-
-BoxView.behaviors = XNode.prepare("Xamarin.Forms.BoxView:Behaviors;Xamarin.Forms.Core", true, false);
-
-BoxView.effects = XNode.prepare("Xamarin.Forms.BoxView:Effects;Xamarin.Forms.Core", true, false);
-
-BoxView.gestureRecognizers = XNode.prepare("Xamarin.Forms.BoxView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-BoxView.menu = XNode.prepare("Xamarin.Forms.BoxView:Menu;Xamarin.Forms.Core", true, false);
-
-BoxView.resources = XNode.prepare("Xamarin.Forms.BoxView:Resources;Xamarin.Forms.Core", true, false);
-
-BoxView.styleClass = XNode.prepare("Xamarin.Forms.BoxView:StyleClass;Xamarin.Forms.Core", true, false);
-
-BoxView.triggers = XNode.prepare("Xamarin.Forms.BoxView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IButton {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property BorderColor of Type Color */
-borderColor?: ColorItem | string | null | Bind;
-
-/** Property BorderRadius of Type Int32 */
-borderRadius?: number | Bind;
-
-/** Property BorderWidth of Type Double */
-borderWidth?: number | Bind;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property ContentLayout of Type ButtonContentLayout */
-contentLayout?: /*ButtonContentLayout*/ any;
-
-/** Property CornerRadius of Type Int32 */
-cornerRadius?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Font of Type Font */
-font?: /*Font*/ any;
-
-/** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Image of Type FileImageSource */
-image?: /*FileImageSource*/ any;
-
-/** Property ImageSource of Type ImageSource */
-imageSource?: /*ImageSource*/ any;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IButtonConstructor {
-    (a?: Partial<IButton>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Button.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.ImageSource of Type Xamarin.Forms.ImageSource */
-imageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Button.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Button */
-const Button: IButtonConstructor = XNode.prepare<IButton>("Xamarin.Forms.Button;Xamarin.Forms.Core", false, false);
-
-
-Button.behaviors = XNode.prepare("Xamarin.Forms.Button:Behaviors;Xamarin.Forms.Core", true, false);
-
-Button.effects = XNode.prepare("Xamarin.Forms.Button:Effects;Xamarin.Forms.Core", true, false);
-
-Button.gestureRecognizers = XNode.prepare("Xamarin.Forms.Button:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Button.imageSource = XNode.prepare("Xamarin.Forms.Button:ImageSource;Xamarin.Forms.Core", true, false);
-
-Button.menu = XNode.prepare("Xamarin.Forms.Button:Menu;Xamarin.Forms.Core", true, false);
-
-Button.resources = XNode.prepare("Xamarin.Forms.Button:Resources;Xamarin.Forms.Core", true, false);
-
-Button.styleClass = XNode.prepare("Xamarin.Forms.Button:StyleClass;Xamarin.Forms.Core", true, false);
-
-Button.triggers = XNode.prepare("Xamarin.Forms.Button:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ICarouselPage {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
-
-/** Property CurrentPage of Type ContentPage */
-currentPage?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectedItem of Type Object */
-selectedItem?: any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ICarouselPageConstructor {
-    (a?: Partial<ICarouselPage>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property CarouselPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.Children of Type Xamarin.Forms.ContentPage */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.CurrentPage of Type Xamarin.Forms.ContentPage */
-currentPage?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselPage.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** CarouselPage */
-const CarouselPage: ICarouselPageConstructor = XNode.prepare<ICarouselPage>("Xamarin.Forms.CarouselPage;Xamarin.Forms.Core", false, false);
-
-
-CarouselPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-CarouselPage.behaviors = XNode.prepare("Xamarin.Forms.CarouselPage:Behaviors;Xamarin.Forms.Core", true, false);
-
-CarouselPage.children = XNode.prepare("Xamarin.Forms.CarouselPage:Children;Xamarin.Forms.Core", true, false);
-
-CarouselPage.currentPage = XNode.prepare("Xamarin.Forms.CarouselPage:CurrentPage;Xamarin.Forms.Core", true, false);
-
-CarouselPage.effects = XNode.prepare("Xamarin.Forms.CarouselPage:Effects;Xamarin.Forms.Core", true, false);
-
-CarouselPage.iconImageSource = XNode.prepare("Xamarin.Forms.CarouselPage:IconImageSource;Xamarin.Forms.Core", true, false);
-
-CarouselPage.itemTemplate = XNode.prepare("Xamarin.Forms.CarouselPage:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-CarouselPage.menu = XNode.prepare("Xamarin.Forms.CarouselPage:Menu;Xamarin.Forms.Core", true, false);
-
-CarouselPage.resources = XNode.prepare("Xamarin.Forms.CarouselPage:Resources;Xamarin.Forms.Core", true, false);
-
-CarouselPage.styleClass = XNode.prepare("Xamarin.Forms.CarouselPage:StyleClass;Xamarin.Forms.Core", true, false);
-
-CarouselPage.toolbarItems = XNode.prepare("Xamarin.Forms.CarouselPage:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-CarouselPage.triggers = XNode.prepare("Xamarin.Forms.CarouselPage:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ICell {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface ICellConstructor {
-    (a?: Partial<ICell>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Cell.ContextActions of Type Xamarin.Forms.MenuItem */
-contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Cell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Cell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Cell */
-const Cell: ICellConstructor = XNode.prepare<ICell>("Xamarin.Forms.Cell;Xamarin.Forms.Core", false, false);
-
-
-Cell.contextActions = XNode.prepare("Xamarin.Forms.Cell:ContextActions;Xamarin.Forms.Core", true, false);
-
-Cell.effects = XNode.prepare("Xamarin.Forms.Cell:Effects;Xamarin.Forms.Core", true, false);
-
-Cell.menu = XNode.prepare("Xamarin.Forms.Cell:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IEntryCell {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Keyboard of Type Keyboard */
-keyboard?: /*Keyboard*/ any;
-
-/** Property Label of Type String */
-label?: string | null | Bind;
-
-/** Property LabelColor of Type Color */
-labelColor?: ColorItem | string | null | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Placeholder of Type String */
-placeholder?: string | null | Bind;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property XAlign of Type TextAlignment */
-xAlign?: "Start" | "Center" | "End" | Bind;
-    [key: string]: any;
-}
-
-export interface IEntryCellConstructor {
-    (a?: Partial<IEntryCell>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property EntryCell.ContextActions of Type Xamarin.Forms.MenuItem */
-contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property EntryCell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property EntryCell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** EntryCell */
-const EntryCell: IEntryCellConstructor = XNode.prepare<IEntryCell>("Xamarin.Forms.EntryCell;Xamarin.Forms.Core", false, false);
-
-
-EntryCell.contextActions = XNode.prepare("Xamarin.Forms.EntryCell:ContextActions;Xamarin.Forms.Core", true, false);
-
-EntryCell.effects = XNode.prepare("Xamarin.Forms.EntryCell:Effects;Xamarin.Forms.Core", true, false);
-
-EntryCell.menu = XNode.prepare("Xamarin.Forms.EntryCell:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IImageCell {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Detail of Type String */
-detail?: string | null | Bind;
-
-/** Property DetailColor of Type Color */
-detailColor?: ColorItem | string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property ImageSource of Type ImageSource */
-imageSource?: /*ImageSource*/ any;
-
-/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IImageCellConstructor {
-    (a?: Partial<IImageCell>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ImageCell.ContextActions of Type Xamarin.Forms.MenuItem */
-contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageCell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageCell.ImageSource of Type Xamarin.Forms.ImageSource */
-imageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageCell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ImageCell */
-const ImageCell: IImageCellConstructor = XNode.prepare<IImageCell>("Xamarin.Forms.ImageCell;Xamarin.Forms.Core", false, false);
-
-
-ImageCell.contextActions = XNode.prepare("Xamarin.Forms.ImageCell:ContextActions;Xamarin.Forms.Core", true, false);
-
-ImageCell.effects = XNode.prepare("Xamarin.Forms.ImageCell:Effects;Xamarin.Forms.Core", true, false);
-
-ImageCell.imageSource = XNode.prepare("Xamarin.Forms.ImageCell:ImageSource;Xamarin.Forms.Core", true, false);
-
-ImageCell.menu = XNode.prepare("Xamarin.Forms.ImageCell:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwitchCell {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property On of Type Boolean */
-on?: boolean | Bind;
-
-/** Property OnColor of Type Color */
-onColor?: ColorItem | string | null | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface ISwitchCellConstructor {
-    (a?: Partial<ISwitchCell>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property SwitchCell.ContextActions of Type Xamarin.Forms.MenuItem */
-contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwitchCell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwitchCell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SwitchCell */
-const SwitchCell: ISwitchCellConstructor = XNode.prepare<ISwitchCell>("Xamarin.Forms.SwitchCell;Xamarin.Forms.Core", false, false);
-
-
-SwitchCell.contextActions = XNode.prepare("Xamarin.Forms.SwitchCell:ContextActions;Xamarin.Forms.Core", true, false);
-
-SwitchCell.effects = XNode.prepare("Xamarin.Forms.SwitchCell:Effects;Xamarin.Forms.Core", true, false);
-
-SwitchCell.menu = XNode.prepare("Xamarin.Forms.SwitchCell:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ITextCell {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Detail of Type String */
-detail?: string | null | Bind;
-
-/** Property DetailColor of Type Color */
-detailColor?: ColorItem | string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-    [key: string]: any;
-}
-
-export interface ITextCellConstructor {
-    (a?: Partial<ITextCell>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property TextCell.ContextActions of Type Xamarin.Forms.MenuItem */
-contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TextCell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TextCell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TextCell */
-const TextCell: ITextCellConstructor = XNode.prepare<ITextCell>("Xamarin.Forms.TextCell;Xamarin.Forms.Core", false, false);
-
-
-TextCell.contextActions = XNode.prepare("Xamarin.Forms.TextCell:ContextActions;Xamarin.Forms.Core", true, false);
-
-TextCell.effects = XNode.prepare("Xamarin.Forms.TextCell:Effects;Xamarin.Forms.Core", true, false);
-
-TextCell.menu = XNode.prepare("Xamarin.Forms.TextCell:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IViewCell {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
-isContextActionsLegacyModeEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property View of Type View */
-view?: any;
-    [key: string]: any;
-}
-
-export interface IViewCellConstructor {
-    (a?: Partial<IViewCell>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ViewCell.ContextActions of Type Xamarin.Forms.MenuItem */
-contextActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ViewCell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ViewCell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ViewCell.View of Type Xamarin.Forms.View */
-view?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ViewCell */
-const ViewCell: IViewCellConstructor = XNode.prepare<IViewCell>("Xamarin.Forms.ViewCell;Xamarin.Forms.Core", false, false);
-
-
-ViewCell.contextActions = XNode.prepare("Xamarin.Forms.ViewCell:ContextActions;Xamarin.Forms.Core", true, false);
-
-ViewCell.effects = XNode.prepare("Xamarin.Forms.ViewCell:Effects;Xamarin.Forms.Core", true, false);
-
-ViewCell.menu = XNode.prepare("Xamarin.Forms.ViewCell:Menu;Xamarin.Forms.Core", true, false);
-
-ViewCell.view = XNode.prepare("Xamarin.Forms.ViewCell:View;Xamarin.Forms.Core", true, false);
-
-
-export interface ICheckBox {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Color of Type Color */
-color?: ColorItem | string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsChecked of Type Boolean */
-isChecked?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ICheckBoxConstructor {
-    (a?: Partial<ICheckBox>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property CheckBox.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CheckBox.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CheckBox.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CheckBox.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CheckBox.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CheckBox.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CheckBox.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** CheckBox */
-const CheckBox: ICheckBoxConstructor = XNode.prepare<ICheckBox>("Xamarin.Forms.CheckBox;Xamarin.Forms.Core", false, false);
-
-
-CheckBox.behaviors = XNode.prepare("Xamarin.Forms.CheckBox:Behaviors;Xamarin.Forms.Core", true, false);
-
-CheckBox.effects = XNode.prepare("Xamarin.Forms.CheckBox:Effects;Xamarin.Forms.Core", true, false);
-
-CheckBox.gestureRecognizers = XNode.prepare("Xamarin.Forms.CheckBox:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-CheckBox.menu = XNode.prepare("Xamarin.Forms.CheckBox:Menu;Xamarin.Forms.Core", true, false);
-
-CheckBox.resources = XNode.prepare("Xamarin.Forms.CheckBox:Resources;Xamarin.Forms.Core", true, false);
-
-CheckBox.styleClass = XNode.prepare("Xamarin.Forms.CheckBox:StyleClass;Xamarin.Forms.Core", true, false);
-
-CheckBox.triggers = XNode.prepare("Xamarin.Forms.CheckBox:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IClickGestureRecognizer {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Buttons of Type ButtonsMask */
-buttons?: "Primary" | "Secondary" | Bind;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property NumberOfClicksRequired of Type Int32 */
-numberOfClicksRequired?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IClickGestureRecognizerConstructor {
-    (a?: Partial<IClickGestureRecognizer>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ClickGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ClickGestureRecognizer.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ClickGestureRecognizer */
-const ClickGestureRecognizer: IClickGestureRecognizerConstructor = XNode.prepare<IClickGestureRecognizer>("Xamarin.Forms.ClickGestureRecognizer;Xamarin.Forms.Core", false, false);
-
-
-ClickGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.ClickGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
-
-ClickGestureRecognizer.menu = XNode.prepare("Xamarin.Forms.ClickGestureRecognizer:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IColumnDefinition {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property Width of Type GridLength */
-width?: "Auto" | number | string | Bind;
-    [key: string]: any;
-}
-
-export interface IColumnDefinitionConstructor {
-    (a?: Partial<IColumnDefinition>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** ColumnDefinition */
-const ColumnDefinition: IColumnDefinitionConstructor = XNode.prepare<IColumnDefinition>("Xamarin.Forms.ColumnDefinition;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IContentPage {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IContentPageConstructor {
-    (a?: Partial<IContentPage>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ContentPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPage.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ContentPage */
-const ContentPage: IContentPageConstructor = XNode.prepare<IContentPage>("Xamarin.Forms.ContentPage;Xamarin.Forms.Core", false, false);
-
-
-ContentPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.ContentPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-ContentPage.behaviors = XNode.prepare("Xamarin.Forms.ContentPage:Behaviors;Xamarin.Forms.Core", true, false);
-
-ContentPage.content = XNode.prepare("Xamarin.Forms.ContentPage:Content;Xamarin.Forms.Core", true, false);
-
-ContentPage.controlTemplate = XNode.prepare("Xamarin.Forms.ContentPage:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-ContentPage.effects = XNode.prepare("Xamarin.Forms.ContentPage:Effects;Xamarin.Forms.Core", true, false);
-
-ContentPage.iconImageSource = XNode.prepare("Xamarin.Forms.ContentPage:IconImageSource;Xamarin.Forms.Core", true, false);
-
-ContentPage.menu = XNode.prepare("Xamarin.Forms.ContentPage:Menu;Xamarin.Forms.Core", true, false);
-
-ContentPage.resources = XNode.prepare("Xamarin.Forms.ContentPage:Resources;Xamarin.Forms.Core", true, false);
-
-ContentPage.styleClass = XNode.prepare("Xamarin.Forms.ContentPage:StyleClass;Xamarin.Forms.Core", true, false);
-
-ContentPage.toolbarItems = XNode.prepare("Xamarin.Forms.ContentPage:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-ContentPage.triggers = XNode.prepare("Xamarin.Forms.ContentPage:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IContentPresenter {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IContentPresenterConstructor {
-    (a?: Partial<IContentPresenter>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ContentPresenter.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentPresenter.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ContentPresenter */
-const ContentPresenter: IContentPresenterConstructor = XNode.prepare<IContentPresenter>("Xamarin.Forms.ContentPresenter;Xamarin.Forms.Core", false, false);
-
-
-ContentPresenter.behaviors = XNode.prepare("Xamarin.Forms.ContentPresenter:Behaviors;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.content = XNode.prepare("Xamarin.Forms.ContentPresenter:Content;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.effects = XNode.prepare("Xamarin.Forms.ContentPresenter:Effects;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.gestureRecognizers = XNode.prepare("Xamarin.Forms.ContentPresenter:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.menu = XNode.prepare("Xamarin.Forms.ContentPresenter:Menu;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.resources = XNode.prepare("Xamarin.Forms.ContentPresenter:Resources;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.styleClass = XNode.prepare("Xamarin.Forms.ContentPresenter:StyleClass;Xamarin.Forms.Core", true, false);
-
-ContentPresenter.triggers = XNode.prepare("Xamarin.Forms.ContentPresenter:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IContentView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IContentViewConstructor {
-    (a?: Partial<IContentView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ContentView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ContentView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ContentView */
-const ContentView: IContentViewConstructor = XNode.prepare<IContentView>("Xamarin.Forms.ContentView;Xamarin.Forms.Core", false, false);
-
-
-ContentView.behaviors = XNode.prepare("Xamarin.Forms.ContentView:Behaviors;Xamarin.Forms.Core", true, false);
-
-ContentView.content = XNode.prepare("Xamarin.Forms.ContentView:Content;Xamarin.Forms.Core", true, false);
-
-ContentView.controlTemplate = XNode.prepare("Xamarin.Forms.ContentView:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-ContentView.effects = XNode.prepare("Xamarin.Forms.ContentView:Effects;Xamarin.Forms.Core", true, false);
-
-ContentView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ContentView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ContentView.menu = XNode.prepare("Xamarin.Forms.ContentView:Menu;Xamarin.Forms.Core", true, false);
-
-ContentView.resources = XNode.prepare("Xamarin.Forms.ContentView:Resources;Xamarin.Forms.Core", true, false);
-
-ContentView.styleClass = XNode.prepare("Xamarin.Forms.ContentView:StyleClass;Xamarin.Forms.Core", true, false);
-
-ContentView.triggers = XNode.prepare("Xamarin.Forms.ContentView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IControlTemplate {
-    
-    
-    [key: string]: any;
-}
-
-export interface IControlTemplateConstructor {
-    (a?: Partial<IControlTemplate>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** ControlTemplate */
-const ControlTemplate: IControlTemplateConstructor = XNode.prepare<IControlTemplate>("Xamarin.Forms.ControlTemplate;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IDataTemplate {
-    
-    
-    [key: string]: any;
-}
-
-export interface IDataTemplateConstructor {
-    (a?: Partial<IDataTemplate>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property DataTemplate.Bindings of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase] */
-bindings?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DataTemplate.Values of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,System.Object] */
-values?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** DataTemplate */
-const DataTemplate: IDataTemplateConstructor = XNode.prepare<IDataTemplate>("Xamarin.Forms.DataTemplate;Xamarin.Forms.Core", false, true);
-
-
-DataTemplate.bindings = XNode.prepare("Xamarin.Forms.DataTemplate:Bindings;Xamarin.Forms.Core", true, false);
-
-DataTemplate.values = XNode.prepare("Xamarin.Forms.DataTemplate:Values;Xamarin.Forms.Core", true, false);
-
-
-export interface IDataTemplateSelector {
-    
-    
-    [key: string]: any;
-}
-
-export interface IDataTemplateSelectorConstructor {
-    (a?: Partial<IDataTemplateSelector>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property DataTemplateSelector.Bindings of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase] */
-bindings?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DataTemplateSelector.Values of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,System.Object] */
-values?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** DataTemplateSelector */
-const DataTemplateSelector: IDataTemplateSelectorConstructor = XNode.prepare<IDataTemplateSelector>("Xamarin.Forms.DataTemplateSelector;Xamarin.Forms.Core", false, false);
-
-
-DataTemplateSelector.bindings = XNode.prepare("Xamarin.Forms.DataTemplateSelector:Bindings;Xamarin.Forms.Core", true, false);
-
-DataTemplateSelector.values = XNode.prepare("Xamarin.Forms.DataTemplateSelector:Values;Xamarin.Forms.Core", true, false);
-
-
-export interface IDatePicker {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Date of Type DateTime */
-date?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property Format of Type String */
-format?: string | null | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaximumDate of Type DateTime */
-maximumDate?: any;
-
-/** Property MinimumDate of Type DateTime */
-minimumDate?: any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IDatePickerConstructor {
-    (a?: Partial<IDatePicker>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property DatePicker.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DatePicker.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DatePicker.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DatePicker.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DatePicker.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DatePicker.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DatePicker.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** DatePicker */
-const DatePicker: IDatePickerConstructor = XNode.prepare<IDatePicker>("Xamarin.Forms.DatePicker;Xamarin.Forms.Core", false, false);
-
-
-DatePicker.behaviors = XNode.prepare("Xamarin.Forms.DatePicker:Behaviors;Xamarin.Forms.Core", true, false);
-
-DatePicker.effects = XNode.prepare("Xamarin.Forms.DatePicker:Effects;Xamarin.Forms.Core", true, false);
-
-DatePicker.gestureRecognizers = XNode.prepare("Xamarin.Forms.DatePicker:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-DatePicker.menu = XNode.prepare("Xamarin.Forms.DatePicker:Menu;Xamarin.Forms.Core", true, false);
-
-DatePicker.resources = XNode.prepare("Xamarin.Forms.DatePicker:Resources;Xamarin.Forms.Core", true, false);
-
-DatePicker.styleClass = XNode.prepare("Xamarin.Forms.DatePicker:StyleClass;Xamarin.Forms.Core", true, false);
-
-DatePicker.triggers = XNode.prepare("Xamarin.Forms.DatePicker:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IEditor {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property AutoSize of Type EditorAutoSizeOption */
-autoSize?: "Disabled" | "TextChanges" | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsReadOnly of Type Boolean */
-isReadOnly?: boolean | Bind;
-
-/** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsTextPredictionEnabled of Type Boolean */
-isTextPredictionEnabled?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Keyboard of Type Keyboard */
-keyboard?: /*Keyboard*/ any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaxLength of Type Int32 */
-maxLength?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Placeholder of Type String */
-placeholder?: string | null | Bind;
-
-/** Property PlaceholderColor of Type Color */
-placeholderColor?: ColorItem | string | null | Bind;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IEditorConstructor {
-    (a?: Partial<IEditor>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Editor.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Editor.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Editor.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Editor.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Editor.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Editor.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Editor.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Editor */
-const Editor: IEditorConstructor = XNode.prepare<IEditor>("Xamarin.Forms.Editor;Xamarin.Forms.Core", false, false);
-
-
-Editor.behaviors = XNode.prepare("Xamarin.Forms.Editor:Behaviors;Xamarin.Forms.Core", true, false);
-
-Editor.effects = XNode.prepare("Xamarin.Forms.Editor:Effects;Xamarin.Forms.Core", true, false);
-
-Editor.gestureRecognizers = XNode.prepare("Xamarin.Forms.Editor:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Editor.menu = XNode.prepare("Xamarin.Forms.Editor:Menu;Xamarin.Forms.Core", true, false);
-
-Editor.resources = XNode.prepare("Xamarin.Forms.Editor:Resources;Xamarin.Forms.Core", true, false);
-
-Editor.styleClass = XNode.prepare("Xamarin.Forms.Editor:StyleClass;Xamarin.Forms.Core", true, false);
-
-Editor.triggers = XNode.prepare("Xamarin.Forms.Editor:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IElement {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property RealParent of Type Element */
-realParent?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IElementConstructor {
-    (a?: Partial<IElement>, ... nodes: XNode[]): XNode;
+@XFNS0("Element")
+class Element extends BindableObject {
     
     
 /** Property Element.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
+public static effects = XNode.property();
 
 /** Property Element.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
+public static menu = XNode.property()
+    
+    
+/** Property AutomationId of Type String */
+public automationId?: string | null | Bind;
+
+/** Property ClassId of Type String */
+public classId?: string | null | Bind;
+
+/** Property EffectControlProvider of Type IEffectControlProvider */
+public effectControlProvider?: any;
+
+/** Property Parent of Type Element */
+public parent?: any;
+
+/** Property Platform of Type IPlatform */
+public platform?: any;
+
+/** Property RealParent of Type Element */
+public realParent?: any;
+
+/** Property StyleId of Type String */
+public styleId?: string | null | Bind;
 }
 
-/** Element */
-const Element: IElementConstructor = XNode.prepare<IElement>("Xamarin.Forms.Element;Xamarin.Forms.Core", false, false);
+
+@XFNS0("NavigableElement")
+class NavigableElement extends Element {
+    
+    
+/** Property NavigableElement.StyleClass of Type System.String */
+public static styleClass = XNode.property()
+    
+    
+/** Property class of Type IList`1 */
+public class?: any;
+
+/** Property Navigation of Type INavigation */
+public navigation?: any;
+
+/** Property Style of Type Style */
+public style?: any;
+
+/** Property StyleClass of Type IList`1 */
+public styleClass?: any;
+}
 
 
-Element.effects = XNode.prepare("Xamarin.Forms.Element:Effects;Xamarin.Forms.Core", true, false);
+@XFNS0("VisualElement")
+class VisualElement extends NavigableElement {
+    
+    
+/** Property VisualElement.Behaviors of Type Xamarin.Forms.Behavior */
+public static behaviors = XNode.property();
 
-Element.menu = XNode.prepare("Xamarin.Forms.Element:Menu;Xamarin.Forms.Core", true, false);
+/** Property VisualElement.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
+public static resources = XNode.property();
 
-
-export interface IEntry {
+/** Property VisualElement.Triggers of Type Xamarin.Forms.TriggerBase */
+public static triggers = XNode.property()
     
     
 /** Property AnchorX of Type Double */
-anchorX?: number | Bind;
+public anchorX?: number | Bind;
 
 /** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
+public anchorY?: number | Bind;
 
 /** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
+public backgroundColor?: ColorItem | string | null | Bind;
 
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ClearButtonVisibility of Type ClearButtonVisibility */
-clearButtonVisibility?: "Never" | "WhileEditing" | Bind;
-
-/** Property CursorPosition of Type Int32 */
-cursorPosition?: number | Bind;
+/** Property Bounds of Type Rectangle */
+public bounds?: "Zero" | Bind;
 
 /** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+public disableLayout?: boolean | Bind;
 
 /** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
 
-/** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-fontSize?: number | Bind;
+/** Property Height of Type Double */
+public height?: number | Bind;
 
 /** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
+public heightRequest?: number | Bind;
 
 /** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
+public inputTransparent?: boolean | Bind;
 
 /** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
+public isEnabled?: boolean | Bind;
 
 /** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
+public isInNativeLayout?: boolean | Bind;
 
 /** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPassword of Type Boolean */
-isPassword?: boolean | Bind;
+public isNativeStateConsistent?: boolean | Bind;
 
 /** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsReadOnly of Type Boolean */
-isReadOnly?: boolean | Bind;
-
-/** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: boolean | Bind;
+public isPlatformEnabled?: boolean | Bind;
 
 /** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsTextPredictionEnabled of Type Boolean */
-isTextPredictionEnabled?: boolean | Bind;
+public isTabStop?: boolean | Bind;
 
 /** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Keyboard of Type Keyboard */
-keyboard?: /*Keyboard*/ any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaxLength of Type Int32 */
-maxLength?: number | Bind;
+public isVisible?: boolean | Bind;
 
 /** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
+public minimumHeightRequest?: number | Bind;
 
 /** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
+public minimumWidthRequest?: number | Bind;
 
 /** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Placeholder of Type String */
-placeholder?: string | null | Bind;
-
-/** Property PlaceholderColor of Type Color */
-placeholderColor?: ColorItem | string | null | Bind;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public opacity?: number | Bind;
 
 /** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property ReturnCommand of Type ICommand */
-returnCommand?: any;
-
-/** Property ReturnCommandParameter of Type Object */
-returnCommandParameter?: any;
-
-/** Property ReturnType of Type ReturnType */
-returnType?: "Default" | "Done" | "Go" | "Next" | "Search" | "Send" | Bind;
+public resources?: any;
 
 /** Property Rotation of Type Double */
-rotation?: number | Bind;
+public rotation?: number | Bind;
 
 /** Property RotationX of Type Double */
-rotationX?: number | Bind;
+public rotationX?: number | Bind;
 
 /** Property RotationY of Type Double */
-rotationY?: number | Bind;
+public rotationY?: number | Bind;
 
 /** Property Scale of Type Double */
-scale?: number | Bind;
+public scale?: number | Bind;
 
 /** Property ScaleX of Type Double */
-scaleX?: number | Bind;
+public scaleX?: number | Bind;
 
 /** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectionLength of Type Int32 */
-selectionLength?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+public scaleY?: number | Bind;
 
 /** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
+public tabIndex?: number | Bind;
 
 /** Property TranslationX of Type Double */
-translationX?: number | Bind;
+public translationX?: number | Bind;
 
 /** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
+public translationY?: number | Bind;
 
 /** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
+public visual?: /*IVisual*/ any;
+
+/** Property Width of Type Double */
+public width?: number | Bind;
 
 /** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public widthRequest?: number | Bind;
+
+/** Property X of Type Double */
+public x?: number | Bind;
+
+/** Property Y of Type Double */
+public y?: number | Bind;
 }
 
-export interface IEntryConstructor {
-    (a?: Partial<IEntry>, ... nodes: XNode[]): XNode;
+
+@XFNS0("View")
+class View extends VisualElement {
     
     
-/** Property Entry.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property View.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
+public static gestureRecognizers = XNode.property()
+    
+    
+/** Property HorizontalOptions of Type LayoutOptions */
+public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 
-/** Property Entry.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property Margin of Type Thickness */
+public margin?: /*Thickness*/ any;
 
-/** Property Entry.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Entry.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Entry.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Entry.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Entry.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property VerticalOptions of Type LayoutOptions */
+public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
 }
 
-/** Entry */
-const Entry: IEntryConstructor = XNode.prepare<IEntry>("Xamarin.Forms.Entry;Xamarin.Forms.Core", false, false);
 
-
-Entry.behaviors = XNode.prepare("Xamarin.Forms.Entry:Behaviors;Xamarin.Forms.Core", true, false);
-
-Entry.effects = XNode.prepare("Xamarin.Forms.Entry:Effects;Xamarin.Forms.Core", true, false);
-
-Entry.gestureRecognizers = XNode.prepare("Xamarin.Forms.Entry:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Entry.menu = XNode.prepare("Xamarin.Forms.Entry:Menu;Xamarin.Forms.Core", true, false);
-
-Entry.resources = XNode.prepare("Xamarin.Forms.Entry:Resources;Xamarin.Forms.Core", true, false);
-
-Entry.styleClass = XNode.prepare("Xamarin.Forms.Entry:StyleClass;Xamarin.Forms.Core", true, false);
-
-Entry.triggers = XNode.prepare("Xamarin.Forms.Entry:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IFileImageSource {
+@XFNS0("ActivityIndicator")
+class ActivityIndicator extends View {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
+    
+    
+/** Property Color of Type Color */
+public color?: ColorItem | string | null | Bind;
 
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+/** Property IsRunning of Type Boolean */
+public isRunning?: boolean | Bind;
+}
 
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
 
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+@XFNS0("Application")
+class Application extends Element {
+    
+    
+/** Property Application.MainPage of Type Xamarin.Forms.Page */
+public static mainPage = XNode.property();
 
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+/** Property Application.Properties of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
+public static properties = XNode.property();
 
+/** Property Application.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
+public static resources = XNode.property()
+    
+    
+/** Property MainPage of Type Page */
+public mainPage?: any;
+
+/** Property NavigationProxy of Type NavigationProxy */
+public navigationProxy?: any;
+
+/** Property PanGestureId of Type Int32 */
+public panGestureId?: number | Bind;
+
+/** Property Resources of Type ResourceDictionary */
+public resources?: any;
+}
+
+
+@XFNS0("AppLinkEntry")
+class AppLinkEntry extends Element {
+    
+    
+/** Property AppLinkEntry.KeyValues of Type System.Collections.Generic.KeyValuePair`2[System.String,System.String] */
+public static keyValues = XNode.property();
+
+/** Property AppLinkEntry.Thumbnail of Type Xamarin.Forms.ImageSource */
+public static thumbnail = XNode.property()
+    
+    
+/** Property AppLinkUri of Type Uri */
+public appLinkUri?: any;
+
+/** Property Description of Type String */
+public description?: string | null | Bind;
+
+/** Property IsLinkActive of Type Boolean */
+public isLinkActive?: boolean | Bind;
+
+/** Property Thumbnail of Type ImageSource */
+public thumbnail?: /*ImageSource*/ any;
+
+/** Property Title of Type String */
+public title?: string | null | Bind;
+}
+
+
+@XFNS0("BaseMenuItem")
+class BaseMenuItem extends Element {
+    
+    
+    
+    
+}
+
+
+@XFNS0("BindableLayout")
+class BindableLayout extends RootObject {
+    
+/** Attached Property BindableLayout.ItemsSource of Type BindableProperty*/
+public static itemsSource = XNode.attached();
+
+    
+/** Property BindableLayout.ItemTemplate of Type Xamarin.Forms.DataTemplate */
+public static itemTemplate = XNode.template();
+
+/** Property BindableLayout.ItemTemplateSelector of Type Xamarin.Forms.DataTemplateSelector */
+public static itemTemplateSelector = XNode.template()
+    
+    
+}
+
+
+@XFNS0("BoxView")
+class BoxView extends View {
+    
+    
+    
+    
+/** Property Color of Type Color */
+public color?: ColorItem | string | null | Bind;
+
+/** Property CornerRadius of Type CornerRadius */
+public cornerRadius?: /*CornerRadius*/ any;
+}
+
+
+@XFNS0("Button")
+class Button extends View {
+    
+    
+/** Property Button.ImageSource of Type Xamarin.Forms.ImageSource */
+public static imageSource = XNode.property()
+    
+    
+/** Property BorderColor of Type Color */
+public borderColor?: ColorItem | string | null | Bind;
+
+/** Property BorderRadius of Type Int32 */
+public borderRadius?: number | Bind;
+
+/** Property BorderWidth of Type Double */
+public borderWidth?: number | Bind;
+
+/** Property CharacterSpacing of Type Double */
+public characterSpacing?: number | Bind;
+
+/** Property Command of Type ICommand */
+public command?: any;
+
+/** Property CommandParameter of Type Object */
+public commandParameter?: any;
+
+/** Property ContentLayout of Type ButtonContentLayout */
+public contentLayout?: /*ButtonContentLayout*/ any;
+
+/** Property CornerRadius of Type Int32 */
+public cornerRadius?: number | Bind;
+
+/** Property Font of Type Font */
+public font?: /*Font*/ any;
+
+/** Property FontAttributes of Type FontAttributes */
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+
+/** Property FontFamily of Type String */
+public fontFamily?: string | null | Bind;
+
+/** Property FontSize of Type Double */
+public fontSize?: number | Bind;
+
+/** Property Image of Type FileImageSource */
+public image?: /*FileImageSource*/ any;
+
+/** Property ImageSource of Type ImageSource */
+public imageSource?: /*ImageSource*/ any;
+
+/** Property Padding of Type Thickness */
+public padding?: /*Thickness*/ any;
+
+/** Property Text of Type String */
+public text?: string | null | Bind;
+
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
+}
+
+
+@XFNS0("CarouselPage")
+class CarouselPage extends RootObject {
+    
+    
+/** Property CarouselPage.Children of Type Xamarin.Forms.ContentPage */
+public static children = XNode.property();
+
+/** Property CarouselPage.CurrentPage of Type Xamarin.Forms.ContentPage */
+public static currentPage = XNode.property();
+
+/** Property CarouselPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
+public static itemTemplate = XNode.template()
+    
+    
+/** Property CurrentPage of Type ContentPage */
+public currentPage?: any;
+
+/** Property ItemsSource of Type IEnumerable */
+public itemsSource?: any;
+
+/** Property ItemTemplate of Type DataTemplate */
+public itemTemplate?: any;
+
+/** Property SelectedItem of Type Object */
+public selectedItem?: any;
+}
+
+
+@XFNS0("Cell")
+class Cell extends Element {
+    
+    
+/** Property Cell.ContextActions of Type Xamarin.Forms.MenuItem */
+public static contextActions = XNode.property()
+    
+    
+/** Property Height of Type Double */
+public height?: number | Bind;
+
+/** Property IsContextActionsLegacyModeEnabled of Type Boolean */
+public isContextActionsLegacyModeEnabled?: boolean | Bind;
+
+/** Property IsEnabled of Type Boolean */
+public isEnabled?: boolean | Bind;
+}
+
+
+@XFNS0("EntryCell")
+class EntryCell extends Cell {
+    
+    
+    
+    
+/** Property HorizontalTextAlignment of Type TextAlignment */
+public horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
+
+/** Property Keyboard of Type Keyboard */
+public keyboard?: /*Keyboard*/ any;
+
+/** Property Label of Type String */
+public label?: string | null | Bind;
+
+/** Property LabelColor of Type Color */
+public labelColor?: ColorItem | string | null | Bind;
+
+/** Property Placeholder of Type String */
+public placeholder?: string | null | Bind;
+
+/** Property Text of Type String */
+public text?: string | null | Bind;
+
+/** Property VerticalTextAlignment of Type TextAlignment */
+public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
+
+/** Property XAlign of Type TextAlignment */
+public xAlign?: "Start" | "Center" | "End" | Bind;
+}
+
+
+@XFNS0("TextCell")
+class TextCell extends Cell {
+    
+    
+    
+    
+/** Property Command of Type ICommand */
+public command?: any;
+
+/** Property CommandParameter of Type Object */
+public commandParameter?: any;
+
+/** Property Detail of Type String */
+public detail?: string | null | Bind;
+
+/** Property DetailColor of Type Color */
+public detailColor?: ColorItem | string | null | Bind;
+
+/** Property Text of Type String */
+public text?: string | null | Bind;
+
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
+}
+
+
+@XFNS0("ImageCell")
+class ImageCell extends TextCell {
+    
+    
+/** Property ImageCell.ImageSource of Type Xamarin.Forms.ImageSource */
+public static imageSource = XNode.property()
+    
+    
+/** Property ImageSource of Type ImageSource */
+public imageSource?: /*ImageSource*/ any;
+}
+
+
+@XFNS0("SwitchCell")
+class SwitchCell extends Cell {
+    
+    
+    
+    
+/** Property On of Type Boolean */
+public on?: boolean | Bind;
+
+/** Property OnColor of Type Color */
+public onColor?: ColorItem | string | null | Bind;
+
+/** Property Text of Type String */
+public text?: string | null | Bind;
+}
+
+
+@XFNS0("ViewCell")
+class ViewCell extends Cell {
+    
+    
+/** Property ViewCell.View of Type Xamarin.Forms.View */
+public static view = XNode.property()
+    
+    
+/** Property View of Type View */
+public view?: any;
+}
+
+
+@XFNS0("CheckBox")
+class CheckBox extends View {
+    
+    
+    
+    
+/** Property Color of Type Color */
+public color?: ColorItem | string | null | Bind;
+
+/** Property IsChecked of Type Boolean */
+public isChecked?: boolean | Bind;
+}
+
+
+@XFNS0("GestureRecognizer")
+class GestureRecognizer extends Element {
+    
+    
+    
+    
+}
+
+
+@XFNS0("ClickGestureRecognizer")
+class ClickGestureRecognizer extends GestureRecognizer {
+    
+    
+    
+    
+/** Property Buttons of Type ButtonsMask */
+public buttons?: "Primary" | "Secondary" | Bind;
+
+/** Property Command of Type ICommand */
+public command?: any;
+
+/** Property CommandParameter of Type Object */
+public commandParameter?: any;
+
+/** Property NumberOfClicksRequired of Type Int32 */
+public numberOfClicksRequired?: number | Bind;
+}
+
+
+@XFNS0("ColumnDefinition")
+class ColumnDefinition extends BindableObject {
+    
+    
+    
+    
+/** Property Width of Type GridLength */
+public width?: "Auto" | number | string | Bind;
+}
+
+
+@XFNS0("Page")
+class Page extends VisualElement {
+    
+    
+/** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
+public static backgroundImageSource = XNode.property();
+
+/** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
+public static iconImageSource = XNode.property();
+
+/** Property Page.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
+public static toolbarItems = XNode.property()
+    
+    
+/** Property BackgroundImage of Type String */
+public backgroundImage?: string | null | Bind;
+
+/** Property BackgroundImageSource of Type ImageSource */
+public backgroundImageSource?: /*ImageSource*/ any;
+
+/** Property ContainerArea of Type Rectangle */
+public containerArea?: "Zero" | Bind;
+
+/** Property Icon of Type FileImageSource */
+public icon?: /*FileImageSource*/ any;
+
+/** Property IconImageSource of Type ImageSource */
+public iconImageSource?: /*ImageSource*/ any;
+
+/** Property IgnoresContainerArea of Type Boolean */
+public ignoresContainerArea?: boolean | Bind;
+
+/** Property IsBusy of Type Boolean */
+public isBusy?: boolean | Bind;
+
+/** Property Padding of Type Thickness */
+public padding?: /*Thickness*/ any;
+
+/** Property Title of Type String */
+public title?: string | null | Bind;
+
+/** Property ToolbarItems of Type IList`1 */
+public toolbarItems?: any;
+}
+
+
+@XFNS0("TemplatedPage")
+class TemplatedPage extends Page {
+    
+    
+/** Property TemplatedPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
+public static controlTemplate = XNode.template()
+    
+    
+/** Property ControlTemplate of Type ControlTemplate */
+public controlTemplate?: any;
+}
+
+
+@XFNS0("ContentPage")
+class ContentPage extends TemplatedPage {
+    
+    
+/** Property ContentPage.Content of Type Xamarin.Forms.View */
+public static content = XNode.property()
+    
+    
+/** Property Content of Type View */
+public content?: any;
+}
+
+
+@XFNS0("Layout")
+class Layout extends View {
+    
+    
+    
+    
+/** Property CascadeInputTransparent of Type Boolean */
+public cascadeInputTransparent?: boolean | Bind;
+
+/** Property IsClippedToBounds of Type Boolean */
+public isClippedToBounds?: boolean | Bind;
+
+/** Property Padding of Type Thickness */
+public padding?: /*Thickness*/ any;
+}
+
+
+@XFNS0("ContentPresenter")
+class ContentPresenter extends Layout {
+    
+    
+/** Property ContentPresenter.Content of Type Xamarin.Forms.View */
+public static content = XNode.property()
+    
+    
+/** Property Content of Type View */
+public content?: any;
+}
+
+
+@XFNS0("TemplatedView")
+class TemplatedView extends Layout {
+    
+    
+/** Property TemplatedView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
+public static controlTemplate = XNode.template()
+    
+    
+/** Property ControlTemplate of Type ControlTemplate */
+public controlTemplate?: any;
+}
+
+
+@XFNS0("ContentView")
+class ContentView extends TemplatedView {
+    
+    
+/** Property ContentView.Content of Type Xamarin.Forms.View */
+public static content = XNode.property()
+    
+    
+/** Property Content of Type View */
+public content?: any;
+}
+
+
+@XFNS0("ControlTemplate", true)
+class ControlTemplate extends RootObject {
+    
+    
+    
+    
+}
+
+
+@XFNS0("DataTemplate", true)
+class DataTemplate extends RootObject {
+    
+    
+/** Property DataTemplate.Bindings of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase] */
+public static bindings = XNode.property();
+
+/** Property DataTemplate.Values of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,System.Object] */
+public static values = XNode.property()
+    
+    
+}
+
+
+@XFNS0("DataTemplateSelector", true)
+class DataTemplateSelector extends DataTemplate {
+    
+    
+    
+    
+}
+
+
+@XFNS0("DatePicker")
+class DatePicker extends View {
+    
+    
+    
+    
+/** Property CharacterSpacing of Type Double */
+public characterSpacing?: number | Bind;
+
+/** Property Date of Type DateTime */
+public date?: any;
+
+/** Property FontAttributes of Type FontAttributes */
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+
+/** Property FontFamily of Type String */
+public fontFamily?: string | null | Bind;
+
+/** Property FontSize of Type Double */
+public fontSize?: number | Bind;
+
+/** Property Format of Type String */
+public format?: string | null | Bind;
+
+/** Property MaximumDate of Type DateTime */
+public maximumDate?: any;
+
+/** Property MinimumDate of Type DateTime */
+public minimumDate?: any;
+
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
+}
+
+
+@XFNS0("InputView")
+class InputView extends View {
+    
+    
+    
+    
+/** Property CharacterSpacing of Type Double */
+public characterSpacing?: number | Bind;
+
+/** Property IsReadOnly of Type Boolean */
+public isReadOnly?: boolean | Bind;
+
+/** Property IsSpellCheckEnabled of Type Boolean */
+public isSpellCheckEnabled?: boolean | Bind;
+
+/** Property Keyboard of Type Keyboard */
+public keyboard?: /*Keyboard*/ any;
+
+/** Property MaxLength of Type Int32 */
+public maxLength?: number | Bind;
+
+/** Property Placeholder of Type String */
+public placeholder?: string | null | Bind;
+
+/** Property PlaceholderColor of Type Color */
+public placeholderColor?: ColorItem | string | null | Bind;
+
+/** Property Text of Type String */
+public text?: string | null | Bind;
+
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
+}
+
+
+@XFNS0("Editor")
+class Editor extends InputView {
+    
+    
+    
+    
+/** Property AutoSize of Type EditorAutoSizeOption */
+public autoSize?: "Disabled" | "TextChanges" | Bind;
+
+/** Property FontAttributes of Type FontAttributes */
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+
+/** Property FontFamily of Type String */
+public fontFamily?: string | null | Bind;
+
+/** Property FontSize of Type Double */
+public fontSize?: number | Bind;
+
+/** Property IsTextPredictionEnabled of Type Boolean */
+public isTextPredictionEnabled?: boolean | Bind;
+}
+
+
+@XFNS0("Entry")
+class Entry extends InputView {
+    
+    
+    
+    
+/** Property ClearButtonVisibility of Type ClearButtonVisibility */
+public clearButtonVisibility?: "Never" | "WhileEditing" | Bind;
+
+/** Property CursorPosition of Type Int32 */
+public cursorPosition?: number | Bind;
+
+/** Property FontAttributes of Type FontAttributes */
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+
+/** Property FontFamily of Type String */
+public fontFamily?: string | null | Bind;
+
+/** Property FontSize of Type Double */
+public fontSize?: number | Bind;
+
+/** Property HorizontalTextAlignment of Type TextAlignment */
+public horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
+
+/** Property IsPassword of Type Boolean */
+public isPassword?: boolean | Bind;
+
+/** Property IsTextPredictionEnabled of Type Boolean */
+public isTextPredictionEnabled?: boolean | Bind;
+
+/** Property ReturnCommand of Type ICommand */
+public returnCommand?: any;
+
+/** Property ReturnCommandParameter of Type Object */
+public returnCommandParameter?: any;
+
+/** Property ReturnType of Type ReturnType */
+public returnType?: "Default" | "Done" | "Go" | "Next" | "Search" | "Send" | Bind;
+
+/** Property SelectionLength of Type Int32 */
+public selectionLength?: number | Bind;
+
+/** Property VerticalTextAlignment of Type TextAlignment */
+public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
+}
+
+
+@XFNS0("ImageSource")
+class ImageSource extends Element {
+    
+    
+    
+    
+}
+
+
+@XFNS0("FileImageSource")
+class FileImageSource extends ImageSource {
+    
+    
+    
+    
 /** Property File of Type String */
-file?: string | null | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
+public file?: string | null | Bind;
 }
 
-export interface IFileImageSourceConstructor {
-    (a?: Partial<IFileImageSource>, ... nodes: XNode[]): XNode;
+
+@XFNS0("FlexLayout")
+class FlexLayout extends RootObject {
     
+/** Attached Property FlexLayout.Order of Type BindableProperty*/
+public static order = XNode.attached();
+
+
+/** Attached Property FlexLayout.Grow of Type BindableProperty*/
+public static grow = XNode.attached();
+
+
+/** Attached Property FlexLayout.Shrink of Type BindableProperty*/
+public static shrink = XNode.attached();
+
+
+/** Attached Property FlexLayout.AlignSelf of Type BindableProperty*/
+public static alignSelf = XNode.attached();
+
+
+/** Attached Property FlexLayout.Basis of Type BindableProperty*/
+public static basis = XNode.attached();
+
     
-/** Property FileImageSource.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FileImageSource.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** FileImageSource */
-const FileImageSource: IFileImageSourceConstructor = XNode.prepare<IFileImageSource>("Xamarin.Forms.FileImageSource;Xamarin.Forms.Core", false, false);
-
-
-FileImageSource.effects = XNode.prepare("Xamarin.Forms.FileImageSource:Effects;Xamarin.Forms.Core", true, false);
-
-FileImageSource.menu = XNode.prepare("Xamarin.Forms.FileImageSource:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IFlexLayout {
+/** Property FlexLayout.Children of Type Xamarin.Forms.View */
+public static children = XNode.property()
     
     
 /** Property AlignContent of Type FlexAlignContent */
-alignContent?: "Stretch" | "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
+public alignContent?: "Stretch" | "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
 
 /** Property AlignItems of Type FlexAlignItems */
-alignItems?: "Stretch" | "Center" | "Start" | "End" | Bind;
-
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
+public alignItems?: "Stretch" | "Center" | "Start" | "End" | Bind;
 
 /** Property Direction of Type FlexDirection */
-direction?: "Row" | "RowReverse" | "Column" | "ColumnReverse" | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
+public direction?: "Row" | "RowReverse" | "Column" | "ColumnReverse" | Bind;
 
 /** Property JustifyContent of Type FlexJustify */
-justifyContent?: "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public justifyContent?: "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
 
 /** Property Position of Type FlexPosition */
-position?: "Relative" | "Absolute" | Bind;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
+public position?: "Relative" | "Absolute" | Bind;
 
 /** Property Wrap of Type FlexWrap */
-wrap?: "NoWrap" | "Wrap" | "Reverse" | Bind;
-    [key: string]: any;
+public wrap?: "NoWrap" | "Wrap" | "Reverse" | Bind;
 }
 
-export interface IFlexLayoutConstructor {
-    (a?: Partial<IFlexLayout>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property FlexLayout.Order of Type BindableProperty */
-order?(v: any);
 
-/** Attached Property FlexLayout.Grow of Type BindableProperty */
-grow?(v: any);
-
-/** Attached Property FlexLayout.Shrink of Type BindableProperty */
-shrink?(v: any);
-
-/** Attached Property FlexLayout.AlignSelf of Type BindableProperty */
-alignSelf?(v: any);
-
-/** Attached Property FlexLayout.Basis of Type BindableProperty */
-basis?(v: any)
-    
-/** Property FlexLayout.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.Children of Type Xamarin.Forms.View */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlexLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** FlexLayout */
-const FlexLayout: IFlexLayoutConstructor = XNode.prepare<IFlexLayout>("Xamarin.Forms.FlexLayout;Xamarin.Forms.Core", false, false);
-
-FlexLayout.order = XNode.attached("Xamarin.Forms.FlexLayout:Order;Xamarin.Forms.Core");
-
-FlexLayout.grow = XNode.attached("Xamarin.Forms.FlexLayout:Grow;Xamarin.Forms.Core");
-
-FlexLayout.shrink = XNode.attached("Xamarin.Forms.FlexLayout:Shrink;Xamarin.Forms.Core");
-
-FlexLayout.alignSelf = XNode.attached("Xamarin.Forms.FlexLayout:AlignSelf;Xamarin.Forms.Core");
-
-FlexLayout.basis = XNode.attached("Xamarin.Forms.FlexLayout:Basis;Xamarin.Forms.Core");
-
-FlexLayout.behaviors = XNode.prepare("Xamarin.Forms.FlexLayout:Behaviors;Xamarin.Forms.Core", true, false);
-
-FlexLayout.children = XNode.prepare("Xamarin.Forms.FlexLayout:Children;Xamarin.Forms.Core", true, false);
-
-FlexLayout.effects = XNode.prepare("Xamarin.Forms.FlexLayout:Effects;Xamarin.Forms.Core", true, false);
-
-FlexLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.FlexLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-FlexLayout.menu = XNode.prepare("Xamarin.Forms.FlexLayout:Menu;Xamarin.Forms.Core", true, false);
-
-FlexLayout.resources = XNode.prepare("Xamarin.Forms.FlexLayout:Resources;Xamarin.Forms.Core", true, false);
-
-FlexLayout.styleClass = XNode.prepare("Xamarin.Forms.FlexLayout:StyleClass;Xamarin.Forms.Core", true, false);
-
-FlexLayout.triggers = XNode.prepare("Xamarin.Forms.FlexLayout:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IFontImageSource {
+@XFNS0("FontImageSource")
+class FontImageSource extends ImageSource {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
+    
+    
 /** Property Color of Type Color */
-color?: ColorItem | string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+public color?: ColorItem | string | null | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
+public fontFamily?: string | null | Bind;
 
 /** Property Glyph of Type String */
-glyph?: string | null | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public glyph?: string | null | Bind;
 
 /** Property Size of Type Double */
-size?: number | Bind;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
+public size?: number | Bind;
 }
 
-export interface IFontImageSourceConstructor {
-    (a?: Partial<IFontImageSource>, ... nodes: XNode[]): XNode;
+
+@XFNS0("FormattedString")
+class FormattedString extends Element {
     
     
-/** Property FontImageSource.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FontImageSource.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** FontImageSource */
-const FontImageSource: IFontImageSourceConstructor = XNode.prepare<IFontImageSource>("Xamarin.Forms.FontImageSource;Xamarin.Forms.Core", false, false);
-
-
-FontImageSource.effects = XNode.prepare("Xamarin.Forms.FontImageSource:Effects;Xamarin.Forms.Core", true, false);
-
-FontImageSource.menu = XNode.prepare("Xamarin.Forms.FontImageSource:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IFormattedString {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IFormattedStringConstructor {
-    (a?: Partial<IFormattedString>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property FormattedString.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FormattedString.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property FormattedString.Spans of Type Xamarin.Forms.Span */
-spans?: ( a: any, ... nodes: XNode[]) => XNode
+public static spans = XNode.property()
+    
+    
 }
 
-/** FormattedString */
-const FormattedString: IFormattedStringConstructor = XNode.prepare<IFormattedString>("Xamarin.Forms.FormattedString;Xamarin.Forms.Core", false, false);
 
-
-FormattedString.effects = XNode.prepare("Xamarin.Forms.FormattedString:Effects;Xamarin.Forms.Core", true, false);
-
-FormattedString.menu = XNode.prepare("Xamarin.Forms.FormattedString:Menu;Xamarin.Forms.Core", true, false);
-
-FormattedString.spans = XNode.prepare("Xamarin.Forms.FormattedString:Spans;Xamarin.Forms.Core", true, false);
-
-
-export interface IFrame {
+@XFNS0("Frame")
+class Frame extends ContentView {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
+    
+    
 /** Property BorderColor of Type Color */
-borderColor?: ColorItem | string | null | Bind;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
+public borderColor?: ColorItem | string | null | Bind;
 
 /** Property CornerRadius of Type Single */
-cornerRadius?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+public cornerRadius?: number | Bind;
 
 /** Property HasShadow of Type Boolean */
-hasShadow?: boolean | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
+public hasShadow?: boolean | Bind;
 
 /** Property OutlineColor of Type Color */
-outlineColor?: ColorItem | string | null | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public outlineColor?: ColorItem | string | null | Bind;
 }
 
-export interface IFrameConstructor {
-    (a?: Partial<IFrame>, ... nodes: XNode[]): XNode;
+
+@XFNS0("GestureElement")
+class GestureElement extends Element {
     
     
-/** Property Frame.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Frame.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Frame */
-const Frame: IFrameConstructor = XNode.prepare<IFrame>("Xamarin.Forms.Frame;Xamarin.Forms.Core", false, false);
-
-
-Frame.behaviors = XNode.prepare("Xamarin.Forms.Frame:Behaviors;Xamarin.Forms.Core", true, false);
-
-Frame.content = XNode.prepare("Xamarin.Forms.Frame:Content;Xamarin.Forms.Core", true, false);
-
-Frame.controlTemplate = XNode.prepare("Xamarin.Forms.Frame:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-Frame.effects = XNode.prepare("Xamarin.Forms.Frame:Effects;Xamarin.Forms.Core", true, false);
-
-Frame.gestureRecognizers = XNode.prepare("Xamarin.Forms.Frame:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Frame.menu = XNode.prepare("Xamarin.Forms.Frame:Menu;Xamarin.Forms.Core", true, false);
-
-Frame.resources = XNode.prepare("Xamarin.Forms.Frame:Resources;Xamarin.Forms.Core", true, false);
-
-Frame.styleClass = XNode.prepare("Xamarin.Forms.Frame:StyleClass;Xamarin.Forms.Core", true, false);
-
-Frame.triggers = XNode.prepare("Xamarin.Forms.Frame:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IGestureElement {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IGestureElementConstructor {
-    (a?: Partial<IGestureElement>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property GestureElement.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property GestureElement.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GestureElement.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
+public static gestureRecognizers = XNode.property()
+    
+    
 }
 
-/** GestureElement */
-const GestureElement: IGestureElementConstructor = XNode.prepare<IGestureElement>("Xamarin.Forms.GestureElement;Xamarin.Forms.Core", false, false);
 
-
-GestureElement.effects = XNode.prepare("Xamarin.Forms.GestureElement:Effects;Xamarin.Forms.Core", true, false);
-
-GestureElement.gestureRecognizers = XNode.prepare("Xamarin.Forms.GestureElement:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-GestureElement.menu = XNode.prepare("Xamarin.Forms.GestureElement:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IGestureRecognizer {
+@XFNS0("Grid")
+class Grid extends RootObject {
     
+/** Attached Property Grid.Row of Type BindableProperty*/
+public static row = XNode.attached();
+
+
+/** Attached Property Grid.RowSpan of Type BindableProperty*/
+public static rowSpan = XNode.attached();
+
+
+/** Attached Property Grid.Column of Type BindableProperty*/
+public static column = XNode.attached();
+
+
+/** Attached Property Grid.ColumnSpan of Type BindableProperty*/
+public static columnSpan = XNode.attached();
+
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IGestureRecognizerConstructor {
-    (a?: Partial<IGestureRecognizer>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property GestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GestureRecognizer.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** GestureRecognizer */
-const GestureRecognizer: IGestureRecognizerConstructor = XNode.prepare<IGestureRecognizer>("Xamarin.Forms.GestureRecognizer;Xamarin.Forms.Core", false, false);
-
-
-GestureRecognizer.effects = XNode.prepare("Xamarin.Forms.GestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
-
-GestureRecognizer.menu = XNode.prepare("Xamarin.Forms.GestureRecognizer:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IGrid {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ColumnDefinitions of Type ColumnDefinitionCollection */
-columnDefinitions?: any;
-
-/** Property ColumnSpacing of Type Double */
-columnSpacing?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property RowDefinitions of Type RowDefinitionCollection */
-rowDefinitions?: any;
-
-/** Property RowSpacing of Type Double */
-rowSpacing?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IGridConstructor {
-    (a?: Partial<IGrid>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property Grid.Row of Type BindableProperty */
-row?(v: any);
-
-/** Attached Property Grid.RowSpan of Type BindableProperty */
-rowSpan?(v: any);
-
-/** Attached Property Grid.Column of Type BindableProperty */
-column?(v: any);
-
-/** Attached Property Grid.ColumnSpan of Type BindableProperty */
-columnSpan?(v: any)
-    
-/** Property Grid.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property Grid.Children of Type Xamarin.Forms.View */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
+public static children = XNode.property();
 
 /** Property Grid.ColumnDefinitions of Type Xamarin.Forms.ColumnDefinition */
-columnDefinitions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Grid.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Grid.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Grid.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Grid.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
+public static columnDefinitions = XNode.property();
 
 /** Property Grid.RowDefinitions of Type Xamarin.Forms.RowDefinition */
-rowDefinitions?: ( a: any, ... nodes: XNode[]) => XNode;
+public static rowDefinitions = XNode.property()
+    
+    
+/** Property ColumnDefinitions of Type ColumnDefinitionCollection */
+public columnDefinitions?: any;
 
-/** Property Grid.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property ColumnSpacing of Type Double */
+public columnSpacing?: number | Bind;
 
-/** Property Grid.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property RowDefinitions of Type RowDefinitionCollection */
+public rowDefinitions?: any;
+
+/** Property RowSpacing of Type Double */
+public rowSpacing?: number | Bind;
 }
 
-/** Grid */
-const Grid: IGridConstructor = XNode.prepare<IGrid>("Xamarin.Forms.Grid;Xamarin.Forms.Core", false, false);
 
-Grid.row = XNode.attached("Xamarin.Forms.Grid:Row;Xamarin.Forms.Core");
-
-Grid.rowSpan = XNode.attached("Xamarin.Forms.Grid:RowSpan;Xamarin.Forms.Core");
-
-Grid.column = XNode.attached("Xamarin.Forms.Grid:Column;Xamarin.Forms.Core");
-
-Grid.columnSpan = XNode.attached("Xamarin.Forms.Grid:ColumnSpan;Xamarin.Forms.Core");
-
-Grid.behaviors = XNode.prepare("Xamarin.Forms.Grid:Behaviors;Xamarin.Forms.Core", true, false);
-
-Grid.children = XNode.prepare("Xamarin.Forms.Grid:Children;Xamarin.Forms.Core", true, false);
-
-Grid.columnDefinitions = XNode.prepare("Xamarin.Forms.Grid:ColumnDefinitions;Xamarin.Forms.Core", true, false);
-
-Grid.effects = XNode.prepare("Xamarin.Forms.Grid:Effects;Xamarin.Forms.Core", true, false);
-
-Grid.gestureRecognizers = XNode.prepare("Xamarin.Forms.Grid:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Grid.menu = XNode.prepare("Xamarin.Forms.Grid:Menu;Xamarin.Forms.Core", true, false);
-
-Grid.resources = XNode.prepare("Xamarin.Forms.Grid:Resources;Xamarin.Forms.Core", true, false);
-
-Grid.rowDefinitions = XNode.prepare("Xamarin.Forms.Grid:RowDefinitions;Xamarin.Forms.Core", true, false);
-
-Grid.styleClass = XNode.prepare("Xamarin.Forms.Grid:StyleClass;Xamarin.Forms.Core", true, false);
-
-Grid.triggers = XNode.prepare("Xamarin.Forms.Grid:Triggers;Xamarin.Forms.Core", true, false);
+@XFNS0("WebViewSource")
+class WebViewSource extends BindableObject {
+    
+    
+    
+    
+}
 
 
-export interface IHtmlWebViewSource {
+@XFNS0("HtmlWebViewSource")
+class HtmlWebViewSource extends WebViewSource {
+    
+    
     
     
 /** Property BaseUrl of Type String */
-baseUrl?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+public baseUrl?: string | null | Bind;
 
 /** Property Html of Type String */
-html?: string | null | Bind;
-    [key: string]: any;
+public html?: string | null | Bind;
 }
 
-export interface IHtmlWebViewSourceConstructor {
-    (a?: Partial<IHtmlWebViewSource>, ... nodes: XNode[]): XNode;
+
+@XFNS0("Image")
+class Image extends View {
     
     
-}
-
-/** HtmlWebViewSource */
-const HtmlWebViewSource: IHtmlWebViewSourceConstructor = XNode.prepare<IHtmlWebViewSource>("Xamarin.Forms.HtmlWebViewSource;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IImage {
+/** Property Image.Source of Type Xamarin.Forms.ImageSource */
+public static source = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
 /** Property Aspect of Type Aspect */
-aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
+public aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
 
 /** Property IsAnimationPlaying of Type Boolean */
-isAnimationPlaying?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
+public isAnimationPlaying?: boolean | Bind;
 
 /** Property IsOpaque of Type Boolean */
-isOpaque?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
+public isOpaque?: boolean | Bind;
 
 /** Property Source of Type ImageSource */
-source?: /*ImageSource*/ any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public source?: /*ImageSource*/ any;
 }
 
-export interface IImageConstructor {
-    (a?: Partial<IImage>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ImageButton")
+class ImageButton extends View {
     
     
-/** Property Image.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.Source of Type Xamarin.Forms.ImageSource */
-source?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Image.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Image */
-const Image: IImageConstructor = XNode.prepare<IImage>("Xamarin.Forms.Image;Xamarin.Forms.Core", false, false);
-
-
-Image.behaviors = XNode.prepare("Xamarin.Forms.Image:Behaviors;Xamarin.Forms.Core", true, false);
-
-Image.effects = XNode.prepare("Xamarin.Forms.Image:Effects;Xamarin.Forms.Core", true, false);
-
-Image.gestureRecognizers = XNode.prepare("Xamarin.Forms.Image:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Image.menu = XNode.prepare("Xamarin.Forms.Image:Menu;Xamarin.Forms.Core", true, false);
-
-Image.resources = XNode.prepare("Xamarin.Forms.Image:Resources;Xamarin.Forms.Core", true, false);
-
-Image.source = XNode.prepare("Xamarin.Forms.Image:Source;Xamarin.Forms.Core", true, false);
-
-Image.styleClass = XNode.prepare("Xamarin.Forms.Image:StyleClass;Xamarin.Forms.Core", true, false);
-
-Image.triggers = XNode.prepare("Xamarin.Forms.Image:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IImageButton {
+/** Property ImageButton.Source of Type Xamarin.Forms.ImageSource */
+public static source = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
 /** Property Aspect of Type Aspect */
-aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+public aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
 
 /** Property BorderColor of Type Color */
-borderColor?: ColorItem | string | null | Bind;
+public borderColor?: ColorItem | string | null | Bind;
 
 /** Property BorderWidth of Type Double */
-borderWidth?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
+public borderWidth?: number | Bind;
 
 /** Property Command of Type ICommand */
-command?: any;
+public command?: any;
 
 /** Property CommandParameter of Type Object */
-commandParameter?: any;
+public commandParameter?: any;
 
 /** Property CornerRadius of Type Int32 */
-cornerRadius?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
+public cornerRadius?: number | Bind;
 
 /** Property IsOpaque of Type Boolean */
-isOpaque?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
+public isOpaque?: boolean | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
+public padding?: /*Thickness*/ any;
 
 /** Property Source of Type ImageSource */
-source?: /*ImageSource*/ any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public source?: /*ImageSource*/ any;
 }
 
-export interface IImageButtonConstructor {
-    (a?: Partial<IImageButton>, ... nodes: XNode[]): XNode;
+
+@XFNS0("IndicatorView")
+class IndicatorView extends TemplatedView {
     
     
-/** Property ImageButton.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.Source of Type Xamarin.Forms.ImageSource */
-source?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageButton.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ImageButton */
-const ImageButton: IImageButtonConstructor = XNode.prepare<IImageButton>("Xamarin.Forms.ImageButton;Xamarin.Forms.Core", false, false);
-
-
-ImageButton.behaviors = XNode.prepare("Xamarin.Forms.ImageButton:Behaviors;Xamarin.Forms.Core", true, false);
-
-ImageButton.effects = XNode.prepare("Xamarin.Forms.ImageButton:Effects;Xamarin.Forms.Core", true, false);
-
-ImageButton.gestureRecognizers = XNode.prepare("Xamarin.Forms.ImageButton:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ImageButton.menu = XNode.prepare("Xamarin.Forms.ImageButton:Menu;Xamarin.Forms.Core", true, false);
-
-ImageButton.resources = XNode.prepare("Xamarin.Forms.ImageButton:Resources;Xamarin.Forms.Core", true, false);
-
-ImageButton.source = XNode.prepare("Xamarin.Forms.ImageButton:Source;Xamarin.Forms.Core", true, false);
-
-ImageButton.styleClass = XNode.prepare("Xamarin.Forms.ImageButton:StyleClass;Xamarin.Forms.Core", true, false);
-
-ImageButton.triggers = XNode.prepare("Xamarin.Forms.ImageButton:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IImageSource {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IImageSourceConstructor {
-    (a?: Partial<IImageSource>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ImageSource.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ImageSource.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ImageSource */
-const ImageSource: IImageSourceConstructor = XNode.prepare<IImageSource>("Xamarin.Forms.ImageSource;Xamarin.Forms.Core", false, false);
-
-
-ImageSource.effects = XNode.prepare("Xamarin.Forms.ImageSource:Effects;Xamarin.Forms.Core", true, false);
-
-ImageSource.menu = XNode.prepare("Xamarin.Forms.ImageSource:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IIndicatorView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property Count of Type Int32 */
-count?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HideSingle of Type Boolean */
-hideSingle?: boolean | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property IndicatorColor of Type Color */
-indicatorColor?: ColorItem | string | null | Bind;
-
-/** Property IndicatorLayout of Type Layout`1 */
-indicatorLayout?: any;
-
-/** Property IndicatorSize of Type Double */
-indicatorSize?: number | Bind;
-
-/** Property IndicatorsShape of Type IndicatorShape */
-indicatorsShape?: "Circle" | "Square" | Bind;
-
-/** Property IndicatorTemplate of Type DataTemplate */
-indicatorTemplate?: any;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaximumVisible of Type Int32 */
-maximumVisible?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Position of Type Int32 */
-position?: number | Bind;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectedIndicatorColor of Type Color */
-selectedIndicatorColor?: ColorItem | string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IIndicatorViewConstructor {
-    (a?: Partial<IIndicatorView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property IndicatorView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property IndicatorView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property IndicatorView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property IndicatorView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property IndicatorView.IndicatorLayout of Type Xamarin.Forms.Layout`1[Xamarin.Forms.View] */
-indicatorLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+public static indicatorLayout = XNode.property();
 
 /** Property IndicatorView.IndicatorTemplate of Type Xamarin.Forms.DataTemplate */
-indicatorTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+public static indicatorTemplate = XNode.template();
 
 /** Property IndicatorView.ItemsSourceBy of Type Xamarin.Forms.VisualElement */
-itemsSourceBy?: ( a: any, ... nodes: XNode[]) => XNode;
+public static itemsSourceBy = XNode.property()
+    
+    
+/** Property Count of Type Int32 */
+public count?: number | Bind;
 
-/** Property IndicatorView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property HideSingle of Type Boolean */
+public hideSingle?: boolean | Bind;
 
-/** Property IndicatorView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IndicatorColor of Type Color */
+public indicatorColor?: ColorItem | string | null | Bind;
 
-/** Property IndicatorView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IndicatorLayout of Type Layout`1 */
+public indicatorLayout?: any;
 
-/** Property IndicatorView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property IndicatorSize of Type Double */
+public indicatorSize?: number | Bind;
+
+/** Property IndicatorsShape of Type IndicatorShape */
+public indicatorsShape?: "Circle" | "Square" | Bind;
+
+/** Property IndicatorTemplate of Type DataTemplate */
+public indicatorTemplate?: any;
+
+/** Property ItemsSource of Type IEnumerable */
+public itemsSource?: any;
+
+/** Property MaximumVisible of Type Int32 */
+public maximumVisible?: number | Bind;
+
+/** Property Position of Type Int32 */
+public position?: number | Bind;
+
+/** Property SelectedIndicatorColor of Type Color */
+public selectedIndicatorColor?: ColorItem | string | null | Bind;
 }
 
-/** IndicatorView */
-const IndicatorView: IIndicatorViewConstructor = XNode.prepare<IIndicatorView>("Xamarin.Forms.IndicatorView;Xamarin.Forms.Core", false, false);
 
-
-IndicatorView.behaviors = XNode.prepare("Xamarin.Forms.IndicatorView:Behaviors;Xamarin.Forms.Core", true, false);
-
-IndicatorView.controlTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-IndicatorView.effects = XNode.prepare("Xamarin.Forms.IndicatorView:Effects;Xamarin.Forms.Core", true, false);
-
-IndicatorView.gestureRecognizers = XNode.prepare("Xamarin.Forms.IndicatorView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-IndicatorView.indicatorLayout = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorLayout;Xamarin.Forms.Core", true, false);
-
-IndicatorView.indicatorTemplate = XNode.prepare("Xamarin.Forms.IndicatorView:IndicatorTemplate;Xamarin.Forms.Core", true, true);
-
-IndicatorView.itemsSourceBy = XNode.prepare("Xamarin.Forms.IndicatorView:ItemsSourceBy;Xamarin.Forms.Core", true, false);
-
-IndicatorView.menu = XNode.prepare("Xamarin.Forms.IndicatorView:Menu;Xamarin.Forms.Core", true, false);
-
-IndicatorView.resources = XNode.prepare("Xamarin.Forms.IndicatorView:Resources;Xamarin.Forms.Core", true, false);
-
-IndicatorView.styleClass = XNode.prepare("Xamarin.Forms.IndicatorView:StyleClass;Xamarin.Forms.Core", true, false);
-
-IndicatorView.triggers = XNode.prepare("Xamarin.Forms.IndicatorView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IInputView {
+@XFNS0("Behavior")
+class Behavior extends BindableObject {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsReadOnly of Type Boolean */
-isReadOnly?: boolean | Bind;
-
-/** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Keyboard of Type Keyboard */
-keyboard?: /*Keyboard*/ any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaxLength of Type Int32 */
-maxLength?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Placeholder of Type String */
-placeholder?: string | null | Bind;
-
-/** Property PlaceholderColor of Type Color */
-placeholderColor?: ColorItem | string | null | Bind;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IInputViewConstructor {
-    (a?: Partial<IInputView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property InputView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property InputView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property InputView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property InputView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property InputView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property InputView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property InputView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** InputView */
-const InputView: IInputViewConstructor = XNode.prepare<IInputView>("Xamarin.Forms.InputView;Xamarin.Forms.Core", false, false);
-
-
-InputView.behaviors = XNode.prepare("Xamarin.Forms.InputView:Behaviors;Xamarin.Forms.Core", true, false);
-
-InputView.effects = XNode.prepare("Xamarin.Forms.InputView:Effects;Xamarin.Forms.Core", true, false);
-
-InputView.gestureRecognizers = XNode.prepare("Xamarin.Forms.InputView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-InputView.menu = XNode.prepare("Xamarin.Forms.InputView:Menu;Xamarin.Forms.Core", true, false);
-
-InputView.resources = XNode.prepare("Xamarin.Forms.InputView:Resources;Xamarin.Forms.Core", true, false);
-
-InputView.styleClass = XNode.prepare("Xamarin.Forms.InputView:StyleClass;Xamarin.Forms.Core", true, false);
-
-InputView.triggers = XNode.prepare("Xamarin.Forms.InputView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IBehavior {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-    [key: string]: any;
-}
-
-export interface IBehaviorConstructor {
-    (a?: Partial<IBehavior>, ... nodes: XNode[]): XNode;
     
     
 }
 
-/** Behavior */
-const Behavior: IBehaviorConstructor = XNode.prepare<IBehavior>("Xamarin.Forms.Behavior;Xamarin.Forms.Core", false, false);
 
-
-
-
-export interface IDataTrigger {
-    
-    
-/** Property Binding of Type BindingBase */
-binding?: any;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property Value of Type Object */
-value?: any;
-    [key: string]: any;
-}
-
-export interface IDataTriggerConstructor {
-    (a?: Partial<IDataTrigger>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property DataTrigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DataTrigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-exitActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property DataTrigger.Setters of Type Xamarin.Forms.Setter */
-setters?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** DataTrigger */
-const DataTrigger: IDataTriggerConstructor = XNode.prepare<IDataTrigger>("Xamarin.Forms.DataTrigger;Xamarin.Forms.Core", false, false);
-
-
-DataTrigger.enterActions = XNode.prepare("Xamarin.Forms.DataTrigger:EnterActions;Xamarin.Forms.Core", true, false);
-
-DataTrigger.exitActions = XNode.prepare("Xamarin.Forms.DataTrigger:ExitActions;Xamarin.Forms.Core", true, false);
-
-DataTrigger.setters = XNode.prepare("Xamarin.Forms.DataTrigger:Setters;Xamarin.Forms.Core", true, false);
-
-
-export interface IEventTrigger {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property Event of Type String */
-event?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IEventTriggerConstructor {
-    (a?: Partial<IEventTrigger>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property EventTrigger.Actions of Type Xamarin.Forms.TriggerAction */
-actions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property EventTrigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property EventTrigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-exitActions?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** EventTrigger */
-const EventTrigger: IEventTriggerConstructor = XNode.prepare<IEventTrigger>("Xamarin.Forms.EventTrigger;Xamarin.Forms.Core", false, false);
-
-
-EventTrigger.actions = XNode.prepare("Xamarin.Forms.EventTrigger:Actions;Xamarin.Forms.Core", true, false);
-
-EventTrigger.enterActions = XNode.prepare("Xamarin.Forms.EventTrigger:EnterActions;Xamarin.Forms.Core", true, false);
-
-EventTrigger.exitActions = XNode.prepare("Xamarin.Forms.EventTrigger:ExitActions;Xamarin.Forms.Core", true, false);
-
-
-export interface IMultiTrigger {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-    [key: string]: any;
-}
-
-export interface IMultiTriggerConstructor {
-    (a?: Partial<IMultiTrigger>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property MultiTrigger.Conditions of Type Xamarin.Forms.Condition */
-conditions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property MultiTrigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property MultiTrigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-exitActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property MultiTrigger.Setters of Type Xamarin.Forms.Setter */
-setters?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** MultiTrigger */
-const MultiTrigger: IMultiTriggerConstructor = XNode.prepare<IMultiTrigger>("Xamarin.Forms.MultiTrigger;Xamarin.Forms.Core", false, false);
-
-
-MultiTrigger.conditions = XNode.prepare("Xamarin.Forms.MultiTrigger:Conditions;Xamarin.Forms.Core", true, false);
-
-MultiTrigger.enterActions = XNode.prepare("Xamarin.Forms.MultiTrigger:EnterActions;Xamarin.Forms.Core", true, false);
-
-MultiTrigger.exitActions = XNode.prepare("Xamarin.Forms.MultiTrigger:ExitActions;Xamarin.Forms.Core", true, false);
-
-MultiTrigger.setters = XNode.prepare("Xamarin.Forms.MultiTrigger:Setters;Xamarin.Forms.Core", true, false);
-
-
-export interface ITrigger {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property Property of Type BindableProperty */
-property?: /*BindableProperty*/ any;
-
-/** Property Value of Type Object */
-value?: any;
-    [key: string]: any;
-}
-
-export interface ITriggerConstructor {
-    (a?: Partial<ITrigger>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Trigger.EnterActions of Type Xamarin.Forms.TriggerAction */
-enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Trigger.ExitActions of Type Xamarin.Forms.TriggerAction */
-exitActions?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Trigger.Setters of Type Xamarin.Forms.Setter */
-setters?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Trigger */
-const Trigger: ITriggerConstructor = XNode.prepare<ITrigger>("Xamarin.Forms.Trigger;Xamarin.Forms.Core", false, false);
-
-
-Trigger.enterActions = XNode.prepare("Xamarin.Forms.Trigger:EnterActions;Xamarin.Forms.Core", true, false);
-
-Trigger.exitActions = XNode.prepare("Xamarin.Forms.Trigger:ExitActions;Xamarin.Forms.Core", true, false);
-
-Trigger.setters = XNode.prepare("Xamarin.Forms.Trigger:Setters;Xamarin.Forms.Core", true, false);
-
-
-export interface ITriggerBase {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property IsSealed of Type Boolean */
-isSealed?: boolean | Bind;
-    [key: string]: any;
-}
-
-export interface ITriggerBaseConstructor {
-    (a?: Partial<ITriggerBase>, ... nodes: XNode[]): XNode;
+@XFNS0("TriggerBase")
+class TriggerBase extends BindableObject {
     
     
 /** Property TriggerBase.EnterActions of Type Xamarin.Forms.TriggerAction */
-enterActions?: ( a: any, ... nodes: XNode[]) => XNode;
+public static enterActions = XNode.property();
 
 /** Property TriggerBase.ExitActions of Type Xamarin.Forms.TriggerAction */
-exitActions?: ( a: any, ... nodes: XNode[]) => XNode
+public static exitActions = XNode.property()
+    
+    
+/** Property IsSealed of Type Boolean */
+public isSealed?: boolean | Bind;
 }
 
-/** TriggerBase */
-const TriggerBase: ITriggerBaseConstructor = XNode.prepare<ITriggerBase>("Xamarin.Forms.TriggerBase;Xamarin.Forms.Core", false, false);
 
-
-TriggerBase.enterActions = XNode.prepare("Xamarin.Forms.TriggerBase:EnterActions;Xamarin.Forms.Core", true, false);
-
-TriggerBase.exitActions = XNode.prepare("Xamarin.Forms.TriggerBase:ExitActions;Xamarin.Forms.Core", true, false);
-
-
-export interface ICarouselView {
+@XFNS0("DataTrigger")
+class DataTrigger extends TriggerBase {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property CurrentItem of Type Object */
-currentItem?: any;
-
-/** Property CurrentItemChangedCommand of Type ICommand */
-currentItemChangedCommand?: any;
-
-/** Property CurrentItemChangedCommandParameter of Type Object */
-currentItemChangedCommandParameter?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property EmptyView of Type Object */
-emptyView?: any;
-
-/** Property EmptyViewTemplate of Type DataTemplate */
-emptyViewTemplate?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBounceEnabled of Type Boolean */
-isBounceEnabled?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsScrollAnimated of Type Boolean */
-isScrollAnimated?: boolean | Bind;
-
-/** Property IsScrolling of Type Boolean */
-isScrolling?: boolean | Bind;
-
-/** Property IsSwipeEnabled of Type Boolean */
-isSwipeEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemsLayout of Type LinearItemsLayout */
-itemsLayout?: any;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property PeekAreaInsets of Type Thickness */
-peekAreaInsets?: /*Thickness*/ any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Position of Type Int32 */
-position?: number | Bind;
-
-/** Property PositionChangedCommand of Type ICommand */
-positionChangedCommand?: any;
-
-/** Property PositionChangedCommandParameter of Type Object */
-positionChangedCommandParameter?: any;
-
-/** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: number | Bind;
-
-/** Property RemainingItemsThresholdReachedCommand of Type ICommand */
-remainingItemsThresholdReachedCommand?: any;
-
-/** Property RemainingItemsThresholdReachedCommandParameter of Type Object */
-remainingItemsThresholdReachedCommandParameter?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+/** Property DataTrigger.Setters of Type Xamarin.Forms.Setter */
+public static setters = XNode.property()
+    
+    
+/** Property Binding of Type BindingBase */
+public binding?: any;
+
+/** Property Value of Type Object */
+public value?: any;
 }
 
-export interface ICarouselViewConstructor {
-    (a?: Partial<ICarouselView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("EventTrigger")
+class EventTrigger extends TriggerBase {
     
     
-/** Property CarouselView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.ItemsLayout of Type Xamarin.Forms.LinearItemsLayout */
-itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CarouselView.VisibleViews of Type Xamarin.Forms.View */
-visibleViews?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property EventTrigger.Actions of Type Xamarin.Forms.TriggerAction */
+public static actions = XNode.property()
+    
+    
+/** Property Event of Type String */
+public event?: string | null | Bind;
 }
 
-/** CarouselView */
-const CarouselView: ICarouselViewConstructor = XNode.prepare<ICarouselView>("Xamarin.Forms.CarouselView;Xamarin.Forms.Core", false, false);
 
-
-CarouselView.behaviors = XNode.prepare("Xamarin.Forms.CarouselView:Behaviors;Xamarin.Forms.Core", true, false);
-
-CarouselView.effects = XNode.prepare("Xamarin.Forms.CarouselView:Effects;Xamarin.Forms.Core", true, false);
-
-CarouselView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.CarouselView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
-
-CarouselView.gestureRecognizers = XNode.prepare("Xamarin.Forms.CarouselView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-CarouselView.itemsLayout = XNode.prepare("Xamarin.Forms.CarouselView:ItemsLayout;Xamarin.Forms.Core", true, false);
-
-CarouselView.itemTemplate = XNode.prepare("Xamarin.Forms.CarouselView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-CarouselView.menu = XNode.prepare("Xamarin.Forms.CarouselView:Menu;Xamarin.Forms.Core", true, false);
-
-CarouselView.resources = XNode.prepare("Xamarin.Forms.CarouselView:Resources;Xamarin.Forms.Core", true, false);
-
-CarouselView.styleClass = XNode.prepare("Xamarin.Forms.CarouselView:StyleClass;Xamarin.Forms.Core", true, false);
-
-CarouselView.triggers = XNode.prepare("Xamarin.Forms.CarouselView:Triggers;Xamarin.Forms.Core", true, false);
-
-CarouselView.visibleViews = XNode.prepare("Xamarin.Forms.CarouselView:VisibleViews;Xamarin.Forms.Core", true, false);
-
-
-export interface ICollectionView {
+@XFNS0("MultiTrigger")
+class MultiTrigger extends TriggerBase {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property EmptyView of Type Object */
-emptyView?: any;
-
-/** Property EmptyViewTemplate of Type DataTemplate */
-emptyViewTemplate?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Footer of Type Object */
-footer?: any;
-
-/** Property FooterTemplate of Type DataTemplate */
-footerTemplate?: any;
-
-/** Property GroupFooterTemplate of Type DataTemplate */
-groupFooterTemplate?: any;
-
-/** Property GroupHeaderTemplate of Type DataTemplate */
-groupHeaderTemplate?: any;
-
-/** Property Header of Type Object */
-header?: any;
-
-/** Property HeaderTemplate of Type DataTemplate */
-headerTemplate?: any;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsGrouped of Type Boolean */
-isGrouped?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
-
-/** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: /*IItemsLayout*/ any;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: number | Bind;
-
-/** Property RemainingItemsThresholdReachedCommand of Type ICommand */
-remainingItemsThresholdReachedCommand?: any;
-
-/** Property RemainingItemsThresholdReachedCommandParameter of Type Object */
-remainingItemsThresholdReachedCommandParameter?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectedItem of Type Object */
-selectedItem?: any;
-
-/** Property SelectedItems of Type IList`1 */
-selectedItems?: any;
-
-/** Property SelectionChangedCommand of Type ICommand */
-selectionChangedCommand?: any;
-
-/** Property SelectionChangedCommandParameter of Type Object */
-selectionChangedCommandParameter?: any;
-
-/** Property SelectionMode of Type SelectionMode */
-selectionMode?: "None" | "Single" | "Multiple" | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ICollectionViewConstructor {
-    (a?: Partial<ICollectionView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property CollectionView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.GroupFooterTemplate of Type Xamarin.Forms.DataTemplate */
-groupFooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-groupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.SelectedItems of Type System.Object */
-selectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property CollectionView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** CollectionView */
-const CollectionView: ICollectionViewConstructor = XNode.prepare<ICollectionView>("Xamarin.Forms.CollectionView;Xamarin.Forms.Core", false, false);
-
-
-CollectionView.behaviors = XNode.prepare("Xamarin.Forms.CollectionView:Behaviors;Xamarin.Forms.Core", true, false);
-
-CollectionView.effects = XNode.prepare("Xamarin.Forms.CollectionView:Effects;Xamarin.Forms.Core", true, false);
-
-CollectionView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.CollectionView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
-
-CollectionView.footerTemplate = XNode.prepare("Xamarin.Forms.CollectionView:FooterTemplate;Xamarin.Forms.Core", true, true);
-
-CollectionView.gestureRecognizers = XNode.prepare("Xamarin.Forms.CollectionView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-CollectionView.groupFooterTemplate = XNode.prepare("Xamarin.Forms.CollectionView:GroupFooterTemplate;Xamarin.Forms.Core", true, true);
-
-CollectionView.groupHeaderTemplate = XNode.prepare("Xamarin.Forms.CollectionView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
-
-CollectionView.headerTemplate = XNode.prepare("Xamarin.Forms.CollectionView:HeaderTemplate;Xamarin.Forms.Core", true, true);
-
-CollectionView.itemsLayout = XNode.prepare("Xamarin.Forms.CollectionView:ItemsLayout;Xamarin.Forms.Core", true, false);
-
-CollectionView.itemTemplate = XNode.prepare("Xamarin.Forms.CollectionView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-CollectionView.menu = XNode.prepare("Xamarin.Forms.CollectionView:Menu;Xamarin.Forms.Core", true, false);
-
-CollectionView.resources = XNode.prepare("Xamarin.Forms.CollectionView:Resources;Xamarin.Forms.Core", true, false);
-
-CollectionView.selectedItems = XNode.prepare("Xamarin.Forms.CollectionView:SelectedItems;Xamarin.Forms.Core", true, false);
-
-CollectionView.styleClass = XNode.prepare("Xamarin.Forms.CollectionView:StyleClass;Xamarin.Forms.Core", true, false);
-
-CollectionView.triggers = XNode.prepare("Xamarin.Forms.CollectionView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IGridItemsLayout {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property HorizontalItemSpacing of Type Double */
-horizontalItemSpacing?: number | Bind;
-
-/** Property SnapPointsAlignment of Type SnapPointsAlignment */
-snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property SnapPointsType of Type SnapPointsType */
-snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
-
-/** Property Span of Type Int32 */
-span?: number | Bind;
-
-/** Property VerticalItemSpacing of Type Double */
-verticalItemSpacing?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IGridItemsLayoutConstructor {
-    (a?: Partial<IGridItemsLayout>, ... nodes: XNode[]): XNode;
+/** Property MultiTrigger.Conditions of Type Xamarin.Forms.Condition */
+public static conditions = XNode.property();
+
+/** Property MultiTrigger.Setters of Type Xamarin.Forms.Setter */
+public static setters = XNode.property()
     
     
 }
 
-/** GridItemsLayout */
-const GridItemsLayout: IGridItemsLayoutConstructor = XNode.prepare<IGridItemsLayout>("Xamarin.Forms.GridItemsLayout;Xamarin.Forms.Core", false, false);
 
-
-
-
-export interface IGroupableItemsView {
+@XFNS0("Trigger")
+class Trigger extends TriggerBase {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property EmptyView of Type Object */
-emptyView?: any;
-
-/** Property EmptyViewTemplate of Type DataTemplate */
-emptyViewTemplate?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Footer of Type Object */
-footer?: any;
-
-/** Property FooterTemplate of Type DataTemplate */
-footerTemplate?: any;
-
-/** Property GroupFooterTemplate of Type DataTemplate */
-groupFooterTemplate?: any;
-
-/** Property GroupHeaderTemplate of Type DataTemplate */
-groupHeaderTemplate?: any;
-
-/** Property Header of Type Object */
-header?: any;
-
-/** Property HeaderTemplate of Type DataTemplate */
-headerTemplate?: any;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsGrouped of Type Boolean */
-isGrouped?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
-
-/** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: /*IItemsLayout*/ any;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: number | Bind;
-
-/** Property RemainingItemsThresholdReachedCommand of Type ICommand */
-remainingItemsThresholdReachedCommand?: any;
-
-/** Property RemainingItemsThresholdReachedCommandParameter of Type Object */
-remainingItemsThresholdReachedCommandParameter?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectedItem of Type Object */
-selectedItem?: any;
-
-/** Property SelectedItems of Type IList`1 */
-selectedItems?: any;
-
-/** Property SelectionChangedCommand of Type ICommand */
-selectionChangedCommand?: any;
-
-/** Property SelectionChangedCommandParameter of Type Object */
-selectionChangedCommandParameter?: any;
-
-/** Property SelectionMode of Type SelectionMode */
-selectionMode?: "None" | "Single" | "Multiple" | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+/** Property Trigger.Setters of Type Xamarin.Forms.Setter */
+public static setters = XNode.property()
+    
+    
+/** Property Property of Type BindableProperty */
+public property?: /*BindableProperty*/ any;
+
+/** Property Value of Type Object */
+public value?: any;
 }
 
-export interface IGroupableItemsViewConstructor {
-    (a?: Partial<IGroupableItemsView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ItemsView")
+class ItemsView extends View {
     
     
-/** Property GroupableItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.GroupFooterTemplate of Type Xamarin.Forms.DataTemplate */
-groupFooterTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-groupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.SelectedItems of Type System.Object */
-selectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property GroupableItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** GroupableItemsView */
-const GroupableItemsView: IGroupableItemsViewConstructor = XNode.prepare<IGroupableItemsView>("Xamarin.Forms.GroupableItemsView;Xamarin.Forms.Core", false, false);
-
-
-GroupableItemsView.behaviors = XNode.prepare("Xamarin.Forms.GroupableItemsView:Behaviors;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.effects = XNode.prepare("Xamarin.Forms.GroupableItemsView:Effects;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
-
-GroupableItemsView.footerTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
-
-GroupableItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.GroupableItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.groupFooterTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:GroupFooterTemplate;Xamarin.Forms.Core", true, true);
-
-GroupableItemsView.groupHeaderTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
-
-GroupableItemsView.headerTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
-
-GroupableItemsView.itemsLayout = XNode.prepare("Xamarin.Forms.GroupableItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.GroupableItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-GroupableItemsView.menu = XNode.prepare("Xamarin.Forms.GroupableItemsView:Menu;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.resources = XNode.prepare("Xamarin.Forms.GroupableItemsView:Resources;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.selectedItems = XNode.prepare("Xamarin.Forms.GroupableItemsView:SelectedItems;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.styleClass = XNode.prepare("Xamarin.Forms.GroupableItemsView:StyleClass;Xamarin.Forms.Core", true, false);
-
-GroupableItemsView.triggers = XNode.prepare("Xamarin.Forms.GroupableItemsView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IItemsLayout {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property SnapPointsAlignment of Type SnapPointsAlignment */
-snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property SnapPointsType of Type SnapPointsType */
-snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
-    [key: string]: any;
-}
-
-export interface IItemsLayoutConstructor {
-    (a?: Partial<IItemsLayout>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** ItemsLayout */
-const ItemsLayout: IItemsLayoutConstructor = XNode.prepare<IItemsLayout>("Xamarin.Forms.ItemsLayout;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IItemsView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property EmptyView of Type Object */
-emptyView?: any;
-
-/** Property EmptyViewTemplate of Type DataTemplate */
-emptyViewTemplate?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: number | Bind;
-
-/** Property RemainingItemsThresholdReachedCommand of Type ICommand */
-remainingItemsThresholdReachedCommand?: any;
-
-/** Property RemainingItemsThresholdReachedCommandParameter of Type Object */
-remainingItemsThresholdReachedCommandParameter?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IItemsViewConstructor {
-    (a?: Partial<IItemsView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ItemsView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property ItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+public static emptyViewTemplate = XNode.template();
 
 /** Property ItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ItemsView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ItemsView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ItemsView */
-const ItemsView: IItemsViewConstructor = XNode.prepare<IItemsView>("Xamarin.Forms.ItemsView;Xamarin.Forms.Core", false, false);
-
-
-ItemsView.behaviors = XNode.prepare("Xamarin.Forms.ItemsView:Behaviors;Xamarin.Forms.Core", true, false);
-
-ItemsView.effects = XNode.prepare("Xamarin.Forms.ItemsView:Effects;Xamarin.Forms.Core", true, false);
-
-ItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.ItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
-
-ItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.ItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-ItemsView.menu = XNode.prepare("Xamarin.Forms.ItemsView:Menu;Xamarin.Forms.Core", true, false);
-
-ItemsView.resources = XNode.prepare("Xamarin.Forms.ItemsView:Resources;Xamarin.Forms.Core", true, false);
-
-ItemsView.styleClass = XNode.prepare("Xamarin.Forms.ItemsView:StyleClass;Xamarin.Forms.Core", true, false);
-
-ItemsView.triggers = XNode.prepare("Xamarin.Forms.ItemsView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ILinearItemsLayout {
+public static itemTemplate = XNode.template()
     
     
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property ItemSpacing of Type Double */
-itemSpacing?: number | Bind;
-
-/** Property SnapPointsAlignment of Type SnapPointsAlignment */
-snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property SnapPointsType of Type SnapPointsType */
-snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
-    [key: string]: any;
-}
-
-export interface ILinearItemsLayoutConstructor {
-    (a?: Partial<ILinearItemsLayout>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** LinearItemsLayout */
-const LinearItemsLayout: ILinearItemsLayoutConstructor = XNode.prepare<ILinearItemsLayout>("Xamarin.Forms.LinearItemsLayout;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface ISelectableItemsView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
 /** Property EmptyView of Type Object */
-emptyView?: any;
+public emptyView?: any;
 
 /** Property EmptyViewTemplate of Type DataTemplate */
-emptyViewTemplate?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Footer of Type Object */
-footer?: any;
-
-/** Property FooterTemplate of Type DataTemplate */
-footerTemplate?: any;
-
-/** Property Header of Type Object */
-header?: any;
-
-/** Property HeaderTemplate of Type DataTemplate */
-headerTemplate?: any;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+public emptyViewTemplate?: any;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
-
-/** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: /*IItemsLayout*/ any;
+public horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
+public itemsSource?: any;
 
 /** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
+public itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
 
 /** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public itemTemplate?: any;
 
 /** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: number | Bind;
+public remainingItemsThreshold?: number | Bind;
 
 /** Property RemainingItemsThresholdReachedCommand of Type ICommand */
-remainingItemsThresholdReachedCommand?: any;
+public remainingItemsThresholdReachedCommand?: any;
 
 /** Property RemainingItemsThresholdReachedCommandParameter of Type Object */
-remainingItemsThresholdReachedCommandParameter?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectedItem of Type Object */
-selectedItem?: any;
-
-/** Property SelectedItems of Type IList`1 */
-selectedItems?: any;
-
-/** Property SelectionChangedCommand of Type ICommand */
-selectionChangedCommand?: any;
-
-/** Property SelectionChangedCommandParameter of Type Object */
-selectionChangedCommandParameter?: any;
-
-/** Property SelectionMode of Type SelectionMode */
-selectionMode?: "None" | "Single" | "Multiple" | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+public remainingItemsThresholdReachedCommandParameter?: any;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 }
 
-export interface ISelectableItemsViewConstructor {
-    (a?: Partial<ISelectableItemsView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("CarouselView")
+class CarouselView extends ItemsView {
     
     
-/** Property SelectableItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property CarouselView.ItemsLayout of Type Xamarin.Forms.LinearItemsLayout */
+public static itemsLayout = XNode.property();
 
-/** Property SelectableItemsView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property CarouselView.VisibleViews of Type Xamarin.Forms.View */
+public static visibleViews = XNode.property()
+    
+    
+/** Property CurrentItem of Type Object */
+public currentItem?: any;
 
-/** Property SelectableItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property CurrentItemChangedCommand of Type ICommand */
+public currentItemChangedCommand?: any;
 
-/** Property SelectableItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property CurrentItemChangedCommandParameter of Type Object */
+public currentItemChangedCommandParameter?: any;
 
-/** Property SelectableItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IsBounceEnabled of Type Boolean */
+public isBounceEnabled?: boolean | Bind;
 
-/** Property SelectableItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IsScrollAnimated of Type Boolean */
+public isScrollAnimated?: boolean | Bind;
 
-/** Property SelectableItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IsScrolling of Type Boolean */
+public isScrolling?: boolean | Bind;
 
-/** Property SelectableItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IsSwipeEnabled of Type Boolean */
+public isSwipeEnabled?: boolean | Bind;
 
-/** Property SelectableItemsView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property ItemsLayout of Type LinearItemsLayout */
+public itemsLayout?: any;
 
-/** Property SelectableItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property PeekAreaInsets of Type Thickness */
+public peekAreaInsets?: /*Thickness*/ any;
 
-/** Property SelectableItemsView.SelectedItems of Type System.Object */
-selectedItems?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property Position of Type Int32 */
+public position?: number | Bind;
 
-/** Property SelectableItemsView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property PositionChangedCommand of Type ICommand */
+public positionChangedCommand?: any;
 
-/** Property SelectableItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property PositionChangedCommandParameter of Type Object */
+public positionChangedCommandParameter?: any;
 }
 
-/** SelectableItemsView */
-const SelectableItemsView: ISelectableItemsViewConstructor = XNode.prepare<ISelectableItemsView>("Xamarin.Forms.SelectableItemsView;Xamarin.Forms.Core", false, false);
 
-
-SelectableItemsView.behaviors = XNode.prepare("Xamarin.Forms.SelectableItemsView:Behaviors;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.effects = XNode.prepare("Xamarin.Forms.SelectableItemsView:Effects;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
-
-SelectableItemsView.footerTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
-
-SelectableItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.SelectableItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.headerTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
-
-SelectableItemsView.itemsLayout = XNode.prepare("Xamarin.Forms.SelectableItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.SelectableItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-SelectableItemsView.menu = XNode.prepare("Xamarin.Forms.SelectableItemsView:Menu;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.resources = XNode.prepare("Xamarin.Forms.SelectableItemsView:Resources;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.selectedItems = XNode.prepare("Xamarin.Forms.SelectableItemsView:SelectedItems;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.styleClass = XNode.prepare("Xamarin.Forms.SelectableItemsView:StyleClass;Xamarin.Forms.Core", true, false);
-
-SelectableItemsView.triggers = XNode.prepare("Xamarin.Forms.SelectableItemsView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IStructuredItemsView {
+@XFNS0("StructuredItemsView")
+class StructuredItemsView extends ItemsView {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property EmptyView of Type Object */
-emptyView?: any;
-
-/** Property EmptyViewTemplate of Type DataTemplate */
-emptyViewTemplate?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Footer of Type Object */
-footer?: any;
-
-/** Property FooterTemplate of Type DataTemplate */
-footerTemplate?: any;
-
-/** Property Header of Type Object */
-header?: any;
-
-/** Property HeaderTemplate of Type DataTemplate */
-headerTemplate?: any;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemSizingStrategy of Type ItemSizingStrategy */
-itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
-
-/** Property ItemsLayout of Type IItemsLayout */
-itemsLayout?: /*IItemsLayout*/ any;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemsUpdatingScrollMode of Type ItemsUpdatingScrollMode */
-itemsUpdatingScrollMode?: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property RemainingItemsThreshold of Type Int32 */
-remainingItemsThreshold?: number | Bind;
-
-/** Property RemainingItemsThresholdReachedCommand of Type ICommand */
-remainingItemsThresholdReachedCommand?: any;
-
-/** Property RemainingItemsThresholdReachedCommandParameter of Type Object */
-remainingItemsThresholdReachedCommandParameter?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IStructuredItemsViewConstructor {
-    (a?: Partial<IStructuredItemsView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property StructuredItemsView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-emptyViewTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property StructuredItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+public static footerTemplate = XNode.template();
 
 /** Property StructuredItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+public static headerTemplate = XNode.template();
 
 /** Property StructuredItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-itemsLayout?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StructuredItemsView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** StructuredItemsView */
-const StructuredItemsView: IStructuredItemsViewConstructor = XNode.prepare<IStructuredItemsView>("Xamarin.Forms.StructuredItemsView;Xamarin.Forms.Core", false, false);
-
-
-StructuredItemsView.behaviors = XNode.prepare("Xamarin.Forms.StructuredItemsView:Behaviors;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.effects = XNode.prepare("Xamarin.Forms.StructuredItemsView:Effects;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.emptyViewTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:EmptyViewTemplate;Xamarin.Forms.Core", true, true);
-
-StructuredItemsView.footerTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:FooterTemplate;Xamarin.Forms.Core", true, true);
-
-StructuredItemsView.gestureRecognizers = XNode.prepare("Xamarin.Forms.StructuredItemsView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.headerTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:HeaderTemplate;Xamarin.Forms.Core", true, true);
-
-StructuredItemsView.itemsLayout = XNode.prepare("Xamarin.Forms.StructuredItemsView:ItemsLayout;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.itemTemplate = XNode.prepare("Xamarin.Forms.StructuredItemsView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-StructuredItemsView.menu = XNode.prepare("Xamarin.Forms.StructuredItemsView:Menu;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.resources = XNode.prepare("Xamarin.Forms.StructuredItemsView:Resources;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.styleClass = XNode.prepare("Xamarin.Forms.StructuredItemsView:StyleClass;Xamarin.Forms.Core", true, false);
-
-StructuredItemsView.triggers = XNode.prepare("Xamarin.Forms.StructuredItemsView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ILabel {
+public static itemsLayout = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Font of Type Font */
-font?: /*Font*/ any;
-
-/** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property FormattedText of Type FormattedString */
-formattedText?: any;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property LineBreakMode of Type LineBreakMode */
-lineBreakMode?: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | Bind;
-
-/** Property LineHeight of Type Double */
-lineHeight?: number | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaxLines of Type Int32 */
-maxLines?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property TextDecorations of Type TextDecorations */
-textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
-
-/** Property TextType of Type TextType */
-textType?: "Text" | "Html" | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-
-/** Property XAlign of Type TextAlignment */
-xAlign?: "Start" | "Center" | "End" | Bind;
-
-/** Property YAlign of Type TextAlignment */
-yAlign?: "Start" | "Center" | "End" | Bind;
-    [key: string]: any;
-}
-
-export interface ILabelConstructor {
-    (a?: Partial<ILabel>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Label.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.FormattedText of Type Xamarin.Forms.FormattedString */
-formattedText?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Label.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Label */
-const Label: ILabelConstructor = XNode.prepare<ILabel>("Xamarin.Forms.Label;Xamarin.Forms.Core", false, false);
-
-
-Label.behaviors = XNode.prepare("Xamarin.Forms.Label:Behaviors;Xamarin.Forms.Core", true, false);
-
-Label.effects = XNode.prepare("Xamarin.Forms.Label:Effects;Xamarin.Forms.Core", true, false);
-
-Label.formattedText = XNode.prepare("Xamarin.Forms.Label:FormattedText;Xamarin.Forms.Core", true, false);
-
-Label.gestureRecognizers = XNode.prepare("Xamarin.Forms.Label:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Label.menu = XNode.prepare("Xamarin.Forms.Label:Menu;Xamarin.Forms.Core", true, false);
-
-Label.resources = XNode.prepare("Xamarin.Forms.Label:Resources;Xamarin.Forms.Core", true, false);
-
-Label.styleClass = XNode.prepare("Xamarin.Forms.Label:StyleClass;Xamarin.Forms.Core", true, false);
-
-Label.triggers = XNode.prepare("Xamarin.Forms.Label:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ILayout {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ILayoutConstructor {
-    (a?: Partial<ILayout>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Layout.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Layout.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Layout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Layout.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Layout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Layout.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Layout.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Layout */
-const Layout: ILayoutConstructor = XNode.prepare<ILayout>("Xamarin.Forms.Layout;Xamarin.Forms.Core", false, false);
-
-
-Layout.behaviors = XNode.prepare("Xamarin.Forms.Layout:Behaviors;Xamarin.Forms.Core", true, false);
-
-Layout.effects = XNode.prepare("Xamarin.Forms.Layout:Effects;Xamarin.Forms.Core", true, false);
-
-Layout.gestureRecognizers = XNode.prepare("Xamarin.Forms.Layout:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Layout.menu = XNode.prepare("Xamarin.Forms.Layout:Menu;Xamarin.Forms.Core", true, false);
-
-Layout.resources = XNode.prepare("Xamarin.Forms.Layout:Resources;Xamarin.Forms.Core", true, false);
-
-Layout.styleClass = XNode.prepare("Xamarin.Forms.Layout:StyleClass;Xamarin.Forms.Core", true, false);
-
-Layout.triggers = XNode.prepare("Xamarin.Forms.Layout:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IListView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CachingStrategy of Type ListViewCachingStrategy */
-cachingStrategy?: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
 /** Property Footer of Type Object */
-footer?: any;
+public footer?: any;
 
 /** Property FooterTemplate of Type DataTemplate */
-footerTemplate?: any;
-
-/** Property GroupDisplayBinding of Type BindingBase */
-groupDisplayBinding?: any;
-
-/** Property GroupHeaderTemplate of Type DataTemplate */
-groupHeaderTemplate?: any;
-
-/** Property GroupShortNameBinding of Type BindingBase */
-groupShortNameBinding?: any;
-
-/** Property HasUnevenRows of Type Boolean */
-hasUnevenRows?: boolean | Bind;
+public footerTemplate?: any;
 
 /** Property Header of Type Object */
-header?: any;
+public header?: any;
 
 /** Property HeaderTemplate of Type DataTemplate */
-headerTemplate?: any;
+public headerTemplate?: any;
 
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
+/** Property ItemSizingStrategy of Type ItemSizingStrategy */
+public itemSizingStrategy?: "MeasureAllItems" | "MeasureFirstItem" | Bind;
 
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+/** Property ItemsLayout of Type IItemsLayout */
+public itemsLayout?: /*IItemsLayout*/ any;
+}
 
-/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsGroupingEnabled of Type Boolean */
-isGroupingEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsPullToRefreshEnabled of Type Boolean */
-isPullToRefreshEnabled?: boolean | Bind;
-
-/** Property IsRefreshing of Type Boolean */
-isRefreshing?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property RefreshAllowed of Type Boolean */
-refreshAllowed?: boolean | Bind;
-
-/** Property RefreshCommand of Type ICommand */
-refreshCommand?: any;
-
-/** Property RefreshControlColor of Type Color */
-refreshControlColor?: ColorItem | string | null | Bind;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property RowHeight of Type Int32 */
-rowHeight?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
+@XFNS0("SelectableItemsView")
+class SelectableItemsView extends StructuredItemsView {
+    
+    
+/** Property SelectableItemsView.SelectedItems of Type System.Object */
+public static selectedItems = XNode.property()
+    
+    
 /** Property SelectedItem of Type Object */
-selectedItem?: any;
+public selectedItem?: any;
 
-/** Property SelectionMode of Type ListViewSelectionMode */
-selectionMode?: "None" | "Single" | Bind;
+/** Property SelectedItems of Type IList`1 */
+public selectedItems?: any;
 
-/** Property SeparatorColor of Type Color */
-separatorColor?: ColorItem | string | null | Bind;
+/** Property SelectionChangedCommand of Type ICommand */
+public selectionChangedCommand?: any;
 
-/** Property SeparatorVisibility of Type SeparatorVisibility */
-separatorVisibility?: "Default" | "None" | Bind;
+/** Property SelectionChangedCommandParameter of Type Object */
+public selectionChangedCommandParameter?: any;
 
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+/** Property SelectionMode of Type SelectionMode */
+public selectionMode?: "None" | "Single" | "Multiple" | Bind;
 }
 
-export interface IListViewConstructor {
-    (a?: Partial<IListView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("GroupableItemsView")
+class GroupableItemsView extends SelectableItemsView {
     
     
-/** Property ListView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property GroupableItemsView.GroupFooterTemplate of Type Xamarin.Forms.DataTemplate */
+public static groupFooterTemplate = XNode.template();
 
-/** Property ListView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property GroupableItemsView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
+public static groupHeaderTemplate = XNode.template()
+    
+    
+/** Property GroupFooterTemplate of Type DataTemplate */
+public groupFooterTemplate?: any;
 
-/** Property ListView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-footerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property GroupHeaderTemplate of Type DataTemplate */
+public groupHeaderTemplate?: any;
 
-/** Property ListView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-groupHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-headerTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ListView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property IsGrouped of Type Boolean */
+public isGrouped?: boolean | Bind;
 }
 
-/** ListView */
-const ListView: IListViewConstructor = XNode.prepare<IListView>("Xamarin.Forms.ListView;Xamarin.Forms.Core", false, false);
 
-
-ListView.behaviors = XNode.prepare("Xamarin.Forms.ListView:Behaviors;Xamarin.Forms.Core", true, false);
-
-ListView.effects = XNode.prepare("Xamarin.Forms.ListView:Effects;Xamarin.Forms.Core", true, false);
-
-ListView.footerTemplate = XNode.prepare("Xamarin.Forms.ListView:FooterTemplate;Xamarin.Forms.Core", true, true);
-
-ListView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ListView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ListView.groupHeaderTemplate = XNode.prepare("Xamarin.Forms.ListView:GroupHeaderTemplate;Xamarin.Forms.Core", true, true);
-
-ListView.headerTemplate = XNode.prepare("Xamarin.Forms.ListView:HeaderTemplate;Xamarin.Forms.Core", true, true);
-
-ListView.itemTemplate = XNode.prepare("Xamarin.Forms.ListView:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-ListView.menu = XNode.prepare("Xamarin.Forms.ListView:Menu;Xamarin.Forms.Core", true, false);
-
-ListView.resources = XNode.prepare("Xamarin.Forms.ListView:Resources;Xamarin.Forms.Core", true, false);
-
-ListView.styleClass = XNode.prepare("Xamarin.Forms.ListView:StyleClass;Xamarin.Forms.Core", true, false);
-
-ListView.triggers = XNode.prepare("Xamarin.Forms.ListView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IMasterDetailPage {
+@XFNS0("CollectionView")
+class CollectionView extends GroupableItemsView {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
+    
+    
+}
 
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
 
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
+@XFNS0("ItemsLayout")
+class ItemsLayout extends BindableObject {
+    
+    
+    
+    
+/** Property SnapPointsAlignment of Type SnapPointsAlignment */
+public snapPointsAlignment?: "Start" | "Center" | "End" | Bind;
 
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
+/** Property SnapPointsType of Type SnapPointsType */
+public snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
+}
 
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
 
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
+@XFNS0("GridItemsLayout")
+class GridItemsLayout extends ItemsLayout {
+    
+    
+    
+    
+/** Property HorizontalItemSpacing of Type Double */
+public horizontalItemSpacing?: number | Bind;
 
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+/** Property Span of Type Int32 */
+public span?: number | Bind;
 
-/** Property CanChangeIsPresented of Type Boolean */
-canChangeIsPresented?: boolean | Bind;
+/** Property VerticalItemSpacing of Type Double */
+public verticalItemSpacing?: number | Bind;
+}
 
-/** Property class of Type IList`1 */
-class?: any;
 
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
+@XFNS0("LinearItemsLayout")
+class LinearItemsLayout extends ItemsLayout {
+    
+    
+    
+    
+/** Property ItemSpacing of Type Double */
+public itemSpacing?: number | Bind;
+}
 
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
 
-/** Property Detail of Type Page */
-detail?: any;
+@XFNS0("Label")
+class Label extends View {
+    
+    
+/** Property Label.FormattedText of Type Xamarin.Forms.FormattedString */
+public static formattedText = XNode.property()
+    
+    
+/** Property CharacterSpacing of Type Double */
+public characterSpacing?: number | Bind;
 
-/** Property DetailBounds of Type Rectangle */
-detailBounds?: "Zero" | Bind;
+/** Property Font of Type Font */
+public font?: /*Font*/ any;
 
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
+/** Property FontAttributes of Type FontAttributes */
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+/** Property FontFamily of Type String */
+public fontFamily?: string | null | Bind;
 
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+/** Property FontSize of Type Double */
+public fontSize?: number | Bind;
 
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+/** Property FormattedText of Type FormattedString */
+public formattedText?: any;
 
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
+/** Property HorizontalTextAlignment of Type TextAlignment */
+public horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
+/** Property LineBreakMode of Type LineBreakMode */
+public lineBreakMode?: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | Bind;
 
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
+/** Property LineHeight of Type Double */
+public lineHeight?: number | Bind;
 
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsGestureEnabled of Type Boolean */
-isGestureEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsPresented of Type Boolean */
-isPresented?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Master of Type Page */
-master?: any;
-
-/** Property MasterBehavior of Type MasterBehavior */
-masterBehavior?: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | Bind;
-
-/** Property MasterBounds of Type Rectangle */
-masterBounds?: "Zero" | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
+/** Property MaxLines of Type Int32 */
+public maxLines?: number | Bind;
 
 /** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
+public padding?: /*Thickness*/ any;
 
-/** Property Parent of Type Element */
-parent?: any;
+/** Property Text of Type String */
+public text?: string | null | Bind;
 
-/** Property Platform of Type IPlatform */
-platform?: any;
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
 
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
+/** Property TextDecorations of Type TextDecorations */
+public textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
 
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
+/** Property TextType of Type TextType */
+public textType?: "Text" | "Html" | Bind;
 
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
+/** Property VerticalTextAlignment of Type TextAlignment */
+public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
+/** Property XAlign of Type TextAlignment */
+public xAlign?: "Start" | "Center" | "End" | Bind;
 
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+/** Property YAlign of Type TextAlignment */
+public yAlign?: "Start" | "Center" | "End" | Bind;
 }
 
-export interface IMasterDetailPageConstructor {
-    (a?: Partial<IMasterDetailPage>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ListView")
+class ListView extends RootObject {
     
     
-/** Property MasterDetailPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property ListView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
+public static footerTemplate = XNode.template();
 
-/** Property MasterDetailPage.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property ListView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
+public static groupHeaderTemplate = XNode.template();
 
+/** Property ListView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
+public static headerTemplate = XNode.template();
+
+/** Property ListView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
+public static itemTemplate = XNode.template()
+    
+    
+/** Property CachingStrategy of Type ListViewCachingStrategy */
+public cachingStrategy?: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | Bind;
+
+/** Property Footer of Type Object */
+public footer?: any;
+
+/** Property FooterTemplate of Type DataTemplate */
+public footerTemplate?: any;
+
+/** Property GroupDisplayBinding of Type BindingBase */
+public groupDisplayBinding?: any;
+
+/** Property GroupHeaderTemplate of Type DataTemplate */
+public groupHeaderTemplate?: any;
+
+/** Property GroupShortNameBinding of Type BindingBase */
+public groupShortNameBinding?: any;
+
+/** Property HasUnevenRows of Type Boolean */
+public hasUnevenRows?: boolean | Bind;
+
+/** Property Header of Type Object */
+public header?: any;
+
+/** Property HeaderTemplate of Type DataTemplate */
+public headerTemplate?: any;
+
+/** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
+public horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
+
+/** Property IsGroupingEnabled of Type Boolean */
+public isGroupingEnabled?: boolean | Bind;
+
+/** Property IsPullToRefreshEnabled of Type Boolean */
+public isPullToRefreshEnabled?: boolean | Bind;
+
+/** Property IsRefreshing of Type Boolean */
+public isRefreshing?: boolean | Bind;
+
+/** Property ItemsSource of Type IEnumerable */
+public itemsSource?: any;
+
+/** Property ItemTemplate of Type DataTemplate */
+public itemTemplate?: any;
+
+/** Property RefreshAllowed of Type Boolean */
+public refreshAllowed?: boolean | Bind;
+
+/** Property RefreshCommand of Type ICommand */
+public refreshCommand?: any;
+
+/** Property RefreshControlColor of Type Color */
+public refreshControlColor?: ColorItem | string | null | Bind;
+
+/** Property RowHeight of Type Int32 */
+public rowHeight?: number | Bind;
+
+/** Property SelectedItem of Type Object */
+public selectedItem?: any;
+
+/** Property SelectionMode of Type ListViewSelectionMode */
+public selectionMode?: "None" | "Single" | Bind;
+
+/** Property SeparatorColor of Type Color */
+public separatorColor?: ColorItem | string | null | Bind;
+
+/** Property SeparatorVisibility of Type SeparatorVisibility */
+public separatorVisibility?: "Default" | "None" | Bind;
+
+/** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
+public verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
+}
+
+
+@XFNS0("MasterDetailPage")
+class MasterDetailPage extends Page {
+    
+    
 /** Property MasterDetailPage.Detail of Type Xamarin.Forms.Page */
-detail?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property MasterDetailPage.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property MasterDetailPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+public static detail = XNode.property();
 
 /** Property MasterDetailPage.Master of Type Xamarin.Forms.Page */
-master?: ( a: any, ... nodes: XNode[]) => XNode;
+public static master = XNode.property()
+    
+    
+/** Property CanChangeIsPresented of Type Boolean */
+public canChangeIsPresented?: boolean | Bind;
 
-/** Property MasterDetailPage.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property Detail of Type Page */
+public detail?: any;
 
-/** Property MasterDetailPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property DetailBounds of Type Rectangle */
+public detailBounds?: "Zero" | Bind;
 
-/** Property MasterDetailPage.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IsGestureEnabled of Type Boolean */
+public isGestureEnabled?: boolean | Bind;
 
-/** Property MasterDetailPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
+/** Property IsPresented of Type Boolean */
+public isPresented?: boolean | Bind;
 
-/** Property MasterDetailPage.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property Master of Type Page */
+public master?: any;
+
+/** Property MasterBehavior of Type MasterBehavior */
+public masterBehavior?: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | Bind;
+
+/** Property MasterBounds of Type Rectangle */
+public masterBounds?: "Zero" | Bind;
 }
 
-/** MasterDetailPage */
-const MasterDetailPage: IMasterDetailPageConstructor = XNode.prepare<IMasterDetailPage>("Xamarin.Forms.MasterDetailPage;Xamarin.Forms.Core", false, false);
 
-
-MasterDetailPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.behaviors = XNode.prepare("Xamarin.Forms.MasterDetailPage:Behaviors;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.detail = XNode.prepare("Xamarin.Forms.MasterDetailPage:Detail;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.effects = XNode.prepare("Xamarin.Forms.MasterDetailPage:Effects;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.iconImageSource = XNode.prepare("Xamarin.Forms.MasterDetailPage:IconImageSource;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.master = XNode.prepare("Xamarin.Forms.MasterDetailPage:Master;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.menu = XNode.prepare("Xamarin.Forms.MasterDetailPage:Menu;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.resources = XNode.prepare("Xamarin.Forms.MasterDetailPage:Resources;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.styleClass = XNode.prepare("Xamarin.Forms.MasterDetailPage:StyleClass;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.toolbarItems = XNode.prepare("Xamarin.Forms.MasterDetailPage:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-MasterDetailPage.triggers = XNode.prepare("Xamarin.Forms.MasterDetailPage:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IMenu {
+@XFNS0("Menu")
+class Menu extends BaseMenuItem {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Item of Type Menu */
-item?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IMenuConstructor {
-    (a?: Partial<IMenu>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Menu.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property Menu.Item of Type Xamarin.Forms.Menu */
-item?: ( a: any, ... nodes: XNode[]) => XNode;
+public static item = XNode.property();
 
 /** Property Menu.Items of Type Xamarin.Forms.MenuItem */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Menu.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Menu */
-const Menu: IMenuConstructor = XNode.prepare<IMenu>("Xamarin.Forms.Menu;Xamarin.Forms.Core", false, false);
-
-
-Menu.effects = XNode.prepare("Xamarin.Forms.Menu:Effects;Xamarin.Forms.Core", true, false);
-
-Menu.item = XNode.prepare("Xamarin.Forms.Menu:Item;Xamarin.Forms.Core", true, false);
-
-Menu.items = XNode.prepare("Xamarin.Forms.Menu:Items;Xamarin.Forms.Core", true, false);
-
-Menu.menu = XNode.prepare("Xamarin.Forms.Menu:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IMenuItem {
+public static items = XNode.property()
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IsDestructive of Type Boolean */
-isDestructive?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+/** Property Item of Type Menu */
+public item?: any;
 
 /** Property Text of Type String */
-text?: string | null | Bind;
-    [key: string]: any;
+public text?: string | null | Bind;
 }
 
-export interface IMenuItemConstructor {
-    (a?: Partial<IMenuItem>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property MenuItem.Accelerator of Type BindableProperty */
-accelerator?(v: any)
-    
-/** Property MenuItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
+@XFNS0("MenuItem")
+class MenuItem extends BaseMenuItem {
+    
+/** Attached Property MenuItem.Accelerator of Type BindableProperty*/
+public static accelerator = XNode.attached();
+
+    
 /** Property MenuItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+public static iconImageSource = XNode.property()
+    
+    
+/** Property Command of Type ICommand */
+public command?: any;
 
-/** Property MenuItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property CommandParameter of Type Object */
+public commandParameter?: any;
+
+/** Property Icon of Type FileImageSource */
+public icon?: /*FileImageSource*/ any;
+
+/** Property IconImageSource of Type ImageSource */
+public iconImageSource?: /*ImageSource*/ any;
+
+/** Property IsDestructive of Type Boolean */
+public isDestructive?: boolean | Bind;
+
+/** Property IsEnabled of Type Boolean */
+public isEnabled?: boolean | Bind;
+
+/** Property Text of Type String */
+public text?: string | null | Bind;
 }
 
-/** MenuItem */
-const MenuItem: IMenuItemConstructor = XNode.prepare<IMenuItem>("Xamarin.Forms.MenuItem;Xamarin.Forms.Core", false, false);
 
-MenuItem.accelerator = XNode.attached("Xamarin.Forms.MenuItem:Accelerator;Xamarin.Forms.Core");
-
-MenuItem.effects = XNode.prepare("Xamarin.Forms.MenuItem:Effects;Xamarin.Forms.Core", true, false);
-
-MenuItem.iconImageSource = XNode.prepare("Xamarin.Forms.MenuItem:IconImageSource;Xamarin.Forms.Core", true, false);
-
-MenuItem.menu = XNode.prepare("Xamarin.Forms.MenuItem:Menu;Xamarin.Forms.Core", true, false);
+@XFNS0("NavigationPage")
+class NavigationPage extends Page {
+    
+/** Attached Property NavigationPage.BackButtonTitle of Type BindableProperty*/
+public static backButtonTitle = XNode.attached();
 
 
-export interface INavigationPage {
+/** Attached Property NavigationPage.HasNavigationBar of Type BindableProperty*/
+public static hasNavigationBar = XNode.attached();
+
+
+/** Attached Property NavigationPage.HasBackButton of Type BindableProperty*/
+public static hasBackButton = XNode.attached();
+
+    
+/** Property NavigationPage.CurrentPage of Type Xamarin.Forms.Page */
+public static currentPage = XNode.property();
+
+/** Property NavigationPage.RootPage of Type Xamarin.Forms.Page */
+public static rootPage = XNode.property();
+
+/** Property NavigationPage.TitleIcon of Type Xamarin.Forms.FileImageSource */
+public static titleIcon = XNode.property();
+
+/** Property NavigationPage.TitleIconImageSource of Type Xamarin.Forms.ImageSource */
+public static titleIconImageSource = XNode.property();
+
+/** Property NavigationPage.TitleView of Type Xamarin.Forms.View */
+public static titleView = XNode.property()
     
 /** Constructor Parameter (root) of type Page */
 root: any;
 
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
-
 /** Property BarBackgroundColor of Type Color */
-barBackgroundColor?: ColorItem | string | null | Bind;
+public barBackgroundColor?: ColorItem | string | null | Bind;
 
 /** Property BarTextColor of Type Color */
-barTextColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
+public barTextColor?: ColorItem | string | null | Bind;
 
 /** Property CurrentPage of Type Page */
-currentPage?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
+public currentPage?: any;
 
 /** Property RootPage of Type Page */
-rootPage?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
+public rootPage?: any;
 
 /** Property Tint of Type Color */
-tint?: ColorItem | string | null | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public tint?: ColorItem | string | null | Bind;
 }
 
-export interface INavigationPageConstructor {
-    (a?: Partial<INavigationPage>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property NavigationPage.BackButtonTitle of Type BindableProperty */
-backButtonTitle?(v: any);
 
-/** Attached Property NavigationPage.HasNavigationBar of Type BindableProperty */
-hasNavigationBar?(v: any);
-
-/** Attached Property NavigationPage.HasBackButton of Type BindableProperty */
-hasBackButton?(v: any)
-    
-/** Property NavigationPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.CurrentPage of Type Xamarin.Forms.Page */
-currentPage?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.RootPage of Type Xamarin.Forms.Page */
-rootPage?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.TitleIcon of Type Xamarin.Forms.FileImageSource */
-titleIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.TitleIconImageSource of Type Xamarin.Forms.ImageSource */
-titleIconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.TitleView of Type Xamarin.Forms.View */
-titleView?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigationPage.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** NavigationPage */
-const NavigationPage: INavigationPageConstructor = XNode.prepare<INavigationPage>("Xamarin.Forms.NavigationPage;Xamarin.Forms.Core", false, false);
-
-NavigationPage.backButtonTitle = XNode.attached("Xamarin.Forms.NavigationPage:BackButtonTitle;Xamarin.Forms.Core");
-
-NavigationPage.hasNavigationBar = XNode.attached("Xamarin.Forms.NavigationPage:HasNavigationBar;Xamarin.Forms.Core");
-
-NavigationPage.hasBackButton = XNode.attached("Xamarin.Forms.NavigationPage:HasBackButton;Xamarin.Forms.Core");
-
-NavigationPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-NavigationPage.behaviors = XNode.prepare("Xamarin.Forms.NavigationPage:Behaviors;Xamarin.Forms.Core", true, false);
-
-NavigationPage.currentPage = XNode.prepare("Xamarin.Forms.NavigationPage:CurrentPage;Xamarin.Forms.Core", true, false);
-
-NavigationPage.effects = XNode.prepare("Xamarin.Forms.NavigationPage:Effects;Xamarin.Forms.Core", true, false);
-
-NavigationPage.iconImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:IconImageSource;Xamarin.Forms.Core", true, false);
-
-NavigationPage.menu = XNode.prepare("Xamarin.Forms.NavigationPage:Menu;Xamarin.Forms.Core", true, false);
-
-NavigationPage.resources = XNode.prepare("Xamarin.Forms.NavigationPage:Resources;Xamarin.Forms.Core", true, false);
-
-NavigationPage.rootPage = XNode.prepare("Xamarin.Forms.NavigationPage:RootPage;Xamarin.Forms.Core", true, false);
-
-NavigationPage.styleClass = XNode.prepare("Xamarin.Forms.NavigationPage:StyleClass;Xamarin.Forms.Core", true, false);
-
-NavigationPage.titleIcon = XNode.prepare("Xamarin.Forms.NavigationPage:TitleIcon;Xamarin.Forms.Core", true, false);
-
-NavigationPage.titleIconImageSource = XNode.prepare("Xamarin.Forms.NavigationPage:TitleIconImageSource;Xamarin.Forms.Core", true, false);
-
-NavigationPage.titleView = XNode.prepare("Xamarin.Forms.NavigationPage:TitleView;Xamarin.Forms.Core", true, false);
-
-NavigationPage.toolbarItems = XNode.prepare("Xamarin.Forms.NavigationPage:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-NavigationPage.triggers = XNode.prepare("Xamarin.Forms.NavigationPage:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IOpenGLView {
+@XFNS0("OpenGLView")
+class OpenGLView extends View {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
+    
+    
 /** Property HasRenderLoop of Type Boolean */
-hasRenderLoop?: boolean | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
+public hasRenderLoop?: boolean | Bind;
 
 /** Property OnDisplay of Type Action`1 */
-onDisplay?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public onDisplay?: any;
 }
 
-export interface IOpenGLViewConstructor {
-    (a?: Partial<IOpenGLView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("PanGestureRecognizer")
+class PanGestureRecognizer extends GestureRecognizer {
     
     
-/** Property OpenGLView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property OpenGLView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property OpenGLView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property OpenGLView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property OpenGLView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property OpenGLView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property OpenGLView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** OpenGLView */
-const OpenGLView: IOpenGLViewConstructor = XNode.prepare<IOpenGLView>("Xamarin.Forms.OpenGLView;Xamarin.Forms.Core", false, false);
-
-
-OpenGLView.behaviors = XNode.prepare("Xamarin.Forms.OpenGLView:Behaviors;Xamarin.Forms.Core", true, false);
-
-OpenGLView.effects = XNode.prepare("Xamarin.Forms.OpenGLView:Effects;Xamarin.Forms.Core", true, false);
-
-OpenGLView.gestureRecognizers = XNode.prepare("Xamarin.Forms.OpenGLView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-OpenGLView.menu = XNode.prepare("Xamarin.Forms.OpenGLView:Menu;Xamarin.Forms.Core", true, false);
-
-OpenGLView.resources = XNode.prepare("Xamarin.Forms.OpenGLView:Resources;Xamarin.Forms.Core", true, false);
-
-OpenGLView.styleClass = XNode.prepare("Xamarin.Forms.OpenGLView:StyleClass;Xamarin.Forms.Core", true, false);
-
-OpenGLView.triggers = XNode.prepare("Xamarin.Forms.OpenGLView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IPage {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IPageConstructor {
-    (a?: Partial<IPage>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Page.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Page */
-const Page: IPageConstructor = XNode.prepare<IPage>("Xamarin.Forms.Page;Xamarin.Forms.Core", false, false);
-
-
-Page.backgroundImageSource = XNode.prepare("Xamarin.Forms.Page:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-Page.behaviors = XNode.prepare("Xamarin.Forms.Page:Behaviors;Xamarin.Forms.Core", true, false);
-
-Page.effects = XNode.prepare("Xamarin.Forms.Page:Effects;Xamarin.Forms.Core", true, false);
-
-Page.iconImageSource = XNode.prepare("Xamarin.Forms.Page:IconImageSource;Xamarin.Forms.Core", true, false);
-
-Page.menu = XNode.prepare("Xamarin.Forms.Page:Menu;Xamarin.Forms.Core", true, false);
-
-Page.resources = XNode.prepare("Xamarin.Forms.Page:Resources;Xamarin.Forms.Core", true, false);
-
-Page.styleClass = XNode.prepare("Xamarin.Forms.Page:StyleClass;Xamarin.Forms.Core", true, false);
-
-Page.toolbarItems = XNode.prepare("Xamarin.Forms.Page:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-Page.triggers = XNode.prepare("Xamarin.Forms.Page:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IPanGestureRecognizer {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
 /** Property TouchPoints of Type Int32 */
-touchPoints?: number | Bind;
-    [key: string]: any;
+public touchPoints?: number | Bind;
 }
 
-export interface IPanGestureRecognizerConstructor {
-    (a?: Partial<IPanGestureRecognizer>, ... nodes: XNode[]): XNode;
+
+@XFNS0("Picker")
+class Picker extends View {
     
     
-/** Property PanGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property PanGestureRecognizer.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** PanGestureRecognizer */
-const PanGestureRecognizer: IPanGestureRecognizerConstructor = XNode.prepare<IPanGestureRecognizer>("Xamarin.Forms.PanGestureRecognizer;Xamarin.Forms.Core", false, false);
-
-
-PanGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.PanGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
-
-PanGestureRecognizer.menu = XNode.prepare("Xamarin.Forms.PanGestureRecognizer:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IPicker {
+/** Property Picker.Items of Type System.String */
+public static items = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+public characterSpacing?: number | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
+public fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
+public fontSize?: number | Bind;
 
 /** Property ItemDisplayBinding of Type BindingBase */
-itemDisplayBinding?: any;
+public itemDisplayBinding?: any;
 
 /** Property ItemsSource of Type IList */
-itemsSource?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
+public itemsSource?: any;
 
 /** Property SelectedIndex of Type Int32 */
-selectedIndex?: number | Bind;
+public selectedIndex?: number | Bind;
 
 /** Property SelectedItem of Type Object */
-selectedItem?: any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
+public selectedItem?: any;
 
 /** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
+public textColor?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: string | null | Bind;
+public title?: string | null | Bind;
 
 /** Property TitleColor of Type Color */
-titleColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public titleColor?: ColorItem | string | null | Bind;
 }
 
-export interface IPickerConstructor {
-    (a?: Partial<IPicker>, ... nodes: XNode[]): XNode;
+
+@XFNS0("PinchGestureRecognizer")
+class PinchGestureRecognizer extends GestureRecognizer {
     
     
-/** Property Picker.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.Items of Type System.String */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Picker.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Picker */
-const Picker: IPickerConstructor = XNode.prepare<IPicker>("Xamarin.Forms.Picker;Xamarin.Forms.Core", false, false);
-
-
-Picker.behaviors = XNode.prepare("Xamarin.Forms.Picker:Behaviors;Xamarin.Forms.Core", true, false);
-
-Picker.effects = XNode.prepare("Xamarin.Forms.Picker:Effects;Xamarin.Forms.Core", true, false);
-
-Picker.gestureRecognizers = XNode.prepare("Xamarin.Forms.Picker:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Picker.items = XNode.prepare("Xamarin.Forms.Picker:Items;Xamarin.Forms.Core", true, false);
-
-Picker.menu = XNode.prepare("Xamarin.Forms.Picker:Menu;Xamarin.Forms.Core", true, false);
-
-Picker.resources = XNode.prepare("Xamarin.Forms.Picker:Resources;Xamarin.Forms.Core", true, false);
-
-Picker.styleClass = XNode.prepare("Xamarin.Forms.Picker:StyleClass;Xamarin.Forms.Core", true, false);
-
-Picker.triggers = XNode.prepare("Xamarin.Forms.Picker:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IPinchGestureRecognizer {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
 /** Property IsPinching of Type Boolean */
-isPinching?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
+public isPinching?: boolean | Bind;
 }
 
-export interface IPinchGestureRecognizerConstructor {
-    (a?: Partial<IPinchGestureRecognizer>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ProgressBar")
+class ProgressBar extends View {
     
     
-/** Property PinchGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property PinchGestureRecognizer.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** PinchGestureRecognizer */
-const PinchGestureRecognizer: IPinchGestureRecognizerConstructor = XNode.prepare<IPinchGestureRecognizer>("Xamarin.Forms.PinchGestureRecognizer;Xamarin.Forms.Core", false, false);
-
-
-PinchGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.PinchGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
-
-PinchGestureRecognizer.menu = XNode.prepare("Xamarin.Forms.PinchGestureRecognizer:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IProgressBar {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
 /** Property Progress of Type Double */
-progress?: number | Bind;
+public progress?: number | Bind;
 
 /** Property ProgressColor of Type Color */
-progressColor?: ColorItem | string | null | Bind;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public progressColor?: ColorItem | string | null | Bind;
 }
 
-export interface IProgressBarConstructor {
-    (a?: Partial<IProgressBar>, ... nodes: XNode[]): XNode;
+
+@XFNS0("RefreshView")
+class RefreshView extends ContentView {
     
     
-/** Property ProgressBar.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ProgressBar.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ProgressBar.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ProgressBar.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ProgressBar.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ProgressBar.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ProgressBar.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ProgressBar */
-const ProgressBar: IProgressBarConstructor = XNode.prepare<IProgressBar>("Xamarin.Forms.ProgressBar;Xamarin.Forms.Core", false, false);
-
-
-ProgressBar.behaviors = XNode.prepare("Xamarin.Forms.ProgressBar:Behaviors;Xamarin.Forms.Core", true, false);
-
-ProgressBar.effects = XNode.prepare("Xamarin.Forms.ProgressBar:Effects;Xamarin.Forms.Core", true, false);
-
-ProgressBar.gestureRecognizers = XNode.prepare("Xamarin.Forms.ProgressBar:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ProgressBar.menu = XNode.prepare("Xamarin.Forms.ProgressBar:Menu;Xamarin.Forms.Core", true, false);
-
-ProgressBar.resources = XNode.prepare("Xamarin.Forms.ProgressBar:Resources;Xamarin.Forms.Core", true, false);
-
-ProgressBar.styleClass = XNode.prepare("Xamarin.Forms.ProgressBar:StyleClass;Xamarin.Forms.Core", true, false);
-
-ProgressBar.triggers = XNode.prepare("Xamarin.Forms.ProgressBar:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IRefreshView {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
 /** Property Command of Type ICommand */
-command?: any;
+public command?: any;
 
 /** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
+public commandParameter?: any;
 
 /** Property IsRefreshing of Type Boolean */
-isRefreshing?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public isRefreshing?: boolean | Bind;
 
 /** Property RefreshColor of Type Color */
-refreshColor?: ColorItem | string | null | Bind;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public refreshColor?: ColorItem | string | null | Bind;
 }
 
-export interface IRefreshViewConstructor {
-    (a?: Partial<IRefreshView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("RelativeLayout")
+class RelativeLayout extends RootObject {
     
+/** Attached Property RelativeLayout.XConstraint of Type BindableProperty*/
+public static xConstraint = XNode.attached();
+
+
+/** Attached Property RelativeLayout.YConstraint of Type BindableProperty*/
+public static yConstraint = XNode.attached();
+
+
+/** Attached Property RelativeLayout.WidthConstraint of Type BindableProperty*/
+public static widthConstraint = XNode.attached();
+
+
+/** Attached Property RelativeLayout.HeightConstraint of Type BindableProperty*/
+public static heightConstraint = XNode.attached();
+
+
+/** Attached Property RelativeLayout.BoundsConstraint of Type BindableProperty*/
+public static boundsConstraint = XNode.attached();
+
     
-/** Property RefreshView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RefreshView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** RefreshView */
-const RefreshView: IRefreshViewConstructor = XNode.prepare<IRefreshView>("Xamarin.Forms.RefreshView;Xamarin.Forms.Core", false, false);
-
-
-RefreshView.behaviors = XNode.prepare("Xamarin.Forms.RefreshView:Behaviors;Xamarin.Forms.Core", true, false);
-
-RefreshView.content = XNode.prepare("Xamarin.Forms.RefreshView:Content;Xamarin.Forms.Core", true, false);
-
-RefreshView.controlTemplate = XNode.prepare("Xamarin.Forms.RefreshView:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-RefreshView.effects = XNode.prepare("Xamarin.Forms.RefreshView:Effects;Xamarin.Forms.Core", true, false);
-
-RefreshView.gestureRecognizers = XNode.prepare("Xamarin.Forms.RefreshView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-RefreshView.menu = XNode.prepare("Xamarin.Forms.RefreshView:Menu;Xamarin.Forms.Core", true, false);
-
-RefreshView.resources = XNode.prepare("Xamarin.Forms.RefreshView:Resources;Xamarin.Forms.Core", true, false);
-
-RefreshView.styleClass = XNode.prepare("Xamarin.Forms.RefreshView:StyleClass;Xamarin.Forms.Core", true, false);
-
-RefreshView.triggers = XNode.prepare("Xamarin.Forms.RefreshView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IRelativeLayout {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IRelativeLayoutConstructor {
-    (a?: Partial<IRelativeLayout>, ... nodes: XNode[]): XNode;
-    
-/** Attached Property RelativeLayout.XConstraint of Type BindableProperty */
-xConstraint?(v: any);
-
-/** Attached Property RelativeLayout.YConstraint of Type BindableProperty */
-yConstraint?(v: any);
-
-/** Attached Property RelativeLayout.WidthConstraint of Type BindableProperty */
-widthConstraint?(v: any);
-
-/** Attached Property RelativeLayout.HeightConstraint of Type BindableProperty */
-heightConstraint?(v: any);
-
-/** Attached Property RelativeLayout.BoundsConstraint of Type BindableProperty */
-boundsConstraint?(v: any)
-    
-/** Property RelativeLayout.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property RelativeLayout.Children of Type Xamarin.Forms.View */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RelativeLayout.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RelativeLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RelativeLayout.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RelativeLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RelativeLayout.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property RelativeLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+public static children = XNode.property()
+    
+    
 }
 
-/** RelativeLayout */
-const RelativeLayout: IRelativeLayoutConstructor = XNode.prepare<IRelativeLayout>("Xamarin.Forms.RelativeLayout;Xamarin.Forms.Core", false, false);
 
-RelativeLayout.xConstraint = XNode.attached("Xamarin.Forms.RelativeLayout:XConstraint;Xamarin.Forms.Core");
-
-RelativeLayout.yConstraint = XNode.attached("Xamarin.Forms.RelativeLayout:YConstraint;Xamarin.Forms.Core");
-
-RelativeLayout.widthConstraint = XNode.attached("Xamarin.Forms.RelativeLayout:WidthConstraint;Xamarin.Forms.Core");
-
-RelativeLayout.heightConstraint = XNode.attached("Xamarin.Forms.RelativeLayout:HeightConstraint;Xamarin.Forms.Core");
-
-RelativeLayout.boundsConstraint = XNode.attached("Xamarin.Forms.RelativeLayout:BoundsConstraint;Xamarin.Forms.Core");
-
-RelativeLayout.behaviors = XNode.prepare("Xamarin.Forms.RelativeLayout:Behaviors;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.children = XNode.prepare("Xamarin.Forms.RelativeLayout:Children;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.effects = XNode.prepare("Xamarin.Forms.RelativeLayout:Effects;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.RelativeLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.menu = XNode.prepare("Xamarin.Forms.RelativeLayout:Menu;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.resources = XNode.prepare("Xamarin.Forms.RelativeLayout:Resources;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.styleClass = XNode.prepare("Xamarin.Forms.RelativeLayout:StyleClass;Xamarin.Forms.Core", true, false);
-
-RelativeLayout.triggers = XNode.prepare("Xamarin.Forms.RelativeLayout:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IRowDefinition {
+@XFNS0("RowDefinition")
+class RowDefinition extends BindableObject {
     
     
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
+    
+    
 /** Property Height of Type GridLength */
-height?: "Auto" | number | string | Bind;
-    [key: string]: any;
+public height?: "Auto" | number | string | Bind;
 }
 
-export interface IRowDefinitionConstructor {
-    (a?: Partial<IRowDefinition>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ScrollView")
+class ScrollView extends Layout {
     
     
-}
-
-/** RowDefinition */
-const RowDefinition: IRowDefinitionConstructor = XNode.prepare<IRowDefinition>("Xamarin.Forms.RowDefinition;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IScrollView {
+/** Property ScrollView.Content of Type Xamarin.Forms.View */
+public static content = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
 /** Property Content of Type View */
-content?: any;
+public content?: any;
 
 /** Property ContentSize of Type Size */
-contentSize?: "Zero" | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+public contentSize?: "Zero" | Bind;
 
 /** Property HorizontalScrollBarVisibility of Type ScrollBarVisibility */
-horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
+public horizontalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 
 /** Property LayoutAreaOverride of Type Rectangle */
-layoutAreaOverride?: "Zero" | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
+public layoutAreaOverride?: "Zero" | Bind;
 
 /** Property Orientation of Type ScrollOrientation */
-orientation?: "Vertical" | "Horizontal" | "Both" | "Neither" | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
+public orientation?: "Vertical" | "Horizontal" | "Both" | "Neither" | Bind;
 
 /** Property ScrollX of Type Double */
-scrollX?: number | Bind;
+public scrollX?: number | Bind;
 
 /** Property ScrollY of Type Double */
-scrollY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+public scrollY?: number | Bind;
 
 /** Property VerticalScrollBarVisibility of Type ScrollBarVisibility */
-verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 }
 
-export interface IScrollViewConstructor {
-    (a?: Partial<IScrollView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("SearchBar")
+class SearchBar extends InputView {
     
     
-/** Property ScrollView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ScrollView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ScrollView */
-const ScrollView: IScrollViewConstructor = XNode.prepare<IScrollView>("Xamarin.Forms.ScrollView;Xamarin.Forms.Core", false, false);
-
-
-ScrollView.behaviors = XNode.prepare("Xamarin.Forms.ScrollView:Behaviors;Xamarin.Forms.Core", true, false);
-
-ScrollView.content = XNode.prepare("Xamarin.Forms.ScrollView:Content;Xamarin.Forms.Core", true, false);
-
-ScrollView.effects = XNode.prepare("Xamarin.Forms.ScrollView:Effects;Xamarin.Forms.Core", true, false);
-
-ScrollView.gestureRecognizers = XNode.prepare("Xamarin.Forms.ScrollView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-ScrollView.menu = XNode.prepare("Xamarin.Forms.ScrollView:Menu;Xamarin.Forms.Core", true, false);
-
-ScrollView.resources = XNode.prepare("Xamarin.Forms.ScrollView:Resources;Xamarin.Forms.Core", true, false);
-
-ScrollView.styleClass = XNode.prepare("Xamarin.Forms.ScrollView:StyleClass;Xamarin.Forms.Core", true, false);
-
-ScrollView.triggers = XNode.prepare("Xamarin.Forms.ScrollView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ISearchBar {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
 /** Property CancelButtonColor of Type Color */
-cancelButtonColor?: ColorItem | string | null | Bind;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+public cancelButtonColor?: ColorItem | string | null | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
+public fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+public fontSize?: number | Bind;
 
 /** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsReadOnly of Type Boolean */
-isReadOnly?: boolean | Bind;
-
-/** Property IsSpellCheckEnabled of Type Boolean */
-isSpellCheckEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Keyboard of Type Keyboard */
-keyboard?: /*Keyboard*/ any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MaxLength of Type Int32 */
-maxLength?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Placeholder of Type String */
-placeholder?: string | null | Bind;
-
-/** Property PlaceholderColor of Type Color */
-placeholderColor?: ColorItem | string | null | Bind;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
+public horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
 /** Property SearchCommand of Type ICommand */
-searchCommand?: any;
+public searchCommand?: any;
 
 /** Property SearchCommandParameter of Type Object */
-searchCommandParameter?: any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
+public searchCommandParameter?: any;
 
 /** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
 
-export interface ISearchBarConstructor {
-    (a?: Partial<ISearchBar>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property SearchBar.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
 
-/** Property SearchBar.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SearchBar.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SearchBar.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SearchBar.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SearchBar.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SearchBar.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SearchBar */
-const SearchBar: ISearchBarConstructor = XNode.prepare<ISearchBar>("Xamarin.Forms.SearchBar;Xamarin.Forms.Core", false, false);
-
-
-SearchBar.behaviors = XNode.prepare("Xamarin.Forms.SearchBar:Behaviors;Xamarin.Forms.Core", true, false);
-
-SearchBar.effects = XNode.prepare("Xamarin.Forms.SearchBar:Effects;Xamarin.Forms.Core", true, false);
-
-SearchBar.gestureRecognizers = XNode.prepare("Xamarin.Forms.SearchBar:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-SearchBar.menu = XNode.prepare("Xamarin.Forms.SearchBar:Menu;Xamarin.Forms.Core", true, false);
-
-SearchBar.resources = XNode.prepare("Xamarin.Forms.SearchBar:Resources;Xamarin.Forms.Core", true, false);
-
-SearchBar.styleClass = XNode.prepare("Xamarin.Forms.SearchBar:StyleClass;Xamarin.Forms.Core", true, false);
-
-SearchBar.triggers = XNode.prepare("Xamarin.Forms.SearchBar:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IBackButtonBehavior {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property IconOverride of Type ImageSource */
-iconOverride?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property TextOverride of Type String */
-textOverride?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IBackButtonBehaviorConstructor {
-    (a?: Partial<IBackButtonBehavior>, ... nodes: XNode[]): XNode;
+@XFNS0("BackButtonBehavior")
+class BackButtonBehavior extends BindableObject {
     
     
 /** Property BackButtonBehavior.IconOverride of Type Xamarin.Forms.ImageSource */
-iconOverride?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** BackButtonBehavior */
-const BackButtonBehavior: IBackButtonBehaviorConstructor = XNode.prepare<IBackButtonBehavior>("Xamarin.Forms.BackButtonBehavior;Xamarin.Forms.Core", false, false);
-
-
-BackButtonBehavior.iconOverride = XNode.prepare("Xamarin.Forms.BackButtonBehavior:IconOverride;Xamarin.Forms.Core", true, false);
-
-
-export interface IBaseShellItem {
+public static iconOverride = XNode.property()
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IBaseShellItemConstructor {
-    (a?: Partial<IBaseShellItem>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property BaseShellItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BaseShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BaseShellItem.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BaseShellItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property BaseShellItem.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** BaseShellItem */
-const BaseShellItem: IBaseShellItemConstructor = XNode.prepare<IBaseShellItem>("Xamarin.Forms.BaseShellItem;Xamarin.Forms.Core", false, false);
-
-
-BaseShellItem.effects = XNode.prepare("Xamarin.Forms.BaseShellItem:Effects;Xamarin.Forms.Core", true, false);
-
-BaseShellItem.flyoutIcon = XNode.prepare("Xamarin.Forms.BaseShellItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-BaseShellItem.icon = XNode.prepare("Xamarin.Forms.BaseShellItem:Icon;Xamarin.Forms.Core", true, false);
-
-BaseShellItem.menu = XNode.prepare("Xamarin.Forms.BaseShellItem:Menu;Xamarin.Forms.Core", true, false);
-
-BaseShellItem.styleClass = XNode.prepare("Xamarin.Forms.BaseShellItem:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface INavigableElement {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface INavigableElementConstructor {
-    (a?: Partial<INavigableElement>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property NavigableElement.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigableElement.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property NavigableElement.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** NavigableElement */
-const NavigableElement: INavigableElementConstructor = XNode.prepare<INavigableElement>("Xamarin.Forms.NavigableElement;Xamarin.Forms.Core", false, false);
-
-
-NavigableElement.effects = XNode.prepare("Xamarin.Forms.NavigableElement:Effects;Xamarin.Forms.Core", true, false);
-
-NavigableElement.menu = XNode.prepare("Xamarin.Forms.NavigableElement:Menu;Xamarin.Forms.Core", true, false);
-
-NavigableElement.styleClass = XNode.prepare("Xamarin.Forms.NavigableElement:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface ISearchHandler {
-    
-    
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CancelButtonColor of Type Color */
-cancelButtonColor?: ColorItem | string | null | Bind;
-
-/** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property ClearIcon of Type ImageSource */
-clearIcon?: /*ImageSource*/ any;
-
-/** Property ClearIconHelpText of Type String */
-clearIconHelpText?: string | null | Bind;
-
-/** Property ClearIconName of Type String */
-clearIconName?: string | null | Bind;
-
-/** Property ClearPlaceholderCommand of Type ICommand */
-clearPlaceholderCommand?: any;
-
-/** Property ClearPlaceholderCommandParameter of Type Object */
-clearPlaceholderCommandParameter?: any;
-
-/** Property ClearPlaceholderEnabled of Type Boolean */
-clearPlaceholderEnabled?: boolean | Bind;
-
-/** Property ClearPlaceholderHelpText of Type String */
-clearPlaceholderHelpText?: string | null | Bind;
-
-/** Property ClearPlaceholderIcon of Type ImageSource */
-clearPlaceholderIcon?: /*ImageSource*/ any;
-
-/** Property ClearPlaceholderName of Type String */
-clearPlaceholderName?: string | null | Bind;
-
 /** Property Command of Type ICommand */
-command?: any;
+public command?: any;
 
 /** Property CommandParameter of Type Object */
-commandParameter?: any;
+public commandParameter?: any;
 
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+/** Property IconOverride of Type ImageSource */
+public iconOverride?: /*ImageSource*/ any;
 
-/** Property DisplayMemberName of Type String */
-displayMemberName?: string | null | Bind;
+/** Property IsEnabled of Type Boolean */
+public isEnabled?: boolean | Bind;
 
-/** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-fontSize?: number | Bind;
-
-/** Property HorizontalTextAlignment of Type TextAlignment */
-horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
-
-/** Property IsSearchEnabled of Type Boolean */
-isSearchEnabled?: boolean | Bind;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property Keyboard of Type Keyboard */
-keyboard?: /*Keyboard*/ any;
-
-/** Property Placeholder of Type String */
-placeholder?: string | null | Bind;
-
-/** Property PlaceholderColor of Type Color */
-placeholderColor?: ColorItem | string | null | Bind;
-
-/** Property Query of Type String */
-query?: string | null | Bind;
-
-/** Property QueryIcon of Type ImageSource */
-queryIcon?: /*ImageSource*/ any;
-
-/** Property QueryIconHelpText of Type String */
-queryIconHelpText?: string | null | Bind;
-
-/** Property QueryIconName of Type String */
-queryIconName?: string | null | Bind;
-
-/** Property SearchBoxVisibility of Type SearchBoxVisibility */
-searchBoxVisibility?: "Hidden" | "Collapsible" | "Expanded" | Bind;
-
-/** Property ShowsResults of Type Boolean */
-showsResults?: boolean | Bind;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property VerticalTextAlignment of Type TextAlignment */
-verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
-    [key: string]: any;
+/** Property TextOverride of Type String */
+public textOverride?: string | null | Bind;
 }
 
-export interface ISearchHandlerConstructor {
-    (a?: Partial<ISearchHandler>, ... nodes: XNode[]): XNode;
+
+@XFNS0("BaseShellItem")
+class BaseShellItem extends NavigableElement {
+    
+    
+/** Property BaseShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
+public static flyoutIcon = XNode.property();
+
+/** Property BaseShellItem.Icon of Type Xamarin.Forms.ImageSource */
+public static icon = XNode.property()
+    
+    
+/** Property FlyoutIcon of Type ImageSource */
+public flyoutIcon?: /*ImageSource*/ any;
+
+/** Property Icon of Type ImageSource */
+public icon?: /*ImageSource*/ any;
+
+/** Property IsEnabled of Type Boolean */
+public isEnabled?: boolean | Bind;
+
+/** Property IsTabStop of Type Boolean */
+public isTabStop?: boolean | Bind;
+
+/** Property Route of Type String */
+public route?: string | null | Bind;
+
+/** Property TabIndex of Type Int32 */
+public tabIndex?: number | Bind;
+
+/** Property Title of Type String */
+public title?: string | null | Bind;
+}
+
+
+@XFNS0("SearchHandler")
+class SearchHandler extends BindableObject {
     
     
 /** Property SearchHandler.ClearIcon of Type Xamarin.Forms.ImageSource */
-clearIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+public static clearIcon = XNode.property();
 
 /** Property SearchHandler.ClearPlaceholderIcon of Type Xamarin.Forms.ImageSource */
-clearPlaceholderIcon?: ( a: any, ... nodes: XNode[]) => XNode;
+public static clearPlaceholderIcon = XNode.property();
 
 /** Property SearchHandler.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+public static itemTemplate = XNode.template();
 
 /** Property SearchHandler.QueryIcon of Type Xamarin.Forms.ImageSource */
-queryIcon?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SearchHandler */
-const SearchHandler: ISearchHandlerConstructor = XNode.prepare<ISearchHandler>("Xamarin.Forms.SearchHandler;Xamarin.Forms.Core", false, false);
-
-
-SearchHandler.clearIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearIcon;Xamarin.Forms.Core", true, false);
-
-SearchHandler.clearPlaceholderIcon = XNode.prepare("Xamarin.Forms.SearchHandler:ClearPlaceholderIcon;Xamarin.Forms.Core", true, false);
-
-SearchHandler.itemTemplate = XNode.prepare("Xamarin.Forms.SearchHandler:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-SearchHandler.queryIcon = XNode.prepare("Xamarin.Forms.SearchHandler:QueryIcon;Xamarin.Forms.Core", true, false);
-
-
-export interface IShell {
+public static queryIcon = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
 /** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
+public backgroundColor?: ColorItem | string | null | Bind;
 
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
+/** Property CancelButtonColor of Type Color */
+public cancelButtonColor?: ColorItem | string | null | Bind;
 
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
+/** Property CharacterSpacing of Type Double */
+public characterSpacing?: number | Bind;
 
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+/** Property ClearIcon of Type ImageSource */
+public clearIcon?: /*ImageSource*/ any;
 
-/** Property class of Type IList`1 */
-class?: any;
+/** Property ClearIconHelpText of Type String */
+public clearIconHelpText?: string | null | Bind;
 
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
+/** Property ClearIconName of Type String */
+public clearIconName?: string | null | Bind;
 
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
+/** Property ClearPlaceholderCommand of Type ICommand */
+public clearPlaceholderCommand?: any;
 
-/** Property CurrentItem of Type ShellItem */
-currentItem?: any;
+/** Property ClearPlaceholderCommandParameter of Type Object */
+public clearPlaceholderCommandParameter?: any;
 
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
+/** Property ClearPlaceholderEnabled of Type Boolean */
+public clearPlaceholderEnabled?: boolean | Bind;
 
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+/** Property ClearPlaceholderHelpText of Type String */
+public clearPlaceholderHelpText?: string | null | Bind;
 
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+/** Property ClearPlaceholderIcon of Type ImageSource */
+public clearPlaceholderIcon?: /*ImageSource*/ any;
 
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+/** Property ClearPlaceholderName of Type String */
+public clearPlaceholderName?: string | null | Bind;
 
-/** Property FlyoutBackgroundColor of Type Color */
-flyoutBackgroundColor?: ColorItem | string | null | Bind;
+/** Property Command of Type ICommand */
+public command?: any;
 
-/** Property FlyoutBackgroundImage of Type ImageSource */
-flyoutBackgroundImage?: /*ImageSource*/ any;
+/** Property CommandParameter of Type Object */
+public commandParameter?: any;
 
-/** Property FlyoutBackgroundImageAspect of Type Aspect */
-flyoutBackgroundImageAspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
+/** Property DisplayMemberName of Type String */
+public displayMemberName?: string | null | Bind;
 
-/** Property FlyoutBehavior of Type FlyoutBehavior */
-flyoutBehavior?: "Disabled" | "Flyout" | "Locked" | Bind;
+/** Property FontAttributes of Type FontAttributes */
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
-/** Property FlyoutHeader of Type Object */
-flyoutHeader?: any;
+/** Property FontFamily of Type String */
+public fontFamily?: string | null | Bind;
 
-/** Property FlyoutHeaderBehavior of Type FlyoutHeaderBehavior */
-flyoutHeaderBehavior?: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | Bind;
+/** Property FontSize of Type Double */
+public fontSize?: number | Bind;
 
-/** Property FlyoutHeaderTemplate of Type DataTemplate */
-flyoutHeaderTemplate?: any;
+/** Property HorizontalTextAlignment of Type TextAlignment */
+public horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
 
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
+/** Property IsSearchEnabled of Type Boolean */
+public isSearchEnabled?: boolean | Bind;
 
-/** Property FlyoutIsPresented of Type Boolean */
-flyoutIsPresented?: boolean | Bind;
-
-/** Property FlyoutVerticalScrollMode of Type ScrollMode */
-flyoutVerticalScrollMode?: "Disabled" | "Enabled" | "Auto" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
+/** Property ItemsSource of Type IEnumerable */
+public itemsSource?: any;
 
 /** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
+public itemTemplate?: any;
 
-/** Property MenuItemTemplate of Type DataTemplate */
-menuItemTemplate?: any;
+/** Property Keyboard of Type Keyboard */
+public keyboard?: /*Keyboard*/ any;
 
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
+/** Property Placeholder of Type String */
+public placeholder?: string | null | Bind;
 
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
+/** Property PlaceholderColor of Type Color */
+public placeholderColor?: ColorItem | string | null | Bind;
 
-/** Property Navigation of Type INavigation */
-navigation?: any;
+/** Property Query of Type String */
+public query?: string | null | Bind;
 
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
+/** Property QueryIcon of Type ImageSource */
+public queryIcon?: /*ImageSource*/ any;
 
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
+/** Property QueryIconHelpText of Type String */
+public queryIconHelpText?: string | null | Bind;
 
-/** Property Parent of Type Element */
-parent?: any;
+/** Property QueryIconName of Type String */
+public queryIconName?: string | null | Bind;
 
-/** Property Platform of Type IPlatform */
-platform?: any;
+/** Property SearchBoxVisibility of Type SearchBoxVisibility */
+public searchBoxVisibility?: "Hidden" | "Collapsible" | "Expanded" | Bind;
 
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
+/** Property ShowsResults of Type Boolean */
+public showsResults?: boolean | Bind;
 
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
+/** Property TextColor of Type Color */
+public textColor?: ColorItem | string | null | Bind;
 
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+/** Property VerticalTextAlignment of Type TextAlignment */
+public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
 
-export interface IShellConstructor {
-    (a?: Partial<IShell>, ... nodes: XNode[]): XNode;
+
+@XFNS0("Shell")
+class Shell extends Page {
     
-/** Attached Property Shell.BackButtonBehavior of Type BindableProperty */
-backButtonBehavior?(v: any);
+/** Attached Property Shell.BackButtonBehavior of Type BindableProperty*/
+public static backButtonBehavior = XNode.attached();
 
-/** Attached Property Shell.FlyoutBehavior of Type BindableProperty */
-flyoutBehavior?(v: any);
 
-/** Attached Property Shell.NavBarIsVisible of Type BindableProperty */
-navBarIsVisible?(v: any);
+/** Attached Property Shell.FlyoutBehavior of Type BindableProperty*/
+public static flyoutBehavior = XNode.attached();
 
-/** Attached Property Shell.NavBarHasShadow of Type BindableProperty */
-navBarHasShadow?(v: any);
 
-/** Attached Property Shell.SearchHandler of Type BindableProperty */
-searchHandler?(v: any);
+/** Attached Property Shell.NavBarIsVisible of Type BindableProperty*/
+public static navBarIsVisible = XNode.attached();
 
-/** Attached Property Shell.TabBarIsVisible of Type BindableProperty */
-tabBarIsVisible?(v: any);
 
-/** Attached Property Shell.BackgroundColor of Type BindableProperty */
-backgroundColor?(v: any);
+/** Attached Property Shell.NavBarHasShadow of Type BindableProperty*/
+public static navBarHasShadow = XNode.attached();
 
-/** Attached Property Shell.DisabledColor of Type BindableProperty */
-disabledColor?(v: any);
 
-/** Attached Property Shell.ForegroundColor of Type BindableProperty */
-foregroundColor?(v: any);
+/** Attached Property Shell.SearchHandler of Type BindableProperty*/
+public static searchHandler = XNode.attached();
 
-/** Attached Property Shell.TabBarBackgroundColor of Type BindableProperty */
-tabBarBackgroundColor?(v: any);
 
-/** Attached Property Shell.TabBarDisabledColor of Type BindableProperty */
-tabBarDisabledColor?(v: any);
+/** Attached Property Shell.TabBarIsVisible of Type BindableProperty*/
+public static tabBarIsVisible = XNode.attached();
 
-/** Attached Property Shell.TabBarForegroundColor of Type BindableProperty */
-tabBarForegroundColor?(v: any);
 
-/** Attached Property Shell.TabBarTitleColor of Type BindableProperty */
-tabBarTitleColor?(v: any);
+/** Attached Property Shell.BackgroundColor of Type BindableProperty*/
+public static backgroundColor = XNode.attached();
 
-/** Attached Property Shell.TabBarUnselectedColor of Type BindableProperty */
-tabBarUnselectedColor?(v: any);
 
-/** Attached Property Shell.TitleColor of Type BindableProperty */
-titleColor?(v: any);
+/** Attached Property Shell.DisabledColor of Type BindableProperty*/
+public static disabledColor = XNode.attached();
 
-/** Attached Property Shell.UnselectedColor of Type BindableProperty */
-unselectedColor?(v: any);
 
-/** Attached Property Shell.BackgroundColor of Type BindableProperty */
-backgroundColor?(v: any)
+/** Attached Property Shell.ForegroundColor of Type BindableProperty*/
+public static foregroundColor = XNode.attached();
+
+
+/** Attached Property Shell.TabBarBackgroundColor of Type BindableProperty*/
+public static tabBarBackgroundColor = XNode.attached();
+
+
+/** Attached Property Shell.TabBarDisabledColor of Type BindableProperty*/
+public static tabBarDisabledColor = XNode.attached();
+
+
+/** Attached Property Shell.TabBarForegroundColor of Type BindableProperty*/
+public static tabBarForegroundColor = XNode.attached();
+
+
+/** Attached Property Shell.TabBarTitleColor of Type BindableProperty*/
+public static tabBarTitleColor = XNode.attached();
+
+
+/** Attached Property Shell.TabBarUnselectedColor of Type BindableProperty*/
+public static tabBarUnselectedColor = XNode.attached();
+
+
+/** Attached Property Shell.TitleColor of Type BindableProperty*/
+public static titleColor = XNode.attached();
+
+
+/** Attached Property Shell.UnselectedColor of Type BindableProperty*/
+public static unselectedColor = XNode.attached();
+
     
-/** Property Shell.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
-currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
+public static currentItem = XNode.property();
 
 /** Property Shell.FlyoutBackgroundImage of Type Xamarin.Forms.ImageSource */
-flyoutBackgroundImage?: ( a: any, ... nodes: XNode[]) => XNode;
+public static flyoutBackgroundImage = XNode.property();
 
 /** Property Shell.FlyoutHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-flyoutHeaderTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
+public static flyoutHeaderTemplate = XNode.template();
 
 /** Property Shell.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+public static flyoutIcon = XNode.property();
 
 /** Property Shell.Items of Type Xamarin.Forms.ShellItem */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
+public static items = XNode.property();
 
 /** Property Shell.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
+public static itemTemplate = XNode.template();
 
 /** Property Shell.MenuItemTemplate of Type Xamarin.Forms.DataTemplate */
-menuItemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+public static menuItemTemplate = XNode.template();
 
 /** Property Shell.TitleView of Type Xamarin.Forms.View */
-titleView?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Shell.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Shell */
-const Shell: IShellConstructor = XNode.prepare<IShell>("Xamarin.Forms.Shell;Xamarin.Forms.Core", false, false);
-
-Shell.backButtonBehavior = XNode.attached("Xamarin.Forms.Shell:BackButtonBehavior;Xamarin.Forms.Core");
-
-Shell.flyoutBehavior = XNode.attached("Xamarin.Forms.Shell:FlyoutBehavior;Xamarin.Forms.Core");
-
-Shell.navBarIsVisible = XNode.attached("Xamarin.Forms.Shell:NavBarIsVisible;Xamarin.Forms.Core");
-
-Shell.navBarHasShadow = XNode.attached("Xamarin.Forms.Shell:NavBarHasShadow;Xamarin.Forms.Core");
-
-Shell.searchHandler = XNode.attached("Xamarin.Forms.Shell:SearchHandler;Xamarin.Forms.Core");
-
-Shell.tabBarIsVisible = XNode.attached("Xamarin.Forms.Shell:TabBarIsVisible;Xamarin.Forms.Core");
-
-Shell.backgroundColor = XNode.attached("Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core");
-
-Shell.disabledColor = XNode.attached("Xamarin.Forms.Shell:DisabledColor;Xamarin.Forms.Core");
-
-Shell.foregroundColor = XNode.attached("Xamarin.Forms.Shell:ForegroundColor;Xamarin.Forms.Core");
-
-Shell.tabBarBackgroundColor = XNode.attached("Xamarin.Forms.Shell:TabBarBackgroundColor;Xamarin.Forms.Core");
-
-Shell.tabBarDisabledColor = XNode.attached("Xamarin.Forms.Shell:TabBarDisabledColor;Xamarin.Forms.Core");
-
-Shell.tabBarForegroundColor = XNode.attached("Xamarin.Forms.Shell:TabBarForegroundColor;Xamarin.Forms.Core");
-
-Shell.tabBarTitleColor = XNode.attached("Xamarin.Forms.Shell:TabBarTitleColor;Xamarin.Forms.Core");
-
-Shell.tabBarUnselectedColor = XNode.attached("Xamarin.Forms.Shell:TabBarUnselectedColor;Xamarin.Forms.Core");
-
-Shell.titleColor = XNode.attached("Xamarin.Forms.Shell:TitleColor;Xamarin.Forms.Core");
-
-Shell.unselectedColor = XNode.attached("Xamarin.Forms.Shell:UnselectedColor;Xamarin.Forms.Core");
-
-Shell.backgroundColor = XNode.attached("Xamarin.Forms.Shell:BackgroundColor;Xamarin.Forms.Core");
-
-Shell.backgroundImageSource = XNode.prepare("Xamarin.Forms.Shell:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-Shell.behaviors = XNode.prepare("Xamarin.Forms.Shell:Behaviors;Xamarin.Forms.Core", true, false);
-
-Shell.currentItem = XNode.prepare("Xamarin.Forms.Shell:CurrentItem;Xamarin.Forms.Core", true, false);
-
-Shell.effects = XNode.prepare("Xamarin.Forms.Shell:Effects;Xamarin.Forms.Core", true, false);
-
-Shell.flyoutBackgroundImage = XNode.prepare("Xamarin.Forms.Shell:FlyoutBackgroundImage;Xamarin.Forms.Core", true, false);
-
-Shell.flyoutHeaderTemplate = XNode.prepare("Xamarin.Forms.Shell:FlyoutHeaderTemplate;Xamarin.Forms.Core", true, true);
-
-Shell.flyoutIcon = XNode.prepare("Xamarin.Forms.Shell:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-Shell.iconImageSource = XNode.prepare("Xamarin.Forms.Shell:IconImageSource;Xamarin.Forms.Core", true, false);
-
-Shell.items = XNode.prepare("Xamarin.Forms.Shell:Items;Xamarin.Forms.Core", true, false);
-
-Shell.itemTemplate = XNode.prepare("Xamarin.Forms.Shell:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-Shell.menu = XNode.prepare("Xamarin.Forms.Shell:Menu;Xamarin.Forms.Core", true, false);
-
-Shell.menuItemTemplate = XNode.prepare("Xamarin.Forms.Shell:MenuItemTemplate;Xamarin.Forms.Core", true, true);
-
-Shell.resources = XNode.prepare("Xamarin.Forms.Shell:Resources;Xamarin.Forms.Core", true, false);
-
-Shell.styleClass = XNode.prepare("Xamarin.Forms.Shell:StyleClass;Xamarin.Forms.Core", true, false);
-
-Shell.titleView = XNode.prepare("Xamarin.Forms.Shell:TitleView;Xamarin.Forms.Core", true, false);
-
-Shell.toolbarItems = XNode.prepare("Xamarin.Forms.Shell:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-Shell.triggers = XNode.prepare("Xamarin.Forms.Shell:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IShellContent {
+public static titleView = XNode.property()
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
+/** Property CurrentItem of Type ShellItem */
+public currentItem?: any;
 
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+/** Property FlyoutBackgroundColor of Type Color */
+public flyoutBackgroundColor?: ColorItem | string | null | Bind;
 
-/** Property class of Type IList`1 */
-class?: any;
+/** Property FlyoutBackgroundImage of Type ImageSource */
+public flyoutBackgroundImage?: /*ImageSource*/ any;
 
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
+/** Property FlyoutBackgroundImageAspect of Type Aspect */
+public flyoutBackgroundImageAspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
 
-/** Property Content of Type Object */
-content?: any;
+/** Property FlyoutBehavior of Type FlyoutBehavior */
+public flyoutBehavior?: "Disabled" | "Flyout" | "Locked" | Bind;
 
-/** Property ContentTemplate of Type DataTemplate */
-contentTemplate?: any;
+/** Property FlyoutHeader of Type Object */
+public flyoutHeader?: any;
 
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+/** Property FlyoutHeaderBehavior of Type FlyoutHeaderBehavior */
+public flyoutHeaderBehavior?: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | Bind;
 
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+/** Property FlyoutHeaderTemplate of Type DataTemplate */
+public flyoutHeaderTemplate?: any;
 
 /** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
+public flyoutIcon?: /*ImageSource*/ any;
 
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
+/** Property FlyoutIsPresented of Type Boolean */
+public flyoutIsPresented?: boolean | Bind;
 
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
+/** Property FlyoutVerticalScrollMode of Type ScrollMode */
+public flyoutVerticalScrollMode?: "Disabled" | "Enabled" | "Auto" | Bind;
 
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
+/** Property ItemTemplate of Type DataTemplate */
+public itemTemplate?: any;
 
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
+/** Property MenuItemTemplate of Type DataTemplate */
+public menuItemTemplate?: any;
 }
 
-export interface IShellContentConstructor {
-    (a?: Partial<IShellContent>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ShellContent")
+class ShellContent extends BaseShellItem {
     
     
 /** Property ShellContent.ContentTemplate of Type Xamarin.Forms.DataTemplate */
-contentTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellContent.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellContent.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellContent.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellContent.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
+public static contentTemplate = XNode.template();
 
 /** Property ShellContent.MenuItems of Type Xamarin.Forms.MenuItem */
-menuItems?: ( a: any, ... nodes: XNode[]) => XNode;
+public static menuItems = XNode.property()
+    
+    
+/** Property Content of Type Object */
+public content?: any;
 
-/** Property ShellContent.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property ContentTemplate of Type DataTemplate */
+public contentTemplate?: any;
 }
 
-/** ShellContent */
-const ShellContent: IShellContentConstructor = XNode.prepare<IShellContent>("Xamarin.Forms.ShellContent;Xamarin.Forms.Core", false, false);
 
-
-ShellContent.contentTemplate = XNode.prepare("Xamarin.Forms.ShellContent:ContentTemplate;Xamarin.Forms.Core", true, true);
-
-ShellContent.effects = XNode.prepare("Xamarin.Forms.ShellContent:Effects;Xamarin.Forms.Core", true, false);
-
-ShellContent.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellContent:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-ShellContent.icon = XNode.prepare("Xamarin.Forms.ShellContent:Icon;Xamarin.Forms.Core", true, false);
-
-ShellContent.menu = XNode.prepare("Xamarin.Forms.ShellContent:Menu;Xamarin.Forms.Core", true, false);
-
-ShellContent.menuItems = XNode.prepare("Xamarin.Forms.ShellContent:MenuItems;Xamarin.Forms.Core", true, false);
-
-ShellContent.styleClass = XNode.prepare("Xamarin.Forms.ShellContent:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface IShellGroupItem {
+@XFNS0("ShellGroupItem")
+class ShellGroupItem extends BaseShellItem {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
+    
+    
 /** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
+public flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 }
 
-export interface IShellGroupItemConstructor {
-    (a?: Partial<IShellGroupItem>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property ShellGroupItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
 
-/** Property ShellGroupItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellGroupItem.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellGroupItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellGroupItem.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ShellGroupItem */
-const ShellGroupItem: IShellGroupItemConstructor = XNode.prepare<IShellGroupItem>("Xamarin.Forms.ShellGroupItem;Xamarin.Forms.Core", false, false);
-
-
-ShellGroupItem.effects = XNode.prepare("Xamarin.Forms.ShellGroupItem:Effects;Xamarin.Forms.Core", true, false);
-
-ShellGroupItem.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellGroupItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-ShellGroupItem.icon = XNode.prepare("Xamarin.Forms.ShellGroupItem:Icon;Xamarin.Forms.Core", true, false);
-
-ShellGroupItem.menu = XNode.prepare("Xamarin.Forms.ShellGroupItem:Menu;Xamarin.Forms.Core", true, false);
-
-ShellGroupItem.styleClass = XNode.prepare("Xamarin.Forms.ShellGroupItem:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface IFlyoutItem {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property CurrentItem of Type ShellSection */
-currentItem?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IFlyoutItemConstructor {
-    (a?: Partial<IFlyoutItem>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property FlyoutItem.CurrentItem of Type Xamarin.Forms.ShellSection */
-currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlyoutItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlyoutItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlyoutItem.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlyoutItem.Items of Type Xamarin.Forms.ShellSection */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlyoutItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property FlyoutItem.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** FlyoutItem */
-const FlyoutItem: IFlyoutItemConstructor = XNode.prepare<IFlyoutItem>("Xamarin.Forms.FlyoutItem;Xamarin.Forms.Core", false, false);
-
-
-FlyoutItem.currentItem = XNode.prepare("Xamarin.Forms.FlyoutItem:CurrentItem;Xamarin.Forms.Core", true, false);
-
-FlyoutItem.effects = XNode.prepare("Xamarin.Forms.FlyoutItem:Effects;Xamarin.Forms.Core", true, false);
-
-FlyoutItem.flyoutIcon = XNode.prepare("Xamarin.Forms.FlyoutItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-FlyoutItem.icon = XNode.prepare("Xamarin.Forms.FlyoutItem:Icon;Xamarin.Forms.Core", true, false);
-
-FlyoutItem.items = XNode.prepare("Xamarin.Forms.FlyoutItem:Items;Xamarin.Forms.Core", true, false);
-
-FlyoutItem.menu = XNode.prepare("Xamarin.Forms.FlyoutItem:Menu;Xamarin.Forms.Core", true, false);
-
-FlyoutItem.styleClass = XNode.prepare("Xamarin.Forms.FlyoutItem:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface ITabBar {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property CurrentItem of Type ShellSection */
-currentItem?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface ITabBarConstructor {
-    (a?: Partial<ITabBar>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property TabBar.CurrentItem of Type Xamarin.Forms.ShellSection */
-currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabBar.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabBar.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabBar.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabBar.Items of Type Xamarin.Forms.ShellSection */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabBar.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabBar.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TabBar */
-const TabBar: ITabBarConstructor = XNode.prepare<ITabBar>("Xamarin.Forms.TabBar;Xamarin.Forms.Core", false, false);
-
-
-TabBar.currentItem = XNode.prepare("Xamarin.Forms.TabBar:CurrentItem;Xamarin.Forms.Core", true, false);
-
-TabBar.effects = XNode.prepare("Xamarin.Forms.TabBar:Effects;Xamarin.Forms.Core", true, false);
-
-TabBar.flyoutIcon = XNode.prepare("Xamarin.Forms.TabBar:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-TabBar.icon = XNode.prepare("Xamarin.Forms.TabBar:Icon;Xamarin.Forms.Core", true, false);
-
-TabBar.items = XNode.prepare("Xamarin.Forms.TabBar:Items;Xamarin.Forms.Core", true, false);
-
-TabBar.menu = XNode.prepare("Xamarin.Forms.TabBar:Menu;Xamarin.Forms.Core", true, false);
-
-TabBar.styleClass = XNode.prepare("Xamarin.Forms.TabBar:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface IShellItem {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property CurrentItem of Type ShellSection */
-currentItem?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IShellItemConstructor {
-    (a?: Partial<IShellItem>, ... nodes: XNode[]): XNode;
+@XFNS0("ShellItem")
+class ShellItem extends ShellGroupItem {
     
     
 /** Property ShellItem.CurrentItem of Type Xamarin.Forms.ShellSection */
-currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellItem.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
+public static currentItem = XNode.property();
 
 /** Property ShellItem.Items of Type Xamarin.Forms.ShellSection */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellItem.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
+public static items = XNode.property()
+    
+    
+/** Property CurrentItem of Type ShellSection */
+public currentItem?: any;
 }
 
-/** ShellItem */
-const ShellItem: IShellItemConstructor = XNode.prepare<IShellItem>("Xamarin.Forms.ShellItem;Xamarin.Forms.Core", false, false);
 
-
-ShellItem.currentItem = XNode.prepare("Xamarin.Forms.ShellItem:CurrentItem;Xamarin.Forms.Core", true, false);
-
-ShellItem.effects = XNode.prepare("Xamarin.Forms.ShellItem:Effects;Xamarin.Forms.Core", true, false);
-
-ShellItem.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellItem:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-ShellItem.icon = XNode.prepare("Xamarin.Forms.ShellItem:Icon;Xamarin.Forms.Core", true, false);
-
-ShellItem.items = XNode.prepare("Xamarin.Forms.ShellItem:Items;Xamarin.Forms.Core", true, false);
-
-ShellItem.menu = XNode.prepare("Xamarin.Forms.ShellItem:Menu;Xamarin.Forms.Core", true, false);
-
-ShellItem.styleClass = XNode.prepare("Xamarin.Forms.ShellItem:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface ITab {
+@XFNS0("FlyoutItem")
+class FlyoutItem extends ShellItem {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property CurrentItem of Type ShellContent */
-currentItem?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
+    
+    
 }
 
-export interface ITabConstructor {
-    (a?: Partial<ITab>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TabBar")
+class TabBar extends ShellItem {
     
     
-/** Property Tab.CurrentItem of Type Xamarin.Forms.ShellContent */
-currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Tab.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Tab.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Tab.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Tab.Items of Type Xamarin.Forms.ShellContent */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Tab.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Tab.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
+    
+    
 }
 
-/** Tab */
-const Tab: ITabConstructor = XNode.prepare<ITab>("Xamarin.Forms.Tab;Xamarin.Forms.Core", false, false);
 
-
-Tab.currentItem = XNode.prepare("Xamarin.Forms.Tab:CurrentItem;Xamarin.Forms.Core", true, false);
-
-Tab.effects = XNode.prepare("Xamarin.Forms.Tab:Effects;Xamarin.Forms.Core", true, false);
-
-Tab.flyoutIcon = XNode.prepare("Xamarin.Forms.Tab:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-Tab.icon = XNode.prepare("Xamarin.Forms.Tab:Icon;Xamarin.Forms.Core", true, false);
-
-Tab.items = XNode.prepare("Xamarin.Forms.Tab:Items;Xamarin.Forms.Core", true, false);
-
-Tab.menu = XNode.prepare("Xamarin.Forms.Tab:Menu;Xamarin.Forms.Core", true, false);
-
-Tab.styleClass = XNode.prepare("Xamarin.Forms.Tab:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface IShellSection {
-    
-    
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property CurrentItem of Type ShellContent */
-currentItem?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlyoutDisplayOptions of Type FlyoutDisplayOptions */
-flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
-
-/** Property FlyoutIcon of Type ImageSource */
-flyoutIcon?: /*ImageSource*/ any;
-
-/** Property Icon of Type ImageSource */
-icon?: /*ImageSource*/ any;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Route of Type String */
-route?: string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
-}
-
-export interface IShellSectionConstructor {
-    (a?: Partial<IShellSection>, ... nodes: XNode[]): XNode;
+@XFNS0("ShellSection")
+class ShellSection extends ShellGroupItem {
     
     
 /** Property ShellSection.CurrentItem of Type Xamarin.Forms.ShellContent */
-currentItem?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellSection.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellSection.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-flyoutIcon?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellSection.Icon of Type Xamarin.Forms.ImageSource */
-icon?: ( a: any, ... nodes: XNode[]) => XNode;
+public static currentItem = XNode.property();
 
 /** Property ShellSection.Items of Type Xamarin.Forms.ShellContent */
-items?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellSection.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ShellSection.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode
+public static items = XNode.property()
+    
+    
+/** Property CurrentItem of Type ShellContent */
+public currentItem?: any;
 }
 
-/** ShellSection */
-const ShellSection: IShellSectionConstructor = XNode.prepare<IShellSection>("Xamarin.Forms.ShellSection;Xamarin.Forms.Core", false, false);
 
-
-ShellSection.currentItem = XNode.prepare("Xamarin.Forms.ShellSection:CurrentItem;Xamarin.Forms.Core", true, false);
-
-ShellSection.effects = XNode.prepare("Xamarin.Forms.ShellSection:Effects;Xamarin.Forms.Core", true, false);
-
-ShellSection.flyoutIcon = XNode.prepare("Xamarin.Forms.ShellSection:FlyoutIcon;Xamarin.Forms.Core", true, false);
-
-ShellSection.icon = XNode.prepare("Xamarin.Forms.ShellSection:Icon;Xamarin.Forms.Core", true, false);
-
-ShellSection.items = XNode.prepare("Xamarin.Forms.ShellSection:Items;Xamarin.Forms.Core", true, false);
-
-ShellSection.menu = XNode.prepare("Xamarin.Forms.ShellSection:Menu;Xamarin.Forms.Core", true, false);
-
-ShellSection.styleClass = XNode.prepare("Xamarin.Forms.ShellSection:StyleClass;Xamarin.Forms.Core", true, false);
-
-
-export interface ISlider {
+@XFNS0("Tab")
+class Tab extends ShellSection {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
+    
+    
+}
 
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
 
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
+@XFNS0("Slider")
+class Slider extends View {
+    
+    
+/** Property Slider.ThumbImageSource of Type Xamarin.Forms.ImageSource */
+public static thumbImageSource = XNode.property()
+    
+    
 /** Property DragCompletedCommand of Type ICommand */
-dragCompletedCommand?: any;
+public dragCompletedCommand?: any;
 
 /** Property DragStartedCommand of Type ICommand */
-dragStartedCommand?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
+public dragStartedCommand?: any;
 
 /** Property Maximum of Type Double */
-maximum?: number | Bind;
+public maximum?: number | Bind;
 
 /** Property MaximumTrackColor of Type Color */
-maximumTrackColor?: ColorItem | string | null | Bind;
+public maximumTrackColor?: ColorItem | string | null | Bind;
 
 /** Property Minimum of Type Double */
-minimum?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
+public minimum?: number | Bind;
 
 /** Property MinimumTrackColor of Type Color */
-minimumTrackColor?: ColorItem | string | null | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
+public minimumTrackColor?: ColorItem | string | null | Bind;
 
 /** Property ThumbColor of Type Color */
-thumbColor?: ColorItem | string | null | Bind;
+public thumbColor?: ColorItem | string | null | Bind;
 
 /** Property ThumbImage of Type FileImageSource */
-thumbImage?: /*FileImageSource*/ any;
+public thumbImage?: /*FileImageSource*/ any;
 
 /** Property ThumbImageSource of Type ImageSource */
-thumbImageSource?: /*ImageSource*/ any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
+public thumbImageSource?: /*ImageSource*/ any;
 
 /** Property Value of Type Double */
-value?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public value?: number | Bind;
 }
 
-export interface ISliderConstructor {
-    (a?: Partial<ISlider>, ... nodes: XNode[]): XNode;
+
+@XFNS0("Span")
+class Span extends GestureElement {
     
     
-/** Property Slider.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.ThumbImageSource of Type Xamarin.Forms.ImageSource */
-thumbImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Slider.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Slider */
-const Slider: ISliderConstructor = XNode.prepare<ISlider>("Xamarin.Forms.Slider;Xamarin.Forms.Core", false, false);
-
-
-Slider.behaviors = XNode.prepare("Xamarin.Forms.Slider:Behaviors;Xamarin.Forms.Core", true, false);
-
-Slider.effects = XNode.prepare("Xamarin.Forms.Slider:Effects;Xamarin.Forms.Core", true, false);
-
-Slider.gestureRecognizers = XNode.prepare("Xamarin.Forms.Slider:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Slider.menu = XNode.prepare("Xamarin.Forms.Slider:Menu;Xamarin.Forms.Core", true, false);
-
-Slider.resources = XNode.prepare("Xamarin.Forms.Slider:Resources;Xamarin.Forms.Core", true, false);
-
-Slider.styleClass = XNode.prepare("Xamarin.Forms.Slider:StyleClass;Xamarin.Forms.Core", true, false);
-
-Slider.thumbImageSource = XNode.prepare("Xamarin.Forms.Slider:ThumbImageSource;Xamarin.Forms.Core", true, false);
-
-Slider.triggers = XNode.prepare("Xamarin.Forms.Slider:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ISpan {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
 /** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+public backgroundColor?: ColorItem | string | null | Bind;
 
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+public characterSpacing?: number | Bind;
 
 /** Property Font of Type Font */
-font?: /*Font*/ any;
+public font?: /*Font*/ any;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
+public fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: number | Bind;
+public fontSize?: number | Bind;
 
 /** Property ForegroundColor of Type Color */
-foregroundColor?: ColorItem | string | null | Bind;
+public foregroundColor?: ColorItem | string | null | Bind;
 
 /** Property LineHeight of Type Double */
-lineHeight?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public lineHeight?: number | Bind;
 
 /** Property Style of Type Style */
-style?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+public style?: any;
 
 /** Property Text of Type String */
-text?: string | null | Bind;
+public text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
+public textColor?: ColorItem | string | null | Bind;
 
 /** Property TextDecorations of Type TextDecorations */
-textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
-    [key: string]: any;
+public textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
 }
 
-export interface ISpanConstructor {
-    (a?: Partial<ISpan>, ... nodes: XNode[]): XNode;
+
+@XFNS0("StackLayout")
+class StackLayout extends RootObject {
     
     
-/** Property Span.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Span.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Span.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Span */
-const Span: ISpanConstructor = XNode.prepare<ISpan>("Xamarin.Forms.Span;Xamarin.Forms.Core", false, false);
-
-
-Span.effects = XNode.prepare("Xamarin.Forms.Span:Effects;Xamarin.Forms.Core", true, false);
-
-Span.gestureRecognizers = XNode.prepare("Xamarin.Forms.Span:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Span.menu = XNode.prepare("Xamarin.Forms.Span:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IStackLayout {
+/** Property StackLayout.Children of Type Xamarin.Forms.View */
+public static children = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
 /** Property Orientation of Type StackOrientation */
-orientation?: "Vertical" | "Horizontal" | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
+public orientation?: "Vertical" | "Horizontal" | Bind;
 
 /** Property Spacing of Type Double */
-spacing?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public spacing?: number | Bind;
 }
 
-export interface IStackLayoutConstructor {
-    (a?: Partial<IStackLayout>, ... nodes: XNode[]): XNode;
+
+@XFNS0("Stepper")
+class Stepper extends View {
     
     
-/** Property StackLayout.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.Children of Type Xamarin.Forms.View */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StackLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** StackLayout */
-const StackLayout: IStackLayoutConstructor = XNode.prepare<IStackLayout>("Xamarin.Forms.StackLayout;Xamarin.Forms.Core", false, false);
-
-
-StackLayout.behaviors = XNode.prepare("Xamarin.Forms.StackLayout:Behaviors;Xamarin.Forms.Core", true, false);
-
-StackLayout.children = XNode.prepare("Xamarin.Forms.StackLayout:Children;Xamarin.Forms.Core", true, false);
-
-StackLayout.effects = XNode.prepare("Xamarin.Forms.StackLayout:Effects;Xamarin.Forms.Core", true, false);
-
-StackLayout.gestureRecognizers = XNode.prepare("Xamarin.Forms.StackLayout:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-StackLayout.menu = XNode.prepare("Xamarin.Forms.StackLayout:Menu;Xamarin.Forms.Core", true, false);
-
-StackLayout.resources = XNode.prepare("Xamarin.Forms.StackLayout:Resources;Xamarin.Forms.Core", true, false);
-
-StackLayout.styleClass = XNode.prepare("Xamarin.Forms.StackLayout:StyleClass;Xamarin.Forms.Core", true, false);
-
-StackLayout.triggers = XNode.prepare("Xamarin.Forms.StackLayout:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IStepper {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
 /** Property Increment of Type Double */
-increment?: number | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
+public increment?: number | Bind;
 
 /** Property Maximum of Type Double */
-maximum?: number | Bind;
+public maximum?: number | Bind;
 
 /** Property Minimum of Type Double */
-minimum?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
+public minimum?: number | Bind;
 
 /** Property Value of Type Double */
-value?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public value?: number | Bind;
 }
 
-export interface IStepperConstructor {
-    (a?: Partial<IStepper>, ... nodes: XNode[]): XNode;
+
+@XFNS0("StreamImageSource")
+class StreamImageSource extends ImageSource {
     
     
-/** Property Stepper.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Stepper.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Stepper.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Stepper.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Stepper.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Stepper.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Stepper.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Stepper */
-const Stepper: IStepperConstructor = XNode.prepare<IStepper>("Xamarin.Forms.Stepper;Xamarin.Forms.Core", false, false);
-
-
-Stepper.behaviors = XNode.prepare("Xamarin.Forms.Stepper:Behaviors;Xamarin.Forms.Core", true, false);
-
-Stepper.effects = XNode.prepare("Xamarin.Forms.Stepper:Effects;Xamarin.Forms.Core", true, false);
-
-Stepper.gestureRecognizers = XNode.prepare("Xamarin.Forms.Stepper:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Stepper.menu = XNode.prepare("Xamarin.Forms.Stepper:Menu;Xamarin.Forms.Core", true, false);
-
-Stepper.resources = XNode.prepare("Xamarin.Forms.Stepper:Resources;Xamarin.Forms.Core", true, false);
-
-Stepper.styleClass = XNode.prepare("Xamarin.Forms.Stepper:StyleClass;Xamarin.Forms.Core", true, false);
-
-Stepper.triggers = XNode.prepare("Xamarin.Forms.Stepper:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IStreamImageSource {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
 /** Property Stream of Type Func`2 */
-stream?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-    [key: string]: any;
+public stream?: any;
 }
 
-export interface IStreamImageSourceConstructor {
-    (a?: Partial<IStreamImageSource>, ... nodes: XNode[]): XNode;
+
+@XFNS0("SwipeGestureRecognizer")
+class SwipeGestureRecognizer extends GestureRecognizer {
     
     
-/** Property StreamImageSource.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property StreamImageSource.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** StreamImageSource */
-const StreamImageSource: IStreamImageSourceConstructor = XNode.prepare<IStreamImageSource>("Xamarin.Forms.StreamImageSource;Xamarin.Forms.Core", false, false);
-
-
-StreamImageSource.effects = XNode.prepare("Xamarin.Forms.StreamImageSource:Effects;Xamarin.Forms.Core", true, false);
-
-StreamImageSource.menu = XNode.prepare("Xamarin.Forms.StreamImageSource:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwipeGestureRecognizer {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
 /** Property Command of Type ICommand */
-command?: any;
+public command?: any;
 
 /** Property CommandParameter of Type Object */
-commandParameter?: any;
+public commandParameter?: any;
 
 /** Property Direction of Type SwipeDirection */
-direction?: "Right" | "Left" | "Up" | "Down" | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+public direction?: "Right" | "Left" | "Up" | "Down" | Bind;
 
 /** Property Threshold of Type UInt32 */
-threshold?: any;
-    [key: string]: any;
+public threshold?: any;
 }
 
-export interface ISwipeGestureRecognizerConstructor {
-    (a?: Partial<ISwipeGestureRecognizer>, ... nodes: XNode[]): XNode;
+
+@XFNS0("SwipeItem")
+class SwipeItem extends MenuItem {
     
     
-/** Property SwipeGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeGestureRecognizer.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SwipeGestureRecognizer */
-const SwipeGestureRecognizer: ISwipeGestureRecognizerConstructor = XNode.prepare<ISwipeGestureRecognizer>("Xamarin.Forms.SwipeGestureRecognizer;Xamarin.Forms.Core", false, false);
-
-
-SwipeGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.SwipeGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
-
-SwipeGestureRecognizer.menu = XNode.prepare("Xamarin.Forms.SwipeGestureRecognizer:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwipeItem {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
 /** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IsDestructive of Type Boolean */
-isDestructive?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-    [key: string]: any;
+public backgroundColor?: ColorItem | string | null | Bind;
 }
 
-export interface ISwipeItemConstructor {
-    (a?: Partial<ISwipeItem>, ... nodes: XNode[]): XNode;
+
+@XFNS0("SwipeItems")
+class SwipeItems extends Element {
     
     
-/** Property SwipeItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SwipeItem */
-const SwipeItem: ISwipeItemConstructor = XNode.prepare<ISwipeItem>("Xamarin.Forms.SwipeItem;Xamarin.Forms.Core", false, false);
-
-
-SwipeItem.effects = XNode.prepare("Xamarin.Forms.SwipeItem:Effects;Xamarin.Forms.Core", true, false);
-
-SwipeItem.iconImageSource = XNode.prepare("Xamarin.Forms.SwipeItem:IconImageSource;Xamarin.Forms.Core", true, false);
-
-SwipeItem.menu = XNode.prepare("Xamarin.Forms.SwipeItem:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwipeItems {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
 /** Property Item of Type ISwipeItem */
-item?: any;
+public item?: any;
 
 /** Property Mode of Type SwipeMode */
-mode?: "Reveal" | "Execute" | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+public mode?: "Reveal" | "Execute" | Bind;
 
 /** Property SwipeBehaviorOnInvoked of Type SwipeBehaviorOnInvoked */
-swipeBehaviorOnInvoked?: "Auto" | "Close" | "RemainOpen" | Bind;
-    [key: string]: any;
+public swipeBehaviorOnInvoked?: "Auto" | "Close" | "RemainOpen" | Bind;
 }
 
-export interface ISwipeItemsConstructor {
-    (a?: Partial<ISwipeItems>, ... nodes: XNode[]): XNode;
+
+@XFNS0("SwipeItemView")
+class SwipeItemView extends ContentView {
     
     
-/** Property SwipeItems.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItems.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SwipeItems */
-const SwipeItems: ISwipeItemsConstructor = XNode.prepare<ISwipeItems>("Xamarin.Forms.SwipeItems;Xamarin.Forms.Core", false, false);
-
-
-SwipeItems.effects = XNode.prepare("Xamarin.Forms.SwipeItems:Effects;Xamarin.Forms.Core", true, false);
-
-SwipeItems.menu = XNode.prepare("Xamarin.Forms.SwipeItems:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwipeItemView {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
 /** Property Command of Type ICommand */
-command?: any;
+public command?: any;
 
 /** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public commandParameter?: any;
 }
 
-export interface ISwipeItemViewConstructor {
-    (a?: Partial<ISwipeItemView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("SwipeView")
+class SwipeView extends ContentView {
     
     
-/** Property SwipeItemView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeItemView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** SwipeItemView */
-const SwipeItemView: ISwipeItemViewConstructor = XNode.prepare<ISwipeItemView>("Xamarin.Forms.SwipeItemView;Xamarin.Forms.Core", false, false);
-
-
-SwipeItemView.behaviors = XNode.prepare("Xamarin.Forms.SwipeItemView:Behaviors;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.content = XNode.prepare("Xamarin.Forms.SwipeItemView:Content;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.controlTemplate = XNode.prepare("Xamarin.Forms.SwipeItemView:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-SwipeItemView.effects = XNode.prepare("Xamarin.Forms.SwipeItemView:Effects;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.gestureRecognizers = XNode.prepare("Xamarin.Forms.SwipeItemView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.menu = XNode.prepare("Xamarin.Forms.SwipeItemView:Menu;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.resources = XNode.prepare("Xamarin.Forms.SwipeItemView:Resources;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.styleClass = XNode.prepare("Xamarin.Forms.SwipeItemView:StyleClass;Xamarin.Forms.Core", true, false);
-
-SwipeItemView.triggers = XNode.prepare("Xamarin.Forms.SwipeItemView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwipeView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property BottomItems of Type SwipeItems */
-bottomItems?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Content of Type View */
-content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property LeftItems of Type SwipeItems */
-leftItems?: any;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property RightItems of Type SwipeItems */
-rightItems?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TopItems of Type SwipeItems */
-topItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ISwipeViewConstructor {
-    (a?: Partial<ISwipeView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property SwipeView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property SwipeView.BottomItems of Type Xamarin.Forms.ISwipeItem */
-bottomItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.Content of Type Xamarin.Forms.View */
-content?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
+public static bottomItems = XNode.property();
 
 /** Property SwipeView.LeftItems of Type Xamarin.Forms.ISwipeItem */
-leftItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
+public static leftItems = XNode.property();
 
 /** Property SwipeView.RightItems of Type Xamarin.Forms.ISwipeItem */
-rightItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property SwipeView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
+public static rightItems = XNode.property();
 
 /** Property SwipeView.TopItems of Type Xamarin.Forms.ISwipeItem */
-topItems?: ( a: any, ... nodes: XNode[]) => XNode;
+public static topItems = XNode.property()
+    
+    
+/** Property BottomItems of Type SwipeItems */
+public bottomItems?: any;
 
-/** Property SwipeView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
+/** Property LeftItems of Type SwipeItems */
+public leftItems?: any;
+
+/** Property RightItems of Type SwipeItems */
+public rightItems?: any;
+
+/** Property TopItems of Type SwipeItems */
+public topItems?: any;
 }
 
-/** SwipeView */
-const SwipeView: ISwipeViewConstructor = XNode.prepare<ISwipeView>("Xamarin.Forms.SwipeView;Xamarin.Forms.Core", false, false);
 
-
-SwipeView.behaviors = XNode.prepare("Xamarin.Forms.SwipeView:Behaviors;Xamarin.Forms.Core", true, false);
-
-SwipeView.bottomItems = XNode.prepare("Xamarin.Forms.SwipeView:BottomItems;Xamarin.Forms.Core", true, false);
-
-SwipeView.content = XNode.prepare("Xamarin.Forms.SwipeView:Content;Xamarin.Forms.Core", true, false);
-
-SwipeView.controlTemplate = XNode.prepare("Xamarin.Forms.SwipeView:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-SwipeView.effects = XNode.prepare("Xamarin.Forms.SwipeView:Effects;Xamarin.Forms.Core", true, false);
-
-SwipeView.gestureRecognizers = XNode.prepare("Xamarin.Forms.SwipeView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-SwipeView.leftItems = XNode.prepare("Xamarin.Forms.SwipeView:LeftItems;Xamarin.Forms.Core", true, false);
-
-SwipeView.menu = XNode.prepare("Xamarin.Forms.SwipeView:Menu;Xamarin.Forms.Core", true, false);
-
-SwipeView.resources = XNode.prepare("Xamarin.Forms.SwipeView:Resources;Xamarin.Forms.Core", true, false);
-
-SwipeView.rightItems = XNode.prepare("Xamarin.Forms.SwipeView:RightItems;Xamarin.Forms.Core", true, false);
-
-SwipeView.styleClass = XNode.prepare("Xamarin.Forms.SwipeView:StyleClass;Xamarin.Forms.Core", true, false);
-
-SwipeView.topItems = XNode.prepare("Xamarin.Forms.SwipeView:TopItems;Xamarin.Forms.Core", true, false);
-
-SwipeView.triggers = XNode.prepare("Xamarin.Forms.SwipeView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ISwitch {
+@XFNS0("Switch")
+class Switch extends View {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
+    
+    
 /** Property IsToggled of Type Boolean */
-isToggled?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
+public isToggled?: boolean | Bind;
 
 /** Property OnColor of Type Color */
-onColor?: ColorItem | string | null | Bind;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
+public onColor?: ColorItem | string | null | Bind;
 
 /** Property ThumbColor of Type Color */
-thumbColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public thumbColor?: ColorItem | string | null | Bind;
 }
 
-export interface ISwitchConstructor {
-    (a?: Partial<ISwitch>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TabbedPage")
+class TabbedPage extends RootObject {
     
     
-/** Property Switch.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Switch.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Switch.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Switch.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Switch.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Switch.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property Switch.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** Switch */
-const Switch: ISwitchConstructor = XNode.prepare<ISwitch>("Xamarin.Forms.Switch;Xamarin.Forms.Core", false, false);
-
-
-Switch.behaviors = XNode.prepare("Xamarin.Forms.Switch:Behaviors;Xamarin.Forms.Core", true, false);
-
-Switch.effects = XNode.prepare("Xamarin.Forms.Switch:Effects;Xamarin.Forms.Core", true, false);
-
-Switch.gestureRecognizers = XNode.prepare("Xamarin.Forms.Switch:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-Switch.menu = XNode.prepare("Xamarin.Forms.Switch:Menu;Xamarin.Forms.Core", true, false);
-
-Switch.resources = XNode.prepare("Xamarin.Forms.Switch:Resources;Xamarin.Forms.Core", true, false);
-
-Switch.styleClass = XNode.prepare("Xamarin.Forms.Switch:StyleClass;Xamarin.Forms.Core", true, false);
-
-Switch.triggers = XNode.prepare("Xamarin.Forms.Switch:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ITabbedPage {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
-
-/** Property BarBackgroundColor of Type Color */
-barBackgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BarTextColor of Type Color */
-barTextColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
-
-/** Property CurrentPage of Type Page */
-currentPage?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property ItemsSource of Type IEnumerable */
-itemsSource?: any;
-
-/** Property ItemTemplate of Type DataTemplate */
-itemTemplate?: any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property SelectedItem of Type Object */
-selectedItem?: any;
-
-/** Property SelectedTabColor of Type Color */
-selectedTabColor?: ColorItem | string | null | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property UnselectedTabColor of Type Color */
-unselectedTabColor?: ColorItem | string | null | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ITabbedPageConstructor {
-    (a?: Partial<ITabbedPage>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property TabbedPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
 /** Property TabbedPage.Children of Type Xamarin.Forms.Page */
-children?: ( a: any, ... nodes: XNode[]) => XNode;
+public static children = XNode.property();
 
 /** Property TabbedPage.CurrentPage of Type Xamarin.Forms.Page */
-currentPage?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
+public static currentPage = XNode.property();
 
 /** Property TabbedPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-itemTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TabbedPage.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TabbedPage */
-const TabbedPage: ITabbedPageConstructor = XNode.prepare<ITabbedPage>("Xamarin.Forms.TabbedPage;Xamarin.Forms.Core", false, false);
-
-
-TabbedPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-TabbedPage.behaviors = XNode.prepare("Xamarin.Forms.TabbedPage:Behaviors;Xamarin.Forms.Core", true, false);
-
-TabbedPage.children = XNode.prepare("Xamarin.Forms.TabbedPage:Children;Xamarin.Forms.Core", true, false);
-
-TabbedPage.currentPage = XNode.prepare("Xamarin.Forms.TabbedPage:CurrentPage;Xamarin.Forms.Core", true, false);
-
-TabbedPage.effects = XNode.prepare("Xamarin.Forms.TabbedPage:Effects;Xamarin.Forms.Core", true, false);
-
-TabbedPage.iconImageSource = XNode.prepare("Xamarin.Forms.TabbedPage:IconImageSource;Xamarin.Forms.Core", true, false);
-
-TabbedPage.itemTemplate = XNode.prepare("Xamarin.Forms.TabbedPage:ItemTemplate;Xamarin.Forms.Core", true, true);
-
-TabbedPage.menu = XNode.prepare("Xamarin.Forms.TabbedPage:Menu;Xamarin.Forms.Core", true, false);
-
-TabbedPage.resources = XNode.prepare("Xamarin.Forms.TabbedPage:Resources;Xamarin.Forms.Core", true, false);
-
-TabbedPage.styleClass = XNode.prepare("Xamarin.Forms.TabbedPage:StyleClass;Xamarin.Forms.Core", true, false);
-
-TabbedPage.toolbarItems = XNode.prepare("Xamarin.Forms.TabbedPage:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-TabbedPage.triggers = XNode.prepare("Xamarin.Forms.TabbedPage:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ITableRoot {
+public static itemTemplate = XNode.template()
     
     
-/** Property BindingContext of Type Object */
-bindingContext?: any;
+/** Property BarBackgroundColor of Type Color */
+public barBackgroundColor?: ColorItem | string | null | Bind;
 
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
+/** Property BarTextColor of Type Color */
+public barTextColor?: ColorItem | string | null | Bind;
 
-/** Property Item of Type TableSection */
-item?: any;
+/** Property CurrentPage of Type Page */
+public currentPage?: any;
 
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
+/** Property ItemsSource of Type IEnumerable */
+public itemsSource?: any;
 
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
+/** Property ItemTemplate of Type DataTemplate */
+public itemTemplate?: any;
+
+/** Property SelectedItem of Type Object */
+public selectedItem?: any;
+
+/** Property SelectedTabColor of Type Color */
+public selectedTabColor?: ColorItem | string | null | Bind;
+
+/** Property UnselectedTabColor of Type Color */
+public unselectedTabColor?: ColorItem | string | null | Bind;
 }
 
-export interface ITableRootConstructor {
-    (a?: Partial<ITableRoot>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TableRoot")
+class TableRoot extends RootObject {
     
     
 /** Property TableRoot.Item of Type Xamarin.Forms.Cell */
-item?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TableRoot */
-const TableRoot: ITableRootConstructor = XNode.prepare<ITableRoot>("Xamarin.Forms.TableRoot;Xamarin.Forms.Core", false, false);
-
-
-TableRoot.item = XNode.prepare("Xamarin.Forms.TableRoot:Item;Xamarin.Forms.Core", true, false);
-
-
-export interface ITableSection {
+public static item = XNode.property()
     
     
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property Item of Type Cell */
-item?: any;
-
-/** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
+/** Property Item of Type TableSection */
+public item?: any;
 }
 
-export interface ITableSectionConstructor {
-    (a?: Partial<ITableSection>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TableSection")
+class TableSection extends RootObject {
     
     
 /** Property TableSection.Item of Type Xamarin.Forms.Cell */
-item?: ( a: any, ... nodes: XNode[]) => XNode
+public static item = XNode.property()
+    
+    
+/** Property Item of Type Cell */
+public item?: any;
 }
 
-/** TableSection */
-const TableSection: ITableSectionConstructor = XNode.prepare<ITableSection>("Xamarin.Forms.TableSection;Xamarin.Forms.Core", false, false);
 
-
-TableSection.item = XNode.prepare("Xamarin.Forms.TableSection:Item;Xamarin.Forms.Core", true, false);
-
-
-export interface ITableSectionBase {
+@XFNS0("TableSectionBase")
+class TableSectionBase extends BindableObject {
     
     
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
+    
+    
 /** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
+public textColor?: ColorItem | string | null | Bind;
 
 /** Property Title of Type String */
-title?: string | null | Bind;
-    [key: string]: any;
+public title?: string | null | Bind;
 }
 
-export interface ITableSectionBaseConstructor {
-    (a?: Partial<ITableSectionBase>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TableView")
+class TableView extends View {
     
     
-}
-
-/** TableSectionBase */
-const TableSectionBase: ITableSectionBaseConstructor = XNode.prepare<ITableSectionBase>("Xamarin.Forms.TableSectionBase;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface ITableView {
+/** Property TableView.Root of Type Xamarin.Forms.TableSection */
+public static root = XNode.property()
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
 /** Property HasUnevenRows of Type Boolean */
-hasUnevenRows?: boolean | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
+public hasUnevenRows?: boolean | Bind;
 
 /** Property Intent of Type TableIntent */
-intent?: "Menu" | "Settings" | "Form" | "Data" | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
+public intent?: "Menu" | "Settings" | "Form" | "Data" | Bind;
 
 /** Property Model of Type TableModel */
-model?: any;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
+public model?: any;
 
 /** Property Root of Type TableRoot */
-root?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
+public root?: any;
 
 /** Property RowHeight of Type Int32 */
-rowHeight?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public rowHeight?: number | Bind;
 }
 
-export interface ITableViewConstructor {
-    (a?: Partial<ITableView>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TapGestureRecognizer")
+class TapGestureRecognizer extends GestureRecognizer {
     
     
-/** Property TableView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.Root of Type Xamarin.Forms.TableSection */
-root?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TableView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TableView */
-const TableView: ITableViewConstructor = XNode.prepare<ITableView>("Xamarin.Forms.TableView;Xamarin.Forms.Core", false, false);
-
-
-TableView.behaviors = XNode.prepare("Xamarin.Forms.TableView:Behaviors;Xamarin.Forms.Core", true, false);
-
-TableView.effects = XNode.prepare("Xamarin.Forms.TableView:Effects;Xamarin.Forms.Core", true, false);
-
-TableView.gestureRecognizers = XNode.prepare("Xamarin.Forms.TableView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-TableView.menu = XNode.prepare("Xamarin.Forms.TableView:Menu;Xamarin.Forms.Core", true, false);
-
-TableView.resources = XNode.prepare("Xamarin.Forms.TableView:Resources;Xamarin.Forms.Core", true, false);
-
-TableView.root = XNode.prepare("Xamarin.Forms.TableView:Root;Xamarin.Forms.Core", true, false);
-
-TableView.styleClass = XNode.prepare("Xamarin.Forms.TableView:StyleClass;Xamarin.Forms.Core", true, false);
-
-TableView.triggers = XNode.prepare("Xamarin.Forms.TableView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ITapGestureRecognizer {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
 /** Property Command of Type ICommand */
-command?: any;
+public command?: any;
 
 /** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
+public commandParameter?: any;
 
 /** Property NumberOfTapsRequired of Type Int32 */
-numberOfTapsRequired?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+public numberOfTapsRequired?: number | Bind;
 
 /** Property TappedCallback of Type Action`2 */
-tappedCallback?: any;
+public tappedCallback?: any;
 
 /** Property TappedCallbackParameter of Type Object */
-tappedCallbackParameter?: any;
-    [key: string]: any;
+public tappedCallbackParameter?: any;
 }
 
-export interface ITapGestureRecognizerConstructor {
-    (a?: Partial<ITapGestureRecognizer>, ... nodes: XNode[]): XNode;
+
+@XFNS0("TimePicker")
+class TimePicker extends View {
     
     
-/** Property TapGestureRecognizer.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TapGestureRecognizer.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TapGestureRecognizer */
-const TapGestureRecognizer: ITapGestureRecognizerConstructor = XNode.prepare<ITapGestureRecognizer>("Xamarin.Forms.TapGestureRecognizer;Xamarin.Forms.Core", false, false);
-
-
-TapGestureRecognizer.effects = XNode.prepare("Xamarin.Forms.TapGestureRecognizer:Effects;Xamarin.Forms.Core", true, false);
-
-TapGestureRecognizer.menu = XNode.prepare("Xamarin.Forms.TapGestureRecognizer:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface ITemplatedPage {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BackgroundImage of Type String */
-backgroundImage?: string | null | Bind;
-
-/** Property BackgroundImageSource of Type ImageSource */
-backgroundImageSource?: /*ImageSource*/ any;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ContainerArea of Type Rectangle */
-containerArea?: "Zero" | Bind;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IgnoresContainerArea of Type Boolean */
-ignoresContainerArea?: boolean | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property Title of Type String */
-title?: string | null | Bind;
-
-/** Property ToolbarItems of Type IList`1 */
-toolbarItems?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ITemplatedPageConstructor {
-    (a?: Partial<ITemplatedPage>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property TemplatedPage.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-backgroundImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-toolbarItems?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedPage.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TemplatedPage */
-const TemplatedPage: ITemplatedPageConstructor = XNode.prepare<ITemplatedPage>("Xamarin.Forms.TemplatedPage;Xamarin.Forms.Core", false, false);
-
-
-TemplatedPage.backgroundImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:BackgroundImageSource;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.behaviors = XNode.prepare("Xamarin.Forms.TemplatedPage:Behaviors;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.controlTemplate = XNode.prepare("Xamarin.Forms.TemplatedPage:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-TemplatedPage.effects = XNode.prepare("Xamarin.Forms.TemplatedPage:Effects;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.iconImageSource = XNode.prepare("Xamarin.Forms.TemplatedPage:IconImageSource;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.menu = XNode.prepare("Xamarin.Forms.TemplatedPage:Menu;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.resources = XNode.prepare("Xamarin.Forms.TemplatedPage:Resources;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.styleClass = XNode.prepare("Xamarin.Forms.TemplatedPage:StyleClass;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.toolbarItems = XNode.prepare("Xamarin.Forms.TemplatedPage:ToolbarItems;Xamarin.Forms.Core", true, false);
-
-TemplatedPage.triggers = XNode.prepare("Xamarin.Forms.TemplatedPage:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ITemplatedView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property ControlTemplate of Type ControlTemplate */
-controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface ITemplatedViewConstructor {
-    (a?: Partial<ITemplatedView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property TemplatedView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-controlTemplate?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TemplatedView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TemplatedView */
-const TemplatedView: ITemplatedViewConstructor = XNode.prepare<ITemplatedView>("Xamarin.Forms.TemplatedView;Xamarin.Forms.Core", false, false);
-
-
-TemplatedView.behaviors = XNode.prepare("Xamarin.Forms.TemplatedView:Behaviors;Xamarin.Forms.Core", true, false);
-
-TemplatedView.controlTemplate = XNode.prepare("Xamarin.Forms.TemplatedView:ControlTemplate;Xamarin.Forms.Core", true, true);
-
-TemplatedView.effects = XNode.prepare("Xamarin.Forms.TemplatedView:Effects;Xamarin.Forms.Core", true, false);
-
-TemplatedView.gestureRecognizers = XNode.prepare("Xamarin.Forms.TemplatedView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-TemplatedView.menu = XNode.prepare("Xamarin.Forms.TemplatedView:Menu;Xamarin.Forms.Core", true, false);
-
-TemplatedView.resources = XNode.prepare("Xamarin.Forms.TemplatedView:Resources;Xamarin.Forms.Core", true, false);
-
-TemplatedView.styleClass = XNode.prepare("Xamarin.Forms.TemplatedView:StyleClass;Xamarin.Forms.Core", true, false);
-
-TemplatedView.triggers = XNode.prepare("Xamarin.Forms.TemplatedView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface ITimePicker {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
 /** Property CharacterSpacing of Type Double */
-characterSpacing?: number | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
+public characterSpacing?: number | Bind;
 
 /** Property FontAttributes of Type FontAttributes */
-fontAttributes?: "None" | "Bold" | "Italic" | Bind;
+public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
 
 /** Property FontFamily of Type String */
-fontFamily?: string | null | Bind;
+public fontFamily?: string | null | Bind;
 
 /** Property FontSize of Type Double */
-fontSize?: number | Bind;
+public fontSize?: number | Bind;
 
 /** Property Format of Type String */
-format?: string | null | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
+public format?: string | null | Bind;
 
 /** Property TextColor of Type Color */
-textColor?: ColorItem | string | null | Bind;
+public textColor?: ColorItem | string | null | Bind;
 
 /** Property Time of Type TimeSpan */
-time?: any;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public time?: any;
 }
 
-export interface ITimePickerConstructor {
-    (a?: Partial<ITimePicker>, ... nodes: XNode[]): XNode;
+
+@XFNS0("ToolbarItem")
+class ToolbarItem extends MenuItem {
     
     
-/** Property TimePicker.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TimePicker.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TimePicker.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TimePicker.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TimePicker.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TimePicker.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property TimePicker.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** TimePicker */
-const TimePicker: ITimePickerConstructor = XNode.prepare<ITimePicker>("Xamarin.Forms.TimePicker;Xamarin.Forms.Core", false, false);
-
-
-TimePicker.behaviors = XNode.prepare("Xamarin.Forms.TimePicker:Behaviors;Xamarin.Forms.Core", true, false);
-
-TimePicker.effects = XNode.prepare("Xamarin.Forms.TimePicker:Effects;Xamarin.Forms.Core", true, false);
-
-TimePicker.gestureRecognizers = XNode.prepare("Xamarin.Forms.TimePicker:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-TimePicker.menu = XNode.prepare("Xamarin.Forms.TimePicker:Menu;Xamarin.Forms.Core", true, false);
-
-TimePicker.resources = XNode.prepare("Xamarin.Forms.TimePicker:Resources;Xamarin.Forms.Core", true, false);
-
-TimePicker.styleClass = XNode.prepare("Xamarin.Forms.TimePicker:StyleClass;Xamarin.Forms.Core", true, false);
-
-TimePicker.triggers = XNode.prepare("Xamarin.Forms.TimePicker:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IToolbarItem {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Command of Type ICommand */
-command?: any;
-
-/** Property CommandParameter of Type Object */
-commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Icon of Type FileImageSource */
-icon?: /*FileImageSource*/ any;
-
-/** Property IconImageSource of Type ImageSource */
-iconImageSource?: /*ImageSource*/ any;
-
-/** Property IsDestructive of Type Boolean */
-isDestructive?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
 /** Property Name of Type String */
-name?: string | null | Bind;
+public name?: string | null | Bind;
 
 /** Property Order of Type ToolbarItemOrder */
-order?: "Default" | "Primary" | "Secondary" | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
+public order?: "Default" | "Primary" | "Secondary" | Bind;
 
 /** Property Priority of Type Int32 */
-priority?: number | Bind;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property Text of Type String */
-text?: string | null | Bind;
-    [key: string]: any;
+public priority?: number | Bind;
 }
 
-export interface IToolbarItemConstructor {
-    (a?: Partial<IToolbarItem>, ... nodes: XNode[]): XNode;
+
+@XFNS0("UriImageSource")
+class UriImageSource extends ImageSource {
     
     
-/** Property ToolbarItem.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ToolbarItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-iconImageSource?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property ToolbarItem.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** ToolbarItem */
-const ToolbarItem: IToolbarItemConstructor = XNode.prepare<IToolbarItem>("Xamarin.Forms.ToolbarItem;Xamarin.Forms.Core", false, false);
-
-
-ToolbarItem.effects = XNode.prepare("Xamarin.Forms.ToolbarItem:Effects;Xamarin.Forms.Core", true, false);
-
-ToolbarItem.iconImageSource = XNode.prepare("Xamarin.Forms.ToolbarItem:IconImageSource;Xamarin.Forms.Core", true, false);
-
-ToolbarItem.menu = XNode.prepare("Xamarin.Forms.ToolbarItem:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IUriImageSource {
     
     
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
 /** Property CacheValidity of Type TimeSpan */
-cacheValidity?: any;
+public cacheValidity?: any;
 
 /** Property CachingEnabled of Type Boolean */
-cachingEnabled?: boolean | Bind;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
+public cachingEnabled?: boolean | Bind;
 
 /** Property Uri of Type Uri */
-uri?: any;
-    [key: string]: any;
+public uri?: any;
 }
 
-export interface IUriImageSourceConstructor {
-    (a?: Partial<IUriImageSource>, ... nodes: XNode[]): XNode;
+
+@XFNS0("UrlWebViewSource")
+class UrlWebViewSource extends WebViewSource {
     
     
-/** Property UriImageSource.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property UriImageSource.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** UriImageSource */
-const UriImageSource: IUriImageSourceConstructor = XNode.prepare<IUriImageSource>("Xamarin.Forms.UriImageSource;Xamarin.Forms.Core", false, false);
-
-
-UriImageSource.effects = XNode.prepare("Xamarin.Forms.UriImageSource:Effects;Xamarin.Forms.Core", true, false);
-
-UriImageSource.menu = XNode.prepare("Xamarin.Forms.UriImageSource:Menu;Xamarin.Forms.Core", true, false);
-
-
-export interface IUrlWebViewSource {
     
     
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
 /** Property Url of Type String */
-url?: string | null | Bind;
-    [key: string]: any;
+public url?: string | null | Bind;
 }
 
-export interface IUrlWebViewSourceConstructor {
-    (a?: Partial<IUrlWebViewSource>, ... nodes: XNode[]): XNode;
+
+@XFNS0("WebView")
+class WebView extends View {
     
     
-}
-
-/** UrlWebViewSource */
-const UrlWebViewSource: IUrlWebViewSourceConstructor = XNode.prepare<IUrlWebViewSource>("Xamarin.Forms.UrlWebViewSource;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IView {
     
     
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IViewConstructor {
-    (a?: Partial<IView>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property View.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property View.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property View.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property View.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property View.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property View.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property View.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** View */
-const View: IViewConstructor = XNode.prepare<IView>("Xamarin.Forms.View;Xamarin.Forms.Core", false, false);
-
-
-View.behaviors = XNode.prepare("Xamarin.Forms.View:Behaviors;Xamarin.Forms.Core", true, false);
-
-View.effects = XNode.prepare("Xamarin.Forms.View:Effects;Xamarin.Forms.Core", true, false);
-
-View.gestureRecognizers = XNode.prepare("Xamarin.Forms.View:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-View.menu = XNode.prepare("Xamarin.Forms.View:Menu;Xamarin.Forms.Core", true, false);
-
-View.resources = XNode.prepare("Xamarin.Forms.View:Resources;Xamarin.Forms.Core", true, false);
-
-View.styleClass = XNode.prepare("Xamarin.Forms.View:StyleClass;Xamarin.Forms.Core", true, false);
-
-View.triggers = XNode.prepare("Xamarin.Forms.View:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IVisualElement {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Bounds of Type Rectangle */
-bounds?: "Zero" | Bind;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property Height of Type Double */
-height?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property Width of Type Double */
-width?: number | Bind;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-
-/** Property X of Type Double */
-x?: number | Bind;
-
-/** Property Y of Type Double */
-y?: number | Bind;
-    [key: string]: any;
-}
-
-export interface IVisualElementConstructor {
-    (a?: Partial<IVisualElement>, ... nodes: XNode[]): XNode;
-    
-    
-/** Property VisualElement.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property VisualElement.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property VisualElement.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property VisualElement.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property VisualElement.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property VisualElement.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** VisualElement */
-const VisualElement: IVisualElementConstructor = XNode.prepare<IVisualElement>("Xamarin.Forms.VisualElement;Xamarin.Forms.Core", false, false);
-
-
-VisualElement.behaviors = XNode.prepare("Xamarin.Forms.VisualElement:Behaviors;Xamarin.Forms.Core", true, false);
-
-VisualElement.effects = XNode.prepare("Xamarin.Forms.VisualElement:Effects;Xamarin.Forms.Core", true, false);
-
-VisualElement.menu = XNode.prepare("Xamarin.Forms.VisualElement:Menu;Xamarin.Forms.Core", true, false);
-
-VisualElement.resources = XNode.prepare("Xamarin.Forms.VisualElement:Resources;Xamarin.Forms.Core", true, false);
-
-VisualElement.styleClass = XNode.prepare("Xamarin.Forms.VisualElement:StyleClass;Xamarin.Forms.Core", true, false);
-
-VisualElement.triggers = XNode.prepare("Xamarin.Forms.VisualElement:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IWebView {
-    
-    
-/** Property AnchorX of Type Double */
-anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-automationId?: string | null | Bind;
-
-/** Property BackgroundColor of Type Color */
-backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property class of Type IList`1 */
-class?: any;
-
-/** Property ClassId of Type String */
-classId?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-navigation?: any;
-
-/** Property Opacity of Type Double */
-opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-parent?: any;
-
-/** Property Platform of Type IPlatform */
-platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-resources?: any;
-
-/** Property Rotation of Type Double */
-rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-scaleY?: number | Bind;
-
 /** Property Source of Type WebViewSource */
-source?: any;
-
-/** Property Style of Type Style */
-style?: any;
-
-/** Property StyleClass of Type IList`1 */
-styleClass?: any;
-
-/** Property StyleId of Type String */
-styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-widthRequest?: number | Bind;
-    [key: string]: any;
+public source?: any;
 }
 
-export interface IWebViewConstructor {
-    (a?: Partial<IWebView>, ... nodes: XNode[]): XNode;
+
+@XFNS1("StyleSheet")
+class StyleSheet extends RootObject {
     
     
-/** Property WebView.Behaviors of Type Xamarin.Forms.Behavior */
-behaviors?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property WebView.Effects of Type Xamarin.Forms.Effect */
-effects?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property WebView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-gestureRecognizers?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property WebView.Menu of Type Xamarin.Forms.Menu */
-menu?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property WebView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-resources?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property WebView.StyleClass of Type System.String */
-styleClass?: ( a: any, ... nodes: XNode[]) => XNode;
-
-/** Property WebView.Triggers of Type Xamarin.Forms.TriggerBase */
-triggers?: ( a: any, ... nodes: XNode[]) => XNode
-}
-
-/** WebView */
-const WebView: IWebViewConstructor = XNode.prepare<IWebView>("Xamarin.Forms.WebView;Xamarin.Forms.Core", false, false);
-
-
-WebView.behaviors = XNode.prepare("Xamarin.Forms.WebView:Behaviors;Xamarin.Forms.Core", true, false);
-
-WebView.effects = XNode.prepare("Xamarin.Forms.WebView:Effects;Xamarin.Forms.Core", true, false);
-
-WebView.gestureRecognizers = XNode.prepare("Xamarin.Forms.WebView:GestureRecognizers;Xamarin.Forms.Core", true, false);
-
-WebView.menu = XNode.prepare("Xamarin.Forms.WebView:Menu;Xamarin.Forms.Core", true, false);
-
-WebView.resources = XNode.prepare("Xamarin.Forms.WebView:Resources;Xamarin.Forms.Core", true, false);
-
-WebView.styleClass = XNode.prepare("Xamarin.Forms.WebView:StyleClass;Xamarin.Forms.Core", true, false);
-
-WebView.triggers = XNode.prepare("Xamarin.Forms.WebView:Triggers;Xamarin.Forms.Core", true, false);
-
-
-export interface IWebViewSource {
-    
-    
-/** Property BindingContext of Type Object */
-bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-dispatcher?: any;
-    [key: string]: any;
-}
-
-export interface IWebViewSourceConstructor {
-    (a?: Partial<IWebViewSource>, ... nodes: XNode[]): XNode;
     
     
 }
-
-/** WebViewSource */
-const WebViewSource: IWebViewSourceConstructor = XNode.prepare<IWebViewSource>("Xamarin.Forms.WebViewSource;Xamarin.Forms.Core", false, false);
-
-
-
-
-export interface IStyleSheet {
-    
-    
-    [key: string]: any;
-}
-
-export interface IStyleSheetConstructor {
-    (a?: Partial<IStyleSheet>, ... nodes: XNode[]): XNode;
-    
-    
-}
-
-/** StyleSheet */
-const StyleSheet: IStyleSheetConstructor = XNode.prepare<IStyleSheet>("Xamarin.Forms.StyleSheets.StyleSheet;Xamarin.Forms.Core", false, false);
-
-
 const XF = { AbsoluteLayout,
+	BindableObject,
+	Element,
+	NavigableElement,
+	VisualElement,
+	View,
 	ActivityIndicator,
 	Application,
 	AppLinkEntry,
 	BaseMenuItem,
 	BindableLayout,
-	BindableObject,
 	BoxView,
 	Button,
 	CarouselPage,
 	Cell,
 	EntryCell,
+	TextCell,
 	ImageCell,
 	SwitchCell,
-	TextCell,
 	ViewCell,
 	CheckBox,
+	GestureRecognizer,
 	ClickGestureRecognizer,
 	ColumnDefinition,
+	Page,
+	TemplatedPage,
 	ContentPage,
+	Layout,
 	ContentPresenter,
+	TemplatedView,
 	ContentView,
 	ControlTemplate,
 	DataTemplate,
 	DataTemplateSelector,
 	DatePicker,
+	InputView,
 	Editor,
-	Element,
 	Entry,
+	ImageSource,
 	FileImageSource,
 	FlexLayout,
 	FontImageSource,
 	FormattedString,
 	Frame,
 	GestureElement,
-	GestureRecognizer,
 	Grid,
+	WebViewSource,
 	HtmlWebViewSource,
 	Image,
 	ImageButton,
-	ImageSource,
 	IndicatorView,
-	InputView,
 	Behavior,
+	TriggerBase,
 	DataTrigger,
 	EventTrigger,
 	MultiTrigger,
 	Trigger,
-	TriggerBase,
-	CarouselView,
-	CollectionView,
-	GridItemsLayout,
-	GroupableItemsView,
-	ItemsLayout,
 	ItemsView,
-	LinearItemsLayout,
-	SelectableItemsView,
+	CarouselView,
 	StructuredItemsView,
+	SelectableItemsView,
+	GroupableItemsView,
+	CollectionView,
+	ItemsLayout,
+	GridItemsLayout,
+	LinearItemsLayout,
 	Label,
-	Layout,
 	ListView,
 	MasterDetailPage,
 	Menu,
 	MenuItem,
 	NavigationPage,
 	OpenGLView,
-	Page,
 	PanGestureRecognizer,
 	Picker,
 	PinchGestureRecognizer,
@@ -15525,16 +2972,15 @@ const XF = { AbsoluteLayout,
 	SearchBar,
 	BackButtonBehavior,
 	BaseShellItem,
-	NavigableElement,
 	SearchHandler,
 	Shell,
 	ShellContent,
 	ShellGroupItem,
+	ShellItem,
 	FlyoutItem,
 	TabBar,
-	ShellItem,
-	Tab,
 	ShellSection,
+	Tab,
 	Slider,
 	Span,
 	StackLayout,
@@ -15552,16 +2998,11 @@ const XF = { AbsoluteLayout,
 	TableSectionBase,
 	TableView,
 	TapGestureRecognizer,
-	TemplatedPage,
-	TemplatedView,
 	TimePicker,
 	ToolbarItem,
 	UriImageSource,
 	UrlWebViewSource,
-	View,
-	VisualElement,
 	WebView,
-	WebViewSource,
 	StyleSheet
 };
 export default XF;
