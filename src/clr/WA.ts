@@ -14,9 +14,8 @@ class AtomView extends RootObject {
 @NSAtoms("AtomToolbarItem")
 class AtomToolbarItem extends XF.ToolbarItem {
 
-    public static iconImageSource = XNode.attached();
+    public isVisible: boolean;
 
-    public iconImageSource: string;
 }
 
 @NSAtoms("GroupBy")
