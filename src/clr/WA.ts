@@ -34,7 +34,7 @@ class AtomRepeater extends XF.ListView {
 @NSAtoms("AtomForm")
 class AtomForm extends RootObject {
 
-    public static fieldStyle = XNode.attached();
+    public static fieldStyle = XNode.template();
 
     submitCommand: any;
     fieldStyle: any;
