@@ -24,6 +24,7 @@ export default class ComboBoxTest extends AtomXFContentPage {
         this.render(<XF.ContentPage>
             <XF.StackLayout>
                 <AtomXFComboBox
+                    showSearch={true}
                     items={this.movies}
                     value={Bind.twoWays(() => this.selectedMovie)}
                     />

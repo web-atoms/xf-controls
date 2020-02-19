@@ -66,6 +66,9 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.selectionViewTemplate = null;
 
         const vf = (item) => {
+            if (item === undefined || item === null) {
+                return;
+            }
             const vp = this.valuePath;
             if (typeof vp === "function") {
                 return vp(item);
@@ -209,7 +212,7 @@ class SearchPopupPage extends AtomXFPopupPage {
                     <WA.AtomView
                         { ... XF.Grid.row(1) }
                         { ... XF.Grid.columnSpan(2) }
-                        emptyDataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
+                        emptyDataTemplate={Bind.oneTime(() => this.viewModel.comboBox.selectionViewTemplate)}/>
                     </XF.Grid>
             </XF.Grid>
         </PopupPage>);

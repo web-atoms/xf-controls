@@ -9,6 +9,9 @@ const NSAtoms = XNode.namespace("WebAtoms.Controls", "WebAtoms.XF");
 class AtomView extends RootObject {
     public static dataTemplate = XNode.template();
     public static emptyDataTemplate = XNode.template();
+
+    public dataTemplate: any;
+    public emptyDataTemplate: any;
 }
 
 @NSAtoms("AtomToolbarItem")
