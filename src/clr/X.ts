@@ -31,7 +31,7 @@ const X = {
         converter?: any,
         converterParameter?: any}) => {
             return new Bind((n, bx, c, e) => {
-                (AtomBridge.instance as any).setBinding(e, bx.name, b);
+                (AtomBridge.instance as any).setBinding(e, n, b);
             }, null);
         },
     TemplateBinding: (path: string) => X.Binding({path, source: RelativeSource.TemplatedParent})
