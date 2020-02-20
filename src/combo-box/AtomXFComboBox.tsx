@@ -67,7 +67,7 @@ export default class AtomXFComboBox extends AtomXFControl {
 
         const vf = (item) => {
             if (item === undefined || item === null) {
-                return;
+                return null;
             }
             const vp = this.valuePath;
             if (typeof vp === "function") {
@@ -78,11 +78,15 @@ export default class AtomXFComboBox extends AtomXFControl {
 
         this.registerDisposable(new PropertyBinding(
             this,
-            null,
+            this.element,
             "value",
             [["this", "selectedItem"]],
             true, {
-                fromSource: (v) => this.value = vf(this.selectedItem),
+                fromSource: (v) => {
+                    if (v !== undefined && v !== null) {
+                        this.value = vf(this.selectedItem);
+                    }
+                },
                 fromTarget: (v) => this.selectedItem = this.items.find((x) => vf(x) === this.value)
             }, this));
     }

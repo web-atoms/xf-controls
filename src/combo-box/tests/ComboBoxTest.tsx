@@ -6,27 +6,28 @@ import XF from "../../clr/XF";
 import AtomXFContentPage from "../../pages/AtomXFContentPage";
 import AtomXFComboBox from "../AtomXFComboBox";
 
+class VM extends AtomViewModel {
+    public genderList = [
+        { label: "Male", value: "male" },
+        { label: "Female", value: "female" }
+    ];
+
+    public gender = "female";
+}
+
 export default class ComboBoxTest extends AtomXFContentPage {
 
-    public movies;
-
-    public selectedMovie;
-
+    public viewModel: VM;
     public create() {
 
-        this.movies = [
-            { label: "Movie 1", value: 1 },
-            { label: "Movie 2", value: 2 }
-        ];
-
-        this.selectedMovie = this.movies[1].value;
+        this.viewModel = this.resolve(VM);
 
         this.render(<XF.ContentPage>
             <XF.StackLayout>
                 <AtomXFComboBox
                     showSearch={true}
-                    items={this.movies}
-                    value={Bind.twoWays(() => this.selectedMovie)}
+                    items={Bind.oneWay(() => this.viewModel.genderList)}
+                    value={Bind.twoWays(() => this.viewModel.gender)}
                     />
             </XF.StackLayout>
         </XF.ContentPage>);
