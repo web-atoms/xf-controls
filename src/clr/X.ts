@@ -18,20 +18,23 @@ RelativeSource.self = { mode: "Self" };
 RelativeSource.TemplatedParent = { mode: "TemplatedParent" };
 
 const X = {
-    Name: (n: string) => ({ "WebAtoms.AtomX:Name": n }),
+    Name: (n: string) => ({ "WebAtoms.AtomX:Name": new Bind((nx, bx, e, s) => {
+        ((AtomBridge.instance) as any).setName(e, n);
+    }, null) }),
     Arguments: ( args?: any, ... nodes: XNode[]) => new XNode("WebAtoms.AtomX:Arguments", {}, nodes),
     Type: (n: string) => ({ type: n }),
     Resource: (n: string) => ({ resource: n}),
     RelativeSource,
     Binding: (b: {
         path: string,
-        source: any,
-        converter: any,
-        converterParameter: any}) => {
+        source?: any,
+        converter?: any,
+        converterParameter?: any}) => {
             return new Bind((n, bx, e, s) => {
                 (AtomBridge.instance as any).setBinding(e, bx.name, b);
             }, null);
-        }
+        },
+    TemplateBinding: (path: string) => X.Binding({path, source: RelativeSource.TemplatedParent})
     // Key: (n: string) => ({ "WebAtoms.AtomX:Key": n }),
 };
 
