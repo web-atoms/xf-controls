@@ -1,5 +1,6 @@
-import XNode from "@web-atoms/core/dist/core/XNode";
+import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import Bind from "@web-atoms/core/dist/core/Bind";
+import XNode from "@web-atoms/core/dist/core/XNode";
 
 function RelativeSource(
     mode: "FindAncestor" | "FindAncestorBindingContext",
@@ -27,7 +28,9 @@ const X = {
         source: any,
         converter: any,
         converterParameter: any}) => {
-            return Bind.oneTime((c, e) => null);
+            return new Bind((n, bx, e, s) => {
+                (AtomBridge.instance as any).setBinding(e, bx.name, b);
+            }, null);
         }
     // Key: (n: string) => ({ "WebAtoms.AtomX:Key": n }),
 };
