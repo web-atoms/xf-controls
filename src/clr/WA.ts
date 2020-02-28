@@ -1,12 +1,11 @@
 //tslint:disable
 import XNode, { RootObject } from "@web-atoms/core/dist/core/XNode";
 import XF from "./XF";
-import Bind from "@web-atoms/core/dist/core/Bind";
 
 const NSAtoms = XNode.namespace("WebAtoms.Controls", "WebAtoms.XF");
 
 @NSAtoms("AtomView")
-class AtomView extends RootObject {
+class AtomView extends XF.View {
     public static dataTemplate = XNode.template();
     public static emptyDataTemplate = XNode.template();
 
@@ -32,7 +31,7 @@ class AtomRepeater extends XF.ListView {
 }
 
 @NSAtoms("AtomForm")
-class AtomForm extends RootObject {
+class AtomForm extends XF.View {
 
     public static fieldStyle = XNode.template();
 
@@ -42,7 +41,7 @@ class AtomForm extends RootObject {
 
 
 @NSAtoms("AtomField")
-class AtomField extends RootObject {
+class AtomField extends XF.View {
 
     public label?: string;
     public isRequired?: boolean;

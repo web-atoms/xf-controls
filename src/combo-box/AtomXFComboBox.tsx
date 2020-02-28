@@ -6,7 +6,7 @@ import { IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { PopupPage } from "../clr/RgPluginsPopup";
+import RgPluginsPopup from "../clr/RgPluginsPopup";
 import WA from "../clr/WA";
 import XF from "../clr/XF";
 import AtomXFLink from "../link/AtomXFLink";
@@ -180,7 +180,7 @@ class SearchPopupPage extends AtomXFPopupPage {
         this.viewModel = this.resolve(SearchPageViewModel);
 
         this.render(
-            <PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
+            <RgPluginsPopup.PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
                 <XF.Grid>
                     <XF.Grid.rowDefinitions>
                         <XF.RowDefinition height={20} />
@@ -219,6 +219,6 @@ class SearchPopupPage extends AtomXFPopupPage {
                         emptyDataTemplate={Bind.oneTime(() => this.viewModel.comboBox.selectionViewTemplate)}/>
                     </XF.Grid>
             </XF.Grid>
-        </PopupPage>);
+        </RgPluginsPopup.PopupPage>);
     }
 }

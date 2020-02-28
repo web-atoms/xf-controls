@@ -1,7 +1,7 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { PopupPage } from "../clr/RgPluginsPopup";
+import RgPluginsPopup from "../clr/RgPluginsPopup";
 // tslint:disable-next-line: max-line-length
 import XF from "../clr/XF";
 import SearchPageViewModel from "./SearchPageViewModel";
@@ -14,7 +14,7 @@ export default class SearchPage extends AtomXFControl {
 
 		this.viewModel = this.resolve(SearchPageViewModel);
 
-		this.render(<PopupPage>
+		this.render(<RgPluginsPopup.PopupPage>
 			<XF.Grid
 				margin="10"
 				backgroundColor="White">
@@ -36,7 +36,7 @@ export default class SearchPage extends AtomXFControl {
 					itemsSource={Bind.oneTime(() => this.viewModel.comboBox.items)}
 					itemTemplate={Bind.oneTime(() => this.viewModel.comboBox.itemTemplate)}/>
 			</XF.Grid>
-		</PopupPage>);
+		</RgPluginsPopup.PopupPage>);
 	}
 
 }
