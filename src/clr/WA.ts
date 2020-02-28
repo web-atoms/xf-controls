@@ -31,7 +31,7 @@ class AtomRepeater extends XF.ListView {
 }
 
 @NSAtoms("AtomForm")
-class AtomForm extends XF.View {
+class AtomForm extends XF.ContentView {
 
     public static fieldStyle = XNode.template();
 
@@ -41,7 +41,7 @@ class AtomForm extends XF.View {
 
 
 @NSAtoms("AtomField")
-class AtomField extends XF.View {
+class AtomField extends XF.ContentView {
 
     public label?: string;
     public isRequired?: boolean;
