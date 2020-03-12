@@ -24,6 +24,7 @@ export default class SelectionList extends AtomContentView {
                     />
                 <XF.CollectionView
                     { ... XF.Grid.row(1) }
+                    itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
                     itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
                     selectionMode="Single"
                     selectedItem={Bind.twoWays(() => this.viewModel.selectedItem)}
@@ -33,8 +34,7 @@ export default class SelectionList extends AtomContentView {
                         setTimeout(() => {
                             this.viewModel.close(this.viewModel.selectedItem);
                         }, 250);
-                    })}
-                    itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
+                    })}>
                 </XF.CollectionView>
             </XF.Grid>
         </XF.ContentPage>);

@@ -149,6 +149,8 @@ export default class AtomXFComboBox extends AtomXFControl {
             "ref:selectedItem": this.selectedItem,
             "ref:comboBox": this
         });
+        // tslint:disable-next-line: no-console
+        console.log(this.items);
         this.selectedItem = r;
     }
 
