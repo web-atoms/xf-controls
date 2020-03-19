@@ -4,6 +4,7 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import AtomContentView from "../AtomContentView";
 import XF from "../clr/XF";
 import SearchPageViewModel from "./SearchPageViewModel";
+import WA from "../clr/WA";
 
 export default class SelectionList extends AtomContentView {
 
@@ -24,18 +25,36 @@ export default class SelectionList extends AtomContentView {
                     />
                 <XF.CollectionView
                     { ... XF.Grid.row(1) }
+                    itemSizingStrategy="MeasureAllItems"
                     itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
                     itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
                     selectionMode="Single"
                     selectedItem={Bind.twoWays(() => this.viewModel.selectedItem)}
                     eventSelectionChanged={Bind.event(() => {
-                        // tslint:disable-next-line: no-console
-                        console.log(`Selection event`);
                         setTimeout(() => {
                             this.viewModel.close(this.viewModel.selectedItem);
                         }, 250);
                     })}>
+                    {/* <XF.CollectionView.itemTemplate>
+                        <XF.Label
+                            text={Bind.oneTime((x) => x.data.label)}
+                            />
+                    </XF.CollectionView.itemTemplate> */}
                 </XF.CollectionView>
+                {/* <XF.ListView
+                    { ... XF.Grid.row(1) }
+                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
+                    >
+                    <XF.ListView.itemTemplate>
+                        <XF.DataTemplate>
+                            <XF.ViewCell>
+                                <WA.AtomView
+                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
+                                    />
+                            </XF.ViewCell>
+                        </XF.DataTemplate>
+                    </XF.ListView.itemTemplate>
+                </XF.ListView> */}
             </XF.Grid>
         </XF.ContentPage>);
     }
