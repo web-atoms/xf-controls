@@ -259,6 +259,31 @@ public isRunning?: boolean | Bind;
 }
 
 
+@XFNS0("StateTriggerBase")
+class StateTriggerBase extends BindableObject {
+    
+    
+    
+    
+/** Property IsActive of Type Boolean */
+public isActive?: boolean | Bind;
+}
+
+
+@XFNS0("AdaptiveTrigger")
+class AdaptiveTrigger extends StateTriggerBase {
+    
+    
+    
+    
+/** Property MinWindowHeight of Type Double */
+public minWindowHeight?: number | Bind;
+
+/** Property MinWindowWidth of Type Double */
+public minWindowWidth?: number | Bind;
+}
+
+
 @XFNS0("Application")
 class Application extends Element {
     
@@ -664,6 +689,20 @@ public width?: "Auto" | number | string | Bind;
 }
 
 
+@XFNS0("CompareStateTrigger")
+class CompareStateTrigger extends StateTriggerBase {
+    
+    
+    
+    
+/** Property Property of Type Object */
+public property?: any;
+
+/** Property Value of Type Object */
+public value?: any;
+}
+
+
 @XFNS0("TemplatedPage")
 class TemplatedPage extends Page {
     
@@ -796,6 +835,17 @@ public textColor?: ColorItem | string | null | Bind;
 }
 
 
+@XFNS0("DeviceStateTrigger")
+class DeviceStateTrigger extends StateTriggerBase {
+    
+    
+    
+    
+/** Property Device of Type String */
+public device?: string | null | Bind;
+}
+
+
 @XFNS0("InputView")
 class InputView extends View {
     
@@ -912,6 +962,26 @@ class ImageSource extends Element {
 
 @XFNS0("FileImageSource")
 class FileImageSource extends ImageSource {
+    
+    
+    
+    
+/** Property File of Type String */
+public file?: string | null | Bind;
+}
+
+
+@XFNS0("MediaSource")
+class MediaSource extends Element {
+    
+    
+    
+    
+}
+
+
+@XFNS0("FileMediaSource")
+class FileMediaSource extends MediaSource {
     
     
     
@@ -1163,10 +1233,7 @@ class IndicatorView extends TemplatedView {
 public static indicatorLayout = XNode.property();
 
 /** Property IndicatorView.IndicatorTemplate of Type Xamarin.Forms.DataTemplate */
-public static indicatorTemplate = XNode.template();
-
-/** Property IndicatorView.ItemsSourceBy of Type Xamarin.Forms.VisualElement */
-public static itemsSourceBy = XNode.property()
+public static indicatorTemplate = XNode.template()
     
     
 /** Property Count of Type Int32 */
@@ -1704,6 +1771,40 @@ public masterBounds?: "Zero" | Bind;
 }
 
 
+@XFNS0("MediaElement")
+class MediaElement extends View {
+    
+    
+/** Property MediaElement.Source of Type Xamarin.Forms.MediaSource */
+public static source = XNode.property()
+    
+    
+/** Property Aspect of Type Aspect */
+public aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
+
+/** Property AutoPlay of Type Boolean */
+public autoPlay?: boolean | Bind;
+
+/** Property IsLooping of Type Boolean */
+public isLooping?: boolean | Bind;
+
+/** Property KeepScreenOn of Type Boolean */
+public keepScreenOn?: boolean | Bind;
+
+/** Property Position of Type TimeSpan */
+public position?: any;
+
+/** Property ShowsPlaybackControls of Type Boolean */
+public showsPlaybackControls?: boolean | Bind;
+
+/** Property Source of Type MediaSource */
+public source?: /*MediaSource*/ any;
+
+/** Property Volume of Type Double */
+public volume?: number | Bind;
+}
+
+
 @XFNS0("Menu")
 class Menu extends BaseMenuItem {
     
@@ -1819,6 +1920,17 @@ public hasRenderLoop?: boolean | Bind;
 
 /** Property OnDisplay of Type Action`1 */
 public onDisplay?: any;
+}
+
+
+@XFNS0("OrientationStateTrigger")
+class OrientationStateTrigger extends StateTriggerBase {
+    
+    
+    
+    
+/** Property Orientation of Type DeviceOrientation */
+public orientation?: "Portrait" | "Landscape" | "PortraitUp" | "PortraitDown" | "LandscapeLeft" | "LandscapeRight" | "Other" | Bind;
 }
 
 
@@ -2212,6 +2324,10 @@ class Shell extends Page {
 public static backButtonBehavior = XNode.attached();
 
 
+/** Attached Property Shell.PresentationMode of Type BindableProperty*/
+public static presentationMode = XNode.attached();
+
+
 /** Attached Property Shell.FlyoutBehavior of Type BindableProperty*/
 public static flyoutBehavior = XNode.attached();
 
@@ -2527,6 +2643,17 @@ public spacing?: number | Bind;
 }
 
 
+@XFNS0("StateTrigger")
+class StateTrigger extends StateTriggerBase {
+    
+    
+    
+    
+/** Property IsActive of Type Boolean */
+public isActive?: boolean | Bind;
+}
+
+
 @XFNS0("Stepper")
 class Stepper extends View {
     
@@ -2541,6 +2668,9 @@ public maximum?: number | Bind;
 
 /** Property Minimum of Type Double */
 public minimum?: number | Bind;
+
+/** Property StepperPosition of Type Int32 */
+public stepperPosition?: number | Bind;
 
 /** Property Value of Type Double */
 public value?: number | Bind;
@@ -2859,6 +2989,17 @@ public uri?: any;
 }
 
 
+@XFNS0("UriMediaSource")
+class UriMediaSource extends MediaSource {
+    
+    
+    
+    
+/** Property Uri of Type Uri */
+public uri?: any;
+}
+
+
 @XFNS0("UrlWebViewSource")
 class UrlWebViewSource extends WebViewSource {
     
@@ -2896,6 +3037,8 @@ const XF = { BindableObject,
 	Layout,
 	AbsoluteLayout,
 	ActivityIndicator,
+	StateTriggerBase,
+	AdaptiveTrigger,
 	Application,
 	AppLinkEntry,
 	BaseMenuItem,
@@ -2914,6 +3057,7 @@ const XF = { BindableObject,
 	GestureRecognizer,
 	ClickGestureRecognizer,
 	ColumnDefinition,
+	CompareStateTrigger,
 	TemplatedPage,
 	ContentPage,
 	ContentPresenter,
@@ -2923,11 +3067,14 @@ const XF = { BindableObject,
 	DataTemplate,
 	DataTemplateSelector,
 	DatePicker,
+	DeviceStateTrigger,
 	InputView,
 	Editor,
 	Entry,
 	ImageSource,
 	FileImageSource,
+	MediaSource,
+	FileMediaSource,
 	FlexLayout,
 	FontImageSource,
 	FormattedString,
@@ -2957,10 +3104,12 @@ const XF = { BindableObject,
 	Label,
 	ListView,
 	MasterDetailPage,
+	MediaElement,
 	Menu,
 	MenuItem,
 	NavigationPage,
 	OpenGLView,
+	OrientationStateTrigger,
 	PanGestureRecognizer,
 	Picker,
 	PinchGestureRecognizer,
@@ -2984,6 +3133,7 @@ const XF = { BindableObject,
 	Slider,
 	Span,
 	StackLayout,
+	StateTrigger,
 	Stepper,
 	StreamImageSource,
 	SwipeGestureRecognizer,
@@ -3001,6 +3151,7 @@ const XF = { BindableObject,
 	TimePicker,
 	ToolbarItem,
 	UriImageSource,
+	UriMediaSource,
 	UrlWebViewSource,
 	WebView,
 	StyleSheet
