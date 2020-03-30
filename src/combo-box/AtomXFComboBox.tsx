@@ -47,6 +47,11 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public dropDownImage: any;
 
+    /**
+     * Event fired when selection is changed by the user
+     */
+    public eventSelectionChanged: any;
+
     constructor(a: any, e?: any) {
         super(a, e || AtomBridge.instance.create(XF.Grid));
     }
@@ -143,13 +148,19 @@ export default class AtomXFComboBox extends AtomXFControl {
     }
 
     protected async openPopup() {
-        const ns = this.resolve(NavigationService as any) as NavigationService;
-        const r = await ns.openPage(this.showAsPopup ? SearchPopupPage : SearchPage, {
-            "title": this.prompt,
-            "ref:selectedItem": this.selectedItem,
-            "ref:comboBox": this
-        });
-        this.selectedItem = r;
+        try {
+            const ns = this.resolve(NavigationService as any) as NavigationService;
+            const r = await ns.openPage(this.showAsPopup ? SearchPopupPage : SearchPage, {
+                "title": this.prompt,
+                "ref:selectedItem": this.selectedItem,
+                "ref:comboBox": this
+            });
+            this.selectedItem = r;
+            this.element.dispatchEvent(new CustomEvent("selectionChanged", { detail: r } ));
+        } catch (e) {
+            // tslint:disable-next-line: no-console
+            console.error(e);
+        }
     }
 
 }
