@@ -89,10 +89,17 @@ export default class AtomXFComboBox extends AtomXFControl {
             true, {
                 fromSource: (v) => {
                     if (v !== undefined && v !== null) {
-                        this.value = vf(this.selectedItem);
+                        const sv = vf(this.selectedItem);
+                        if (sv !== undefined) {
+                            this.value = sv;
+                        }
                     }
                 },
-                fromTarget: (v) => this.selectedItem = this.items.find((x) => vf(x) === this.value)
+                fromTarget: (v) => {
+                    if (v !== undefined) {
+                        this.selectedItem = this.items.find((x) => vf(x) === this.value);
+                    }
+                }
             }, this));
     }
 
