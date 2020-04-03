@@ -223,7 +223,7 @@ class SearchPopupPage extends AtomXFPopupPage {
                     <WA.AtomView
                         { ... XF.Grid.row(1) }
                         { ... XF.Grid.columnSpan(2) }
-                        emptyDataTemplate={Bind.oneTime(() => this.viewModel.comboBox.selectionViewTemplate)}/>
+                        emptyDataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
                     </XF.Grid>
             </XF.Grid>
         </RgPluginsPopup.PopupPage>);
