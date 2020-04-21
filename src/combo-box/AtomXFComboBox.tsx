@@ -43,6 +43,9 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public search: ItemSearchFunction;
 
+    /**
+     * Warning, this will be removed in future, do not use this
+     */
     public itemPadding: number;
 
     public items: any[];
