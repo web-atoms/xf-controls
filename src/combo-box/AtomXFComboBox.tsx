@@ -102,6 +102,7 @@ export default class AtomXFComboBox extends AtomXFControl {
             <AtomXFComboBox.promptTemplate>
                 <XF.DataTemplate>
                     <XF.Label
+                        padding={5}
                         text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
             </AtomXFComboBox.promptTemplate>
@@ -130,7 +131,6 @@ export default class AtomXFComboBox extends AtomXFControl {
                 <XF.ColumnDefinition width="Auto"/>
             </XF.Grid.columnDefinitions>
             <WA.AtomView
-                padding={5}
                 bindingContext={Bind.oneWay(() => this.selectedItem)}
                 dataTemplate={Bind.oneWay(() => this.itemTemplate)}
                 emptyDataTemplate={Bind.oneWay(() => this.promptTemplate)}/>
