@@ -5,7 +5,7 @@ import XF from "./XF";
 const NSAtoms = XNode.namespace("WebAtoms.Controls", "WebAtoms.XF");
 
 @NSAtoms("AtomView")
-class AtomView extends XF.View {
+class AtomView extends XF.ContentView {
     public static dataTemplate = XNode.template();
     public static emptyDataTemplate = XNode.template();
 
