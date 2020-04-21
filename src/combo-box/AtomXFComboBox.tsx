@@ -14,8 +14,23 @@ import AtomXFContentPage from "../pages/AtomXFContentPage";
 import AtomXFPopupPage from "../pages/AtomXFPopupPage";
 import SearchPageViewModel from "./SearchPageViewModel";
 import SelectionList from "./SelectionList";
+import { AtomStyle } from "@web-atoms/core/dist/web/styles/AtomStyle";
+import { IStyleDeclaration } from "@web-atoms/core/dist/web/styles/IStyleDeclaration";
 
 export type ItemSearchFunction  = ((item: any, search: string) => boolean) | string[];
+
+export class AtomXFComboBoxStyle extends AtomStyle {
+
+    public get root(): IStyleDeclaration {
+        return {
+            subclasses: {
+                " .item": {
+                    padding: 10
+                }
+            }
+        };
+    }
+}
 
 export default class AtomXFComboBox extends AtomXFControl {
 
@@ -66,6 +81,7 @@ export default class AtomXFComboBox extends AtomXFControl {
     }
 
     protected preCreate() {
+        this.defaultControlStyle = AtomXFComboBoxStyle;
         this.prompt = "Select";
         this.showSearch = true;
         this.showAsPopup = true;
@@ -107,13 +123,15 @@ export default class AtomXFComboBox extends AtomXFControl {
 
         // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
 
-        this.render(<XF.Grid>
+        this.render(<XF.Grid
+            class={this.controlStyle.root.className}
+            >
 
             {/** Default Prompt Template */}
             <AtomXFComboBox.promptTemplate>
                 <XF.DataTemplate>
                     <XF.Label
-                        padding={Bind.oneWay(() => this.itemPadding)}
+                        class="item"
                         text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
             </AtomXFComboBox.promptTemplate>
@@ -122,7 +140,7 @@ export default class AtomXFComboBox extends AtomXFControl {
             <AtomXFComboBox.itemTemplate>
                 <XF.DataTemplate>
                     <XF.Label
-                        padding={Bind.oneWay(() => this.itemPadding)}
+                        class="item"
                         text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
                         backgroundColor={Bind.oneWay((x) => x.data === x.viewModel.selectedItem
                             ? Colors.lightBlue
