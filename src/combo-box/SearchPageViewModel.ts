@@ -14,7 +14,7 @@ export default class SearchPageViewModel extends AtomWindowViewModel  {
     }
 
     @Watch
-    public items(): any {
+    public get items(): any {
         const items = this.comboBox.items;
         const s = this.comboBox.search;
         const st = this.comboBox.searchText;
