@@ -15,6 +15,8 @@ import AtomXFPopupPage from "../pages/AtomXFPopupPage";
 import SearchPageViewModel from "./SearchPageViewModel";
 import SelectionList from "./SelectionList";
 
+export type ItemSearchFunction  = ((item: any, search: string) => boolean) | string[];
+
 export default class AtomXFComboBox extends AtomXFControl {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
@@ -39,6 +41,8 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public selectionViewTemplate: any;
 
+    public search: ItemSearchFunction;
+
     public items: any[];
 
     public value: any;
@@ -61,6 +65,7 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.showSearch = true;
         this.showAsPopup = true;
         this.searchText = "";
+        this.search = ["label", "value"];
         this.items = null;
         this.value = null;
         this.valuePath = "value";

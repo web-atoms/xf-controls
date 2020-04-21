@@ -4,7 +4,6 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import AtomContentView from "../AtomContentView";
 import XF from "../clr/XF";
 import SearchPageViewModel from "./SearchPageViewModel";
-import WA from "../clr/WA";
 
 export default class SelectionList extends AtomContentView {
 
@@ -27,7 +26,7 @@ export default class SelectionList extends AtomContentView {
                     { ... XF.Grid.row(1) }
                     itemSizingStrategy="MeasureAllItems"
                     itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
-                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
+                    itemsSource={Bind.oneWay(() => this.viewModel.items)}
                     selectionMode="Single"
                     selectedItem={Bind.twoWays(() => this.viewModel.selectedItem)}
                     eventSelectionChanged={Bind.event(() => {
