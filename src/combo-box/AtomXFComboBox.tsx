@@ -43,6 +43,8 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public search: ItemSearchFunction;
 
+    public itemPadding: number;
+
     public items: any[];
 
     public value: any;
@@ -65,6 +67,7 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.showSearch = true;
         this.showAsPopup = true;
         this.searchText = "";
+        this.itemPadding = 10;
         this.search = ["label", "value"];
         this.items = null;
         this.value = null;
@@ -107,7 +110,7 @@ export default class AtomXFComboBox extends AtomXFControl {
             <AtomXFComboBox.promptTemplate>
                 <XF.DataTemplate>
                     <XF.Label
-                        padding={5}
+                        padding={Bind.oneWay(() => this.itemPadding)}
                         text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
             </AtomXFComboBox.promptTemplate>
@@ -116,7 +119,7 @@ export default class AtomXFComboBox extends AtomXFControl {
             <AtomXFComboBox.itemTemplate>
                 <XF.DataTemplate>
                     <XF.Label
-                        padding={5}
+                        padding={Bind.oneWay(() => this.itemPadding)}
                         text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
                         backgroundColor={Bind.oneWay((x) => x.data === x.viewModel.selectedItem
                             ? Colors.lightBlue
