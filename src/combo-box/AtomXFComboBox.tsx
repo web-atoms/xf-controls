@@ -5,6 +5,8 @@ import { PropertyBinding } from "@web-atoms/core/dist/core/PropertyBinding";
 import { IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
+import { AtomStyle } from "@web-atoms/core/dist/web/styles/AtomStyle";
+import { IStyleDeclaration } from "@web-atoms/core/dist/web/styles/IStyleDeclaration";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import RgPluginsPopup from "../clr/RgPluginsPopup";
 import WA from "../clr/WA";
@@ -14,8 +16,6 @@ import AtomXFContentPage from "../pages/AtomXFContentPage";
 import AtomXFPopupPage from "../pages/AtomXFPopupPage";
 import SearchPageViewModel from "./SearchPageViewModel";
 import SelectionList from "./SelectionList";
-import { AtomStyle } from "@web-atoms/core/dist/web/styles/AtomStyle";
-import { IStyleDeclaration } from "@web-atoms/core/dist/web/styles/IStyleDeclaration";
 
 export type ItemSearchFunction  = ((item: any, search: string) => boolean) | string[];
 
@@ -124,14 +124,14 @@ export default class AtomXFComboBox extends AtomXFControl {
         // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
 
         this.render(<XF.Grid
-            class={this.controlStyle.root.className}
+            styleClass={this.controlStyle.root.className}
             >
 
             {/** Default Prompt Template */}
             <AtomXFComboBox.promptTemplate>
                 <XF.DataTemplate>
                     <XF.Label
-                        class="item"
+                        styleClass="item"
                         text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
             </AtomXFComboBox.promptTemplate>
@@ -140,7 +140,7 @@ export default class AtomXFComboBox extends AtomXFControl {
             <AtomXFComboBox.itemTemplate>
                 <XF.DataTemplate>
                     <XF.Label
-                        class="item"
+                        styleClass="item"
                         text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
                         backgroundColor={Bind.oneWay((x) => x.data === x.viewModel.selectedItem
                             ? Colors.lightBlue

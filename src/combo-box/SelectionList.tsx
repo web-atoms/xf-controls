@@ -11,7 +11,8 @@ export default class SelectionList extends AtomContentView {
 
     public create() {
         this.render(
-        <XF.ContentPage>
+        <XF.ContentPage
+            styleClass={Bind.oneWay(() => this.viewModel.comboBox.controlStyle.root.className)}>
                 <XF.Grid>
 
                 <XF.Grid.rowDefinitions>
