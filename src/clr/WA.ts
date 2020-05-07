@@ -25,6 +25,11 @@ class GroupBy {
     public static itemsSource = XNode.attached()
 };
 
+@NSAtoms("Markdown")
+class Markdown {
+    public static text = XNode.attached();
+}
+
 @NSAtoms("AtomRepeater")
 class AtomRepeater extends XF.ListView {
 
@@ -65,7 +70,8 @@ const WA = {
     AtomForm,
     AtomField,
     AtomTemplateSelector,
-    GroupBy
+    GroupBy,
+    Markdown
 };
 
 export default WA;
