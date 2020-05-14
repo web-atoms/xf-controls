@@ -5,8 +5,8 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import XF from "../clr/XF";
 import AtomXFComboBox from "../combo-box/AtomXFComboBox";
 import AtomXFGrid from "../controls/AtomXFGrid";
-import AtomCalendarStyle from "./AtomCalendarStyle";
-import AtomCalendarViewModel, { ICalendarItem } from "./AtomCalendarViewModel";
+import AtomCalendarStyle from "./AtomXFCalendarStyle";
+import AtomCalendarViewModel, { ICalendarItem } from "./AtomXFCalendarViewModel";
 
 function toCss(a) {
     let r = "";
@@ -74,11 +74,37 @@ export default class AtomCalendar extends AtomXFGrid {
         this.yearStart = -10;
         this.yearEnd = 10;
         this.enableFunc = null;
+        this.itemTemplate = null;
 
         this.localViewModel = this.resolve(AtomCalendarViewModel, "owner");
 
         this.render(<XF.Grid
             styleClass={this.controlStyle.root.className}>
+
+            <AtomCalendar.itemTemplate>
+                <XF.DataTemplate>
+                    <XF.Label
+                        { ... XF.Grid.row(BindDay.oneTime((x) => x.data.y))}
+                        { ... XF.Grid.column(BindDay.oneTime((x) => x.data.x))}
+                        styleClass={BindDay.oneWay((x) => toCss({
+                            "date-css": 1,
+                            "is-other-month": x.data.isOtherMonth,
+                            "is-today": x.data.isToday,
+                            "is-weekend": x.data.isWeekend,
+                            "is-selected": this.localViewModel.selectedDate === x.data.value,
+                            "is-disabled": this.localViewModel.enableFunc
+                                ? this.localViewModel.enableFunc(x.data)
+                                : 0
+                        }))}
+                        text={BindDay.oneTime((x) => x.data.label)}>
+                        <XF.Label.gestureRecognizers>
+                            <XF.TapGestureRecognizer
+                                command={BindDay.event((x) => this.localViewModel.dateClicked(x.data) )}/>
+                        </XF.Label.gestureRecognizers>
+                    </XF.Label>
+                </XF.DataTemplate>
+            </AtomCalendar.itemTemplate>
+
             <XF.Grid.rowDefinitions>
                 <XF.RowDefinition height="auto"/>
                 <XF.RowDefinition height="auto"/>
@@ -102,6 +128,7 @@ export default class AtomCalendar extends AtomXFGrid {
                 { ... XF.Grid.column(2)} />
 
             <XF.Grid
+                class="week-days"
                 { ... XF.Grid.row(1) }
                 { ... XF.Grid.columnSpan(4) }>
                 <XF.Grid.columnDefinitions>
@@ -135,6 +162,7 @@ export default class AtomCalendar extends AtomXFGrid {
             </XF.Grid>
 
             <XF.Grid
+                { ... XF.BindableLayout.itemTemplate(Bind.oneWay(() => this.itemTemplate)) }
                 { ... XF.BindableLayout.itemsSource(Bind.oneWay(() => this.localViewModel.items)) }
                 { ... XF.Grid.row(2) }
                 { ... XF.Grid.columnSpan(4) }>
@@ -155,29 +183,6 @@ export default class AtomCalendar extends AtomXFGrid {
                     <XF.RowDefinition/>
                     <XF.RowDefinition/>
                 </XF.Grid.rowDefinitions>
-                <XF.BindableLayout.itemTemplate>
-                    <XF.DataTemplate>
-                        <XF.Label
-                            { ... XF.Grid.row(BindDay.oneTime((x) => x.data.y))}
-                            { ... XF.Grid.column(BindDay.oneTime((x) => x.data.x))}
-                            styleClass={BindDay.oneWay((x) => toCss({
-                                "date-css": 1,
-                                "is-other-month": x.data.isOtherMonth,
-                                "is-today": x.data.isToday,
-                                "is-weekend": x.data.isWeekend,
-                                "is-selected": this.localViewModel.selectedDate === x.data.value,
-                                "is-disabled": this.localViewModel.enableFunc
-                                    ? this.localViewModel.enableFunc(x.data)
-                                    : 0
-                            }))}
-                            text={BindDay.oneTime((x) => x.data.label)}>
-                            <XF.Label.gestureRecognizers>
-                                <XF.TapGestureRecognizer
-                                    command={BindDay.event((x) => this.localViewModel.dateClicked(x.data) )}/>
-                            </XF.Label.gestureRecognizers>
-                        </XF.Label>
-                    </XF.DataTemplate>
-                </XF.BindableLayout.itemTemplate>
             </XF.Grid>
         </XF.Grid>);
     }
