@@ -1,4 +1,6 @@
+import { AtomBinder } from "@web-atoms/core/dist/core/AtomBinder";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import { AtomWatcher } from "@web-atoms/core/dist/core/AtomWatcher";
 import Bind from "@web-atoms/core/dist/core/Bind";
 import Colors from "@web-atoms/core/dist/core/Colors";
 import { PropertyBinding } from "@web-atoms/core/dist/core/PropertyBinding";
@@ -115,8 +117,16 @@ export default class AtomXFComboBox extends AtomXFControl {
             [["this", "selectedItem"]],
             true, {
                 fromSource: (v) => vf(v),
-                fromTarget: (v) => this.items.find((x) => vf(x) === v)
+                fromTarget: (v) => this.items ? this.items.find((x) => vf(x) === v) : undefined
             }, this));
+
+        // if the items were updated... we need to refresh the selected item...
+
+        this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
+            if (this.selectedItem === null) {
+                AtomBinder.refreshValue(this, "value");
+            }
+        }));
     }
 
     protected create() {

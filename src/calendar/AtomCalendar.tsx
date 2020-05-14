@@ -5,8 +5,8 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import XF from "../clr/XF";
 import AtomXFComboBox from "../combo-box/AtomXFComboBox";
 import AtomXFGrid from "../controls/AtomXFGrid";
-import AtomCalendarViewModel, { ICalendarItem } from "./AtomCalendarViewModel";
 import AtomCalendarStyle from "./AtomCalendarStyle";
+import AtomCalendarViewModel, { ICalendarItem } from "./AtomCalendarViewModel";
 
 function toCss(a) {
     let r = "";
@@ -14,7 +14,7 @@ function toCss(a) {
         if (a.hasOwnProperty(key)) {
             const element = a[key];
             if (element) {
-                r += key + " ";
+                r += key + ",";
             }
         }
     }
@@ -70,15 +70,15 @@ export default class AtomCalendar extends AtomXFGrid {
 
         this.defaultControlStyle = AtomCalendarStyle;
 
-        this.localViewModel = this.resolve(AtomCalendarViewModel, "owner");
-
         this.selectedDate = null;
         this.yearStart = -10;
         this.yearEnd = 10;
         this.enableFunc = null;
 
+        this.localViewModel = this.resolve(AtomCalendarViewModel, "owner");
+
         this.render(<XF.Grid
-            class={this.controlStyle.root.className}>
+            styleClass={this.controlStyle.root.className}>
             <XF.Grid.rowDefinitions>
                 <XF.RowDefinition height="auto"/>
                 <XF.RowDefinition height="auto"/>
@@ -92,12 +92,13 @@ export default class AtomCalendar extends AtomXFGrid {
             </XF.Grid.columnDefinitions>
 
             <AtomXFComboBox
-                value={Bind.twoWays(() => this.localViewModel.year)}
-                items={Bind.oneWay(() => this.localViewModel.yearList)}
-                { ... XF.Grid.column(1)} />
-            <AtomXFComboBox
+                items={monthList}
                 value={Bind.twoWays(() => this.localViewModel.month)}
-                items={Bind.oneWay(() => monthList)}
+                { ... XF.Grid.column(1)} />
+
+            <AtomXFComboBox
+                items={Bind.oneWay(() => this.localViewModel.yearList)}
+                value={Bind.twoWays(() => this.localViewModel.year)}
                 { ... XF.Grid.column(2)} />
 
             <XF.Grid
@@ -159,7 +160,7 @@ export default class AtomCalendar extends AtomXFGrid {
                         <XF.Label
                             { ... XF.Grid.row(BindDay.oneTime((x) => x.data.y))}
                             { ... XF.Grid.column(BindDay.oneTime((x) => x.data.x))}
-                            class={BindDay.oneWay((x) => toCss({
+                            styleClass={BindDay.oneWay((x) => toCss({
                                 "date-css": 1,
                                 "is-other-month": x.data.isOtherMonth,
                                 "is-today": x.data.isToday,
