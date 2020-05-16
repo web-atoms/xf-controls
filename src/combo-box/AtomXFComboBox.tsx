@@ -151,6 +151,7 @@ export default class AtomXFComboBox extends AtomXFControl {
                 <XF.DataTemplate>
                     <XF.Label
                         styleClass="item"
+                        verticalTextAlignment="Center"
                         text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
                         backgroundColor={Bind.oneWay((x) => x.data === x.viewModel.selectedItem
                             ? Colors.lightBlue

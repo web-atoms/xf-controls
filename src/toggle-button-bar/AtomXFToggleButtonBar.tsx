@@ -1,4 +1,6 @@
+import { AtomBinder } from "@web-atoms/core/dist/core/AtomBinder";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import { AtomWatcher } from "@web-atoms/core/dist/core/AtomWatcher";
 import Bind from "@web-atoms/core/dist/core/Bind";
 import Colors from "@web-atoms/core/dist/core/Colors";
 import { PropertyBinding } from "@web-atoms/core/dist/core/PropertyBinding";
@@ -58,6 +60,13 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
                 fromSource: (v) => this.value = vf(this.selectedItem),
                 fromTarget: (v) => this.selectedItem = this.items.find((x) => vf(x) === this.value)
             }, this));
+
+        this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
+            if (this.selectedItem === null) {
+                AtomBinder.refreshValue(this, "value");
+            }
+        }));
+
     }
 
     protected create() {
@@ -69,20 +78,22 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
             heightRequest={40}>
             <AtomXFToggleButtonBar.itemTemplate>
                 <XF.DataTemplate>
-                    <XF.Grid>
-                        <XF.Label
-                            padding={10}
-                            text={Bind.oneWay((x) => x.data ? x.data[this.labelPath] : ".")}
-                            backgroundColor={Bind.oneWay((x) =>
-                                x.data === this.selectedItem
-                                ? Colors.black
-                                : Colors.white )}
-                            textColor={Bind.oneWay((x) =>
-                                x.data !== this.selectedItem
-                                ? Colors.black
-                                : Colors.white )}
-                            />
-                    </XF.Grid>
+                    <XF.Label
+                        padding={10}
+                        horizontalOptions="FillAndExpand"
+                        horizontalTextAlignment="Center"
+                        verticalTextAlignment="Center"
+                        verticalOptions="Center"
+                        text={Bind.oneWay((x) => x.data ? x.data[this.labelPath] : ".")}
+                        backgroundColor={Bind.oneWay((x) =>
+                            x.data === this.selectedItem
+                            ? Colors.black
+                            : Colors.white )}
+                        textColor={Bind.oneWay((x) =>
+                            x.data !== this.selectedItem
+                            ? Colors.black
+                            : Colors.white )}
+                        />
                 </XF.DataTemplate>
             </AtomXFToggleButtonBar.itemTemplate>
             <XF.StackLayout
@@ -91,6 +102,8 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
                 <XF.BindableLayout.itemTemplate>
                     <XF.DataTemplate>
                         <WA.AtomView
+                            backgroundColor={Colors.lightBlue}
+                            horizontalOptions="FillAndExpand"
                             dataTemplate={Bind.oneWay(() => this.itemTemplate)}>
                             <XF.View.gestureRecognizers>
                                 <XF.TapGestureRecognizer
