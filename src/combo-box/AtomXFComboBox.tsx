@@ -141,6 +141,7 @@ export default class AtomXFComboBox extends AtomXFControl {
             <AtomXFComboBox.promptTemplate>
                 <XF.DataTemplate>
                     <XF.Label
+                        verticalTextAlignment="Center"
                         styleClass="item"
                         text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
