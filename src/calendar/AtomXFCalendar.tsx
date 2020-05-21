@@ -79,7 +79,7 @@ export default class AtomCalendar extends AtomXFGrid {
         this.localViewModel = this.resolve(AtomCalendarViewModel, "owner");
 
         this.render(<XF.Grid
-            styleClass={this.controlStyle.root.className}>
+            styleClass={this.controlStyle.name}>
 
             <AtomCalendar.itemTemplate>
                 <XF.DataTemplate>

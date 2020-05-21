@@ -12,7 +12,7 @@ export default class SelectionList extends AtomContentView {
     public create() {
         this.render(
         <XF.ContentPage
-            styleClass={Bind.oneWay(() => this.viewModel.comboBox.controlStyle.root.className)}>
+            styleClass={Bind.oneWay(() => this.viewModel.comboBox.controlStyle.name)}>
                 <XF.Grid>
 
                 <XF.Grid.rowDefinitions>
