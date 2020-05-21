@@ -134,7 +134,7 @@ export default class AtomXFComboBox extends AtomXFControl {
         // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
 
         this.render(<XF.Grid
-            styleClass={this.controlStyle.root.className}
+            styleClass={this.controlStyle.name}
             >
 
             {/** Default Prompt Template */}
