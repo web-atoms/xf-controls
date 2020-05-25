@@ -44,8 +44,18 @@ export default class SelectionList extends AtomContentView {
                         <XF.DataTemplate>
                             <XF.ViewCell>
                                 <WA.AtomView
-                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
-                                    />
+                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
+                                    <WA.AtomView.gestureRecognizers>
+                                        <XF.TapGestureRecognizer
+                                            command={Bind.event((x) => {
+                                                this.viewModel.selectedItem = x.data;
+                                                setTimeout(() =>
+                                                this.viewModel.close(this.viewModel.selectedItem)
+                                                , 250);
+                                                })
+                                            }/>
+                                    </WA.AtomView.gestureRecognizers>
+                                </WA.AtomView>
                             </XF.ViewCell>
                         </XF.DataTemplate>
                     </XF.ListView.itemTemplate>

@@ -6,7 +6,7 @@ import XF from "../clr/XF";
 import AtomXFComboBox from "../combo-box/AtomXFComboBox";
 import AtomXFGrid from "../controls/AtomXFGrid";
 import AtomCalendarStyle from "./AtomXFCalendarStyle";
-import AtomCalendarViewModel, { ICalendarItem } from "./AtomXFCalendarViewModel";
+import AtomCalendarViewModel, { DateEnabledFunc, ICalendarItem } from "./AtomXFCalendarViewModel";
 
 function toCss(a) {
     let r = "";
@@ -48,7 +48,7 @@ const weekDays = [
 
 const BindDay = Bind.forData<ICalendarItem>();
 
-export default class AtomCalendar extends AtomXFGrid {
+export default class AtomXFCalendar extends AtomXFGrid {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
 
@@ -60,11 +60,13 @@ export default class AtomCalendar extends AtomXFGrid {
 
     public yearEnd: number;
 
-    public enableFunc: any;
+    public enableFunc: DateEnabledFunc;
 
     public currentDate: any;
 
     public itemTemplate: IClassOf<AtomXFControl>;
+
+    public eventDateClicked: any;
 
     public create() {
 
@@ -81,7 +83,7 @@ export default class AtomCalendar extends AtomXFGrid {
         this.render(<XF.Grid
             styleClass={this.controlStyle.name}>
 
-            <AtomCalendar.itemTemplate>
+            <AtomXFCalendar.itemTemplate>
                 <XF.DataTemplate>
                     <XF.Label
                         { ... XF.Grid.row(BindDay.oneTime((x) => x.data.y))}
@@ -103,7 +105,7 @@ export default class AtomCalendar extends AtomXFGrid {
                         </XF.Label.gestureRecognizers>
                     </XF.Label>
                 </XF.DataTemplate>
-            </AtomCalendar.itemTemplate>
+            </AtomXFCalendar.itemTemplate>
 
             <XF.Grid.rowDefinitions>
                 <XF.RowDefinition height="auto"/>

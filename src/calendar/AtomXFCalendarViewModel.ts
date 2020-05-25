@@ -1,6 +1,8 @@
 import { AtomViewModel, Watch } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import DateTime from "@web-atoms/date-time/dist/DateTime";
 
+export type DateEnabledFunc = (d: ICalendarItem) => boolean;
+
 export interface ILabelValue {
     label?: string;
     value?: any;
@@ -63,7 +65,7 @@ export default class AtomCalendarViewModel extends AtomViewModel {
     }
 
     @Watch
-    public get enableFunc(): any {
+    public get enableFunc(): DateEnabledFunc {
         return this.owner.enableFunc;
     }
 
@@ -127,7 +129,7 @@ export default class AtomCalendarViewModel extends AtomViewModel {
     }
 
     public dateClicked(item: ICalendarItem): void {
-        const e = this.owner.element as HTMLElement;
+        const e = this.owner.element as any;
         this.owner.selectedDate = item.value;
         e.dispatchEvent(new CustomEvent("dateClicked", { detail: item } ));
     }
