@@ -1,3 +1,4 @@
+import { Atom } from "@web-atoms/core/dist/Atom";
 import { CancelToken } from "@web-atoms/core/dist/core/types";
 import { AtomViewModel, Watch } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
@@ -98,8 +99,9 @@ export default class AtomCalendarViewModel extends AtomViewModel {
         }
     }
 
-    @Load({ init: true, watch: true, watchDelayMS: 100 })
-    public loadItems(ct: CancelToken) {
+    @Load({ init: true, watch: true, watchDelayMS: 1 })
+    public async loadItems(ct: CancelToken) {
+        await Atom.delay(10);
         if (ct.cancelled) {
             return;
         }
