@@ -2,6 +2,7 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import { IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import DateTime from "@web-atoms/date-time/dist/DateTime";
 import XF from "../clr/XF";
 import AtomXFComboBox from "../combo-box/AtomXFComboBox";
 import AtomXFGrid from "../controls/AtomXFGrid";
@@ -93,7 +94,7 @@ export default class AtomXFCalendar extends AtomXFGrid {
                             "is-other-month": x.data.isOtherMonth,
                             "is-today": x.data.isToday,
                             "is-weekend": x.data.isWeekend,
-                            "is-selected": this.localViewModel.selectedDate === x.data.value,
+                            "is-selected": x.data.value.dateEquals(this.selectedDate),
                             "is-disabled": this.localViewModel.enableFunc
                                 ? this.localViewModel.enableFunc(x.data)
                                 : 0
@@ -187,6 +188,7 @@ export default class AtomXFCalendar extends AtomXFGrid {
                 </XF.Grid.rowDefinitions>
             </XF.Grid>
         </XF.Grid>);
+
     }
 
 }

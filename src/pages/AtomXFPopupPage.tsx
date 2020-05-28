@@ -38,7 +38,7 @@ const controlTemplate = <XF.ControlTemplate>
         { ... XF.Grid.row(1) }
         { ... XF.Grid.column(2) }
         source="res://WebAtoms.XF/Images.DeleteImage.png"
-        command={Bind.event((x) => x.viewModel.cancel())}/>
+        command={Bind.event((x) => x.viewModel?.cancel())}/>
     <XF.ContentPresenter
         padding={5}
         { ... XF.Grid.row(2) }

@@ -3,8 +3,8 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import XF from "../../clr/XF";
+import AtomXFComboBox from "../../combo-box/AtomXFComboBox";
 import AtomXFContentPage from "../../pages/AtomXFContentPage";
-import AtomXFComboBox from "../AtomXFComboBox";
 
 class VM extends AtomViewModel {
     public genderList = [

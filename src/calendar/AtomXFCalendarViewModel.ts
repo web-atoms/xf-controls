@@ -1,4 +1,6 @@
+import { CancelToken } from "@web-atoms/core/dist/core/types";
 import { AtomViewModel, Watch } from "@web-atoms/core/dist/view-model/AtomViewModel";
+import Load from "@web-atoms/core/dist/view-model/Load";
 import DateTime from "@web-atoms/date-time/dist/DateTime";
 
 export type DateEnabledFunc = (d: ICalendarItem) => boolean;
@@ -22,6 +24,8 @@ export interface ICalendarItem {
 export default class AtomCalendarViewModel extends AtomViewModel {
 
     public owner: any;
+
+    public items: ICalendarItem[];
 
     public get year() {
         return this.start.year;
@@ -49,19 +53,15 @@ export default class AtomCalendarViewModel extends AtomViewModel {
         this.refresh("start");
     }
 
-    private mStart: DateTime = DateTime.today;
+    private mStart: DateTime;
     public get start(): DateTime {
-        return this.mStart;
+        return this.mStart || (this.mStart = this.owner.selectedDate || DateTime.today);
     }
     public set start(value: DateTime) {
         this.mStart = value;
         this.refresh("year");
         this.refresh("month");
-    }
-
-    @Watch
-    public get selectedDate(): any {
-        return this.owner.selectedDate;
+        this.refresh("start");
     }
 
     @Watch
@@ -81,8 +81,28 @@ export default class AtomCalendarViewModel extends AtomViewModel {
         return a;
     }
 
-    @Watch
-    public get items(): ICalendarItem[] {
+    @Load({ watch: true })
+    public loadSelectedDate() {
+        // tslint:disable-next-line: no-string-literal
+        const s = this["start"] as any as Date;
+        const sel = this.owner.selectedDate as Date;
+        if (s.getFullYear() !== sel.getFullYear()) {
+            // tslint:disable-next-line: no-string-literal
+            this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
+            return;
+        }
+        if (s.getMonth() !== sel.getMonth()) {
+            // tslint:disable-next-line: no-string-literal
+            this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
+            return;
+        }
+    }
+
+    @Load({ init: true, watch: true, watchDelayMS: 100 })
+    public loadItems(ct: CancelToken) {
+        if (ct.cancelled) {
+            return;
+        }
         const today = DateTime.today;
         const start = this.start;
         let startDate = new DateTime(start.year, start.month, 1);
@@ -113,8 +133,14 @@ export default class AtomCalendarViewModel extends AtomViewModel {
             }
         }));
         o.currentDate = startDate;
-        return a;
+        this.items = a;
     }
+
+    // public async init() {
+    //     if (this.owner.selectedDate) {
+    //         this.start = this.selectedDate;
+    //     }
+    // }
 
     public changeMonth(step: number): void {
         const s = this.start.addMonths(step);
