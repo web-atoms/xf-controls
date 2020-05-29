@@ -1,13 +1,11 @@
 //tslint:disable
-import XNode, { RootObject } from "@web-atoms/core/dist/core/XNode";
-import Bind from "@web-atoms/core/dist/core/Bind";import { ColorItem } from "@web-atoms/core/dist/core/Colors";
-
-const XFNS0 = XNode.namespace("Xamarin.Forms","Xamarin.Forms.Core")
-const XFNS1 = XNode.namespace("Xamarin.Forms.StyleSheets","Xamarin.Forms.Core")
+import XNode, { RootObject, NodeFactory, AttachedNode } from "@web-atoms/core/dist/core/XNode";
+import Bind from "@web-atoms/core/dist/core/Bind";import { ColorItem } from "@web-atoms/core/dist/core/Colors";declare var bridge: any;
 
 
-@XFNS0("BindableObject")
-class BindableObject extends RootObject {
+
+
+declare class BindableObject extends RootObject {
     
     
     
@@ -20,15 +18,14 @@ public dispatcher?: any;
 }
 
 
-@XFNS0("Element")
-class Element extends BindableObject {
+declare class Element extends BindableObject {
     
     
 /** Property Element.Effects of Type Xamarin.Forms.Effect */
-public static effects = XNode.property();
+public static effects: NodeFactory;;
 
 /** Property Element.Menu of Type Xamarin.Forms.Menu */
-public static menu = XNode.property()
+public static menu: NodeFactory;
     
     
 /** Property AutomationId of Type String */
@@ -54,12 +51,11 @@ public styleId?: string | null | Bind;
 }
 
 
-@XFNS0("NavigableElement")
-class NavigableElement extends Element {
+declare class NavigableElement extends Element {
     
     
 /** Property NavigableElement.StyleClass of Type System.String */
-public static styleClass = XNode.property()
+public static styleClass: NodeFactory;
     
     
 /** Property class of Type IList`1 */
@@ -76,18 +72,17 @@ public styleClass?: any;
 }
 
 
-@XFNS0("VisualElement")
-class VisualElement extends NavigableElement {
+declare class VisualElement extends NavigableElement {
     
     
 /** Property VisualElement.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors = XNode.property();
+public static behaviors: NodeFactory;;
 
 /** Property VisualElement.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources = XNode.property();
+public static resources: NodeFactory;;
 
 /** Property VisualElement.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers = XNode.property()
+public static triggers: NodeFactory;
     
     
 /** Property AnchorX of Type Double */
@@ -191,12 +186,11 @@ public y?: number | Bind;
 }
 
 
-@XFNS0("View")
-class View extends VisualElement {
+declare class View extends VisualElement {
     
     
 /** Property View.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers = XNode.property()
+public static gestureRecognizers: NodeFactory;
     
     
 /** Property HorizontalOptions of Type LayoutOptions */
@@ -210,8 +204,7 @@ public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" 
 }
 
 
-@XFNS0("Layout")
-class Layout extends View {
+declare class Layout extends View {
     
     
     
@@ -227,26 +220,24 @@ public padding?: /*Thickness*/ any;
 }
 
 
-@XFNS0("AbsoluteLayout")
-class AbsoluteLayout extends Layout {
+declare class AbsoluteLayout extends Layout {
     
 /** Attached Property AbsoluteLayout.LayoutFlags of Type BindableProperty*/
-public static layoutFlags = XNode.attached();
+public static layoutFlags: AttachedNode;
 
 
 /** Attached Property AbsoluteLayout.LayoutBounds of Type BindableProperty*/
-public static layoutBounds = XNode.attached();
+public static layoutBounds: AttachedNode;
 
     
 /** Property AbsoluteLayout.Children of Type Xamarin.Forms.View */
-public static children = XNode.property()
+public static children: NodeFactory;
     
     
 }
 
 
-@XFNS0("ActivityIndicator")
-class ActivityIndicator extends View {
+declare class ActivityIndicator extends View {
     
     
     
@@ -259,19 +250,20 @@ public isRunning?: boolean | Bind;
 }
 
 
-@XFNS0("StateTriggerBase")
-class StateTriggerBase extends BindableObject {
+declare class StateTriggerBase extends BindableObject {
     
     
     
     
 /** Property IsActive of Type Boolean */
 public isActive?: boolean | Bind;
+
+/** Property IsAttached of Type Boolean */
+public isAttached?: boolean | Bind;
 }
 
 
-@XFNS0("AdaptiveTrigger")
-class AdaptiveTrigger extends StateTriggerBase {
+declare class AdaptiveTrigger extends StateTriggerBase {
     
     
     
@@ -284,18 +276,17 @@ public minWindowWidth?: number | Bind;
 }
 
 
-@XFNS0("Application")
-class Application extends Element {
+declare class Application extends Element {
     
     
 /** Property Application.MainPage of Type Xamarin.Forms.Page */
-public static mainPage = XNode.property();
+public static mainPage: NodeFactory;;
 
 /** Property Application.Properties of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static properties = XNode.property();
+public static properties: NodeFactory;;
 
 /** Property Application.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources = XNode.property()
+public static resources: NodeFactory;
     
     
 /** Property MainPage of Type Page */
@@ -312,15 +303,14 @@ public resources?: any;
 }
 
 
-@XFNS0("AppLinkEntry")
-class AppLinkEntry extends Element {
+declare class AppLinkEntry extends Element {
     
     
 /** Property AppLinkEntry.KeyValues of Type System.Collections.Generic.KeyValuePair`2[System.String,System.String] */
-public static keyValues = XNode.property();
+public static keyValues: NodeFactory;;
 
 /** Property AppLinkEntry.Thumbnail of Type Xamarin.Forms.ImageSource */
-public static thumbnail = XNode.property()
+public static thumbnail: NodeFactory;
     
     
 /** Property AppLinkUri of Type Uri */
@@ -340,8 +330,7 @@ public title?: string | null | Bind;
 }
 
 
-@XFNS0("BaseMenuItem")
-class BaseMenuItem extends Element {
+declare class BaseMenuItem extends Element {
     
     
     
@@ -349,25 +338,30 @@ class BaseMenuItem extends Element {
 }
 
 
-@XFNS0("BindableLayout")
-class BindableLayout extends RootObject {
+declare class BindableLayout extends RootObject {
     
 /** Attached Property BindableLayout.ItemsSource of Type BindableProperty*/
-public static itemsSource = XNode.attached();
+public static itemsSource: AttachedNode;
+
+
+/** Attached Property BindableLayout.EmptyView of Type BindableProperty*/
+public static emptyView: AttachedNode;
 
     
+/** Property BindableLayout.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
+public static emptyViewTemplate: NodeFactory;;
+
 /** Property BindableLayout.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template();
+public static itemTemplate: NodeFactory;;
 
 /** Property BindableLayout.ItemTemplateSelector of Type Xamarin.Forms.DataTemplateSelector */
-public static itemTemplateSelector = XNode.template()
+public static itemTemplateSelector: NodeFactory;
     
     
 }
 
 
-@XFNS0("BoxView")
-class BoxView extends View {
+declare class BoxView extends View {
     
     
     
@@ -380,12 +374,11 @@ public cornerRadius?: /*CornerRadius*/ any;
 }
 
 
-@XFNS0("Button")
-class Button extends View {
+declare class Button extends View {
     
     
 /** Property Button.ImageSource of Type Xamarin.Forms.ImageSource */
-public static imageSource = XNode.property()
+public static imageSource: NodeFactory;
     
     
 /** Property BorderColor of Type Color */
@@ -441,18 +434,17 @@ public textColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("Page")
-class Page extends VisualElement {
+declare class Page extends VisualElement {
     
     
 /** Property Page.BackgroundImageSource of Type Xamarin.Forms.ImageSource */
-public static backgroundImageSource = XNode.property();
+public static backgroundImageSource: NodeFactory;;
 
 /** Property Page.IconImageSource of Type Xamarin.Forms.ImageSource */
-public static iconImageSource = XNode.property();
+public static iconImageSource: NodeFactory;;
 
 /** Property Page.ToolbarItems of Type Xamarin.Forms.ToolbarItem */
-public static toolbarItems = XNode.property()
+public static toolbarItems: NodeFactory;
     
     
 /** Property BackgroundImage of Type String */
@@ -487,18 +479,17 @@ public toolbarItems?: any;
 }
 
 
-@XFNS0("CarouselPage")
-class CarouselPage extends Page {
+declare class CarouselPage extends Page {
     
     
 /** Property CarouselPage.Children of Type Xamarin.Forms.ContentPage */
-public static children = XNode.property();
+public static children: NodeFactory;;
 
 /** Property CarouselPage.CurrentPage of Type Xamarin.Forms.ContentPage */
-public static currentPage = XNode.property();
+public static currentPage: NodeFactory;;
 
 /** Property CarouselPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template()
+public static itemTemplate: NodeFactory;
     
     
 /** Property CurrentPage of Type ContentPage */
@@ -515,12 +506,11 @@ public selectedItem?: any;
 }
 
 
-@XFNS0("Cell")
-class Cell extends Element {
+declare class Cell extends Element {
     
     
 /** Property Cell.ContextActions of Type Xamarin.Forms.MenuItem */
-public static contextActions = XNode.property()
+public static contextActions: NodeFactory;
     
     
 /** Property Height of Type Double */
@@ -534,8 +524,7 @@ public isEnabled?: boolean | Bind;
 }
 
 
-@XFNS0("EntryCell")
-class EntryCell extends Cell {
+declare class EntryCell extends Cell {
     
     
     
@@ -566,8 +555,7 @@ public xAlign?: "Start" | "Center" | "End" | Bind;
 }
 
 
-@XFNS0("TextCell")
-class TextCell extends Cell {
+declare class TextCell extends Cell {
     
     
     
@@ -592,12 +580,11 @@ public textColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("ImageCell")
-class ImageCell extends TextCell {
+declare class ImageCell extends TextCell {
     
     
 /** Property ImageCell.ImageSource of Type Xamarin.Forms.ImageSource */
-public static imageSource = XNode.property()
+public static imageSource: NodeFactory;
     
     
 /** Property ImageSource of Type ImageSource */
@@ -605,8 +592,7 @@ public imageSource?: /*ImageSource*/ any;
 }
 
 
-@XFNS0("SwitchCell")
-class SwitchCell extends Cell {
+declare class SwitchCell extends Cell {
     
     
     
@@ -622,12 +608,11 @@ public text?: string | null | Bind;
 }
 
 
-@XFNS0("ViewCell")
-class ViewCell extends Cell {
+declare class ViewCell extends Cell {
     
     
 /** Property ViewCell.View of Type Xamarin.Forms.View */
-public static view = XNode.property()
+public static view: NodeFactory;
     
     
 /** Property View of Type View */
@@ -635,8 +620,7 @@ public view?: any;
 }
 
 
-@XFNS0("CheckBox")
-class CheckBox extends View {
+declare class CheckBox extends View {
     
     
     
@@ -649,8 +633,7 @@ public isChecked?: boolean | Bind;
 }
 
 
-@XFNS0("GestureRecognizer")
-class GestureRecognizer extends Element {
+declare class GestureRecognizer extends Element {
     
     
     
@@ -658,8 +641,7 @@ class GestureRecognizer extends Element {
 }
 
 
-@XFNS0("ClickGestureRecognizer")
-class ClickGestureRecognizer extends GestureRecognizer {
+declare class ClickGestureRecognizer extends GestureRecognizer {
     
     
     
@@ -678,8 +660,7 @@ public numberOfClicksRequired?: number | Bind;
 }
 
 
-@XFNS0("ColumnDefinition")
-class ColumnDefinition extends BindableObject {
+declare class ColumnDefinition extends BindableObject {
     
     
     
@@ -689,8 +670,7 @@ public width?: "Auto" | number | string | Bind;
 }
 
 
-@XFNS0("CompareStateTrigger")
-class CompareStateTrigger extends StateTriggerBase {
+declare class CompareStateTrigger extends StateTriggerBase {
     
     
     
@@ -703,12 +683,11 @@ public value?: any;
 }
 
 
-@XFNS0("TemplatedPage")
-class TemplatedPage extends Page {
+declare class TemplatedPage extends Page {
     
     
 /** Property TemplatedPage.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate = XNode.template()
+public static controlTemplate: NodeFactory;
     
     
 /** Property ControlTemplate of Type ControlTemplate */
@@ -716,12 +695,11 @@ public controlTemplate?: any;
 }
 
 
-@XFNS0("ContentPage")
-class ContentPage extends TemplatedPage {
+declare class ContentPage extends TemplatedPage {
     
     
 /** Property ContentPage.Content of Type Xamarin.Forms.View */
-public static content = XNode.property()
+public static content: NodeFactory;
     
     
 /** Property Content of Type View */
@@ -729,12 +707,11 @@ public content?: any;
 }
 
 
-@XFNS0("ContentPresenter")
-class ContentPresenter extends Layout {
+declare class ContentPresenter extends Layout {
     
     
 /** Property ContentPresenter.Content of Type Xamarin.Forms.View */
-public static content = XNode.property()
+public static content: NodeFactory;
     
     
 /** Property Content of Type View */
@@ -742,12 +719,11 @@ public content?: any;
 }
 
 
-@XFNS0("TemplatedView")
-class TemplatedView extends Layout {
+declare class TemplatedView extends Layout {
     
     
 /** Property TemplatedView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate = XNode.template()
+public static controlTemplate: NodeFactory;
     
     
 /** Property ControlTemplate of Type ControlTemplate */
@@ -755,12 +731,11 @@ public controlTemplate?: any;
 }
 
 
-@XFNS0("ContentView")
-class ContentView extends TemplatedView {
+declare class ContentView extends TemplatedView {
     
     
 /** Property ContentView.Content of Type Xamarin.Forms.View */
-public static content = XNode.property()
+public static content: NodeFactory;
     
     
 /** Property Content of Type View */
@@ -768,8 +743,7 @@ public content?: any;
 }
 
 
-@XFNS0("ControlTemplate", true)
-class ControlTemplate extends RootObject {
+declare class ControlTemplate extends RootObject {
     
     
     
@@ -777,22 +751,20 @@ class ControlTemplate extends RootObject {
 }
 
 
-@XFNS0("DataTemplate", true)
-class DataTemplate extends RootObject {
+declare class DataTemplate extends RootObject {
     
     
 /** Property DataTemplate.Bindings of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase] */
-public static bindings = XNode.property();
+public static bindings: NodeFactory;;
 
 /** Property DataTemplate.Values of Type System.Collections.Generic.KeyValuePair`2[Xamarin.Forms.BindableProperty,System.Object] */
-public static values = XNode.property()
+public static values: NodeFactory;
     
     
 }
 
 
-@XFNS0("DataTemplateSelector", true)
-class DataTemplateSelector extends DataTemplate {
+declare class DataTemplateSelector extends DataTemplate {
     
     
     
@@ -800,8 +772,7 @@ class DataTemplateSelector extends DataTemplate {
 }
 
 
-@XFNS0("DatePicker")
-class DatePicker extends View {
+declare class DatePicker extends View {
     
     
     
@@ -835,8 +806,7 @@ public textColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("DeviceStateTrigger")
-class DeviceStateTrigger extends StateTriggerBase {
+declare class DeviceStateTrigger extends StateTriggerBase {
     
     
     
@@ -846,8 +816,7 @@ public device?: string | null | Bind;
 }
 
 
-@XFNS0("InputView")
-class InputView extends View {
+declare class InputView extends View {
     
     
     
@@ -881,8 +850,7 @@ public textColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("Editor")
-class Editor extends InputView {
+declare class Editor extends InputView {
     
     
     
@@ -904,8 +872,7 @@ public isTextPredictionEnabled?: boolean | Bind;
 }
 
 
-@XFNS0("Entry")
-class Entry extends InputView {
+declare class Entry extends InputView {
     
     
     
@@ -951,8 +918,61 @@ public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
 
 
-@XFNS0("ImageSource")
-class ImageSource extends Element {
+declare class Expander extends TemplatedView {
+    
+    
+/** Property Expander.Content of Type Xamarin.Forms.View */
+public static content: NodeFactory;;
+
+/** Property Expander.ContentTemplate of Type Xamarin.Forms.DataTemplate */
+public static contentTemplate: NodeFactory;;
+
+/** Property Expander.Header of Type Xamarin.Forms.View */
+public static header: NodeFactory;
+    
+    
+/** Property CollapseAnimationEasing of Type Easing */
+public collapseAnimationEasing?: any;
+
+/** Property CollapseAnimationLength of Type UInt32 */
+public collapseAnimationLength?: any;
+
+/** Property Command of Type ICommand */
+public command?: any;
+
+/** Property CommandParameter of Type Object */
+public commandParameter?: any;
+
+/** Property Content of Type View */
+public content?: any;
+
+/** Property ContentTemplate of Type DataTemplate */
+public contentTemplate?: any;
+
+/** Property ExpandAnimationEasing of Type Easing */
+public expandAnimationEasing?: any;
+
+/** Property ExpandAnimationLength of Type UInt32 */
+public expandAnimationLength?: any;
+
+/** Property ForceUpdateSizeCommand of Type ICommand */
+public forceUpdateSizeCommand?: any;
+
+/** Property Header of Type View */
+public header?: any;
+
+/** Property IsExpanded of Type Boolean */
+public isExpanded?: boolean | Bind;
+
+/** Property Spacing of Type Double */
+public spacing?: number | Bind;
+
+/** Property State of Type ExpanderState */
+public state?: "Expanding" | "Expanded" | "Collapsing" | "Collapsed" | Bind;
+}
+
+
+declare class ImageSource extends Element {
     
     
     
@@ -960,8 +980,7 @@ class ImageSource extends Element {
 }
 
 
-@XFNS0("FileImageSource")
-class FileImageSource extends ImageSource {
+declare class FileImageSource extends ImageSource {
     
     
     
@@ -971,8 +990,7 @@ public file?: string | null | Bind;
 }
 
 
-@XFNS0("MediaSource")
-class MediaSource extends Element {
+declare class MediaSource extends Element {
     
     
     
@@ -980,8 +998,7 @@ class MediaSource extends Element {
 }
 
 
-@XFNS0("FileMediaSource")
-class FileMediaSource extends MediaSource {
+declare class FileMediaSource extends MediaSource {
     
     
     
@@ -991,31 +1008,30 @@ public file?: string | null | Bind;
 }
 
 
-@XFNS0("FlexLayout")
-class FlexLayout extends Layout {
+declare class FlexLayout extends Layout {
     
 /** Attached Property FlexLayout.Order of Type BindableProperty*/
-public static order = XNode.attached();
+public static order: AttachedNode;
 
 
 /** Attached Property FlexLayout.Grow of Type BindableProperty*/
-public static grow = XNode.attached();
+public static grow: AttachedNode;
 
 
 /** Attached Property FlexLayout.Shrink of Type BindableProperty*/
-public static shrink = XNode.attached();
+public static shrink: AttachedNode;
 
 
 /** Attached Property FlexLayout.AlignSelf of Type BindableProperty*/
-public static alignSelf = XNode.attached();
+public static alignSelf: AttachedNode;
 
 
 /** Attached Property FlexLayout.Basis of Type BindableProperty*/
-public static basis = XNode.attached();
+public static basis: AttachedNode;
 
     
 /** Property FlexLayout.Children of Type Xamarin.Forms.View */
-public static children = XNode.property()
+public static children: NodeFactory;
     
     
 /** Property AlignContent of Type FlexAlignContent */
@@ -1038,8 +1054,7 @@ public wrap?: "NoWrap" | "Wrap" | "Reverse" | Bind;
 }
 
 
-@XFNS0("FontImageSource")
-class FontImageSource extends ImageSource {
+declare class FontImageSource extends ImageSource {
     
     
     
@@ -1058,19 +1073,17 @@ public size?: number | Bind;
 }
 
 
-@XFNS0("FormattedString")
-class FormattedString extends Element {
+declare class FormattedString extends Element {
     
     
 /** Property FormattedString.Spans of Type Xamarin.Forms.Span */
-public static spans = XNode.property()
+public static spans: NodeFactory;
     
     
 }
 
 
-@XFNS0("Frame")
-class Frame extends ContentView {
+declare class Frame extends ContentView {
     
     
     
@@ -1089,44 +1102,42 @@ public outlineColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("GestureElement")
-class GestureElement extends Element {
+declare class GestureElement extends Element {
     
     
 /** Property GestureElement.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers = XNode.property()
+public static gestureRecognizers: NodeFactory;
     
     
 }
 
 
-@XFNS0("Grid")
-class Grid extends Layout {
+declare class Grid extends Layout {
     
 /** Attached Property Grid.Row of Type BindableProperty*/
-public static row = XNode.attached();
+public static row: AttachedNode;
 
 
 /** Attached Property Grid.RowSpan of Type BindableProperty*/
-public static rowSpan = XNode.attached();
+public static rowSpan: AttachedNode;
 
 
 /** Attached Property Grid.Column of Type BindableProperty*/
-public static column = XNode.attached();
+public static column: AttachedNode;
 
 
 /** Attached Property Grid.ColumnSpan of Type BindableProperty*/
-public static columnSpan = XNode.attached();
+public static columnSpan: AttachedNode;
 
     
 /** Property Grid.Children of Type Xamarin.Forms.View */
-public static children = XNode.property();
+public static children: NodeFactory;;
 
 /** Property Grid.ColumnDefinitions of Type Xamarin.Forms.ColumnDefinition */
-public static columnDefinitions = XNode.property();
+public static columnDefinitions: NodeFactory;;
 
 /** Property Grid.RowDefinitions of Type Xamarin.Forms.RowDefinition */
-public static rowDefinitions = XNode.property()
+public static rowDefinitions: NodeFactory;
     
     
 /** Property ColumnDefinitions of Type ColumnDefinitionCollection */
@@ -1143,8 +1154,7 @@ public rowSpacing?: number | Bind;
 }
 
 
-@XFNS0("WebViewSource")
-class WebViewSource extends BindableObject {
+declare class WebViewSource extends BindableObject {
     
     
     
@@ -1152,8 +1162,7 @@ class WebViewSource extends BindableObject {
 }
 
 
-@XFNS0("HtmlWebViewSource")
-class HtmlWebViewSource extends WebViewSource {
+declare class HtmlWebViewSource extends WebViewSource {
     
     
     
@@ -1166,12 +1175,11 @@ public html?: string | null | Bind;
 }
 
 
-@XFNS0("Image")
-class Image extends View {
+declare class Image extends View {
     
     
 /** Property Image.Source of Type Xamarin.Forms.ImageSource */
-public static source = XNode.property()
+public static source: NodeFactory;
     
     
 /** Property Aspect of Type Aspect */
@@ -1188,12 +1196,11 @@ public source?: /*ImageSource*/ any;
 }
 
 
-@XFNS0("ImageButton")
-class ImageButton extends View {
+declare class ImageButton extends View {
     
     
 /** Property ImageButton.Source of Type Xamarin.Forms.ImageSource */
-public static source = XNode.property()
+public static source: NodeFactory;
     
     
 /** Property Aspect of Type Aspect */
@@ -1225,15 +1232,14 @@ public source?: /*ImageSource*/ any;
 }
 
 
-@XFNS0("IndicatorView")
-class IndicatorView extends TemplatedView {
+declare class IndicatorView extends TemplatedView {
     
     
 /** Property IndicatorView.IndicatorLayout of Type Xamarin.Forms.Layout`1[Xamarin.Forms.View] */
-public static indicatorLayout = XNode.property();
+public static indicatorLayout: NodeFactory;;
 
 /** Property IndicatorView.IndicatorTemplate of Type Xamarin.Forms.DataTemplate */
-public static indicatorTemplate = XNode.template()
+public static indicatorTemplate: NodeFactory;
     
     
 /** Property Count of Type Int32 */
@@ -1271,8 +1277,7 @@ public selectedIndicatorColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("Behavior")
-class Behavior extends BindableObject {
+declare class Behavior extends BindableObject {
     
     
     
@@ -1280,15 +1285,14 @@ class Behavior extends BindableObject {
 }
 
 
-@XFNS0("TriggerBase")
-class TriggerBase extends BindableObject {
+declare class TriggerBase extends BindableObject {
     
     
 /** Property TriggerBase.EnterActions of Type Xamarin.Forms.TriggerAction */
-public static enterActions = XNode.property();
+public static enterActions: NodeFactory;;
 
 /** Property TriggerBase.ExitActions of Type Xamarin.Forms.TriggerAction */
-public static exitActions = XNode.property()
+public static exitActions: NodeFactory;
     
     
 /** Property IsSealed of Type Boolean */
@@ -1296,12 +1300,11 @@ public isSealed?: boolean | Bind;
 }
 
 
-@XFNS0("DataTrigger")
-class DataTrigger extends TriggerBase {
+declare class DataTrigger extends TriggerBase {
     
     
 /** Property DataTrigger.Setters of Type Xamarin.Forms.Setter */
-public static setters = XNode.property()
+public static setters: NodeFactory;
     
     
 /** Property Binding of Type BindingBase */
@@ -1312,12 +1315,11 @@ public value?: any;
 }
 
 
-@XFNS0("EventTrigger")
-class EventTrigger extends TriggerBase {
+declare class EventTrigger extends TriggerBase {
     
     
 /** Property EventTrigger.Actions of Type Xamarin.Forms.TriggerAction */
-public static actions = XNode.property()
+public static actions: NodeFactory;
     
     
 /** Property Event of Type String */
@@ -1325,26 +1327,24 @@ public event?: string | null | Bind;
 }
 
 
-@XFNS0("MultiTrigger")
-class MultiTrigger extends TriggerBase {
+declare class MultiTrigger extends TriggerBase {
     
     
 /** Property MultiTrigger.Conditions of Type Xamarin.Forms.Condition */
-public static conditions = XNode.property();
+public static conditions: NodeFactory;;
 
 /** Property MultiTrigger.Setters of Type Xamarin.Forms.Setter */
-public static setters = XNode.property()
+public static setters: NodeFactory;
     
     
 }
 
 
-@XFNS0("Trigger")
-class Trigger extends TriggerBase {
+declare class Trigger extends TriggerBase {
     
     
 /** Property Trigger.Setters of Type Xamarin.Forms.Setter */
-public static setters = XNode.property()
+public static setters: NodeFactory;
     
     
 /** Property Property of Type BindableProperty */
@@ -1355,15 +1355,14 @@ public value?: any;
 }
 
 
-@XFNS0("ItemsView")
-class ItemsView extends View {
+declare class ItemsView extends View {
     
     
 /** Property ItemsView.EmptyViewTemplate of Type Xamarin.Forms.DataTemplate */
-public static emptyViewTemplate = XNode.template();
+public static emptyViewTemplate: NodeFactory;;
 
 /** Property ItemsView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template()
+public static itemTemplate: NodeFactory;
     
     
 /** Property EmptyView of Type Object */
@@ -1398,15 +1397,14 @@ public verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 }
 
 
-@XFNS0("CarouselView")
-class CarouselView extends ItemsView {
+declare class CarouselView extends ItemsView {
     
     
 /** Property CarouselView.ItemsLayout of Type Xamarin.Forms.LinearItemsLayout */
-public static itemsLayout = XNode.property();
+public static itemsLayout: NodeFactory;;
 
 /** Property CarouselView.VisibleViews of Type Xamarin.Forms.View */
-public static visibleViews = XNode.property()
+public static visibleViews: NodeFactory;
     
     
 /** Property CurrentItem of Type Object */
@@ -1447,18 +1445,17 @@ public positionChangedCommandParameter?: any;
 }
 
 
-@XFNS0("StructuredItemsView")
-class StructuredItemsView extends ItemsView {
+declare class StructuredItemsView extends ItemsView {
     
     
 /** Property StructuredItemsView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-public static footerTemplate = XNode.template();
+public static footerTemplate: NodeFactory;;
 
 /** Property StructuredItemsView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-public static headerTemplate = XNode.template();
+public static headerTemplate: NodeFactory;;
 
 /** Property StructuredItemsView.ItemsLayout of Type Xamarin.Forms.IItemsLayout */
-public static itemsLayout = XNode.property()
+public static itemsLayout: NodeFactory;
     
     
 /** Property Footer of Type Object */
@@ -1481,12 +1478,11 @@ public itemsLayout?: /*IItemsLayout*/ any;
 }
 
 
-@XFNS0("SelectableItemsView")
-class SelectableItemsView extends StructuredItemsView {
+declare class SelectableItemsView extends StructuredItemsView {
     
     
 /** Property SelectableItemsView.SelectedItems of Type System.Object */
-public static selectedItems = XNode.property()
+public static selectedItems: NodeFactory;
     
     
 /** Property SelectedItem of Type Object */
@@ -1506,15 +1502,14 @@ public selectionMode?: "None" | "Single" | "Multiple" | Bind;
 }
 
 
-@XFNS0("GroupableItemsView")
-class GroupableItemsView extends SelectableItemsView {
+declare class GroupableItemsView extends SelectableItemsView {
     
     
 /** Property GroupableItemsView.GroupFooterTemplate of Type Xamarin.Forms.DataTemplate */
-public static groupFooterTemplate = XNode.template();
+public static groupFooterTemplate: NodeFactory;;
 
 /** Property GroupableItemsView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-public static groupHeaderTemplate = XNode.template()
+public static groupHeaderTemplate: NodeFactory;
     
     
 /** Property GroupFooterTemplate of Type DataTemplate */
@@ -1528,8 +1523,7 @@ public isGrouped?: boolean | Bind;
 }
 
 
-@XFNS0("CollectionView")
-class CollectionView extends GroupableItemsView {
+declare class CollectionView extends GroupableItemsView {
     
     
     
@@ -1537,8 +1531,7 @@ class CollectionView extends GroupableItemsView {
 }
 
 
-@XFNS0("ItemsLayout")
-class ItemsLayout extends BindableObject {
+declare class ItemsLayout extends BindableObject {
     
     
     
@@ -1551,8 +1544,7 @@ public snapPointsType?: "None" | "Mandatory" | "MandatorySingle" | Bind;
 }
 
 
-@XFNS0("GridItemsLayout")
-class GridItemsLayout extends ItemsLayout {
+declare class GridItemsLayout extends ItemsLayout {
     
     
     
@@ -1568,8 +1560,7 @@ public verticalItemSpacing?: number | Bind;
 }
 
 
-@XFNS0("LinearItemsLayout")
-class LinearItemsLayout extends ItemsLayout {
+declare class LinearItemsLayout extends ItemsLayout {
     
     
     
@@ -1579,12 +1570,11 @@ public itemSpacing?: number | Bind;
 }
 
 
-@XFNS0("Label")
-class Label extends View {
+declare class Label extends View {
     
     
 /** Property Label.FormattedText of Type Xamarin.Forms.FormattedString */
-public static formattedText = XNode.property()
+public static formattedText: NodeFactory;
     
     
 /** Property CharacterSpacing of Type Double */
@@ -1643,21 +1633,20 @@ public yAlign?: "Start" | "Center" | "End" | Bind;
 }
 
 
-@XFNS0("ListView")
-class ListView extends View {
+declare class ListView extends View {
     
     
 /** Property ListView.FooterTemplate of Type Xamarin.Forms.DataTemplate */
-public static footerTemplate = XNode.template();
+public static footerTemplate: NodeFactory;;
 
 /** Property ListView.GroupHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-public static groupHeaderTemplate = XNode.template();
+public static groupHeaderTemplate: NodeFactory;;
 
 /** Property ListView.HeaderTemplate of Type Xamarin.Forms.DataTemplate */
-public static headerTemplate = XNode.template();
+public static headerTemplate: NodeFactory;;
 
 /** Property ListView.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template()
+public static itemTemplate: NodeFactory;
     
     
 /** Property CachingStrategy of Type ListViewCachingStrategy */
@@ -1734,15 +1723,14 @@ public verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 }
 
 
-@XFNS0("MasterDetailPage")
-class MasterDetailPage extends Page {
+declare class MasterDetailPage extends Page {
     
     
 /** Property MasterDetailPage.Detail of Type Xamarin.Forms.Page */
-public static detail = XNode.property();
+public static detail: NodeFactory;;
 
 /** Property MasterDetailPage.Master of Type Xamarin.Forms.Page */
-public static master = XNode.property()
+public static master: NodeFactory;
     
     
 /** Property CanChangeIsPresented of Type Boolean */
@@ -1771,12 +1759,11 @@ public masterBounds?: "Zero" | Bind;
 }
 
 
-@XFNS0("MediaElement")
-class MediaElement extends View {
+declare class MediaElement extends View {
     
     
 /** Property MediaElement.Source of Type Xamarin.Forms.MediaSource */
-public static source = XNode.property()
+public static source: NodeFactory;
     
     
 /** Property Aspect of Type Aspect */
@@ -1805,15 +1792,14 @@ public volume?: number | Bind;
 }
 
 
-@XFNS0("Menu")
-class Menu extends BaseMenuItem {
+declare class Menu extends BaseMenuItem {
     
     
 /** Property Menu.Item of Type Xamarin.Forms.Menu */
-public static item = XNode.property();
+public static item: NodeFactory;;
 
 /** Property Menu.Items of Type Xamarin.Forms.MenuItem */
-public static items = XNode.property()
+public static items: NodeFactory;
     
     
 /** Property Item of Type Menu */
@@ -1824,17 +1810,22 @@ public text?: string | null | Bind;
 }
 
 
-@XFNS0("MenuItem")
-class MenuItem extends BaseMenuItem {
+declare class MenuItem extends BaseMenuItem {
     
 /** Attached Property MenuItem.Accelerator of Type BindableProperty*/
-public static accelerator = XNode.attached();
+public static accelerator: AttachedNode;
 
     
 /** Property MenuItem.IconImageSource of Type Xamarin.Forms.ImageSource */
-public static iconImageSource = XNode.property()
+public static iconImageSource: NodeFactory;;
+
+/** Property MenuItem.StyleClass of Type System.String */
+public static styleClass: NodeFactory;
     
     
+/** Property class of Type IList`1 */
+public class?: any;
+
 /** Property Command of Type ICommand */
 public command?: any;
 
@@ -1853,40 +1844,46 @@ public isDestructive?: boolean | Bind;
 /** Property IsEnabled of Type Boolean */
 public isEnabled?: boolean | Bind;
 
+/** Property StyleClass of Type IList`1 */
+public styleClass?: any;
+
 /** Property Text of Type String */
 public text?: string | null | Bind;
 }
 
 
-@XFNS0("NavigationPage")
-class NavigationPage extends Page {
+declare class NavigationPage extends Page {
     
 /** Attached Property NavigationPage.BackButtonTitle of Type BindableProperty*/
-public static backButtonTitle = XNode.attached();
+public static backButtonTitle: AttachedNode;
 
 
 /** Attached Property NavigationPage.HasNavigationBar of Type BindableProperty*/
-public static hasNavigationBar = XNode.attached();
+public static hasNavigationBar: AttachedNode;
 
 
 /** Attached Property NavigationPage.HasBackButton of Type BindableProperty*/
-public static hasBackButton = XNode.attached();
+public static hasBackButton: AttachedNode;
+
+
+/** Attached Property NavigationPage.IconColor of Type BindableProperty*/
+public static iconColor: AttachedNode;
 
     
 /** Property NavigationPage.CurrentPage of Type Xamarin.Forms.Page */
-public static currentPage = XNode.property();
+public static currentPage: NodeFactory;;
 
 /** Property NavigationPage.RootPage of Type Xamarin.Forms.Page */
-public static rootPage = XNode.property();
+public static rootPage: NodeFactory;;
 
 /** Property NavigationPage.TitleIcon of Type Xamarin.Forms.FileImageSource */
-public static titleIcon = XNode.property();
+public static titleIcon: NodeFactory;;
 
 /** Property NavigationPage.TitleIconImageSource of Type Xamarin.Forms.ImageSource */
-public static titleIconImageSource = XNode.property();
+public static titleIconImageSource: NodeFactory;;
 
 /** Property NavigationPage.TitleView of Type Xamarin.Forms.View */
-public static titleView = XNode.property()
+public static titleView: NodeFactory;
     
 /** Constructor Parameter (root) of type Page */
 root: any;
@@ -1909,8 +1906,7 @@ public tint?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("OpenGLView")
-class OpenGLView extends View {
+declare class OpenGLView extends View {
     
     
     
@@ -1923,8 +1919,7 @@ public onDisplay?: any;
 }
 
 
-@XFNS0("OrientationStateTrigger")
-class OrientationStateTrigger extends StateTriggerBase {
+declare class OrientationStateTrigger extends StateTriggerBase {
     
     
     
@@ -1934,8 +1929,7 @@ public orientation?: "Portrait" | "Landscape" | "PortraitUp" | "PortraitDown" | 
 }
 
 
-@XFNS0("PanGestureRecognizer")
-class PanGestureRecognizer extends GestureRecognizer {
+declare class PanGestureRecognizer extends GestureRecognizer {
     
     
     
@@ -1945,12 +1939,11 @@ public touchPoints?: number | Bind;
 }
 
 
-@XFNS0("Picker")
-class Picker extends View {
+declare class Picker extends View {
     
     
 /** Property Picker.Items of Type System.String */
-public static items = XNode.property()
+public static items: NodeFactory;
     
     
 /** Property CharacterSpacing of Type Double */
@@ -1988,8 +1981,7 @@ public titleColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("PinchGestureRecognizer")
-class PinchGestureRecognizer extends GestureRecognizer {
+declare class PinchGestureRecognizer extends GestureRecognizer {
     
     
     
@@ -1999,8 +1991,7 @@ public isPinching?: boolean | Bind;
 }
 
 
-@XFNS0("ProgressBar")
-class ProgressBar extends View {
+declare class ProgressBar extends View {
     
     
     
@@ -2013,8 +2004,20 @@ public progressColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("RefreshView")
-class RefreshView extends ContentView {
+declare class RadioButton extends Button {
+    
+    
+    
+    
+/** Property GroupName of Type String */
+public groupName?: string | null | Bind;
+
+/** Property IsChecked of Type Boolean */
+public isChecked?: boolean | Bind;
+}
+
+
+declare class RefreshView extends ContentView {
     
     
     
@@ -2033,38 +2036,36 @@ public refreshColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("RelativeLayout")
-class RelativeLayout extends Layout {
+declare class RelativeLayout extends Layout {
     
 /** Attached Property RelativeLayout.XConstraint of Type BindableProperty*/
-public static xConstraint = XNode.attached();
+public static xConstraint: AttachedNode;
 
 
 /** Attached Property RelativeLayout.YConstraint of Type BindableProperty*/
-public static yConstraint = XNode.attached();
+public static yConstraint: AttachedNode;
 
 
 /** Attached Property RelativeLayout.WidthConstraint of Type BindableProperty*/
-public static widthConstraint = XNode.attached();
+public static widthConstraint: AttachedNode;
 
 
 /** Attached Property RelativeLayout.HeightConstraint of Type BindableProperty*/
-public static heightConstraint = XNode.attached();
+public static heightConstraint: AttachedNode;
 
 
 /** Attached Property RelativeLayout.BoundsConstraint of Type BindableProperty*/
-public static boundsConstraint = XNode.attached();
+public static boundsConstraint: AttachedNode;
 
     
 /** Property RelativeLayout.Children of Type Xamarin.Forms.View */
-public static children = XNode.property()
+public static children: NodeFactory;
     
     
 }
 
 
-@XFNS0("RowDefinition")
-class RowDefinition extends BindableObject {
+declare class RowDefinition extends BindableObject {
     
     
     
@@ -2074,12 +2075,11 @@ public height?: "Auto" | number | string | Bind;
 }
 
 
-@XFNS0("ScrollView")
-class ScrollView extends Layout {
+declare class ScrollView extends Layout {
     
     
 /** Property ScrollView.Content of Type Xamarin.Forms.View */
-public static content = XNode.property()
+public static content: NodeFactory;
     
     
 /** Property Content of Type View */
@@ -2108,8 +2108,7 @@ public verticalScrollBarVisibility?: "Default" | "Always" | "Never" | Bind;
 }
 
 
-@XFNS0("SearchBar")
-class SearchBar extends InputView {
+declare class SearchBar extends InputView {
     
     
     
@@ -2140,12 +2139,11 @@ public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
 
 
-@XFNS0("BackButtonBehavior")
-class BackButtonBehavior extends BindableObject {
+declare class BackButtonBehavior extends BindableObject {
     
     
 /** Property BackButtonBehavior.IconOverride of Type Xamarin.Forms.ImageSource */
-public static iconOverride = XNode.property()
+public static iconOverride: NodeFactory;
     
     
 /** Property Command of Type ICommand */
@@ -2165,15 +2163,14 @@ public textOverride?: string | null | Bind;
 }
 
 
-@XFNS0("BaseShellItem")
-class BaseShellItem extends NavigableElement {
+declare class BaseShellItem extends NavigableElement {
     
     
 /** Property BaseShellItem.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-public static flyoutIcon = XNode.property();
+public static flyoutIcon: NodeFactory;;
 
 /** Property BaseShellItem.Icon of Type Xamarin.Forms.ImageSource */
-public static icon = XNode.property()
+public static icon: NodeFactory;
     
     
 /** Property FlyoutIcon of Type ImageSource */
@@ -2199,21 +2196,20 @@ public title?: string | null | Bind;
 }
 
 
-@XFNS0("SearchHandler")
-class SearchHandler extends BindableObject {
+declare class SearchHandler extends BindableObject {
     
     
 /** Property SearchHandler.ClearIcon of Type Xamarin.Forms.ImageSource */
-public static clearIcon = XNode.property();
+public static clearIcon: NodeFactory;;
 
 /** Property SearchHandler.ClearPlaceholderIcon of Type Xamarin.Forms.ImageSource */
-public static clearPlaceholderIcon = XNode.property();
+public static clearPlaceholderIcon: NodeFactory;;
 
 /** Property SearchHandler.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template();
+public static itemTemplate: NodeFactory;;
 
 /** Property SearchHandler.QueryIcon of Type Xamarin.Forms.ImageSource */
-public static queryIcon = XNode.property()
+public static queryIcon: NodeFactory;
     
     
 /** Property BackgroundColor of Type Color */
@@ -2317,100 +2313,99 @@ public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
 
 
-@XFNS0("Shell")
-class Shell extends Page {
+declare class Shell extends Page {
     
 /** Attached Property Shell.BackButtonBehavior of Type BindableProperty*/
-public static backButtonBehavior = XNode.attached();
+public static backButtonBehavior: AttachedNode;
 
 
 /** Attached Property Shell.PresentationMode of Type BindableProperty*/
-public static presentationMode = XNode.attached();
+public static presentationMode: AttachedNode;
 
 
 /** Attached Property Shell.FlyoutBehavior of Type BindableProperty*/
-public static flyoutBehavior = XNode.attached();
+public static flyoutBehavior: AttachedNode;
 
 
 /** Attached Property Shell.NavBarIsVisible of Type BindableProperty*/
-public static navBarIsVisible = XNode.attached();
+public static navBarIsVisible: AttachedNode;
 
 
 /** Attached Property Shell.NavBarHasShadow of Type BindableProperty*/
-public static navBarHasShadow = XNode.attached();
+public static navBarHasShadow: AttachedNode;
 
 
 /** Attached Property Shell.SearchHandler of Type BindableProperty*/
-public static searchHandler = XNode.attached();
+public static searchHandler: AttachedNode;
 
 
 /** Attached Property Shell.TabBarIsVisible of Type BindableProperty*/
-public static tabBarIsVisible = XNode.attached();
+public static tabBarIsVisible: AttachedNode;
 
 
 /** Attached Property Shell.BackgroundColor of Type BindableProperty*/
-public static backgroundColor = XNode.attached();
+public static backgroundColor: AttachedNode;
 
 
 /** Attached Property Shell.DisabledColor of Type BindableProperty*/
-public static disabledColor = XNode.attached();
+public static disabledColor: AttachedNode;
 
 
 /** Attached Property Shell.ForegroundColor of Type BindableProperty*/
-public static foregroundColor = XNode.attached();
+public static foregroundColor: AttachedNode;
 
 
 /** Attached Property Shell.TabBarBackgroundColor of Type BindableProperty*/
-public static tabBarBackgroundColor = XNode.attached();
+public static tabBarBackgroundColor: AttachedNode;
 
 
 /** Attached Property Shell.TabBarDisabledColor of Type BindableProperty*/
-public static tabBarDisabledColor = XNode.attached();
+public static tabBarDisabledColor: AttachedNode;
 
 
 /** Attached Property Shell.TabBarForegroundColor of Type BindableProperty*/
-public static tabBarForegroundColor = XNode.attached();
+public static tabBarForegroundColor: AttachedNode;
 
 
 /** Attached Property Shell.TabBarTitleColor of Type BindableProperty*/
-public static tabBarTitleColor = XNode.attached();
+public static tabBarTitleColor: AttachedNode;
 
 
 /** Attached Property Shell.TabBarUnselectedColor of Type BindableProperty*/
-public static tabBarUnselectedColor = XNode.attached();
+public static tabBarUnselectedColor: AttachedNode;
 
 
 /** Attached Property Shell.TitleColor of Type BindableProperty*/
-public static titleColor = XNode.attached();
+public static titleColor: AttachedNode;
 
 
 /** Attached Property Shell.UnselectedColor of Type BindableProperty*/
-public static unselectedColor = XNode.attached();
+public static unselectedColor: AttachedNode;
 
     
 /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
-public static currentItem = XNode.property();
+public static currentItem: NodeFactory;;
 
 /** Property Shell.FlyoutBackgroundImage of Type Xamarin.Forms.ImageSource */
-public static flyoutBackgroundImage = XNode.property();
+public static flyoutBackgroundImage: NodeFactory;;
 
 /** Property Shell.FlyoutHeaderTemplate of Type Xamarin.Forms.DataTemplate */
-public static flyoutHeaderTemplate = XNode.template();
+public static flyoutHeaderTemplate: NodeFactory;;
 
 /** Property Shell.FlyoutIcon of Type Xamarin.Forms.ImageSource */
-public static flyoutIcon = XNode.property();
+public static flyoutIcon: NodeFactory;;
 
 /** Property Shell.Items of Type Xamarin.Forms.ShellItem */
-public static items = XNode.property();
+public static items: NodeFactory;;
 
 /** Property Shell.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template();
+public static itemTemplate: NodeFactory;;
 
 /** Property Shell.MenuItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static menuItemTemplate = XNode.template();
+public static menuItemTemplate: NodeFactory;;
 
 /** Property Shell.TitleView of Type Xamarin.Forms.View */
-public static titleView = XNode.property()
+public static titleView: NodeFactory;
     
     
 /** Property CurrentItem of Type ShellItem */
@@ -2454,15 +2449,14 @@ public menuItemTemplate?: any;
 }
 
 
-@XFNS0("ShellContent")
-class ShellContent extends BaseShellItem {
+declare class ShellContent extends BaseShellItem {
     
     
 /** Property ShellContent.ContentTemplate of Type Xamarin.Forms.DataTemplate */
-public static contentTemplate = XNode.template();
+public static contentTemplate: NodeFactory;;
 
 /** Property ShellContent.MenuItems of Type Xamarin.Forms.MenuItem */
-public static menuItems = XNode.property()
+public static menuItems: NodeFactory;
     
     
 /** Property Content of Type Object */
@@ -2473,8 +2467,7 @@ public contentTemplate?: any;
 }
 
 
-@XFNS0("ShellGroupItem")
-class ShellGroupItem extends BaseShellItem {
+declare class ShellGroupItem extends BaseShellItem {
     
     
     
@@ -2484,15 +2477,14 @@ public flyoutDisplayOptions?: "AsSingleItem" | "AsMultipleItems" | Bind;
 }
 
 
-@XFNS0("ShellItem")
-class ShellItem extends ShellGroupItem {
+declare class ShellItem extends ShellGroupItem {
     
     
 /** Property ShellItem.CurrentItem of Type Xamarin.Forms.ShellSection */
-public static currentItem = XNode.property();
+public static currentItem: NodeFactory;;
 
 /** Property ShellItem.Items of Type Xamarin.Forms.ShellSection */
-public static items = XNode.property()
+public static items: NodeFactory;
     
     
 /** Property CurrentItem of Type ShellSection */
@@ -2500,8 +2492,7 @@ public currentItem?: any;
 }
 
 
-@XFNS0("FlyoutItem")
-class FlyoutItem extends ShellItem {
+declare class FlyoutItem extends ShellItem {
     
     
     
@@ -2509,8 +2500,7 @@ class FlyoutItem extends ShellItem {
 }
 
 
-@XFNS0("TabBar")
-class TabBar extends ShellItem {
+declare class TabBar extends ShellItem {
     
     
     
@@ -2518,15 +2508,14 @@ class TabBar extends ShellItem {
 }
 
 
-@XFNS0("ShellSection")
-class ShellSection extends ShellGroupItem {
+declare class ShellSection extends ShellGroupItem {
     
     
 /** Property ShellSection.CurrentItem of Type Xamarin.Forms.ShellContent */
-public static currentItem = XNode.property();
+public static currentItem: NodeFactory;;
 
 /** Property ShellSection.Items of Type Xamarin.Forms.ShellContent */
-public static items = XNode.property()
+public static items: NodeFactory;
     
     
 /** Property CurrentItem of Type ShellContent */
@@ -2534,8 +2523,7 @@ public currentItem?: any;
 }
 
 
-@XFNS0("Tab")
-class Tab extends ShellSection {
+declare class Tab extends ShellSection {
     
     
     
@@ -2543,12 +2531,11 @@ class Tab extends ShellSection {
 }
 
 
-@XFNS0("Slider")
-class Slider extends View {
+declare class Slider extends View {
     
     
 /** Property Slider.ThumbImageSource of Type Xamarin.Forms.ImageSource */
-public static thumbImageSource = XNode.property()
+public static thumbImageSource: NodeFactory;
     
     
 /** Property DragCompletedCommand of Type ICommand */
@@ -2583,8 +2570,7 @@ public value?: number | Bind;
 }
 
 
-@XFNS0("Span")
-class Span extends GestureElement {
+declare class Span extends GestureElement {
     
     
     
@@ -2627,12 +2613,11 @@ public textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
 }
 
 
-@XFNS0("StackLayout")
-class StackLayout extends Layout {
+declare class StackLayout extends Layout {
     
     
 /** Property StackLayout.Children of Type Xamarin.Forms.View */
-public static children = XNode.property()
+public static children: NodeFactory;
     
     
 /** Property Orientation of Type StackOrientation */
@@ -2643,8 +2628,7 @@ public spacing?: number | Bind;
 }
 
 
-@XFNS0("StateTrigger")
-class StateTrigger extends StateTriggerBase {
+declare class StateTrigger extends StateTriggerBase {
     
     
     
@@ -2654,8 +2638,7 @@ public isActive?: boolean | Bind;
 }
 
 
-@XFNS0("Stepper")
-class Stepper extends View {
+declare class Stepper extends View {
     
     
     
@@ -2677,8 +2660,7 @@ public value?: number | Bind;
 }
 
 
-@XFNS0("StreamImageSource")
-class StreamImageSource extends ImageSource {
+declare class StreamImageSource extends ImageSource {
     
     
     
@@ -2688,8 +2670,7 @@ public stream?: any;
 }
 
 
-@XFNS0("SwipeGestureRecognizer")
-class SwipeGestureRecognizer extends GestureRecognizer {
+declare class SwipeGestureRecognizer extends GestureRecognizer {
     
     
     
@@ -2708,19 +2689,20 @@ public threshold?: any;
 }
 
 
-@XFNS0("SwipeItem")
-class SwipeItem extends MenuItem {
+declare class SwipeItem extends MenuItem {
     
     
     
     
 /** Property BackgroundColor of Type Color */
 public backgroundColor?: ColorItem | string | null | Bind;
+
+/** Property IsVisible of Type Boolean */
+public isVisible?: boolean | Bind;
 }
 
 
-@XFNS0("SwipeItems")
-class SwipeItems extends Element {
+declare class SwipeItems extends Element {
     
     
     
@@ -2736,8 +2718,7 @@ public swipeBehaviorOnInvoked?: "Auto" | "Close" | "RemainOpen" | Bind;
 }
 
 
-@XFNS0("SwipeItemView")
-class SwipeItemView extends ContentView {
+declare class SwipeItemView extends ContentView {
     
     
     
@@ -2750,21 +2731,20 @@ public commandParameter?: any;
 }
 
 
-@XFNS0("SwipeView")
-class SwipeView extends ContentView {
+declare class SwipeView extends ContentView {
     
     
 /** Property SwipeView.BottomItems of Type Xamarin.Forms.ISwipeItem */
-public static bottomItems = XNode.property();
+public static bottomItems: NodeFactory;;
 
 /** Property SwipeView.LeftItems of Type Xamarin.Forms.ISwipeItem */
-public static leftItems = XNode.property();
+public static leftItems: NodeFactory;;
 
 /** Property SwipeView.RightItems of Type Xamarin.Forms.ISwipeItem */
-public static rightItems = XNode.property();
+public static rightItems: NodeFactory;;
 
 /** Property SwipeView.TopItems of Type Xamarin.Forms.ISwipeItem */
-public static topItems = XNode.property()
+public static topItems: NodeFactory;
     
     
 /** Property BottomItems of Type SwipeItems */
@@ -2781,8 +2761,7 @@ public topItems?: any;
 }
 
 
-@XFNS0("Switch")
-class Switch extends View {
+declare class Switch extends View {
     
     
     
@@ -2798,18 +2777,17 @@ public thumbColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("TabbedPage")
-class TabbedPage extends Page {
+declare class TabbedPage extends Page {
     
     
 /** Property TabbedPage.Children of Type Xamarin.Forms.Page */
-public static children = XNode.property();
+public static children: NodeFactory;;
 
 /** Property TabbedPage.CurrentPage of Type Xamarin.Forms.Page */
-public static currentPage = XNode.property();
+public static currentPage: NodeFactory;;
 
 /** Property TabbedPage.ItemTemplate of Type Xamarin.Forms.DataTemplate */
-public static itemTemplate = XNode.template()
+public static itemTemplate: NodeFactory;
     
     
 /** Property BarBackgroundColor of Type Color */
@@ -2838,8 +2816,7 @@ public unselectedTabColor?: ColorItem | string | null | Bind;
 }
 
 
-@XFNS0("TableSectionBase")
-class TableSectionBase extends BindableObject {
+declare class TableSectionBase extends BindableObject {
     
     
     
@@ -2852,12 +2829,11 @@ public title?: string | null | Bind;
 }
 
 
-@XFNS0("TableRoot")
-class TableRoot extends TableSectionBase {
+declare class TableRoot extends TableSectionBase {
     
     
 /** Property TableRoot.Item of Type Xamarin.Forms.Cell */
-public static item = XNode.property()
+public static item: NodeFactory;
     
     
 /** Property Item of Type TableSection */
@@ -2865,12 +2841,11 @@ public item?: any;
 }
 
 
-@XFNS0("TableSection")
-class TableSection extends TableSectionBase {
+declare class TableSection extends TableSectionBase {
     
     
 /** Property TableSection.Item of Type Xamarin.Forms.Cell */
-public static item = XNode.property()
+public static item: NodeFactory;
     
     
 /** Property Item of Type Cell */
@@ -2878,12 +2853,11 @@ public item?: any;
 }
 
 
-@XFNS0("TableView")
-class TableView extends View {
+declare class TableView extends View {
     
     
 /** Property TableView.Root of Type Xamarin.Forms.TableSection */
-public static root = XNode.property()
+public static root: NodeFactory;
     
     
 /** Property HasUnevenRows of Type Boolean */
@@ -2903,8 +2877,7 @@ public rowHeight?: number | Bind;
 }
 
 
-@XFNS0("TapGestureRecognizer")
-class TapGestureRecognizer extends GestureRecognizer {
+declare class TapGestureRecognizer extends GestureRecognizer {
     
     
     
@@ -2926,8 +2899,7 @@ public tappedCallbackParameter?: any;
 }
 
 
-@XFNS0("TimePicker")
-class TimePicker extends View {
+declare class TimePicker extends View {
     
     
     
@@ -2955,8 +2927,7 @@ public time?: any;
 }
 
 
-@XFNS0("ToolbarItem")
-class ToolbarItem extends MenuItem {
+declare class ToolbarItem extends MenuItem {
     
     
     
@@ -2972,8 +2943,7 @@ public priority?: number | Bind;
 }
 
 
-@XFNS0("UriImageSource")
-class UriImageSource extends ImageSource {
+declare class UriImageSource extends ImageSource {
     
     
     
@@ -2989,8 +2959,7 @@ public uri?: any;
 }
 
 
-@XFNS0("UriMediaSource")
-class UriMediaSource extends MediaSource {
+declare class UriMediaSource extends MediaSource {
     
     
     
@@ -3000,8 +2969,7 @@ public uri?: any;
 }
 
 
-@XFNS0("UrlWebViewSource")
-class UrlWebViewSource extends WebViewSource {
+declare class UrlWebViewSource extends WebViewSource {
     
     
     
@@ -3011,149 +2979,152 @@ public url?: string | null | Bind;
 }
 
 
-@XFNS0("WebView")
-class WebView extends View {
+declare class WebView extends View {
     
     
     
     
+/** Property Cookies of Type CookieContainer */
+public cookies?: any;
+
 /** Property Source of Type WebViewSource */
 public source?: any;
 }
 
 
-@XFNS1("StyleSheet")
-class StyleSheet extends RootObject {
+declare class StyleSheet extends RootObject {
     
     
     
     
 }
-const XF = { BindableObject,
-	Element,
-	NavigableElement,
-	VisualElement,
-	View,
-	Layout,
-	AbsoluteLayout,
-	ActivityIndicator,
-	StateTriggerBase,
-	AdaptiveTrigger,
-	Application,
-	AppLinkEntry,
-	BaseMenuItem,
-	BindableLayout,
-	BoxView,
-	Button,
-	Page,
-	CarouselPage,
-	Cell,
-	EntryCell,
-	TextCell,
-	ImageCell,
-	SwitchCell,
-	ViewCell,
-	CheckBox,
-	GestureRecognizer,
-	ClickGestureRecognizer,
-	ColumnDefinition,
-	CompareStateTrigger,
-	TemplatedPage,
-	ContentPage,
-	ContentPresenter,
-	TemplatedView,
-	ContentView,
-	ControlTemplate,
-	DataTemplate,
-	DataTemplateSelector,
-	DatePicker,
-	DeviceStateTrigger,
-	InputView,
-	Editor,
-	Entry,
-	ImageSource,
-	FileImageSource,
-	MediaSource,
-	FileMediaSource,
-	FlexLayout,
-	FontImageSource,
-	FormattedString,
-	Frame,
-	GestureElement,
-	Grid,
-	WebViewSource,
-	HtmlWebViewSource,
-	Image,
-	ImageButton,
-	IndicatorView,
-	Behavior,
-	TriggerBase,
-	DataTrigger,
-	EventTrigger,
-	MultiTrigger,
-	Trigger,
-	ItemsView,
-	CarouselView,
-	StructuredItemsView,
-	SelectableItemsView,
-	GroupableItemsView,
-	CollectionView,
-	ItemsLayout,
-	GridItemsLayout,
-	LinearItemsLayout,
-	Label,
-	ListView,
-	MasterDetailPage,
-	MediaElement,
-	Menu,
-	MenuItem,
-	NavigationPage,
-	OpenGLView,
-	OrientationStateTrigger,
-	PanGestureRecognizer,
-	Picker,
-	PinchGestureRecognizer,
-	ProgressBar,
-	RefreshView,
-	RelativeLayout,
-	RowDefinition,
-	ScrollView,
-	SearchBar,
-	BackButtonBehavior,
-	BaseShellItem,
-	SearchHandler,
-	Shell,
-	ShellContent,
-	ShellGroupItem,
-	ShellItem,
-	FlyoutItem,
-	TabBar,
-	ShellSection,
-	Tab,
-	Slider,
-	Span,
-	StackLayout,
-	StateTrigger,
-	Stepper,
-	StreamImageSource,
-	SwipeGestureRecognizer,
-	SwipeItem,
-	SwipeItems,
-	SwipeItemView,
-	SwipeView,
-	Switch,
-	TabbedPage,
-	TableSectionBase,
-	TableRoot,
-	TableSection,
-	TableView,
-	TapGestureRecognizer,
-	TimePicker,
-	ToolbarItem,
-	UriImageSource,
-	UriMediaSource,
-	UrlWebViewSource,
-	WebView,
-	StyleSheet
+const XF = { BindableObject: bridge.getClass('Xamarin.Forms.BindableObject;Xamarin.Forms.Core') as typeof BindableObject,
+	Element: bridge.getClass('Xamarin.Forms.Element;Xamarin.Forms.Core') as typeof Element,
+	NavigableElement: bridge.getClass('Xamarin.Forms.NavigableElement;Xamarin.Forms.Core') as typeof NavigableElement,
+	VisualElement: bridge.getClass('Xamarin.Forms.VisualElement;Xamarin.Forms.Core') as typeof VisualElement,
+	View: bridge.getClass('Xamarin.Forms.View;Xamarin.Forms.Core') as typeof View,
+	Layout: bridge.getClass('Xamarin.Forms.Layout;Xamarin.Forms.Core') as typeof Layout,
+	AbsoluteLayout: bridge.getClass('Xamarin.Forms.AbsoluteLayout;Xamarin.Forms.Core') as typeof AbsoluteLayout,
+	ActivityIndicator: bridge.getClass('Xamarin.Forms.ActivityIndicator;Xamarin.Forms.Core') as typeof ActivityIndicator,
+	StateTriggerBase: bridge.getClass('Xamarin.Forms.StateTriggerBase;Xamarin.Forms.Core') as typeof StateTriggerBase,
+	AdaptiveTrigger: bridge.getClass('Xamarin.Forms.AdaptiveTrigger;Xamarin.Forms.Core') as typeof AdaptiveTrigger,
+	Application: bridge.getClass('Xamarin.Forms.Application;Xamarin.Forms.Core') as typeof Application,
+	AppLinkEntry: bridge.getClass('Xamarin.Forms.AppLinkEntry;Xamarin.Forms.Core') as typeof AppLinkEntry,
+	BaseMenuItem: bridge.getClass('Xamarin.Forms.BaseMenuItem;Xamarin.Forms.Core') as typeof BaseMenuItem,
+	BindableLayout: bridge.getClass('Xamarin.Forms.BindableLayout;Xamarin.Forms.Core') as typeof BindableLayout,
+	BoxView: bridge.getClass('Xamarin.Forms.BoxView;Xamarin.Forms.Core') as typeof BoxView,
+	Button: bridge.getClass('Xamarin.Forms.Button;Xamarin.Forms.Core') as typeof Button,
+	Page: bridge.getClass('Xamarin.Forms.Page;Xamarin.Forms.Core') as typeof Page,
+	CarouselPage: bridge.getClass('Xamarin.Forms.CarouselPage;Xamarin.Forms.Core') as typeof CarouselPage,
+	Cell: bridge.getClass('Xamarin.Forms.Cell;Xamarin.Forms.Core') as typeof Cell,
+	EntryCell: bridge.getClass('Xamarin.Forms.EntryCell;Xamarin.Forms.Core') as typeof EntryCell,
+	TextCell: bridge.getClass('Xamarin.Forms.TextCell;Xamarin.Forms.Core') as typeof TextCell,
+	ImageCell: bridge.getClass('Xamarin.Forms.ImageCell;Xamarin.Forms.Core') as typeof ImageCell,
+	SwitchCell: bridge.getClass('Xamarin.Forms.SwitchCell;Xamarin.Forms.Core') as typeof SwitchCell,
+	ViewCell: bridge.getClass('Xamarin.Forms.ViewCell;Xamarin.Forms.Core') as typeof ViewCell,
+	CheckBox: bridge.getClass('Xamarin.Forms.CheckBox;Xamarin.Forms.Core') as typeof CheckBox,
+	GestureRecognizer: bridge.getClass('Xamarin.Forms.GestureRecognizer;Xamarin.Forms.Core') as typeof GestureRecognizer,
+	ClickGestureRecognizer: bridge.getClass('Xamarin.Forms.ClickGestureRecognizer;Xamarin.Forms.Core') as typeof ClickGestureRecognizer,
+	ColumnDefinition: bridge.getClass('Xamarin.Forms.ColumnDefinition;Xamarin.Forms.Core') as typeof ColumnDefinition,
+	CompareStateTrigger: bridge.getClass('Xamarin.Forms.CompareStateTrigger;Xamarin.Forms.Core') as typeof CompareStateTrigger,
+	TemplatedPage: bridge.getClass('Xamarin.Forms.TemplatedPage;Xamarin.Forms.Core') as typeof TemplatedPage,
+	ContentPage: bridge.getClass('Xamarin.Forms.ContentPage;Xamarin.Forms.Core') as typeof ContentPage,
+	ContentPresenter: bridge.getClass('Xamarin.Forms.ContentPresenter;Xamarin.Forms.Core') as typeof ContentPresenter,
+	TemplatedView: bridge.getClass('Xamarin.Forms.TemplatedView;Xamarin.Forms.Core') as typeof TemplatedView,
+	ContentView: bridge.getClass('Xamarin.Forms.ContentView;Xamarin.Forms.Core') as typeof ContentView,
+	ControlTemplate: bridge.getClass('Xamarin.Forms.ControlTemplate;Xamarin.Forms.Core') as typeof ControlTemplate,
+	DataTemplate: bridge.getClass('Xamarin.Forms.DataTemplate;Xamarin.Forms.Core') as typeof DataTemplate,
+	DataTemplateSelector: bridge.getClass('Xamarin.Forms.DataTemplateSelector;Xamarin.Forms.Core') as typeof DataTemplateSelector,
+	DatePicker: bridge.getClass('Xamarin.Forms.DatePicker;Xamarin.Forms.Core') as typeof DatePicker,
+	DeviceStateTrigger: bridge.getClass('Xamarin.Forms.DeviceStateTrigger;Xamarin.Forms.Core') as typeof DeviceStateTrigger,
+	InputView: bridge.getClass('Xamarin.Forms.InputView;Xamarin.Forms.Core') as typeof InputView,
+	Editor: bridge.getClass('Xamarin.Forms.Editor;Xamarin.Forms.Core') as typeof Editor,
+	Entry: bridge.getClass('Xamarin.Forms.Entry;Xamarin.Forms.Core') as typeof Entry,
+	Expander: bridge.getClass('Xamarin.Forms.Expander;Xamarin.Forms.Core') as typeof Expander,
+	ImageSource: bridge.getClass('Xamarin.Forms.ImageSource;Xamarin.Forms.Core') as typeof ImageSource,
+	FileImageSource: bridge.getClass('Xamarin.Forms.FileImageSource;Xamarin.Forms.Core') as typeof FileImageSource,
+	MediaSource: bridge.getClass('Xamarin.Forms.MediaSource;Xamarin.Forms.Core') as typeof MediaSource,
+	FileMediaSource: bridge.getClass('Xamarin.Forms.FileMediaSource;Xamarin.Forms.Core') as typeof FileMediaSource,
+	FlexLayout: bridge.getClass('Xamarin.Forms.FlexLayout;Xamarin.Forms.Core') as typeof FlexLayout,
+	FontImageSource: bridge.getClass('Xamarin.Forms.FontImageSource;Xamarin.Forms.Core') as typeof FontImageSource,
+	FormattedString: bridge.getClass('Xamarin.Forms.FormattedString;Xamarin.Forms.Core') as typeof FormattedString,
+	Frame: bridge.getClass('Xamarin.Forms.Frame;Xamarin.Forms.Core') as typeof Frame,
+	GestureElement: bridge.getClass('Xamarin.Forms.GestureElement;Xamarin.Forms.Core') as typeof GestureElement,
+	Grid: bridge.getClass('Xamarin.Forms.Grid;Xamarin.Forms.Core') as typeof Grid,
+	WebViewSource: bridge.getClass('Xamarin.Forms.WebViewSource;Xamarin.Forms.Core') as typeof WebViewSource,
+	HtmlWebViewSource: bridge.getClass('Xamarin.Forms.HtmlWebViewSource;Xamarin.Forms.Core') as typeof HtmlWebViewSource,
+	Image: bridge.getClass('Xamarin.Forms.Image;Xamarin.Forms.Core') as typeof Image,
+	ImageButton: bridge.getClass('Xamarin.Forms.ImageButton;Xamarin.Forms.Core') as typeof ImageButton,
+	IndicatorView: bridge.getClass('Xamarin.Forms.IndicatorView;Xamarin.Forms.Core') as typeof IndicatorView,
+	Behavior: bridge.getClass('Xamarin.Forms.Behavior;Xamarin.Forms.Core') as typeof Behavior,
+	TriggerBase: bridge.getClass('Xamarin.Forms.TriggerBase;Xamarin.Forms.Core') as typeof TriggerBase,
+	DataTrigger: bridge.getClass('Xamarin.Forms.DataTrigger;Xamarin.Forms.Core') as typeof DataTrigger,
+	EventTrigger: bridge.getClass('Xamarin.Forms.EventTrigger;Xamarin.Forms.Core') as typeof EventTrigger,
+	MultiTrigger: bridge.getClass('Xamarin.Forms.MultiTrigger;Xamarin.Forms.Core') as typeof MultiTrigger,
+	Trigger: bridge.getClass('Xamarin.Forms.Trigger;Xamarin.Forms.Core') as typeof Trigger,
+	ItemsView: bridge.getClass('Xamarin.Forms.ItemsView;Xamarin.Forms.Core') as typeof ItemsView,
+	CarouselView: bridge.getClass('Xamarin.Forms.CarouselView;Xamarin.Forms.Core') as typeof CarouselView,
+	StructuredItemsView: bridge.getClass('Xamarin.Forms.StructuredItemsView;Xamarin.Forms.Core') as typeof StructuredItemsView,
+	SelectableItemsView: bridge.getClass('Xamarin.Forms.SelectableItemsView;Xamarin.Forms.Core') as typeof SelectableItemsView,
+	GroupableItemsView: bridge.getClass('Xamarin.Forms.GroupableItemsView;Xamarin.Forms.Core') as typeof GroupableItemsView,
+	CollectionView: bridge.getClass('Xamarin.Forms.CollectionView;Xamarin.Forms.Core') as typeof CollectionView,
+	ItemsLayout: bridge.getClass('Xamarin.Forms.ItemsLayout;Xamarin.Forms.Core') as typeof ItemsLayout,
+	GridItemsLayout: bridge.getClass('Xamarin.Forms.GridItemsLayout;Xamarin.Forms.Core') as typeof GridItemsLayout,
+	LinearItemsLayout: bridge.getClass('Xamarin.Forms.LinearItemsLayout;Xamarin.Forms.Core') as typeof LinearItemsLayout,
+	Label: bridge.getClass('Xamarin.Forms.Label;Xamarin.Forms.Core') as typeof Label,
+	ListView: bridge.getClass('Xamarin.Forms.ListView;Xamarin.Forms.Core') as typeof ListView,
+	MasterDetailPage: bridge.getClass('Xamarin.Forms.MasterDetailPage;Xamarin.Forms.Core') as typeof MasterDetailPage,
+	MediaElement: bridge.getClass('Xamarin.Forms.MediaElement;Xamarin.Forms.Core') as typeof MediaElement,
+	Menu: bridge.getClass('Xamarin.Forms.Menu;Xamarin.Forms.Core') as typeof Menu,
+	MenuItem: bridge.getClass('Xamarin.Forms.MenuItem;Xamarin.Forms.Core') as typeof MenuItem,
+	NavigationPage: bridge.getClass('Xamarin.Forms.NavigationPage;Xamarin.Forms.Core') as typeof NavigationPage,
+	OpenGLView: bridge.getClass('Xamarin.Forms.OpenGLView;Xamarin.Forms.Core') as typeof OpenGLView,
+	OrientationStateTrigger: bridge.getClass('Xamarin.Forms.OrientationStateTrigger;Xamarin.Forms.Core') as typeof OrientationStateTrigger,
+	PanGestureRecognizer: bridge.getClass('Xamarin.Forms.PanGestureRecognizer;Xamarin.Forms.Core') as typeof PanGestureRecognizer,
+	Picker: bridge.getClass('Xamarin.Forms.Picker;Xamarin.Forms.Core') as typeof Picker,
+	PinchGestureRecognizer: bridge.getClass('Xamarin.Forms.PinchGestureRecognizer;Xamarin.Forms.Core') as typeof PinchGestureRecognizer,
+	ProgressBar: bridge.getClass('Xamarin.Forms.ProgressBar;Xamarin.Forms.Core') as typeof ProgressBar,
+	RadioButton: bridge.getClass('Xamarin.Forms.RadioButton;Xamarin.Forms.Core') as typeof RadioButton,
+	RefreshView: bridge.getClass('Xamarin.Forms.RefreshView;Xamarin.Forms.Core') as typeof RefreshView,
+	RelativeLayout: bridge.getClass('Xamarin.Forms.RelativeLayout;Xamarin.Forms.Core') as typeof RelativeLayout,
+	RowDefinition: bridge.getClass('Xamarin.Forms.RowDefinition;Xamarin.Forms.Core') as typeof RowDefinition,
+	ScrollView: bridge.getClass('Xamarin.Forms.ScrollView;Xamarin.Forms.Core') as typeof ScrollView,
+	SearchBar: bridge.getClass('Xamarin.Forms.SearchBar;Xamarin.Forms.Core') as typeof SearchBar,
+	BackButtonBehavior: bridge.getClass('Xamarin.Forms.BackButtonBehavior;Xamarin.Forms.Core') as typeof BackButtonBehavior,
+	BaseShellItem: bridge.getClass('Xamarin.Forms.BaseShellItem;Xamarin.Forms.Core') as typeof BaseShellItem,
+	SearchHandler: bridge.getClass('Xamarin.Forms.SearchHandler;Xamarin.Forms.Core') as typeof SearchHandler,
+	Shell: bridge.getClass('Xamarin.Forms.Shell;Xamarin.Forms.Core') as typeof Shell,
+	ShellContent: bridge.getClass('Xamarin.Forms.ShellContent;Xamarin.Forms.Core') as typeof ShellContent,
+	ShellGroupItem: bridge.getClass('Xamarin.Forms.ShellGroupItem;Xamarin.Forms.Core') as typeof ShellGroupItem,
+	ShellItem: bridge.getClass('Xamarin.Forms.ShellItem;Xamarin.Forms.Core') as typeof ShellItem,
+	FlyoutItem: bridge.getClass('Xamarin.Forms.FlyoutItem;Xamarin.Forms.Core') as typeof FlyoutItem,
+	TabBar: bridge.getClass('Xamarin.Forms.TabBar;Xamarin.Forms.Core') as typeof TabBar,
+	ShellSection: bridge.getClass('Xamarin.Forms.ShellSection;Xamarin.Forms.Core') as typeof ShellSection,
+	Tab: bridge.getClass('Xamarin.Forms.Tab;Xamarin.Forms.Core') as typeof Tab,
+	Slider: bridge.getClass('Xamarin.Forms.Slider;Xamarin.Forms.Core') as typeof Slider,
+	Span: bridge.getClass('Xamarin.Forms.Span;Xamarin.Forms.Core') as typeof Span,
+	StackLayout: bridge.getClass('Xamarin.Forms.StackLayout;Xamarin.Forms.Core') as typeof StackLayout,
+	StateTrigger: bridge.getClass('Xamarin.Forms.StateTrigger;Xamarin.Forms.Core') as typeof StateTrigger,
+	Stepper: bridge.getClass('Xamarin.Forms.Stepper;Xamarin.Forms.Core') as typeof Stepper,
+	StreamImageSource: bridge.getClass('Xamarin.Forms.StreamImageSource;Xamarin.Forms.Core') as typeof StreamImageSource,
+	SwipeGestureRecognizer: bridge.getClass('Xamarin.Forms.SwipeGestureRecognizer;Xamarin.Forms.Core') as typeof SwipeGestureRecognizer,
+	SwipeItem: bridge.getClass('Xamarin.Forms.SwipeItem;Xamarin.Forms.Core') as typeof SwipeItem,
+	SwipeItems: bridge.getClass('Xamarin.Forms.SwipeItems;Xamarin.Forms.Core') as typeof SwipeItems,
+	SwipeItemView: bridge.getClass('Xamarin.Forms.SwipeItemView;Xamarin.Forms.Core') as typeof SwipeItemView,
+	SwipeView: bridge.getClass('Xamarin.Forms.SwipeView;Xamarin.Forms.Core') as typeof SwipeView,
+	Switch: bridge.getClass('Xamarin.Forms.Switch;Xamarin.Forms.Core') as typeof Switch,
+	TabbedPage: bridge.getClass('Xamarin.Forms.TabbedPage;Xamarin.Forms.Core') as typeof TabbedPage,
+	TableSectionBase: bridge.getClass('Xamarin.Forms.TableSectionBase;Xamarin.Forms.Core') as typeof TableSectionBase,
+	TableRoot: bridge.getClass('Xamarin.Forms.TableRoot;Xamarin.Forms.Core') as typeof TableRoot,
+	TableSection: bridge.getClass('Xamarin.Forms.TableSection;Xamarin.Forms.Core') as typeof TableSection,
+	TableView: bridge.getClass('Xamarin.Forms.TableView;Xamarin.Forms.Core') as typeof TableView,
+	TapGestureRecognizer: bridge.getClass('Xamarin.Forms.TapGestureRecognizer;Xamarin.Forms.Core') as typeof TapGestureRecognizer,
+	TimePicker: bridge.getClass('Xamarin.Forms.TimePicker;Xamarin.Forms.Core') as typeof TimePicker,
+	ToolbarItem: bridge.getClass('Xamarin.Forms.ToolbarItem;Xamarin.Forms.Core') as typeof ToolbarItem,
+	UriImageSource: bridge.getClass('Xamarin.Forms.UriImageSource;Xamarin.Forms.Core') as typeof UriImageSource,
+	UriMediaSource: bridge.getClass('Xamarin.Forms.UriMediaSource;Xamarin.Forms.Core') as typeof UriMediaSource,
+	UrlWebViewSource: bridge.getClass('Xamarin.Forms.UrlWebViewSource;Xamarin.Forms.Core') as typeof UrlWebViewSource,
+	WebView: bridge.getClass('Xamarin.Forms.WebView;Xamarin.Forms.Core') as typeof WebView,
+	StyleSheet: bridge.getClass('Xamarin.Forms.StyleSheets.StyleSheet;Xamarin.Forms.Core') as typeof StyleSheet
 };
 export default XF;

@@ -12,7 +12,7 @@ export default class DateFieldTest extends AtomXFContentPage {
 
         this.date = null;
 
-        this.render(<DateFieldTest>
+        this.render(<DateFieldTest title="Test Page">
             <XF.StackLayout>
                 <AtomXFDateField
                     selectedDate={Bind.twoWays(() => this.date)}

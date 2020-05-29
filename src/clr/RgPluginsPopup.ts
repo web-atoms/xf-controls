@@ -1,14 +1,13 @@
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "./XF";
 
-const NSRG = XNode.namespace("Rg.Plugins.Popup.Pages", "Rg.Plugins.Popup");
+declare var bridge: any;
 
-@NSRG("PopupPage")
-class PopupPage extends XF.ContentPage {
+declare class PopupPage extends XF.ContentPage {
 }
 
 const RgPluginsPopup = {
-    PopupPage
+    PopupPage: bridge.getClass("Rg.Plugins.Popup.Pages.PopupPage;Rg.Plugins.Popup") as typeof PopupPage
 };
 
 export default RgPluginsPopup;

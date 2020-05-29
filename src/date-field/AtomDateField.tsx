@@ -1,13 +1,13 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import { AtomStyle } from "@web-atoms/core/dist/web/styles/AtomStyle";
+import { IStyleDeclaration } from "@web-atoms/core/dist/web/styles/IStyleDeclaration";
 import AtomXFCalendar from "../calendar/AtomXFCalendar";
 import { DateEnabledFunc } from "../calendar/AtomXFCalendarViewModel";
 import XF from "../clr/XF";
 import AtomXFLink from "../link/AtomXFLink";
 import AtomXFPopupPage from "../pages/AtomXFPopupPage";
-import { AtomStyle } from "@web-atoms/core/dist/web/styles/AtomStyle";
-import { IStyleDeclaration } from "@web-atoms/core/dist/web/styles/IStyleDeclaration";
 
 const controlTemplate = <XF.ControlTemplate>
     <XF.Grid>
