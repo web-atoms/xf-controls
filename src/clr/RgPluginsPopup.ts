@@ -7,7 +7,7 @@ declare class PopupPage extends XF.ContentPage {
 }
 
 const RgPluginsPopup = {
-    PopupPage: bridge.getClass("Rg.Plugins.Popup.Pages.PopupPage;Rg.Plugins.Popup") as typeof PopupPage
+    PopupPage: bridge.getClass("Rg.Plugins.Popup.Pages.PopupPage,Rg.Plugins.Popup") as typeof PopupPage
 };
 
 export default RgPluginsPopup;

@@ -59,14 +59,14 @@ declare class AtomTemplateSelector extends RootObject {
 }
 
 const WA = {
-    AtomRepeater: bridge.getClass(`${NSAtoms}.AtomRepeater;${NSAssembly}`) as typeof AtomRepeater,
-    AtomToolbarItem: bridge.getClass(`${NSAtoms}.AtomToolbarItem;${NSAssembly}`) as typeof AtomToolbarItem,
-    AtomView: bridge.getClass(`${NSAtoms}.AtomView;${NSAssembly}`) as typeof AtomView,
-    AtomForm: bridge.getClass(`${NSAtoms}.AtomForm;${NSAssembly}`) as typeof AtomForm,
-    AtomField: bridge.getClass(`${NSAtoms}.AtomField;${NSAssembly}`) as typeof AtomField,
-    AtomTemplateSelector: bridge.getClass(`${NSAtoms}.AtomTemplateSelector;${NSAssembly}`) as typeof AtomTemplateSelector,
-    GroupBy: bridge.getClass(`${NSAtoms}.GroupBy;${NSAssembly}`) as typeof GroupBy,
-    Markdown: bridge.getClass(`${NSAtoms}.Markdown;${NSAssembly}`) as typeof Markdown,
+    AtomRepeater: bridge.getClass(`${NSAtoms}.AtomRepeater, ${NSAssembly}`) as typeof AtomRepeater,
+    AtomToolbarItem: bridge.getClass(`${NSAtoms}.AtomToolbarItem, ${NSAssembly}`) as typeof AtomToolbarItem,
+    AtomView: bridge.getClass(`${NSAtoms}.AtomView, ${NSAssembly}`) as typeof AtomView,
+    AtomForm: bridge.getClass(`${NSAtoms}.AtomForm, ${NSAssembly}`) as typeof AtomForm,
+    AtomField: bridge.getClass(`${NSAtoms}.AtomField, ${NSAssembly}`) as typeof AtomField,
+    AtomTemplateSelector: bridge.getClass(`${NSAtoms}.AtomTemplateSelector, ${NSAssembly}`) as typeof AtomTemplateSelector,
+    GroupBy: bridge.getClass(`${NSAtoms}.GroupBy, ${NSAssembly}`) as typeof GroupBy,
+    Markdown: bridge.getClass(`${NSAtoms}.Markdown, ${NSAssembly}`) as typeof Markdown,
 };
 
 export default WA;
