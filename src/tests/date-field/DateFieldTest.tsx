@@ -14,6 +14,9 @@ export default class DateFieldTest extends AtomXFContentPage {
 
         this.render(<DateFieldTest title="Test Page">
             <XF.StackLayout>
+                <XF.BoxView
+                    heightRequest={50}
+                    />
                 <AtomXFDateField
                     selectedDate={Bind.twoWays(() => this.date)}
                     />
