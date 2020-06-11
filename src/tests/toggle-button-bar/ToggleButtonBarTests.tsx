@@ -2,7 +2,7 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "../../clr/XF";
 import AtomXFContentPage from "../../pages/AtomXFContentPage";
-import AtomXFToggleButtonBar from "../AtomXFToggleButtonBar";
+import AtomXFToggleButtonBar from "../../toggle-button-bar/AtomXFToggleButtonBar";
 
 // @web-atoms-pack: true
 
