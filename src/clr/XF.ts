@@ -78,6 +78,9 @@ declare class VisualElement extends NavigableElement {
 /** Property VisualElement.Behaviors of Type Xamarin.Forms.Behavior */
 public static behaviors: NodeFactory;;
 
+/** Property VisualElement.Clip of Type Xamarin.Forms.Shapes.Geometry */
+public static clip: NodeFactory;;
+
 /** Property VisualElement.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
 public static resources: NodeFactory;;
 
@@ -3228,6 +3231,8 @@ public matrix?: /*Matrix*/ any;
 declare class Path extends Shape {
     
     
+/** Property Path.Data of Type Xamarin.Forms.Shapes.Geometry */
+public static data: NodeFactory;
     
     
 /** Property Data of Type Geometry */
