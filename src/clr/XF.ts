@@ -97,6 +97,9 @@ public backgroundColor?: ColorItem | string | null | Bind;
 /** Property Bounds of Type Rectangle */
 public bounds?: "Zero" | Bind;
 
+/** Property Clip of Type Geometry */
+public clip?: any;
+
 /** Property DisableLayout of Type Boolean */
 public disableLayout?: boolean | Bind;
 
@@ -300,6 +303,9 @@ public panGestureId?: number | Bind;
 
 /** Property Resources of Type ResourceDictionary */
 public resources?: any;
+
+/** Property UserAppTheme of Type OSAppTheme */
+public userAppTheme?: "Unspecified" | "Light" | "Dark" | Bind;
 }
 
 
@@ -963,9 +969,6 @@ public header?: any;
 
 /** Property IsExpanded of Type Boolean */
 public isExpanded?: boolean | Bind;
-
-/** Property Spacing of Type Double */
-public spacing?: number | Bind;
 
 /** Property State of Type ExpanderState */
 public state?: "Expanding" | "Expanded" | "Collapsing" | "Collapsed" | Bind;
@@ -2998,6 +3001,458 @@ declare class StyleSheet extends RootObject {
     
     
 }
+
+
+declare class PathSegment extends BindableObject {
+    
+    
+    
+    
+}
+
+
+declare class ArcSegment extends PathSegment {
+    
+    
+    
+    
+/** Property IsLargeArc of Type Boolean */
+public isLargeArc?: boolean | Bind;
+
+/** Property Point of Type Point */
+public point?: "Zero" | Bind;
+
+/** Property RotationAngle of Type Double */
+public rotationAngle?: number | Bind;
+
+/** Property Size of Type Size */
+public size?: "Zero" | Bind;
+
+/** Property SweepDirection of Type SweepDirection */
+public sweepDirection?: "CounterClockwise" | "Clockwise" | Bind;
+}
+
+
+declare class BezierSegment extends PathSegment {
+    
+    
+    
+    
+/** Property Point1 of Type Point */
+public point1?: "Zero" | Bind;
+
+/** Property Point2 of Type Point */
+public point2?: "Zero" | Bind;
+
+/** Property Point3 of Type Point */
+public point3?: "Zero" | Bind;
+}
+
+
+declare class Transform extends BindableObject {
+    
+    
+    
+    
+/** Property Value of Type Matrix */
+public value?: /*Matrix*/ any;
+}
+
+
+declare class CompositeTransform extends Transform {
+    
+    
+    
+    
+/** Property CenterX of Type Double */
+public centerX?: number | Bind;
+
+/** Property CenterY of Type Double */
+public centerY?: number | Bind;
+
+/** Property Rotation of Type Double */
+public rotation?: number | Bind;
+
+/** Property ScaleX of Type Double */
+public scaleX?: number | Bind;
+
+/** Property ScaleY of Type Double */
+public scaleY?: number | Bind;
+
+/** Property SkewX of Type Double */
+public skewX?: number | Bind;
+
+/** Property SkewY of Type Double */
+public skewY?: number | Bind;
+
+/** Property TranslateX of Type Double */
+public translateX?: number | Bind;
+
+/** Property TranslateY of Type Double */
+public translateY?: number | Bind;
+}
+
+
+declare class Shape extends View {
+    
+    
+/** Property Shape.StrokeDashArray of Type System.Double */
+public static strokeDashArray: NodeFactory;
+    
+    
+/** Property Aspect of Type Stretch */
+public aspect?: "None" | "Fill" | "Uniform" | "UniformToFill" | Bind;
+
+/** Property Fill of Type Color */
+public fill?: ColorItem | string | null | Bind;
+
+/** Property Stroke of Type Color */
+public stroke?: ColorItem | string | null | Bind;
+
+/** Property StrokeDashArray of Type DoubleCollection */
+public strokeDashArray?: /*DoubleCollection*/ any;
+
+/** Property StrokeDashOffset of Type Double */
+public strokeDashOffset?: number | Bind;
+
+/** Property StrokeLineCap of Type PenLineCap */
+public strokeLineCap?: "Flat" | "Square" | "Round" | Bind;
+
+/** Property StrokeLineJoin of Type PenLineJoin */
+public strokeLineJoin?: "Miter" | "Bevel" | "Round" | Bind;
+
+/** Property StrokeThickness of Type Double */
+public strokeThickness?: number | Bind;
+}
+
+
+declare class Ellipse extends Shape {
+    
+    
+    
+    
+}
+
+
+declare class Geometry extends BindableObject {
+    
+    
+    
+    
+}
+
+
+declare class EllipseGeometry extends Geometry {
+    
+    
+    
+    
+/** Property Center of Type Point */
+public center?: "Zero" | Bind;
+
+/** Property RadiusX of Type Double */
+public radiusX?: number | Bind;
+
+/** Property RadiusY of Type Double */
+public radiusY?: number | Bind;
+}
+
+
+declare class GeometryGroup extends Geometry {
+    
+    
+/** Property GeometryGroup.Children of Type Xamarin.Forms.Shapes.Geometry */
+public static children: NodeFactory;
+    
+    
+/** Property Children of Type GeometryCollection */
+public children?: any;
+
+/** Property FillRule of Type FillRule */
+public fillRule?: "EvenOdd" | "Nonzero" | Bind;
+}
+
+
+declare class Line extends Shape {
+    
+    
+    
+    
+/** Property X1 of Type Double */
+public x1?: number | Bind;
+
+/** Property X2 of Type Double */
+public x2?: number | Bind;
+
+/** Property Y1 of Type Double */
+public y1?: number | Bind;
+
+/** Property Y2 of Type Double */
+public y2?: number | Bind;
+}
+
+
+declare class LineGeometry extends Geometry {
+    
+    
+    
+    
+/** Property EndPoint of Type Point */
+public endPoint?: "Zero" | Bind;
+
+/** Property StartPoint of Type Point */
+public startPoint?: "Zero" | Bind;
+}
+
+
+declare class LineSegment extends PathSegment {
+    
+    
+    
+    
+/** Property Point of Type Point */
+public point?: "Zero" | Bind;
+}
+
+
+declare class MatrixTransform extends Transform {
+    
+    
+    
+    
+/** Property Matrix of Type Matrix */
+public matrix?: /*Matrix*/ any;
+}
+
+
+declare class Path extends Shape {
+    
+    
+    
+    
+/** Property Data of Type Geometry */
+public data?: any;
+
+/** Property RenderTransform of Type Transform */
+public renderTransform?: /*Transform*/ any;
+}
+
+
+declare class PathFigure extends BindableObject {
+    
+    
+/** Property PathFigure.Segments of Type Xamarin.Forms.Shapes.PathSegment */
+public static segments: NodeFactory;
+    
+    
+/** Property IsClosed of Type Boolean */
+public isClosed?: boolean | Bind;
+
+/** Property IsFilled of Type Boolean */
+public isFilled?: boolean | Bind;
+
+/** Property Segments of Type PathSegmentCollection */
+public segments?: any;
+
+/** Property StartPoint of Type Point */
+public startPoint?: "Zero" | Bind;
+}
+
+
+declare class PathGeometry extends Geometry {
+    
+    
+/** Property PathGeometry.Figures of Type Xamarin.Forms.Shapes.PathFigure */
+public static figures: NodeFactory;
+    
+    
+/** Property Figures of Type PathFigureCollection */
+public figures?: any;
+
+/** Property FillRule of Type FillRule */
+public fillRule?: "EvenOdd" | "Nonzero" | Bind;
+}
+
+
+declare class PolyBezierSegment extends PathSegment {
+    
+    
+/** Property PolyBezierSegment.Points of Type Xamarin.Forms.Point */
+public static points: NodeFactory;
+    
+    
+/** Property Points of Type PointCollection */
+public points?: /*PointCollection*/ any;
+}
+
+
+declare class Polygon extends Shape {
+    
+    
+/** Property Polygon.Points of Type Xamarin.Forms.Point */
+public static points: NodeFactory;
+    
+    
+/** Property FillRule of Type FillRule */
+public fillRule?: "EvenOdd" | "Nonzero" | Bind;
+
+/** Property Points of Type PointCollection */
+public points?: /*PointCollection*/ any;
+}
+
+
+declare class Polyline extends Shape {
+    
+    
+/** Property Polyline.Points of Type Xamarin.Forms.Point */
+public static points: NodeFactory;
+    
+    
+/** Property FillRule of Type FillRule */
+public fillRule?: "EvenOdd" | "Nonzero" | Bind;
+
+/** Property Points of Type PointCollection */
+public points?: /*PointCollection*/ any;
+}
+
+
+declare class PolyLineSegment extends PathSegment {
+    
+    
+/** Property PolyLineSegment.Points of Type Xamarin.Forms.Point */
+public static points: NodeFactory;
+    
+    
+/** Property Points of Type PointCollection */
+public points?: /*PointCollection*/ any;
+}
+
+
+declare class PolyQuadraticBezierSegment extends PathSegment {
+    
+    
+/** Property PolyQuadraticBezierSegment.Points of Type Xamarin.Forms.Point */
+public static points: NodeFactory;
+    
+    
+/** Property Points of Type PointCollection */
+public points?: /*PointCollection*/ any;
+}
+
+
+declare class QuadraticBezierSegment extends PathSegment {
+    
+    
+    
+    
+/** Property Point1 of Type Point */
+public point1?: "Zero" | Bind;
+
+/** Property Point2 of Type Point */
+public point2?: "Zero" | Bind;
+}
+
+
+declare class Rectangle extends Shape {
+    
+    
+    
+    
+/** Property RadiusX of Type Double */
+public radiusX?: number | Bind;
+
+/** Property RadiusY of Type Double */
+public radiusY?: number | Bind;
+}
+
+
+declare class RectangleGeometry extends Geometry {
+    
+    
+    
+    
+/** Property Rect of Type Rectangle */
+public rect?: "Zero" | Bind;
+}
+
+
+declare class RotateTransform extends Transform {
+    
+    
+    
+    
+/** Property Angle of Type Double */
+public angle?: number | Bind;
+
+/** Property CenterX of Type Double */
+public centerX?: number | Bind;
+
+/** Property CenterY of Type Double */
+public centerY?: number | Bind;
+}
+
+
+declare class ScaleTransform extends Transform {
+    
+    
+    
+    
+/** Property CenterX of Type Double */
+public centerX?: number | Bind;
+
+/** Property CenterY of Type Double */
+public centerY?: number | Bind;
+
+/** Property ScaleX of Type Double */
+public scaleX?: number | Bind;
+
+/** Property ScaleY of Type Double */
+public scaleY?: number | Bind;
+}
+
+
+declare class SkewTransform extends Transform {
+    
+    
+    
+    
+/** Property AngleX of Type Double */
+public angleX?: number | Bind;
+
+/** Property AngleY of Type Double */
+public angleY?: number | Bind;
+
+/** Property CenterX of Type Double */
+public centerX?: number | Bind;
+
+/** Property CenterY of Type Double */
+public centerY?: number | Bind;
+}
+
+
+declare class TransformGroup extends Transform {
+    
+    
+/** Property TransformGroup.Children of Type Xamarin.Forms.Shapes.Transform */
+public static children: NodeFactory;
+    
+    
+/** Property Children of Type TransformCollection */
+public children?: any;
+}
+
+
+declare class TranslateTransform extends Transform {
+    
+    
+    
+    
+/** Property X of Type Double */
+public x?: number | Bind;
+
+/** Property Y of Type Double */
+public y?: number | Bind;
+}
 const XF = { BindableObject: bridge.getClass('Xamarin.Forms.BindableObject, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof BindableObject,
 	Element: bridge.getClass('Xamarin.Forms.Element, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Element,
 	NavigableElement: bridge.getClass('Xamarin.Forms.NavigableElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof NavigableElement,
@@ -3125,6 +3580,36 @@ const XF = { BindableObject: bridge.getClass('Xamarin.Forms.BindableObject, Xama
 	UriMediaSource: bridge.getClass('Xamarin.Forms.UriMediaSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof UriMediaSource,
 	UrlWebViewSource: bridge.getClass('Xamarin.Forms.UrlWebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof UrlWebViewSource,
 	WebView: bridge.getClass('Xamarin.Forms.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof WebView,
-	StyleSheet: bridge.getClass('Xamarin.Forms.StyleSheets.StyleSheet, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof StyleSheet
+	StyleSheet: bridge.getClass('Xamarin.Forms.StyleSheets.StyleSheet, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof StyleSheet,
+	PathSegment: bridge.getClass('Xamarin.Forms.Shapes.PathSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof PathSegment,
+	ArcSegment: bridge.getClass('Xamarin.Forms.Shapes.ArcSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof ArcSegment,
+	BezierSegment: bridge.getClass('Xamarin.Forms.Shapes.BezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof BezierSegment,
+	Transform: bridge.getClass('Xamarin.Forms.Shapes.Transform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Transform,
+	CompositeTransform: bridge.getClass('Xamarin.Forms.Shapes.CompositeTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof CompositeTransform,
+	Shape: bridge.getClass('Xamarin.Forms.Shapes.Shape, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Shape,
+	Ellipse: bridge.getClass('Xamarin.Forms.Shapes.Ellipse, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Ellipse,
+	Geometry: bridge.getClass('Xamarin.Forms.Shapes.Geometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Geometry,
+	EllipseGeometry: bridge.getClass('Xamarin.Forms.Shapes.EllipseGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof EllipseGeometry,
+	GeometryGroup: bridge.getClass('Xamarin.Forms.Shapes.GeometryGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof GeometryGroup,
+	Line: bridge.getClass('Xamarin.Forms.Shapes.Line, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Line,
+	LineGeometry: bridge.getClass('Xamarin.Forms.Shapes.LineGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof LineGeometry,
+	LineSegment: bridge.getClass('Xamarin.Forms.Shapes.LineSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof LineSegment,
+	MatrixTransform: bridge.getClass('Xamarin.Forms.Shapes.MatrixTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof MatrixTransform,
+	Path: bridge.getClass('Xamarin.Forms.Shapes.Path, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Path,
+	PathFigure: bridge.getClass('Xamarin.Forms.Shapes.PathFigure, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof PathFigure,
+	PathGeometry: bridge.getClass('Xamarin.Forms.Shapes.PathGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof PathGeometry,
+	PolyBezierSegment: bridge.getClass('Xamarin.Forms.Shapes.PolyBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof PolyBezierSegment,
+	Polygon: bridge.getClass('Xamarin.Forms.Shapes.Polygon, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Polygon,
+	Polyline: bridge.getClass('Xamarin.Forms.Shapes.Polyline, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Polyline,
+	PolyLineSegment: bridge.getClass('Xamarin.Forms.Shapes.PolyLineSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof PolyLineSegment,
+	PolyQuadraticBezierSegment: bridge.getClass('Xamarin.Forms.Shapes.PolyQuadraticBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof PolyQuadraticBezierSegment,
+	QuadraticBezierSegment: bridge.getClass('Xamarin.Forms.Shapes.QuadraticBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof QuadraticBezierSegment,
+	Rectangle: bridge.getClass('Xamarin.Forms.Shapes.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof Rectangle,
+	RectangleGeometry: bridge.getClass('Xamarin.Forms.Shapes.RectangleGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof RectangleGeometry,
+	RotateTransform: bridge.getClass('Xamarin.Forms.Shapes.RotateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof RotateTransform,
+	ScaleTransform: bridge.getClass('Xamarin.Forms.Shapes.ScaleTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof ScaleTransform,
+	SkewTransform: bridge.getClass('Xamarin.Forms.Shapes.SkewTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof SkewTransform,
+	TransformGroup: bridge.getClass('Xamarin.Forms.Shapes.TransformGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof TransformGroup,
+	TranslateTransform: bridge.getClass('Xamarin.Forms.Shapes.TranslateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null') as typeof TranslateTransform
 };
 export default XF;
