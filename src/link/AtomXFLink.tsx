@@ -1,13 +1,29 @@
 import { App } from "@web-atoms/core/dist/App";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import Bind from "@web-atoms/core/dist/core/Bind";
-import { CancelToken } from "@web-atoms/core/dist/core/types";
+import { CancelToken, IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { IPageOptions, NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import XF from "../clr/XF";
 
 export default class AtomXFLink extends AtomXFControl {
+
+    public static get button(): typeof AtomXFLink {
+        return ButtonLink;
+    }
+
+    public static get label(): typeof AtomXFLink {
+        return AtomXFLink;
+    }
+
+    public static get imageButton(): typeof AtomXFLink {
+        return ImageButtonLink;
+    }
+
+    public static get contentView(): typeof AtomXFLink  {
+        return ContentViewLink;
+    }
 
     public static page = XNode.prepare("page", true, true);
 
@@ -37,7 +53,7 @@ export default class AtomXFLink extends AtomXFControl {
         super(app, e || AtomBridge.instance.create(XF.Label));
     }
 
-    public preCreate(): void {
+    protected preCreate(): void {
 
         this.page = null;
 
@@ -139,4 +155,24 @@ export default class AtomXFLink extends AtomXFControl {
         }
     }
 
+}
+
+class ButtonLink extends AtomXFLink {
+    constructor(a, e) {
+        super(a, e || AtomBridge.instance.create(XF.Button));
+        this.setLocalValue(this.element, "command", () => this.openPopup());
+    }
+}
+
+class ImageButtonLink extends AtomXFLink {
+    constructor(a, e) {
+        super(a, e || AtomBridge.instance.create(XF.ImageButton));
+        this.setLocalValue(this.element, "command", () => this.openPopup());
+    }
+}
+
+class ContentViewLink extends AtomXFLink {
+    constructor(a, e) {
+        super(a, e || AtomBridge.instance.create(XF.ContentView));
+    }
 }

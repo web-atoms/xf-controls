@@ -1,1 +1,10 @@
 node_modules/
+alpha.bat
+src/tests
+dist/tests
+.github
+.vscode
+package-lock.json
+generated-cert-1
+tslint.json
+waconfig.json

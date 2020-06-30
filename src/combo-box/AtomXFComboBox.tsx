@@ -134,7 +134,7 @@ export default class AtomXFComboBox extends AtomXFControl {
         // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
 
         this.render(<XF.Grid
-            styleClass={this.controlStyle.root.className}
+            styleClass={this.controlStyle.name}
             >
 
             {/** Default Prompt Template */}
@@ -228,46 +228,10 @@ class SearchPopupPage extends AtomXFPopupPage {
 
         this.viewModel = this.resolve(SearchPageViewModel);
 
-        this.render(
-            <RgPluginsPopup.PopupPage title={Bind.oneWay(() => this.viewModel.title)}>
-                <XF.Grid>
-                    <XF.Grid.rowDefinitions>
-                        <XF.RowDefinition height={20} />
-                        <XF.RowDefinition/>
-                        <XF.RowDefinition height={50} />
-                    </XF.Grid.rowDefinitions>
-                    <XF.Grid.columnDefinitions>
-                        <XF.ColumnDefinition width={50} />
-                        <XF.ColumnDefinition/>
-                        <XF.ColumnDefinition width={50}/>
-                    </XF.Grid.columnDefinitions>
-                    <XF.Grid
-                        padding={5}
-                        backgroundColor="white"
-                        { ... XF.Grid.column(1) }
-                        { ... XF.Grid.row(1) }
-                        >
-                        <XF.Grid.rowDefinitions>
-                            <XF.RowDefinition height={30}/>
-                            <XF.RowDefinition/>
-                        </XF.Grid.rowDefinitions>
-                        <XF.Grid.columnDefinitions>
-                            <XF.ColumnDefinition/>
-                            <XF.ColumnDefinition width={30}/>
-                        </XF.Grid.columnDefinitions>
-                    <XF.Label
-                        text={Bind.oneWay(() => this.viewModel.title)}/>
-                    <XF.ImageButton
-                        { ... XF.Grid.column(1) }
-                        source="res://WebAtoms.XF/Images.DeleteImage.png"
-                        command={Bind.event(() => this.viewModel.cancel())}
-                        />
-                    <WA.AtomView
-                        { ... XF.Grid.row(1) }
-                        { ... XF.Grid.columnSpan(2) }
-                        emptyDataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
-                    </XF.Grid>
-            </XF.Grid>
+        this.render(<RgPluginsPopup.PopupPage>
+            <WA.AtomView
+                bindingContext="Empty"
+                dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.selectionViewTemplate)}/>
         </RgPluginsPopup.PopupPage>);
     }
 }

@@ -2,6 +2,7 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import AtomContentView from "../AtomContentView";
+import WA from "../clr/WA";
 import XF from "../clr/XF";
 import SearchPageViewModel from "./SearchPageViewModel";
 
@@ -12,7 +13,7 @@ export default class SelectionList extends AtomContentView {
     public create() {
         this.render(
         <XF.ContentPage
-            styleClass={Bind.oneWay(() => this.viewModel.comboBox.controlStyle.root.className)}>
+            styleClass={Bind.oneWay(() => this.viewModel.comboBox.controlStyle.name)}>
                 <XF.Grid>
 
                 <XF.Grid.rowDefinitions>
@@ -23,7 +24,7 @@ export default class SelectionList extends AtomContentView {
                     isVisible={Bind.oneWay(() => this.viewModel.comboBox.showSearch)}
                     text={Bind.twoWays(() => this.viewModel.comboBox.searchText)}
                     />
-                <XF.CollectionView
+                {/* <XF.CollectionView
                     { ... XF.Grid.row(1) }
                     itemSizingStrategy="MeasureAllItems"
                     itemTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
@@ -35,26 +36,30 @@ export default class SelectionList extends AtomContentView {
                             this.viewModel.close(this.viewModel.selectedItem);
                         }, 250);
                     })}>
-                    {/* <XF.CollectionView.itemTemplate>
-                        <XF.Label
-                            text={Bind.oneTime((x) => x.data.label)}
-                            />
-                    </XF.CollectionView.itemTemplate> */}
-                </XF.CollectionView>
-                {/* <XF.ListView
+                </XF.CollectionView> */}
+                <XF.ListView
                     { ... XF.Grid.row(1) }
-                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
-                    >
+                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}>
                     <XF.ListView.itemTemplate>
                         <XF.DataTemplate>
                             <XF.ViewCell>
                                 <WA.AtomView
-                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}
-                                    />
+                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
+                                    <WA.AtomView.gestureRecognizers>
+                                        <XF.TapGestureRecognizer
+                                            command={Bind.event((x) => {
+                                                this.viewModel.selectedItem = x.data;
+                                                setTimeout(() =>
+                                                this.viewModel.close(this.viewModel.selectedItem)
+                                                , 250);
+                                                })
+                                            }/>
+                                    </WA.AtomView.gestureRecognizers>
+                                </WA.AtomView>
                             </XF.ViewCell>
                         </XF.DataTemplate>
                     </XF.ListView.itemTemplate>
-                </XF.ListView> */}
+                </XF.ListView>
             </XF.Grid>
         </XF.ContentPage>);
     }

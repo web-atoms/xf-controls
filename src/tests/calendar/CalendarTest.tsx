@@ -1,8 +1,8 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import AtomXFCalendar from "../../calendar/AtomXFCalendar";
 import XF from "../../clr/XF";
 import AtomXFContentPage from "../../pages/AtomXFContentPage";
-import AtomXFCalendar from "../AtomXFCalendar";
 
 export default class CalendarTest extends AtomXFContentPage {
 

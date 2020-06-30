@@ -2,11 +2,12 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import { IClassOf } from "@web-atoms/core/dist/core/types";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import DateTime from "@web-atoms/date-time/dist/DateTime";
 import XF from "../clr/XF";
 import AtomXFComboBox from "../combo-box/AtomXFComboBox";
 import AtomXFGrid from "../controls/AtomXFGrid";
 import AtomCalendarStyle from "./AtomXFCalendarStyle";
-import AtomCalendarViewModel, { ICalendarItem } from "./AtomXFCalendarViewModel";
+import AtomCalendarViewModel, { DateEnabledFunc, ICalendarItem } from "./AtomXFCalendarViewModel";
 
 function toCss(a) {
     let r = "";
@@ -48,7 +49,7 @@ const weekDays = [
 
 const BindDay = Bind.forData<ICalendarItem>();
 
-export default class AtomCalendar extends AtomXFGrid {
+export default class AtomXFCalendar extends AtomXFGrid {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
 
@@ -60,11 +61,13 @@ export default class AtomCalendar extends AtomXFGrid {
 
     public yearEnd: number;
 
-    public enableFunc: any;
+    public enableFunc: DateEnabledFunc;
 
     public currentDate: any;
 
     public itemTemplate: IClassOf<AtomXFControl>;
+
+    public eventDateClicked: any;
 
     public create() {
 
@@ -79,9 +82,9 @@ export default class AtomCalendar extends AtomXFGrid {
         this.localViewModel = this.resolve(AtomCalendarViewModel, "owner");
 
         this.render(<XF.Grid
-            styleClass={this.controlStyle.root.className}>
+            styleClass={this.controlStyle.name}>
 
-            <AtomCalendar.itemTemplate>
+            <AtomXFCalendar.itemTemplate>
                 <XF.DataTemplate>
                     <XF.Label
                         { ... XF.Grid.row(BindDay.oneTime((x) => x.data.y))}
@@ -91,7 +94,7 @@ export default class AtomCalendar extends AtomXFGrid {
                             "is-other-month": x.data.isOtherMonth,
                             "is-today": x.data.isToday,
                             "is-weekend": x.data.isWeekend,
-                            "is-selected": this.localViewModel.selectedDate === x.data.value,
+                            "is-selected": x.data.value.dateEquals(this.selectedDate),
                             "is-disabled": this.localViewModel.enableFunc
                                 ? this.localViewModel.enableFunc(x.data)
                                 : 0
@@ -103,7 +106,7 @@ export default class AtomCalendar extends AtomXFGrid {
                         </XF.Label.gestureRecognizers>
                     </XF.Label>
                 </XF.DataTemplate>
-            </AtomCalendar.itemTemplate>
+            </AtomXFCalendar.itemTemplate>
 
             <XF.Grid.rowDefinitions>
                 <XF.RowDefinition height="auto"/>
@@ -185,6 +188,7 @@ export default class AtomCalendar extends AtomXFGrid {
                 </XF.Grid.rowDefinitions>
             </XF.Grid>
         </XF.Grid>);
+
     }
 
 }

@@ -1,5 +1,10 @@
+import { Atom } from "@web-atoms/core/dist/Atom";
+import { CancelToken } from "@web-atoms/core/dist/core/types";
 import { AtomViewModel, Watch } from "@web-atoms/core/dist/view-model/AtomViewModel";
+import Load from "@web-atoms/core/dist/view-model/Load";
 import DateTime from "@web-atoms/date-time/dist/DateTime";
+
+export type DateEnabledFunc = (d: ICalendarItem) => boolean;
 
 export interface ILabelValue {
     label?: string;
@@ -20,6 +25,8 @@ export interface ICalendarItem {
 export default class AtomCalendarViewModel extends AtomViewModel {
 
     public owner: any;
+
+    public items: ICalendarItem[];
 
     public get year() {
         return this.start.year;
@@ -47,23 +54,19 @@ export default class AtomCalendarViewModel extends AtomViewModel {
         this.refresh("start");
     }
 
-    private mStart: DateTime = DateTime.today;
+    private mStart: DateTime;
     public get start(): DateTime {
-        return this.mStart;
+        return this.mStart || (this.mStart = this.owner.selectedDate || DateTime.today);
     }
     public set start(value: DateTime) {
         this.mStart = value;
         this.refresh("year");
         this.refresh("month");
+        this.refresh("start");
     }
 
     @Watch
-    public get selectedDate(): any {
-        return this.owner.selectedDate;
-    }
-
-    @Watch
-    public get enableFunc(): any {
+    public get enableFunc(): DateEnabledFunc {
         return this.owner.enableFunc;
     }
 
@@ -79,8 +82,29 @@ export default class AtomCalendarViewModel extends AtomViewModel {
         return a;
     }
 
-    @Watch
-    public get items(): ICalendarItem[] {
+    @Load({ watch: true })
+    public loadSelectedDate() {
+        // tslint:disable-next-line: no-string-literal
+        const s = this["start"] as any as Date;
+        const sel = this.owner.selectedDate as Date;
+        if (s.getFullYear() !== sel.getFullYear()) {
+            // tslint:disable-next-line: no-string-literal
+            this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
+            return;
+        }
+        if (s.getMonth() !== sel.getMonth()) {
+            // tslint:disable-next-line: no-string-literal
+            this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
+            return;
+        }
+    }
+
+    @Load({ init: true, watch: true, watchDelayMS: 1 })
+    public async loadItems(ct: CancelToken) {
+        await Atom.delay(10);
+        if (ct.cancelled) {
+            return;
+        }
         const today = DateTime.today;
         const start = this.start;
         let startDate = new DateTime(start.year, start.month, 1);
@@ -111,8 +135,14 @@ export default class AtomCalendarViewModel extends AtomViewModel {
             }
         }));
         o.currentDate = startDate;
-        return a;
+        this.items = a;
     }
+
+    // public async init() {
+    //     if (this.owner.selectedDate) {
+    //         this.start = this.selectedDate;
+    //     }
+    // }
 
     public changeMonth(step: number): void {
         const s = this.start.addMonths(step);
@@ -127,7 +157,7 @@ export default class AtomCalendarViewModel extends AtomViewModel {
     }
 
     public dateClicked(item: ICalendarItem): void {
-        const e = this.owner.element as HTMLElement;
+        const e = this.owner.element as any;
         this.owner.selectedDate = item.value;
         e.dispatchEvent(new CustomEvent("dateClicked", { detail: item } ));
     }
