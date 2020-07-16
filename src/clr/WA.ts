@@ -54,7 +54,7 @@ declare class AtomField extends XF.ContentView {
 
 declare class AtomTemplateSelector extends RootObject {
     public static templates: NodeFactory;
-    public static templateSelector: AttachedNode;
+    public static templateSelector: NodeFactory;
     selector: (data: any) => number;
 }
 
