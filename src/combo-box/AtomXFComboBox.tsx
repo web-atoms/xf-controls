@@ -66,7 +66,6 @@ export default class AtomXFComboBox extends AtomXFControl {
      */
     public itemPadding: number;
 
-    @BindableProperty
     public items: any[];
 
     public value: any;
