@@ -69,6 +69,7 @@ export default class AtomXFComboBox extends AtomXFControl {
     @BindableProperty
     public items: any[];
 
+    @BindableProperty
     public value: any;
 
     public valuePath: string | ((item: any) => string);
@@ -103,7 +104,7 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.searchText = "";
         this.itemPadding = 10;
         this.search = ["label", "value"];
-        this.value = null;
+        // this.value = null;
         this.valuePath = "value";
         this.selectedItem = null;
         this.promptTemplate = null;
