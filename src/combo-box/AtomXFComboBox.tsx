@@ -66,6 +66,7 @@ export default class AtomXFComboBox extends AtomXFControl {
      */
     public itemPadding: number;
 
+    @BindableProperty
     public items: any[];
 
     public value: any;
@@ -83,6 +84,17 @@ export default class AtomXFComboBox extends AtomXFControl {
         super(a, e || AtomBridge.instance.create(XF.Grid));
     }
 
+    public onPropertyChanged(name: keyof AtomXFComboBox): void {
+        if (name === "items") {
+            if (this.selectedItem === undefined
+                || this.selectedItem === null
+                || (this.items && this.items.indexOf(this.selectedItem) === -1)) {
+                AtomBinder.refreshValue(this, "value");
+                return;
+            }
+        }
+    }
+
     protected preCreate() {
         this.defaultControlStyle = AtomXFComboBoxStyle;
         this.prompt = "Select";
@@ -91,7 +103,6 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.searchText = "";
         this.itemPadding = 10;
         this.search = ["label", "value"];
-        this.items = null;
         this.value = null;
         this.valuePath = "value";
         this.selectedItem = null;
@@ -123,14 +134,14 @@ export default class AtomXFComboBox extends AtomXFControl {
 
         // if the items were updated... we need to refresh the selected item...
 
-        this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
-            if (this.selectedItem === undefined
-                || this.selectedItem === null
-                || (this.items && this.items.indexOf(this.selectedItem) === -1)) {
-                AtomBinder.refreshValue(this, "value");
-                return;
-            }
-        }));
+        // this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
+        //     if (this.selectedItem === undefined
+        //         || this.selectedItem === null
+        //         || (this.items && this.items.indexOf(this.selectedItem) === -1)) {
+        //         AtomBinder.refreshValue(this, "value");
+        //         return;
+        //     }
+        // }));
     }
 
     protected create() {
