@@ -88,9 +88,8 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public onPropertyChanged(name: keyof AtomXFComboBox): void {
         if (name === "items") {
-            if (this.selectedItem === undefined
-                || this.selectedItem === null
-                || (this.items && this.items.indexOf(this.selectedItem) === -1)) {
+            if (this.value !== undefined
+                && (this.items && this.items.indexOf(this.selectedItem) === -1)) {
                 AtomBinder.refreshValue(this, "value");
                 return;
             }
