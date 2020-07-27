@@ -125,6 +125,11 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
             if (this.selectedItem === null) {
                 AtomBinder.refreshValue(this, "value");
+                return;
+            }
+            if (this.items && this.items.indexOf(this.selectedItem) === -1) {
+                AtomBinder.refreshValue(this, "value");
+                return;
             }
         }));
     }
