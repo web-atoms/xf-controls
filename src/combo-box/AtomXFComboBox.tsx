@@ -129,8 +129,8 @@ export default class AtomXFComboBox extends AtomXFControl {
             "selectedItem",
             [["this", "value"]],
             true, {
-                fromSource: (v) => v !== undefined && v !== null && this.items
-                    ? this.items.find((x) => vf(x) === v) || this.selectedItem
+                fromSource: (v) => (v !== undefined && v !== null && this.items)
+                    ? (this.items.find((x) => vf(x) === v) || this.selectedItem)
                     : this.selectedItem,
                 fromTarget: (v) => vf(v, this.value)
             }, this));
