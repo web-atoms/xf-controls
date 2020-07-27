@@ -2,6 +2,7 @@ import { AtomBinder } from "@web-atoms/core/dist/core/AtomBinder";
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import { AtomWatcher } from "@web-atoms/core/dist/core/AtomWatcher";
 import Bind from "@web-atoms/core/dist/core/Bind";
+import { BindableProperty } from "@web-atoms/core/dist/core/BindableProperty";
 import Colors from "@web-atoms/core/dist/core/Colors";
 import { PropertyBinding } from "@web-atoms/core/dist/core/PropertyBinding";
 import { IClassOf } from "@web-atoms/core/dist/core/types";
@@ -65,6 +66,7 @@ export default class AtomXFComboBox extends AtomXFControl {
      */
     public itemPadding: number;
 
+    @BindableProperty
     public items: any[];
 
     public value: any;
@@ -80,6 +82,19 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     constructor(a: any, e?: any) {
         super(a, e || AtomBridge.instance.create(XF.Grid));
+    }
+
+    public onPropertyChanged(name: keyof AtomXFComboBox) {
+        if (name === "items") {
+            if (this.selectedItem === null) {
+                AtomBinder.refreshValue(this, "value");
+                return;
+            }
+            if (this.items && this.items.indexOf(this.selectedItem) === -1) {
+                AtomBinder.refreshValue(this, "value");
+                return;
+            }
+        }
     }
 
     protected preCreate() {
@@ -122,16 +137,16 @@ export default class AtomXFComboBox extends AtomXFControl {
 
         // if the items were updated... we need to refresh the selected item...
 
-        this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
-            if (this.selectedItem === null) {
-                AtomBinder.refreshValue(this, "value");
-                return;
-            }
-            if (this.items && this.items.indexOf(this.selectedItem) === -1) {
-                AtomBinder.refreshValue(this, "value");
-                return;
-            }
-        }));
+        // this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
+        //     if (this.selectedItem === null) {
+        //         AtomBinder.refreshValue(this, "value");
+        //         return;
+        //     }
+        //     if (this.items && this.items.indexOf(this.selectedItem) === -1) {
+        //         AtomBinder.refreshValue(this, "value");
+        //         return;
+        //     }
+        // }));
     }
 
     protected create() {
