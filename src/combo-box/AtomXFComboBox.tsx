@@ -55,6 +55,7 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public searchText: string;
 
+    @BindableProperty
     public selectedItem: any;
 
     public selectionViewTemplate: any;
@@ -106,15 +107,15 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.search = ["label", "value"];
         // this.value = null;
         this.valuePath = "value";
-        this.selectedItem = null;
+        // this.selectedItem = null;
         this.promptTemplate = null;
         this.itemTemplate = null;
         this.dropDownImage = "res://WebAtoms.XF/Images.DropDownImage.png";
         this.selectionViewTemplate = null;
 
-        const vf = (item) => {
+        const vf = (item, def?) => {
             if (item === undefined || item === null) {
-                return null;
+                return def;
             }
             const vp = this.valuePath;
             if (typeof vp === "function") {
@@ -126,11 +127,11 @@ export default class AtomXFComboBox extends AtomXFControl {
         this.registerDisposable(new PropertyBinding(
             this,
             this.element,
-            "value",
-            [["this", "selectedItem"]],
+            "selectedItem",
+            [["this", "value"]],
             true, {
-                fromSource: (v) => vf(v),
-                fromTarget: (v) => this.items ? this.items.find((x) => vf(x) === v) : undefined
+                fromSource: (v) => this.items ? this.items.find((x) => vf(x) === v) : undefined,
+                fromTarget: (v) => vf(v, this.value)
             }, this));
 
         // if the items were updated... we need to refresh the selected item...
