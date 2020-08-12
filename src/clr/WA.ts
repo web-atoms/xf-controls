@@ -59,14 +59,14 @@ declare class AtomTemplateSelector extends RootObject {
 }
 
 const WA = {
-    AtomRepeater: bridge.getClass(`${NSAtoms}.AtomRepeater, ${NSAssembly}`) as typeof AtomRepeater,
-    AtomToolbarItem: bridge.getClass(`${NSAtoms}.AtomToolbarItem, ${NSAssembly}`) as typeof AtomToolbarItem,
-    AtomView: bridge.getClass(`${NSAtoms}.AtomView, ${NSAssembly}`) as typeof AtomView,
-    AtomForm: bridge.getClass(`${NSAtoms}.AtomForm, ${NSAssembly}`) as typeof AtomForm,
-    AtomField: bridge.getClass(`${NSAtoms}.AtomField, ${NSAssembly}`) as typeof AtomField,
-    AtomTemplateSelector: bridge.getClass(`${NSAtoms}.AtomTemplateSelector, ${NSAssembly}`) as typeof AtomTemplateSelector,
-    GroupBy: bridge.getClass(`${NSAtoms}.GroupBy, ${NSAssembly}`) as typeof GroupBy,
-    Markdown: bridge.getClass(`${NSAtoms}.Markdown, ${NSAssembly}`) as typeof Markdown,
+    get AtomRepeater(): typeof AtomRepeater { return this._AtomRepeater || (this._AtomRepeater = bridge.getClass(`${NSAtoms}.AtomRepeater, ${NSAssembly}`)); },
+    get AtomToolbarItem(): typeof AtomToolbarItem { return this._AtomToolbarItem || (this._AtomToolbarItem = bridge.getClass(`${NSAtoms}.AtomToolbarItem, ${NSAssembly}`)); },
+    get AtomView(): typeof  AtomView { return this._AtomView || (this._AtomView = bridge.getClass(`${NSAtoms}.AtomView, ${NSAssembly}`)); },
+    get AtomForm(): typeof AtomForm { return this._AtomForm || (this._AtomForm = bridge.getClass(`${NSAtoms}.AtomForm, ${NSAssembly}`)); },
+    get AtomField(): typeof AtomField { return this._AtomField || (this._AtomField = bridge.getClass(`${NSAtoms}.AtomField, ${NSAssembly}`)) ; },
+    get AtomTemplateSelector(): typeof AtomTemplateSelector { return this._AtomTemplateSelector || (this._AtomTemplateSelector = bridge.getClass(`${NSAtoms}.AtomTemplateSelector, ${NSAssembly}`)) ; },
+    get GroupBy(): typeof GroupBy { return this._GroupBy || (this._GroupBy = bridge.getClass(`${NSAtoms}.GroupBy, ${NSAssembly}`)); },
+    get Markdown(): typeof Markdown { return this._Markdown || (this._Markdown = bridge.getClass(`${NSAtoms}.Markdown, ${NSAssembly}`)); }
 };
 
 export default WA;
