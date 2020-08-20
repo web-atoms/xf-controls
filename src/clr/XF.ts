@@ -75,6 +75,9 @@ public styleClass?: any;
 declare class VisualElement extends NavigableElement {
     
     
+/** Property VisualElement.Background of Type Xamarin.Forms.Brush */
+public static background: NodeFactory;;
+
 /** Property VisualElement.Behaviors of Type Xamarin.Forms.Behavior */
 public static behaviors: NodeFactory;;
 
@@ -1981,6 +1984,9 @@ public static hasBackButton: AttachedNode;
 public static iconColor: AttachedNode;
 
     
+/** Property NavigationPage.BarBackground of Type Xamarin.Forms.Brush */
+public static barBackground: NodeFactory;;
+
 /** Property NavigationPage.CurrentPage of Type Xamarin.Forms.Page */
 public static currentPage: NodeFactory;;
 
@@ -2532,6 +2538,12 @@ public static flyoutBackdrop: AttachedNode;
 /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
 public static currentItem: NodeFactory;;
 
+/** Property Shell.FlyoutBackdrop of Type Xamarin.Forms.Brush */
+public static flyoutBackdrop: NodeFactory;;
+
+/** Property Shell.FlyoutBackground of Type Xamarin.Forms.Brush */
+public static flyoutBackground: NodeFactory;;
+
 /** Property Shell.FlyoutBackgroundImage of Type Xamarin.Forms.ImageSource */
 public static flyoutBackgroundImage: NodeFactory;;
 
@@ -2948,6 +2960,9 @@ public thumbColor?: ColorItem | string | null | Bind;
 declare class TabbedPage extends Page {
     
     
+/** Property TabbedPage.BarBackground of Type Xamarin.Forms.Brush */
+public static barBackground: NodeFactory;;
+
 /** Property TabbedPage.Children of Type Xamarin.Forms.Page */
 public static children: NodeFactory;;
 
@@ -3267,6 +3282,12 @@ public translateY?: number | Bind;
 declare class Shape extends View {
     
     
+/** Property Shape.Fill of Type Xamarin.Forms.Brush */
+public static fill: NodeFactory;;
+
+/** Property Shape.Stroke of Type Xamarin.Forms.Brush */
+public static stroke: NodeFactory;;
+
 /** Property Shape.StrokeDashArray of Type System.Double */
 public static strokeDashArray: NodeFactory;
     
