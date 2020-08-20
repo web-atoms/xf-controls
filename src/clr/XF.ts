@@ -2530,11 +2530,6 @@ public static titleColor: AttachedNode;
 /** Attached Property Shell.UnselectedColor of Type BindableProperty*/
 public static unselectedColor: AttachedNode;
 
-
-/** Attached Property Shell.FlyoutBackdrop of Type BindableProperty*/
-public static flyoutBackdrop: AttachedNode;
-
-    
 /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
 public static currentItem: NodeFactory;;
 
