@@ -94,6 +94,9 @@ public anchorX?: number | Bind;
 /** Property AnchorY of Type Double */
 public anchorY?: number | Bind;
 
+/** Property Background of Type Brush */
+public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
+
 /** Property BackgroundColor of Type Color */
 public backgroundColor?: ColorItem | string | null | Bind;
 
@@ -383,6 +386,14 @@ public cornerRadius?: /*CornerRadius*/ any;
 }
 
 
+declare class Brush extends BindableObject {
+    
+    
+    
+    
+}
+
+
 declare class Button extends View {
     
     
@@ -440,6 +451,9 @@ public text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
+
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
 }
 
 
@@ -812,6 +826,9 @@ public minimumDate?: any;
 
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
+
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
 }
 
 
@@ -822,6 +839,50 @@ declare class DeviceStateTrigger extends StateTriggerBase {
     
 /** Property Device of Type String */
 public device?: string | null | Bind;
+}
+
+
+declare class DragGestureRecognizer extends GestureRecognizer {
+    
+    
+    
+    
+/** Property CanDrag of Type Boolean */
+public canDrag?: boolean | Bind;
+
+/** Property DragStartingCommand of Type ICommand */
+public dragStartingCommand?: any;
+
+/** Property DragStartingCommandParameter of Type Object */
+public dragStartingCommandParameter?: any;
+
+/** Property DropCompletedCommand of Type ICommand */
+public dropCompletedCommand?: any;
+
+/** Property DropCompletedCommandParameter of Type Object */
+public dropCompletedCommandParameter?: any;
+}
+
+
+declare class DropGestureRecognizer extends GestureRecognizer {
+    
+    
+    
+    
+/** Property AllowDrop of Type Boolean */
+public allowDrop?: boolean | Bind;
+
+/** Property DragOverCommand of Type ICommand */
+public dragOverCommand?: any;
+
+/** Property DragOverCommandParameter of Type Object */
+public dragOverCommandParameter?: any;
+
+/** Property DropCommand of Type ICommand */
+public dropCommand?: any;
+
+/** Property DropCommandParameter of Type Object */
+public dropCommandParameter?: any;
 }
 
 
@@ -856,6 +917,9 @@ public text?: string | null | Bind;
 
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
+
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
 }
 
 
@@ -1115,6 +1179,31 @@ declare class GestureElement extends Element {
 public static gestureRecognizers: NodeFactory;
     
     
+}
+
+
+declare class GradientBrush extends Brush {
+    
+    
+/** Property GradientBrush.GradientStops of Type Xamarin.Forms.GradientStop */
+public static gradientStops: NodeFactory;
+    
+    
+/** Property GradientStops of Type GradientStopCollection */
+public gradientStops?: any;
+}
+
+
+declare class GradientStop extends BindableObject {
+    
+    
+    
+    
+/** Property Color of Type Color */
+public color?: ColorItem | string | null | Bind;
+
+/** Property Offset of Type Single */
+public offset?: number | Bind;
 }
 
 
@@ -1625,6 +1714,9 @@ public textColor?: ColorItem | string | null | Bind;
 /** Property TextDecorations of Type TextDecorations */
 public textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
 
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
+
 /** Property TextType of Type TextType */
 public textType?: "Text" | "Html" | Bind;
 
@@ -1636,6 +1728,19 @@ public xAlign?: "Start" | "Center" | "End" | Bind;
 
 /** Property YAlign of Type TextAlignment */
 public yAlign?: "Start" | "Center" | "End" | Bind;
+}
+
+
+declare class LinearGradientBrush extends GradientBrush {
+    
+    
+    
+    
+/** Property EndPoint of Type Point */
+public endPoint?: "Zero" | Bind;
+
+/** Property StartPoint of Type Point */
+public startPoint?: "Zero" | Bind;
 }
 
 
@@ -1895,6 +2000,9 @@ public static titleView: NodeFactory;
 root: any;
 
     
+/** Property BarBackground of Type Brush */
+public barBackground?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
+
 /** Property BarBackgroundColor of Type Color */
 public barBackgroundColor?: ColorItem | string | null | Bind;
 
@@ -1964,6 +2072,9 @@ public fontFamily?: string | null | Bind;
 /** Property FontSize of Type Double */
 public fontSize?: number | Bind;
 
+/** Property HorizontalTextAlignment of Type TextAlignment */
+public horizontalTextAlignment?: "Start" | "Center" | "End" | Bind;
+
 /** Property ItemDisplayBinding of Type BindingBase */
 public itemDisplayBinding?: any;
 
@@ -1979,11 +2090,17 @@ public selectedItem?: any;
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
 
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
+
 /** Property Title of Type String */
 public title?: string | null | Bind;
 
 /** Property TitleColor of Type Color */
 public titleColor?: ColorItem | string | null | Bind;
+
+/** Property VerticalTextAlignment of Type TextAlignment */
+public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
 
 
@@ -2007,6 +2124,19 @@ public progress?: number | Bind;
 
 /** Property ProgressColor of Type Color */
 public progressColor?: ColorItem | string | null | Bind;
+}
+
+
+declare class RadialGradientBrush extends GradientBrush {
+    
+    
+    
+    
+/** Property Center of Type Point */
+public center?: "Zero" | Bind;
+
+/** Property Radius of Type Double */
+public radius?: number | Bind;
 }
 
 
@@ -2191,6 +2321,9 @@ public isEnabled?: boolean | Bind;
 /** Property IsTabStop of Type Boolean */
 public isTabStop?: boolean | Bind;
 
+/** Property IsVisible of Type Boolean */
+public isVisible?: boolean | Bind;
+
 /** Property Route of Type String */
 public route?: string | null | Bind;
 
@@ -2314,6 +2447,9 @@ public showsResults?: boolean | Bind;
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
 
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
+
 /** Property VerticalTextAlignment of Type TextAlignment */
 public verticalTextAlignment?: "Start" | "Center" | "End" | Bind;
 }
@@ -2388,6 +2524,10 @@ public static titleColor: AttachedNode;
 /** Attached Property Shell.UnselectedColor of Type BindableProperty*/
 public static unselectedColor: AttachedNode;
 
+
+/** Attached Property Shell.FlyoutBackdrop of Type BindableProperty*/
+public static flyoutBackdrop: AttachedNode;
+
     
 /** Property Shell.CurrentItem of Type Xamarin.Forms.ShellItem */
 public static currentItem: NodeFactory;;
@@ -2416,6 +2556,12 @@ public static titleView: NodeFactory;
     
 /** Property CurrentItem of Type ShellItem */
 public currentItem?: any;
+
+/** Property FlyoutBackdrop of Type Brush */
+public flyoutBackdrop?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
+
+/** Property FlyoutBackground of Type Brush */
+public flyoutBackground?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
 
 /** Property FlyoutBackgroundColor of Type Color */
 public flyoutBackgroundColor?: ColorItem | string | null | Bind;
@@ -2500,6 +2646,9 @@ public currentItem?: any;
 
 declare class FlyoutItem extends ShellItem {
     
+/** Attached Property FlyoutItem.IsVisible of Type BindableProperty*/
+public static isVisible: AttachedNode;
+
     
     
     
@@ -2576,6 +2725,16 @@ public value?: number | Bind;
 }
 
 
+declare class SolidColorBrush extends Brush {
+    
+    
+    
+    
+/** Property Color of Type Color */
+public color?: ColorItem | string | null | Bind;
+}
+
+
 declare class Span extends GestureElement {
     
     
@@ -2616,6 +2775,9 @@ public textColor?: ColorItem | string | null | Bind;
 
 /** Property TextDecorations of Type TextDecorations */
 public textDecorations?: "None" | "Underline" | "Strikethrough" | Bind;
+
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
 }
 
 
@@ -2796,6 +2958,9 @@ public static currentPage: NodeFactory;;
 public static itemTemplate: NodeFactory;
     
     
+/** Property BarBackground of Type Brush */
+public barBackground?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
+
 /** Property BarBackgroundColor of Type Color */
 public barBackgroundColor?: ColorItem | string | null | Bind;
 
@@ -2927,6 +3092,9 @@ public format?: string | null | Bind;
 
 /** Property TextColor of Type Color */
 public textColor?: ColorItem | string | null | Bind;
+
+/** Property TextTransform of Type TextTransform */
+public textTransform?: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
 
 /** Property Time of Type TimeSpan */
 public time?: any;
@@ -3106,11 +3274,11 @@ public static strokeDashArray: NodeFactory;
 /** Property Aspect of Type Stretch */
 public aspect?: "None" | "Fill" | "Uniform" | "UniformToFill" | Bind;
 
-/** Property Fill of Type Color */
-public fill?: ColorItem | string | null | Bind;
+/** Property Fill of Type Brush */
+public fill?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
 
-/** Property Stroke of Type Color */
-public stroke?: ColorItem | string | null | Bind;
+/** Property Stroke of Type Brush */
+public stroke?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
 
 /** Property StrokeDashArray of Type DoubleCollection */
 public strokeDashArray?: /*DoubleCollection*/ any;
@@ -3123,6 +3291,9 @@ public strokeLineCap?: "Flat" | "Square" | "Round" | Bind;
 
 /** Property StrokeLineJoin of Type PenLineJoin */
 public strokeLineJoin?: "Miter" | "Bevel" | "Round" | Bind;
+
+/** Property StrokeMiterLimit of Type Double */
+public strokeMiterLimit?: number | Bind;
 
 /** Property StrokeThickness of Type Double */
 public strokeThickness?: number | Bind;
@@ -3376,7 +3547,7 @@ declare class RectangleGeometry extends Geometry {
     
     
     
-/** Property Rect of Type Rectangle */
+/** Property Rect of Type Rect */
 public rect?: "Zero" | Bind;
 }
 
@@ -3473,6 +3644,7 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get BaseMenuItem(): typeof BaseMenuItem { return  this._BaseMenuItem || (this._BaseMenuItem = bridge.getClass('Xamarin.Forms.BaseMenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get BindableLayout(): typeof BindableLayout { return  this._BindableLayout || (this._BindableLayout = bridge.getClass('Xamarin.Forms.BindableLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get BoxView(): typeof BoxView { return  this._BoxView || (this._BoxView = bridge.getClass('Xamarin.Forms.BoxView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get Brush(): typeof Brush { return  this._Brush || (this._Brush = bridge.getClass('Xamarin.Forms.Brush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Button(): typeof Button { return  this._Button || (this._Button = bridge.getClass('Xamarin.Forms.Button, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Page(): typeof Page { return  this._Page || (this._Page = bridge.getClass('Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get CarouselPage(): typeof CarouselPage { return  this._CarouselPage || (this._CarouselPage = bridge.getClass('Xamarin.Forms.CarouselPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
@@ -3497,6 +3669,8 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get DataTemplateSelector(): typeof DataTemplateSelector { return  this._DataTemplateSelector || (this._DataTemplateSelector = bridge.getClass('Xamarin.Forms.DataTemplateSelector, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get DatePicker(): typeof DatePicker { return  this._DatePicker || (this._DatePicker = bridge.getClass('Xamarin.Forms.DatePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get DeviceStateTrigger(): typeof DeviceStateTrigger { return  this._DeviceStateTrigger || (this._DeviceStateTrigger = bridge.getClass('Xamarin.Forms.DeviceStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get DragGestureRecognizer(): typeof DragGestureRecognizer { return  this._DragGestureRecognizer || (this._DragGestureRecognizer = bridge.getClass('Xamarin.Forms.DragGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get DropGestureRecognizer(): typeof DropGestureRecognizer { return  this._DropGestureRecognizer || (this._DropGestureRecognizer = bridge.getClass('Xamarin.Forms.DropGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get InputView(): typeof InputView { return  this._InputView || (this._InputView = bridge.getClass('Xamarin.Forms.InputView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Editor(): typeof Editor { return  this._Editor || (this._Editor = bridge.getClass('Xamarin.Forms.Editor, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Entry(): typeof Entry { return  this._Entry || (this._Entry = bridge.getClass('Xamarin.Forms.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
@@ -3510,6 +3684,8 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get FormattedString(): typeof FormattedString { return  this._FormattedString || (this._FormattedString = bridge.getClass('Xamarin.Forms.FormattedString, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Frame(): typeof Frame { return  this._Frame || (this._Frame = bridge.getClass('Xamarin.Forms.Frame, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get GestureElement(): typeof GestureElement { return  this._GestureElement || (this._GestureElement = bridge.getClass('Xamarin.Forms.GestureElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get GradientBrush(): typeof GradientBrush { return  this._GradientBrush || (this._GradientBrush = bridge.getClass('Xamarin.Forms.GradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get GradientStop(): typeof GradientStop { return  this._GradientStop || (this._GradientStop = bridge.getClass('Xamarin.Forms.GradientStop, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Grid(): typeof Grid { return  this._Grid || (this._Grid = bridge.getClass('Xamarin.Forms.Grid, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get WebViewSource(): typeof WebViewSource { return  this._WebViewSource || (this._WebViewSource = bridge.getClass('Xamarin.Forms.WebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get HtmlWebViewSource(): typeof HtmlWebViewSource { return  this._HtmlWebViewSource || (this._HtmlWebViewSource = bridge.getClass('Xamarin.Forms.HtmlWebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
@@ -3532,6 +3708,7 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get GridItemsLayout(): typeof GridItemsLayout { return  this._GridItemsLayout || (this._GridItemsLayout = bridge.getClass('Xamarin.Forms.GridItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get LinearItemsLayout(): typeof LinearItemsLayout { return  this._LinearItemsLayout || (this._LinearItemsLayout = bridge.getClass('Xamarin.Forms.LinearItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Label(): typeof Label { return  this._Label || (this._Label = bridge.getClass('Xamarin.Forms.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get LinearGradientBrush(): typeof LinearGradientBrush { return  this._LinearGradientBrush || (this._LinearGradientBrush = bridge.getClass('Xamarin.Forms.LinearGradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get ListView(): typeof ListView { return  this._ListView || (this._ListView = bridge.getClass('Xamarin.Forms.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get MasterDetailPage(): typeof MasterDetailPage { return  this._MasterDetailPage || (this._MasterDetailPage = bridge.getClass('Xamarin.Forms.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get MediaElement(): typeof MediaElement { return  this._MediaElement || (this._MediaElement = bridge.getClass('Xamarin.Forms.MediaElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
@@ -3544,6 +3721,7 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get Picker(): typeof Picker { return  this._Picker || (this._Picker = bridge.getClass('Xamarin.Forms.Picker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get PinchGestureRecognizer(): typeof PinchGestureRecognizer { return  this._PinchGestureRecognizer || (this._PinchGestureRecognizer = bridge.getClass('Xamarin.Forms.PinchGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get ProgressBar(): typeof ProgressBar { return  this._ProgressBar || (this._ProgressBar = bridge.getClass('Xamarin.Forms.ProgressBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get RadialGradientBrush(): typeof RadialGradientBrush { return  this._RadialGradientBrush || (this._RadialGradientBrush = bridge.getClass('Xamarin.Forms.RadialGradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get RadioButton(): typeof RadioButton { return  this._RadioButton || (this._RadioButton = bridge.getClass('Xamarin.Forms.RadioButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get RefreshView(): typeof RefreshView { return  this._RefreshView || (this._RefreshView = bridge.getClass('Xamarin.Forms.RefreshView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get RelativeLayout(): typeof RelativeLayout { return  this._RelativeLayout || (this._RelativeLayout = bridge.getClass('Xamarin.Forms.RelativeLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
@@ -3562,6 +3740,7 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get ShellSection(): typeof ShellSection { return  this._ShellSection || (this._ShellSection = bridge.getClass('Xamarin.Forms.ShellSection, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Tab(): typeof Tab { return  this._Tab || (this._Tab = bridge.getClass('Xamarin.Forms.Tab, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Slider(): typeof Slider { return  this._Slider || (this._Slider = bridge.getClass('Xamarin.Forms.Slider, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get SolidColorBrush(): typeof SolidColorBrush { return  this._SolidColorBrush || (this._SolidColorBrush = bridge.getClass('Xamarin.Forms.SolidColorBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get Span(): typeof Span { return  this._Span || (this._Span = bridge.getClass('Xamarin.Forms.Span, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get StackLayout(): typeof StackLayout { return  this._StackLayout || (this._StackLayout = bridge.getClass('Xamarin.Forms.StackLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get StateTrigger(): typeof StateTrigger { return  this._StateTrigger || (this._StateTrigger = bridge.getClass('Xamarin.Forms.StateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
