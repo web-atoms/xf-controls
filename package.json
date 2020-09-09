@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/web-atoms/xf-controls#readme",
   "dependencies": {
-    "@web-atoms/core": "^1.2.19",
-    "@web-atoms/date-time": "^1.0.25",
-    "@web-atoms/font-awesome": "^1.0.21",
-    "@web-atoms/module-loader": "^1.0.429"
+    "@web-atoms/core": "^1.2.47",
+    "@web-atoms/date-time": "^1.0.26",
+    "@web-atoms/font-awesome": "^1.0.22",
+    "@web-atoms/module-loader": "^1.0.431"
   }
 }
