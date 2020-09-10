@@ -117,18 +117,7 @@ export default class AtomChooser extends AtomXFControl {
             }
             return item[vp];
         };
-        const lf = (item, def?) => {
-            if (item === undefined || item === null) {
-                return def;
-            }
-            const vp = this.labelPath;
-            if (typeof vp === "function") {
-                return vp(item);
-            }
-            return item[vp];
-        };
-
-        this.selectableList = new AtomSelectableList(true, vf, lf);
+        this.selectableList = new AtomSelectableList(true, vf);
         this.defaultControlStyle = AtomChooserStyle;
         this.prompt = "Select";
         this.showSearch = true;
@@ -158,6 +147,17 @@ export default class AtomChooser extends AtomXFControl {
     protected create() {
 
         // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
+        const lf = (item, def?) => {
+            if (item === undefined || item === null) {
+                return def;
+            }
+            const vp = this.labelPath;
+            if (typeof vp === "function") {
+                return vp(item);
+            }
+            return item[vp];
+        };
+
 
         this.render(<XF.Grid
             selectedItems={Bind.twoWays(() => this.selectableList.selectedItems)}
@@ -181,7 +181,7 @@ export default class AtomChooser extends AtomXFControl {
                     <XF.Label
                         styleClass="item"
                         verticalTextAlignment="Center"
-                        text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
+                        text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}
                         backgroundColor={Bind.oneWay((x) => x.data.selected
                             ? Colors.lightBlue
                             : Colors.white )}
@@ -203,7 +203,8 @@ export default class AtomChooser extends AtomXFControl {
                 wrap="Wrap"
                 justifyContent="SpaceAround"
                 { ...  XF.BindableLayout.itemsSource(Bind.oneWay(() => this.selectableList.selectedItems))}
-                { ... XF.BindableLayout.itemTemplate(Bind.oneWay(() => this.itemTemplate))}>
+                { ... XF.BindableLayout.itemTemplate(Bind.oneWay(() => this.itemTemplate))}
+                { ... XF.BindableLayout.emptyViewTemplate(Bind.oneWay(() => this.promptTemplate)) }>
                 </XF.FlexLayout>
             <XF.ImageButton
                 { ... XF.Grid.column(1) }

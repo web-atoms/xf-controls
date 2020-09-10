@@ -40,7 +40,7 @@ export default class ChooserList extends AtomContentView {
                 <XF.StackLayout
                     { ... XF.Grid.row(2) }
                     orientation="Horizontal">
-                    <XF.Button text="Cancel" command={() => this.viewModel.close(this.viewModel.selectableList.value)}/>
+                    <XF.Button text="Select" command={() => this.viewModel.close(this.viewModel.selectableList.value)}/>
                     <XF.Button text="Cancel" command={() => this.viewModel.cancel()}/>
                 </XF.StackLayout>
             </XF.Grid>
