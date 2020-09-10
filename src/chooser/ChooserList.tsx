@@ -25,14 +25,7 @@ export default class ChooserList extends AtomContentView {
                         <XF.DataTemplate>
                             <XF.ViewCell>
                                 <WA.AtomView
-                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
-                                    <WA.AtomView.gestureRecognizers>
-                                        <XF.TapGestureRecognizer
-                                            command={Bind.event((x) => {
-                                                x.data.selected = !x.data.selected;
-                                            })}/>
-                                    </WA.AtomView.gestureRecognizers>
-                                </WA.AtomView>
+                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}/>
                             </XF.ViewCell>
                         </XF.DataTemplate>
                     </XF.ListView.itemTemplate>

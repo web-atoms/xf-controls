@@ -42,6 +42,8 @@ export default class AtomChooser extends AtomXFControl {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
 
+    public static labelTemplate = XNode.prepare("labelTemplate", true, true);
+
     public static promptTemplate = XNode.prepare("promptTemplate", true, true);
 
     public static selectionViewTemplate = XNode.prepare("selectionViewTemplate", true, true);
@@ -51,6 +53,8 @@ export default class AtomChooser extends AtomXFControl {
     public itemTemplate: IClassOf<AtomXFControl>;
 
     public promptTemplate: IClassOf<AtomXFControl>;
+
+    public labelTemplate: IClassOf<AtomXFControl>;
 
     public showAsPopup: boolean;
 
@@ -104,6 +108,9 @@ export default class AtomChooser extends AtomXFControl {
                 return;
             }
         }
+        if (name === "value") {
+            this.selectableList.value = this.value;
+        }
     }
 
     protected preCreate() {
@@ -130,6 +137,7 @@ export default class AtomChooser extends AtomXFControl {
         // this.selectedItem = null;
         this.promptTemplate = null;
         this.itemTemplate = null;
+        this.labelTemplate = null;
         this.dropDownImage = "res://WebAtoms.XF/Images.DropDownImage.png";
         this.selectionViewTemplate = null;
         // if the items were updated... we need to refresh the selected item...
@@ -178,16 +186,36 @@ export default class AtomChooser extends AtomXFControl {
             {/** Default Item Template */}
             <AtomChooser.itemTemplate>
                 <XF.DataTemplate>
-                    <XF.Label
-                        styleClass="item"
-                        verticalTextAlignment="Center"
-                        text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}
+                    <XF.StackLayout
+                        orientation="Horizontal"
                         backgroundColor={Bind.oneWay((x) => x.data.selected
                             ? Colors.lightBlue
-                            : Colors.white )}
-                        />
+                            : Colors.white )}>
+                        <XF.CheckBox
+                            isChecked={Bind.twoWays((x) => x.data.selected)}/>
+                        <XF.Label
+                            styleClass="item"
+                            verticalTextAlignment="Center"
+                            text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}/>
+                    </XF.StackLayout>
                 </XF.DataTemplate>
             </AtomChooser.itemTemplate>
+
+            { /** Label Template (it has delete button) */}
+            <AtomChooser.labelTemplate>
+                <XF.StackLayout
+                    orientation="Horizontal">
+                    <XF.Label
+                        styleClass="label"
+                        verticalTextAlignment="Center"
+                        text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}/>
+                    <XF.ImageButton
+                        command={Bind.event((x) => x.data.selected = !x.data.selected)}
+                        backgroundColor="#00000000"
+                        widthRequest={35}
+                        source="res://WebAtoms.XF/Images.DeleteImage.png"/>
+                </XF.StackLayout>
+            </AtomChooser.labelTemplate>
 
             <AtomChooser.selectionViewTemplate>
                 <XF.DataTemplate>
@@ -203,7 +231,7 @@ export default class AtomChooser extends AtomXFControl {
                 wrap="Wrap"
                 justifyContent="SpaceAround"
                 { ...  XF.BindableLayout.itemsSource(Bind.oneWay(() => this.selectableList.selectedItems))}
-                { ... XF.BindableLayout.itemTemplate(Bind.oneWay(() => this.itemTemplate))}
+                { ... XF.BindableLayout.itemTemplate(Bind.oneWay(() => this.labelTemplate))}
                 { ... XF.BindableLayout.emptyViewTemplate(Bind.oneWay(() => this.promptTemplate)) }>
                 </XF.FlexLayout>
             <XF.ImageButton
