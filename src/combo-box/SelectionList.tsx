@@ -39,6 +39,7 @@ export default class SelectionList extends AtomContentView {
                 </XF.CollectionView> */}
                 <XF.ListView
                     { ... XF.Grid.row(1) }
+                    cachingStrategy="RecycleElement"
                     itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}>
                     <XF.ListView.itemTemplate>
                         <XF.DataTemplate>

@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/xf-controls",
-  "version": "1.1.11",
+  "version": "1.1.35",
   "description": "Xamarin.Forms controls for web atoms",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/web-atoms/xf-controls#readme",
   "dependencies": {
-    "@web-atoms/core": "^1.2.19",
-    "@web-atoms/date-time": "^1.0.25",
-    "@web-atoms/font-awesome": "^1.0.21",
-    "@web-atoms/module-loader": "^1.0.429"
+    "@web-atoms/core": "^1.2.51",
+    "@web-atoms/date-time": "^1.0.26",
+    "@web-atoms/font-awesome": "^1.0.22",
+    "@web-atoms/module-loader": "^1.0.431"
   }
 }

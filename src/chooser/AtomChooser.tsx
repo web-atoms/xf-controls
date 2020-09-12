@@ -14,15 +14,18 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import RgPluginsPopup from "../clr/RgPluginsPopup";
 import WA from "../clr/WA";
 import XF from "../clr/XF";
+import SearchPageViewModel from "../combo-box/SearchPageViewModel";
+import SelectionList from "../combo-box/SelectionList";
 import AtomXFLink from "../link/AtomXFLink";
 import AtomXFContentPage from "../pages/AtomXFContentPage";
 import AtomXFPopupPage from "../pages/AtomXFPopupPage";
-import SearchPageViewModel from "./SearchPageViewModel";
-import SelectionList from "./SelectionList";
+
+import AtomSelectableList from "@web-atoms/core/dist/core/AtomSelectableList";
+import ChooserList from "./ChooserList";
 
 export type ItemSearchFunction  = ((item: any, search: string) => boolean) | string[];
 
-export class AtomXFComboBoxStyle extends AtomStyle {
+export class AtomChooserStyle extends AtomStyle {
 
     public get root(): IStyleDeclaration {
         return {
@@ -35,9 +38,11 @@ export class AtomXFComboBoxStyle extends AtomStyle {
     }
 }
 
-export default class AtomXFComboBox extends AtomXFControl {
+export default class AtomChooser extends AtomXFControl {
 
     public static itemTemplate = XNode.prepare("itemTemplate", true, true);
+
+    public static labelTemplate = XNode.prepare("labelTemplate", true, true);
 
     public static promptTemplate = XNode.prepare("promptTemplate", true, true);
 
@@ -49,6 +54,8 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public promptTemplate: IClassOf<AtomXFControl>;
 
+    public labelTemplate: IClassOf<AtomXFControl>;
+
     public showAsPopup: boolean;
 
     public showSearch: boolean;
@@ -56,7 +63,7 @@ export default class AtomXFComboBox extends AtomXFControl {
     public searchText: string;
 
     @BindableProperty
-    public selectedItem: any;
+    public selectedItems: any[];
 
     public selectionViewTemplate: any;
 
@@ -73,7 +80,11 @@ export default class AtomXFComboBox extends AtomXFControl {
     @BindableProperty
     public value: any;
 
+    @BindableProperty
     public valuePath: string | ((item: any) => string);
+
+    @BindableProperty
+    public labelPath: string | ((item: any) => string);
 
     public dropDownImage: any;
 
@@ -82,22 +93,39 @@ export default class AtomXFComboBox extends AtomXFControl {
      */
     public eventSelectionChanged: any;
 
+    private selectableList: AtomSelectableList<any>;
+
     constructor(a: any, e?: any) {
         super(a, e || AtomBridge.instance.create(XF.Grid));
     }
 
-    public onPropertyChanged(name: keyof AtomXFComboBox): void {
+    public onPropertyChanged(name: keyof AtomChooser): void {
         if (name === "items") {
+            this.selectableList.replace(this.items);
             if (this.value !== undefined
-                && (this.items && this.items.indexOf(this.selectedItem) === -1)) {
+                && (this.items && this.selectedItems.length >= 1)) {
                 AtomBinder.refreshValue(this, "value");
                 return;
             }
         }
+        if (name === "value") {
+            this.selectableList.value = this.value;
+        }
     }
 
     protected preCreate() {
-        this.defaultControlStyle = AtomXFComboBoxStyle;
+        const vf = (item, def?) => {
+            if (item === undefined || item === null) {
+                return def;
+            }
+            const vp = this.valuePath;
+            if (typeof vp === "function") {
+                return vp(item);
+            }
+            return item[vp];
+        };
+        this.selectableList = new AtomSelectableList(true, vf);
+        this.defaultControlStyle = AtomChooserStyle;
         this.prompt = "Select";
         this.showSearch = true;
         this.showAsPopup = true;
@@ -109,32 +137,9 @@ export default class AtomXFComboBox extends AtomXFControl {
         // this.selectedItem = null;
         this.promptTemplate = null;
         this.itemTemplate = null;
+        this.labelTemplate = null;
         this.dropDownImage = "res://WebAtoms.XF/Images.DropDownImage.png";
         this.selectionViewTemplate = null;
-
-        const vf = (item, def?) => {
-            if (item === undefined || item === null) {
-                return def;
-            }
-            const vp = this.valuePath;
-            if (typeof vp === "function") {
-                return vp(item);
-            }
-            return item[vp];
-        };
-
-        this.registerDisposable(new PropertyBinding(
-            this,
-            this.element,
-            "selectedItem",
-            [["this", "value"]],
-            true, {
-                fromSource: (v) => (v !== undefined && v !== null && this.items)
-                    ? (this.items.find((x) => vf(x) === v) || this.selectedItem)
-                    : this.selectedItem,
-                fromTarget: (v) => vf(v, this.value)
-            }, this));
-
         // if the items were updated... we need to refresh the selected item...
 
         // this.registerDisposable(new AtomWatcher(this, () => this.items, () => {
@@ -150,50 +155,85 @@ export default class AtomXFComboBox extends AtomXFControl {
     protected create() {
 
         // const ImageButton = XNode.attach(AtomXFLink, XF.ImageButton);
+        const lf = (item, def?) => {
+            if (item === undefined || item === null) {
+                return def;
+            }
+            const vp = this.labelPath;
+            if (typeof vp === "function") {
+                return vp(item);
+            }
+            return item[vp];
+        };
+
 
         this.render(<XF.Grid
+            selectedItems={Bind.twoWays(() => this.selectableList.selectedItems)}
+            value={Bind.twoWays(() => this.selectableList.value)}
             styleClass={this.controlStyle.name}
             >
 
             {/** Default Prompt Template */}
-            <AtomXFComboBox.promptTemplate>
+            <AtomChooser.promptTemplate>
                 <XF.DataTemplate>
                     <XF.Label
                         verticalTextAlignment="Center"
                         styleClass="item"
                         text={Bind.oneWay(() => this.prompt)}/>
                 </XF.DataTemplate>
-            </AtomXFComboBox.promptTemplate>
+            </AtomChooser.promptTemplate>
 
             {/** Default Item Template */}
-            <AtomXFComboBox.itemTemplate>
+            <AtomChooser.itemTemplate>
                 <XF.DataTemplate>
-                    <XF.Label
-                        styleClass="item"
-                        verticalTextAlignment="Center"
-                        text={Bind.oneWay((x) => (x.data ? ( x.data.label) : null) || "Loading.." )}
-                        backgroundColor={Bind.oneWay((x) => x.data === x.viewModel.selectedItem
+                    <XF.StackLayout
+                        orientation="Horizontal"
+                        backgroundColor={Bind.oneWay((x) => x.data.selected
                             ? Colors.lightBlue
-                            : Colors.white )}
-                        />
+                            : Colors.white )}>
+                        <XF.CheckBox
+                            isChecked={Bind.twoWays((x) => x.data.selected)}/>
+                        <XF.Label
+                            styleClass="item"
+                            verticalTextAlignment="Center"
+                            text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}/>
+                    </XF.StackLayout>
                 </XF.DataTemplate>
-            </AtomXFComboBox.itemTemplate>
+            </AtomChooser.itemTemplate>
 
-            <AtomXFComboBox.selectionViewTemplate>
+            { /** Label Template (it has delete button) */}
+            <AtomChooser.labelTemplate>
+                <XF.StackLayout
+                    orientation="Horizontal">
+                    <XF.Label
+                        styleClass="label"
+                        verticalTextAlignment="Center"
+                        text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}/>
+                    <XF.ImageButton
+                        command={Bind.event((x) => x.data.selected = !x.data.selected)}
+                        backgroundColor="#00000000"
+                        widthRequest={35}
+                        source="res://WebAtoms.XF/Images.DeleteImage.png"/>
+                </XF.StackLayout>
+            </AtomChooser.labelTemplate>
+
+            <AtomChooser.selectionViewTemplate>
                 <XF.DataTemplate>
-                    <SelectionList/>
+                    <ChooserList/>
                 </XF.DataTemplate>
-            </AtomXFComboBox.selectionViewTemplate>
+            </AtomChooser.selectionViewTemplate>
 
             <XF.Grid.columnDefinitions>
                 <XF.ColumnDefinition/>
                 <XF.ColumnDefinition width="Auto"/>
             </XF.Grid.columnDefinitions>
-            <WA.AtomView
-                bindingContext={Bind.oneWay(() => this.selectedItem)}
-                dataTemplate={Bind.oneWay(() => this.itemTemplate)}
-                emptyDataTemplate={Bind.oneWay(() => this.promptTemplate)}/>
-
+            <XF.FlexLayout
+                wrap="Wrap"
+                justifyContent="SpaceAround"
+                { ...  XF.BindableLayout.itemsSource(Bind.oneWay(() => this.selectableList.selectedItems))}
+                { ... XF.BindableLayout.itemTemplate(Bind.oneWay(() => this.labelTemplate))}
+                { ... XF.BindableLayout.emptyViewTemplate(Bind.oneWay(() => this.promptTemplate)) }>
+                </XF.FlexLayout>
             <XF.ImageButton
                 { ... XF.Grid.column(1) }
                 heightRequest={40}
@@ -204,16 +244,18 @@ export default class AtomXFComboBox extends AtomXFControl {
     }
 
     protected async openPopup() {
+        const oldValue = this.selectableList.value;
         try {
             const ns = this.resolve(NavigationService as any) as NavigationService;
             const r = await ns.openPage(this.showAsPopup ? SearchPopupPage : SearchPage, {
                 "title": this.prompt,
-                "ref:selectedItem": this.selectedItem,
+                "ref:selectableList": this.selectableList,
                 "ref:comboBox": this
             });
-            this.selectedItem = r;
+            this.selectableList.value = r as any;
             this.element.dispatchEvent(new CustomEvent("selectionChanged", { detail: r } ));
         } catch (e) {
+            this.selectableList.value = oldValue;
             // tslint:disable-next-line: no-console
             console.error(e);
         }
