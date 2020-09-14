@@ -30,6 +30,9 @@ export default class ChooserTest extends AtomXFContentPage {
                     items={Bind.oneWay(() => this.viewModel.genderList)}
                     value={Bind.twoWays(() => this.viewModel.gender)}
                     />
+                <XF.Label
+                    text={Bind.oneWay(() => this.viewModel.gender.join(","))}
+                    />
             </XF.StackLayout>
         </XF.ContentPage>);
     }

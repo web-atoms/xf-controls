@@ -24,6 +24,7 @@ export default class ComboBoxTest extends AtomXFContentPage {
 
         this.render(<XF.ContentPage>
             <XF.StackLayout>
+                <XF.BoxView heightRequest={50} widthRequest={1}/>
                 <AtomXFComboBox
                     showSearch={false}
                     items={Bind.oneWay(() => this.viewModel.genderList)}

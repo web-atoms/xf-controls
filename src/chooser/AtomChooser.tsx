@@ -108,9 +108,6 @@ export default class AtomChooser extends AtomXFControl {
                 return;
             }
         }
-        if (name === "value") {
-            this.selectableList.value = this.value;
-        }
     }
 
     protected preCreate() {
@@ -166,7 +163,6 @@ export default class AtomChooser extends AtomXFControl {
             return item[vp];
         };
 
-
         this.render(<XF.Grid
             selectedItems={Bind.twoWays(() => this.selectableList.selectedItems)}
             value={Bind.twoWays(() => this.selectableList.value)}
@@ -196,7 +192,9 @@ export default class AtomChooser extends AtomXFControl {
                         <XF.Label
                             styleClass="item"
                             verticalTextAlignment="Center"
-                            text={Bind.oneWay((x) => (x.data ? ( lf(x.data.item)) : null) || "Loading.." )}/>
+                            text={Bind.oneWay((x) => ((x.data && typeof x.data === "object")
+                                ? ( lf(x.data.item))
+                                : null) || "Loading.." )}/>
                     </XF.StackLayout>
                 </XF.DataTemplate>
             </AtomChooser.itemTemplate>
