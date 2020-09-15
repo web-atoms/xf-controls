@@ -15,6 +15,15 @@ declare class AtomView extends XF.ContentView {
     public emptyDataTemplate: any;
 }
 
+declare class AtomViewCell extends XF.ViewCell {
+    public static dataTemplate: NodeFactory;
+    public static command: NodeFactory;
+
+    public dataTemplate: any;
+    public command: any;
+}
+
+
 declare class AtomToolbarItem extends XF.ToolbarItem {
 
     public isVisible: boolean;
@@ -62,6 +71,7 @@ const WA = {
     get AtomRepeater(): typeof AtomRepeater { return this._AtomRepeater || (this._AtomRepeater = bridge.getClass(`${NSAtoms}.AtomRepeater, ${NSAssembly}`)); },
     get AtomToolbarItem(): typeof AtomToolbarItem { return this._AtomToolbarItem || (this._AtomToolbarItem = bridge.getClass(`${NSAtoms}.AtomToolbarItem, ${NSAssembly}`)); },
     get AtomView(): typeof  AtomView { return this._AtomView || (this._AtomView = bridge.getClass(`${NSAtoms}.AtomView, ${NSAssembly}`)); },
+    get AtomViewCell(): typeof  AtomViewCell { return this._AtomViewCell || (this._AtomViewCell = bridge.getClass(`${NSAtoms}.AtomViewCell, ${NSAssembly}`)); },
     get AtomForm(): typeof AtomForm { return this._AtomForm || (this._AtomForm = bridge.getClass(`${NSAtoms}.AtomForm, ${NSAssembly}`)); },
     get AtomField(): typeof AtomField { return this._AtomField || (this._AtomField = bridge.getClass(`${NSAtoms}.AtomField, ${NSAssembly}`)) ; },
     get AtomTemplateSelector(): typeof AtomTemplateSelector { return this._AtomTemplateSelector || (this._AtomTemplateSelector = bridge.getClass(`${NSAtoms}.AtomTemplateSelector, ${NSAssembly}`)) ; },

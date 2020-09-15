@@ -202,6 +202,7 @@ export default class AtomChooser extends AtomXFControl {
             { /** Label Template (it has delete button) */}
             <AtomChooser.labelTemplate>
                 <XF.StackLayout
+                    { ... XF.CompressedLayout.isHeadless(true) }
                     orientation="Horizontal">
                     <XF.Label
                         styleClass="label"

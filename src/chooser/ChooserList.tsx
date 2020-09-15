@@ -20,16 +20,9 @@ export default class ChooserList extends AtomContentView {
                 <XF.ListView
                     { ... XF.Grid.row(1) }
                     cachingStrategy="RecycleElement"
-                    itemsSource={Bind.oneWay(() => this.viewModel.selectableList.items)}>
-                    <XF.ListView.itemTemplate>
-                        <XF.DataTemplate>
-                            <XF.ViewCell>
-                                <WA.AtomView
-                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}/>
-                            </XF.ViewCell>
-                        </XF.DataTemplate>
-                    </XF.ListView.itemTemplate>
-                </XF.ListView>
+                    itemsSource={Bind.oneWay(() => this.viewModel.selectableList.items)}
+                    { ... WA.AtomViewCell.dataTemplate(Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)) }
+                    />
                 <XF.StackLayout
                     { ... XF.Grid.row(2) }
                     orientation="Horizontal">

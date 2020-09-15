@@ -709,6 +709,21 @@ public value?: any;
 }
 
 
+declare class CompressedLayout extends RootObject {
+    
+/** Attached Property CompressedLayout.IsHeadless of Type BindableProperty*/
+public static isHeadless: AttachedNode;
+
+
+/** Attached Property CompressedLayout.HeadlessOffset of Type BindableProperty*/
+public static headlessOffset: AttachedNode;
+
+    
+    
+    
+}
+
+
 declare class TemplatedPage extends Page {
     
     
@@ -3675,6 +3690,7 @@ const XF = { get BindableObject(): typeof BindableObject { return  this._Bindabl
 	get ClickGestureRecognizer(): typeof ClickGestureRecognizer { return  this._ClickGestureRecognizer || (this._ClickGestureRecognizer = bridge.getClass('Xamarin.Forms.ClickGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get ColumnDefinition(): typeof ColumnDefinition { return  this._ColumnDefinition || (this._ColumnDefinition = bridge.getClass('Xamarin.Forms.ColumnDefinition, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get CompareStateTrigger(): typeof CompareStateTrigger { return  this._CompareStateTrigger || (this._CompareStateTrigger = bridge.getClass('Xamarin.Forms.CompareStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+	get CompressedLayout(): typeof CompressedLayout { return  this._CompressedLayout || (this._CompressedLayout = bridge.getClass('Xamarin.Forms.CompressedLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get TemplatedPage(): typeof TemplatedPage { return  this._TemplatedPage || (this._TemplatedPage = bridge.getClass('Xamarin.Forms.TemplatedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get ContentPage(): typeof ContentPage { return  this._ContentPage || (this._ContentPage = bridge.getClass('Xamarin.Forms.ContentPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get ContentPresenter(): typeof ContentPresenter { return  this._ContentPresenter || (this._ContentPresenter = bridge.getClass('Xamarin.Forms.ContentPresenter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')); },
