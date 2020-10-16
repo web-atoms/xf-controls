@@ -87,15 +87,17 @@ export default class AtomCalendarViewModel extends AtomViewModel {
         // tslint:disable-next-line: no-string-literal
         const s = this["start"] as any as Date;
         const sel = this.owner.selectedDate as Date;
-        if (s.getFullYear() !== sel.getFullYear()) {
-            // tslint:disable-next-line: no-string-literal
-            this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
-            return;
-        }
-        if (s.getMonth() !== sel.getMonth()) {
-            // tslint:disable-next-line: no-string-literal
-            this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
-            return;
+        if (sel) {
+            if (s.getFullYear() !== sel.getFullYear()) {
+                // tslint:disable-next-line: no-string-literal
+                this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
+                return;
+            }
+            if (s.getMonth() !== sel.getMonth()) {
+                // tslint:disable-next-line: no-string-literal
+                this["start"] = new DateTime(sel.getFullYear(), sel.getMonth(), sel.getDate());
+                return;
+            }
         }
     }
 
