@@ -40,27 +40,16 @@ export default class SelectionList extends AtomContentView {
                 <XF.ListView
                     { ... XF.Grid.row(1) }
                     cachingStrategy="RecycleElement"
-                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}>
-                    <XF.ListView.itemTemplate>
-                        <XF.DataTemplate>
-                            <XF.ViewCell>
-                                <WA.AtomView
-                                    dataTemplate={Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)}>
-                                    <WA.AtomView.gestureRecognizers>
-                                        <XF.TapGestureRecognizer
-                                            command={Bind.event((x) => {
-                                                this.viewModel.selectedItem = x.data;
-                                                setTimeout(() =>
-                                                this.viewModel.close(this.viewModel.selectedItem)
-                                                , 250);
-                                                })
-                                            }/>
-                                    </WA.AtomView.gestureRecognizers>
-                                </WA.AtomView>
-                            </XF.ViewCell>
-                        </XF.DataTemplate>
-                    </XF.ListView.itemTemplate>
-                </XF.ListView>
+                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
+                    { ... WA.AtomViewCell.command((x) => {
+                        this.viewModel.selectedItem = x;
+                        setTimeout(() =>
+                        this.viewModel.close(this.viewModel.selectedItem)
+                        , 250);
+                        })
+                    }
+                    { ... WA.AtomViewCell.dataTemplate(Bind.oneWay(() => this.viewModel.comboBox.itemTemplate)) }
+                    />
             </XF.Grid>
         </XF.ContentPage>);
     }
