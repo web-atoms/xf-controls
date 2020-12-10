@@ -100,6 +100,9 @@ export default class AtomXFComboBox extends AtomXFControl {
         if (!searchText) {
             return items;
         }
+        if (!s) {
+            return items;
+        }
         if (Array.isArray(s)) {
             const a = s;
             s = (i) => {
