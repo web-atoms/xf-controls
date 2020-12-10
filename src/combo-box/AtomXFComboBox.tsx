@@ -96,6 +96,30 @@ export default class AtomXFComboBox extends AtomXFControl {
         }
     }
 
+    public filterItems(s: ItemSearchFunction, searchText: string, items: any[]): any[] {
+        if (!searchText) {
+            return items;
+        }
+        if (Array.isArray(s)) {
+            const a = s;
+            s = (i) => {
+                for (const item of a) {
+                    // tslint:disable-next-line: triple-equals
+                    if (item[i] == searchText) {
+                        return true;
+                    }
+                }
+                return false;
+            };
+            return items.filter(s as any);
+        }
+        if (typeof s === "function") {
+            return items.filter((item) => (s as any)(item, searchText));
+        }
+        // tslint:disable-next-line: triple-equals
+        return items.filter((item) => item[s as any] == searchText );
+    }
+
     protected preCreate() {
         this.defaultControlStyle = AtomXFComboBoxStyle;
         this.prompt = "Select";

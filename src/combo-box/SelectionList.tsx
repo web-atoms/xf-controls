@@ -40,7 +40,11 @@ export default class SelectionList extends AtomContentView {
                 <XF.ListView
                     { ... XF.Grid.row(1) }
                     cachingStrategy="RecycleElement"
-                    itemsSource={Bind.oneWay(() => this.viewModel.comboBox.items)}
+                    itemsSource={Bind.oneWay(() =>
+                        this.viewModel.comboBox.filterItems(
+                            this.viewModel.comboBox.search,
+                            this.viewModel.comboBox.searchText,
+                            this.viewModel.comboBox.items))}
                     { ... WA.AtomViewCell.command((x) => {
                         this.viewModel.selectedItem = x;
                         setTimeout(() =>
