@@ -103,6 +103,7 @@ export default class AtomXFComboBox extends AtomXFControl {
         if (!s) {
             return items;
         }
+        const r = new RegExp(searchText, "i");
         if (Array.isArray(s)) {
             const a = s;
             s = (i) => {
@@ -113,7 +114,7 @@ export default class AtomXFComboBox extends AtomXFControl {
                         if (typeof field !== "string") {
                             field = field.toString();
                         }
-                        if (field.indexOf(searchText) !== -1) {
+                        if (r.test(field)) {
                             return true;
                         }
                     }
@@ -132,7 +133,7 @@ export default class AtomXFComboBox extends AtomXFControl {
                 if (typeof field !== "string") {
                     field = field.toString();
                 }
-                if (field.indexOf(searchText) !== -1) {
+                if (r.test(field)) {
                     return true;
                 }
             }
