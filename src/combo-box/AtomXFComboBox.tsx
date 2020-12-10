@@ -100,13 +100,22 @@ export default class AtomXFComboBox extends AtomXFControl {
         if (!searchText) {
             return items;
         }
+        if (!s) {
+            return items;
+        }
         if (Array.isArray(s)) {
             const a = s;
             s = (i) => {
                 for (const item of a) {
                     // tslint:disable-next-line: triple-equals
-                    if (item[i] == searchText) {
-                        return true;
+                    let field = i[item];
+                    if (field) {
+                        if (typeof field !== "string") {
+                            field = field.toString();
+                        }
+                        if (field.indexOf(searchText) !== -1) {
+                            return true;
+                        }
                     }
                 }
                 return false;
@@ -117,7 +126,18 @@ export default class AtomXFComboBox extends AtomXFControl {
             return items.filter((item) => (s as any)(item, searchText));
         }
         // tslint:disable-next-line: triple-equals
-        return items.filter((item) => item[s as any] == searchText );
+        return items.filter((item) => {
+            let field = item[s as any];
+            if (field) {
+                if (typeof field !== "string") {
+                    field = field.toString();
+                }
+                if (field.indexOf(searchText) !== -1) {
+                    return true;
+                }
+            }
+            return false;
+         });
     }
 
     protected preCreate() {
