@@ -4004,7 +4004,7 @@ public dispatcher?: any;
 /** Property UriKind of Type UriKind */
 public uriKind?: "RelativeOrAbsolute" | "Absolute" | "Relative" | Bind;
 }
-const XFC = { get AvatarView(): typeof AvatarView { return  this._AvatarView || (this._AvatarView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.AvatarView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
+const XCT = { get AvatarView(): typeof AvatarView { return  this._AvatarView || (this._AvatarView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.AvatarView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get BadgeView(): typeof BadgeView { return  this._BadgeView || (this._BadgeView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.BadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get CameraView(): typeof CameraView { return  this._CameraView || (this._CameraView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.CameraView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get DockLayout(): typeof DockLayout { return  this._DockLayout || (this._DockLayout = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.DockLayout, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
@@ -4048,4 +4048,4 @@ const XFC = { get AvatarView(): typeof AvatarView { return  this._AvatarView || 
 	get RequiredStringValidationBehavior(): typeof RequiredStringValidationBehavior { return  this._RequiredStringValidationBehavior || (this._RequiredStringValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.RequiredStringValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
 	get UriValidationBehavior(): typeof UriValidationBehavior { return  this._UriValidationBehavior || (this._UriValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.UriValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); }
 };
-export default XFC;
+export default XCT;
