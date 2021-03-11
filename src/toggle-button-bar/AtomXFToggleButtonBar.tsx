@@ -102,7 +102,7 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
                 <XF.BindableLayout.itemTemplate>
                     <XF.DataTemplate>
                         <WA.AtomView
-                            backgroundColor={Colors.lightBlue}
+                            backgroundColor={Colors.white}
                             horizontalOptions="FillAndExpand"
                             dataTemplate={Bind.oneWay(() => this.itemTemplate)}>
                             <XF.View.gestureRecognizers>
