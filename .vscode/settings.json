@@ -5,8 +5,13 @@
         "Flyout",
         "Gainsboro",
         "Groupable",
+        "Identicon",
+        "Robohash",
+        "Singleline",
         "Strikethrough",
         "Templated",
+        "Unfocusing",
+        "Wavatar",
         "downlevel",
         "postversion",
         "xnode"
