@@ -5,38 +5,38 @@ import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 
 declare var bridge: any;
 namespace XF {
-    export declare class AbsoluteLayout extends Layout {
+    export declare class AbsoluteLayout extends XF.Layout$Generic {
         public static autoSize: number | null | Bind;
         public static layoutBounds: AttachedNode;
         public static layoutFlags: AttachedNode;
-        public children: RootObject /*Xamarin.Forms.AbsoluteLayout+IAbsoluteList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        public children: RootObject;
     }
-    export declare class ActivityIndicator extends View {
+    export declare class ActivityIndicator extends XF.View {
         public static isRunning: AttachedNode;
         public static color: AttachedNode;
-        public color: Color;
+        public color: XF.Color;
         public isRunning: boolean | null | Bind;
     }
-    export declare class AdaptiveTrigger extends StateTriggerBase {
+    export declare class AdaptiveTrigger extends XF.StateTriggerBase {
         public static minWindowHeight: AttachedNode;
         public static minWindowWidth: AttachedNode;
         public minWindowHeight: number | null | Bind;
         public minWindowWidth: number | null | Bind;
     }
-    export declare class Application extends Element {
+    export declare class Application extends XF.Element {
         public static logWarningsToApplicationOutput: boolean | null | Bind;
-        public static current: Application;
-        public dispatcher: RootObject /*Xamarin.Forms.IDispatcher*/;
-        public appLinks: RootObject /*Xamarin.Forms.IAppLinks*/;
-        public mainPage: Page;
+        public static current: XF.Application;
+        public dispatcher: RootObject;
+        public appLinks: RootObject;
+        public mainPage: XF.Page;
         public properties: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
-        public navigationProxy: RootObject /*Xamarin.Forms.Internals.NavigationProxy*/;
+        public navigationProxy: RootObject;
         public panGestureId: number | null | Bind;
         public static resources: AttachedNode;
         public userAppTheme: "Unspecified" | "Light" | "Dark" | string | number | null | undefined | Bind;
         public requestedTheme: "Unspecified" | "Light" | "Dark" | string | number | null | undefined | Bind;
     }
-    export declare class AppLinkEntry extends Element {
+    export declare class AppLinkEntry extends XF.Element {
         public static title: AttachedNode;
         public static description: AttachedNode;
         public static thumbnail: AttachedNode;
@@ -46,7 +46,7 @@ namespace XF {
         public description: string | null | Bind;
         public isLinkActive: boolean | null | Bind;
         public keyValues: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
-        public thumbnail: ImageSource;
+        public thumbnail: XF.ImageSource;
         public title: string | null | Bind;
     }
     export declare class AutomationProperties extends RootObject {
@@ -55,7 +55,7 @@ namespace XF {
         public static labeledBy: AttachedNode;
         public static name: AttachedNode;
     }
-    export declare class BaseMenuItem extends Element {
+    export declare class BaseMenuItem extends XF.Element {
     }
     export declare class BindableLayout extends RootObject {
         public static itemsSource: AttachedNode;
@@ -67,161 +67,161 @@ namespace XF {
     export declare class BindableObject extends RootObject {
         public static inheritedBindingContext: AttachedNode;
         public static bindingContext: AttachedNode;
-        public dispatcher: RootObject /*Xamarin.Forms.IDispatcher*/;
+        public dispatcher: RootObject;
         public bindingContext: RootObject /*System.Object*/;
     }
-    export declare class BoxView extends View {
+    export declare class BoxView extends XF.View {
         public static color: AttachedNode;
         public static cornerRadius: AttachedNode;
-        public color: Color;
-        public cornerRadius: RootObject /*System.ValueType*/;
+        public color: XF.Color;
+        public cornerRadius: RootObject;
     }
-    export declare class Brush extends Element {
-        public static default: Brush;
-        public static aliceBlue: SolidColorBrush;
-        public static antiqueWhite: SolidColorBrush;
-        public static aqua: SolidColorBrush;
-        public static aquamarine: SolidColorBrush;
-        public static azure: SolidColorBrush;
-        public static beige: SolidColorBrush;
-        public static bisque: SolidColorBrush;
-        public static black: SolidColorBrush;
-        public static blanchedAlmond: SolidColorBrush;
-        public static blue: SolidColorBrush;
-        public static blueViolet: SolidColorBrush;
-        public static brown: SolidColorBrush;
-        public static burlyWood: SolidColorBrush;
-        public static cadetBlue: SolidColorBrush;
-        public static chartreuse: SolidColorBrush;
-        public static chocolate: SolidColorBrush;
-        public static coral: SolidColorBrush;
-        public static cornflowerBlue: SolidColorBrush;
-        public static cornsilk: SolidColorBrush;
-        public static crimson: SolidColorBrush;
-        public static cyan: SolidColorBrush;
-        public static darkBlue: SolidColorBrush;
-        public static darkCyan: SolidColorBrush;
-        public static darkGoldenrod: SolidColorBrush;
-        public static darkGray: SolidColorBrush;
-        public static darkGreen: SolidColorBrush;
-        public static darkKhaki: SolidColorBrush;
-        public static darkMagenta: SolidColorBrush;
-        public static darkOliveGreen: SolidColorBrush;
-        public static darkOrange: SolidColorBrush;
-        public static darkOrchid: SolidColorBrush;
-        public static darkRed: SolidColorBrush;
-        public static darkSalmon: SolidColorBrush;
-        public static darkSeaGreen: SolidColorBrush;
-        public static darkSlateBlue: SolidColorBrush;
-        public static darkSlateGray: SolidColorBrush;
-        public static darkTurquoise: SolidColorBrush;
-        public static darkViolet: SolidColorBrush;
-        public static deepPink: SolidColorBrush;
-        public static deepSkyBlue: SolidColorBrush;
-        public static dimGray: SolidColorBrush;
-        public static dodgerBlue: SolidColorBrush;
-        public static firebrick: SolidColorBrush;
-        public static floralWhite: SolidColorBrush;
-        public static forestGreen: SolidColorBrush;
-        public static fuchsia: SolidColorBrush;
-        public static gainsboro: SolidColorBrush;
-        public static ghostWhite: SolidColorBrush;
-        public static gold: SolidColorBrush;
-        public static goldenrod: SolidColorBrush;
-        public static gray: SolidColorBrush;
-        public static green: SolidColorBrush;
-        public static greenYellow: SolidColorBrush;
-        public static honeydew: SolidColorBrush;
-        public static hotPink: SolidColorBrush;
-        public static indianRed: SolidColorBrush;
-        public static indigo: SolidColorBrush;
-        public static ivory: SolidColorBrush;
-        public static khaki: SolidColorBrush;
-        public static lavender: SolidColorBrush;
-        public static lavenderBlush: SolidColorBrush;
-        public static lawnGreen: SolidColorBrush;
-        public static lemonChiffon: SolidColorBrush;
-        public static lightBlue: SolidColorBrush;
-        public static lightCoral: SolidColorBrush;
-        public static lightCyan: SolidColorBrush;
-        public static lightGoldenrodYellow: SolidColorBrush;
-        public static lightGray: SolidColorBrush;
-        public static lightGreen: SolidColorBrush;
-        public static lightPink: SolidColorBrush;
-        public static lightSalmon: SolidColorBrush;
-        public static lightSeaGreen: SolidColorBrush;
-        public static lightSkyBlue: SolidColorBrush;
-        public static lightSlateGray: SolidColorBrush;
-        public static lightSteelBlue: SolidColorBrush;
-        public static lightYellow: SolidColorBrush;
-        public static lime: SolidColorBrush;
-        public static limeGreen: SolidColorBrush;
-        public static linen: SolidColorBrush;
-        public static magenta: SolidColorBrush;
-        public static maroon: SolidColorBrush;
-        public static mediumAquamarine: SolidColorBrush;
-        public static mediumBlue: SolidColorBrush;
-        public static mediumOrchid: SolidColorBrush;
-        public static mediumPurple: SolidColorBrush;
-        public static mediumSeaGreen: SolidColorBrush;
-        public static mediumSlateBlue: SolidColorBrush;
-        public static mediumSpringGreen: SolidColorBrush;
-        public static mediumTurquoise: SolidColorBrush;
-        public static mediumVioletRed: SolidColorBrush;
-        public static midnightBlue: SolidColorBrush;
-        public static mintCream: SolidColorBrush;
-        public static mistyRose: SolidColorBrush;
-        public static moccasin: SolidColorBrush;
-        public static navajoWhite: SolidColorBrush;
-        public static navy: SolidColorBrush;
-        public static oldLace: SolidColorBrush;
-        public static olive: SolidColorBrush;
-        public static oliveDrab: SolidColorBrush;
-        public static orange: SolidColorBrush;
-        public static orangeRed: SolidColorBrush;
-        public static orchid: SolidColorBrush;
-        public static paleGoldenrod: SolidColorBrush;
-        public static paleGreen: SolidColorBrush;
-        public static paleTurquoise: SolidColorBrush;
-        public static paleVioletRed: SolidColorBrush;
-        public static papayaWhip: SolidColorBrush;
-        public static peachPuff: SolidColorBrush;
-        public static peru: SolidColorBrush;
-        public static pink: SolidColorBrush;
-        public static plum: SolidColorBrush;
-        public static powderBlue: SolidColorBrush;
-        public static purple: SolidColorBrush;
-        public static red: SolidColorBrush;
-        public static rosyBrown: SolidColorBrush;
-        public static royalBlue: SolidColorBrush;
-        public static saddleBrown: SolidColorBrush;
-        public static salmon: SolidColorBrush;
-        public static sandyBrown: SolidColorBrush;
-        public static seaGreen: SolidColorBrush;
-        public static seaShell: SolidColorBrush;
-        public static sienna: SolidColorBrush;
-        public static silver: SolidColorBrush;
-        public static skyBlue: SolidColorBrush;
-        public static slateBlue: SolidColorBrush;
-        public static slateGray: SolidColorBrush;
-        public static snow: SolidColorBrush;
-        public static springGreen: SolidColorBrush;
-        public static steelBlue: SolidColorBrush;
-        public static tan: SolidColorBrush;
-        public static teal: SolidColorBrush;
-        public static thistle: SolidColorBrush;
-        public static tomato: SolidColorBrush;
-        public static transparent: SolidColorBrush;
-        public static turquoise: SolidColorBrush;
-        public static violet: SolidColorBrush;
-        public static wheat: SolidColorBrush;
-        public static white: SolidColorBrush;
-        public static whiteSmoke: SolidColorBrush;
-        public static yellow: SolidColorBrush;
-        public static yellowGreen: SolidColorBrush;
+    export declare class Brush extends XF.Element {
+        public static default: XF.Brush;
+        public static aliceBlue: XF.SolidColorBrush;
+        public static antiqueWhite: XF.SolidColorBrush;
+        public static aqua: XF.SolidColorBrush;
+        public static aquamarine: XF.SolidColorBrush;
+        public static azure: XF.SolidColorBrush;
+        public static beige: XF.SolidColorBrush;
+        public static bisque: XF.SolidColorBrush;
+        public static black: XF.SolidColorBrush;
+        public static blanchedAlmond: XF.SolidColorBrush;
+        public static blue: XF.SolidColorBrush;
+        public static blueViolet: XF.SolidColorBrush;
+        public static brown: XF.SolidColorBrush;
+        public static burlyWood: XF.SolidColorBrush;
+        public static cadetBlue: XF.SolidColorBrush;
+        public static chartreuse: XF.SolidColorBrush;
+        public static chocolate: XF.SolidColorBrush;
+        public static coral: XF.SolidColorBrush;
+        public static cornflowerBlue: XF.SolidColorBrush;
+        public static cornsilk: XF.SolidColorBrush;
+        public static crimson: XF.SolidColorBrush;
+        public static cyan: XF.SolidColorBrush;
+        public static darkBlue: XF.SolidColorBrush;
+        public static darkCyan: XF.SolidColorBrush;
+        public static darkGoldenrod: XF.SolidColorBrush;
+        public static darkGray: XF.SolidColorBrush;
+        public static darkGreen: XF.SolidColorBrush;
+        public static darkKhaki: XF.SolidColorBrush;
+        public static darkMagenta: XF.SolidColorBrush;
+        public static darkOliveGreen: XF.SolidColorBrush;
+        public static darkOrange: XF.SolidColorBrush;
+        public static darkOrchid: XF.SolidColorBrush;
+        public static darkRed: XF.SolidColorBrush;
+        public static darkSalmon: XF.SolidColorBrush;
+        public static darkSeaGreen: XF.SolidColorBrush;
+        public static darkSlateBlue: XF.SolidColorBrush;
+        public static darkSlateGray: XF.SolidColorBrush;
+        public static darkTurquoise: XF.SolidColorBrush;
+        public static darkViolet: XF.SolidColorBrush;
+        public static deepPink: XF.SolidColorBrush;
+        public static deepSkyBlue: XF.SolidColorBrush;
+        public static dimGray: XF.SolidColorBrush;
+        public static dodgerBlue: XF.SolidColorBrush;
+        public static firebrick: XF.SolidColorBrush;
+        public static floralWhite: XF.SolidColorBrush;
+        public static forestGreen: XF.SolidColorBrush;
+        public static fuchsia: XF.SolidColorBrush;
+        public static gainsboro: XF.SolidColorBrush;
+        public static ghostWhite: XF.SolidColorBrush;
+        public static gold: XF.SolidColorBrush;
+        public static goldenrod: XF.SolidColorBrush;
+        public static gray: XF.SolidColorBrush;
+        public static green: XF.SolidColorBrush;
+        public static greenYellow: XF.SolidColorBrush;
+        public static honeydew: XF.SolidColorBrush;
+        public static hotPink: XF.SolidColorBrush;
+        public static indianRed: XF.SolidColorBrush;
+        public static indigo: XF.SolidColorBrush;
+        public static ivory: XF.SolidColorBrush;
+        public static khaki: XF.SolidColorBrush;
+        public static lavender: XF.SolidColorBrush;
+        public static lavenderBlush: XF.SolidColorBrush;
+        public static lawnGreen: XF.SolidColorBrush;
+        public static lemonChiffon: XF.SolidColorBrush;
+        public static lightBlue: XF.SolidColorBrush;
+        public static lightCoral: XF.SolidColorBrush;
+        public static lightCyan: XF.SolidColorBrush;
+        public static lightGoldenrodYellow: XF.SolidColorBrush;
+        public static lightGray: XF.SolidColorBrush;
+        public static lightGreen: XF.SolidColorBrush;
+        public static lightPink: XF.SolidColorBrush;
+        public static lightSalmon: XF.SolidColorBrush;
+        public static lightSeaGreen: XF.SolidColorBrush;
+        public static lightSkyBlue: XF.SolidColorBrush;
+        public static lightSlateGray: XF.SolidColorBrush;
+        public static lightSteelBlue: XF.SolidColorBrush;
+        public static lightYellow: XF.SolidColorBrush;
+        public static lime: XF.SolidColorBrush;
+        public static limeGreen: XF.SolidColorBrush;
+        public static linen: XF.SolidColorBrush;
+        public static magenta: XF.SolidColorBrush;
+        public static maroon: XF.SolidColorBrush;
+        public static mediumAquamarine: XF.SolidColorBrush;
+        public static mediumBlue: XF.SolidColorBrush;
+        public static mediumOrchid: XF.SolidColorBrush;
+        public static mediumPurple: XF.SolidColorBrush;
+        public static mediumSeaGreen: XF.SolidColorBrush;
+        public static mediumSlateBlue: XF.SolidColorBrush;
+        public static mediumSpringGreen: XF.SolidColorBrush;
+        public static mediumTurquoise: XF.SolidColorBrush;
+        public static mediumVioletRed: XF.SolidColorBrush;
+        public static midnightBlue: XF.SolidColorBrush;
+        public static mintCream: XF.SolidColorBrush;
+        public static mistyRose: XF.SolidColorBrush;
+        public static moccasin: XF.SolidColorBrush;
+        public static navajoWhite: XF.SolidColorBrush;
+        public static navy: XF.SolidColorBrush;
+        public static oldLace: XF.SolidColorBrush;
+        public static olive: XF.SolidColorBrush;
+        public static oliveDrab: XF.SolidColorBrush;
+        public static orange: XF.SolidColorBrush;
+        public static orangeRed: XF.SolidColorBrush;
+        public static orchid: XF.SolidColorBrush;
+        public static paleGoldenrod: XF.SolidColorBrush;
+        public static paleGreen: XF.SolidColorBrush;
+        public static paleTurquoise: XF.SolidColorBrush;
+        public static paleVioletRed: XF.SolidColorBrush;
+        public static papayaWhip: XF.SolidColorBrush;
+        public static peachPuff: XF.SolidColorBrush;
+        public static peru: XF.SolidColorBrush;
+        public static pink: XF.SolidColorBrush;
+        public static plum: XF.SolidColorBrush;
+        public static powderBlue: XF.SolidColorBrush;
+        public static purple: XF.SolidColorBrush;
+        public static red: XF.SolidColorBrush;
+        public static rosyBrown: XF.SolidColorBrush;
+        public static royalBlue: XF.SolidColorBrush;
+        public static saddleBrown: XF.SolidColorBrush;
+        public static salmon: XF.SolidColorBrush;
+        public static sandyBrown: XF.SolidColorBrush;
+        public static seaGreen: XF.SolidColorBrush;
+        public static seaShell: XF.SolidColorBrush;
+        public static sienna: XF.SolidColorBrush;
+        public static silver: XF.SolidColorBrush;
+        public static skyBlue: XF.SolidColorBrush;
+        public static slateBlue: XF.SolidColorBrush;
+        public static slateGray: XF.SolidColorBrush;
+        public static snow: XF.SolidColorBrush;
+        public static springGreen: XF.SolidColorBrush;
+        public static steelBlue: XF.SolidColorBrush;
+        public static tan: XF.SolidColorBrush;
+        public static teal: XF.SolidColorBrush;
+        public static thistle: XF.SolidColorBrush;
+        public static tomato: XF.SolidColorBrush;
+        public static transparent: XF.SolidColorBrush;
+        public static turquoise: XF.SolidColorBrush;
+        public static violet: XF.SolidColorBrush;
+        public static wheat: XF.SolidColorBrush;
+        public static white: XF.SolidColorBrush;
+        public static whiteSmoke: XF.SolidColorBrush;
+        public static yellow: XF.SolidColorBrush;
+        public static yellowGreen: XF.SolidColorBrush;
         public isEmpty: boolean | null | Bind;
     }
-    export declare class Button extends View {
+    export declare class Button extends XF.View {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static contentLayout: AttachedNode;
@@ -241,19 +241,19 @@ namespace XF {
         public static image: AttachedNode;
         public static padding: AttachedNode;
         public static isPressed: AttachedNode;
-        public padding: RootObject /*System.ValueType*/;
-        public borderColor: Color;
+        public padding: RootObject;
+        public borderColor: XF.Color;
         public borderRadius: number | null | Bind;
         public cornerRadius: number | null | Bind;
         public borderWidth: number | null | Bind;
-        public contentLayout: RootObject /*Xamarin.Forms.Button+ButtonContentLayout*/;
+        public contentLayout: RootObject;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
-        public font: RootObject /*System.ValueType*/;
-        public imageSource: ImageSource;
-        public image: FileImageSource;
+        public font: RootObject;
+        public imageSource: XF.ImageSource;
+        public image: XF.FileImageSource;
         public text: string | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public isPressed: boolean | null | Bind;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
@@ -261,9 +261,9 @@ namespace XF {
         public fontSize: number | null | Bind;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
     }
-    export declare class CarouselPage extends Page {
+    export declare class CarouselPage extends XF.MultiPage$Generic {
     }
-    export declare class Cell extends Element {
+    export declare class Cell extends XF.Element {
         public static isEnabled: AttachedNode;
         public static defaultCellHeight: number | null | Bind;
         public static contextActions: AttachedNode;
@@ -273,7 +273,7 @@ namespace XF {
         public isEnabled: boolean | null | Bind;
         public renderHeight: number | null | Bind;
     }
-    export declare class EntryCell extends Cell {
+    export declare class EntryCell extends XF.Cell {
         public static text: AttachedNode;
         public static label: AttachedNode;
         public static placeholder: AttachedNode;
@@ -284,26 +284,26 @@ namespace XF {
         public static xAlign: AttachedNode;
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public keyboard: RootObject /*Xamarin.Forms.Keyboard*/;
+        public keyboard: RootObject;
         public label: string | null | Bind;
-        public labelColor: Color;
+        public labelColor: XF.Color;
         public placeholder: string | null | Bind;
         public text: string | null | Bind;
         public xAlign: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
     }
-    export declare class ImageCell extends TextCell {
+    export declare class ImageCell extends XF.TextCell {
         public static imageSource: AttachedNode;
-        public imageSource: ImageSource;
+        public imageSource: XF.ImageSource;
     }
-    export declare class SwitchCell extends Cell {
+    export declare class SwitchCell extends XF.Cell {
         public static on: AttachedNode;
         public static text: AttachedNode;
         public static onColor: AttachedNode;
-        public onColor: Color;
+        public onColor: XF.Color;
         public on: boolean | null | Bind;
         public text: string | null | Bind;
     }
-    export declare class TextCell extends Cell {
+    export declare class TextCell extends XF.Cell {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static text: AttachedNode;
@@ -313,21 +313,21 @@ namespace XF {
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
         public detail: string | null | Bind;
-        public detailColor: Color;
+        public detailColor: XF.Color;
         public text: string | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
     }
-    export declare class ViewCell extends Cell {
-        public view: View;
+    export declare class ViewCell extends XF.Cell {
+        public view: XF.View;
     }
-    export declare class CheckBox extends View {
+    export declare class CheckBox extends XF.View {
         public static isChecked: AttachedNode;
         public static color: AttachedNode;
         public static isCheckedVisualState: string | null | Bind;
-        public color: Color;
+        public color: XF.Color;
         public isChecked: boolean | null | Bind;
     }
-    export declare class ClickGestureRecognizer extends GestureRecognizer {
+    export declare class ClickGestureRecognizer extends XF.GestureRecognizer {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static numberOfClicksRequired: AttachedNode;
@@ -338,150 +338,150 @@ namespace XF {
         public buttons: "Primary" | "Secondary" | string | number | null | undefined | Bind;
     }
     export declare class Color extends RootObject /*System.ValueType*/ {
-        public static default: Color;
-        public static accent: Color;
-        public static aliceBlue: Color;
-        public static antiqueWhite: Color;
-        public static aqua: Color;
-        public static aquamarine: Color;
-        public static azure: Color;
-        public static beige: Color;
-        public static bisque: Color;
-        public static black: Color;
-        public static blanchedAlmond: Color;
-        public static blue: Color;
-        public static blueViolet: Color;
-        public static brown: Color;
-        public static burlyWood: Color;
-        public static cadetBlue: Color;
-        public static chartreuse: Color;
-        public static chocolate: Color;
-        public static coral: Color;
-        public static cornflowerBlue: Color;
-        public static cornsilk: Color;
-        public static crimson: Color;
-        public static cyan: Color;
-        public static darkBlue: Color;
-        public static darkCyan: Color;
-        public static darkGoldenrod: Color;
-        public static darkGray: Color;
-        public static darkGreen: Color;
-        public static darkKhaki: Color;
-        public static darkMagenta: Color;
-        public static darkOliveGreen: Color;
-        public static darkOrange: Color;
-        public static darkOrchid: Color;
-        public static darkRed: Color;
-        public static darkSalmon: Color;
-        public static darkSeaGreen: Color;
-        public static darkSlateBlue: Color;
-        public static darkSlateGray: Color;
-        public static darkTurquoise: Color;
-        public static darkViolet: Color;
-        public static deepPink: Color;
-        public static deepSkyBlue: Color;
-        public static dimGray: Color;
-        public static dodgerBlue: Color;
-        public static firebrick: Color;
-        public static floralWhite: Color;
-        public static forestGreen: Color;
-        public static fuchsia: Color;
-        public static fuschia: Color;
-        public static gainsboro: Color;
-        public static ghostWhite: Color;
-        public static gold: Color;
-        public static goldenrod: Color;
-        public static gray: Color;
-        public static green: Color;
-        public static greenYellow: Color;
-        public static honeydew: Color;
-        public static hotPink: Color;
-        public static indianRed: Color;
-        public static indigo: Color;
-        public static ivory: Color;
-        public static khaki: Color;
-        public static lavender: Color;
-        public static lavenderBlush: Color;
-        public static lawnGreen: Color;
-        public static lemonChiffon: Color;
-        public static lightBlue: Color;
-        public static lightCoral: Color;
-        public static lightCyan: Color;
-        public static lightGoldenrodYellow: Color;
-        public static lightGray: Color;
-        public static lightGreen: Color;
-        public static lightPink: Color;
-        public static lightSalmon: Color;
-        public static lightSeaGreen: Color;
-        public static lightSkyBlue: Color;
-        public static lightSlateGray: Color;
-        public static lightSteelBlue: Color;
-        public static lightYellow: Color;
-        public static lime: Color;
-        public static limeGreen: Color;
-        public static linen: Color;
-        public static magenta: Color;
-        public static maroon: Color;
-        public static mediumAquamarine: Color;
-        public static mediumBlue: Color;
-        public static mediumOrchid: Color;
-        public static mediumPurple: Color;
-        public static mediumSeaGreen: Color;
-        public static mediumSlateBlue: Color;
-        public static mediumSpringGreen: Color;
-        public static mediumTurquoise: Color;
-        public static mediumVioletRed: Color;
-        public static midnightBlue: Color;
-        public static mintCream: Color;
-        public static mistyRose: Color;
-        public static moccasin: Color;
-        public static navajoWhite: Color;
-        public static navy: Color;
-        public static oldLace: Color;
-        public static olive: Color;
-        public static oliveDrab: Color;
-        public static orange: Color;
-        public static orangeRed: Color;
-        public static orchid: Color;
-        public static paleGoldenrod: Color;
-        public static paleGreen: Color;
-        public static paleTurquoise: Color;
-        public static paleVioletRed: Color;
-        public static papayaWhip: Color;
-        public static peachPuff: Color;
-        public static peru: Color;
-        public static pink: Color;
-        public static plum: Color;
-        public static powderBlue: Color;
-        public static purple: Color;
-        public static red: Color;
-        public static rosyBrown: Color;
-        public static royalBlue: Color;
-        public static saddleBrown: Color;
-        public static salmon: Color;
-        public static sandyBrown: Color;
-        public static seaGreen: Color;
-        public static seaShell: Color;
-        public static sienna: Color;
-        public static silver: Color;
-        public static skyBlue: Color;
-        public static slateBlue: Color;
-        public static slateGray: Color;
-        public static snow: Color;
-        public static springGreen: Color;
-        public static steelBlue: Color;
-        public static tan: Color;
-        public static teal: Color;
-        public static thistle: Color;
-        public static tomato: Color;
-        public static transparent: Color;
-        public static turquoise: Color;
-        public static violet: Color;
-        public static wheat: Color;
-        public static white: Color;
-        public static whiteSmoke: Color;
-        public static yellow: Color;
-        public static yellowGreen: Color;
+        public static default: XF.Color;
+        public static accent: XF.Color;
+        public static aliceBlue: XF.Color;
+        public static antiqueWhite: XF.Color;
+        public static aqua: XF.Color;
+        public static aquamarine: XF.Color;
+        public static azure: XF.Color;
+        public static beige: XF.Color;
+        public static bisque: XF.Color;
+        public static black: XF.Color;
+        public static blanchedAlmond: XF.Color;
+        public static blue: XF.Color;
+        public static blueViolet: XF.Color;
+        public static brown: XF.Color;
+        public static burlyWood: XF.Color;
+        public static cadetBlue: XF.Color;
+        public static chartreuse: XF.Color;
+        public static chocolate: XF.Color;
+        public static coral: XF.Color;
+        public static cornflowerBlue: XF.Color;
+        public static cornsilk: XF.Color;
+        public static crimson: XF.Color;
+        public static cyan: XF.Color;
+        public static darkBlue: XF.Color;
+        public static darkCyan: XF.Color;
+        public static darkGoldenrod: XF.Color;
+        public static darkGray: XF.Color;
+        public static darkGreen: XF.Color;
+        public static darkKhaki: XF.Color;
+        public static darkMagenta: XF.Color;
+        public static darkOliveGreen: XF.Color;
+        public static darkOrange: XF.Color;
+        public static darkOrchid: XF.Color;
+        public static darkRed: XF.Color;
+        public static darkSalmon: XF.Color;
+        public static darkSeaGreen: XF.Color;
+        public static darkSlateBlue: XF.Color;
+        public static darkSlateGray: XF.Color;
+        public static darkTurquoise: XF.Color;
+        public static darkViolet: XF.Color;
+        public static deepPink: XF.Color;
+        public static deepSkyBlue: XF.Color;
+        public static dimGray: XF.Color;
+        public static dodgerBlue: XF.Color;
+        public static firebrick: XF.Color;
+        public static floralWhite: XF.Color;
+        public static forestGreen: XF.Color;
+        public static fuchsia: XF.Color;
+        public static fuschia: XF.Color;
+        public static gainsboro: XF.Color;
+        public static ghostWhite: XF.Color;
+        public static gold: XF.Color;
+        public static goldenrod: XF.Color;
+        public static gray: XF.Color;
+        public static green: XF.Color;
+        public static greenYellow: XF.Color;
+        public static honeydew: XF.Color;
+        public static hotPink: XF.Color;
+        public static indianRed: XF.Color;
+        public static indigo: XF.Color;
+        public static ivory: XF.Color;
+        public static khaki: XF.Color;
+        public static lavender: XF.Color;
+        public static lavenderBlush: XF.Color;
+        public static lawnGreen: XF.Color;
+        public static lemonChiffon: XF.Color;
+        public static lightBlue: XF.Color;
+        public static lightCoral: XF.Color;
+        public static lightCyan: XF.Color;
+        public static lightGoldenrodYellow: XF.Color;
+        public static lightGray: XF.Color;
+        public static lightGreen: XF.Color;
+        public static lightPink: XF.Color;
+        public static lightSalmon: XF.Color;
+        public static lightSeaGreen: XF.Color;
+        public static lightSkyBlue: XF.Color;
+        public static lightSlateGray: XF.Color;
+        public static lightSteelBlue: XF.Color;
+        public static lightYellow: XF.Color;
+        public static lime: XF.Color;
+        public static limeGreen: XF.Color;
+        public static linen: XF.Color;
+        public static magenta: XF.Color;
+        public static maroon: XF.Color;
+        public static mediumAquamarine: XF.Color;
+        public static mediumBlue: XF.Color;
+        public static mediumOrchid: XF.Color;
+        public static mediumPurple: XF.Color;
+        public static mediumSeaGreen: XF.Color;
+        public static mediumSlateBlue: XF.Color;
+        public static mediumSpringGreen: XF.Color;
+        public static mediumTurquoise: XF.Color;
+        public static mediumVioletRed: XF.Color;
+        public static midnightBlue: XF.Color;
+        public static mintCream: XF.Color;
+        public static mistyRose: XF.Color;
+        public static moccasin: XF.Color;
+        public static navajoWhite: XF.Color;
+        public static navy: XF.Color;
+        public static oldLace: XF.Color;
+        public static olive: XF.Color;
+        public static oliveDrab: XF.Color;
+        public static orange: XF.Color;
+        public static orangeRed: XF.Color;
+        public static orchid: XF.Color;
+        public static paleGoldenrod: XF.Color;
+        public static paleGreen: XF.Color;
+        public static paleTurquoise: XF.Color;
+        public static paleVioletRed: XF.Color;
+        public static papayaWhip: XF.Color;
+        public static peachPuff: XF.Color;
+        public static peru: XF.Color;
+        public static pink: XF.Color;
+        public static plum: XF.Color;
+        public static powderBlue: XF.Color;
+        public static purple: XF.Color;
+        public static red: XF.Color;
+        public static rosyBrown: XF.Color;
+        public static royalBlue: XF.Color;
+        public static saddleBrown: XF.Color;
+        public static salmon: XF.Color;
+        public static sandyBrown: XF.Color;
+        public static seaGreen: XF.Color;
+        public static seaShell: XF.Color;
+        public static sienna: XF.Color;
+        public static silver: XF.Color;
+        public static skyBlue: XF.Color;
+        public static slateBlue: XF.Color;
+        public static slateGray: XF.Color;
+        public static snow: XF.Color;
+        public static springGreen: XF.Color;
+        public static steelBlue: XF.Color;
+        public static tan: XF.Color;
+        public static teal: XF.Color;
+        public static thistle: XF.Color;
+        public static tomato: XF.Color;
+        public static transparent: XF.Color;
+        public static turquoise: XF.Color;
+        public static violet: XF.Color;
+        public static wheat: XF.Color;
+        public static white: XF.Color;
+        public static whiteSmoke: XF.Color;
+        public static yellow: XF.Color;
+        public static yellowGreen: XF.Color;
         public isDefault: boolean | null | Bind;
         public a: number | null | Bind;
         public r: number | null | Bind;
@@ -491,11 +491,11 @@ namespace XF {
         public saturation: number | null | Bind;
         public luminosity: number | null | Bind;
     }
-    export declare class ColumnDefinition extends BindableObject {
+    export declare class ColumnDefinition extends XF.BindableObject {
         public static width: AttachedNode;
-        public width: RootObject /*System.ValueType*/;
+        public width: RootObject;
     }
-    export declare class CompareStateTrigger extends StateTriggerBase {
+    export declare class CompareStateTrigger extends XF.StateTriggerBase {
         public static property: AttachedNode;
         public static value: AttachedNode;
         public property: RootObject /*System.Object*/;
@@ -508,27 +508,27 @@ namespace XF {
     export declare class Constraint extends RootObject {
         public static ativeToView: AttachedNode;
     }
-    export declare class ContentPage extends TemplatedPage {
+    export declare class ContentPage extends XF.TemplatedPage {
         public static content: AttachedNode;
-        public content: View;
+        public content: XF.View;
     }
-    export declare class ContentPresenter extends Layout {
+    export declare class ContentPresenter extends XF.Layout {
         public static content: AttachedNode;
-        public content: View;
+        public content: XF.View;
     }
-    export declare class ContentView extends TemplatedView {
+    export declare class ContentView extends XF.TemplatedView {
         public static content: AttachedNode;
-        public content: View;
+        public content: XF.View;
     }
-    export declare class ControlTemplate extends ElementTemplate {
+    export declare class ControlTemplate extends XF.ElementTemplate {
     }
-    export declare class DataTemplate extends ElementTemplate {
+    export declare class DataTemplate extends XF.ElementTemplate {
         public bindings: RootObject /*System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[Xamarin.Forms.BindingBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
         public values: RootObject /*System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
     }
-    export declare class DataTemplateSelector extends DataTemplate {
+    export declare class DataTemplateSelector extends XF.DataTemplate {
     }
-    export declare class DatePicker extends View {
+    export declare class DatePicker extends XF.View {
         public static format: AttachedNode;
         public static date: AttachedNode;
         public static minimumDate: AttachedNode;
@@ -544,17 +544,17 @@ namespace XF {
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
         public maximumDate: Date | null | Bind;
         public minimumDate: Date | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
         public fontFamily: string | null | Bind;
         public fontSize: number | null | Bind;
     }
-    export declare class DeviceStateTrigger extends StateTriggerBase {
+    export declare class DeviceStateTrigger extends XF.StateTriggerBase {
         public static device: AttachedNode;
         public device: string | null | Bind;
     }
-    export declare class DragGestureRecognizer extends GestureRecognizer {
+    export declare class DragGestureRecognizer extends XF.GestureRecognizer {
         public static canDrag: AttachedNode;
         public static dropCompletedCommand: AttachedNode;
         public static dropCompletedCommandParameter: AttachedNode;
@@ -566,7 +566,7 @@ namespace XF {
         public dragStartingCommand: RootObject /*System.Windows.Input.ICommand*/;
         public dragStartingCommandParameter: RootObject /*System.Object*/;
     }
-    export declare class DropGestureRecognizer extends GestureRecognizer {
+    export declare class DropGestureRecognizer extends XF.GestureRecognizer {
         public static allowDrop: AttachedNode;
         public static dragOverCommand: AttachedNode;
         public static dragOverCommandParameter: AttachedNode;
@@ -583,19 +583,19 @@ namespace XF {
         public dropCommandParameter: RootObject /*System.Object*/;
     }
     export declare class Easing extends RootObject {
-        public static linear: Easing;
-        public static sinOut: Easing;
-        public static sinIn: Easing;
-        public static sinInOut: Easing;
-        public static cubicIn: Easing;
-        public static cubicOut: Easing;
-        public static cubicInOut: Easing;
-        public static bounceOut: Easing;
-        public static bounceIn: Easing;
-        public static springIn: Easing;
-        public static springOut: Easing;
+        public static linear: XF.Easing;
+        public static sinOut: XF.Easing;
+        public static sinIn: XF.Easing;
+        public static sinInOut: XF.Easing;
+        public static cubicIn: XF.Easing;
+        public static cubicOut: XF.Easing;
+        public static cubicInOut: XF.Easing;
+        public static bounceOut: XF.Easing;
+        public static bounceIn: XF.Easing;
+        public static springIn: XF.Easing;
+        public static springOut: XF.Easing;
     }
-    export declare class Editor extends InputView {
+    export declare class Editor extends XF.InputView {
         public static text: AttachedNode;
         public static fontFamily: AttachedNode;
         public static fontSize: AttachedNode;
@@ -613,11 +613,11 @@ namespace XF {
         public fontSize: number | null | Bind;
     }
     export declare class Effect extends RootObject {
-        public element: Element;
+        public element: XF.Element;
         public isAttached: boolean | null | Bind;
         public resolveId: string | null | Bind;
     }
-    export declare class Element extends BindableObject {
+    export declare class Element extends XF.BindableObject {
         public static menu: AttachedNode;
         public static automationId: AttachedNode;
         public static classId: AttachedNode;
@@ -625,17 +625,17 @@ namespace XF {
         public classId: string | null | Bind;
         public static effects: AttachedNode;
         public id: RootObject /*System.Guid*/;
-        public parentView: VisualElement;
+        public parentView: XF.VisualElement;
         public styleId: string | null | Bind;
         public static logicalChildren: AttachedNode;
-        public realParent: Element;
-        public parent: Element;
-        public effectControlProvider: RootObject /*Xamarin.Forms.IEffectControlProvider*/;
-        public platform: RootObject /*Xamarin.Forms.Internals.IPlatform*/;
+        public realParent: XF.Element;
+        public parent: XF.Element;
+        public effectControlProvider: RootObject;
+        public platform: RootObject;
     }
     export declare class ElementTemplate extends RootObject {
     }
-    export declare class Entry extends InputView {
+    export declare class Entry extends XF.InputView {
         public static returnType: AttachedNode;
         public static returnCommand: AttachedNode;
         public static returnCommandParameter: AttachedNode;
@@ -668,12 +668,12 @@ namespace XF {
         public returnCommandParameter: RootObject /*System.Object*/;
         public clearButtonVisibility: "Never" | "WhileEditing" | string | number | null | undefined | Bind;
     }
-    export declare class FileImageSource extends ImageSource {
+    export declare class FileImageSource extends XF.ImageSource {
         public static file: AttachedNode;
         public isEmpty: boolean | null | Bind;
         public file: string | null | Bind;
     }
-    export declare class FlexLayout extends Layout {
+    export declare class FlexLayout extends XF.Layout$Generic {
         public static order: AttachedNode;
         public static grow: AttachedNode;
         public static shrink: AttachedNode;
@@ -692,65 +692,65 @@ namespace XF {
         public position: "Relative" | "Absolute" | string | number | null | undefined | Bind;
         public wrap: "NoWrap" | "Wrap" | "Reverse" | string | number | null | undefined | Bind;
     }
-    export declare class FlyoutPage extends Page {
+    export declare class FlyoutPage extends XF.Page {
         public static isGestureEnabled: AttachedNode;
         public static isPresented: AttachedNode;
         public static flyoutLayoutBehavior: AttachedNode;
-        public detail: Page;
+        public detail: XF.Page;
         public isGestureEnabled: boolean | null | Bind;
         public isPresented: boolean | null | Bind;
-        public flyout: Page;
+        public flyout: XF.Page;
         public flyoutLayoutBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
         public canChangeIsPresented: boolean | null | Bind;
-        public detailBounds: RootObject /*System.ValueType*/;
-        public flyoutBounds: RootObject /*System.ValueType*/;
+        public detailBounds: RootObject;
+        public flyoutBounds: RootObject;
         public shouldShowSplitMode: boolean | null | Bind;
     }
-    export declare class MasterDetailPage extends FlyoutPage {
+    export declare class MasterDetailPage extends XF.FlyoutPage {
         public static masterBehavior: AttachedNode;
-        public master: Page;
-        public masterBounds: RootObject /*System.ValueType*/;
+        public master: XF.Page;
+        public masterBounds: RootObject;
         public masterBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
     }
-    export declare class FontImageSource extends ImageSource {
+    export declare class FontImageSource extends XF.ImageSource {
         public static color: AttachedNode;
         public static fontFamily: AttachedNode;
         public static glyph: AttachedNode;
         public static size: AttachedNode;
         public isEmpty: boolean | null | Bind;
-        public color: Color;
+        public color: XF.Color;
         public fontFamily: string | null | Bind;
         public glyph: string | null | Bind;
         public size: number | null | Bind;
     }
-    export declare class FormattedString extends Element {
+    export declare class FormattedString extends XF.Element {
         public static spans: AttachedNode;
     }
-    export declare class Frame extends ContentView {
+    export declare class Frame extends XF.ContentView {
         public static outlineColor: AttachedNode;
         public static borderColor: AttachedNode;
         public static hasShadow: AttachedNode;
         public static cornerRadius: AttachedNode;
         public hasShadow: boolean | null | Bind;
-        public outlineColor: Color;
-        public borderColor: Color;
+        public outlineColor: XF.Color;
+        public borderColor: XF.Color;
         public cornerRadius: number | null | Bind;
     }
-    export declare class GestureElement extends Element {
+    export declare class GestureElement extends XF.Element {
         public static gestureRecognizers: AttachedNode;
     }
-    export declare class GestureRecognizer extends Element {
+    export declare class GestureRecognizer extends XF.Element {
     }
-    export declare class GradientBrush extends Brush {
+    export declare class GradientBrush extends XF.Brush {
         public static gradientStops: AttachedNode;
     }
-    export declare class GradientStop extends Element {
+    export declare class GradientStop extends XF.Element {
         public static color: AttachedNode;
         public static offset: AttachedNode;
-        public color: Color;
+        public color: XF.Color;
         public offset: number | null | Bind;
     }
-    export declare class Grid extends Layout {
+    export declare class Grid extends XF.Layout$Generic {
         public static column: AttachedNode;
         public static columnSpan: AttachedNode;
         public static row: AttachedNode;
@@ -759,17 +759,17 @@ namespace XF {
         public static columnSpacing: AttachedNode;
         public static columnDefinitions: AttachedNode;
         public static rowDefinitions: AttachedNode;
-        public children: RootObject /*Xamarin.Forms.Grid+IGridList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        public children: RootObject;
         public columnSpacing: number | null | Bind;
         public rowSpacing: number | null | Bind;
     }
-    export declare class HtmlWebViewSource extends WebViewSource {
+    export declare class HtmlWebViewSource extends XF.WebViewSource {
         public static html: AttachedNode;
         public static baseUrl: AttachedNode;
         public baseUrl: string | null | Bind;
         public html: string | null | Bind;
     }
-    export declare class Image extends View {
+    export declare class Image extends XF.View {
         public static source: AttachedNode;
         public static aspect: AttachedNode;
         public static isOpaque: AttachedNode;
@@ -779,9 +779,9 @@ namespace XF {
         public isLoading: boolean | null | Bind;
         public isOpaque: boolean | null | Bind;
         public isAnimationPlaying: boolean | null | Bind;
-        public source: ImageSource;
+        public source: XF.ImageSource;
     }
-    export declare class ImageButton extends View {
+    export declare class ImageButton extends XF.View {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static cornerRadius: AttachedNode;
@@ -793,7 +793,7 @@ namespace XF {
         public static isLoading: AttachedNode;
         public static isPressed: AttachedNode;
         public static padding: AttachedNode;
-        public borderColor: Color;
+        public borderColor: XF.Color;
         public cornerRadius: number | null | Bind;
         public borderWidth: number | null | Bind;
         public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
@@ -802,13 +802,13 @@ namespace XF {
         public isOpaque: boolean | null | Bind;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
-        public source: ImageSource;
-        public padding: RootObject /*System.ValueType*/;
+        public source: XF.ImageSource;
+        public padding: RootObject;
     }
-    export declare class ImageSource extends Element {
+    export declare class ImageSource extends XF.Element {
         public isEmpty: boolean | null | Bind;
     }
-    export declare class IndicatorView extends TemplatedView {
+    export declare class IndicatorView extends XF.TemplatedView {
         public static indicatorsShape: AttachedNode;
         public static position: AttachedNode;
         public static count: AttachedNode;
@@ -820,18 +820,18 @@ namespace XF {
         public static indicatorSize: AttachedNode;
         public static itemsSource: AttachedNode;
         public indicatorsShape: "Circle" | "Square" | string | number | null | undefined | Bind;
-        public indicatorLayout: Layout;
+        public indicatorLayout: XF.Layout$Generic;
         public position: number | null | Bind;
         public count: number | null | Bind;
         public maximumVisible: number | null | Bind;
-        public indicatorTemplate: DataTemplate;
+        public indicatorTemplate: XF.DataTemplate;
         public hideSingle: boolean | null | Bind;
-        public indicatorColor: Color;
-        public selectedIndicatorColor: Color;
+        public indicatorColor: XF.Color;
+        public selectedIndicatorColor: XF.Color;
         public indicatorSize: number | null | Bind;
         public itemsSource: RootObject /*System.Collections.IEnumerable*/;
     }
-    export declare class InputView extends View {
+    export declare class InputView extends XF.View {
         public static text: AttachedNode;
         public static keyboard: AttachedNode;
         public static isSpellCheckEnabled: AttachedNode;
@@ -844,51 +844,51 @@ namespace XF {
         public static textTransform: AttachedNode;
         public maxLength: number | null | Bind;
         public text: string | null | Bind;
-        public keyboard: RootObject /*Xamarin.Forms.Keyboard*/;
+        public keyboard: RootObject;
         public isSpellCheckEnabled: boolean | null | Bind;
         public isReadOnly: boolean | null | Bind;
         public placeholder: string | null | Bind;
-        public placeholderColor: Color;
-        public textColor: Color;
+        public placeholderColor: XF.Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
     }
-    export declare class Behavior extends BindableObject {
+    export declare class Behavior extends XF.BindableObject {
     }
-    export declare class Behavior$Generic extends Behavior {
+    export declare class Behavior$Generic extends XF.Behavior {
     }
-    export declare class DataTrigger extends TriggerBase {
-        public binding: RootObject /*Xamarin.Forms.BindingBase*/;
+    export declare class DataTrigger extends XF.TriggerBase {
+        public binding: RootObject;
         public static setters: AttachedNode;
         public value: RootObject /*System.Object*/;
     }
-    export declare class EventTrigger extends TriggerBase {
+    export declare class EventTrigger extends XF.TriggerBase {
         public static actions: AttachedNode;
         public event: string | null | Bind;
     }
-    export declare class MultiTrigger extends TriggerBase {
+    export declare class MultiTrigger extends XF.TriggerBase {
         public static conditions: AttachedNode;
         public static setters: AttachedNode;
     }
-    export declare class Trigger extends TriggerBase {
-        public property: RootObject /*Xamarin.Forms.BindableProperty*/;
+    export declare class Trigger extends XF.TriggerBase {
+        public property: RootObject;
         public static setters: AttachedNode;
         public value: RootObject /*System.Object*/;
     }
-    export declare class TriggerBase extends BindableObject {
+    export declare class TriggerBase extends XF.BindableObject {
         public static enterActions: AttachedNode;
         public static exitActions: AttachedNode;
         public isSealed: boolean | null | Bind;
         public targetType: RootObject /*System.Type*/;
     }
-    export declare class ItemsView$Generic extends View {
+    export declare class ItemsView$Generic extends XF.View {
         public static itemsSource: AttachedNode;
         public static itemTemplate: AttachedNode;
         public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public itemTemplate: DataTemplate;
+        public itemTemplate: XF.DataTemplate;
         public static templatedItems: AttachedNode;
     }
-    export declare class CarouselView extends ItemsView {
+    export declare class CarouselView extends XF.ItemsView {
         public static loop: AttachedNode;
         public static peekAreaInsets: AttachedNode;
         public static visibleViews: AttachedNode;
@@ -908,7 +908,7 @@ namespace XF {
         public static previousItemVisualState: string | null | Bind;
         public static defaultItemVisualState: string | null | Bind;
         public loop: boolean | null | Bind;
-        public peekAreaInsets: RootObject /*System.ValueType*/;
+        public peekAreaInsets: RootObject;
         public isDragging: boolean | null | Bind;
         public isBounceEnabled: boolean | null | Bind;
         public isSwipeEnabled: boolean | null | Bind;
@@ -919,15 +919,15 @@ namespace XF {
         public position: number | null | Bind;
         public positionChangedCommand: RootObject /*System.Windows.Input.ICommand*/;
         public positionChangedCommandParameter: RootObject /*System.Object*/;
-        public itemsLayout: LinearItemsLayout;
-        public indicatorView: IndicatorView;
+        public itemsLayout: XF.LinearItemsLayout;
+        public indicatorView: XF.IndicatorView;
         public isScrolling: boolean | null | Bind;
         public animatePositionChanges: boolean | null | Bind;
         public animateCurrentItemChanges: boolean | null | Bind;
     }
-    export declare class CollectionView extends GroupableItemsView {
+    export declare class CollectionView extends XF.GroupableItemsView {
     }
-    export declare class GridItemsLayout extends ItemsLayout {
+    export declare class GridItemsLayout extends XF.ItemsLayout {
         public static span: AttachedNode;
         public static verticalItemSpacing: AttachedNode;
         public static horizontalItemSpacing: AttachedNode;
@@ -935,22 +935,22 @@ namespace XF {
         public verticalItemSpacing: number | null | Bind;
         public horizontalItemSpacing: number | null | Bind;
     }
-    export declare class GroupableItemsView extends SelectableItemsView {
+    export declare class GroupableItemsView extends XF.SelectableItemsView {
         public static isGrouped: AttachedNode;
         public static groupHeaderTemplate: AttachedNode;
         public static groupFooterTemplate: AttachedNode;
         public isGrouped: boolean | null | Bind;
-        public groupHeaderTemplate: DataTemplate;
-        public groupFooterTemplate: DataTemplate;
+        public groupHeaderTemplate: XF.DataTemplate;
+        public groupFooterTemplate: XF.DataTemplate;
     }
-    export declare class ItemsLayout extends BindableObject {
+    export declare class ItemsLayout extends XF.BindableObject {
         public static snapPointsAlignment: AttachedNode;
         public static snapPointsType: AttachedNode;
         public orientation: "Vertical" | "Horizontal" | string | number | null | undefined | Bind;
         public snapPointsAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public snapPointsType: "None" | "Mandatory" | "MandatorySingle" | string | number | null | undefined | Bind;
     }
-    export declare class ItemsView extends View {
+    export declare class ItemsView extends XF.View {
         public static emptyView: AttachedNode;
         public static emptyViewTemplate: AttachedNode;
         public static itemsSource: AttachedNode;
@@ -962,24 +962,24 @@ namespace XF {
         public static itemTemplate: AttachedNode;
         public static itemsUpdatingScrollMode: AttachedNode;
         public emptyView: RootObject /*System.Object*/;
-        public emptyViewTemplate: DataTemplate;
+        public emptyViewTemplate: XF.DataTemplate;
         public itemsSource: RootObject /*System.Collections.IEnumerable*/;
         public remainingItemsThresholdReachedCommand: RootObject /*System.Windows.Input.ICommand*/;
         public remainingItemsThresholdReachedCommandParameter: RootObject /*System.Object*/;
         public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
         public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
         public remainingItemsThreshold: number | null | Bind;
-        public itemTemplate: DataTemplate;
+        public itemTemplate: XF.DataTemplate;
         public itemsUpdatingScrollMode: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | string | number | null | undefined | Bind;
     }
-    export declare class LinearItemsLayout extends ItemsLayout {
-        public static vertical: RootObject /*Xamarin.Forms.IItemsLayout*/;
-        public static horizontal: RootObject /*Xamarin.Forms.IItemsLayout*/;
-        public static carouselVertical: RootObject /*Xamarin.Forms.IItemsLayout*/;
+    export declare class LinearItemsLayout extends XF.ItemsLayout {
+        public static vertical: RootObject;
+        public static horizontal: RootObject;
+        public static carouselVertical: RootObject;
         public static itemSpacing: AttachedNode;
         public itemSpacing: number | null | Bind;
     }
-    export declare class SelectableItemsView extends StructuredItemsView {
+    export declare class SelectableItemsView extends XF.StructuredItemsView {
         public static selectionMode: AttachedNode;
         public static selectedItem: AttachedNode;
         public static selectedItems: AttachedNode;
@@ -990,7 +990,7 @@ namespace XF {
         public selectionChangedCommandParameter: RootObject /*System.Object*/;
         public selectionMode: "None" | "Single" | "Multiple" | string | number | null | undefined | Bind;
     }
-    export declare class StructuredItemsView extends ItemsView {
+    export declare class StructuredItemsView extends XF.ItemsView {
         public static header: AttachedNode;
         public static headerTemplate: AttachedNode;
         public static footer: AttachedNode;
@@ -998,15 +998,15 @@ namespace XF {
         public static itemsLayout: AttachedNode;
         public static itemSizingStrategy: AttachedNode;
         public header: RootObject /*System.Object*/;
-        public headerTemplate: DataTemplate;
+        public headerTemplate: XF.DataTemplate;
         public footer: RootObject /*System.Object*/;
-        public footerTemplate: DataTemplate;
-        public itemsLayout: RootObject /*Xamarin.Forms.IItemsLayout*/;
+        public footerTemplate: XF.DataTemplate;
+        public itemsLayout: RootObject;
         public itemSizingStrategy: "MeasureAllItems" | "MeasureFirstItem" | string | number | null | undefined | Bind;
     }
     export declare class IValueConverter extends RootObject {
     }
-    export declare class Label extends View {
+    export declare class Label extends XF.View {
         public static horizontalTextAlignment: AttachedNode;
         public static xAlign: AttachedNode;
         public static verticalTextAlignment: AttachedNode;
@@ -1027,12 +1027,12 @@ namespace XF {
         public static padding: AttachedNode;
         public static textType: AttachedNode;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
-        public font: RootObject /*System.ValueType*/;
-        public formattedText: FormattedString;
+        public font: RootObject;
+        public formattedText: XF.FormattedString;
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public lineBreakMode: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | string | number | null | undefined | Bind;
         public text: string | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public xAlign: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
@@ -1043,30 +1043,30 @@ namespace XF {
         public fontSize: number | null | Bind;
         public lineHeight: number | null | Bind;
         public maxLines: number | null | Bind;
-        public padding: RootObject /*System.ValueType*/;
+        public padding: RootObject;
         public textType: "Text" | "Html" | string | number | null | undefined | Bind;
     }
-    export declare class Layout$Generic extends Layout {
+    export declare class Layout$Generic extends XF.Layout {
         public static children: AttachedNode;
     }
-    export declare class Layout extends View {
+    export declare class Layout extends XF.View {
         public static outChildIntoBoundingRegion: AttachedNode;
         public static isClippedToBounds: AttachedNode;
         public static cascadeInputTransparent: AttachedNode;
         public static padding: AttachedNode;
         public isClippedToBounds: boolean | null | Bind;
-        public padding: RootObject /*System.ValueType*/;
+        public padding: RootObject;
         public cascadeInputTransparent: boolean | null | Bind;
         public children: RootObject /*System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Element, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
     }
-    export declare class LinearGradientBrush extends GradientBrush {
+    export declare class LinearGradientBrush extends XF.GradientBrush {
         public static startPoint: AttachedNode;
         public static endPoint: AttachedNode;
         public isEmpty: boolean | null | Bind;
-        public startPoint: RootObject /*System.ValueType*/;
-        public endPoint: RootObject /*System.ValueType*/;
+        public startPoint: RootObject;
+        public endPoint: RootObject;
     }
-    export declare class ListView extends View {
+    export declare class ListView extends XF.ItemsView$Generic {
         public static isPullToRefreshEnabled: AttachedNode;
         public static isRefreshing: AttachedNode;
         public static refreshCommand: AttachedNode;
@@ -1086,13 +1086,13 @@ namespace XF {
         public static horizontalScrollBarVisibility: AttachedNode;
         public static verticalScrollBarVisibility: AttachedNode;
         public footer: RootObject /*System.Object*/;
-        public footerTemplate: DataTemplate;
-        public groupDisplayBinding: RootObject /*Xamarin.Forms.BindingBase*/;
-        public groupHeaderTemplate: DataTemplate;
-        public groupShortNameBinding: RootObject /*Xamarin.Forms.BindingBase*/;
+        public footerTemplate: XF.DataTemplate;
+        public groupDisplayBinding: RootObject;
+        public groupHeaderTemplate: XF.DataTemplate;
+        public groupShortNameBinding: RootObject;
         public hasUnevenRows: boolean | null | Bind;
         public header: RootObject /*System.Object*/;
-        public headerTemplate: DataTemplate;
+        public headerTemplate: XF.DataTemplate;
         public isGroupingEnabled: boolean | null | Bind;
         public isPullToRefreshEnabled: boolean | null | Bind;
         public isRefreshing: boolean | null | Bind;
@@ -1100,24 +1100,24 @@ namespace XF {
         public rowHeight: number | null | Bind;
         public selectedItem: RootObject /*System.Object*/;
         public selectionMode: "None" | "Single" | string | number | null | undefined | Bind;
-        public separatorColor: Color;
-        public refreshControlColor: Color;
+        public separatorColor: XF.Color;
+        public refreshControlColor: XF.Color;
         public separatorVisibility: "Default" | "None" | string | number | null | undefined | Bind;
         public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
         public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
         public cachingStrategy: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | string | number | null | undefined | Bind;
         public refreshAllowed: boolean | null | Bind;
-        public footerElement: Element;
-        public headerElement: Element;
+        public footerElement: XF.Element;
+        public headerElement: XF.Element;
     }
-    export declare class Menu extends BaseMenuItem {
+    export declare class Menu extends XF.BaseMenuItem {
         public static item: AttachedNode;
         public text: string | null | Bind;
         public static items: AttachedNode;
         public count: number | null | Bind;
         public isReadOnly: boolean | null | Bind;
     }
-    export declare class MenuItem extends BaseMenuItem {
+    export declare class MenuItem extends XF.BaseMenuItem {
         public static accelerator: AttachedNode;
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
@@ -1128,8 +1128,8 @@ namespace XF {
         public static text: AttachedNode;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
-        public icon: FileImageSource;
-        public iconImageSource: ImageSource;
+        public icon: XF.FileImageSource;
+        public iconImageSource: XF.ImageSource;
         public isDestructive: boolean | null | Bind;
         public text: string | null | Bind;
         public isEnabled: boolean | null | Bind;
@@ -1137,21 +1137,21 @@ namespace XF {
         public static class: AttachedNode;
         public isEnabledPropertyName: string | null | Bind;
     }
-    export declare class MultiPage$Generic extends Page {
+    export declare class MultiPage$Generic extends XF.Page {
         public static index: AttachedNode;
         public static itemsSource: AttachedNode;
         public static itemTemplate: AttachedNode;
         public static selectedItem: AttachedNode;
         public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public itemTemplate: DataTemplate;
+        public itemTemplate: XF.DataTemplate;
         public selectedItem: RootObject /*System.Object*/;
-        public currentPage: Page;
+        public currentPage: RootObject;
         public static children: AttachedNode;
     }
     export declare class NameScopeExtensions extends RootObject {
         public static dByName: AttachedNode;
     }
-    export declare class NavigationPage extends Page {
+    export declare class NavigationPage extends XF.Page {
         public static backButtonTitle: AttachedNode;
         public static hasBackButton: AttachedNode;
         public static hasNavigationBar: AttachedNode;
@@ -1165,27 +1165,27 @@ namespace XF {
         public static barTextColor: AttachedNode;
         public static currentPage: AttachedNode;
         public static rootPage: AttachedNode;
-        public barBackgroundColor: Color;
-        public barBackground: Brush;
-        public barTextColor: Color;
-        public tint: Color;
+        public barBackgroundColor: XF.Color;
+        public barBackground: XF.Brush;
+        public barTextColor: XF.Color;
+        public tint: XF.Color;
         public pages: RootObject /*System.Collections.Generic.IEnumerable`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
         public stackDepth: number | null | Bind;
-        public currentPage: Page;
-        public rootPage: Page;
+        public currentPage: XF.Page;
+        public rootPage: XF.Page;
     }
-    export declare class NullEffect extends Effect {
+    export declare class NullEffect extends XF.Effect {
     }
-    export declare class OpenGLView extends View {
+    export declare class OpenGLView extends XF.View {
         public static hasRenderLoop: AttachedNode;
         public hasRenderLoop: boolean | null | Bind;
         public onDisplay: RootObject /*System.Action`1[[Xamarin.Forms.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
     }
-    export declare class OrientationStateTrigger extends StateTriggerBase {
+    export declare class OrientationStateTrigger extends XF.StateTriggerBase {
         public static orientation: AttachedNode;
         public orientation: "Portrait" | "Landscape" | "PortraitUp" | "PortraitDown" | "LandscapeLeft" | "LandscapeRight" | "Other" | string | number | null | undefined | Bind;
     }
-    export declare class Page extends VisualElement {
+    export declare class Page extends XF.VisualElement {
         public static backgroundImageSource: AttachedNode;
         public static backgroundImage: AttachedNode;
         public static isBusy: AttachedNode;
@@ -1198,22 +1198,22 @@ namespace XF {
         public static promptSignalName: string | null | Bind;
         public static actionSheetSignalName: string | null | Bind;
         public backgroundImage: string | null | Bind;
-        public backgroundImageSource: ImageSource;
-        public icon: FileImageSource;
-        public iconImageSource: ImageSource;
+        public backgroundImageSource: XF.ImageSource;
+        public icon: XF.FileImageSource;
+        public iconImageSource: XF.ImageSource;
         public isBusy: boolean | null | Bind;
-        public padding: RootObject /*System.ValueType*/;
+        public padding: RootObject;
         public title: string | null | Bind;
         public static toolbarItems: AttachedNode;
-        public containerArea: RootObject /*System.ValueType*/;
+        public containerArea: RootObject;
         public ignoresContainerArea: boolean | null | Bind;
         public static internalChildren: AttachedNode;
     }
-    export declare class PanGestureRecognizer extends GestureRecognizer {
+    export declare class PanGestureRecognizer extends XF.GestureRecognizer {
         public static touchPoints: AttachedNode;
         public touchPoints: number | null | Bind;
     }
-    export declare class Picker extends View {
+    export declare class Picker extends XF.View {
         public static textColor: AttachedNode;
         public static characterSpacing: AttachedNode;
         public static title: AttachedNode;
@@ -1234,36 +1234,36 @@ namespace XF {
         public static items: AttachedNode;
         public selectedIndex: number | null | Bind;
         public selectedItem: RootObject /*System.Object*/;
-        public textColor: Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public title: string | null | Bind;
-        public titleColor: Color;
+        public titleColor: XF.Color;
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public itemDisplayBinding: RootObject /*Xamarin.Forms.BindingBase*/;
+        public itemDisplayBinding: RootObject;
     }
-    export declare class PinchGestureRecognizer extends GestureRecognizer {
+    export declare class PinchGestureRecognizer extends XF.GestureRecognizer {
         public isPinching: boolean | null | Bind;
     }
-    export declare class PlatformEffect$Generic extends Effect {
-        public container: RootObject /**/;
-        public control: RootObject /**/;
+    export declare class PlatformEffect$Generic extends XF.Effect {
+        public container: RootObject;
+        public control: RootObject;
     }
-    export declare class ProgressBar extends View {
+    export declare class ProgressBar extends XF.View {
         public static progressColor: AttachedNode;
         public static progress: AttachedNode;
-        public progressColor: Color;
+        public progressColor: XF.Color;
         public progress: number | null | Bind;
     }
-    export declare class RadialGradientBrush extends GradientBrush {
+    export declare class RadialGradientBrush extends XF.GradientBrush {
         public static center: AttachedNode;
         public static radius: AttachedNode;
         public isEmpty: boolean | null | Bind;
-        public center: RootObject /*System.ValueType*/;
+        public center: RootObject;
         public radius: number | null | Bind;
     }
-    export declare class RadioButton extends TemplatedView {
-        public static defaultTemplate: ControlTemplate;
+    export declare class RadioButton extends XF.TemplatedView {
+        public static defaultTemplate: XF.ControlTemplate;
         public static content: AttachedNode;
         public static value: AttachedNode;
         public static isChecked: AttachedNode;
@@ -1286,21 +1286,21 @@ namespace XF {
         public value: RootObject /*System.Object*/;
         public isChecked: boolean | null | Bind;
         public groupName: string | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
         public fontFamily: string | null | Bind;
         public fontSize: number | null | Bind;
         public borderWidth: number | null | Bind;
-        public borderColor: Color;
+        public borderColor: XF.Color;
         public cornerRadius: number | null | Bind;
     }
     export declare class RadioButtonGroup extends RootObject {
         public static groupName: AttachedNode;
         public static selectedValue: AttachedNode;
     }
-    export declare class RefreshView extends ContentView {
+    export declare class RefreshView extends XF.ContentView {
         public static isRefreshing: AttachedNode;
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
@@ -1308,42 +1308,42 @@ namespace XF {
         public isRefreshing: boolean | null | Bind;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
-        public refreshColor: Color;
+        public refreshColor: XF.Color;
     }
-    export declare class RelativeLayout extends Layout {
+    export declare class RelativeLayout extends XF.Layout$Generic {
         public static boundsConstraint: AttachedNode;
         public static heightConstraint: AttachedNode;
         public static widthConstraint: AttachedNode;
         public static xConstraint: AttachedNode;
         public static yConstraint: AttachedNode;
-        public children: RootObject /*Xamarin.Forms.RelativeLayout+IRelativeList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        public children: RootObject;
     }
     export declare class Routing extends RootObject {
         public static route: AttachedNode;
     }
-    export declare class RoutingEffect extends Effect {
+    export declare class RoutingEffect extends XF.Effect {
     }
-    export declare class RowDefinition extends BindableObject {
+    export declare class RowDefinition extends XF.BindableObject {
         public static height: AttachedNode;
-        public height: RootObject /*System.ValueType*/;
+        public height: RootObject;
     }
-    export declare class ScrollView extends Layout {
+    export declare class ScrollView extends XF.Layout {
         public static orientation: AttachedNode;
         public static scrollX: AttachedNode;
         public static scrollY: AttachedNode;
         public static contentSize: AttachedNode;
         public static horizontalScrollBarVisibility: AttachedNode;
         public static verticalScrollBarVisibility: AttachedNode;
-        public layoutAreaOverride: RootObject /*System.ValueType*/;
-        public content: View;
-        public contentSize: RootObject /*System.ValueType*/;
+        public layoutAreaOverride: RootObject;
+        public content: XF.View;
+        public contentSize: RootObject;
         public orientation: "Vertical" | "Horizontal" | "Both" | "Neither" | string | number | null | undefined | Bind;
         public scrollX: number | null | Bind;
         public scrollY: number | null | Bind;
         public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
         public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
     }
-    export declare class SearchBar extends InputView {
+    export declare class SearchBar extends XF.InputView {
         public static searchCommand: AttachedNode;
         public static searchCommandParameter: AttachedNode;
         public static text: AttachedNode;
@@ -1357,7 +1357,7 @@ namespace XF {
         public static verticalTextAlignment: AttachedNode;
         public static textColor: AttachedNode;
         public static characterSpacing: AttachedNode;
-        public cancelButtonColor: Color;
+        public cancelButtonColor: XF.Color;
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public searchCommand: RootObject /*System.Windows.Input.ICommand*/;
@@ -1366,7 +1366,7 @@ namespace XF {
         public fontFamily: string | null | Bind;
         public fontSize: number | null | Bind;
     }
-    export declare class BackButtonBehavior extends BindableObject {
+    export declare class BackButtonBehavior extends XF.BindableObject {
         public static commandParameter: AttachedNode;
         public static command: AttachedNode;
         public static iconOverride: AttachedNode;
@@ -1374,11 +1374,11 @@ namespace XF {
         public static textOverride: AttachedNode;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
-        public iconOverride: ImageSource;
+        public iconOverride: XF.ImageSource;
         public isEnabled: boolean | null | Bind;
         public textOverride: string | null | Bind;
     }
-    export declare class BaseShellItem extends NavigableElement {
+    export declare class BaseShellItem extends XF.NavigableElement {
         public static flyoutIcon: AttachedNode;
         public static icon: AttachedNode;
         public static isChecked: AttachedNode;
@@ -1387,8 +1387,8 @@ namespace XF {
         public static tabIndex: AttachedNode;
         public static isTabStop: AttachedNode;
         public static isVisible: AttachedNode;
-        public flyoutIcon: ImageSource;
-        public icon: ImageSource;
+        public flyoutIcon: XF.ImageSource;
+        public icon: XF.ImageSource;
         public isChecked: boolean | null | Bind;
         public isEnabled: boolean | null | Bind;
         public route: string | null | Bind;
@@ -1398,17 +1398,17 @@ namespace XF {
         public isVisible: boolean | null | Bind;
         public flyoutItemIsVisible: boolean | null | Bind;
     }
-    export declare class NavigableElement extends Element {
+    export declare class NavigableElement extends XF.Element {
         public static navigation: AttachedNode;
         public static style: AttachedNode;
-        public navigation: RootObject /*Xamarin.Forms.INavigation*/;
-        public style: Style;
+        public navigation: RootObject;
+        public style: XF.Style;
         public static styleClass: AttachedNode;
         public static class: AttachedNode;
-        public navigationProxy: RootObject /*Xamarin.Forms.Internals.NavigationProxy*/;
+        public navigationProxy: RootObject;
     }
-    export declare class SearchHandler extends BindableObject {
-        public static isFocusedPropertyKey: RootObject /*Xamarin.Forms.BindablePropertyKey*/;
+    export declare class SearchHandler extends XF.BindableObject {
+        public static isFocusedPropertyKey: RootObject;
         public static isFocused: AttachedNode;
         public static keyboard: AttachedNode;
         public static horizontalTextAlignment: AttachedNode;
@@ -1446,44 +1446,44 @@ namespace XF {
         public static selectedItem: AttachedNode;
         public static showsResults: AttachedNode;
         public isFocused: boolean | null | Bind;
-        public keyboard: RootObject /*Xamarin.Forms.Keyboard*/;
+        public keyboard: RootObject;
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
-        public cancelButtonColor: Color;
+        public cancelButtonColor: XF.Color;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
         public fontFamily: string | null | Bind;
         public characterSpacing: number | null | Bind;
         public fontSize: number | null | Bind;
-        public placeholderColor: Color;
+        public placeholderColor: XF.Color;
         public placeholder: string | null | Bind;
-        public backgroundColor: Color;
-        public clearIcon: ImageSource;
+        public backgroundColor: XF.Color;
+        public clearIcon: XF.ImageSource;
         public clearIconHelpText: string | null | Bind;
         public clearIconName: string | null | Bind;
         public clearPlaceholderCommand: RootObject /*System.Windows.Input.ICommand*/;
         public clearPlaceholderCommandParameter: RootObject /*System.Object*/;
         public clearPlaceholderEnabled: boolean | null | Bind;
         public clearPlaceholderHelpText: string | null | Bind;
-        public clearPlaceholderIcon: ImageSource;
+        public clearPlaceholderIcon: XF.ImageSource;
         public clearPlaceholderName: string | null | Bind;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
         public displayMemberName: string | null | Bind;
         public isSearchEnabled: boolean | null | Bind;
         public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public itemTemplate: DataTemplate;
+        public itemTemplate: XF.DataTemplate;
         public query: string | null | Bind;
-        public queryIcon: ImageSource;
+        public queryIcon: XF.ImageSource;
         public queryIconHelpText: string | null | Bind;
         public queryIconName: string | null | Bind;
         public searchBoxVisibility: "Hidden" | "Collapsible" | "Expanded" | string | number | null | undefined | Bind;
         public selectedItem: RootObject /*System.Object*/;
         public showsResults: boolean | null | Bind;
     }
-    export declare class Shell extends Page {
-        public static current: Shell;
+    export declare class Shell extends XF.Page {
+        public static current: XF.Shell;
         public static flyoutItemIsVisible: AttachedNode;
         public static menuItemTemplate: AttachedNode;
         public static itemTemplate: AttachedNode;
@@ -1525,64 +1525,64 @@ namespace XF {
         public static flyoutVerticalScrollMode: AttachedNode;
         public static flyoutContent: AttachedNode;
         public static flyoutContentTemplate: AttachedNode;
-        public currentPage: Page;
+        public currentPage: XF.Page;
         public flyoutVerticalScrollMode: "Disabled" | "Enabled" | "Auto" | string | number | null | undefined | Bind;
-        public flyoutIcon: ImageSource;
-        public currentItem: ShellItem;
-        public currentState: RootObject /*Xamarin.Forms.ShellNavigationState*/;
-        public flyoutBackgroundImage: ImageSource;
+        public flyoutIcon: XF.ImageSource;
+        public currentItem: XF.ShellItem;
+        public currentState: RootObject;
+        public flyoutBackgroundImage: XF.ImageSource;
         public flyoutBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
-        public flyoutBackgroundColor: Color;
-        public flyoutBackground: Brush;
-        public flyoutBackdrop: Brush;
+        public flyoutBackgroundColor: XF.Color;
+        public flyoutBackground: XF.Brush;
+        public flyoutBackdrop: XF.Brush;
         public flyoutWidth: number | null | Bind;
         public flyoutHeight: number | null | Bind;
         public flyoutBehavior: "Disabled" | "Flyout" | "Locked" | string | number | null | undefined | Bind;
         public flyoutHeader: RootObject /*System.Object*/;
         public flyoutFooter: RootObject /*System.Object*/;
         public flyoutHeaderBehavior: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | string | number | null | undefined | Bind;
-        public flyoutHeaderTemplate: DataTemplate;
-        public flyoutFooterTemplate: DataTemplate;
+        public flyoutHeaderTemplate: XF.DataTemplate;
+        public flyoutFooterTemplate: XF.DataTemplate;
         public flyoutIsPresented: boolean | null | Bind;
-        public itemTemplate: DataTemplate;
-        public menuItemTemplate: DataTemplate;
+        public itemTemplate: XF.DataTemplate;
+        public menuItemTemplate: XF.DataTemplate;
         public flyoutItems: RootObject /*System.Collections.IEnumerable*/;
         public flyoutContent: RootObject /*System.Object*/;
-        public flyoutContentTemplate: DataTemplate;
+        public flyoutContentTemplate: XF.DataTemplate;
     }
-    export declare class ShellContent extends BaseShellItem {
+    export declare class ShellContent extends XF.BaseShellItem {
         public static menuItems: AttachedNode;
         public static content: AttachedNode;
         public static contentTemplate: AttachedNode;
         public content: RootObject /*System.Object*/;
-        public contentTemplate: DataTemplate;
+        public contentTemplate: XF.DataTemplate;
     }
-    export declare class ShellGroupItem extends BaseShellItem {
+    export declare class ShellGroupItem extends XF.BaseShellItem {
         public static flyoutDisplayOptions: AttachedNode;
         public flyoutDisplayOptions: "AsSingleItem" | "AsMultipleItems" | string | number | null | undefined | Bind;
     }
-    export declare class FlyoutItem extends ShellItem {
+    export declare class FlyoutItem extends XF.ShellItem {
         public static isVisible: AttachedNode;
         public static labelStyle: string | null | Bind;
         public static imageStyle: string | null | Bind;
         public static layoutStyle: string | null | Bind;
     }
-    export declare class TabBar extends ShellItem {
+    export declare class TabBar extends XF.ShellItem {
     }
-    export declare class ShellItem extends ShellGroupItem {
+    export declare class ShellItem extends XF.ShellGroupItem {
         public static currentItem: AttachedNode;
         public static items: AttachedNode;
-        public currentItem: ShellSection;
+        public currentItem: XF.ShellSection;
     }
-    export declare class Tab extends ShellSection {
+    export declare class Tab extends XF.ShellSection {
     }
-    export declare class ShellSection extends ShellGroupItem {
+    export declare class ShellSection extends XF.ShellGroupItem {
         public static currentItem: AttachedNode;
         public static items: AttachedNode;
-        public currentItem: ShellContent;
+        public currentItem: XF.ShellContent;
         public stack: RootObject /*System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
     }
-    export declare class Slider extends View {
+    export declare class Slider extends XF.View {
         public static minimum: AttachedNode;
         public static maximum: AttachedNode;
         public static value: AttachedNode;
@@ -1593,23 +1593,23 @@ namespace XF {
         public static thumbImage: AttachedNode;
         public static dragStartedCommand: AttachedNode;
         public static dragCompletedCommand: AttachedNode;
-        public minimumTrackColor: Color;
-        public maximumTrackColor: Color;
-        public thumbColor: Color;
-        public thumbImageSource: ImageSource;
-        public thumbImage: FileImageSource;
+        public minimumTrackColor: XF.Color;
+        public maximumTrackColor: XF.Color;
+        public thumbColor: XF.Color;
+        public thumbImageSource: XF.ImageSource;
+        public thumbImage: XF.FileImageSource;
         public dragStartedCommand: RootObject /*System.Windows.Input.ICommand*/;
         public dragCompletedCommand: RootObject /*System.Windows.Input.ICommand*/;
         public maximum: number | null | Bind;
         public minimum: number | null | Bind;
         public value: number | null | Bind;
     }
-    export declare class SolidColorBrush extends Brush {
+    export declare class SolidColorBrush extends XF.Brush {
         public static color: AttachedNode;
         public isEmpty: boolean | null | Bind;
-        public color: Color;
+        public color: XF.Color;
     }
-    export declare class Span extends GestureElement {
+    export declare class Span extends XF.GestureElement {
         public static style: AttachedNode;
         public static textDecorations: AttachedNode;
         public static textTransform: AttachedNode;
@@ -1623,35 +1623,35 @@ namespace XF {
         public static fontSize: AttachedNode;
         public static fontAttributes: AttachedNode;
         public static lineHeight: AttachedNode;
-        public style: Style;
-        public backgroundColor: Color;
-        public textColor: Color;
+        public style: XF.Style;
+        public backgroundColor: XF.Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
-        public foregroundColor: Color;
+        public foregroundColor: XF.Color;
         public text: string | null | Bind;
-        public font: RootObject /*System.ValueType*/;
+        public font: RootObject;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
         public fontFamily: string | null | Bind;
         public fontSize: number | null | Bind;
         public textDecorations: "None" | "Underline" | "Strikethrough" | string | number | null | undefined | Bind;
         public lineHeight: number | null | Bind;
     }
-    export declare class StackLayout extends Layout {
+    export declare class StackLayout extends XF.Layout$Generic {
         public static orientation: AttachedNode;
         public static spacing: AttachedNode;
         public orientation: "Vertical" | "Horizontal" | string | number | null | undefined | Bind;
         public spacing: number | null | Bind;
     }
-    export declare class StateTrigger extends StateTriggerBase {
+    export declare class StateTrigger extends XF.StateTriggerBase {
         public static isActive: AttachedNode;
         public isActive: boolean | null | Bind;
     }
-    export declare class StateTriggerBase extends BindableObject {
+    export declare class StateTriggerBase extends XF.BindableObject {
         public isActive: boolean | null | Bind;
         public isAttached: boolean | null | Bind;
     }
-    export declare class Stepper extends View {
+    export declare class Stepper extends XF.View {
         public static maximum: AttachedNode;
         public static minimum: AttachedNode;
         public static value: AttachedNode;
@@ -1663,14 +1663,14 @@ namespace XF {
         public value: number | null | Bind;
         public stepperPosition: number | null | Bind;
     }
-    export declare class StreamImageSource extends ImageSource {
+    export declare class StreamImageSource extends XF.ImageSource {
         public static stream: AttachedNode;
         public isEmpty: boolean | null | Bind;
         public stream: RootObject /*System.Func`2[[System.Threading.CancellationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Threading.Tasks.Task`1[[System.IO.Stream, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
     }
     export declare class Style extends RootObject {
         public applyToDerivedTypes: boolean | null | Bind;
-        public basedOn: Style;
+        public basedOn: XF.Style;
         public baseResourceKey: string | null | Bind;
         public static behaviors: AttachedNode;
         public canCascade: boolean | null | Bind;
@@ -1679,7 +1679,7 @@ namespace XF {
         public static triggers: AttachedNode;
         public targetType: RootObject /*System.Type*/;
     }
-    export declare class SwipeGestureRecognizer extends GestureRecognizer {
+    export declare class SwipeGestureRecognizer extends XF.GestureRecognizer {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static direction: AttachedNode;
@@ -1689,28 +1689,28 @@ namespace XF {
         public direction: "Right" | "Left" | "Up" | "Down" | string | number | null | undefined | Bind;
         public threshold: number | null | Bind;
     }
-    export declare class SwipeItem extends MenuItem {
+    export declare class SwipeItem extends XF.MenuItem {
         public static backgroundColor: AttachedNode;
         public static isVisible: AttachedNode;
-        public backgroundColor: Color;
+        public backgroundColor: XF.Color;
         public isVisible: boolean | null | Bind;
     }
-    export declare class SwipeItems extends Element {
+    export declare class SwipeItems extends XF.Element {
         public static mode: AttachedNode;
         public static swipeBehaviorOnInvoked: AttachedNode;
         public mode: "Reveal" | "Execute" | string | number | null | undefined | Bind;
         public swipeBehaviorOnInvoked: "Auto" | "Close" | "RemainOpen" | string | number | null | undefined | Bind;
-        public item: RootObject /*Xamarin.Forms.ISwipeItem*/;
+        public item: RootObject;
         public count: number | null | Bind;
         public isReadOnly: boolean | null | Bind;
     }
-    export declare class SwipeItemView extends ContentView {
+    export declare class SwipeItemView extends XF.ContentView {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
     }
-    export declare class SwipeView extends ContentView {
+    export declare class SwipeView extends XF.ContentView {
         public static threshold: AttachedNode;
         public static leftItems: AttachedNode;
         public static rightItems: AttachedNode;
@@ -1718,52 +1718,52 @@ namespace XF {
         public static bottomItems: AttachedNode;
         public threshold: number | null | Bind;
     }
-    export declare class Switch extends View {
+    export declare class Switch extends XF.View {
         public static isToggled: AttachedNode;
         public static onColor: AttachedNode;
         public static thumbColor: AttachedNode;
         public static switchOnVisualState: string | null | Bind;
         public static switchOffVisualState: string | null | Bind;
-        public onColor: Color;
-        public thumbColor: Color;
+        public onColor: XF.Color;
+        public thumbColor: XF.Color;
         public isToggled: boolean | null | Bind;
     }
-    export declare class TabbedPage extends Page {
+    export declare class TabbedPage extends XF.MultiPage$Generic {
         public static barBackgroundColor: AttachedNode;
         public static barBackground: AttachedNode;
         public static barTextColor: AttachedNode;
         public static unselectedTabColor: AttachedNode;
         public static selectedTabColor: AttachedNode;
-        public barBackgroundColor: Color;
-        public barBackground: Brush;
-        public barTextColor: Color;
-        public unselectedTabColor: Color;
-        public selectedTabColor: Color;
+        public barBackgroundColor: XF.Color;
+        public barBackground: XF.Brush;
+        public barTextColor: XF.Color;
+        public unselectedTabColor: XF.Color;
+        public selectedTabColor: XF.Color;
     }
-    export declare class TableRoot extends TableSectionBase {
+    export declare class TableRoot extends XF.TableSectionBase$Generic {
     }
-    export declare class TableSectionBase$Generic extends TableSectionBase {
+    export declare class TableSectionBase$Generic extends XF.TableSectionBase {
         public count: number | null | Bind;
-        public item: BindableObject;
+        public item: RootObject;
     }
-    export declare class TableSection extends TableSectionBase {
+    export declare class TableSection extends XF.TableSectionBase$Generic {
     }
-    export declare class TableSectionBase extends BindableObject {
+    export declare class TableSectionBase extends XF.BindableObject {
         public static title: AttachedNode;
         public static textColor: AttachedNode;
         public title: string | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
     }
-    export declare class TableView extends View {
+    export declare class TableView extends XF.View {
         public static rowHeight: AttachedNode;
         public static hasUnevenRows: AttachedNode;
         public hasUnevenRows: boolean | null | Bind;
         public intent: "Menu" | "Settings" | "Form" | "Data" | string | number | null | undefined | Bind;
         public static root: AttachedNode;
         public rowHeight: number | null | Bind;
-        public model: RootObject /*Xamarin.Forms.Internals.TableModel*/;
+        public model: RootObject;
     }
-    export declare class TapGestureRecognizer extends GestureRecognizer {
+    export declare class TapGestureRecognizer extends XF.GestureRecognizer {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static numberOfTapsRequired: AttachedNode;
@@ -1775,15 +1775,15 @@ namespace XF {
         public tappedCallback: RootObject /*System.Action`2[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
         public tappedCallbackParameter: RootObject /*System.Object*/;
     }
-    export declare class TemplatedPage extends Page {
+    export declare class TemplatedPage extends XF.Page {
         public static controlTemplate: AttachedNode;
-        public controlTemplate: ControlTemplate;
+        public controlTemplate: XF.ControlTemplate;
     }
-    export declare class TemplatedView extends Layout {
+    export declare class TemplatedView extends XF.Layout {
         public static controlTemplate: AttachedNode;
-        public controlTemplate: ControlTemplate;
+        public controlTemplate: XF.ControlTemplate;
     }
-    export declare class TimePicker extends View {
+    export declare class TimePicker extends XF.View {
         public static format: AttachedNode;
         public static textColor: AttachedNode;
         public static characterSpacing: AttachedNode;
@@ -1793,7 +1793,7 @@ namespace XF {
         public static fontAttributes: AttachedNode;
         public static textTransform: AttachedNode;
         public format: string | null | Bind;
-        public textColor: Color;
+        public textColor: XF.Color;
         public characterSpacing: number | null | Bind;
         public time: RootObject /*System.TimeSpan*/;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
@@ -1801,32 +1801,32 @@ namespace XF {
         public fontSize: number | null | Bind;
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
     }
-    export declare class ToolbarItem extends MenuItem {
+    export declare class ToolbarItem extends XF.MenuItem {
         public name: string | null | Bind;
         public order: "Default" | "Primary" | "Secondary" | string | number | null | undefined | Bind;
         public priority: number | null | Bind;
     }
-    export declare class UriImageSource extends ImageSource {
+    export declare class UriImageSource extends XF.ImageSource {
         public static uri: AttachedNode;
         public isEmpty: boolean | null | Bind;
         public cacheValidity: RootObject /*System.TimeSpan*/;
         public cachingEnabled: boolean | null | Bind;
         public uri: RootObject /*System.Uri*/;
     }
-    export declare class UrlWebViewSource extends WebViewSource {
+    export declare class UrlWebViewSource extends XF.WebViewSource {
         public static url: AttachedNode;
         public url: string | null | Bind;
     }
-    export declare class View extends VisualElement {
+    export declare class View extends XF.VisualElement {
         public static verticalOptions: AttachedNode;
         public static horizontalOptions: AttachedNode;
         public static margin: AttachedNode;
         public static gestureRecognizers: AttachedNode;
-        public horizontalOptions: RootObject /*System.ValueType*/;
-        public margin: RootObject /*System.ValueType*/;
-        public verticalOptions: RootObject /*System.ValueType*/;
+        public horizontalOptions: RootObject;
+        public margin: RootObject;
+        public verticalOptions: RootObject;
     }
-    export declare class VisualElement extends NavigableElement {
+    export declare class VisualElement extends XF.NavigableElement {
         public static navigation: AttachedNode;
         public static style: AttachedNode;
         public static inputTransparent: AttachedNode;
@@ -1857,18 +1857,18 @@ namespace XF {
         public static heightRequest: AttachedNode;
         public static minimumWidthRequest: AttachedNode;
         public static minimumHeightRequest: AttachedNode;
-        public static isFocusedPropertyKey: RootObject /*Xamarin.Forms.BindablePropertyKey*/;
+        public static isFocusedPropertyKey: RootObject;
         public static isFocused: AttachedNode;
         public static flowDirection: AttachedNode;
         public static tabIndex: AttachedNode;
         public static isTabStop: AttachedNode;
-        public visual: RootObject /*Xamarin.Forms.IVisual*/;
+        public visual: RootObject;
         public flowDirection: "MatchParent" | "LeftToRight" | "RightToLeft" | string | number | null | undefined | Bind;
         public anchorX: number | null | Bind;
         public anchorY: number | null | Bind;
-        public backgroundColor: Color;
-        public background: Brush;
-        public bounds: RootObject /*System.ValueType*/;
+        public backgroundColor: XF.Color;
+        public background: XF.Brush;
+        public bounds: RootObject;
         public height: number | null | Bind;
         public heightRequest: number | null | Bind;
         public inputTransparent: boolean | null | Bind;
@@ -1892,7 +1892,7 @@ namespace XF {
         public widthRequest: number | null | Bind;
         public x: number | null | Bind;
         public y: number | null | Bind;
-        public clip: Geometry;
+        public clip: XF.Geometry;
         public batched: boolean | null | Bind;
         public disableLayout: boolean | null | Bind;
         public isInNativeLayout: boolean | null | Bind;
@@ -1904,7 +1904,7 @@ namespace XF {
         public static visualStateGroups: AttachedNode;
         public static oState: AttachedNode;
     }
-    export declare class WebView extends View {
+    export declare class WebView extends XF.View {
         public static source: AttachedNode;
         public static canGoBack: AttachedNode;
         public static canGoForward: AttachedNode;
@@ -1912,31 +1912,31 @@ namespace XF {
         public canGoBack: boolean | null | Bind;
         public canGoForward: boolean | null | Bind;
         public cookies: RootObject /*System.Net.CookieContainer*/;
-        public source: WebViewSource;
+        public source: XF.WebViewSource;
     }
-    export declare class WebViewSource extends BindableObject {
+    export declare class WebViewSource extends XF.BindableObject {
     }
-    export declare class ArcSegment extends PathSegment {
+    export declare class ArcSegment extends XF.PathSegment {
         public static point: AttachedNode;
         public static size: AttachedNode;
         public static rotationAngle: AttachedNode;
         public static sweepDirection: AttachedNode;
         public static isLargeArc: AttachedNode;
-        public point: RootObject /*System.ValueType*/;
-        public size: RootObject /*System.ValueType*/;
+        public point: RootObject;
+        public size: RootObject;
         public rotationAngle: number | null | Bind;
         public sweepDirection: "CounterClockwise" | "Clockwise" | string | number | null | undefined | Bind;
         public isLargeArc: boolean | null | Bind;
     }
-    export declare class BezierSegment extends PathSegment {
+    export declare class BezierSegment extends XF.PathSegment {
         public static point1: AttachedNode;
         public static point2: AttachedNode;
         public static point3: AttachedNode;
-        public point1: RootObject /*System.ValueType*/;
-        public point2: RootObject /*System.ValueType*/;
-        public point3: RootObject /*System.ValueType*/;
+        public point1: RootObject;
+        public point2: RootObject;
+        public point3: RootObject;
     }
-    export declare class CompositeTransform extends Transform {
+    export declare class CompositeTransform extends XF.Transform {
         public static centerX: AttachedNode;
         public static centerY: AttachedNode;
         public static scaleX: AttachedNode;
@@ -1956,19 +1956,19 @@ namespace XF {
         public translateX: number | null | Bind;
         public translateY: number | null | Bind;
     }
-    export declare class Ellipse extends Shape {
+    export declare class Ellipse extends XF.Shape {
     }
-    export declare class EllipseGeometry extends Geometry {
+    export declare class EllipseGeometry extends XF.Geometry {
         public static center: AttachedNode;
         public static radiusX: AttachedNode;
         public static radiusY: AttachedNode;
-        public center: RootObject /*System.ValueType*/;
+        public center: RootObject;
         public radiusX: number | null | Bind;
         public radiusY: number | null | Bind;
     }
-    export declare class Geometry extends BindableObject {
+    export declare class Geometry extends XF.BindableObject {
     }
-    export declare class GeometryGroup extends Geometry {
+    export declare class GeometryGroup extends XF.Geometry {
         public static children: AttachedNode;
         public static fillRule: AttachedNode;
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
@@ -1976,7 +1976,7 @@ namespace XF {
     export declare class GeometryHelper extends RootObject {
         public static ttenGeometry: AttachedNode;
     }
-    export declare class Line extends Shape {
+    export declare class Line extends XF.Shape {
         public static x1: AttachedNode;
         public static y1: AttachedNode;
         public static x2: AttachedNode;
@@ -1986,78 +1986,78 @@ namespace XF {
         public x2: number | null | Bind;
         public y2: number | null | Bind;
     }
-    export declare class LineGeometry extends Geometry {
+    export declare class LineGeometry extends XF.Geometry {
         public static startPoint: AttachedNode;
         public static endPoint: AttachedNode;
-        public startPoint: RootObject /*System.ValueType*/;
-        public endPoint: RootObject /*System.ValueType*/;
+        public startPoint: RootObject;
+        public endPoint: RootObject;
     }
-    export declare class LineSegment extends PathSegment {
+    export declare class LineSegment extends XF.PathSegment {
         public static point: AttachedNode;
-        public point: RootObject /*System.ValueType*/;
+        public point: RootObject;
     }
-    export declare class MatrixTransform extends Transform {
+    export declare class MatrixTransform extends XF.Transform {
         public static matrix: AttachedNode;
-        public matrix: RootObject /*System.ValueType*/;
+        public matrix: RootObject;
     }
-    export declare class Path extends Shape {
+    export declare class Path extends XF.Shape {
         public static data: AttachedNode;
         public static renderTransform: AttachedNode;
-        public data: Geometry;
-        public renderTransform: Transform;
+        public data: XF.Geometry;
+        public renderTransform: XF.Transform;
     }
-    export declare class PathFigure extends BindableObject {
+    export declare class PathFigure extends XF.BindableObject {
         public static segments: AttachedNode;
         public static startPoint: AttachedNode;
         public static isClosed: AttachedNode;
         public static isFilled: AttachedNode;
-        public startPoint: RootObject /*System.ValueType*/;
+        public startPoint: RootObject;
         public isClosed: boolean | null | Bind;
         public isFilled: boolean | null | Bind;
     }
-    export declare class PathGeometry extends Geometry {
+    export declare class PathGeometry extends XF.Geometry {
         public static figures: AttachedNode;
         public static fillRule: AttachedNode;
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
     }
-    export declare class PathSegment extends BindableObject {
+    export declare class PathSegment extends XF.BindableObject {
     }
-    export declare class PolyBezierSegment extends PathSegment {
+    export declare class PolyBezierSegment extends XF.PathSegment {
         public static points: AttachedNode;
     }
-    export declare class Polygon extends Shape {
-        public static points: AttachedNode;
-        public static fillRule: AttachedNode;
-        public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
-    }
-    export declare class Polyline extends Shape {
+    export declare class Polygon extends XF.Shape {
         public static points: AttachedNode;
         public static fillRule: AttachedNode;
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
     }
-    export declare class PolyLineSegment extends PathSegment {
+    export declare class Polyline extends XF.Shape {
+        public static points: AttachedNode;
+        public static fillRule: AttachedNode;
+        public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
+    }
+    export declare class PolyLineSegment extends XF.PathSegment {
         public static points: AttachedNode;
     }
-    export declare class PolyQuadraticBezierSegment extends PathSegment {
+    export declare class PolyQuadraticBezierSegment extends XF.PathSegment {
         public static points: AttachedNode;
     }
-    export declare class QuadraticBezierSegment extends PathSegment {
+    export declare class QuadraticBezierSegment extends XF.PathSegment {
         public static point1: AttachedNode;
         public static point2: AttachedNode;
-        public point1: RootObject /*System.ValueType*/;
-        public point2: RootObject /*System.ValueType*/;
+        public point1: RootObject;
+        public point2: RootObject;
     }
-    export declare class Rectangle extends Shape {
+    export declare class Rectangle extends XF.Shape {
         public static radiusX: AttachedNode;
         public static radiusY: AttachedNode;
         public radiusX: number | null | Bind;
         public radiusY: number | null | Bind;
     }
-    export declare class RectangleGeometry extends Geometry {
+    export declare class RectangleGeometry extends XF.Geometry {
         public static rect: AttachedNode;
-        public rect: RootObject /*System.ValueType*/;
+        public rect: RootObject;
     }
-    export declare class RotateTransform extends Transform {
+    export declare class RotateTransform extends XF.Transform {
         public static angle: AttachedNode;
         public static centerX: AttachedNode;
         public static centerY: AttachedNode;
@@ -2065,13 +2065,13 @@ namespace XF {
         public centerX: number | null | Bind;
         public centerY: number | null | Bind;
     }
-    export declare class RoundRectangleGeometry extends GeometryGroup {
+    export declare class RoundRectangleGeometry extends XF.GeometryGroup {
         public static rect: AttachedNode;
         public static cornerRadius: AttachedNode;
-        public rect: RootObject /*System.ValueType*/;
-        public cornerRadius: RootObject /*System.ValueType*/;
+        public rect: RootObject;
+        public cornerRadius: RootObject;
     }
-    export declare class ScaleTransform extends Transform {
+    export declare class ScaleTransform extends XF.Transform {
         public static scaleX: AttachedNode;
         public static scaleY: AttachedNode;
         public static centerX: AttachedNode;
@@ -2081,7 +2081,7 @@ namespace XF {
         public centerX: number | null | Bind;
         public centerY: number | null | Bind;
     }
-    export declare class Shape extends View {
+    export declare class Shape extends XF.View {
         public static fill: AttachedNode;
         public static stroke: AttachedNode;
         public static strokeThickness: AttachedNode;
@@ -2091,8 +2091,8 @@ namespace XF {
         public static strokeLineJoin: AttachedNode;
         public static strokeMiterLimit: AttachedNode;
         public static aspect: AttachedNode;
-        public fill: Brush;
-        public stroke: Brush;
+        public fill: XF.Brush;
+        public stroke: XF.Brush;
         public strokeThickness: number | null | Bind;
         public strokeDashOffset: number | null | Bind;
         public strokeLineCap: "Flat" | "Square" | "Round" | string | number | null | undefined | Bind;
@@ -2100,7 +2100,7 @@ namespace XF {
         public strokeMiterLimit: number | null | Bind;
         public aspect: "None" | "Fill" | "Uniform" | "UniformToFill" | string | number | null | undefined | Bind;
     }
-    export declare class SkewTransform extends Transform {
+    export declare class SkewTransform extends XF.Transform {
         public static angleX: AttachedNode;
         public static angleY: AttachedNode;
         public static centerX: AttachedNode;
@@ -2110,14 +2110,14 @@ namespace XF {
         public centerX: number | null | Bind;
         public centerY: number | null | Bind;
     }
-    export declare class Transform extends BindableObject {
+    export declare class Transform extends XF.BindableObject {
         public static value: AttachedNode;
-        public value: RootObject /*System.ValueType*/;
+        public value: RootObject;
     }
-    export declare class TransformGroup extends Transform {
+    export declare class TransformGroup extends XF.Transform {
         public static children: AttachedNode;
     }
-    export declare class TranslateTransform extends Transform {
+    export declare class TranslateTransform extends XF.Transform {
         public static x: AttachedNode;
         public static y: AttachedNode;
         public x: number | null | Bind;
@@ -2185,7 +2185,7 @@ export namespace Xamarin {
                     public static useBezelInteraction: AttachedNode;
                     public static overlayContent: AttachedNode;
                     public static activeBezelInteractionElement: AttachedNode;
-                    public static activeBezelInteractionElementPropertyKey: RootObject /*Xamarin.Forms.BindablePropertyKey*/;
+                    public static activeBezelInteractionElementPropertyKey: RootObject;
                 }
                 export declare class Entry extends RootObject {
                     public static fontWeight: AttachedNode;
@@ -2316,7 +2316,7 @@ export namespace Xamarin {
                     public static isLegacyColorModeEnabled: AttachedNode;
                     public static canBecomeFirstResponder: AttachedNode;
                 }
-                export declare class ShadowEffect extends RootObject /*Xamarin.Forms.RoutingEffect*/ {
+                export declare class ShadowEffect extends XF.RoutingEffect {
                 }
             }
             export namespace GTKSpecific {
@@ -2395,24 +2395,24 @@ export namespace Xamarin {
             export declare class TextTransformUtilites extends RootObject {
                 public static plainText: AttachedNode;
             }
-            export declare class TemplatedItemsList$Generic extends RootObject /*Xamarin.Forms.BindableObject*/ {
+            export declare class TemplatedItemsList$Generic extends XF.BindableObject {
                 public static name: AttachedNode;
                 public static shortName: AttachedNode;
-                public groupDisplayBinding: RootObject /*Xamarin.Forms.BindingBase*/;
-                public groupHeaderTemplate: RootObject /*Xamarin.Forms.DataTemplate*/;
-                public groupHeaderTemplateProperty: RootObject /*Xamarin.Forms.BindableProperty*/;
-                public groupShortNameBinding: RootObject /*Xamarin.Forms.BindingBase*/;
-                public headerContent: RootObject /*Xamarin.Forms.BindableObject*/;
+                public groupDisplayBinding: RootObject;
+                public groupHeaderTemplate: XF.DataTemplate;
+                public groupHeaderTemplateProperty: RootObject;
+                public groupShortNameBinding: RootObject;
+                public headerContent: RootObject;
                 public isGroupingEnabled: boolean | null | Bind;
-                public isGroupingEnabledProperty: RootObject /*Xamarin.Forms.BindableProperty*/;
+                public isGroupingEnabledProperty: RootObject;
                 public itemsSource: RootObject /*System.Collections.IEnumerable*/;
                 public name: string | null | Bind;
                 public static parent: AttachedNode;
-                public progressiveLoadingProperty: RootObject /*Xamarin.Forms.BindableProperty*/;
+                public progressiveLoadingProperty: RootObject;
                 public shortName: string | null | Bind;
                 public shortNames: RootObject /*System.Collections.Generic.IReadOnlyList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
                 public count: number | null | Bind;
-                public item: RootObject /*Xamarin.Forms.BindableObject*/;
+                public item: RootObject;
             }
         }
     }

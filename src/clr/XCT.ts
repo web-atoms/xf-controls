@@ -6,7 +6,7 @@ import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 import * as XF from "./XF";
 declare var bridge: any;
 namespace XCT {
-    export declare class AvatarView extends XF.default.BindableObject {
+    export declare class AvatarView extends RootObject {
         public static aspect: AttachedNode;
         public static size: AttachedNode;
         public static cornerRadius: AttachedNode;
@@ -30,9 +30,9 @@ namespace XCT {
         public fontFamily: string | null | Bind;
         public fontSize: number | null | Bind;
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
-        public colorTheme: RootObject /*Xamarin.CommunityToolkit.UI.Views.IColorTheme*/;
+        public colorTheme: RootObject;
     }
-    export declare class BadgeView extends XF.default.BindableObject {
+    export declare class BadgeView extends RootObject {
         public static content: AttachedNode;
         public static badgePosition: AttachedNode;
         public static autoHide: AttachedNode;
@@ -50,7 +50,7 @@ namespace XCT {
         public badgePosition: "TopLeft" | "TopRight" | "BottomLeft" | "BottomRight" | string | number | null | undefined | Bind;
         public autoHide: boolean | null | Bind;
         public isAnimated: boolean | null | Bind;
-        public badgeAnimation: RootObject /*Xamarin.CommunityToolkit.UI.Views.IBadgeAnimation*/;
+        public badgeAnimation: RootObject;
         public backgroundColor: XF.default.Color;
         public borderColor: XF.default.Color;
         public hasShadow: boolean | null | Bind;
@@ -86,7 +86,7 @@ namespace XCT {
         public dock: "Left" | "Top" | "Right" | "Bottom" | string | number | null | undefined | Bind;
         public lastChildFill: boolean | null | Bind;
     }
-    export declare class Expander extends XF.default.BindableObject {
+    export declare class Expander extends RootObject {
         public static header: AttachedNode;
         public static content: AttachedNode;
         public static contentTemplate: AttachedNode;
@@ -150,12 +150,12 @@ namespace XCT {
         public keepScreenOn: boolean | null | Bind;
         public showsPlaybackControls: boolean | null | Bind;
         public position: RootObject /*System.TimeSpan*/;
-        public source: RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/;
+        public source: RootObject;
         public videoHeight: number | null | Bind;
         public videoWidth: number | null | Bind;
         public volume: number | null | Bind;
     }
-    export declare class RangeSlider extends XF.default.BindableObject {
+    export declare class RangeSlider extends RootObject {
         public static minimumValue: AttachedNode;
         public static maximumValue: AttachedNode;
         public static stepValue: AttachedNode;
@@ -217,7 +217,7 @@ namespace XCT {
         public upperThumbRadius: number | null | Bind;
         public trackRadius: number | null | Bind;
     }
-    export declare class Shield extends XF.default.BindableObject {
+    export declare class Shield extends RootObject {
         public static subject: AttachedNode;
         public static status: AttachedNode;
         public static color: AttachedNode;
@@ -237,7 +237,7 @@ namespace XCT {
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public commandParameter: RootObject /*System.Object*/;
     }
-    export declare class SideMenuView extends XF.default.BindableObject {
+    export declare class SideMenuView extends RootObject {
         public static position: AttachedNode;
         public static menuWidthPercentage: AttachedNode;
         public static menuGestureEnabled: AttachedNode;
@@ -248,7 +248,7 @@ namespace XCT {
         public static allowInterceptGesture: AttachedNode;
         public static state: AttachedNode;
         public static currentGestureState: AttachedNode;
-        public children: RootObject /*Xamarin.CommunityToolkit.UI.Views.ISideMenuList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        public children: RootObject;
         public shift: number | null | Bind;
         public currentGestureShift: number | null | Bind;
         public gestureThreshold: number | null | Bind;
@@ -287,7 +287,7 @@ namespace XCT {
         public placementTarget: XF.default.View;
         public autoHide: boolean | null | Bind;
         public isAnimated: boolean | null | Bind;
-        public badgeAnimation: RootObject /*Xamarin.CommunityToolkit.UI.Views.IBadgeAnimation*/;
+        public badgeAnimation: RootObject;
         public backgroundColor: XF.default.Color;
         public borderColor: XF.default.Color;
         public textColor: XF.default.Color;
@@ -378,7 +378,7 @@ namespace XCT {
         public iconSelected: XF.default.ImageSource;
         public isSelected: boolean | null | Bind;
         public tabWidth: number | null | Bind;
-        public tabAnimation: RootObject /*Xamarin.CommunityToolkit.UI.Views.ITabViewItemAnimation*/;
+        public tabAnimation: RootObject;
         public badgeText: string | null | Bind;
         public badgeTextColor: XF.default.Color;
         public badgeBackgroundColor: XF.default.Color;
@@ -397,7 +397,7 @@ namespace XCT {
     }
     export declare class UniformGrid extends XF.default.Layout$Generic {
     }
-    export declare class GravatarImageExtension extends GravatarImageSource {
+    export declare class GravatarImageExtension extends XCT.GravatarImageSource {
     }
     export declare class PageExtension extends RootObject {
         public static playToastAsync: AttachedNode;
@@ -543,40 +543,40 @@ namespace XCT {
     export declare class VisualFeedbackEffect extends XF.default.RoutingEffect {
         public static feedbackColor: AttachedNode;
     }
-    export declare class BoolToObjectConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class BoolToObjectConverter extends XCT.BoolToObjectConverter$Generic {
     }
-    export declare class BoolToObjectConverter$Generic extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
-        public trueObject: RootObject /**/;
-        public falseObject: RootObject /**/;
+    export declare class BoolToObjectConverter$Generic extends RootObject {
+        public trueObject: RootObject;
+        public falseObject: RootObject;
     }
-    export declare class ByteArrayToImageSourceConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class ByteArrayToImageSourceConverter extends RootObject {
     }
-    export declare class DateTimeOffsetConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class DateTimeOffsetConverter extends RootObject {
     }
-    export declare class DoubleToIntConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class DoubleToIntConverter extends RootObject {
         public ratio: number | null | Bind;
     }
-    export declare class EqualConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class EqualConverter extends RootObject {
     }
-    export declare class IndexToArrayItemConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class IndexToArrayItemConverter extends RootObject {
     }
-    export declare class IntToBoolConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class IntToBoolConverter extends RootObject {
     }
-    export declare class InvertedBoolConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class InvertedBoolConverter extends RootObject {
     }
-    export declare class IsNotNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class IsNotNullOrEmptyConverter extends RootObject {
     }
-    export declare class IsNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class IsNullOrEmptyConverter extends RootObject {
     }
-    export declare class ItemSelectedEventArgsConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class ItemSelectedEventArgsConverter extends RootObject {
     }
-    export declare class ItemTappedEventArgsConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class ItemTappedEventArgsConverter extends RootObject {
     }
-    export declare class ListIsNotNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class ListIsNotNullOrEmptyConverter extends RootObject {
     }
-    export declare class ListIsNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class ListIsNullOrEmptyConverter extends RootObject {
     }
-    export declare class ListToStringConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class ListToStringConverter extends RootObject {
         public separator: string | null | Bind;
     }
     export declare class MultiConverter extends RootObject /*System.Collections.Generic.List`1[[Xamarin.Forms.IValueConverter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/ {
@@ -585,19 +585,19 @@ namespace XCT {
         public converterType: RootObject /*System.Type*/;
         public value: RootObject /*System.Object*/;
     }
-    export declare class NotEqualConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class NotEqualConverter extends RootObject {
     }
     export declare class StateToBooleanConverter extends RootObject {
         public stateToCompare: "None" | "Loading" | "Saving" | "Success" | "Error" | "Empty" | "Custom" | string | number | null | undefined | Bind;
     }
-    export declare class TextCaseConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    export declare class TextCaseConverter extends RootObject {
         public type: "None" | "Upper" | "Lower" | string | number | null | undefined | Bind;
     }
     export declare class TimeSpanToDoubleConverter extends RootObject {
     }
-    export declare class AnimationBehavior extends EventToCommandBehavior {
+    export declare class AnimationBehavior extends XCT.EventToCommandBehavior {
         public static animationType: AttachedNode;
-        public animationType: AnimationBase;
+        public animationType: XCT.AnimationBase;
     }
     export declare class AnimationBase$Generic extends XF.default.BindableObject {
         public static duration: AttachedNode;
@@ -605,29 +605,29 @@ namespace XCT {
         public duration: number | null | Bind;
         public easing: XF.default.Easing;
     }
-    export declare class AnimationBase extends XF.default.BindableObject {
+    export declare class AnimationBase extends XCT.AnimationBase$Generic {
     }
-    export declare class FadeAnimation extends AnimationBase {
+    export declare class FadeAnimation extends XCT.AnimationBase {
         public static fade: AttachedNode;
         public fade: number | null | Bind;
     }
-    export declare class FlipHorizontalAnimation extends RotateAnimation {
+    export declare class FlipHorizontalAnimation extends XCT.RotateAnimation {
     }
-    export declare class FlipVerticalAnimation extends RotateAnimation {
+    export declare class FlipVerticalAnimation extends XCT.RotateAnimation {
     }
-    export declare class RotateAnimation extends AnimationBase {
+    export declare class RotateAnimation extends XCT.AnimationBase {
         public static rotation: AttachedNode;
         public rotation: number | null | Bind;
     }
-    export declare class ScaleAnimation extends AnimationBase {
+    export declare class ScaleAnimation extends XCT.AnimationBase {
         public static scale: AttachedNode;
         public scale: number | null | Bind;
     }
-    export declare class ShakeAnimation extends AnimationBase {
+    export declare class ShakeAnimation extends XCT.AnimationBase {
         public static startFactor: AttachedNode;
         public startFactor: number | null | Bind;
     }
-    export declare class EventToCommandBehavior extends XF.default.BindableObject {
+    export declare class EventToCommandBehavior extends RootObject {
         public static eventName: AttachedNode;
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
@@ -637,22 +637,22 @@ namespace XCT {
         public commandParameter: RootObject /*System.Object*/;
         public eventArgsConverter: XF.default.IValueConverter;
     }
-    export declare class ImpliedOrderGridBehavior extends XF.default.BindableObject {
+    export declare class ImpliedOrderGridBehavior extends RootObject {
         public throwOnLayoutWarning: boolean | null | Bind;
     }
-    export declare class MaskedBehavior extends XF.default.BindableObject {
+    export declare class MaskedBehavior extends RootObject {
         public static mask: AttachedNode;
         public static unMaskedCharacter: AttachedNode;
         public mask: string | null | Bind;
         public unMaskedCharacter: string | null | Bind;
     }
-    export declare class MaxLengthReachedBehavior extends XF.default.BindableObject {
+    export declare class MaxLengthReachedBehavior extends RootObject {
         public static command: AttachedNode;
         public static shouldDismissKeyboardAutomatically: AttachedNode;
         public command: RootObject /*System.Windows.Input.ICommand*/;
         public shouldDismissKeyboardAutomatically: boolean | null | Bind;
     }
-    export declare class UserStoppedTypingBehavior extends XF.default.BindableObject {
+    export declare class UserStoppedTypingBehavior extends RootObject {
         public static command: AttachedNode;
         public static stoppedTypingTimeThreshold: AttachedNode;
         public static minimumLengthThreshold: AttachedNode;
@@ -662,7 +662,7 @@ namespace XCT {
         public minimumLengthThreshold: number | null | Bind;
         public shouldDismissKeyboardAutomatically: boolean | null | Bind;
     }
-    export declare class CharactersValidationBehavior extends TextValidationBehavior {
+    export declare class CharactersValidationBehavior extends XCT.TextValidationBehavior {
         public static characterType: AttachedNode;
         public static minimumCharacterCount: AttachedNode;
         public static maximumCharacterCount: AttachedNode;
@@ -670,14 +670,14 @@ namespace XCT {
         public minimumCharacterCount: number | null | Bind;
         public maximumCharacterCount: number | null | Bind;
     }
-    export declare class EmailValidationBehavior extends TextValidationBehavior {
+    export declare class EmailValidationBehavior extends XCT.TextValidationBehavior {
     }
-    export declare class MultiValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+    export declare class MultiValidationBehavior extends RootObject {
         public static error: AttachedNode;
         public static errors: AttachedNode;
         public static children: AttachedNode;
     }
-    export declare class NumericValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+    export declare class NumericValidationBehavior extends RootObject {
         public static minimumValue: AttachedNode;
         public static maximumValue: AttachedNode;
         public static minimumDecimalPlaces: AttachedNode;
@@ -687,11 +687,11 @@ namespace XCT {
         public minimumDecimalPlaces: number | null | Bind;
         public maximumDecimalPlaces: number | null | Bind;
     }
-    export declare class RequiredStringValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+    export declare class RequiredStringValidationBehavior extends RootObject {
         public static requiredString: AttachedNode;
         public requiredString: string | null | Bind;
     }
-    export declare class TextValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+    export declare class TextValidationBehavior extends RootObject {
         public static minimumLength: AttachedNode;
         public static maximumLength: AttachedNode;
         public static decorationFlags: AttachedNode;
@@ -703,7 +703,7 @@ namespace XCT {
         public regexPattern: string | null | Bind;
         public regexOptions: "None" | "IgnoreCase" | "Multiline" | "ExplicitCapture" | "Compiled" | "Singleline" | "IgnorePatternWhitespace" | "RightToLeft" | "ECMAScript" | "CultureInvariant" | string | number | null | undefined | Bind;
     }
-    export declare class UriValidationBehavior extends TextValidationBehavior {
+    export declare class UriValidationBehavior extends XCT.TextValidationBehavior {
         public static uriKind: AttachedNode;
         public uriKind: "RelativeOrAbsolute" | "Absolute" | "Relative" | string | number | null | undefined | Bind;
     }
@@ -721,17 +721,17 @@ export namespace Xamarin {
             }
         }
         export namespace Core {
-            export declare class FileMediaSource extends RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/ {
+            export declare class FileMediaSource extends RootObject {
                 public static file: AttachedNode;
                 public file: string | null | Bind;
             }
             export declare class MediaSource extends XF.default.Element {
             }
-            export declare class StreamMediaSource extends RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/ {
+            export declare class StreamMediaSource extends RootObject {
                 public static stream: AttachedNode;
                 public stream: RootObject /*System.Func`2[[System.Threading.CancellationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Threading.Tasks.Task`1[[System.IO.Stream, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
             }
-            export declare class UriMediaSource extends RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/ {
+            export declare class UriMediaSource extends RootObject {
                 public static uri: AttachedNode;
                 public uri: RootObject /*System.Uri*/;
             }
@@ -740,7 +740,7 @@ export namespace Xamarin {
             export namespace Internals {
                 export declare class BaseBehavior$Generic extends XF.default.Behavior$Generic {
                 }
-                export declare class ValidationBehavior extends XF.default.BindableObject {
+                export declare class ValidationBehavior extends RootObject {
                     public static isValid: AttachedNode;
                     public static validStyle: AttachedNode;
                     public static invalidStyle: AttachedNode;
