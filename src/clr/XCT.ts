@@ -1,4051 +1,1551 @@
 //tslint:disable
 import XNode, { RootObject, NodeFactory, AttachedNode } from "@web-atoms/core/dist/core/XNode";
-import Bind from "@web-atoms/core/dist/core/Bind";import { ColorItem } from "@web-atoms/core/dist/core/Colors";declare var bridge: any;
-
-
-
-
-declare class AvatarView extends RootObject {
-    
-    
-/** Property AvatarView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property AvatarView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property AvatarView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property AvatarView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property AvatarView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property AvatarView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property AvatarView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property AvatarView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property AvatarView.Source of Type Xamarin.Forms.ImageSource */
-public static source: NodeFactory;;
-
-/** Property AvatarView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property AvatarView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property Aspect of Type Aspect */
-public aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property BorderColor of Type Color */
-public borderColor?: ColorItem | string | null | Bind;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property Color of Type Color */
-public color?: ColorItem | string | null | Bind;
-
-/** Property ColorTheme of Type IColorTheme */
-public colorTheme?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property CornerRadius of Type Double */
-public cornerRadius?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property FontAttributes of Type FontAttributes */
-public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-public fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-public fontSize?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Size of Type Double */
-public size?: number | Bind;
-
-/** Property Source of Type ImageSource */
-public source?: /*ImageSource*/ any;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-public text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-public textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
+import Bind from "@web-atoms/core/dist/core/Bind";
+import { ColorItem } from "@web-atoms/core/dist/core/Colors";
+
+import * as XF from "./XF";
+declare var bridge: any;
+namespace XCT {
+    export declare class AvatarView extends XF.default.BindableObject {
+        public static aspect: AttachedNode;
+        public static size: AttachedNode;
+        public static cornerRadius: AttachedNode;
+        public static borderColor: AttachedNode;
+        public static color: AttachedNode;
+        public static source: AttachedNode;
+        public static text: AttachedNode;
+        public static textColor: AttachedNode;
+        public static fontFamily: AttachedNode;
+        public static fontSize: AttachedNode;
+        public static fontAttributes: AttachedNode;
+        public static colorTheme: AttachedNode;
+        public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public size: number | null | Bind;
+        public cornerRadius: number | null | Bind;
+        public borderColor: XF.default.Color;
+        public color: XF.default.Color;
+        public source: XF.default.ImageSource;
+        public text: string | null | Bind;
+        public textColor: XF.default.Color;
+        public fontFamily: string | null | Bind;
+        public fontSize: number | null | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public colorTheme: RootObject /*Xamarin.CommunityToolkit.UI.Views.IColorTheme*/;
+    }
+    export declare class BadgeView extends XF.default.BindableObject {
+        public static content: AttachedNode;
+        public static badgePosition: AttachedNode;
+        public static autoHide: AttachedNode;
+        public static isAnimated: AttachedNode;
+        public static badgeAnimation: AttachedNode;
+        public static backgroundColor: AttachedNode;
+        public static borderColor: AttachedNode;
+        public static hasShadow: AttachedNode;
+        public static textColor: AttachedNode;
+        public static text: AttachedNode;
+        public static fontSize: AttachedNode;
+        public static fontFamily: AttachedNode;
+        public static fontAttributes: AttachedNode;
+        public content: XF.default.View;
+        public badgePosition: "TopLeft" | "TopRight" | "BottomLeft" | "BottomRight" | string | number | null | undefined | Bind;
+        public autoHide: boolean | null | Bind;
+        public isAnimated: boolean | null | Bind;
+        public badgeAnimation: RootObject /*Xamarin.CommunityToolkit.UI.Views.IBadgeAnimation*/;
+        public backgroundColor: XF.default.Color;
+        public borderColor: XF.default.Color;
+        public hasShadow: boolean | null | Bind;
+        public textColor: XF.default.Color;
+        public text: string | null | Bind;
+        public fontSize: number | null | Bind;
+        public fontFamily: string | null | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+    }
+    export declare class CameraView extends XF.default.View {
+        public static shutterCommand: AttachedNode;
+        public static isBusy: AttachedNode;
+        public static isAvailable: AttachedNode;
+        public static cameraOptions: AttachedNode;
+        public static captureMode: AttachedNode;
+        public static videoStabilization: AttachedNode;
+        public static flashMode: AttachedNode;
+        public static zoom: AttachedNode;
+        public static maxZoom: AttachedNode;
+        public shutterCommand: RootObject /*System.Windows.Input.ICommand*/;
+        public isBusy: boolean | null | Bind;
+        public isAvailable: boolean | null | Bind;
+        public cameraOptions: "Default" | "Front" | "Back" | "External" | string | number | null | undefined | Bind;
+        public captureMode: "Default" | "Photo" | "Video" | string | number | null | undefined | Bind;
+        public videoStabilization: boolean | null | Bind;
+        public flashMode: "Off" | "On" | "Auto" | "Torch" | string | number | null | undefined | Bind;
+        public zoom: number | null | Bind;
+        public maxZoom: number | null | Bind;
+    }
+    export declare class DockLayout extends XF.default.Layout$Generic {
+        public static dock: AttachedNode;
+        public static lastChildFill: AttachedNode;
+        public dock: "Left" | "Top" | "Right" | "Bottom" | string | number | null | undefined | Bind;
+        public lastChildFill: boolean | null | Bind;
+    }
+    export declare class Expander extends XF.default.BindableObject {
+        public static header: AttachedNode;
+        public static content: AttachedNode;
+        public static contentTemplate: AttachedNode;
+        public static isExpanded: AttachedNode;
+        public static direction: AttachedNode;
+        public static expandAnimationLength: AttachedNode;
+        public static collapseAnimationLength: AttachedNode;
+        public static expandAnimationEasing: AttachedNode;
+        public static collapseAnimationEasing: AttachedNode;
+        public static state: AttachedNode;
+        public static commandParameter: AttachedNode;
+        public static command: AttachedNode;
+        public static forceUpdateSizeCommand: AttachedNode;
+        public header: XF.default.View;
+        public content: XF.default.View;
+        public contentTemplate: XF.default.DataTemplate;
+        public isExpanded: boolean | null | Bind;
+        public direction: "Down" | "Up" | "Left" | "Right" | string | number | null | undefined | Bind;
+        public expandAnimationLength: number | null | Bind;
+        public collapseAnimationLength: number | null | Bind;
+        public expandAnimationEasing: XF.default.Easing;
+        public collapseAnimationEasing: XF.default.Easing;
+        public state: "Expanding" | "Expanded" | "Collapsing" | "Collapsed" | string | number | null | undefined | Bind;
+        public commandParameter: RootObject /*System.Object*/;
+        public command: RootObject /*System.Windows.Input.ICommand*/;
+        public forceUpdateSizeCommand: RootObject /*System.Windows.Input.ICommand*/;
+    }
+    export declare class GravatarImageSource extends XF.default.ImageSource {
+        public static email: AttachedNode;
+        public static size: AttachedNode;
+        public static default: AttachedNode;
+        public static cachingEnabled: AttachedNode;
+        public static cacheValidity: AttachedNode;
+        public email: string | null | Bind;
+        public size: number | null | Bind;
+        public default: "FileNotFound" | "MysteryPerson" | "Identicon" | "MonsterId" | "Wavatar" | "Retro" | "Robohash" | "Blank" | string | number | null | undefined | Bind;
+        public cachingEnabled: boolean | null | Bind;
+        public cacheValidity: RootObject /*System.TimeSpan*/;
+    }
+    export declare class MediaElement extends XF.default.View {
+        public static aspect: AttachedNode;
+        public static autoPlay: AttachedNode;
+        public static bufferingProgress: AttachedNode;
+        public static currentState: AttachedNode;
+        public static duration: AttachedNode;
+        public static isLooping: AttachedNode;
+        public static keepScreenOn: AttachedNode;
+        public static position: AttachedNode;
+        public static showsPlaybackControls: AttachedNode;
+        public static source: AttachedNode;
+        public static videoHeight: AttachedNode;
+        public static videoWidth: AttachedNode;
+        public static volume: AttachedNode;
+        public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public autoPlay: boolean | null | Bind;
+        public bufferingProgress: number | null | Bind;
+        public canSeek: boolean | null | Bind;
+        public currentState: "Closed" | "Opening" | "Buffering" | "Playing" | "Paused" | "Stopped" | string | number | null | undefined | Bind;
+        public duration: RootObject /*System.Nullable`1[[System.TimeSpan, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
+        public isLooping: boolean | null | Bind;
+        public keepScreenOn: boolean | null | Bind;
+        public showsPlaybackControls: boolean | null | Bind;
+        public position: RootObject /*System.TimeSpan*/;
+        public source: RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/;
+        public videoHeight: number | null | Bind;
+        public videoWidth: number | null | Bind;
+        public volume: number | null | Bind;
+    }
+    export declare class RangeSlider extends XF.default.BindableObject {
+        public static minimumValue: AttachedNode;
+        public static maximumValue: AttachedNode;
+        public static stepValue: AttachedNode;
+        public static lowerValue: AttachedNode;
+        public static upperValue: AttachedNode;
+        public static thumbSize: AttachedNode;
+        public static lowerThumbSize: AttachedNode;
+        public static upperThumbSize: AttachedNode;
+        public static trackSize: AttachedNode;
+        public static thumbColor: AttachedNode;
+        public static lowerThumbColor: AttachedNode;
+        public static upperThumbColor: AttachedNode;
+        public static trackColor: AttachedNode;
+        public static trackHighlightColor: AttachedNode;
+        public static thumbBorderColor: AttachedNode;
+        public static lowerThumbBorderColor: AttachedNode;
+        public static upperThumbBorderColor: AttachedNode;
+        public static trackBorderColor: AttachedNode;
+        public static trackHighlightBorderColor: AttachedNode;
+        public static valueLabelStyle: AttachedNode;
+        public static lowerValueLabelStyle: AttachedNode;
+        public static upperValueLabelStyle: AttachedNode;
+        public static valueLabelStringFormat: AttachedNode;
+        public static lowerThumbView: AttachedNode;
+        public static upperThumbView: AttachedNode;
+        public static valueLabelSpacing: AttachedNode;
+        public static thumbRadius: AttachedNode;
+        public static lowerThumbRadius: AttachedNode;
+        public static upperThumbRadius: AttachedNode;
+        public static trackRadius: AttachedNode;
+        public minimumValue: number | null | Bind;
+        public maximumValue: number | null | Bind;
+        public stepValue: number | null | Bind;
+        public lowerValue: number | null | Bind;
+        public upperValue: number | null | Bind;
+        public thumbSize: number | null | Bind;
+        public lowerThumbSize: number | null | Bind;
+        public upperThumbSize: number | null | Bind;
+        public trackSize: number | null | Bind;
+        public thumbColor: XF.default.Color;
+        public lowerThumbColor: XF.default.Color;
+        public upperThumbColor: XF.default.Color;
+        public trackColor: XF.default.Color;
+        public trackHighlightColor: XF.default.Color;
+        public thumbBorderColor: XF.default.Color;
+        public lowerThumbBorderColor: XF.default.Color;
+        public upperThumbBorderColor: XF.default.Color;
+        public trackBorderColor: XF.default.Color;
+        public trackHighlightBorderColor: XF.default.Color;
+        public valueLabelStyle: XF.default.Style;
+        public lowerValueLabelStyle: XF.default.Style;
+        public upperValueLabelStyle: XF.default.Style;
+        public valueLabelStringFormat: string | null | Bind;
+        public lowerThumbView: XF.default.View;
+        public upperThumbView: XF.default.View;
+        public valueLabelSpacing: number | null | Bind;
+        public thumbRadius: number | null | Bind;
+        public lowerThumbRadius: number | null | Bind;
+        public upperThumbRadius: number | null | Bind;
+        public trackRadius: number | null | Bind;
+    }
+    export declare class Shield extends XF.default.BindableObject {
+        public static subject: AttachedNode;
+        public static status: AttachedNode;
+        public static color: AttachedNode;
+        public static textColor: AttachedNode;
+        public static fontSize: AttachedNode;
+        public static fontFamily: AttachedNode;
+        public static fontAttributes: AttachedNode;
+        public static command: AttachedNode;
+        public static commandParameter: AttachedNode;
+        public subject: string | null | Bind;
+        public status: string | null | Bind;
+        public color: XF.default.Color;
+        public textColor: XF.default.Color;
+        public fontSize: number | null | Bind;
+        public fontFamily: string | null | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public command: RootObject /*System.Windows.Input.ICommand*/;
+        public commandParameter: RootObject /*System.Object*/;
+    }
+    export declare class SideMenuView extends XF.default.BindableObject {
+        public static position: AttachedNode;
+        public static menuWidthPercentage: AttachedNode;
+        public static menuGestureEnabled: AttachedNode;
+        public static shift: AttachedNode;
+        public static currentGestureShift: AttachedNode;
+        public static gestureThreshold: AttachedNode;
+        public static cancelVerticalGestureThreshold: AttachedNode;
+        public static allowInterceptGesture: AttachedNode;
+        public static state: AttachedNode;
+        public static currentGestureState: AttachedNode;
+        public children: RootObject /*Xamarin.CommunityToolkit.UI.Views.ISideMenuList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        public shift: number | null | Bind;
+        public currentGestureShift: number | null | Bind;
+        public gestureThreshold: number | null | Bind;
+        public cancelVerticalGestureThreshold: number | null | Bind;
+        public allowInterceptGesture: boolean | null | Bind;
+        public state: "MainViewShown" | "RightMenuShown" | "LeftMenuShown" | string | number | null | undefined | Bind;
+        public currentGestureState: "MainViewShown" | "RightMenuShown" | "LeftMenuShown" | string | number | null | undefined | Bind;
+    }
+    export declare class StateLayout extends RootObject {
+        public static currentState: AttachedNode;
+        public static currentCustomStateKey: AttachedNode;
+        public static animateStateChanges: AttachedNode;
+        public static stateViews: AttachedNode;
+    }
+    export declare class StateView extends XF.default.ContentView {
+        public static stateKey: AttachedNode;
+        public static customStateKey: AttachedNode;
+        public static repeatCount: AttachedNode;
+        public static template: AttachedNode;
+        public stateKey: "None" | "Loading" | "Saving" | "Success" | "Error" | "Empty" | "Custom" | string | number | null | undefined | Bind;
+        public customStateKey: string | null | Bind;
+        public repeatCount: number | null | Bind;
+        public template: XF.default.DataTemplate;
+    }
+    export declare class TabBadgeTemplate extends XF.default.Grid {
+    }
+    export declare class TabBadgeView extends XF.default.TemplatedView {
+        public static placementTarget: AttachedNode;
+        public static autoHide: AttachedNode;
+        public static isAnimated: AttachedNode;
+        public static badgeAnimation: AttachedNode;
+        public static backgroundColor: AttachedNode;
+        public static borderColor: AttachedNode;
+        public static textColor: AttachedNode;
+        public static text: AttachedNode;
+        public placementTarget: XF.default.View;
+        public autoHide: boolean | null | Bind;
+        public isAnimated: boolean | null | Bind;
+        public badgeAnimation: RootObject /*Xamarin.CommunityToolkit.UI.Views.IBadgeAnimation*/;
+        public backgroundColor: XF.default.Color;
+        public borderColor: XF.default.Color;
+        public textColor: XF.default.Color;
+        public text: string | null | Bind;
+    }
+    export declare class TabView extends XF.default.ContentView {
+        public static tabItemsSource: AttachedNode;
+        public static tabViewItemDataTemplate: AttachedNode;
+        public static tabContentDataTemplate: AttachedNode;
+        public static selectedIndex: AttachedNode;
+        public static tabStripPlacement: AttachedNode;
+        public static tabStripBackgroundColor: AttachedNode;
+        public static tabStripBackgroundView: AttachedNode;
+        public static tabStripBorderColor: AttachedNode;
+        public static tabContentBackgroundColor: AttachedNode;
+        public static tabStripHeight: AttachedNode;
+        public static isTabStripVisible: AttachedNode;
+        public static tabContentHeight: AttachedNode;
+        public static tabIndicatorColor: AttachedNode;
+        public static tabIndicatorHeight: AttachedNode;
+        public static tabIndicatorWidth: AttachedNode;
+        public static tabIndicatorView: AttachedNode;
+        public static tabIndicatorPlacement: AttachedNode;
+        public static isTabTransitionEnabled: AttachedNode;
+        public static isSwipeEnabled: AttachedNode;
+        public static tabItems: AttachedNode;
+        public tabViewItemDataTemplate: XF.default.DataTemplate;
+        public tabContentDataTemplate: XF.default.DataTemplate;
+        public selectedIndex: number | null | Bind;
+        public tabStripPlacement: "Top" | "Bottom" | string | number | null | undefined | Bind;
+        public tabStripBackgroundColor: XF.default.Color;
+        public tabStripBackgroundView: XF.default.View;
+        public tabStripBorderColor: XF.default.Color;
+        public tabContentBackgroundColor: XF.default.Color;
+        public tabStripHeight: number | null | Bind;
+        public isTabStripVisible: boolean | null | Bind;
+        public tabContentHeight: number | null | Bind;
+        public tabIndicatorColor: XF.default.Color;
+        public tabIndicatorHeight: number | null | Bind;
+        public tabIndicatorWidth: number | null | Bind;
+        public tabIndicatorView: XF.default.View;
+        public tabIndicatorPlacement: "Top" | "Center" | "Bottom" | string | number | null | undefined | Bind;
+        public isTabTransitionEnabled: boolean | null | Bind;
+        public isSwipeEnabled: boolean | null | Bind;
+    }
+    export declare class TabViewItem extends XF.default.TemplatedView {
+        public static text: AttachedNode;
+        public static textColor: AttachedNode;
+        public static textColorSelected: AttachedNode;
+        public static fontSize: AttachedNode;
+        public static fontSizeSelected: AttachedNode;
+        public static fontFamily: AttachedNode;
+        public static fontFamilySelected: AttachedNode;
+        public static fontAttributes: AttachedNode;
+        public static fontAttributesSelected: AttachedNode;
+        public static content: AttachedNode;
+        public static icon: AttachedNode;
+        public static iconSelected: AttachedNode;
+        public static isSelected: AttachedNode;
+        public static badgeText: AttachedNode;
+        public static tabWidth: AttachedNode;
+        public static tabAnimation: AttachedNode;
+        public static badgeTextColor: AttachedNode;
+        public static badgeBackgroundColor: AttachedNode;
+        public static badgeBackgroundColorSelected: AttachedNode;
+        public static badgeBorderColor: AttachedNode;
+        public static badgeBorderColorSelected: AttachedNode;
+        public static tapCommand: AttachedNode;
+        public static currentTextColor: AttachedNode;
+        public static currentFontSize: AttachedNode;
+        public static currentIcon: AttachedNode;
+        public static currentFontFamily: AttachedNode;
+        public static currentFontAttributes: AttachedNode;
+        public static currentBadgeBackgroundColor: AttachedNode;
+        public static currentBadgeBorderColor: AttachedNode;
+        public static currentContent: AttachedNode;
+        public text: string | null | Bind;
+        public textColor: XF.default.Color;
+        public textColorSelected: XF.default.Color;
+        public fontSize: number | null | Bind;
+        public fontSizeSelected: number | null | Bind;
+        public fontFamily: string | null | Bind;
+        public fontFamilySelected: string | null | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributesSelected: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public content: XF.default.View;
+        public icon: XF.default.ImageSource;
+        public iconSelected: XF.default.ImageSource;
+        public isSelected: boolean | null | Bind;
+        public tabWidth: number | null | Bind;
+        public tabAnimation: RootObject /*Xamarin.CommunityToolkit.UI.Views.ITabViewItemAnimation*/;
+        public badgeText: string | null | Bind;
+        public badgeTextColor: XF.default.Color;
+        public badgeBackgroundColor: XF.default.Color;
+        public badgeBackgroundColorSelected: XF.default.Color;
+        public badgeBorderColor: XF.default.Color;
+        public badgeBorderColorSelected: XF.default.Color;
+        public tapCommand: RootObject /*System.Windows.Input.ICommand*/;
+        public currentTextColor: XF.default.Color;
+        public currentFontSize: number | null | Bind;
+        public currentIcon: XF.default.ImageSource;
+        public currentFontFamily: string | null | Bind;
+        public currentFontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public currentBadgeBackgroundColor: XF.default.Color;
+        public currentBadgeBorderColor: XF.default.Color;
+        public currentContent: XF.default.View;
+    }
+    export declare class UniformGrid extends XF.default.Layout$Generic {
+    }
+    export declare class GravatarImageExtension extends GravatarImageSource {
+    }
+    export declare class PageExtension extends RootObject {
+        public static playToastAsync: AttachedNode;
+        public static playSnackBarAsync: AttachedNode;
+    }
+    export declare class VisualElementExtension extends RootObject {
+        public static rtAnimations: AttachedNode;
+    }
+    export declare class IconTintColorEffect extends RootObject {
+        public static tintColor: AttachedNode;
+    }
+    export declare class IconTintColorEffectRouter extends XF.default.RoutingEffect {
+    }
+    export declare class RemoveBorderEffect extends XF.default.RoutingEffect {
+    }
+    export declare class SafeAreaEffect extends RootObject {
+        public static safeArea: AttachedNode;
+    }
+    export declare class SafeAreaEffectRouter extends XF.default.RoutingEffect {
+    }
+    export declare class SelectAllTextEffect extends XF.default.RoutingEffect {
+    }
+    export declare class TouchEffect extends XF.default.RoutingEffect {
+        public static animationDuration: AttachedNode;
+        public static animationEasing: AttachedNode;
+        public static pressedAnimationDuration: AttachedNode;
+        public static pressedAnimationEasing: AttachedNode;
+        public static normalAnimationDuration: AttachedNode;
+        public static normalAnimationEasing: AttachedNode;
+        public static hoveredAnimationDuration: AttachedNode;
+        public static hoveredAnimationEasing: AttachedNode;
+        public static pulseCount: AttachedNode;
+        public static isToggled: AttachedNode;
+        public static disallowTouchThreshold: AttachedNode;
+        public static nativeAnimation: AttachedNode;
+        public static nativeAnimationColor: AttachedNode;
+        public static nativeAnimationRadius: AttachedNode;
+        public static nativeAnimationShadowRadius: AttachedNode;
+        public static normalBackgroundImageSource: AttachedNode;
+        public static hoveredBackgroundImageSource: AttachedNode;
+        public static pressedBackgroundImageSource: AttachedNode;
+        public static backgroundImageAspect: AttachedNode;
+        public static normalBackgroundImageAspect: AttachedNode;
+        public static hoveredBackgroundImageAspect: AttachedNode;
+        public static pressedBackgroundImageAspect: AttachedNode;
+        public static shouldSetImageOnAnimationEnd: AttachedNode;
+        public static isAvailable: AttachedNode;
+        public static shouldMakeChildrenInputTransparent: AttachedNode;
+        public static command: AttachedNode;
+        public static longPressCommand: AttachedNode;
+        public static commandParameter: AttachedNode;
+        public static longPressCommandParameter: AttachedNode;
+        public static longPressDuration: AttachedNode;
+        public static status: AttachedNode;
+        public static state: AttachedNode;
+        public static interactionStatus: AttachedNode;
+        public static hoverStatus: AttachedNode;
+        public static hoverState: AttachedNode;
+        public static normalBackgroundColor: AttachedNode;
+        public static hoveredBackgroundColor: AttachedNode;
+        public static pressedBackgroundColor: AttachedNode;
+        public static normalOpacity: AttachedNode;
+        public static hoveredOpacity: AttachedNode;
+        public static pressedOpacity: AttachedNode;
+        public static normalScale: AttachedNode;
+        public static hoveredScale: AttachedNode;
+        public static pressedScale: AttachedNode;
+        public static normalTranslationX: AttachedNode;
+        public static hoveredTranslationX: AttachedNode;
+        public static pressedTranslationX: AttachedNode;
+        public static normalTranslationY: AttachedNode;
+        public static hoveredTranslationY: AttachedNode;
+        public static pressedTranslationY: AttachedNode;
+        public static normalRotation: AttachedNode;
+        public static hoveredRotation: AttachedNode;
+        public static pressedRotation: AttachedNode;
+        public static normalRotationX: AttachedNode;
+        public static hoveredRotationX: AttachedNode;
+        public static pressedRotationX: AttachedNode;
+        public static normalRotationY: AttachedNode;
+        public static hoveredRotationY: AttachedNode;
+        public static pressedRotationY: AttachedNode;
+        public isAvailable: boolean | null | Bind;
+        public shouldMakeChildrenInputTransparent: boolean | null | Bind;
+        public command: RootObject /*System.Windows.Input.ICommand*/;
+        public longPressCommand: RootObject /*System.Windows.Input.ICommand*/;
+        public commandParameter: RootObject /*System.Object*/;
+        public longPressCommandParameter: RootObject /*System.Object*/;
+        public longPressDuration: number | null | Bind;
+        public status: "Started" | "Completed" | "Canceled" | string | number | null | undefined | Bind;
+        public state: "Normal" | "Pressed" | string | number | null | undefined | Bind;
+        public interactionStatus: "Started" | "Completed" | string | number | null | undefined | Bind;
+        public hoverStatus: "Entered" | "Exited" | string | number | null | undefined | Bind;
+        public hoverState: "Normal" | "Hovered" | string | number | null | undefined | Bind;
+        public disallowTouchThreshold: number | null | Bind;
+        public nativeAnimation: boolean | null | Bind;
+        public nativeAnimationColor: XF.default.Color;
+        public nativeAnimationRadius: number | null | Bind;
+        public nativeAnimationShadowRadius: number | null | Bind;
+        public normalBackgroundColor: XF.default.Color;
+        public hoveredBackgroundColor: XF.default.Color;
+        public pressedBackgroundColor: XF.default.Color;
+        public normalOpacity: number | null | Bind;
+        public hoveredOpacity: number | null | Bind;
+        public pressedOpacity: number | null | Bind;
+        public normalScale: number | null | Bind;
+        public hoveredScale: number | null | Bind;
+        public pressedScale: number | null | Bind;
+        public normalTranslationX: number | null | Bind;
+        public hoveredTranslationX: number | null | Bind;
+        public pressedTranslationX: number | null | Bind;
+        public normalTranslationY: number | null | Bind;
+        public hoveredTranslationY: number | null | Bind;
+        public pressedTranslationY: number | null | Bind;
+        public normalRotation: number | null | Bind;
+        public hoveredRotation: number | null | Bind;
+        public pressedRotation: number | null | Bind;
+        public normalRotationX: number | null | Bind;
+        public hoveredRotationX: number | null | Bind;
+        public pressedRotationX: number | null | Bind;
+        public normalRotationY: number | null | Bind;
+        public hoveredRotationY: number | null | Bind;
+        public pressedRotationY: number | null | Bind;
+        public animationDuration: number | null | Bind;
+        public animationEasing: XF.default.Easing;
+        public pressedAnimationDuration: number | null | Bind;
+        public pressedAnimationEasing: XF.default.Easing;
+        public normalAnimationDuration: number | null | Bind;
+        public normalAnimationEasing: XF.default.Easing;
+        public hoveredAnimationDuration: number | null | Bind;
+        public hoveredAnimationEasing: XF.default.Easing;
+        public pulseCount: number | null | Bind;
+        public isToggled: RootObject /*System.Nullable`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
+        public normalBackgroundImageSource: XF.default.ImageSource;
+        public hoveredBackgroundImageSource: XF.default.ImageSource;
+        public pressedBackgroundImageSource: XF.default.ImageSource;
+        public backgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public normalBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public hoveredBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public pressedBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public shouldSetImageOnAnimationEnd: boolean | null | Bind;
+    }
+    export declare class VisualFeedbackEffect extends XF.default.RoutingEffect {
+        public static feedbackColor: AttachedNode;
+    }
+    export declare class BoolToObjectConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class BoolToObjectConverter$Generic extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+        public trueObject: RootObject /**/;
+        public falseObject: RootObject /**/;
+    }
+    export declare class ByteArrayToImageSourceConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class DateTimeOffsetConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class DoubleToIntConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+        public ratio: number | null | Bind;
+    }
+    export declare class EqualConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class IndexToArrayItemConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class IntToBoolConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class InvertedBoolConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class IsNotNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class IsNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class ItemSelectedEventArgsConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class ItemTappedEventArgsConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class ListIsNotNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class ListIsNullOrEmptyConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class ListToStringConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+        public separator: string | null | Bind;
+    }
+    export declare class MultiConverter extends RootObject /*System.Collections.Generic.List`1[[Xamarin.Forms.IValueConverter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/ {
+    }
+    export declare class MultiConverterParameter extends XF.default.BindableObject {
+        public converterType: RootObject /*System.Type*/;
+        public value: RootObject /*System.Object*/;
+    }
+    export declare class NotEqualConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+    }
+    export declare class StateToBooleanConverter extends RootObject {
+        public stateToCompare: "None" | "Loading" | "Saving" | "Success" | "Error" | "Empty" | "Custom" | string | number | null | undefined | Bind;
+    }
+    export declare class TextCaseConverter extends RootObject /*Xamarin.CommunityToolkit.Extensions.Internals.ValueConverterExtension*/ {
+        public type: "None" | "Upper" | "Lower" | string | number | null | undefined | Bind;
+    }
+    export declare class TimeSpanToDoubleConverter extends RootObject {
+    }
+    export declare class AnimationBehavior extends EventToCommandBehavior {
+        public static animationType: AttachedNode;
+        public animationType: AnimationBase;
+    }
+    export declare class AnimationBase$Generic extends XF.default.BindableObject {
+        public static duration: AttachedNode;
+        public static easingType: AttachedNode;
+        public duration: number | null | Bind;
+        public easing: XF.default.Easing;
+    }
+    export declare class AnimationBase extends XF.default.BindableObject {
+    }
+    export declare class FadeAnimation extends AnimationBase {
+        public static fade: AttachedNode;
+        public fade: number | null | Bind;
+    }
+    export declare class FlipHorizontalAnimation extends RotateAnimation {
+    }
+    export declare class FlipVerticalAnimation extends RotateAnimation {
+    }
+    export declare class RotateAnimation extends AnimationBase {
+        public static rotation: AttachedNode;
+        public rotation: number | null | Bind;
+    }
+    export declare class ScaleAnimation extends AnimationBase {
+        public static scale: AttachedNode;
+        public scale: number | null | Bind;
+    }
+    export declare class ShakeAnimation extends AnimationBase {
+        public static startFactor: AttachedNode;
+        public startFactor: number | null | Bind;
+    }
+    export declare class EventToCommandBehavior extends XF.default.BindableObject {
+        public static eventName: AttachedNode;
+        public static command: AttachedNode;
+        public static commandParameter: AttachedNode;
+        public static eventArgsConverter: AttachedNode;
+        public eventName: string | null | Bind;
+        public command: RootObject /*System.Windows.Input.ICommand*/;
+        public commandParameter: RootObject /*System.Object*/;
+        public eventArgsConverter: XF.default.IValueConverter;
+    }
+    export declare class ImpliedOrderGridBehavior extends XF.default.BindableObject {
+        public throwOnLayoutWarning: boolean | null | Bind;
+    }
+    export declare class MaskedBehavior extends XF.default.BindableObject {
+        public static mask: AttachedNode;
+        public static unMaskedCharacter: AttachedNode;
+        public mask: string | null | Bind;
+        public unMaskedCharacter: string | null | Bind;
+    }
+    export declare class MaxLengthReachedBehavior extends XF.default.BindableObject {
+        public static command: AttachedNode;
+        public static shouldDismissKeyboardAutomatically: AttachedNode;
+        public command: RootObject /*System.Windows.Input.ICommand*/;
+        public shouldDismissKeyboardAutomatically: boolean | null | Bind;
+    }
+    export declare class UserStoppedTypingBehavior extends XF.default.BindableObject {
+        public static command: AttachedNode;
+        public static stoppedTypingTimeThreshold: AttachedNode;
+        public static minimumLengthThreshold: AttachedNode;
+        public static shouldDismissKeyboardAutomatically: AttachedNode;
+        public command: RootObject /*System.Windows.Input.ICommand*/;
+        public stoppedTypingTimeThreshold: number | null | Bind;
+        public minimumLengthThreshold: number | null | Bind;
+        public shouldDismissKeyboardAutomatically: boolean | null | Bind;
+    }
+    export declare class CharactersValidationBehavior extends TextValidationBehavior {
+        public static characterType: AttachedNode;
+        public static minimumCharacterCount: AttachedNode;
+        public static maximumCharacterCount: AttachedNode;
+        public characterType: "LowercaseLetter" | "UppercaseLetter" | "Letter" | "Digit" | "Alphanumeric" | "Whitespace" | "NonAlphanumericSymbol" | "Any" | "LowercaseLatinLetter" | "UppercaseLatinLetter" | "LatinLetter" | string | number | null | undefined | Bind;
+        public minimumCharacterCount: number | null | Bind;
+        public maximumCharacterCount: number | null | Bind;
+    }
+    export declare class EmailValidationBehavior extends TextValidationBehavior {
+    }
+    export declare class MultiValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+        public static error: AttachedNode;
+        public static errors: AttachedNode;
+        public static children: AttachedNode;
+    }
+    export declare class NumericValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+        public static minimumValue: AttachedNode;
+        public static maximumValue: AttachedNode;
+        public static minimumDecimalPlaces: AttachedNode;
+        public static maximumDecimalPlaces: AttachedNode;
+        public minimumValue: number | null | Bind;
+        public maximumValue: number | null | Bind;
+        public minimumDecimalPlaces: number | null | Bind;
+        public maximumDecimalPlaces: number | null | Bind;
+    }
+    export declare class RequiredStringValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+        public static requiredString: AttachedNode;
+        public requiredString: string | null | Bind;
+    }
+    export declare class TextValidationBehavior extends RootObject /*Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior*/ {
+        public static minimumLength: AttachedNode;
+        public static maximumLength: AttachedNode;
+        public static decorationFlags: AttachedNode;
+        public static regexPattern: AttachedNode;
+        public static regexOptions: AttachedNode;
+        public minimumLength: number | null | Bind;
+        public maximumLength: number | null | Bind;
+        public decorationFlags: "None" | "TrimStart" | "TrimEnd" | "Trim" | "NullToEmpty" | "NormalizeWhiteSpace" | string | number | null | undefined | Bind;
+        public regexPattern: string | null | Bind;
+        public regexOptions: "None" | "IgnoreCase" | "Multiline" | "ExplicitCapture" | "Compiled" | "Singleline" | "IgnorePatternWhitespace" | "RightToLeft" | "ECMAScript" | "CultureInvariant" | string | number | null | undefined | Bind;
+    }
+    export declare class UriValidationBehavior extends TextValidationBehavior {
+        public static uriKind: AttachedNode;
+        public uriKind: "RelativeOrAbsolute" | "Absolute" | "Relative" | string | number | null | undefined | Bind;
+    }
 }
 
-
-declare class BadgeView extends RootObject {
-    
-    
-/** Property BadgeView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property BadgeView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property BadgeView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property BadgeView.Content of Type Xamarin.Forms.View */
-public static content: NodeFactory;;
-
-/** Property BadgeView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property BadgeView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property BadgeView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property BadgeView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property BadgeView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property BadgeView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property BadgeView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutoHide of Type Boolean */
-public autoHide?: boolean | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BadgeAnimation of Type IBadgeAnimation */
-public badgeAnimation?: any;
-
-/** Property BadgePosition of Type BadgePosition */
-public badgePosition?: "TopLeft" | "TopRight" | "BottomLeft" | "BottomRight" | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property BorderColor of Type Color */
-public borderColor?: ColorItem | string | null | Bind;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property Content of Type View */
-public content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property FontAttributes of Type FontAttributes */
-public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-public fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-public fontSize?: number | Bind;
-
-/** Property HasShadow of Type Boolean */
-public hasShadow?: boolean | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsAnimated of Type Boolean */
-public isAnimated?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-public text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-public textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class CameraView extends RootObject {
-    
-    
-/** Property CameraView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property CameraView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property CameraView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property CameraView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property CameraView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property CameraView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property CameraView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property CameraView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property CameraView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CameraOptions of Type CameraOptions */
-public cameraOptions?: "Default" | "Front" | "Back" | "External" | Bind;
-
-/** Property CaptureMode of Type CameraCaptureMode */
-public captureMode?: "Default" | "Photo" | "Video" | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlashMode of Type CameraFlashMode */
-public flashMode?: "Off" | "On" | "Auto" | "Torch" | Bind;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsAvailable of Type Boolean */
-public isAvailable?: boolean | Bind;
-
-/** Property IsBusy of Type Boolean */
-public isBusy?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MaxZoom of Type Double */
-public maxZoom?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property VideoStabilization of Type Boolean */
-public videoStabilization?: boolean | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-
-/** Property Zoom of Type Double */
-public zoom?: number | Bind;
-}
-
-
-declare class DockLayout extends RootObject {
-    
-/** Attached Property DockLayout.Dock of Type BindableProperty*/
-public static dock: AttachedNode;
-
-    
-/** Property DockLayout.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property DockLayout.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property DockLayout.Children of Type Xamarin.Forms.View */
-public static children: NodeFactory;;
-
-/** Property DockLayout.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property DockLayout.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property DockLayout.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property DockLayout.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property DockLayout.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property DockLayout.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property DockLayout.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Dock of Type Dock */
-public dock?: "Left" | "Top" | "Right" | "Bottom" | Bind;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property LastChildFill of Type Boolean */
-public lastChildFill?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class Expander extends RootObject {
-    
-    
-/** Property Expander.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property Expander.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property Expander.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property Expander.Content of Type Xamarin.Forms.View */
-public static content: NodeFactory;;
-
-/** Property Expander.ContentTemplate of Type Xamarin.Forms.DataTemplate */
-public static contentTemplate: NodeFactory;;
-
-/** Property Expander.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property Expander.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property Expander.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property Expander.Header of Type Xamarin.Forms.View */
-public static header: NodeFactory;;
-
-/** Property Expander.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property Expander.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property Expander.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property Expander.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property CollapseAnimationEasing of Type Easing */
-public collapseAnimationEasing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-
-/** Property CollapseAnimationLength of Type UInt32 */
-public collapseAnimationLength?: any;
-
-/** Property Command of Type ICommand */
-public command?: any;
-
-/** Property CommandParameter of Type Object */
-public commandParameter?: any;
-
-/** Property Content of Type View */
-public content?: any;
-
-/** Property ContentTemplate of Type DataTemplate */
-public contentTemplate?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property Direction of Type ExpandDirection */
-public direction?: "Down" | "Up" | "Left" | "Right" | Bind;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property ExpandAnimationEasing of Type Easing */
-public expandAnimationEasing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-
-/** Property ExpandAnimationLength of Type UInt32 */
-public expandAnimationLength?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property ForceUpdateSizeCommand of Type ICommand */
-public forceUpdateSizeCommand?: any;
-
-/** Property Header of Type View */
-public header?: any;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsExpanded of Type Boolean */
-public isExpanded?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property State of Type ExpandState */
-public state?: "Expanding" | "Expanded" | "Collapsing" | "Collapsed" | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class GravatarImageSource extends RootObject {
-    
-    
-/** Property GravatarImageSource.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property GravatarImageSource.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;
-    
-    
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CacheValidity of Type TimeSpan */
-public cacheValidity?: any;
-
-/** Property CachingEnabled of Type Boolean */
-public cachingEnabled?: boolean | Bind;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Default of Type DefaultGravatar */
-public default?: "FileNotFound" | "MysteryPerson" | "Identicon" | "MonsterId" | "Wavatar" | "Retro" | "Robohash" | "Blank" | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property Email of Type String */
-public email?: string | null | Bind;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Size of Type Int32 */
-public size?: number | Bind;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-}
-
-
-declare class MediaElement extends RootObject {
-    
-    
-/** Property MediaElement.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property MediaElement.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property MediaElement.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property MediaElement.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property MediaElement.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property MediaElement.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property MediaElement.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property MediaElement.Source of Type Xamarin.CommunityToolkit.Core.MediaSource */
-public static source: NodeFactory;;
-
-/** Property MediaElement.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property MediaElement.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property Aspect of Type Aspect */
-public aspect?: "AspectFit" | "AspectFill" | "Fill" | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property AutoPlay of Type Boolean */
-public autoPlay?: boolean | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsLooping of Type Boolean */
-public isLooping?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property KeepScreenOn of Type Boolean */
-public keepScreenOn?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Position of Type TimeSpan */
-public position?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property ShowsPlaybackControls of Type Boolean */
-public showsPlaybackControls?: boolean | Bind;
-
-/** Property Source of Type MediaSource */
-public source?: any;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property Volume of Type Double */
-public volume?: number | Bind;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class RangeSlider extends RootObject {
-    
-    
-/** Property RangeSlider.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property RangeSlider.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property RangeSlider.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property RangeSlider.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property RangeSlider.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property RangeSlider.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property RangeSlider.LowerThumbView of Type Xamarin.Forms.View */
-public static lowerThumbView: NodeFactory;;
-
-/** Property RangeSlider.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property RangeSlider.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property RangeSlider.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property RangeSlider.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;;
-
-/** Property RangeSlider.UpperThumbView of Type Xamarin.Forms.View */
-public static upperThumbView: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property LowerThumbBorderColor of Type Color */
-public lowerThumbBorderColor?: ColorItem | string | null | Bind;
-
-/** Property LowerThumbColor of Type Color */
-public lowerThumbColor?: ColorItem | string | null | Bind;
-
-/** Property LowerThumbRadius of Type Double */
-public lowerThumbRadius?: number | Bind;
-
-/** Property LowerThumbSize of Type Double */
-public lowerThumbSize?: number | Bind;
-
-/** Property LowerThumbView of Type View */
-public lowerThumbView?: any;
-
-/** Property LowerValue of Type Double */
-public lowerValue?: number | Bind;
-
-/** Property LowerValueLabelStyle of Type Style */
-public lowerValueLabelStyle?: any;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MaximumValue of Type Double */
-public maximumValue?: number | Bind;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumValue of Type Double */
-public minimumValue?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property StepValue of Type Double */
-public stepValue?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property ThumbBorderColor of Type Color */
-public thumbBorderColor?: ColorItem | string | null | Bind;
-
-/** Property ThumbColor of Type Color */
-public thumbColor?: ColorItem | string | null | Bind;
-
-/** Property ThumbRadius of Type Double */
-public thumbRadius?: number | Bind;
-
-/** Property ThumbSize of Type Double */
-public thumbSize?: number | Bind;
-
-/** Property TrackBorderColor of Type Color */
-public trackBorderColor?: ColorItem | string | null | Bind;
-
-/** Property TrackColor of Type Color */
-public trackColor?: ColorItem | string | null | Bind;
-
-/** Property TrackHighlightBorderColor of Type Color */
-public trackHighlightBorderColor?: ColorItem | string | null | Bind;
-
-/** Property TrackHighlightColor of Type Color */
-public trackHighlightColor?: ColorItem | string | null | Bind;
-
-/** Property TrackRadius of Type Double */
-public trackRadius?: number | Bind;
-
-/** Property TrackSize of Type Double */
-public trackSize?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property UpperThumbBorderColor of Type Color */
-public upperThumbBorderColor?: ColorItem | string | null | Bind;
-
-/** Property UpperThumbColor of Type Color */
-public upperThumbColor?: ColorItem | string | null | Bind;
-
-/** Property UpperThumbRadius of Type Double */
-public upperThumbRadius?: number | Bind;
-
-/** Property UpperThumbSize of Type Double */
-public upperThumbSize?: number | Bind;
-
-/** Property UpperThumbView of Type View */
-public upperThumbView?: any;
-
-/** Property UpperValue of Type Double */
-public upperValue?: number | Bind;
-
-/** Property UpperValueLabelStyle of Type Style */
-public upperValueLabelStyle?: any;
-
-/** Property ValueLabelSpacing of Type Double */
-public valueLabelSpacing?: number | Bind;
-
-/** Property ValueLabelStringFormat of Type String */
-public valueLabelStringFormat?: string | null | Bind;
-
-/** Property ValueLabelStyle of Type Style */
-public valueLabelStyle?: any;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class Shield extends RootObject {
-    
-    
-/** Property Shield.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property Shield.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property Shield.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property Shield.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property Shield.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property Shield.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property Shield.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property Shield.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property Shield.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property Shield.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property Color of Type Color */
-public color?: ColorItem | string | null | Bind;
-
-/** Property Command of Type ICommand */
-public command?: any;
-
-/** Property CommandParameter of Type Object */
-public commandParameter?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property FontAttributes of Type FontAttributes */
-public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-public fontFamily?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-public fontSize?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Status of Type String */
-public status?: string | null | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property Subject of Type String */
-public subject?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TextColor of Type Color */
-public textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class SideMenuView extends RootObject {
-    
-/** Attached Property SideMenuView.Position of Type BindableProperty*/
-public static position: AttachedNode;
-
-
-/** Attached Property SideMenuView.MenuWidthPercentage of Type BindableProperty*/
-public static menuWidthPercentage: AttachedNode;
-
-
-/** Attached Property SideMenuView.MenuGestureEnabled of Type BindableProperty*/
-public static menuGestureEnabled: AttachedNode;
-
-    
-/** Property SideMenuView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property SideMenuView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property SideMenuView.Children of Type Xamarin.Forms.View */
-public static children: NodeFactory;;
-
-/** Property SideMenuView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property SideMenuView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property SideMenuView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property SideMenuView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property SideMenuView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property SideMenuView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property SideMenuView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property SideMenuView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AllowInterceptGesture of Type Boolean */
-public allowInterceptGesture?: boolean | Bind;
-
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CancelVerticalGestureThreshold of Type Double */
-public cancelVerticalGestureThreshold?: number | Bind;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property CurrentGestureShift of Type Double */
-public currentGestureShift?: number | Bind;
-
-/** Property CurrentGestureState of Type SideMenuState */
-public currentGestureState?: "MainViewShown" | "RightMenuShown" | "LeftMenuShown" | Bind;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property GestureThreshold of Type Double */
-public gestureThreshold?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Shift of Type Double */
-public shift?: number | Bind;
-
-/** Property State of Type SideMenuState */
-public state?: "MainViewShown" | "RightMenuShown" | "LeftMenuShown" | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class StateView extends RootObject {
-    
-    
-/** Property StateView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property StateView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property StateView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property StateView.Content of Type Xamarin.Forms.View */
-public static content: NodeFactory;;
-
-/** Property StateView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property StateView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property StateView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property StateView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property StateView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property StateView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property StateView.Template of Type Xamarin.Forms.DataTemplate */
-public static template: NodeFactory;;
-
-/** Property StateView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property Content of Type View */
-public content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property CustomStateKey of Type String */
-public customStateKey?: string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property RepeatCount of Type Int32 */
-public repeatCount?: number | Bind;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property StateKey of Type LayoutState */
-public stateKey?: "None" | "Loading" | "Saving" | "Success" | "Error" | "Empty" | "Custom" | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property Template of Type DataTemplate */
-public template?: any;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class TabBadgeTemplate extends RootObject {
-    
-    
-/** Property TabBadgeTemplate.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property TabBadgeTemplate.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property TabBadgeTemplate.Children of Type Xamarin.Forms.View */
-public static children: NodeFactory;;
-
-/** Property TabBadgeTemplate.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property TabBadgeTemplate.ColumnDefinitions of Type Xamarin.Forms.ColumnDefinition */
-public static columnDefinitions: NodeFactory;;
-
-/** Property TabBadgeTemplate.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property TabBadgeTemplate.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property TabBadgeTemplate.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property TabBadgeTemplate.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property TabBadgeTemplate.RowDefinitions of Type Xamarin.Forms.RowDefinition */
-public static rowDefinitions: NodeFactory;;
-
-/** Property TabBadgeTemplate.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property TabBadgeTemplate.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property ColumnDefinitions of Type ColumnDefinitionCollection */
-public columnDefinitions?: any;
-
-/** Property ColumnSpacing of Type Double */
-public columnSpacing?: number | Bind;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property RowDefinitions of Type RowDefinitionCollection */
-public rowDefinitions?: any;
-
-/** Property RowSpacing of Type Double */
-public rowSpacing?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class TabBadgeView extends RootObject {
-    
-    
-/** Property TabBadgeView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property TabBadgeView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property TabBadgeView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property TabBadgeView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property TabBadgeView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property TabBadgeView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property TabBadgeView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property TabBadgeView.PlacementTarget of Type Xamarin.Forms.View */
-public static placementTarget: NodeFactory;;
-
-/** Property TabBadgeView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property TabBadgeView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property TabBadgeView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutoHide of Type Boolean */
-public autoHide?: boolean | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BadgeAnimation of Type IBadgeAnimation */
-public badgeAnimation?: any;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property BorderColor of Type Color */
-public borderColor?: ColorItem | string | null | Bind;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsAnimated of Type Boolean */
-public isAnimated?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property PlacementTarget of Type View */
-public placementTarget?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property Text of Type String */
-public text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-public textColor?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class TabView extends RootObject {
-    
-    
-/** Property TabView.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property TabView.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property TabView.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property TabView.Content of Type Xamarin.Forms.View */
-public static content: NodeFactory;;
-
-/** Property TabView.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property TabView.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property TabView.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property TabView.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property TabView.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property TabView.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property TabView.TabContentDataTemplate of Type Xamarin.Forms.DataTemplate */
-public static tabContentDataTemplate: NodeFactory;;
-
-/** Property TabView.TabIndicatorView of Type Xamarin.Forms.View */
-public static tabIndicatorView: NodeFactory;;
-
-/** Property TabView.TabItems of Type Xamarin.CommunityToolkit.UI.Views.TabViewItem */
-public static tabItems: NodeFactory;;
-
-/** Property TabView.TabStripBackgroundView of Type Xamarin.Forms.View */
-public static tabStripBackgroundView: NodeFactory;;
-
-/** Property TabView.TabViewItemDataTemplate of Type Xamarin.Forms.DataTemplate */
-public static tabViewItemDataTemplate: NodeFactory;;
-
-/** Property TabView.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property Content of Type View */
-public content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsSwipeEnabled of Type Boolean */
-public isSwipeEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsTabStripVisible of Type Boolean */
-public isTabStripVisible?: boolean | Bind;
-
-/** Property IsTabTransitionEnabled of Type Boolean */
-public isTabTransitionEnabled?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property SelectedIndex of Type Int32 */
-public selectedIndex?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabContentBackgroundColor of Type Color */
-public tabContentBackgroundColor?: ColorItem | string | null | Bind;
-
-/** Property TabContentDataTemplate of Type DataTemplate */
-public tabContentDataTemplate?: any;
-
-/** Property TabContentHeight of Type Double */
-public tabContentHeight?: number | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TabIndicatorColor of Type Color */
-public tabIndicatorColor?: ColorItem | string | null | Bind;
-
-/** Property TabIndicatorHeight of Type Double */
-public tabIndicatorHeight?: number | Bind;
-
-/** Property TabIndicatorPlacement of Type TabIndicatorPlacement */
-public tabIndicatorPlacement?: "Top" | "Center" | "Bottom" | Bind;
-
-/** Property TabIndicatorView of Type View */
-public tabIndicatorView?: any;
-
-/** Property TabIndicatorWidth of Type Double */
-public tabIndicatorWidth?: number | Bind;
-
-/** Property TabItems of Type ObservableCollection`1 */
-public tabItems?: any;
-
-/** Property TabItemsSource of Type IList */
-public tabItemsSource?: any;
-
-/** Property TabStripBackgroundColor of Type Color */
-public tabStripBackgroundColor?: ColorItem | string | null | Bind;
-
-/** Property TabStripBackgroundView of Type View */
-public tabStripBackgroundView?: any;
-
-/** Property TabStripBorderColor of Type Color */
-public tabStripBorderColor?: ColorItem | string | null | Bind;
-
-/** Property TabStripHeight of Type Double */
-public tabStripHeight?: number | Bind;
-
-/** Property TabStripPlacement of Type TabStripPlacement */
-public tabStripPlacement?: "Top" | "Bottom" | Bind;
-
-/** Property TabViewItemDataTemplate of Type DataTemplate */
-public tabViewItemDataTemplate?: any;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class TabViewItem extends RootObject {
-    
-    
-/** Property TabViewItem.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property TabViewItem.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property TabViewItem.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property TabViewItem.Content of Type Xamarin.Forms.View */
-public static content: NodeFactory;;
-
-/** Property TabViewItem.ControlTemplate of Type Xamarin.Forms.ControlTemplate */
-public static controlTemplate: NodeFactory;;
-
-/** Property TabViewItem.CurrentContent of Type Xamarin.Forms.View */
-public static currentContent: NodeFactory;;
-
-/** Property TabViewItem.CurrentIcon of Type Xamarin.Forms.ImageSource */
-public static currentIcon: NodeFactory;;
-
-/** Property TabViewItem.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property TabViewItem.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property TabViewItem.Icon of Type Xamarin.Forms.ImageSource */
-public static icon: NodeFactory;;
-
-/** Property TabViewItem.IconSelected of Type Xamarin.Forms.ImageSource */
-public static iconSelected: NodeFactory;;
-
-/** Property TabViewItem.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property TabViewItem.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property TabViewItem.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property TabViewItem.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BadgeBackgroundColor of Type Color */
-public badgeBackgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BadgeBackgroundColorSelected of Type Color */
-public badgeBackgroundColorSelected?: ColorItem | string | null | Bind;
-
-/** Property BadgeBorderColor of Type Color */
-public badgeBorderColor?: ColorItem | string | null | Bind;
-
-/** Property BadgeBorderColorSelected of Type Color */
-public badgeBorderColorSelected?: ColorItem | string | null | Bind;
-
-/** Property BadgeText of Type String */
-public badgeText?: string | null | Bind;
-
-/** Property BadgeTextColor of Type Color */
-public badgeTextColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property Content of Type View */
-public content?: any;
-
-/** Property ControlTemplate of Type ControlTemplate */
-public controlTemplate?: any;
-
-/** Property CurrentBadgeBackgroundColor of Type Color */
-public currentBadgeBackgroundColor?: ColorItem | string | null | Bind;
-
-/** Property CurrentBadgeBorderColor of Type Color */
-public currentBadgeBorderColor?: ColorItem | string | null | Bind;
-
-/** Property CurrentContent of Type View */
-public currentContent?: any;
-
-/** Property CurrentFontAttributes of Type FontAttributes */
-public currentFontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property CurrentFontFamily of Type String */
-public currentFontFamily?: string | null | Bind;
-
-/** Property CurrentFontSize of Type Double */
-public currentFontSize?: number | Bind;
-
-/** Property CurrentIcon of Type ImageSource */
-public currentIcon?: /*ImageSource*/ any;
-
-/** Property CurrentTextColor of Type Color */
-public currentTextColor?: ColorItem | string | null | Bind;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property FontAttributes of Type FontAttributes */
-public fontAttributes?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontAttributesSelected of Type FontAttributes */
-public fontAttributesSelected?: "None" | "Bold" | "Italic" | Bind;
-
-/** Property FontFamily of Type String */
-public fontFamily?: string | null | Bind;
-
-/** Property FontFamilySelected of Type String */
-public fontFamilySelected?: string | null | Bind;
-
-/** Property FontSize of Type Double */
-public fontSize?: number | Bind;
-
-/** Property FontSizeSelected of Type Double */
-public fontSizeSelected?: number | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Icon of Type ImageSource */
-public icon?: /*ImageSource*/ any;
-
-/** Property IconSelected of Type ImageSource */
-public iconSelected?: /*ImageSource*/ any;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsSelected of Type Boolean */
-public isSelected?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabAnimation of Type ITabViewItemAnimation */
-public tabAnimation?: any;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TabWidth of Type Double */
-public tabWidth?: number | Bind;
-
-/** Property TapCommand of Type ICommand */
-public tapCommand?: any;
-
-/** Property Text of Type String */
-public text?: string | null | Bind;
-
-/** Property TextColor of Type Color */
-public textColor?: ColorItem | string | null | Bind;
-
-/** Property TextColorSelected of Type Color */
-public textColorSelected?: ColorItem | string | null | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class UniformGrid extends RootObject {
-    
-    
-/** Property UniformGrid.Background of Type Xamarin.Forms.Brush */
-public static background: NodeFactory;;
-
-/** Property UniformGrid.Behaviors of Type Xamarin.Forms.Behavior */
-public static behaviors: NodeFactory;;
-
-/** Property UniformGrid.Children of Type Xamarin.Forms.View */
-public static children: NodeFactory;;
-
-/** Property UniformGrid.Clip of Type Xamarin.Forms.Shapes.Geometry */
-public static clip: NodeFactory;;
-
-/** Property UniformGrid.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property UniformGrid.GestureRecognizers of Type Xamarin.Forms.IGestureRecognizer */
-public static gestureRecognizers: NodeFactory;;
-
-/** Property UniformGrid.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;;
-
-/** Property UniformGrid.Resources of Type System.Collections.Generic.KeyValuePair`2[System.String,System.Object] */
-public static resources: NodeFactory;;
-
-/** Property UniformGrid.StyleClass of Type System.String */
-public static styleClass: NodeFactory;;
-
-/** Property UniformGrid.Triggers of Type Xamarin.Forms.TriggerBase */
-public static triggers: NodeFactory;
-    
-    
-/** Property AnchorX of Type Double */
-public anchorX?: number | Bind;
-
-/** Property AnchorY of Type Double */
-public anchorY?: number | Bind;
-
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property Background of Type Brush */
-public background?: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | Bind;
-
-/** Property BackgroundColor of Type Color */
-public backgroundColor?: ColorItem | string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CascadeInputTransparent of Type Boolean */
-public cascadeInputTransparent?: boolean | Bind;
-
-/** Property class of Type IList`1 */
-public class?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Clip of Type Geometry */
-public clip?: any;
-
-/** Property DisableLayout of Type Boolean */
-public disableLayout?: boolean | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property FlowDirection of Type FlowDirection */
-public flowDirection?: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
-
-/** Property HeightRequest of Type Double */
-public heightRequest?: number | Bind;
-
-/** Property HorizontalOptions of Type LayoutOptions */
-public horizontalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property InputTransparent of Type Boolean */
-public inputTransparent?: boolean | Bind;
-
-/** Property IsClippedToBounds of Type Boolean */
-public isClippedToBounds?: boolean | Bind;
-
-/** Property IsEnabled of Type Boolean */
-public isEnabled?: boolean | Bind;
-
-/** Property IsInNativeLayout of Type Boolean */
-public isInNativeLayout?: boolean | Bind;
-
-/** Property IsNativeStateConsistent of Type Boolean */
-public isNativeStateConsistent?: boolean | Bind;
-
-/** Property IsPlatformEnabled of Type Boolean */
-public isPlatformEnabled?: boolean | Bind;
-
-/** Property IsTabStop of Type Boolean */
-public isTabStop?: boolean | Bind;
-
-/** Property IsVisible of Type Boolean */
-public isVisible?: boolean | Bind;
-
-/** Property Margin of Type Thickness */
-public margin?: /*Thickness*/ any;
-
-/** Property MinimumHeightRequest of Type Double */
-public minimumHeightRequest?: number | Bind;
-
-/** Property MinimumWidthRequest of Type Double */
-public minimumWidthRequest?: number | Bind;
-
-/** Property Navigation of Type INavigation */
-public navigation?: any;
-
-/** Property Opacity of Type Double */
-public opacity?: number | Bind;
-
-/** Property Padding of Type Thickness */
-public padding?: /*Thickness*/ any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Resources of Type ResourceDictionary */
-public resources?: any;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-
-/** Property RotationX of Type Double */
-public rotationX?: number | Bind;
-
-/** Property RotationY of Type Double */
-public rotationY?: number | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-
-/** Property ScaleX of Type Double */
-public scaleX?: number | Bind;
-
-/** Property ScaleY of Type Double */
-public scaleY?: number | Bind;
-
-/** Property Style of Type Style */
-public style?: any;
-
-/** Property StyleClass of Type IList`1 */
-public styleClass?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property TabIndex of Type Int32 */
-public tabIndex?: number | Bind;
-
-/** Property TranslationX of Type Double */
-public translationX?: number | Bind;
-
-/** Property TranslationY of Type Double */
-public translationY?: number | Bind;
-
-/** Property VerticalOptions of Type LayoutOptions */
-public verticalOptions?: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | Bind;
-
-/** Property Visual of Type IVisual */
-public visual?: /*IVisual*/ any;
-
-/** Property WidthRequest of Type Double */
-public widthRequest?: number | Bind;
-}
-
-
-declare class GravatarImageExtension extends GravatarImageSource {
-    
-    
-/** Property GravatarImageExtension.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property GravatarImageExtension.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;
-    
-    
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-}
-
-
-declare class MediaSource extends RootObject {
-    
-    
-/** Property MediaSource.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property MediaSource.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;
-    
-    
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-}
-
-
-declare class FileMediaSource extends MediaSource {
-    
-    
-/** Property FileMediaSource.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property FileMediaSource.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;
-    
-    
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property File of Type String */
-public file?: string | null | Bind;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-}
-
-
-declare class StreamMediaSource extends MediaSource {
-    
-    
-/** Property StreamMediaSource.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property StreamMediaSource.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;
-    
-    
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property Stream of Type Func`2 */
-public stream?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-}
-
-
-declare class UriMediaSource extends MediaSource {
-    
-    
-/** Property UriMediaSource.Effects of Type Xamarin.Forms.Effect */
-public static effects: NodeFactory;;
-
-/** Property UriMediaSource.Menu of Type Xamarin.Forms.Menu */
-public static menu: NodeFactory;
-    
-    
-/** Property AutomationId of Type String */
-public automationId?: string | null | Bind;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property ClassId of Type String */
-public classId?: string | null | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EffectControlProvider of Type IEffectControlProvider */
-public effectControlProvider?: any;
-
-/** Property Parent of Type Element */
-public parent?: any;
-
-/** Property Platform of Type IPlatform */
-public platform?: any;
-
-/** Property StyleId of Type String */
-public styleId?: string | null | Bind;
-
-/** Property Uri of Type Uri */
-public uri?: any;
-}
-
-
-declare class MultiConverterParameter extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property ConverterType of Type Type */
-public converterType?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Value of Type Object */
-public value?: any;
-}
-
-
-declare class EventToCommandBehavior extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Command of Type ICommand */
-public command?: any;
-
-/** Property CommandParameter of Type Object */
-public commandParameter?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property EventArgsConverter of Type IValueConverter */
-public eventArgsConverter?: any;
-
-/** Property EventName of Type String */
-public eventName?: string | null | Bind;
-}
-
-
-declare class AnimationBehavior extends EventToCommandBehavior {
-    
-    
-    
-    
-/** Property AnimationType of Type AnimationBase */
-public animationType?: any;
-
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-}
-
-
-declare class AnimationBase extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-}
-
-
-declare class FadeAnimation extends AnimationBase {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-
-/** Property Fade of Type Double */
-public fade?: number | Bind;
-}
-
-
-declare class RotateAnimation extends AnimationBase {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-
-/** Property Rotation of Type Double */
-public rotation?: number | Bind;
-}
-
-
-declare class FlipHorizontalAnimation extends RotateAnimation {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-}
-
-
-declare class FlipVerticalAnimation extends RotateAnimation {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-}
-
-
-declare class ScaleAnimation extends AnimationBase {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-
-/** Property Scale of Type Double */
-public scale?: number | Bind;
-}
-
-
-declare class ShakeAnimation extends AnimationBase {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Duration of Type UInt32 */
-public duration?: any;
-
-/** Property Easing of Type Easing */
-public easing?: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | Bind;
-
-/** Property StartFactor of Type Double */
-public startFactor?: number | Bind;
-}
-
-
-declare class ImpliedOrderGridBehavior extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property ThrowOnLayoutWarning of Type Boolean */
-public throwOnLayoutWarning?: boolean | Bind;
-}
-
-
-declare class MaskedBehavior extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Mask of Type String */
-public mask?: string | null | Bind;
-
-/** Property UnMaskedCharacter of Type Char */
-public unMaskedCharacter?: any;
-}
-
-
-declare class MaxLengthReachedBehavior extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Command of Type ICommand */
-public command?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property ShouldDismissKeyboardAutomatically of Type Boolean */
-public shouldDismissKeyboardAutomatically?: boolean | Bind;
-}
-
-
-declare class UserStoppedTypingBehavior extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Command of Type ICommand */
-public command?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property MinimumLengthThreshold of Type Int32 */
-public minimumLengthThreshold?: number | Bind;
-
-/** Property ShouldDismissKeyboardAutomatically of Type Boolean */
-public shouldDismissKeyboardAutomatically?: boolean | Bind;
-
-/** Property StoppedTypingTimeThreshold of Type Int32 */
-public stoppedTypingTimeThreshold?: number | Bind;
-}
-
-
-declare class ValidationBehavior extends RootObject {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Flags of Type ValidationFlags */
-public flags?: "None" | "ValidateOnAttaching" | "ValidateOnFocusing" | "ValidateOnUnfocusing" | "ValidateOnValueChanging" | "ForceMakeValidWhenFocused" | Bind;
-
-/** Property ForceValidateCommand of Type ICommand */
-public forceValidateCommand?: any;
-
-/** Property InvalidStyle of Type Style */
-public invalidStyle?: any;
-
-/** Property IsValid of Type Boolean */
-public isValid?: boolean | Bind;
-
-/** Property ValidStyle of Type Style */
-public validStyle?: any;
-
-/** Property Value of Type Object */
-public value?: any;
-
-/** Property ValuePropertyName of Type String */
-public valuePropertyName?: string | null | Bind;
-}
-
-
-declare class TextValidationBehavior extends ValidationBehavior {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property DecorationFlags of Type TextDecorationFlags */
-public decorationFlags?: "None" | "TrimStart" | "TrimEnd" | "Trim" | "NullToEmpty" | "NormalizeWhiteSpace" | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property MaximumLength of Type Int32 */
-public maximumLength?: number | Bind;
-
-/** Property MinimumLength of Type Int32 */
-public minimumLength?: number | Bind;
-
-/** Property RegexOptions of Type RegexOptions */
-public regexOptions?: "None" | "IgnoreCase" | "Multiline" | "ExplicitCapture" | "Compiled" | "Singleline" | "IgnorePatternWhitespace" | "RightToLeft" | "ECMAScript" | "CultureInvariant" | Bind;
-
-/** Property RegexPattern of Type String */
-public regexPattern?: string | null | Bind;
-}
-
-
-declare class CharactersValidationBehavior extends TextValidationBehavior {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property CharacterType of Type CharacterType */
-public characterType?: "LowercaseLetter" | "UppercaseLetter" | "Letter" | "Digit" | "Alphanumeric" | "Whitespace" | "NonAlphanumericSymbol" | "Any" | "LowercaseLatinLetter" | "UppercaseLatinLetter" | "LatinLetter" | Bind;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property MaximumCharacterCount of Type Int32 */
-public maximumCharacterCount?: number | Bind;
-
-/** Property MinimumCharacterCount of Type Int32 */
-public minimumCharacterCount?: number | Bind;
-}
-
-
-declare class EmailValidationBehavior extends TextValidationBehavior {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-}
-
-
-declare class MultiValidationBehavior extends ValidationBehavior {
-    
-/** Attached Property MultiValidationBehavior.Error of Type BindableProperty*/
-public static error: AttachedNode;
-
-    
-/** Property MultiValidationBehavior.Children of Type Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior */
-public static children: NodeFactory;;
-
-/** Property MultiValidationBehavior.Errors of Type System.Object */
-public static errors: NodeFactory;
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property Errors of Type List`1 */
-public errors?: any;
-}
-
-
-declare class NumericValidationBehavior extends ValidationBehavior {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property MaximumDecimalPlaces of Type Int32 */
-public maximumDecimalPlaces?: number | Bind;
-
-/** Property MaximumValue of Type Double */
-public maximumValue?: number | Bind;
-
-/** Property MinimumDecimalPlaces of Type Int32 */
-public minimumDecimalPlaces?: number | Bind;
-
-/** Property MinimumValue of Type Double */
-public minimumValue?: number | Bind;
-}
-
-
-declare class RequiredStringValidationBehavior extends ValidationBehavior {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property RequiredString of Type String */
-public requiredString?: string | null | Bind;
-}
-
-
-declare class UriValidationBehavior extends TextValidationBehavior {
-    
-    
-    
-    
-/** Property BindingContext of Type Object */
-public bindingContext?: any;
-
-/** Property Dispatcher of Type IDispatcher */
-public dispatcher?: any;
-
-/** Property UriKind of Type UriKind */
-public uriKind?: "RelativeOrAbsolute" | "Absolute" | "Relative" | Bind;
-}
-const XCT = { get AvatarView(): typeof AvatarView { return  this._AvatarView || (this._AvatarView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.AvatarView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get BadgeView(): typeof BadgeView { return  this._BadgeView || (this._BadgeView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.BadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get CameraView(): typeof CameraView { return  this._CameraView || (this._CameraView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.CameraView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get DockLayout(): typeof DockLayout { return  this._DockLayout || (this._DockLayout = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.DockLayout, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get Expander(): typeof Expander { return  this._Expander || (this._Expander = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.Expander, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get GravatarImageSource(): typeof GravatarImageSource { return  this._GravatarImageSource || (this._GravatarImageSource = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.GravatarImageSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get MediaElement(): typeof MediaElement { return  this._MediaElement || (this._MediaElement = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.MediaElement, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get RangeSlider(): typeof RangeSlider { return  this._RangeSlider || (this._RangeSlider = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.RangeSlider, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get Shield(): typeof Shield { return  this._Shield || (this._Shield = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.Shield, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get SideMenuView(): typeof SideMenuView { return  this._SideMenuView || (this._SideMenuView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.SideMenuView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get StateView(): typeof StateView { return  this._StateView || (this._StateView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.StateView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get TabBadgeTemplate(): typeof TabBadgeTemplate { return  this._TabBadgeTemplate || (this._TabBadgeTemplate = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.TabBadgeTemplate, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get TabBadgeView(): typeof TabBadgeView { return  this._TabBadgeView || (this._TabBadgeView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.TabBadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get TabView(): typeof TabView { return  this._TabView || (this._TabView = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.TabView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get TabViewItem(): typeof TabViewItem { return  this._TabViewItem || (this._TabViewItem = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.TabViewItem, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get UniformGrid(): typeof UniformGrid { return  this._UniformGrid || (this._UniformGrid = bridge.getClass('Xamarin.CommunityToolkit.UI.Views.UniformGrid, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get GravatarImageExtension(): typeof GravatarImageExtension { return  this._GravatarImageExtension || (this._GravatarImageExtension = bridge.getClass('Xamarin.CommunityToolkit.Extensions.GravatarImageExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get MediaSource(): typeof MediaSource { return  this._MediaSource || (this._MediaSource = bridge.getClass('Xamarin.CommunityToolkit.Core.MediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get FileMediaSource(): typeof FileMediaSource { return  this._FileMediaSource || (this._FileMediaSource = bridge.getClass('Xamarin.CommunityToolkit.Core.FileMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get StreamMediaSource(): typeof StreamMediaSource { return  this._StreamMediaSource || (this._StreamMediaSource = bridge.getClass('Xamarin.CommunityToolkit.Core.StreamMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get UriMediaSource(): typeof UriMediaSource { return  this._UriMediaSource || (this._UriMediaSource = bridge.getClass('Xamarin.CommunityToolkit.Core.UriMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get MultiConverterParameter(): typeof MultiConverterParameter { return  this._MultiConverterParameter || (this._MultiConverterParameter = bridge.getClass('Xamarin.CommunityToolkit.Converters.MultiConverterParameter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get EventToCommandBehavior(): typeof EventToCommandBehavior { return  this._EventToCommandBehavior || (this._EventToCommandBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.EventToCommandBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get AnimationBehavior(): typeof AnimationBehavior { return  this._AnimationBehavior || (this._AnimationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.AnimationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get AnimationBase(): typeof AnimationBase { return  this._AnimationBase || (this._AnimationBase = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.AnimationBase, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get FadeAnimation(): typeof FadeAnimation { return  this._FadeAnimation || (this._FadeAnimation = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.FadeAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get RotateAnimation(): typeof RotateAnimation { return  this._RotateAnimation || (this._RotateAnimation = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.RotateAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get FlipHorizontalAnimation(): typeof FlipHorizontalAnimation { return  this._FlipHorizontalAnimation || (this._FlipHorizontalAnimation = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.FlipHorizontalAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get FlipVerticalAnimation(): typeof FlipVerticalAnimation { return  this._FlipVerticalAnimation || (this._FlipVerticalAnimation = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.FlipVerticalAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get ScaleAnimation(): typeof ScaleAnimation { return  this._ScaleAnimation || (this._ScaleAnimation = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.ScaleAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get ShakeAnimation(): typeof ShakeAnimation { return  this._ShakeAnimation || (this._ShakeAnimation = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.ShakeAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get ImpliedOrderGridBehavior(): typeof ImpliedOrderGridBehavior { return  this._ImpliedOrderGridBehavior || (this._ImpliedOrderGridBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.ImpliedOrderGridBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get MaskedBehavior(): typeof MaskedBehavior { return  this._MaskedBehavior || (this._MaskedBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.MaskedBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get MaxLengthReachedBehavior(): typeof MaxLengthReachedBehavior { return  this._MaxLengthReachedBehavior || (this._MaxLengthReachedBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.MaxLengthReachedBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get UserStoppedTypingBehavior(): typeof UserStoppedTypingBehavior { return  this._UserStoppedTypingBehavior || (this._UserStoppedTypingBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.UserStoppedTypingBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get ValidationBehavior(): typeof ValidationBehavior { return  this._ValidationBehavior || (this._ValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get TextValidationBehavior(): typeof TextValidationBehavior { return  this._TextValidationBehavior || (this._TextValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.TextValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get CharactersValidationBehavior(): typeof CharactersValidationBehavior { return  this._CharactersValidationBehavior || (this._CharactersValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.CharactersValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get EmailValidationBehavior(): typeof EmailValidationBehavior { return  this._EmailValidationBehavior || (this._EmailValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.EmailValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get MultiValidationBehavior(): typeof MultiValidationBehavior { return  this._MultiValidationBehavior || (this._MultiValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.MultiValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get NumericValidationBehavior(): typeof NumericValidationBehavior { return  this._NumericValidationBehavior || (this._NumericValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.NumericValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get RequiredStringValidationBehavior(): typeof RequiredStringValidationBehavior { return  this._RequiredStringValidationBehavior || (this._RequiredStringValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.RequiredStringValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); },
-	get UriValidationBehavior(): typeof UriValidationBehavior { return  this._UriValidationBehavior || (this._UriValidationBehavior = bridge.getClass('Xamarin.CommunityToolkit.Behaviors.UriValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')); }
-};
 export default XCT;
+export namespace Xamarin {
+    export namespace CommunityToolkit {
+        export namespace UI {
+            export namespace Views {
+                export namespace Internals {
+                    export declare class BaseTemplatedView$Generic extends XF.default.TemplatedView {
+                    }
+                }
+            }
+        }
+        export namespace Core {
+            export declare class FileMediaSource extends RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/ {
+                public static file: AttachedNode;
+                public file: string | null | Bind;
+            }
+            export declare class MediaSource extends XF.default.Element {
+            }
+            export declare class StreamMediaSource extends RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/ {
+                public static stream: AttachedNode;
+                public stream: RootObject /*System.Func`2[[System.Threading.CancellationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Threading.Tasks.Task`1[[System.IO.Stream, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
+            }
+            export declare class UriMediaSource extends RootObject /*Xamarin.CommunityToolkit.Core.MediaSource*/ {
+                public static uri: AttachedNode;
+                public uri: RootObject /*System.Uri*/;
+            }
+        }
+        export namespace Behaviors {
+            export namespace Internals {
+                export declare class BaseBehavior$Generic extends XF.default.Behavior$Generic {
+                }
+                export declare class ValidationBehavior extends XF.default.BindableObject {
+                    public static isValid: AttachedNode;
+                    public static validStyle: AttachedNode;
+                    public static invalidStyle: AttachedNode;
+                    public static flags: AttachedNode;
+                    public static value: AttachedNode;
+                    public static valuePropertyName: AttachedNode;
+                    public static forceValidateCommand: AttachedNode;
+                    public isValid: boolean | null | Bind;
+                    public validStyle: XF.default.Style;
+                    public invalidStyle: XF.default.Style;
+                    public flags: "None" | "ValidateOnAttaching" | "ValidateOnFocusing" | "ValidateOnUnfocusing" | "ValidateOnValueChanging" | "ForceMakeValidWhenFocused" | string | number | null | undefined | Bind;
+                    public value: RootObject /*System.Object*/;
+                    public valuePropertyName: string | null | Bind;
+                    public forceValidateCommand: RootObject /*System.Windows.Input.ICommand*/;
+                }
+            }
+        }
+    }
+}
+Object.defineProperties(XCT as any, {
+    AvatarView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.AvatarView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "AvatarView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    BadgeView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.BadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "BadgeView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    CameraView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.CameraView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "CameraView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    DockLayout: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.DockLayout, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "DockLayout", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    Expander: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.Expander, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "Expander", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    GravatarImageSource: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.GravatarImageSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "GravatarImageSource", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MediaElement: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.MediaElement, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MediaElement", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    RangeSlider: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.RangeSlider, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "RangeSlider", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    Shield: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.Shield, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "Shield", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    SideMenuView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.SideMenuView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "SideMenuView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    StateLayout: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.StateLayout, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "StateLayout", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    StateView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.StateView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "StateView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TabBadgeTemplate: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabBadgeTemplate, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TabBadgeTemplate", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TabBadgeView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabBadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TabBadgeView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TabView: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TabView", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TabViewItem: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabViewItem, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TabViewItem", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    UniformGrid: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.UniformGrid, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "UniformGrid", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    GravatarImageExtension: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Extensions.GravatarImageExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "GravatarImageExtension", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    PageExtension: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Extensions.PageExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "PageExtension", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    VisualElementExtension: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Extensions.VisualElementExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "VisualElementExtension", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    IconTintColorEffect: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.IconTintColorEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "IconTintColorEffect", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    IconTintColorEffectRouter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.IconTintColorEffectRouter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "IconTintColorEffectRouter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    RemoveBorderEffect: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.RemoveBorderEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "RemoveBorderEffect", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    SafeAreaEffect: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.SafeAreaEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "SafeAreaEffect", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    SafeAreaEffectRouter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.SafeAreaEffectRouter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "SafeAreaEffectRouter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    SelectAllTextEffect: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.SelectAllTextEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "SelectAllTextEffect", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TouchEffect: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.TouchEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TouchEffect", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    VisualFeedbackEffect: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.VisualFeedbackEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "VisualFeedbackEffect", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    BoolToObjectConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.BoolToObjectConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "BoolToObjectConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    BoolToObjectConverter$Generic: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.BoolToObjectConverter`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "BoolToObjectConverter$Generic", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ByteArrayToImageSourceConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ByteArrayToImageSourceConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ByteArrayToImageSourceConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    DateTimeOffsetConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.DateTimeOffsetConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "DateTimeOffsetConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    DoubleToIntConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.DoubleToIntConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "DoubleToIntConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    EqualConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.EqualConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "EqualConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    IndexToArrayItemConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IndexToArrayItemConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "IndexToArrayItemConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    IntToBoolConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IntToBoolConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "IntToBoolConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    InvertedBoolConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.InvertedBoolConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "InvertedBoolConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    IsNotNullOrEmptyConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IsNotNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "IsNotNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    IsNullOrEmptyConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IsNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "IsNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ItemSelectedEventArgsConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ItemSelectedEventArgsConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ItemSelectedEventArgsConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ItemTappedEventArgsConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ItemTappedEventArgsConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ItemTappedEventArgsConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ListIsNotNullOrEmptyConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ListIsNotNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ListIsNotNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ListIsNullOrEmptyConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ListIsNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ListIsNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ListToStringConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ListToStringConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ListToStringConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MultiConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.MultiConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MultiConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MultiConverterParameter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.MultiConverterParameter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MultiConverterParameter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    NotEqualConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.NotEqualConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "NotEqualConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    StateToBooleanConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.StateToBooleanConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "StateToBooleanConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TextCaseConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.TextCaseConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TextCaseConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TimeSpanToDoubleConverter: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.TimeSpanToDoubleConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TimeSpanToDoubleConverter", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    AnimationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.AnimationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "AnimationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    AnimationBase$Generic: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.AnimationBase`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "AnimationBase$Generic", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    AnimationBase: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.AnimationBase, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "AnimationBase", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    FadeAnimation: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.FadeAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "FadeAnimation", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    FlipHorizontalAnimation: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.FlipHorizontalAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "FlipHorizontalAnimation", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    FlipVerticalAnimation: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.FlipVerticalAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "FlipVerticalAnimation", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    RotateAnimation: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.RotateAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "RotateAnimation", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ScaleAnimation: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.ScaleAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ScaleAnimation", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ShakeAnimation: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.ShakeAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ShakeAnimation", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    EventToCommandBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.EventToCommandBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "EventToCommandBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ImpliedOrderGridBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.ImpliedOrderGridBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ImpliedOrderGridBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MaskedBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.MaskedBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MaskedBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MaxLengthReachedBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.MaxLengthReachedBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MaxLengthReachedBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    UserStoppedTypingBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.UserStoppedTypingBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "UserStoppedTypingBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    CharactersValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.CharactersValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "CharactersValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    EmailValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.EmailValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "EmailValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MultiValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.MultiValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MultiValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    NumericValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.NumericValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "NumericValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    RequiredStringValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.RequiredStringValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "RequiredStringValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    TextValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.TextValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "TextValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    UriValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.UriValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "UriValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+});
+Object.defineProperties(Xamarin.CommunityToolkit.UI.Views.Internals as any, {
+    BaseTemplatedView$Generic: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.Internals.BaseTemplatedView`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "BaseTemplatedView$Generic", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+});
+Object.defineProperties(Xamarin.CommunityToolkit.Core as any, {
+    FileMediaSource: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.FileMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "FileMediaSource", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    MediaSource: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.MediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "MediaSource", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    StreamMediaSource: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.StreamMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "StreamMediaSource", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    UriMediaSource: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.UriMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "UriMediaSource", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+});
+Object.defineProperties(Xamarin.CommunityToolkit.Behaviors.Internals as any, {
+    BaseBehavior$Generic: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.Internals.BaseBehavior`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "BaseBehavior$Generic", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+    ValidationBehavior: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "ValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
+});
+
