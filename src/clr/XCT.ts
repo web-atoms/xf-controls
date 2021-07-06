@@ -5,6 +5,20 @@ import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 
 import * as XF from "./XF";
 declare var bridge: any;
+const assemblyName = `Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`;
+let ns = ``;
+function create(name: string, ns: string) {
+    return {
+        get() {
+            const t = bridge.getClass(`${ns}.${name}, ${assemblyName}`); 
+            Object.defineProperty(this, name, {
+                value: t
+            });
+            return t;
+        }
+    };
+}
+
 namespace XCT {
     export declare class AvatarView extends RootObject {
         public static aspect: AttachedNode;
@@ -761,714 +775,94 @@ export namespace Xamarin {
         }
     }
 }
+ns = "XCT";
 Object.defineProperties(XCT as any, {
-    AvatarView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.AvatarView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AvatarView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BadgeView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.BadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BadgeView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CameraView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.CameraView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CameraView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DockLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.DockLayout, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DockLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Expander: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.Expander, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Expander", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GravatarImageSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.GravatarImageSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GravatarImageSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MediaElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.MediaElement, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MediaElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RangeSlider: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.RangeSlider, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RangeSlider", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Shield: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.Shield, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Shield", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SideMenuView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.SideMenuView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SideMenuView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StateLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.StateLayout, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StateLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StateView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.StateView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StateView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabBadgeTemplate: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabBadgeTemplate, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabBadgeTemplate", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabBadgeView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabBadgeView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabBadgeView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabView, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabViewItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.TabViewItem, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabViewItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    UniformGrid: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.UniformGrid, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "UniformGrid", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GravatarImageExtension: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Extensions.GravatarImageExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GravatarImageExtension", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PageExtension: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Extensions.PageExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PageExtension", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualElementExtension: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Extensions.VisualElementExtension, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualElementExtension", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IconTintColorEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.IconTintColorEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IconTintColorEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IconTintColorEffectRouter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.IconTintColorEffectRouter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IconTintColorEffectRouter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RemoveBorderEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.RemoveBorderEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RemoveBorderEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SafeAreaEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.SafeAreaEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SafeAreaEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SafeAreaEffectRouter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.SafeAreaEffectRouter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SafeAreaEffectRouter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SelectAllTextEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.SelectAllTextEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SelectAllTextEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TouchEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.TouchEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TouchEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualFeedbackEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Effects.VisualFeedbackEffect, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualFeedbackEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BoolToObjectConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.BoolToObjectConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BoolToObjectConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BoolToObjectConverter$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.BoolToObjectConverter`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BoolToObjectConverter$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ByteArrayToImageSourceConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ByteArrayToImageSourceConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ByteArrayToImageSourceConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DateTimeOffsetConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.DateTimeOffsetConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DateTimeOffsetConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DoubleToIntConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.DoubleToIntConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DoubleToIntConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    EqualConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.EqualConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "EqualConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IndexToArrayItemConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IndexToArrayItemConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IndexToArrayItemConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IntToBoolConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IntToBoolConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IntToBoolConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    InvertedBoolConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.InvertedBoolConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "InvertedBoolConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IsNotNullOrEmptyConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IsNotNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IsNotNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IsNullOrEmptyConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.IsNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IsNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ItemSelectedEventArgsConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ItemSelectedEventArgsConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ItemSelectedEventArgsConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ItemTappedEventArgsConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ItemTappedEventArgsConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ItemTappedEventArgsConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListIsNotNullOrEmptyConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ListIsNotNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListIsNotNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListIsNullOrEmptyConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ListIsNullOrEmptyConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListIsNullOrEmptyConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListToStringConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.ListToStringConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListToStringConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MultiConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.MultiConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MultiConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MultiConverterParameter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.MultiConverterParameter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MultiConverterParameter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NotEqualConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.NotEqualConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NotEqualConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StateToBooleanConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.StateToBooleanConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StateToBooleanConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TextCaseConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.TextCaseConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TextCaseConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TimeSpanToDoubleConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Converters.TimeSpanToDoubleConverter, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TimeSpanToDoubleConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    AnimationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.AnimationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AnimationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    AnimationBase$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.AnimationBase`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AnimationBase$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    AnimationBase: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.AnimationBase, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AnimationBase", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FadeAnimation: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.FadeAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FadeAnimation", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlipHorizontalAnimation: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.FlipHorizontalAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlipHorizontalAnimation", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlipVerticalAnimation: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.FlipVerticalAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlipVerticalAnimation", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RotateAnimation: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.RotateAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RotateAnimation", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ScaleAnimation: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.ScaleAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ScaleAnimation", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ShakeAnimation: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.ShakeAnimation, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ShakeAnimation", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    EventToCommandBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.EventToCommandBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "EventToCommandBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ImpliedOrderGridBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.ImpliedOrderGridBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ImpliedOrderGridBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MaskedBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.MaskedBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MaskedBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MaxLengthReachedBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.MaxLengthReachedBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MaxLengthReachedBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    UserStoppedTypingBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.UserStoppedTypingBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "UserStoppedTypingBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CharactersValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.CharactersValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CharactersValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    EmailValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.EmailValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "EmailValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MultiValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.MultiValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MultiValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NumericValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.NumericValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NumericValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RequiredStringValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.RequiredStringValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RequiredStringValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TextValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.TextValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TextValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    UriValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.UriValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "UriValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    AvatarView: create("AvatarView",ns),
+    BadgeView: create("BadgeView",ns),
+    CameraView: create("CameraView",ns),
+    DockLayout: create("DockLayout",ns),
+    Expander: create("Expander",ns),
+    GravatarImageSource: create("GravatarImageSource",ns),
+    MediaElement: create("MediaElement",ns),
+    RangeSlider: create("RangeSlider",ns),
+    Shield: create("Shield",ns),
+    SideMenuView: create("SideMenuView",ns),
+    StateLayout: create("StateLayout",ns),
+    StateView: create("StateView",ns),
+    TabBadgeTemplate: create("TabBadgeTemplate",ns),
+    TabBadgeView: create("TabBadgeView",ns),
+    TabView: create("TabView",ns),
+    TabViewItem: create("TabViewItem",ns),
+    UniformGrid: create("UniformGrid",ns),
+    GravatarImageExtension: create("GravatarImageExtension",ns),
+    PageExtension: create("PageExtension",ns),
+    VisualElementExtension: create("VisualElementExtension",ns),
+    IconTintColorEffect: create("IconTintColorEffect",ns),
+    IconTintColorEffectRouter: create("IconTintColorEffectRouter",ns),
+    RemoveBorderEffect: create("RemoveBorderEffect",ns),
+    SafeAreaEffect: create("SafeAreaEffect",ns),
+    SafeAreaEffectRouter: create("SafeAreaEffectRouter",ns),
+    SelectAllTextEffect: create("SelectAllTextEffect",ns),
+    TouchEffect: create("TouchEffect",ns),
+    VisualFeedbackEffect: create("VisualFeedbackEffect",ns),
+    BoolToObjectConverter: create("BoolToObjectConverter",ns),
+    BoolToObjectConverter$Generic: create("BoolToObjectConverter`1",ns),
+    ByteArrayToImageSourceConverter: create("ByteArrayToImageSourceConverter",ns),
+    DateTimeOffsetConverter: create("DateTimeOffsetConverter",ns),
+    DoubleToIntConverter: create("DoubleToIntConverter",ns),
+    EqualConverter: create("EqualConverter",ns),
+    IndexToArrayItemConverter: create("IndexToArrayItemConverter",ns),
+    IntToBoolConverter: create("IntToBoolConverter",ns),
+    InvertedBoolConverter: create("InvertedBoolConverter",ns),
+    IsNotNullOrEmptyConverter: create("IsNotNullOrEmptyConverter",ns),
+    IsNullOrEmptyConverter: create("IsNullOrEmptyConverter",ns),
+    ItemSelectedEventArgsConverter: create("ItemSelectedEventArgsConverter",ns),
+    ItemTappedEventArgsConverter: create("ItemTappedEventArgsConverter",ns),
+    ListIsNotNullOrEmptyConverter: create("ListIsNotNullOrEmptyConverter",ns),
+    ListIsNullOrEmptyConverter: create("ListIsNullOrEmptyConverter",ns),
+    ListToStringConverter: create("ListToStringConverter",ns),
+    MultiConverter: create("MultiConverter",ns),
+    MultiConverterParameter: create("MultiConverterParameter",ns),
+    NotEqualConverter: create("NotEqualConverter",ns),
+    StateToBooleanConverter: create("StateToBooleanConverter",ns),
+    TextCaseConverter: create("TextCaseConverter",ns),
+    TimeSpanToDoubleConverter: create("TimeSpanToDoubleConverter",ns),
+    AnimationBehavior: create("AnimationBehavior",ns),
+    AnimationBase$Generic: create("AnimationBase`1",ns),
+    AnimationBase: create("AnimationBase",ns),
+    FadeAnimation: create("FadeAnimation",ns),
+    FlipHorizontalAnimation: create("FlipHorizontalAnimation",ns),
+    FlipVerticalAnimation: create("FlipVerticalAnimation",ns),
+    RotateAnimation: create("RotateAnimation",ns),
+    ScaleAnimation: create("ScaleAnimation",ns),
+    ShakeAnimation: create("ShakeAnimation",ns),
+    EventToCommandBehavior: create("EventToCommandBehavior",ns),
+    ImpliedOrderGridBehavior: create("ImpliedOrderGridBehavior",ns),
+    MaskedBehavior: create("MaskedBehavior",ns),
+    MaxLengthReachedBehavior: create("MaxLengthReachedBehavior",ns),
+    UserStoppedTypingBehavior: create("UserStoppedTypingBehavior",ns),
+    CharactersValidationBehavior: create("CharactersValidationBehavior",ns),
+    EmailValidationBehavior: create("EmailValidationBehavior",ns),
+    MultiValidationBehavior: create("MultiValidationBehavior",ns),
+    NumericValidationBehavior: create("NumericValidationBehavior",ns),
+    RequiredStringValidationBehavior: create("RequiredStringValidationBehavior",ns),
+    TextValidationBehavior: create("TextValidationBehavior",ns),
+    UriValidationBehavior: create("UriValidationBehavior",ns),
 });
+ns = "Xamarin.CommunityToolkit.UI.Views.Internals";
 Object.defineProperties(Xamarin.CommunityToolkit.UI.Views.Internals as any, {
-    BaseTemplatedView$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.UI.Views.Internals.BaseTemplatedView`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BaseTemplatedView$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    BaseTemplatedView$Generic: create("BaseTemplatedView`1",ns),
 });
+ns = "Xamarin.CommunityToolkit.Core";
 Object.defineProperties(Xamarin.CommunityToolkit.Core as any, {
-    FileMediaSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.FileMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FileMediaSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MediaSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.MediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MediaSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StreamMediaSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.StreamMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StreamMediaSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    UriMediaSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Core.UriMediaSource, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "UriMediaSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    FileMediaSource: create("FileMediaSource",ns),
+    MediaSource: create("MediaSource",ns),
+    StreamMediaSource: create("StreamMediaSource",ns),
+    UriMediaSource: create("UriMediaSource",ns),
 });
+ns = "Xamarin.CommunityToolkit.Behaviors.Internals";
 Object.defineProperties(Xamarin.CommunityToolkit.Behaviors.Internals as any, {
-    BaseBehavior$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.Internals.BaseBehavior`1, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BaseBehavior$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ValidationBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.CommunityToolkit.Behaviors.Internals.ValidationBehavior, Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ValidationBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    BaseBehavior$Generic: create("BaseBehavior`1",ns),
+    ValidationBehavior: create("ValidationBehavior",ns),
 });
 

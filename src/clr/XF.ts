@@ -4,6 +4,20 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 
 declare var bridge: any;
+const assemblyName = `Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null`;
+let ns = ``;
+function create(name: string, ns: string) {
+    return {
+        get() {
+            const t = bridge.getClass(`${ns}.${name}, ${assemblyName}`); 
+            Object.defineProperty(this, name, {
+                value: t
+            });
+            return t;
+        }
+    };
+}
+
 namespace XF {
     export declare class AbsoluteLayout extends XF.Layout$Generic {
         public static autoSize: number | null | Bind;
@@ -2436,2254 +2450,279 @@ export namespace Xamarin {
         }
     }
 }
+ns = "XF";
 Object.defineProperties(XF as any, {
-    AbsoluteLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.AbsoluteLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AbsoluteLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ActivityIndicator: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ActivityIndicator, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ActivityIndicator", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    AdaptiveTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.AdaptiveTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AdaptiveTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Application: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    AppLinkEntry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.AppLinkEntry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AppLinkEntry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    AutomationProperties: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.AutomationProperties, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "AutomationProperties", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BaseMenuItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.BaseMenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BaseMenuItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BindableLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.BindableLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BindableLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BindableObject: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.BindableObject, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BindableObject", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BoxView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.BoxView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BoxView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Brush: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Brush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Brush", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Button: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Button, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Button", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CarouselPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.CarouselPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CarouselPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Cell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Cell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Cell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    EntryCell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.EntryCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "EntryCell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ImageCell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ImageCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ImageCell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwitchCell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SwitchCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwitchCell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TextCell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TextCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TextCell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ViewCell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ViewCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ViewCell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CheckBox: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.CheckBox, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CheckBox", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ClickGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ClickGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ClickGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Color: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Color, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Color", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ColumnDefinition: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ColumnDefinition, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ColumnDefinition", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CompareStateTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.CompareStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CompareStateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CompressedLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.CompressedLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CompressedLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Constraint: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Constraint, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Constraint", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ContentPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ContentPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ContentPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ContentPresenter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ContentPresenter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ContentPresenter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ContentView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ContentView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ContentView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ControlTemplate: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ControlTemplate, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ControlTemplate", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DataTemplate: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DataTemplate, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DataTemplate", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DataTemplateSelector: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DataTemplateSelector, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DataTemplateSelector", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DatePicker: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DatePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DatePicker", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DeviceStateTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DeviceStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DeviceStateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DragGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DragGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DragGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DropGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DropGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DropGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Easing: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Easing, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Easing", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Editor: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Editor, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Editor", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Effect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Effect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Effect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Element: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Element, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Element", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ElementTemplate: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ElementTemplate, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ElementTemplate", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Entry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FileImageSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.FileImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FileImageSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlexLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.FlexLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlexLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlyoutPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.FlyoutPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlyoutPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MasterDetailPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MasterDetailPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FontImageSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.FontImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FontImageSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FormattedString: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.FormattedString, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FormattedString", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Frame: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Frame, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Frame", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GestureElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.GestureElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GestureElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.GestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GradientBrush: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.GradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GradientBrush", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GradientStop: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.GradientStop, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GradientStop", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Grid: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Grid, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Grid", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    HtmlWebViewSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.HtmlWebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "HtmlWebViewSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Image: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Image, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Image", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ImageButton: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ImageButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ImageButton", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ImageSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ImageSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IndicatorView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.IndicatorView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IndicatorView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    InputView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.InputView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "InputView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Behavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Behavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Behavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Behavior$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Behavior`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Behavior$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DataTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.DataTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DataTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    EventTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.EventTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "EventTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MultiTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.MultiTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MultiTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Trigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Trigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Trigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TriggerBase: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TriggerBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TriggerBase", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ItemsView$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ItemsView`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ItemsView$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CarouselView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.CarouselView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CarouselView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CollectionView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.CollectionView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CollectionView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GridItemsLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.GridItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GridItemsLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GroupableItemsView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.GroupableItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GroupableItemsView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ItemsLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ItemsLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ItemsView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ItemsView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    LinearItemsLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.LinearItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "LinearItemsLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SelectableItemsView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SelectableItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SelectableItemsView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StructuredItemsView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StructuredItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StructuredItemsView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    IValueConverter: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.IValueConverter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "IValueConverter", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Label: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Label", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Layout$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Layout`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Layout$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Layout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Layout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Layout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    LinearGradientBrush: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.LinearGradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "LinearGradientBrush", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Menu: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Menu, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Menu", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MenuItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.MenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MenuItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MultiPage$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.MultiPage`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MultiPage$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NameScopeExtensions: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.NameScopeExtensions, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NameScopeExtensions", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NavigationPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NullEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.NullEffect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NullEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    OpenGLView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.OpenGLView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "OpenGLView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    OrientationStateTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.OrientationStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "OrientationStateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Page: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PanGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PanGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PanGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Picker: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Picker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Picker", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PinchGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PinchGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PinchGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PlatformEffect$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformEffect`2, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PlatformEffect$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ProgressBar: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ProgressBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ProgressBar", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RadialGradientBrush: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RadialGradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RadialGradientBrush", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RadioButton: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RadioButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RadioButton", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RadioButtonGroup: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RadioButtonGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RadioButtonGroup", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RefreshView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RefreshView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RefreshView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RelativeLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RelativeLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RelativeLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Routing: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Routing, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Routing", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RoutingEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RoutingEffect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RoutingEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RowDefinition: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.RowDefinition, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RowDefinition", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ScrollView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ScrollView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ScrollView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SearchBar: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SearchBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SearchBar", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BackButtonBehavior: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.BackButtonBehavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BackButtonBehavior", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BaseShellItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.BaseShellItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BaseShellItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NavigableElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.NavigableElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigableElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SearchHandler: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SearchHandler, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SearchHandler", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Shell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Shell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ShellContent: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ShellContent, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ShellContent", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ShellGroupItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ShellGroupItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ShellGroupItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlyoutItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.FlyoutItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlyoutItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabBar: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TabBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabBar", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ShellItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ShellItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ShellItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Tab: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Tab, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Tab", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ShellSection: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ShellSection, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ShellSection", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Slider: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Slider, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Slider", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SolidColorBrush: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SolidColorBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SolidColorBrush", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Span: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Span, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Span", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StackLayout: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StackLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StackLayout", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StateTrigger: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StateTriggerBase: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StateTriggerBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StateTriggerBase", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Stepper: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Stepper, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Stepper", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StreamImageSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StreamImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StreamImageSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Style: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Style, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Style", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SwipeGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SwipeItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeItems: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SwipeItems, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeItems", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeItemView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SwipeItemView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeItemView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.SwipeView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Switch: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Switch, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Switch", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabbedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TableRoot: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TableRoot, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TableRoot", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TableSectionBase$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TableSectionBase`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TableSectionBase$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TableSection: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TableSection, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TableSection", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TableSectionBase: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TableSectionBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TableSectionBase", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TableView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TableView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TableView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TapGestureRecognizer: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TapGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TapGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TemplatedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TemplatedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TemplatedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TemplatedView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TemplatedView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TemplatedView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TimePicker: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.TimePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TimePicker", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ToolbarItem: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.ToolbarItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ToolbarItem", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    UriImageSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.UriImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "UriImageSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    UrlWebViewSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.UrlWebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "UrlWebViewSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    View: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "View", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualStateManager: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.VisualStateManager, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualStateManager", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    WebView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "WebView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    WebViewSource: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.WebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "WebViewSource", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    StyleSheet: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StyleSheets.StyleSheet, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StyleSheet", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ArcSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.ArcSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ArcSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    BezierSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.BezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    CompositeTransform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.CompositeTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CompositeTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Ellipse: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Ellipse, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Ellipse", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    EllipseGeometry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.EllipseGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "EllipseGeometry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Geometry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Geometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Geometry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GeometryGroup: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.GeometryGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GeometryGroup", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    GeometryHelper: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.GeometryHelper, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "GeometryHelper", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Line: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Line, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Line", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    LineGeometry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.LineGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "LineGeometry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    LineSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.LineSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "LineSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MatrixTransform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.MatrixTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MatrixTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Path: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Path, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Path", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PathFigure: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.PathFigure, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PathFigure", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PathGeometry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.PathGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PathGeometry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PathSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.PathSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PathSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PolyBezierSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.PolyBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PolyBezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Polygon: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Polygon, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Polygon", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Polyline: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Polyline, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Polyline", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PolyLineSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.PolyLineSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PolyLineSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    PolyQuadraticBezierSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.PolyQuadraticBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "PolyQuadraticBezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    QuadraticBezierSegment: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.QuadraticBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "QuadraticBezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Rectangle: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Rectangle", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RectangleGeometry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.RectangleGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RectangleGeometry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RotateTransform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.RotateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RotateTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RoundRectangleGeometry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.RoundRectangleGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RoundRectangleGeometry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ScaleTransform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.ScaleTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ScaleTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Shape: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Shape, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Shape", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SkewTransform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.SkewTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SkewTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Transform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.Transform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Transform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TransformGroup: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.TransformGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TransformGroup", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TranslateTransform: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Shapes.TranslateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TranslateTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    AbsoluteLayout: create("AbsoluteLayout",ns),
+    ActivityIndicator: create("ActivityIndicator",ns),
+    AdaptiveTrigger: create("AdaptiveTrigger",ns),
+    Application: create("Application",ns),
+    AppLinkEntry: create("AppLinkEntry",ns),
+    AutomationProperties: create("AutomationProperties",ns),
+    BaseMenuItem: create("BaseMenuItem",ns),
+    BindableLayout: create("BindableLayout",ns),
+    BindableObject: create("BindableObject",ns),
+    BoxView: create("BoxView",ns),
+    Brush: create("Brush",ns),
+    Button: create("Button",ns),
+    CarouselPage: create("CarouselPage",ns),
+    Cell: create("Cell",ns),
+    EntryCell: create("EntryCell",ns),
+    ImageCell: create("ImageCell",ns),
+    SwitchCell: create("SwitchCell",ns),
+    TextCell: create("TextCell",ns),
+    ViewCell: create("ViewCell",ns),
+    CheckBox: create("CheckBox",ns),
+    ClickGestureRecognizer: create("ClickGestureRecognizer",ns),
+    Color: create("Color",ns),
+    ColumnDefinition: create("ColumnDefinition",ns),
+    CompareStateTrigger: create("CompareStateTrigger",ns),
+    CompressedLayout: create("CompressedLayout",ns),
+    Constraint: create("Constraint",ns),
+    ContentPage: create("ContentPage",ns),
+    ContentPresenter: create("ContentPresenter",ns),
+    ContentView: create("ContentView",ns),
+    ControlTemplate: create("ControlTemplate",ns),
+    DataTemplate: create("DataTemplate",ns),
+    DataTemplateSelector: create("DataTemplateSelector",ns),
+    DatePicker: create("DatePicker",ns),
+    DeviceStateTrigger: create("DeviceStateTrigger",ns),
+    DragGestureRecognizer: create("DragGestureRecognizer",ns),
+    DropGestureRecognizer: create("DropGestureRecognizer",ns),
+    Easing: create("Easing",ns),
+    Editor: create("Editor",ns),
+    Effect: create("Effect",ns),
+    Element: create("Element",ns),
+    ElementTemplate: create("ElementTemplate",ns),
+    Entry: create("Entry",ns),
+    FileImageSource: create("FileImageSource",ns),
+    FlexLayout: create("FlexLayout",ns),
+    FlyoutPage: create("FlyoutPage",ns),
+    MasterDetailPage: create("MasterDetailPage",ns),
+    FontImageSource: create("FontImageSource",ns),
+    FormattedString: create("FormattedString",ns),
+    Frame: create("Frame",ns),
+    GestureElement: create("GestureElement",ns),
+    GestureRecognizer: create("GestureRecognizer",ns),
+    GradientBrush: create("GradientBrush",ns),
+    GradientStop: create("GradientStop",ns),
+    Grid: create("Grid",ns),
+    HtmlWebViewSource: create("HtmlWebViewSource",ns),
+    Image: create("Image",ns),
+    ImageButton: create("ImageButton",ns),
+    ImageSource: create("ImageSource",ns),
+    IndicatorView: create("IndicatorView",ns),
+    InputView: create("InputView",ns),
+    Behavior: create("Behavior",ns),
+    Behavior$Generic: create("Behavior`1",ns),
+    DataTrigger: create("DataTrigger",ns),
+    EventTrigger: create("EventTrigger",ns),
+    MultiTrigger: create("MultiTrigger",ns),
+    Trigger: create("Trigger",ns),
+    TriggerBase: create("TriggerBase",ns),
+    ItemsView$Generic: create("ItemsView`1",ns),
+    CarouselView: create("CarouselView",ns),
+    CollectionView: create("CollectionView",ns),
+    GridItemsLayout: create("GridItemsLayout",ns),
+    GroupableItemsView: create("GroupableItemsView",ns),
+    ItemsLayout: create("ItemsLayout",ns),
+    ItemsView: create("ItemsView",ns),
+    LinearItemsLayout: create("LinearItemsLayout",ns),
+    SelectableItemsView: create("SelectableItemsView",ns),
+    StructuredItemsView: create("StructuredItemsView",ns),
+    IValueConverter: create("IValueConverter",ns),
+    Label: create("Label",ns),
+    Layout$Generic: create("Layout`1",ns),
+    Layout: create("Layout",ns),
+    LinearGradientBrush: create("LinearGradientBrush",ns),
+    ListView: create("ListView",ns),
+    Menu: create("Menu",ns),
+    MenuItem: create("MenuItem",ns),
+    MultiPage$Generic: create("MultiPage`1",ns),
+    NameScopeExtensions: create("NameScopeExtensions",ns),
+    NavigationPage: create("NavigationPage",ns),
+    NullEffect: create("NullEffect",ns),
+    OpenGLView: create("OpenGLView",ns),
+    OrientationStateTrigger: create("OrientationStateTrigger",ns),
+    Page: create("Page",ns),
+    PanGestureRecognizer: create("PanGestureRecognizer",ns),
+    Picker: create("Picker",ns),
+    PinchGestureRecognizer: create("PinchGestureRecognizer",ns),
+    PlatformEffect$Generic: create("PlatformEffect`2",ns),
+    ProgressBar: create("ProgressBar",ns),
+    RadialGradientBrush: create("RadialGradientBrush",ns),
+    RadioButton: create("RadioButton",ns),
+    RadioButtonGroup: create("RadioButtonGroup",ns),
+    RefreshView: create("RefreshView",ns),
+    RelativeLayout: create("RelativeLayout",ns),
+    Routing: create("Routing",ns),
+    RoutingEffect: create("RoutingEffect",ns),
+    RowDefinition: create("RowDefinition",ns),
+    ScrollView: create("ScrollView",ns),
+    SearchBar: create("SearchBar",ns),
+    BackButtonBehavior: create("BackButtonBehavior",ns),
+    BaseShellItem: create("BaseShellItem",ns),
+    NavigableElement: create("NavigableElement",ns),
+    SearchHandler: create("SearchHandler",ns),
+    Shell: create("Shell",ns),
+    ShellContent: create("ShellContent",ns),
+    ShellGroupItem: create("ShellGroupItem",ns),
+    FlyoutItem: create("FlyoutItem",ns),
+    TabBar: create("TabBar",ns),
+    ShellItem: create("ShellItem",ns),
+    Tab: create("Tab",ns),
+    ShellSection: create("ShellSection",ns),
+    Slider: create("Slider",ns),
+    SolidColorBrush: create("SolidColorBrush",ns),
+    Span: create("Span",ns),
+    StackLayout: create("StackLayout",ns),
+    StateTrigger: create("StateTrigger",ns),
+    StateTriggerBase: create("StateTriggerBase",ns),
+    Stepper: create("Stepper",ns),
+    StreamImageSource: create("StreamImageSource",ns),
+    Style: create("Style",ns),
+    SwipeGestureRecognizer: create("SwipeGestureRecognizer",ns),
+    SwipeItem: create("SwipeItem",ns),
+    SwipeItems: create("SwipeItems",ns),
+    SwipeItemView: create("SwipeItemView",ns),
+    SwipeView: create("SwipeView",ns),
+    Switch: create("Switch",ns),
+    TabbedPage: create("TabbedPage",ns),
+    TableRoot: create("TableRoot",ns),
+    TableSectionBase$Generic: create("TableSectionBase`1",ns),
+    TableSection: create("TableSection",ns),
+    TableSectionBase: create("TableSectionBase",ns),
+    TableView: create("TableView",ns),
+    TapGestureRecognizer: create("TapGestureRecognizer",ns),
+    TemplatedPage: create("TemplatedPage",ns),
+    TemplatedView: create("TemplatedView",ns),
+    TimePicker: create("TimePicker",ns),
+    ToolbarItem: create("ToolbarItem",ns),
+    UriImageSource: create("UriImageSource",ns),
+    UrlWebViewSource: create("UrlWebViewSource",ns),
+    View: create("View",ns),
+    VisualElement: create("VisualElement",ns),
+    VisualStateManager: create("VisualStateManager",ns),
+    WebView: create("WebView",ns),
+    WebViewSource: create("WebViewSource",ns),
+    StyleSheet: create("StyleSheet",ns),
+    ArcSegment: create("ArcSegment",ns),
+    BezierSegment: create("BezierSegment",ns),
+    CompositeTransform: create("CompositeTransform",ns),
+    Ellipse: create("Ellipse",ns),
+    EllipseGeometry: create("EllipseGeometry",ns),
+    Geometry: create("Geometry",ns),
+    GeometryGroup: create("GeometryGroup",ns),
+    GeometryHelper: create("GeometryHelper",ns),
+    Line: create("Line",ns),
+    LineGeometry: create("LineGeometry",ns),
+    LineSegment: create("LineSegment",ns),
+    MatrixTransform: create("MatrixTransform",ns),
+    Path: create("Path",ns),
+    PathFigure: create("PathFigure",ns),
+    PathGeometry: create("PathGeometry",ns),
+    PathSegment: create("PathSegment",ns),
+    PolyBezierSegment: create("PolyBezierSegment",ns),
+    Polygon: create("Polygon",ns),
+    Polyline: create("Polyline",ns),
+    PolyLineSegment: create("PolyLineSegment",ns),
+    PolyQuadraticBezierSegment: create("PolyQuadraticBezierSegment",ns),
+    QuadraticBezierSegment: create("QuadraticBezierSegment",ns),
+    Rectangle: create("Rectangle",ns),
+    RectangleGeometry: create("RectangleGeometry",ns),
+    RotateTransform: create("RotateTransform",ns),
+    RoundRectangleGeometry: create("RoundRectangleGeometry",ns),
+    ScaleTransform: create("ScaleTransform",ns),
+    Shape: create("Shape",ns),
+    SkewTransform: create("SkewTransform",ns),
+    Transform: create("Transform",ns),
+    TransformGroup: create("TransformGroup",ns),
+    TranslateTransform: create("TranslateTransform",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.WindowsSpecific";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as any, {
-    Application: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlyoutPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.FlyoutPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlyoutPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MasterDetailPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MasterDetailPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    InputView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.InputView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "InputView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Label: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Label", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Page: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    RefreshView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.RefreshView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "RefreshView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SearchBar: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SearchBar", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabbedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    WebView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "WebView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    Application: create("Application",ns),
+    FlyoutPage: create("FlyoutPage",ns),
+    MasterDetailPage: create("MasterDetailPage",ns),
+    InputView: create("InputView",ns),
+    Label: create("Label",ns),
+    ListView: create("ListView",ns),
+    Page: create("Page",ns),
+    RefreshView: create("RefreshView",ns),
+    SearchBar: create("SearchBar",ns),
+    TabbedPage: create("TabbedPage",ns),
+    VisualElement: create("VisualElement",ns),
+    WebView: create("WebView",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.TizenSpecific";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any, {
-    Application: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Entry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Image: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Image", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ItemsView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.ItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ItemsView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Label: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Label", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NavigationPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Page: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ProgressBar: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.ProgressBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ProgressBar", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ScrollView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.ScrollView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ScrollView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Switch: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Switch, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Switch", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    Application: create("Application",ns),
+    Entry: create("Entry",ns),
+    Image: create("Image",ns),
+    ItemsView: create("ItemsView",ns),
+    Label: create("Label",ns),
+    NavigationPage: create("NavigationPage",ns),
+    Page: create("Page",ns),
+    ProgressBar: create("ProgressBar",ns),
+    ScrollView: create("ScrollView",ns),
+    Switch: create("Switch",ns),
+    VisualElement: create("VisualElement",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.macOSSpecific";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.macOSSpecific as any, {
-    NavigationPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.macOSSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Page: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.macOSSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabbedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.macOSSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    NavigationPage: create("NavigationPage",ns),
+    Page: create("Page",ns),
+    TabbedPage: create("TabbedPage",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.iOSSpecific";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, {
-    Application: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Cell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Cell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Cell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    DatePicker: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.DatePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "DatePicker", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Entry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    FlyoutPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.FlyoutPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "FlyoutPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    MasterDetailPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "MasterDetailPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NavigationPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Page: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Picker: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Picker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Picker", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ScrollView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.ScrollView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ScrollView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SearchBar: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.SearchBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SearchBar", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Slider: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Slider", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.SwipeView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabbedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TimePicker: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.TimePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TimePicker", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ShadowEffect: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement+ShadowEffect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ShadowEffect", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    Application: create("Application",ns),
+    Cell: create("Cell",ns),
+    DatePicker: create("DatePicker",ns),
+    Entry: create("Entry",ns),
+    FlyoutPage: create("FlyoutPage",ns),
+    MasterDetailPage: create("MasterDetailPage",ns),
+    ListView: create("ListView",ns),
+    NavigationPage: create("NavigationPage",ns),
+    Page: create("Page",ns),
+    Picker: create("Picker",ns),
+    ScrollView: create("ScrollView",ns),
+    SearchBar: create("SearchBar",ns),
+    Slider: create("Slider",ns),
+    SwipeView: create("SwipeView",ns),
+    TabbedPage: create("TabbedPage",ns),
+    TimePicker: create("TimePicker",ns),
+    VisualElement: create("VisualElement",ns),
+    ShadowEffect: create("ShadowEffect",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.GTKSpecific";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.GTKSpecific as any, {
-    BoxView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.GTKSpecific.BoxView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "BoxView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NavigationPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.GTKSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabbedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.GTKSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    BoxView: create("BoxView",ns),
+    NavigationPage: create("NavigationPage",ns),
+    TabbedPage: create("TabbedPage",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.AndroidSpecific";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as any, {
-    Application: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Button: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Button", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    Entry: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ImageButton: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImageButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ImageButton", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ListView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    SwipeView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.SwipeView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "SwipeView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TabbedPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    ViewCell: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ViewCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "ViewCell", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    VisualElement: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    WebView: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "WebView", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    Application: create("Application",ns),
+    Button: create("Button",ns),
+    Entry: create("Entry",ns),
+    ImageButton: create("ImageButton",ns),
+    ListView: create("ListView",ns),
+    SwipeView: create("SwipeView",ns),
+    TabbedPage: create("TabbedPage",ns),
+    ViewCell: create("ViewCell",ns),
+    VisualElement: create("VisualElement",ns),
+    WebView: create("WebView",ns),
 });
+ns = "Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat";
 Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat as any, {
-    Application: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NavigationPage: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    Application: create("Application",ns),
+    NavigationPage: create("NavigationPage",ns),
 });
+ns = "Xamarin.Forms.Internals";
 Object.defineProperties(Xamarin.Forms.Internals as any, {
-    CellExtensions: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Internals.CellExtensions, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "CellExtensions", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    NameScope: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Internals.NameScope, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "NameScope", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TextTransformUtilites: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Internals.TextTransformUtilites, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TextTransformUtilites", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-    TemplatedItemsList$Generic: { 
-        configurable: true,
-        enumerable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.Internals.TemplatedItemsList`2, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "TemplatedItemsList$Generic", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
+    CellExtensions: create("CellExtensions",ns),
+    NameScope: create("NameScope",ns),
+    TextTransformUtilites: create("TextTransformUtilites",ns),
+    TemplatedItemsList$Generic: create("TemplatedItemsList`2",ns),
 });
 
