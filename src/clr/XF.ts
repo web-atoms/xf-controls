@@ -29,6 +29,7 @@ namespace XF {
         public dispatcher: RootObject;
         public appLinks: RootObject;
         public mainPage: XF.Page;
+        public static mainPage: AttachedNode;
         public properties: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
         public navigationProxy: RootObject;
         public panGestureId: number | null | Bind;
@@ -319,6 +320,7 @@ namespace XF {
     }
     export declare class ViewCell extends XF.Cell {
         public view: XF.View;
+        public static view: AttachedNode;
     }
     export declare class CheckBox extends XF.View {
         public static isChecked: AttachedNode;
@@ -614,6 +616,7 @@ namespace XF {
     }
     export declare class Effect extends RootObject {
         public element: XF.Element;
+        public static element: AttachedNode;
         public isAttached: boolean | null | Bind;
         public resolveId: string | null | Bind;
     }
@@ -626,10 +629,13 @@ namespace XF {
         public static effects: AttachedNode;
         public id: RootObject /*System.Guid*/;
         public parentView: XF.VisualElement;
+        public static parentView: AttachedNode;
         public styleId: string | null | Bind;
         public static logicalChildren: AttachedNode;
         public realParent: XF.Element;
+        public static realParent: AttachedNode;
         public parent: XF.Element;
+        public static parent: AttachedNode;
         public effectControlProvider: RootObject;
         public platform: RootObject;
     }
@@ -697,9 +703,11 @@ namespace XF {
         public static isPresented: AttachedNode;
         public static flyoutLayoutBehavior: AttachedNode;
         public detail: XF.Page;
+        public static detail: AttachedNode;
         public isGestureEnabled: boolean | null | Bind;
         public isPresented: boolean | null | Bind;
         public flyout: XF.Page;
+        public static flyout: AttachedNode;
         public flyoutLayoutBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
         public canChangeIsPresented: boolean | null | Bind;
         public detailBounds: RootObject;
@@ -709,6 +717,7 @@ namespace XF {
     export declare class MasterDetailPage extends XF.FlyoutPage {
         public static masterBehavior: AttachedNode;
         public master: XF.Page;
+        public static master: AttachedNode;
         public masterBounds: RootObject;
         public masterBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
     }
@@ -821,6 +830,7 @@ namespace XF {
         public static itemsSource: AttachedNode;
         public indicatorsShape: "Circle" | "Square" | string | number | null | undefined | Bind;
         public indicatorLayout: XF.Layout$Generic;
+        public static indicatorLayout: AttachedNode;
         public position: number | null | Bind;
         public count: number | null | Bind;
         public maximumVisible: number | null | Bind;
@@ -921,6 +931,7 @@ namespace XF {
         public positionChangedCommandParameter: RootObject /*System.Object*/;
         public itemsLayout: XF.LinearItemsLayout;
         public indicatorView: XF.IndicatorView;
+        public static indicatorView: AttachedNode;
         public isScrolling: boolean | null | Bind;
         public animatePositionChanges: boolean | null | Bind;
         public animateCurrentItemChanges: boolean | null | Bind;
@@ -1108,7 +1119,9 @@ namespace XF {
         public cachingStrategy: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | string | number | null | undefined | Bind;
         public refreshAllowed: boolean | null | Bind;
         public footerElement: XF.Element;
+        public static footerElement: AttachedNode;
         public headerElement: XF.Element;
+        public static headerElement: AttachedNode;
     }
     export declare class Menu extends XF.BaseMenuItem {
         public static item: AttachedNode;
@@ -1146,6 +1159,7 @@ namespace XF {
         public itemTemplate: XF.DataTemplate;
         public selectedItem: RootObject /*System.Object*/;
         public currentPage: RootObject;
+        public static currentPage: AttachedNode;
         public static children: AttachedNode;
     }
     export declare class NameScopeExtensions extends RootObject {
@@ -1336,6 +1350,7 @@ namespace XF {
         public static verticalScrollBarVisibility: AttachedNode;
         public layoutAreaOverride: RootObject;
         public content: XF.View;
+        public static content: AttachedNode;
         public contentSize: RootObject;
         public orientation: "Vertical" | "Horizontal" | "Both" | "Neither" | string | number | null | undefined | Bind;
         public scrollX: number | null | Bind;
@@ -1526,6 +1541,7 @@ namespace XF {
         public static flyoutContent: AttachedNode;
         public static flyoutContentTemplate: AttachedNode;
         public currentPage: XF.Page;
+        public static currentPage: AttachedNode;
         public flyoutVerticalScrollMode: "Disabled" | "Enabled" | "Auto" | string | number | null | undefined | Bind;
         public flyoutIcon: XF.ImageSource;
         public currentItem: XF.ShellItem;
@@ -1671,6 +1687,7 @@ namespace XF {
     export declare class Style extends RootObject {
         public applyToDerivedTypes: boolean | null | Bind;
         public basedOn: XF.Style;
+        public static basedOn: AttachedNode;
         public baseResourceKey: string | null | Bind;
         public static behaviors: AttachedNode;
         public canCascade: boolean | null | Bind;
@@ -1745,6 +1762,7 @@ namespace XF {
     export declare class TableSectionBase$Generic extends XF.TableSectionBase {
         public count: number | null | Bind;
         public item: RootObject;
+        public static item: AttachedNode;
     }
     export declare class TableSection extends XF.TableSectionBase$Generic {
     }
@@ -1915,6 +1933,8 @@ namespace XF {
         public source: XF.WebViewSource;
     }
     export declare class WebViewSource extends XF.BindableObject {
+    }
+    export declare class StyleSheet extends RootObject {
     }
     export declare class ArcSegment extends XF.PathSegment {
         public static point: AttachedNode;
@@ -2128,10 +2148,6 @@ namespace XF {
 export default XF;
 export namespace Xamarin {
     export namespace Forms {
-        export namespace StyleSheets {
-            export declare class StyleSheet extends RootObject {
-            }
-        }
         export namespace PlatformConfiguration {
             export namespace WindowsSpecific {
                 export declare class Application extends RootObject {
@@ -2400,9 +2416,11 @@ export namespace Xamarin {
                 public static shortName: AttachedNode;
                 public groupDisplayBinding: RootObject;
                 public groupHeaderTemplate: XF.DataTemplate;
+                public static groupHeaderTemplate: AttachedNode;
                 public groupHeaderTemplateProperty: RootObject;
                 public groupShortNameBinding: RootObject;
                 public headerContent: RootObject;
+                public static headerContent: AttachedNode;
                 public isGroupingEnabled: boolean | null | Bind;
                 public isGroupingEnabledProperty: RootObject;
                 public itemsSource: RootObject /*System.Collections.IEnumerable*/;
@@ -2413,6 +2431,7 @@ export namespace Xamarin {
                 public shortNames: RootObject /*System.Collections.Generic.IReadOnlyList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
                 public count: number | null | Bind;
                 public item: RootObject;
+                public static item: AttachedNode;
             }
         }
     }
@@ -3938,6 +3957,16 @@ Object.defineProperties(XF as any, {
             return t;
         }
     },
+    StyleSheet: { 
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        get() {
+            const t = bridge.getClass("Xamarin.Forms.StyleSheets.StyleSheet, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
+            Object.defineProperty(this, "StyleSheet", { value: t, enumerable: true, writable: true, configurable: true })
+            return t;
+        }
+    },
     ArcSegment: { 
         configurable: true,
         enumerable: true,
@@ -4255,18 +4284,6 @@ Object.defineProperties(XF as any, {
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.TranslateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TranslateTransform", { value: t, enumerable: true, writable: true, configurable: true })
-            return t;
-        }
-    },
-});
-Object.defineProperties(Xamarin.Forms.StyleSheets as any, {
-    StyleSheet: { 
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        get() {
-            const t = bridge.getClass("Xamarin.Forms.StyleSheets.StyleSheet, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
-            Object.defineProperty(this, "StyleSheet", { value: t, enumerable: true, writable: true, configurable: true })
             return t;
         }
     },

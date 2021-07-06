@@ -604,6 +604,7 @@ namespace XCT {
         public static easingType: AttachedNode;
         public duration: number | null | Bind;
         public easing: XF.default.Easing;
+        public static easing: AttachedNode;
     }
     export declare class AnimationBase extends XCT.AnimationBase$Generic {
     }
