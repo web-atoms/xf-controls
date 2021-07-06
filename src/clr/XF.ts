@@ -2440,7 +2440,6 @@ Object.defineProperties(XF as any, {
     AbsoluteLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.AbsoluteLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "AbsoluteLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2450,7 +2449,6 @@ Object.defineProperties(XF as any, {
     ActivityIndicator: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ActivityIndicator, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ActivityIndicator", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2460,7 +2458,6 @@ Object.defineProperties(XF as any, {
     AdaptiveTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.AdaptiveTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "AdaptiveTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2470,7 +2467,6 @@ Object.defineProperties(XF as any, {
     Application: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2480,7 +2476,6 @@ Object.defineProperties(XF as any, {
     AppLinkEntry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.AppLinkEntry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "AppLinkEntry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2490,7 +2485,6 @@ Object.defineProperties(XF as any, {
     AutomationProperties: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.AutomationProperties, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "AutomationProperties", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2500,7 +2494,6 @@ Object.defineProperties(XF as any, {
     BaseMenuItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.BaseMenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BaseMenuItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2510,7 +2503,6 @@ Object.defineProperties(XF as any, {
     BindableLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.BindableLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BindableLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2520,7 +2512,6 @@ Object.defineProperties(XF as any, {
     BindableObject: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.BindableObject, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BindableObject", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2530,7 +2521,6 @@ Object.defineProperties(XF as any, {
     BoxView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.BoxView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BoxView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2540,7 +2530,6 @@ Object.defineProperties(XF as any, {
     Brush: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Brush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Brush", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2550,7 +2539,6 @@ Object.defineProperties(XF as any, {
     Button: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Button, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Button", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2560,7 +2548,6 @@ Object.defineProperties(XF as any, {
     CarouselPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.CarouselPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CarouselPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2570,7 +2557,6 @@ Object.defineProperties(XF as any, {
     Cell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Cell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Cell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2580,7 +2566,6 @@ Object.defineProperties(XF as any, {
     EntryCell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.EntryCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "EntryCell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2590,7 +2575,6 @@ Object.defineProperties(XF as any, {
     ImageCell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ImageCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ImageCell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2600,7 +2584,6 @@ Object.defineProperties(XF as any, {
     SwitchCell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SwitchCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwitchCell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2610,7 +2593,6 @@ Object.defineProperties(XF as any, {
     TextCell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TextCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TextCell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2620,7 +2602,6 @@ Object.defineProperties(XF as any, {
     ViewCell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ViewCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ViewCell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2630,7 +2611,6 @@ Object.defineProperties(XF as any, {
     CheckBox: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.CheckBox, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CheckBox", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2640,7 +2620,6 @@ Object.defineProperties(XF as any, {
     ClickGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ClickGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ClickGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2650,7 +2629,6 @@ Object.defineProperties(XF as any, {
     Color: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Color, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Color", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2660,7 +2638,6 @@ Object.defineProperties(XF as any, {
     ColumnDefinition: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ColumnDefinition, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ColumnDefinition", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2670,7 +2647,6 @@ Object.defineProperties(XF as any, {
     CompareStateTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.CompareStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CompareStateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2680,7 +2656,6 @@ Object.defineProperties(XF as any, {
     CompressedLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.CompressedLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CompressedLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2690,7 +2665,6 @@ Object.defineProperties(XF as any, {
     Constraint: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Constraint, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Constraint", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2700,7 +2674,6 @@ Object.defineProperties(XF as any, {
     ContentPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ContentPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ContentPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2710,7 +2683,6 @@ Object.defineProperties(XF as any, {
     ContentPresenter: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ContentPresenter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ContentPresenter", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2720,7 +2692,6 @@ Object.defineProperties(XF as any, {
     ContentView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ContentView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ContentView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2730,7 +2701,6 @@ Object.defineProperties(XF as any, {
     ControlTemplate: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ControlTemplate, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ControlTemplate", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2740,7 +2710,6 @@ Object.defineProperties(XF as any, {
     DataTemplate: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DataTemplate, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DataTemplate", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2750,7 +2719,6 @@ Object.defineProperties(XF as any, {
     DataTemplateSelector: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DataTemplateSelector, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DataTemplateSelector", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2760,7 +2728,6 @@ Object.defineProperties(XF as any, {
     DatePicker: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DatePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DatePicker", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2770,7 +2737,6 @@ Object.defineProperties(XF as any, {
     DeviceStateTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DeviceStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DeviceStateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2780,7 +2746,6 @@ Object.defineProperties(XF as any, {
     DragGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DragGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DragGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2790,7 +2755,6 @@ Object.defineProperties(XF as any, {
     DropGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DropGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DropGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2800,7 +2764,6 @@ Object.defineProperties(XF as any, {
     Easing: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Easing, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Easing", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2810,7 +2773,6 @@ Object.defineProperties(XF as any, {
     Editor: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Editor, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Editor", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2820,7 +2782,6 @@ Object.defineProperties(XF as any, {
     Effect: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Effect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Effect", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2830,7 +2791,6 @@ Object.defineProperties(XF as any, {
     Element: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Element, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Element", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2840,7 +2800,6 @@ Object.defineProperties(XF as any, {
     ElementTemplate: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ElementTemplate, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ElementTemplate", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2850,7 +2809,6 @@ Object.defineProperties(XF as any, {
     Entry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2860,7 +2818,6 @@ Object.defineProperties(XF as any, {
     FileImageSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.FileImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FileImageSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2870,7 +2827,6 @@ Object.defineProperties(XF as any, {
     FlexLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.FlexLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FlexLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2880,7 +2836,6 @@ Object.defineProperties(XF as any, {
     FlyoutPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.FlyoutPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FlyoutPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2890,7 +2845,6 @@ Object.defineProperties(XF as any, {
     MasterDetailPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MasterDetailPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2900,7 +2854,6 @@ Object.defineProperties(XF as any, {
     FontImageSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.FontImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FontImageSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2910,7 +2863,6 @@ Object.defineProperties(XF as any, {
     FormattedString: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.FormattedString, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FormattedString", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2920,7 +2872,6 @@ Object.defineProperties(XF as any, {
     Frame: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Frame, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Frame", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2930,7 +2881,6 @@ Object.defineProperties(XF as any, {
     GestureElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.GestureElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GestureElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2940,7 +2890,6 @@ Object.defineProperties(XF as any, {
     GestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.GestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2950,7 +2899,6 @@ Object.defineProperties(XF as any, {
     GradientBrush: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.GradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GradientBrush", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2960,7 +2908,6 @@ Object.defineProperties(XF as any, {
     GradientStop: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.GradientStop, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GradientStop", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2970,7 +2917,6 @@ Object.defineProperties(XF as any, {
     Grid: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Grid, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Grid", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2980,7 +2926,6 @@ Object.defineProperties(XF as any, {
     HtmlWebViewSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.HtmlWebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "HtmlWebViewSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -2990,7 +2935,6 @@ Object.defineProperties(XF as any, {
     Image: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Image, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Image", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3000,7 +2944,6 @@ Object.defineProperties(XF as any, {
     ImageButton: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ImageButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ImageButton", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3010,7 +2953,6 @@ Object.defineProperties(XF as any, {
     ImageSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ImageSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3020,7 +2962,6 @@ Object.defineProperties(XF as any, {
     IndicatorView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.IndicatorView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "IndicatorView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3030,7 +2971,6 @@ Object.defineProperties(XF as any, {
     InputView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.InputView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "InputView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3040,7 +2980,6 @@ Object.defineProperties(XF as any, {
     Behavior: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Behavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Behavior", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3050,7 +2989,6 @@ Object.defineProperties(XF as any, {
     Behavior$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Behavior`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Behavior$Generic", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3060,7 +2998,6 @@ Object.defineProperties(XF as any, {
     DataTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.DataTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DataTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3070,7 +3007,6 @@ Object.defineProperties(XF as any, {
     EventTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.EventTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "EventTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3080,7 +3016,6 @@ Object.defineProperties(XF as any, {
     MultiTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.MultiTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MultiTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3090,7 +3025,6 @@ Object.defineProperties(XF as any, {
     Trigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Trigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Trigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3100,7 +3034,6 @@ Object.defineProperties(XF as any, {
     TriggerBase: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TriggerBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TriggerBase", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3110,7 +3043,6 @@ Object.defineProperties(XF as any, {
     ItemsView$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ItemsView`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ItemsView$Generic", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3120,7 +3052,6 @@ Object.defineProperties(XF as any, {
     CarouselView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.CarouselView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CarouselView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3130,7 +3061,6 @@ Object.defineProperties(XF as any, {
     CollectionView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.CollectionView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CollectionView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3140,7 +3070,6 @@ Object.defineProperties(XF as any, {
     GridItemsLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.GridItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GridItemsLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3150,7 +3079,6 @@ Object.defineProperties(XF as any, {
     GroupableItemsView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.GroupableItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GroupableItemsView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3160,7 +3088,6 @@ Object.defineProperties(XF as any, {
     ItemsLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ItemsLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3170,7 +3097,6 @@ Object.defineProperties(XF as any, {
     ItemsView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ItemsView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3180,7 +3106,6 @@ Object.defineProperties(XF as any, {
     LinearItemsLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.LinearItemsLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "LinearItemsLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3190,7 +3115,6 @@ Object.defineProperties(XF as any, {
     SelectableItemsView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SelectableItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SelectableItemsView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3200,7 +3124,6 @@ Object.defineProperties(XF as any, {
     StructuredItemsView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.StructuredItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "StructuredItemsView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3210,7 +3133,6 @@ Object.defineProperties(XF as any, {
     IValueConverter: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.IValueConverter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "IValueConverter", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3220,7 +3142,6 @@ Object.defineProperties(XF as any, {
     Label: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Label", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3230,7 +3151,6 @@ Object.defineProperties(XF as any, {
     Layout$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Layout`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Layout$Generic", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3240,7 +3160,6 @@ Object.defineProperties(XF as any, {
     Layout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Layout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Layout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3250,7 +3169,6 @@ Object.defineProperties(XF as any, {
     LinearGradientBrush: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.LinearGradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "LinearGradientBrush", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3260,7 +3178,6 @@ Object.defineProperties(XF as any, {
     ListView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3270,7 +3187,6 @@ Object.defineProperties(XF as any, {
     Menu: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Menu, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Menu", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3280,7 +3196,6 @@ Object.defineProperties(XF as any, {
     MenuItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.MenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MenuItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3290,7 +3205,6 @@ Object.defineProperties(XF as any, {
     MultiPage$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.MultiPage`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MultiPage$Generic", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3300,7 +3214,6 @@ Object.defineProperties(XF as any, {
     NameScopeExtensions: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.NameScopeExtensions, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NameScopeExtensions", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3310,7 +3223,6 @@ Object.defineProperties(XF as any, {
     NavigationPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3320,7 +3232,6 @@ Object.defineProperties(XF as any, {
     NullEffect: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.NullEffect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NullEffect", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3330,7 +3241,6 @@ Object.defineProperties(XF as any, {
     OpenGLView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.OpenGLView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "OpenGLView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3340,7 +3250,6 @@ Object.defineProperties(XF as any, {
     OrientationStateTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.OrientationStateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "OrientationStateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3350,7 +3259,6 @@ Object.defineProperties(XF as any, {
     Page: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3360,7 +3268,6 @@ Object.defineProperties(XF as any, {
     PanGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PanGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PanGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3370,7 +3277,6 @@ Object.defineProperties(XF as any, {
     Picker: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Picker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Picker", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3380,7 +3286,6 @@ Object.defineProperties(XF as any, {
     PinchGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PinchGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PinchGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3390,7 +3295,6 @@ Object.defineProperties(XF as any, {
     PlatformEffect$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformEffect`2, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PlatformEffect$Generic", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3400,7 +3304,6 @@ Object.defineProperties(XF as any, {
     ProgressBar: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ProgressBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ProgressBar", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3410,7 +3313,6 @@ Object.defineProperties(XF as any, {
     RadialGradientBrush: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RadialGradientBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RadialGradientBrush", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3420,7 +3322,6 @@ Object.defineProperties(XF as any, {
     RadioButton: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RadioButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RadioButton", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3430,7 +3331,6 @@ Object.defineProperties(XF as any, {
     RadioButtonGroup: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RadioButtonGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RadioButtonGroup", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3440,7 +3340,6 @@ Object.defineProperties(XF as any, {
     RefreshView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RefreshView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RefreshView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3450,7 +3349,6 @@ Object.defineProperties(XF as any, {
     RelativeLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RelativeLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RelativeLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3460,7 +3358,6 @@ Object.defineProperties(XF as any, {
     Routing: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Routing, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Routing", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3470,7 +3367,6 @@ Object.defineProperties(XF as any, {
     RoutingEffect: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RoutingEffect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RoutingEffect", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3480,7 +3376,6 @@ Object.defineProperties(XF as any, {
     RowDefinition: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.RowDefinition, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RowDefinition", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3490,7 +3385,6 @@ Object.defineProperties(XF as any, {
     ScrollView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ScrollView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ScrollView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3500,7 +3394,6 @@ Object.defineProperties(XF as any, {
     SearchBar: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SearchBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SearchBar", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3510,7 +3403,6 @@ Object.defineProperties(XF as any, {
     BackButtonBehavior: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.BackButtonBehavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BackButtonBehavior", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3520,7 +3412,6 @@ Object.defineProperties(XF as any, {
     BaseShellItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.BaseShellItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BaseShellItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3530,7 +3421,6 @@ Object.defineProperties(XF as any, {
     NavigableElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.NavigableElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigableElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3540,7 +3430,6 @@ Object.defineProperties(XF as any, {
     SearchHandler: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SearchHandler, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SearchHandler", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3550,7 +3439,6 @@ Object.defineProperties(XF as any, {
     Shell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Shell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3560,7 +3448,6 @@ Object.defineProperties(XF as any, {
     ShellContent: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ShellContent, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ShellContent", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3570,7 +3457,6 @@ Object.defineProperties(XF as any, {
     ShellGroupItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ShellGroupItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ShellGroupItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3580,7 +3466,6 @@ Object.defineProperties(XF as any, {
     FlyoutItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.FlyoutItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FlyoutItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3590,7 +3475,6 @@ Object.defineProperties(XF as any, {
     TabBar: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TabBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabBar", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3600,7 +3484,6 @@ Object.defineProperties(XF as any, {
     ShellItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ShellItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ShellItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3610,7 +3493,6 @@ Object.defineProperties(XF as any, {
     Tab: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Tab, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Tab", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3620,7 +3502,6 @@ Object.defineProperties(XF as any, {
     ShellSection: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ShellSection, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ShellSection", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3630,7 +3511,6 @@ Object.defineProperties(XF as any, {
     Slider: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Slider, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Slider", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3640,7 +3520,6 @@ Object.defineProperties(XF as any, {
     SolidColorBrush: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SolidColorBrush, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SolidColorBrush", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3650,7 +3529,6 @@ Object.defineProperties(XF as any, {
     Span: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Span, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Span", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3660,7 +3538,6 @@ Object.defineProperties(XF as any, {
     StackLayout: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.StackLayout, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "StackLayout", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3670,7 +3547,6 @@ Object.defineProperties(XF as any, {
     StateTrigger: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.StateTrigger, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "StateTrigger", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3680,7 +3556,6 @@ Object.defineProperties(XF as any, {
     StateTriggerBase: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.StateTriggerBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "StateTriggerBase", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3690,7 +3565,6 @@ Object.defineProperties(XF as any, {
     Stepper: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Stepper, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Stepper", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3700,7 +3574,6 @@ Object.defineProperties(XF as any, {
     StreamImageSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.StreamImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "StreamImageSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3710,7 +3583,6 @@ Object.defineProperties(XF as any, {
     Style: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Style, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Style", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3720,7 +3592,6 @@ Object.defineProperties(XF as any, {
     SwipeGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SwipeGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3730,7 +3601,6 @@ Object.defineProperties(XF as any, {
     SwipeItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SwipeItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3740,7 +3610,6 @@ Object.defineProperties(XF as any, {
     SwipeItems: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SwipeItems, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeItems", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3750,7 +3619,6 @@ Object.defineProperties(XF as any, {
     SwipeItemView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SwipeItemView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeItemView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3760,7 +3628,6 @@ Object.defineProperties(XF as any, {
     SwipeView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.SwipeView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3770,7 +3637,6 @@ Object.defineProperties(XF as any, {
     Switch: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Switch, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Switch", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3780,7 +3646,6 @@ Object.defineProperties(XF as any, {
     TabbedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3790,7 +3655,6 @@ Object.defineProperties(XF as any, {
     TableRoot: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TableRoot, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TableRoot", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3800,7 +3664,6 @@ Object.defineProperties(XF as any, {
     TableSectionBase$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TableSectionBase`1, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TableSectionBase$Generic", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3810,7 +3673,6 @@ Object.defineProperties(XF as any, {
     TableSection: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TableSection, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TableSection", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3820,7 +3682,6 @@ Object.defineProperties(XF as any, {
     TableSectionBase: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TableSectionBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TableSectionBase", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3830,7 +3691,6 @@ Object.defineProperties(XF as any, {
     TableView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TableView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TableView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3840,7 +3700,6 @@ Object.defineProperties(XF as any, {
     TapGestureRecognizer: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TapGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TapGestureRecognizer", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3850,7 +3709,6 @@ Object.defineProperties(XF as any, {
     TemplatedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TemplatedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TemplatedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3860,7 +3718,6 @@ Object.defineProperties(XF as any, {
     TemplatedView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TemplatedView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TemplatedView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3870,7 +3727,6 @@ Object.defineProperties(XF as any, {
     TimePicker: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.TimePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TimePicker", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3880,7 +3736,6 @@ Object.defineProperties(XF as any, {
     ToolbarItem: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.ToolbarItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ToolbarItem", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3890,7 +3745,6 @@ Object.defineProperties(XF as any, {
     UriImageSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.UriImageSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "UriImageSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3900,7 +3754,6 @@ Object.defineProperties(XF as any, {
     UrlWebViewSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.UrlWebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "UrlWebViewSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3910,7 +3763,6 @@ Object.defineProperties(XF as any, {
     View: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "View", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3920,7 +3772,6 @@ Object.defineProperties(XF as any, {
     VisualElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3930,7 +3781,6 @@ Object.defineProperties(XF as any, {
     VisualStateManager: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.VisualStateManager, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "VisualStateManager", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3940,7 +3790,6 @@ Object.defineProperties(XF as any, {
     WebView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "WebView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3950,7 +3799,6 @@ Object.defineProperties(XF as any, {
     WebViewSource: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.WebViewSource, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "WebViewSource", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3960,7 +3808,6 @@ Object.defineProperties(XF as any, {
     StyleSheet: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.StyleSheets.StyleSheet, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "StyleSheet", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3970,7 +3817,6 @@ Object.defineProperties(XF as any, {
     ArcSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.ArcSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ArcSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3980,7 +3826,6 @@ Object.defineProperties(XF as any, {
     BezierSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.BezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -3990,7 +3835,6 @@ Object.defineProperties(XF as any, {
     CompositeTransform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.CompositeTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CompositeTransform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4000,7 +3844,6 @@ Object.defineProperties(XF as any, {
     Ellipse: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Ellipse, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Ellipse", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4010,7 +3853,6 @@ Object.defineProperties(XF as any, {
     EllipseGeometry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.EllipseGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "EllipseGeometry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4020,7 +3862,6 @@ Object.defineProperties(XF as any, {
     Geometry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Geometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Geometry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4030,7 +3871,6 @@ Object.defineProperties(XF as any, {
     GeometryGroup: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.GeometryGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GeometryGroup", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4040,7 +3880,6 @@ Object.defineProperties(XF as any, {
     GeometryHelper: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.GeometryHelper, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "GeometryHelper", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4050,7 +3889,6 @@ Object.defineProperties(XF as any, {
     Line: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Line, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Line", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4060,7 +3898,6 @@ Object.defineProperties(XF as any, {
     LineGeometry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.LineGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "LineGeometry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4070,7 +3907,6 @@ Object.defineProperties(XF as any, {
     LineSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.LineSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "LineSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4080,7 +3916,6 @@ Object.defineProperties(XF as any, {
     MatrixTransform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.MatrixTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MatrixTransform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4090,7 +3925,6 @@ Object.defineProperties(XF as any, {
     Path: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Path, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Path", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4100,7 +3934,6 @@ Object.defineProperties(XF as any, {
     PathFigure: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.PathFigure, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PathFigure", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4110,7 +3943,6 @@ Object.defineProperties(XF as any, {
     PathGeometry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.PathGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PathGeometry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4120,7 +3952,6 @@ Object.defineProperties(XF as any, {
     PathSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.PathSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PathSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4130,7 +3961,6 @@ Object.defineProperties(XF as any, {
     PolyBezierSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.PolyBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PolyBezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4140,7 +3970,6 @@ Object.defineProperties(XF as any, {
     Polygon: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Polygon, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Polygon", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4150,7 +3979,6 @@ Object.defineProperties(XF as any, {
     Polyline: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Polyline, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Polyline", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4160,7 +3988,6 @@ Object.defineProperties(XF as any, {
     PolyLineSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.PolyLineSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PolyLineSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4170,7 +3997,6 @@ Object.defineProperties(XF as any, {
     PolyQuadraticBezierSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.PolyQuadraticBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "PolyQuadraticBezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4180,7 +4006,6 @@ Object.defineProperties(XF as any, {
     QuadraticBezierSegment: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.QuadraticBezierSegment, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "QuadraticBezierSegment", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4190,7 +4015,6 @@ Object.defineProperties(XF as any, {
     Rectangle: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Rectangle", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4200,7 +4024,6 @@ Object.defineProperties(XF as any, {
     RectangleGeometry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.RectangleGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RectangleGeometry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4210,7 +4033,6 @@ Object.defineProperties(XF as any, {
     RotateTransform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.RotateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RotateTransform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4220,7 +4042,6 @@ Object.defineProperties(XF as any, {
     RoundRectangleGeometry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.RoundRectangleGeometry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RoundRectangleGeometry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4230,7 +4051,6 @@ Object.defineProperties(XF as any, {
     ScaleTransform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.ScaleTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ScaleTransform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4240,7 +4060,6 @@ Object.defineProperties(XF as any, {
     Shape: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Shape, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Shape", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4250,7 +4069,6 @@ Object.defineProperties(XF as any, {
     SkewTransform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.SkewTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SkewTransform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4260,7 +4078,6 @@ Object.defineProperties(XF as any, {
     Transform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.Transform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Transform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4270,7 +4087,6 @@ Object.defineProperties(XF as any, {
     TransformGroup: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.TransformGroup, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TransformGroup", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4280,7 +4096,6 @@ Object.defineProperties(XF as any, {
     TranslateTransform: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Shapes.TranslateTransform, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TranslateTransform", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4292,7 +4107,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     Application: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4302,7 +4116,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     FlyoutPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.FlyoutPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FlyoutPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4312,7 +4125,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     MasterDetailPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MasterDetailPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4322,7 +4134,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     InputView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.InputView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "InputView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4332,7 +4143,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     Label: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Label", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4342,7 +4152,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     ListView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4352,7 +4161,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     Page: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4362,7 +4170,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     RefreshView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.RefreshView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "RefreshView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4372,7 +4179,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     SearchBar: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SearchBar", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4382,7 +4188,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     TabbedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4392,7 +4197,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     VisualElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4402,7 +4206,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.WindowsSpecific as a
     WebView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.WindowsSpecific.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "WebView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4414,7 +4217,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     Application: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4424,7 +4226,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     Entry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4434,7 +4235,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     Image: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Image", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4444,7 +4244,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     ItemsView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.ItemsView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ItemsView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4454,7 +4253,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     Label: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Label, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Label", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4464,7 +4262,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     NavigationPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4474,7 +4271,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     Page: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4484,7 +4280,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     ProgressBar: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.ProgressBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ProgressBar", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4494,7 +4289,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     ScrollView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.ScrollView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ScrollView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4504,7 +4298,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     Switch: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.Switch, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Switch", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4514,7 +4307,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.TizenSpecific as any
     VisualElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.TizenSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4526,7 +4318,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.macOSSpecific as any
     NavigationPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.macOSSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4536,7 +4327,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.macOSSpecific as any
     Page: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.macOSSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4546,7 +4336,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.macOSSpecific as any
     TabbedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.macOSSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4558,7 +4347,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     Application: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4568,7 +4356,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     Cell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Cell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Cell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4578,7 +4365,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     DatePicker: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.DatePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "DatePicker", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4588,7 +4374,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     Entry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4598,7 +4383,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     FlyoutPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.FlyoutPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "FlyoutPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4608,7 +4392,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     MasterDetailPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.MasterDetailPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "MasterDetailPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4618,7 +4401,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     ListView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4628,7 +4410,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     NavigationPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4638,7 +4419,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     Page: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Page", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4648,7 +4428,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     Picker: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Picker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Picker", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4658,7 +4437,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     ScrollView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.ScrollView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ScrollView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4668,7 +4446,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     SearchBar: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.SearchBar, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SearchBar", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4678,7 +4455,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     Slider: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Slider", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4688,7 +4464,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     SwipeView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.SwipeView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4698,7 +4473,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     TabbedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4708,7 +4482,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     TimePicker: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.TimePicker, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TimePicker", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4718,7 +4491,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     VisualElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4728,7 +4500,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.iOSSpecific as any, 
     ShadowEffect: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement+ShadowEffect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ShadowEffect", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4740,7 +4511,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.GTKSpecific as any, 
     BoxView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.GTKSpecific.BoxView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "BoxView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4750,7 +4520,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.GTKSpecific as any, 
     NavigationPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.GTKSpecific.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4760,7 +4529,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.GTKSpecific as any, 
     TabbedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.GTKSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4772,7 +4540,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     Application: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4782,7 +4549,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     Button: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Button", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4792,7 +4558,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     Entry: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Entry", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4802,7 +4567,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     ImageButton: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImageButton, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ImageButton", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4812,7 +4576,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     ListView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ListView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ListView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4822,7 +4585,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     SwipeView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.SwipeView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "SwipeView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4832,7 +4594,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     TabbedPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TabbedPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4842,7 +4603,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     ViewCell: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ViewCell, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "ViewCell", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4852,7 +4612,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     VisualElement: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "VisualElement", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4862,7 +4621,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific as a
     WebView: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "WebView", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4874,7 +4632,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppC
     Application: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "Application", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4884,7 +4641,6 @@ Object.defineProperties(Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppC
     NavigationPage: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NavigationPage", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4896,7 +4652,6 @@ Object.defineProperties(Xamarin.Forms.Internals as any, {
     CellExtensions: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Internals.CellExtensions, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "CellExtensions", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4906,7 +4661,6 @@ Object.defineProperties(Xamarin.Forms.Internals as any, {
     NameScope: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Internals.NameScope, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "NameScope", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4916,7 +4670,6 @@ Object.defineProperties(Xamarin.Forms.Internals as any, {
     TextTransformUtilites: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Internals.TextTransformUtilites, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TextTransformUtilites", { value: t, enumerable: true, writable: true, configurable: true })
@@ -4926,7 +4679,6 @@ Object.defineProperties(Xamarin.Forms.Internals as any, {
     TemplatedItemsList$Generic: { 
         configurable: true,
         enumerable: true,
-        writable: true,
         get() {
             const t = bridge.getClass("Xamarin.Forms.Internals.TemplatedItemsList`2, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null");
             Object.defineProperty(this, "TemplatedItemsList$Generic", { value: t, enumerable: true, writable: true, configurable: true })
