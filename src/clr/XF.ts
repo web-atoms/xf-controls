@@ -8,9 +8,14 @@ const assemblyName = `Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, Publ
 let ns = ``;
 function create(name: string, ns: string) {
     return {
+        configurable: true,
+        enumerable: true,
         get() {
             const t = bridge.getClass(`${ns}.${name}, ${assemblyName}`); 
             Object.defineProperty(this, name, {
+                configurable: true,
+                enumerable: true,
+                writable: true,
                 value: t
             });
             return t;

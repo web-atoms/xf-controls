@@ -9,9 +9,14 @@ const assemblyName = `Xamarin.CommunityToolkit, Version=1.0.0.0, Culture=neutral
 let ns = ``;
 function create(name: string, ns: string) {
     return {
+        configurable: true,
+        enumerable: true,
         get() {
             const t = bridge.getClass(`${ns}.${name}, ${assemblyName}`); 
             Object.defineProperty(this, name, {
+                configurable: true,
+                enumerable: true,
+                writable: true,
                 value: t
             });
             return t;
