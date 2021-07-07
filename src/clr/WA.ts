@@ -71,9 +71,14 @@ namespace WA {
 
 function create(name: string) {
     return {
+        configurable: true,
+        enumerable: true,
         get() {
             const t = bridge.getClass(`${NSAtoms}.${name}, ${NSAssembly}`); 
             Object.defineProperty(this, name, {
+                enumerable: true,
+                configurable: true,
+                writable: true,
                 value: t
             });
             return t;

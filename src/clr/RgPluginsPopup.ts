@@ -9,10 +9,27 @@ namespace RgPluginsPopup {
     }
 };
 
-(RgPluginsPopup as any) = {
-    get PopupPage() {
-        return this._PopupPage || (this._PopupPage = bridge.getClass("Rg.Plugins.Popup.Pages.PopupPage,Rg.Plugins.Popup"));
-    }
+const assemblyName = `Rg.Plugins.Popup`;
+let ns = ``;
+function create(name: string, ns: string) {
+    return {
+        configurable: true,
+        enumerable: true,
+        get() {
+            const t = bridge.getClass(`${ns}.${name}, ${assemblyName}`); 
+            Object.defineProperty(this, name, {
+                configurable: true,
+                enumerable: true,
+                writable: true,
+                value: t
+            });
+            return t;
+        }
+    };
 }
+
+Object.defineProperties((RgPluginsPopup as any), {
+    PopupPage: create("PopupPage", "Rg.Plugins.Popup.Pages")
+});
 
 export default RgPluginsPopup;
