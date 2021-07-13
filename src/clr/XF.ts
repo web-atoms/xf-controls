@@ -25,35 +25,70 @@ function create(name: string, ns: string) {
 
 namespace XF {
     export declare class AbsoluteLayout extends XF.Layout$Generic {
-        public static autoSize: number | null | Bind;
+        public static autoSize: number | null;
         public static layoutBounds: AttachedNode;
         public static layoutFlags: AttachedNode;
-        public children: RootObject;
+        /**
+        * Xamarin.Forms.AbsoluteLayout+IAbsoluteList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public children: RootObject | Bind;
     }
     export declare class ActivityIndicator extends XF.View {
         public static isRunning: AttachedNode;
         public static color: AttachedNode;
-        public color: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public color: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isRunning: boolean | null | Bind;
     }
     export declare class AdaptiveTrigger extends XF.StateTriggerBase {
         public static minWindowHeight: AttachedNode;
         public static minWindowWidth: AttachedNode;
+        /**
+        * System.Double
+        */
         public minWindowHeight: number | null | Bind;
+        /**
+        * System.Double
+        */
         public minWindowWidth: number | null | Bind;
     }
     export declare class Application extends XF.Element {
-        public static logWarningsToApplicationOutput: boolean | null | Bind;
+        public static logWarningsToApplicationOutput: boolean | null;
         public static current: XF.Application;
-        public dispatcher: RootObject;
-        public appLinks: RootObject;
-        public mainPage: XF.Page;
+        /**
+        * Xamarin.Forms.IDispatcher
+        */
+        public dispatcher: RootObject | Bind;
+        /**
+        * Xamarin.Forms.IAppLinks
+        */
+        public appLinks: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public mainPage: XF.Page | Bind;
         public static mainPage: AttachedNode;
-        public properties: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
-        public navigationProxy: RootObject;
-        public panGestureId: number | null | Bind;
+        /**
+        * System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public properties: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/ | Bind;
+        /**
+        * Xamarin.Forms.ResourceDictionary
+        */
+        public resources: any;
         public static resources: AttachedNode;
+        /**
+        * Xamarin.Forms.OSAppTheme
+        */
         public userAppTheme: "Unspecified" | "Light" | "Dark" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.OSAppTheme
+        */
         public requestedTheme: "Unspecified" | "Light" | "Dark" | string | number | null | undefined | Bind;
     }
     export declare class AppLinkEntry extends XF.Element {
@@ -62,11 +97,29 @@ namespace XF {
         public static thumbnail: AttachedNode;
         public static appLinkUri: AttachedNode;
         public static isLinkActive: AttachedNode;
-        public appLinkUri: RootObject /*System.Uri*/;
+        /**
+        * System.Uri
+        */
+        public appLinkUri: RootObject /*System.Uri*/ | Bind;
+        /**
+        * System.String
+        */
         public description: string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isLinkActive: boolean | null | Bind;
-        public keyValues: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
-        public thumbnail: XF.ImageSource;
+        /**
+        * System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public keyValues: RootObject /*System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/ | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public thumbnail: XF.ImageSource | Bind;
+        /**
+        * System.String
+        */
         public title: string | null | Bind;
     }
     export declare class AutomationProperties extends RootObject {
@@ -87,14 +140,26 @@ namespace XF {
     export declare class BindableObject extends RootObject {
         public static inheritedBindingContext: AttachedNode;
         public static bindingContext: AttachedNode;
-        public dispatcher: RootObject;
-        public bindingContext: RootObject /*System.Object*/;
+        /**
+        * Xamarin.Forms.IDispatcher
+        */
+        public dispatcher: RootObject | Bind;
+        /**
+        * System.Object
+        */
+        public bindingContext: RootObject /*System.Object*/ | Bind;
     }
     export declare class BoxView extends XF.View {
         public static color: AttachedNode;
         public static cornerRadius: AttachedNode;
-        public color: XF.Color;
-        public cornerRadius: RootObject;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public color: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.CornerRadius
+        */
+        public cornerRadius: RootObject | Bind;
     }
     export declare class Brush extends XF.Element {
         public static default: XF.Brush;
@@ -239,6 +304,9 @@ namespace XF {
         public static whiteSmoke: XF.SolidColorBrush;
         public static yellow: XF.SolidColorBrush;
         public static yellowGreen: XF.SolidColorBrush;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
     }
     export declare class Button extends XF.View {
@@ -261,36 +329,104 @@ namespace XF {
         public static image: AttachedNode;
         public static padding: AttachedNode;
         public static isPressed: AttachedNode;
-        public padding: RootObject;
-        public borderColor: XF.Color;
-        public borderRadius: number | null | Bind;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public padding: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public borderColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Int32
+        */
         public cornerRadius: number | null | Bind;
+        /**
+        * System.Double
+        */
         public borderWidth: number | null | Bind;
-        public contentLayout: RootObject;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
-        public font: RootObject;
-        public imageSource: XF.ImageSource;
-        public image: XF.FileImageSource;
+        /**
+        * Xamarin.Forms.Button+ButtonContentLayout
+        */
+        public contentLayout: RootObject | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.Font
+        */
+        public font: RootObject | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public imageSource: XF.ImageSource | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isPressed: boolean | null | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
     }
     export declare class CarouselPage extends XF.MultiPage$Generic {
     }
     export declare class Cell extends XF.Element {
         public static isEnabled: AttachedNode;
-        public static defaultCellHeight: number | null | Bind;
+        public static defaultCellHeight: number;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.MenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public contextActions: any;
         public static contextActions: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public hasContextActions: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isContextActionsLegacyModeEnabled: boolean | null | Bind;
+        /**
+        * System.Double
+        */
         public height: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isEnabled: boolean | null | Bind;
+        /**
+        * System.Double
+        */
         public renderHeight: number | null | Bind;
     }
     export declare class EntryCell extends XF.Cell {
@@ -302,25 +438,57 @@ namespace XF {
         public static horizontalTextAlignment: AttachedNode;
         public static verticalTextAlignment: AttachedNode;
         public static xAlign: AttachedNode;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public keyboard: RootObject;
+        /**
+        * Xamarin.Forms.Keyboard
+        */
+        public keyboard: RootObject | Bind;
+        /**
+        * System.String
+        */
         public label: string | null | Bind;
-        public labelColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public labelColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.String
+        */
         public placeholder: string | null | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
-        public xAlign: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
     }
     export declare class ImageCell extends XF.TextCell {
         public static imageSource: AttachedNode;
-        public imageSource: XF.ImageSource;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public imageSource: XF.ImageSource | Bind;
     }
     export declare class SwitchCell extends XF.Cell {
         public static on: AttachedNode;
         public static text: AttachedNode;
         public static onColor: AttachedNode;
-        public onColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public onColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public on: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
     }
     export declare class TextCell extends XF.Cell {
@@ -330,22 +498,49 @@ namespace XF {
         public static detail: AttachedNode;
         public static textColor: AttachedNode;
         public static detailColor: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.String
+        */
         public detail: string | null | Bind;
-        public detailColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public detailColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
     }
     export declare class ViewCell extends XF.Cell {
-        public view: XF.View;
+        /**
+        * Xamarin.Forms.View
+        */
+        public view: XF.View | Bind;
         public static view: AttachedNode;
     }
     export declare class CheckBox extends XF.View {
         public static isChecked: AttachedNode;
         public static color: AttachedNode;
-        public static isCheckedVisualState: string | null | Bind;
-        public color: XF.Color;
+        public static isCheckedVisualState: string;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public color: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isChecked: boolean | null | Bind;
     }
     export declare class ClickGestureRecognizer extends XF.GestureRecognizer {
@@ -353,14 +548,26 @@ namespace XF {
         public static commandParameter: AttachedNode;
         public static numberOfClicksRequired: AttachedNode;
         public static buttons: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Int32
+        */
         public numberOfClicksRequired: number | null | Bind;
+        /**
+        * Xamarin.Forms.ButtonsMask
+        */
         public buttons: "Primary" | "Secondary" | string | number | null | undefined | Bind;
     }
     export declare class Color extends RootObject /*System.ValueType*/ {
-        public static default: XF.Color;
-        public static accent: XF.Color;
+        public static default: XF.Color | ColorItem | string | null;
+        public static accent: XF.Color | ColorItem | string | null;
         public static aliceBlue: XF.Color;
         public static antiqueWhite: XF.Color;
         public static aqua: XF.Color;
@@ -503,24 +710,53 @@ namespace XF {
         public static whiteSmoke: XF.Color;
         public static yellow: XF.Color;
         public static yellowGreen: XF.Color;
-        public isDefault: boolean | null | Bind;
+        /**
+        * System.Double
+        */
         public a: number | null | Bind;
+        /**
+        * System.Double
+        */
         public r: number | null | Bind;
+        /**
+        * System.Double
+        */
         public g: number | null | Bind;
+        /**
+        * System.Double
+        */
         public b: number | null | Bind;
+        /**
+        * System.Double
+        */
         public hue: number | null | Bind;
+        /**
+        * System.Double
+        */
         public saturation: number | null | Bind;
+        /**
+        * System.Double
+        */
         public luminosity: number | null | Bind;
     }
     export declare class ColumnDefinition extends XF.BindableObject {
         public static width: AttachedNode;
-        public width: RootObject;
+        /**
+        * Xamarin.Forms.GridLength
+        */
+        public width: RootObject | Bind;
     }
     export declare class CompareStateTrigger extends XF.StateTriggerBase {
         public static property: AttachedNode;
         public static value: AttachedNode;
-        public property: RootObject /*System.Object*/;
-        public value: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public property: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Object
+        */
+        public value: RootObject /*System.Object*/ | Bind;
     }
     export declare class CompressedLayout extends RootObject {
         public static isHeadless: AttachedNode;
@@ -531,21 +767,36 @@ namespace XF {
     }
     export declare class ContentPage extends XF.TemplatedPage {
         public static content: AttachedNode;
-        public content: XF.View;
+        /**
+        * Xamarin.Forms.View
+        */
+        public content: XF.View | Bind;
     }
     export declare class ContentPresenter extends XF.Layout {
         public static content: AttachedNode;
-        public content: XF.View;
+        /**
+        * Xamarin.Forms.View
+        */
+        public content: XF.View | Bind;
     }
     export declare class ContentView extends XF.TemplatedView {
         public static content: AttachedNode;
-        public content: XF.View;
+        /**
+        * Xamarin.Forms.View
+        */
+        public content: XF.View | Bind;
     }
     export declare class ControlTemplate extends XF.ElementTemplate {
     }
     export declare class DataTemplate extends XF.ElementTemplate {
-        public bindings: RootObject /*System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[Xamarin.Forms.BindingBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
-        public values: RootObject /*System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
+        /**
+        * System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[Xamarin.Forms.BindingBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public bindings: RootObject /*System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[Xamarin.Forms.BindingBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/ | Bind;
+        /**
+        * System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public values: RootObject /*System.Collections.Generic.IDictionary`2[[Xamarin.Forms.BindableProperty, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/ | Bind;
     }
     export declare class DataTemplateSelector extends XF.DataTemplate {
     }
@@ -560,19 +811,52 @@ namespace XF {
         public static fontSize: AttachedNode;
         public static fontAttributes: AttachedNode;
         public static textTransform: AttachedNode;
+        /**
+        * System.DateTime
+        */
         public date: Date | null | Bind;
+        /**
+        * System.String
+        */
         public format: string | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        /**
+        * System.DateTime
+        */
         public maximumDate: Date | null | Bind;
+        /**
+        * System.DateTime
+        */
         public minimumDate: Date | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
     }
     export declare class DeviceStateTrigger extends XF.StateTriggerBase {
         public static device: AttachedNode;
+        /**
+        * System.String
+        */
         public device: string | null | Bind;
     }
     export declare class DragGestureRecognizer extends XF.GestureRecognizer {
@@ -581,11 +865,26 @@ namespace XF {
         public static dropCompletedCommandParameter: AttachedNode;
         public static dragStartingCommand: AttachedNode;
         public static dragStartingCommandParameter: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public canDrag: boolean | null | Bind;
-        public dropCompletedCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public dropCompletedCommandParameter: RootObject /*System.Object*/;
-        public dragStartingCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public dragStartingCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dropCompletedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public dropCompletedCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dragStartingCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public dragStartingCommandParameter: RootObject /*System.Object*/ | Bind;
     }
     export declare class DropGestureRecognizer extends XF.GestureRecognizer {
         public static allowDrop: AttachedNode;
@@ -595,13 +894,34 @@ namespace XF {
         public static dragLeaveCommandParameter: AttachedNode;
         public static dropCommand: AttachedNode;
         public static dropCommandParameter: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public allowDrop: boolean | null | Bind;
-        public dragOverCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public dragOverCommandParameter: RootObject /*System.Object*/;
-        public dragLeaveCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public dragLeaveCommandParameter: RootObject /*System.Object*/;
-        public dropCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public dropCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dragOverCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public dragOverCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dragLeaveCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public dragLeaveCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dropCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public dropCommandParameter: RootObject /*System.Object*/ | Bind;
     }
     export declare class Easing extends RootObject {
         public static linear: XF.Easing;
@@ -627,36 +947,72 @@ namespace XF {
         public static placeholderColor: AttachedNode;
         public static isTextPredictionEnabled: AttachedNode;
         public static autoSize: AttachedNode;
+        /**
+        * Xamarin.Forms.EditorAutoSizeOption
+        */
         public autoSize: "Disabled" | "TextChanges" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.Boolean
+        */
         public isTextPredictionEnabled: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
     }
     export declare class Effect extends RootObject {
-        public element: XF.Element;
+        /**
+        * Xamarin.Forms.Element
+        */
+        public element: XF.Element | Bind;
         public static element: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isAttached: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public resolveId: string | null | Bind;
     }
     export declare class Element extends XF.BindableObject {
         public static menu: AttachedNode;
         public static automationId: AttachedNode;
         public static classId: AttachedNode;
+        /**
+        * System.String
+        */
         public automationId: string | null | Bind;
+        /**
+        * System.String
+        */
         public classId: string | null | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Effect, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public effects: any;
         public static effects: AttachedNode;
-        public id: RootObject /*System.Guid*/;
-        public parentView: XF.VisualElement;
-        public static parentView: AttachedNode;
+        /**
+        * System.Guid
+        */
+        public id: RootObject /*System.Guid*/ | Bind;
+        /**
+        * System.String
+        */
         public styleId: string | null | Bind;
-        public static logicalChildren: AttachedNode;
-        public realParent: XF.Element;
-        public static realParent: AttachedNode;
-        public parent: XF.Element;
+        /**
+        * Xamarin.Forms.Element
+        */
+        public parent: XF.Element | Bind;
         public static parent: AttachedNode;
-        public effectControlProvider: RootObject;
-        public platform: RootObject;
     }
     export declare class ElementTemplate extends RootObject {
     }
@@ -679,23 +1035,68 @@ namespace XF {
         public static cursorPosition: AttachedNode;
         public static selectionLength: AttachedNode;
         public static clearButtonVisibility: AttachedNode;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * System.Boolean
+        */
         public isPassword: boolean | null | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isTextPredictionEnabled: boolean | null | Bind;
+        /**
+        * Xamarin.Forms.ReturnType
+        */
         public returnType: "Default" | "Done" | "Go" | "Next" | "Search" | "Send" | string | number | null | undefined | Bind;
+        /**
+        * System.Int32
+        */
         public cursorPosition: number | null | Bind;
+        /**
+        * System.Int32
+        */
         public selectionLength: number | null | Bind;
-        public returnCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public returnCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public returnCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public returnCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.ClearButtonVisibility
+        */
         public clearButtonVisibility: "Never" | "WhileEditing" | string | number | null | undefined | Bind;
     }
     export declare class FileImageSource extends XF.ImageSource {
         public static file: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public file: string | null | Bind;
     }
     export declare class FlexLayout extends XF.Layout$Generic {
@@ -710,34 +1111,68 @@ namespace XF {
         public static alignItems: AttachedNode;
         public static position: AttachedNode;
         public static wrap: AttachedNode;
+        /**
+        * Xamarin.Forms.FlexDirection
+        */
         public direction: "Row" | "RowReverse" | "Column" | "ColumnReverse" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FlexJustify
+        */
         public justifyContent: "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FlexAlignContent
+        */
         public alignContent: "Stretch" | "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FlexAlignItems
+        */
         public alignItems: "Stretch" | "Center" | "Start" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FlexPosition
+        */
         public position: "Relative" | "Absolute" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FlexWrap
+        */
         public wrap: "NoWrap" | "Wrap" | "Reverse" | string | number | null | undefined | Bind;
     }
     export declare class FlyoutPage extends XF.Page {
         public static isGestureEnabled: AttachedNode;
         public static isPresented: AttachedNode;
         public static flyoutLayoutBehavior: AttachedNode;
-        public detail: XF.Page;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public detail: XF.Page | Bind;
         public static detail: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isGestureEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isPresented: boolean | null | Bind;
-        public flyout: XF.Page;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public flyout: XF.Page | Bind;
         public static flyout: AttachedNode;
+        /**
+        * Xamarin.Forms.FlyoutLayoutBehavior
+        */
         public flyoutLayoutBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
-        public canChangeIsPresented: boolean | null | Bind;
-        public detailBounds: RootObject;
-        public flyoutBounds: RootObject;
-        public shouldShowSplitMode: boolean | null | Bind;
     }
     export declare class MasterDetailPage extends XF.FlyoutPage {
         public static masterBehavior: AttachedNode;
-        public master: XF.Page;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public master: XF.Page | Bind;
         public static master: AttachedNode;
-        public masterBounds: RootObject;
+        /**
+        * Xamarin.Forms.MasterBehavior
+        */
         public masterBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
     }
     export declare class FontImageSource extends XF.ImageSource {
@@ -745,13 +1180,32 @@ namespace XF {
         public static fontFamily: AttachedNode;
         public static glyph: AttachedNode;
         public static size: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
-        public color: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public color: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.String
+        */
         public glyph: string | null | Bind;
+        /**
+        * System.Double
+        */
         public size: number | null | Bind;
     }
     export declare class FormattedString extends XF.Element {
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Span, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public spans: any;
         public static spans: AttachedNode;
     }
     export declare class Frame extends XF.ContentView {
@@ -759,23 +1213,45 @@ namespace XF {
         public static borderColor: AttachedNode;
         public static hasShadow: AttachedNode;
         public static cornerRadius: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public hasShadow: boolean | null | Bind;
-        public outlineColor: XF.Color;
-        public borderColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public borderColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Single
+        */
         public cornerRadius: number | null | Bind;
     }
     export declare class GestureElement extends XF.Element {
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.IGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public gestureRecognizers: any;
         public static gestureRecognizers: AttachedNode;
     }
     export declare class GestureRecognizer extends XF.Element {
     }
     export declare class GradientBrush extends XF.Brush {
         public static gradientStops: AttachedNode;
+        /**
+        * Xamarin.Forms.GradientStopCollection
+        */
+        public gradientStops: any;
     }
     export declare class GradientStop extends XF.Element {
         public static color: AttachedNode;
         public static offset: AttachedNode;
-        public color: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public color: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Single
+        */
         public offset: number | null | Bind;
     }
     export declare class Grid extends XF.Layout$Generic {
@@ -787,14 +1263,37 @@ namespace XF {
         public static columnSpacing: AttachedNode;
         public static columnDefinitions: AttachedNode;
         public static rowDefinitions: AttachedNode;
-        public children: RootObject;
+        /**
+        * Xamarin.Forms.Grid+IGridList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public children: RootObject | Bind;
+        /**
+        * Xamarin.Forms.ColumnDefinitionCollection
+        */
+        public columnDefinitions: any;
+        /**
+        * System.Double
+        */
         public columnSpacing: number | null | Bind;
+        /**
+        * Xamarin.Forms.RowDefinitionCollection
+        */
+        public rowDefinitions: any;
+        /**
+        * System.Double
+        */
         public rowSpacing: number | null | Bind;
     }
     export declare class HtmlWebViewSource extends XF.WebViewSource {
         public static html: AttachedNode;
         public static baseUrl: AttachedNode;
+        /**
+        * System.String
+        */
         public baseUrl: string | null | Bind;
+        /**
+        * System.String
+        */
         public html: string | null | Bind;
     }
     export declare class Image extends XF.View {
@@ -803,11 +1302,26 @@ namespace XF {
         public static isOpaque: AttachedNode;
         public static isLoading: AttachedNode;
         public static isAnimationPlaying: AttachedNode;
+        /**
+        * Xamarin.Forms.Aspect
+        */
         public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        /**
+        * System.Boolean
+        */
         public isLoading: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isOpaque: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isAnimationPlaying: boolean | null | Bind;
-        public source: XF.ImageSource;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public source: XF.ImageSource | Bind;
     }
     export declare class ImageButton extends XF.View {
         public static command: AttachedNode;
@@ -821,19 +1335,55 @@ namespace XF {
         public static isLoading: AttachedNode;
         public static isPressed: AttachedNode;
         public static padding: AttachedNode;
-        public borderColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public borderColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Int32
+        */
         public cornerRadius: number | null | Bind;
+        /**
+        * System.Double
+        */
         public borderWidth: number | null | Bind;
+        /**
+        * Xamarin.Forms.Aspect
+        */
         public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        /**
+        * System.Boolean
+        */
         public isLoading: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isPressed: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isOpaque: boolean | null | Bind;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
-        public source: XF.ImageSource;
-        public padding: RootObject;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public source: XF.ImageSource | Bind;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public padding: RootObject | Bind;
     }
     export declare class ImageSource extends XF.Element {
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
     }
     export declare class IndicatorView extends XF.TemplatedView {
@@ -847,18 +1397,51 @@ namespace XF {
         public static selectedIndicatorColor: AttachedNode;
         public static indicatorSize: AttachedNode;
         public static itemsSource: AttachedNode;
+        /**
+        * Xamarin.Forms.IndicatorShape
+        */
         public indicatorsShape: "Circle" | "Square" | string | number | null | undefined | Bind;
-        public indicatorLayout: XF.Layout$Generic;
+        /**
+        * Xamarin.Forms.Layout`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public indicatorLayout: XF.Layout$Generic | Bind;
         public static indicatorLayout: AttachedNode;
+        /**
+        * System.Int32
+        */
         public position: number | null | Bind;
+        /**
+        * System.Int32
+        */
         public count: number | null | Bind;
+        /**
+        * System.Int32
+        */
         public maximumVisible: number | null | Bind;
-        public indicatorTemplate: XF.DataTemplate;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public indicatorTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Boolean
+        */
         public hideSingle: boolean | null | Bind;
-        public indicatorColor: XF.Color;
-        public selectedIndicatorColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public indicatorColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public selectedIndicatorColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public indicatorSize: number | null | Bind;
-        public itemsSource: RootObject /*System.Collections.IEnumerable*/;
+        /**
+        * System.Collections.IEnumerable
+        */
+        public itemsSource: RootObject /*System.Collections.IEnumerable*/ | Bind;
     }
     export declare class InputView extends XF.View {
         public static text: AttachedNode;
@@ -871,15 +1454,45 @@ namespace XF {
         public static textColor: AttachedNode;
         public static characterSpacing: AttachedNode;
         public static textTransform: AttachedNode;
+        /**
+        * System.Int32
+        */
         public maxLength: number | null | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
-        public keyboard: RootObject;
+        /**
+        * Xamarin.Forms.Keyboard
+        */
+        public keyboard: RootObject | Bind;
+        /**
+        * System.Boolean
+        */
         public isSpellCheckEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isReadOnly: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public placeholder: string | null | Bind;
-        public placeholderColor: XF.Color;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public placeholderColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
     }
     export declare class Behavior extends XF.BindableObject {
@@ -887,35 +1500,89 @@ namespace XF {
     export declare class Behavior$Generic extends XF.Behavior {
     }
     export declare class DataTrigger extends XF.TriggerBase {
-        public binding: RootObject;
+        /**
+        * Xamarin.Forms.BindingBase
+        */
+        public binding: RootObject | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Setter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public setters: any;
         public static setters: AttachedNode;
-        public value: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public value: RootObject /*System.Object*/ | Bind;
     }
     export declare class EventTrigger extends XF.TriggerBase {
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.TriggerAction, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public actions: any;
         public static actions: AttachedNode;
+        /**
+        * System.String
+        */
         public event: string | null | Bind;
     }
     export declare class MultiTrigger extends XF.TriggerBase {
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Condition, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public conditions: any;
         public static conditions: AttachedNode;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Setter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public setters: any;
         public static setters: AttachedNode;
     }
     export declare class Trigger extends XF.TriggerBase {
-        public property: RootObject;
+        /**
+        * Xamarin.Forms.BindableProperty
+        */
+        public property: RootObject | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Setter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public setters: any;
         public static setters: AttachedNode;
-        public value: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public value: RootObject /*System.Object*/ | Bind;
     }
     export declare class TriggerBase extends XF.BindableObject {
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.TriggerAction, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public enterActions: any;
         public static enterActions: AttachedNode;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.TriggerAction, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public exitActions: any;
         public static exitActions: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isSealed: boolean | null | Bind;
-        public targetType: RootObject /*System.Type*/;
+        /**
+        * System.Type
+        */
+        public targetType: RootObject /*System.Type*/ | Bind;
     }
     export declare class ItemsView$Generic extends XF.View {
         public static itemsSource: AttachedNode;
         public static itemTemplate: AttachedNode;
-        public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public itemTemplate: XF.DataTemplate;
-        public static templatedItems: AttachedNode;
+        /**
+        * System.Collections.IEnumerable
+        */
+        public itemsSource: RootObject /*System.Collections.IEnumerable*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public itemTemplate: XF.DataTemplate | Bind;
     }
     export declare class CarouselView extends XF.ItemsView {
         public static loop: AttachedNode;
@@ -932,28 +1599,71 @@ namespace XF {
         public static positionChangedCommand: AttachedNode;
         public static positionChangedCommandParameter: AttachedNode;
         public static itemsLayout: AttachedNode;
-        public static currentItemVisualState: string | null | Bind;
-        public static nextItemVisualState: string | null | Bind;
-        public static previousItemVisualState: string | null | Bind;
-        public static defaultItemVisualState: string | null | Bind;
+        public static currentItemVisualState: string;
+        public static nextItemVisualState: string;
+        public static previousItemVisualState: string;
+        public static defaultItemVisualState: string;
+        /**
+        * System.Boolean
+        */
         public loop: boolean | null | Bind;
-        public peekAreaInsets: RootObject;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public peekAreaInsets: RootObject | Bind;
+        /**
+        * System.Collections.ObjectModel.ObservableCollection`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public visibleViews: any;
+        /**
+        * System.Boolean
+        */
         public isDragging: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isBounceEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isSwipeEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isScrollAnimated: boolean | null | Bind;
-        public currentItem: RootObject /*System.Object*/;
-        public currentItemChangedCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public currentItemChangedCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public currentItem: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public currentItemChangedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public currentItemChangedCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Int32
+        */
         public position: number | null | Bind;
-        public positionChangedCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public positionChangedCommandParameter: RootObject /*System.Object*/;
-        public itemsLayout: XF.LinearItemsLayout;
-        public indicatorView: XF.IndicatorView;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public positionChangedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public positionChangedCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.LinearItemsLayout
+        */
+        public itemsLayout: XF.LinearItemsLayout | Bind;
+        /**
+        * Xamarin.Forms.IndicatorView
+        */
+        public indicatorView: XF.IndicatorView | Bind;
         public static indicatorView: AttachedNode;
-        public isScrolling: boolean | null | Bind;
-        public animatePositionChanges: boolean | null | Bind;
-        public animateCurrentItemChanges: boolean | null | Bind;
     }
     export declare class CollectionView extends XF.GroupableItemsView {
     }
@@ -961,23 +1671,50 @@ namespace XF {
         public static span: AttachedNode;
         public static verticalItemSpacing: AttachedNode;
         public static horizontalItemSpacing: AttachedNode;
+        /**
+        * System.Int32
+        */
         public span: number | null | Bind;
+        /**
+        * System.Double
+        */
         public verticalItemSpacing: number | null | Bind;
+        /**
+        * System.Double
+        */
         public horizontalItemSpacing: number | null | Bind;
     }
     export declare class GroupableItemsView extends XF.SelectableItemsView {
         public static isGrouped: AttachedNode;
         public static groupHeaderTemplate: AttachedNode;
         public static groupFooterTemplate: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isGrouped: boolean | null | Bind;
-        public groupHeaderTemplate: XF.DataTemplate;
-        public groupFooterTemplate: XF.DataTemplate;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public groupHeaderTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public groupFooterTemplate: XF.DataTemplate | Bind;
     }
     export declare class ItemsLayout extends XF.BindableObject {
         public static snapPointsAlignment: AttachedNode;
         public static snapPointsType: AttachedNode;
+        /**
+        * Xamarin.Forms.ItemsLayoutOrientation
+        */
         public orientation: "Vertical" | "Horizontal" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.SnapPointsAlignment
+        */
         public snapPointsAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.SnapPointsType
+        */
         public snapPointsType: "None" | "Mandatory" | "MandatorySingle" | string | number | null | undefined | Bind;
     }
     export declare class ItemsView extends XF.View {
@@ -991,15 +1728,45 @@ namespace XF {
         public static remainingItemsThreshold: AttachedNode;
         public static itemTemplate: AttachedNode;
         public static itemsUpdatingScrollMode: AttachedNode;
-        public emptyView: RootObject /*System.Object*/;
-        public emptyViewTemplate: XF.DataTemplate;
-        public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public remainingItemsThresholdReachedCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public remainingItemsThresholdReachedCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public emptyView: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public emptyViewTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Collections.IEnumerable
+        */
+        public itemsSource: RootObject /*System.Collections.IEnumerable*/ | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public remainingItemsThresholdReachedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public remainingItemsThresholdReachedCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.ScrollBarVisibility
+        */
         public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.ScrollBarVisibility
+        */
         public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        /**
+        * System.Int32
+        */
         public remainingItemsThreshold: number | null | Bind;
-        public itemTemplate: XF.DataTemplate;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public itemTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.ItemsUpdatingScrollMode
+        */
         public itemsUpdatingScrollMode: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | string | number | null | undefined | Bind;
     }
     export declare class LinearItemsLayout extends XF.ItemsLayout {
@@ -1007,6 +1774,9 @@ namespace XF {
         public static horizontal: RootObject;
         public static carouselVertical: RootObject;
         public static itemSpacing: AttachedNode;
+        /**
+        * System.Double
+        */
         public itemSpacing: number | null | Bind;
     }
     export declare class SelectableItemsView extends XF.StructuredItemsView {
@@ -1015,9 +1785,25 @@ namespace XF {
         public static selectedItems: AttachedNode;
         public static selectionChangedCommand: AttachedNode;
         public static selectionChangedCommandParameter: AttachedNode;
-        public selectedItem: RootObject /*System.Object*/;
-        public selectionChangedCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public selectionChangedCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public selectedItem: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public selectedItems: any;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public selectionChangedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public selectionChangedCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.SelectionMode
+        */
         public selectionMode: "None" | "Single" | "Multiple" | string | number | null | undefined | Bind;
     }
     export declare class StructuredItemsView extends XF.ItemsView {
@@ -1027,11 +1813,29 @@ namespace XF {
         public static footerTemplate: AttachedNode;
         public static itemsLayout: AttachedNode;
         public static itemSizingStrategy: AttachedNode;
-        public header: RootObject /*System.Object*/;
-        public headerTemplate: XF.DataTemplate;
-        public footer: RootObject /*System.Object*/;
-        public footerTemplate: XF.DataTemplate;
-        public itemsLayout: RootObject;
+        /**
+        * System.Object
+        */
+        public header: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public headerTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Object
+        */
+        public footer: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public footerTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.IItemsLayout
+        */
+        public itemsLayout: RootObject | Bind;
+        /**
+        * Xamarin.Forms.ItemSizingStrategy
+        */
         public itemSizingStrategy: "MeasureAllItems" | "MeasureFirstItem" | string | number | null | undefined | Bind;
     }
     export declare class IValueConverter extends RootObject {
@@ -1056,27 +1860,76 @@ namespace XF {
         public static maxLines: AttachedNode;
         public static padding: AttachedNode;
         public static textType: AttachedNode;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
-        public font: RootObject;
-        public formattedText: XF.FormattedString;
+        /**
+        * Xamarin.Forms.FormattedString
+        */
+        public formattedText: XF.FormattedString | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.LineBreakMode
+        */
         public lineBreakMode: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public xAlign: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public yAlign: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TextDecorations
+        */
         public textDecorations: "None" | "Underline" | "Strikethrough" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * System.Double
+        */
         public lineHeight: number | null | Bind;
+        /**
+        * System.Int32
+        */
         public maxLines: number | null | Bind;
-        public padding: RootObject;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public padding: RootObject | Bind;
+        /**
+        * Xamarin.Forms.TextType
+        */
         public textType: "Text" | "Html" | string | number | null | undefined | Bind;
     }
     export declare class Layout$Generic extends XF.Layout {
+        /**
+        * 
+        */
+        public children: any;
         public static children: AttachedNode;
     }
     export declare class Layout extends XF.View {
@@ -1084,17 +1937,34 @@ namespace XF {
         public static isClippedToBounds: AttachedNode;
         public static cascadeInputTransparent: AttachedNode;
         public static padding: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isClippedToBounds: boolean | null | Bind;
-        public padding: RootObject;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public padding: RootObject | Bind;
+        /**
+        * System.Boolean
+        */
         public cascadeInputTransparent: boolean | null | Bind;
-        public children: RootObject /*System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Element, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
     }
     export declare class LinearGradientBrush extends XF.GradientBrush {
         public static startPoint: AttachedNode;
         public static endPoint: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
-        public startPoint: RootObject;
-        public endPoint: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public startPoint: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public endPoint: RootObject | Bind;
     }
     export declare class ListView extends XF.ItemsView$Generic {
         public static isPullToRefreshEnabled: AttachedNode;
@@ -1115,38 +1985,113 @@ namespace XF {
         public static refreshControlColor: AttachedNode;
         public static horizontalScrollBarVisibility: AttachedNode;
         public static verticalScrollBarVisibility: AttachedNode;
-        public footer: RootObject /*System.Object*/;
-        public footerTemplate: XF.DataTemplate;
-        public groupDisplayBinding: RootObject;
-        public groupHeaderTemplate: XF.DataTemplate;
-        public groupShortNameBinding: RootObject;
+        /**
+        * System.Object
+        */
+        public footer: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public footerTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.BindingBase
+        */
+        public groupDisplayBinding: RootObject | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public groupHeaderTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.BindingBase
+        */
+        public groupShortNameBinding: RootObject | Bind;
+        /**
+        * System.Boolean
+        */
         public hasUnevenRows: boolean | null | Bind;
-        public header: RootObject /*System.Object*/;
-        public headerTemplate: XF.DataTemplate;
+        /**
+        * System.Object
+        */
+        public header: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public headerTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Boolean
+        */
         public isGroupingEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isPullToRefreshEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isRefreshing: boolean | null | Bind;
-        public refreshCommand: RootObject /*System.Windows.Input.ICommand*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public refreshCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Int32
+        */
         public rowHeight: number | null | Bind;
-        public selectedItem: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public selectedItem: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.ListViewSelectionMode
+        */
         public selectionMode: "None" | "Single" | string | number | null | undefined | Bind;
-        public separatorColor: XF.Color;
-        public refreshControlColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public separatorColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public refreshControlColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.SeparatorVisibility
+        */
         public separatorVisibility: "Default" | "None" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.ScrollBarVisibility
+        */
         public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.ScrollBarVisibility
+        */
         public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.ListViewCachingStrategy
+        */
         public cachingStrategy: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | string | number | null | undefined | Bind;
-        public refreshAllowed: boolean | null | Bind;
-        public footerElement: XF.Element;
-        public static footerElement: AttachedNode;
-        public headerElement: XF.Element;
-        public static headerElement: AttachedNode;
     }
     export declare class Menu extends XF.BaseMenuItem {
+        /**
+        * Xamarin.Forms.Menu
+        */
+        public item: any;
         public static item: AttachedNode;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
+        /**
+        * System.Collections.ObjectModel.ObservableCollection`1[[Xamarin.Forms.MenuItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public items: any;
         public static items: AttachedNode;
+        /**
+        * System.Int32
+        */
         public count: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isReadOnly: boolean | null | Bind;
     }
     export declare class MenuItem extends XF.BaseMenuItem {
@@ -1158,15 +2103,43 @@ namespace XF {
         public static icon: AttachedNode;
         public static isEnabled: AttachedNode;
         public static text: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
-        public icon: XF.FileImageSource;
-        public iconImageSource: XF.ImageSource;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public iconImageSource: XF.ImageSource | Bind;
+        /**
+        * System.Boolean
+        */
         public isDestructive: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isEnabled: boolean | null | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public styleClass: any;
         public static styleClass: AttachedNode;
+        /**
+        * System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public class: any;
         public static class: AttachedNode;
+        /**
+        * System.String
+        */
         public isEnabledPropertyName: string | null | Bind;
     }
     export declare class MultiPage$Generic extends XF.Page {
@@ -1174,11 +2147,27 @@ namespace XF {
         public static itemsSource: AttachedNode;
         public static itemTemplate: AttachedNode;
         public static selectedItem: AttachedNode;
-        public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public itemTemplate: XF.DataTemplate;
-        public selectedItem: RootObject /*System.Object*/;
-        public currentPage: RootObject;
+        /**
+        * System.Collections.IEnumerable
+        */
+        public itemsSource: RootObject /*System.Collections.IEnumerable*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public itemTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Object
+        */
+        public selectedItem: RootObject /*System.Object*/ | Bind;
+        /**
+        * 
+        */
+        public currentPage: RootObject | Bind;
         public static currentPage: AttachedNode;
+        /**
+        * 
+        */
+        public children: any;
         public static children: AttachedNode;
     }
     export declare class NameScopeExtensions extends RootObject {
@@ -1198,24 +2187,45 @@ namespace XF {
         public static barTextColor: AttachedNode;
         public static currentPage: AttachedNode;
         public static rootPage: AttachedNode;
-        public barBackgroundColor: XF.Color;
-        public barBackground: XF.Brush;
-        public barTextColor: XF.Color;
-        public tint: XF.Color;
-        public pages: RootObject /*System.Collections.Generic.IEnumerable`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
-        public stackDepth: number | null | Bind;
-        public currentPage: XF.Page;
-        public rootPage: XF.Page;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public barBackgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public barBackground: XF.Brush | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public barTextColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public currentPage: XF.Page | Bind;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public rootPage: XF.Page | Bind;
     }
     export declare class NullEffect extends XF.Effect {
     }
     export declare class OpenGLView extends XF.View {
         public static hasRenderLoop: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public hasRenderLoop: boolean | null | Bind;
-        public onDisplay: RootObject /*System.Action`1[[Xamarin.Forms.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        /**
+        * System.Action`1[[Xamarin.Forms.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public onDisplay: RootObject /*System.Action`1[[Xamarin.Forms.Rectangle, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/ | Bind;
     }
     export declare class OrientationStateTrigger extends XF.StateTriggerBase {
         public static orientation: AttachedNode;
+        /**
+        * Xamarin.Forms.Internals.DeviceOrientation
+        */
         public orientation: "Portrait" | "Landscape" | "PortraitUp" | "PortraitDown" | "LandscapeLeft" | "LandscapeRight" | "Other" | string | number | null | undefined | Bind;
     }
     export declare class Page extends XF.VisualElement {
@@ -1226,24 +2236,41 @@ namespace XF {
         public static title: AttachedNode;
         public static iconImageSource: AttachedNode;
         public static icon: AttachedNode;
-        public static busySetSignalName: string | null | Bind;
-        public static alertSignalName: string | null | Bind;
-        public static promptSignalName: string | null | Bind;
-        public static actionSheetSignalName: string | null | Bind;
-        public backgroundImage: string | null | Bind;
-        public backgroundImageSource: XF.ImageSource;
-        public icon: XF.FileImageSource;
-        public iconImageSource: XF.ImageSource;
+        public static busySetSignalName: string;
+        public static alertSignalName: string;
+        public static promptSignalName: string;
+        public static actionSheetSignalName: string;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public backgroundImageSource: XF.ImageSource | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public iconImageSource: XF.ImageSource | Bind;
+        /**
+        * System.Boolean
+        */
         public isBusy: boolean | null | Bind;
-        public padding: RootObject;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public padding: RootObject | Bind;
+        /**
+        * System.String
+        */
         public title: string | null | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.ToolbarItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public toolbarItems: any;
         public static toolbarItems: AttachedNode;
-        public containerArea: RootObject;
-        public ignoresContainerArea: boolean | null | Bind;
-        public static internalChildren: AttachedNode;
     }
     export declare class PanGestureRecognizer extends XF.GestureRecognizer {
         public static touchPoints: AttachedNode;
+        /**
+        * System.Int32
+        */
         public touchPoints: number | null | Bind;
     }
     export declare class Picker extends XF.View {
@@ -1260,39 +2287,106 @@ namespace XF {
         public static horizontalTextAlignment: AttachedNode;
         public static verticalTextAlignment: AttachedNode;
         public static textTransform: AttachedNode;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public items: any;
         public static items: AttachedNode;
+        /**
+        * System.Collections.IList
+        */
+        public itemsSource: any;
+        /**
+        * System.Int32
+        */
         public selectedIndex: number | null | Bind;
-        public selectedItem: RootObject /*System.Object*/;
-        public textColor: XF.Color;
+        /**
+        * System.Object
+        */
+        public selectedItem: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * System.String
+        */
         public title: string | null | Bind;
-        public titleColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public titleColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public itemDisplayBinding: RootObject;
+        /**
+        * Xamarin.Forms.BindingBase
+        */
+        public itemDisplayBinding: RootObject | Bind;
     }
     export declare class PinchGestureRecognizer extends XF.GestureRecognizer {
-        public isPinching: boolean | null | Bind;
     }
     export declare class PlatformEffect$Generic extends XF.Effect {
-        public container: RootObject;
-        public control: RootObject;
+        /**
+        * 
+        */
+        public container: RootObject | Bind;
+        /**
+        * 
+        */
+        public control: RootObject | Bind;
     }
     export declare class ProgressBar extends XF.View {
         public static progressColor: AttachedNode;
         public static progress: AttachedNode;
-        public progressColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public progressColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public progress: number | null | Bind;
     }
     export declare class RadialGradientBrush extends XF.GradientBrush {
         public static center: AttachedNode;
         public static radius: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
-        public center: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public center: RootObject | Bind;
+        /**
+        * System.Double
+        */
         public radius: number | null | Bind;
     }
     export declare class RadioButton extends XF.TemplatedView {
@@ -1310,23 +2404,62 @@ namespace XF {
         public static borderColor: AttachedNode;
         public static cornerRadius: AttachedNode;
         public static borderWidth: AttachedNode;
-        public static checkedVisualState: string | null | Bind;
-        public static uncheckedVisualState: string | null | Bind;
-        public static templateRootName: string | null | Bind;
-        public static checkedIndicator: string | null | Bind;
-        public static uncheckedButton: string | null | Bind;
-        public content: RootObject /*System.Object*/;
-        public value: RootObject /*System.Object*/;
+        public static checkedVisualState: string;
+        public static uncheckedVisualState: string;
+        public static templateRootName: string;
+        public static checkedIndicator: string;
+        public static uncheckedButton: string;
+        /**
+        * System.Object
+        */
+        public content: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Object
+        */
+        public value: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Boolean
+        */
         public isChecked: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public groupName: string | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * System.Double
+        */
         public borderWidth: number | null | Bind;
-        public borderColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public borderColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Int32
+        */
         public cornerRadius: number | null | Bind;
     }
     export declare class RadioButtonGroup extends RootObject {
@@ -1338,10 +2471,22 @@ namespace XF {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static refreshColor: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isRefreshing: boolean | null | Bind;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
-        public refreshColor: XF.Color;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public refreshColor: XF.Color | ColorItem | string | null | Bind;
     }
     export declare class RelativeLayout extends XF.Layout$Generic {
         public static boundsConstraint: AttachedNode;
@@ -1349,7 +2494,10 @@ namespace XF {
         public static widthConstraint: AttachedNode;
         public static xConstraint: AttachedNode;
         public static yConstraint: AttachedNode;
-        public children: RootObject;
+        /**
+        * Xamarin.Forms.RelativeLayout+IRelativeList`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public children: RootObject | Bind;
     }
     export declare class Routing extends RootObject {
         public static route: AttachedNode;
@@ -1358,7 +2506,10 @@ namespace XF {
     }
     export declare class RowDefinition extends XF.BindableObject {
         public static height: AttachedNode;
-        public height: RootObject;
+        /**
+        * Xamarin.Forms.GridLength
+        */
+        public height: RootObject | Bind;
     }
     export declare class ScrollView extends XF.Layout {
         public static orientation: AttachedNode;
@@ -1367,14 +2518,34 @@ namespace XF {
         public static contentSize: AttachedNode;
         public static horizontalScrollBarVisibility: AttachedNode;
         public static verticalScrollBarVisibility: AttachedNode;
-        public layoutAreaOverride: RootObject;
-        public content: XF.View;
+        /**
+        * Xamarin.Forms.View
+        */
+        public content: XF.View | Bind;
         public static content: AttachedNode;
-        public contentSize: RootObject;
+        /**
+        * Xamarin.Forms.Size
+        */
+        public contentSize: RootObject | Bind;
+        /**
+        * Xamarin.Forms.ScrollOrientation
+        */
         public orientation: "Vertical" | "Horizontal" | "Both" | "Neither" | string | number | null | undefined | Bind;
+        /**
+        * System.Double
+        */
         public scrollX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scrollY: number | null | Bind;
+        /**
+        * Xamarin.Forms.ScrollBarVisibility
+        */
         public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.ScrollBarVisibility
+        */
         public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
     }
     export declare class SearchBar extends XF.InputView {
@@ -1391,13 +2562,37 @@ namespace XF {
         public static verticalTextAlignment: AttachedNode;
         public static textColor: AttachedNode;
         public static characterSpacing: AttachedNode;
-        public cancelButtonColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public cancelButtonColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public searchCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public searchCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public searchCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public searchCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
     }
     export declare class BackButtonBehavior extends XF.BindableObject {
@@ -1406,10 +2601,25 @@ namespace XF {
         public static iconOverride: AttachedNode;
         public static isEnabled: AttachedNode;
         public static textOverride: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
-        public iconOverride: XF.ImageSource;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public iconOverride: XF.ImageSource | Bind;
+        /**
+        * System.Boolean
+        */
         public isEnabled: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public textOverride: string | null | Bind;
     }
     export declare class BaseShellItem extends XF.NavigableElement {
@@ -1421,25 +2631,68 @@ namespace XF {
         public static tabIndex: AttachedNode;
         public static isTabStop: AttachedNode;
         public static isVisible: AttachedNode;
-        public flyoutIcon: XF.ImageSource;
-        public icon: XF.ImageSource;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public flyoutIcon: XF.ImageSource | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public icon: XF.ImageSource | Bind;
+        /**
+        * System.Boolean
+        */
         public isChecked: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isEnabled: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public route: string | null | Bind;
+        /**
+        * System.String
+        */
         public title: string | null | Bind;
+        /**
+        * System.Int32
+        */
         public tabIndex: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isTabStop: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isVisible: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public flyoutItemIsVisible: boolean | null | Bind;
     }
     export declare class NavigableElement extends XF.Element {
         public static navigation: AttachedNode;
         public static style: AttachedNode;
-        public navigation: RootObject;
-        public style: XF.Style;
+        /**
+        * Xamarin.Forms.INavigation
+        */
+        public navigation: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Style
+        */
+        public style: XF.Style | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public styleClass: any;
         public static styleClass: AttachedNode;
+        /**
+        * System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public class: any;
         public static class: AttachedNode;
-        public navigationProxy: RootObject;
     }
     export declare class SearchHandler extends XF.BindableObject {
         public static isFocusedPropertyKey: RootObject;
@@ -1479,41 +2732,149 @@ namespace XF {
         public static searchBoxVisibility: AttachedNode;
         public static selectedItem: AttachedNode;
         public static showsResults: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isFocused: boolean | null | Bind;
-        public keyboard: RootObject;
+        /**
+        * Xamarin.Forms.Keyboard
+        */
+        public keyboard: RootObject | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TextAlignment
+        */
         public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
-        public cancelButtonColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public cancelButtonColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
-        public placeholderColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public placeholderColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.String
+        */
         public placeholder: string | null | Bind;
-        public backgroundColor: XF.Color;
-        public clearIcon: XF.ImageSource;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public backgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public clearIcon: XF.ImageSource | Bind;
+        /**
+        * System.String
+        */
         public clearIconHelpText: string | null | Bind;
+        /**
+        * System.String
+        */
         public clearIconName: string | null | Bind;
-        public clearPlaceholderCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public clearPlaceholderCommandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public clearPlaceholderCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public clearPlaceholderCommandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Boolean
+        */
         public clearPlaceholderEnabled: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public clearPlaceholderHelpText: string | null | Bind;
-        public clearPlaceholderIcon: XF.ImageSource;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public clearPlaceholderIcon: XF.ImageSource | Bind;
+        /**
+        * System.String
+        */
         public clearPlaceholderName: string | null | Bind;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.String
+        */
         public displayMemberName: string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isSearchEnabled: boolean | null | Bind;
-        public itemsSource: RootObject /*System.Collections.IEnumerable*/;
-        public itemTemplate: XF.DataTemplate;
+        /**
+        * System.Collections.IEnumerable
+        */
+        public itemsSource: RootObject /*System.Collections.IEnumerable*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public itemTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.String
+        */
         public query: string | null | Bind;
-        public queryIcon: XF.ImageSource;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public queryIcon: XF.ImageSource | Bind;
+        /**
+        * System.String
+        */
         public queryIconHelpText: string | null | Bind;
+        /**
+        * System.String
+        */
         public queryIconName: string | null | Bind;
+        /**
+        * Xamarin.Forms.SearchBoxVisibility
+        */
         public searchBoxVisibility: "Hidden" | "Collapsible" | "Expanded" | string | number | null | undefined | Bind;
-        public selectedItem: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public selectedItem: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Boolean
+        */
         public showsResults: boolean | null | Bind;
     }
     export declare class Shell extends XF.Page {
@@ -1559,63 +2920,169 @@ namespace XF {
         public static flyoutVerticalScrollMode: AttachedNode;
         public static flyoutContent: AttachedNode;
         public static flyoutContentTemplate: AttachedNode;
-        public currentPage: XF.Page;
+        /**
+        * Xamarin.Forms.Page
+        */
+        public currentPage: XF.Page | Bind;
         public static currentPage: AttachedNode;
+        /**
+        * Xamarin.Forms.ScrollMode
+        */
         public flyoutVerticalScrollMode: "Disabled" | "Enabled" | "Auto" | string | number | null | undefined | Bind;
-        public flyoutIcon: XF.ImageSource;
-        public currentItem: XF.ShellItem;
-        public currentState: RootObject;
-        public flyoutBackgroundImage: XF.ImageSource;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public flyoutIcon: XF.ImageSource | Bind;
+        /**
+        * Xamarin.Forms.ShellItem
+        */
+        public currentItem: XF.ShellItem | Bind;
+        /**
+        * Xamarin.Forms.ShellNavigationState
+        */
+        public currentState: RootObject | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public flyoutBackgroundImage: XF.ImageSource | Bind;
+        /**
+        * Xamarin.Forms.Aspect
+        */
         public flyoutBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
-        public flyoutBackgroundColor: XF.Color;
-        public flyoutBackground: XF.Brush;
-        public flyoutBackdrop: XF.Brush;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public flyoutBackgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public flyoutBackground: XF.Brush | Bind;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public flyoutBackdrop: XF.Brush | Bind;
+        /**
+        * System.Double
+        */
         public flyoutWidth: number | null | Bind;
+        /**
+        * System.Double
+        */
         public flyoutHeight: number | null | Bind;
+        /**
+        * Xamarin.Forms.FlyoutBehavior
+        */
         public flyoutBehavior: "Disabled" | "Flyout" | "Locked" | string | number | null | undefined | Bind;
-        public flyoutHeader: RootObject /*System.Object*/;
-        public flyoutFooter: RootObject /*System.Object*/;
+        /**
+        * System.Object
+        */
+        public flyoutHeader: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Object
+        */
+        public flyoutFooter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.FlyoutHeaderBehavior
+        */
         public flyoutHeaderBehavior: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | string | number | null | undefined | Bind;
-        public flyoutHeaderTemplate: XF.DataTemplate;
-        public flyoutFooterTemplate: XF.DataTemplate;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public flyoutHeaderTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public flyoutFooterTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Boolean
+        */
         public flyoutIsPresented: boolean | null | Bind;
-        public itemTemplate: XF.DataTemplate;
-        public menuItemTemplate: XF.DataTemplate;
-        public flyoutItems: RootObject /*System.Collections.IEnumerable*/;
-        public flyoutContent: RootObject /*System.Object*/;
-        public flyoutContentTemplate: XF.DataTemplate;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.ShellItem, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public items: any;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public itemTemplate: XF.DataTemplate | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public menuItemTemplate: XF.DataTemplate | Bind;
+        /**
+        * System.Collections.IEnumerable
+        */
+        public flyoutItems: RootObject /*System.Collections.IEnumerable*/ | Bind;
+        /**
+        * System.Object
+        */
+        public flyoutContent: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public flyoutContentTemplate: XF.DataTemplate | Bind;
     }
     export declare class ShellContent extends XF.BaseShellItem {
         public static menuItems: AttachedNode;
         public static content: AttachedNode;
         public static contentTemplate: AttachedNode;
-        public content: RootObject /*System.Object*/;
-        public contentTemplate: XF.DataTemplate;
+        /**
+        * Xamarin.Forms.MenuItemCollection
+        */
+        public menuItems: any;
+        /**
+        * System.Object
+        */
+        public content: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.DataTemplate
+        */
+        public contentTemplate: XF.DataTemplate | Bind;
     }
     export declare class ShellGroupItem extends XF.BaseShellItem {
         public static flyoutDisplayOptions: AttachedNode;
+        /**
+        * Xamarin.Forms.FlyoutDisplayOptions
+        */
         public flyoutDisplayOptions: "AsSingleItem" | "AsMultipleItems" | string | number | null | undefined | Bind;
     }
     export declare class FlyoutItem extends XF.ShellItem {
         public static isVisible: AttachedNode;
-        public static labelStyle: string | null | Bind;
-        public static imageStyle: string | null | Bind;
-        public static layoutStyle: string | null | Bind;
+        public static labelStyle: string;
+        public static imageStyle: string;
+        public static layoutStyle: string;
     }
     export declare class TabBar extends XF.ShellItem {
     }
     export declare class ShellItem extends XF.ShellGroupItem {
         public static currentItem: AttachedNode;
         public static items: AttachedNode;
-        public currentItem: XF.ShellSection;
+        /**
+        * Xamarin.Forms.ShellSection
+        */
+        public currentItem: XF.ShellSection | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.ShellSection, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public items: any;
     }
     export declare class Tab extends XF.ShellSection {
     }
     export declare class ShellSection extends XF.ShellGroupItem {
         public static currentItem: AttachedNode;
         public static items: AttachedNode;
-        public currentItem: XF.ShellContent;
-        public stack: RootObject /*System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/;
+        /**
+        * Xamarin.Forms.ShellContent
+        */
+        public currentItem: XF.ShellContent | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.ShellContent, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public items: any;
+        /**
+        * System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public stack: RootObject /*System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/ | Bind;
     }
     export declare class Slider extends XF.View {
         public static minimum: AttachedNode;
@@ -1628,21 +3095,53 @@ namespace XF {
         public static thumbImage: AttachedNode;
         public static dragStartedCommand: AttachedNode;
         public static dragCompletedCommand: AttachedNode;
-        public minimumTrackColor: XF.Color;
-        public maximumTrackColor: XF.Color;
-        public thumbColor: XF.Color;
-        public thumbImageSource: XF.ImageSource;
-        public thumbImage: XF.FileImageSource;
-        public dragStartedCommand: RootObject /*System.Windows.Input.ICommand*/;
-        public dragCompletedCommand: RootObject /*System.Windows.Input.ICommand*/;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public minimumTrackColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public maximumTrackColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public thumbColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.ImageSource
+        */
+        public thumbImageSource: XF.ImageSource | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dragStartedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public dragCompletedCommand: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Double
+        */
         public maximum: number | null | Bind;
+        /**
+        * System.Double
+        */
         public minimum: number | null | Bind;
+        /**
+        * System.Double
+        */
         public value: number | null | Bind;
     }
     export declare class SolidColorBrush extends XF.Brush {
         public static color: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
-        public color: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public color: XF.Color | ColorItem | string | null | Bind;
     }
     export declare class Span extends XF.GestureElement {
         public static style: AttachedNode;
@@ -1658,32 +3157,82 @@ namespace XF {
         public static fontSize: AttachedNode;
         public static fontAttributes: AttachedNode;
         public static lineHeight: AttachedNode;
-        public style: XF.Style;
-        public backgroundColor: XF.Color;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Style
+        */
+        public style: XF.Style | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public backgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
-        public foregroundColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public foregroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.String
+        */
         public text: string | null | Bind;
-        public font: RootObject;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextDecorations
+        */
         public textDecorations: "None" | "Underline" | "Strikethrough" | string | number | null | undefined | Bind;
+        /**
+        * System.Double
+        */
         public lineHeight: number | null | Bind;
     }
     export declare class StackLayout extends XF.Layout$Generic {
         public static orientation: AttachedNode;
         public static spacing: AttachedNode;
+        /**
+        * Xamarin.Forms.StackOrientation
+        */
         public orientation: "Vertical" | "Horizontal" | string | number | null | undefined | Bind;
+        /**
+        * System.Double
+        */
         public spacing: number | null | Bind;
     }
     export declare class StateTrigger extends XF.StateTriggerBase {
         public static isActive: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isActive: boolean | null | Bind;
     }
     export declare class StateTriggerBase extends XF.BindableObject {
+        /**
+        * System.Boolean
+        */
         public isActive: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isAttached: boolean | null | Bind;
     }
     export declare class Stepper extends XF.View {
@@ -1692,59 +3241,145 @@ namespace XF {
         public static value: AttachedNode;
         public static increment: AttachedNode;
         public static stepperPosition: AttachedNode;
+        /**
+        * System.Double
+        */
         public increment: number | null | Bind;
+        /**
+        * System.Double
+        */
         public maximum: number | null | Bind;
+        /**
+        * System.Double
+        */
         public minimum: number | null | Bind;
+        /**
+        * System.Double
+        */
         public value: number | null | Bind;
-        public stepperPosition: number | null | Bind;
     }
     export declare class StreamImageSource extends XF.ImageSource {
         public static stream: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
-        public stream: RootObject /*System.Func`2[[System.Threading.CancellationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Threading.Tasks.Task`1[[System.IO.Stream, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
+        /**
+        * System.Func`2[[System.Threading.CancellationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Threading.Tasks.Task`1[[System.IO.Stream, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+        */
+        public stream: RootObject /*System.Func`2[[System.Threading.CancellationToken, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Threading.Tasks.Task`1[[System.IO.Stream, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/ | Bind;
     }
     export declare class Style extends RootObject {
+        /**
+        * System.Boolean
+        */
         public applyToDerivedTypes: boolean | null | Bind;
-        public basedOn: XF.Style;
+        /**
+        * Xamarin.Forms.Style
+        */
+        public basedOn: XF.Style | Bind;
         public static basedOn: AttachedNode;
+        /**
+        * System.String
+        */
         public baseResourceKey: string | null | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Behavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public behaviors: any;
         public static behaviors: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public canCascade: boolean | null | Bind;
+        /**
+        * System.String
+        */
         public class: string | null | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Setter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public setters: any;
         public static setters: AttachedNode;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.TriggerBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public triggers: any;
         public static triggers: AttachedNode;
-        public targetType: RootObject /*System.Type*/;
+        /**
+        * System.Type
+        */
+        public targetType: RootObject /*System.Type*/ | Bind;
     }
     export declare class SwipeGestureRecognizer extends XF.GestureRecognizer {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
         public static direction: AttachedNode;
         public static threshold: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * Xamarin.Forms.SwipeDirection
+        */
         public direction: "Right" | "Left" | "Up" | "Down" | string | number | null | undefined | Bind;
+        /**
+        * System.UInt32
+        */
         public threshold: number | null | Bind;
     }
     export declare class SwipeItem extends XF.MenuItem {
         public static backgroundColor: AttachedNode;
         public static isVisible: AttachedNode;
-        public backgroundColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public backgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isVisible: boolean | null | Bind;
     }
     export declare class SwipeItems extends XF.Element {
         public static mode: AttachedNode;
         public static swipeBehaviorOnInvoked: AttachedNode;
+        /**
+        * Xamarin.Forms.SwipeMode
+        */
         public mode: "Reveal" | "Execute" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.SwipeBehaviorOnInvoked
+        */
         public swipeBehaviorOnInvoked: "Auto" | "Close" | "RemainOpen" | string | number | null | undefined | Bind;
-        public item: RootObject;
+        /**
+        * Xamarin.Forms.ISwipeItem
+        */
+        public item: RootObject | Bind;
+        /**
+        * System.Int32
+        */
         public count: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isReadOnly: boolean | null | Bind;
     }
     export declare class SwipeItemView extends XF.ContentView {
         public static command: AttachedNode;
         public static commandParameter: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
     }
     export declare class SwipeView extends XF.ContentView {
         public static threshold: AttachedNode;
@@ -1752,16 +3387,44 @@ namespace XF {
         public static rightItems: AttachedNode;
         public static topItems: AttachedNode;
         public static bottomItems: AttachedNode;
+        /**
+        * System.Double
+        */
         public threshold: number | null | Bind;
+        /**
+        * Xamarin.Forms.SwipeItems
+        */
+        public leftItems: any;
+        /**
+        * Xamarin.Forms.SwipeItems
+        */
+        public rightItems: any;
+        /**
+        * Xamarin.Forms.SwipeItems
+        */
+        public topItems: any;
+        /**
+        * Xamarin.Forms.SwipeItems
+        */
+        public bottomItems: any;
     }
     export declare class Switch extends XF.View {
         public static isToggled: AttachedNode;
         public static onColor: AttachedNode;
         public static thumbColor: AttachedNode;
-        public static switchOnVisualState: string | null | Bind;
-        public static switchOffVisualState: string | null | Bind;
-        public onColor: XF.Color;
-        public thumbColor: XF.Color;
+        public static switchOnVisualState: string;
+        public static switchOffVisualState: string;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public onColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public thumbColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isToggled: boolean | null | Bind;
     }
     export declare class TabbedPage extends XF.MultiPage$Generic {
@@ -1770,17 +3433,38 @@ namespace XF {
         public static barTextColor: AttachedNode;
         public static unselectedTabColor: AttachedNode;
         public static selectedTabColor: AttachedNode;
-        public barBackgroundColor: XF.Color;
-        public barBackground: XF.Brush;
-        public barTextColor: XF.Color;
-        public unselectedTabColor: XF.Color;
-        public selectedTabColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public barBackgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public barBackground: XF.Brush | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public barTextColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public unselectedTabColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public selectedTabColor: XF.Color | ColorItem | string | null | Bind;
     }
     export declare class TableRoot extends XF.TableSectionBase$Generic {
     }
     export declare class TableSectionBase$Generic extends XF.TableSectionBase {
+        /**
+        * System.Int32
+        */
         public count: number | null | Bind;
-        public item: RootObject;
+        /**
+        * 
+        */
+        public item: RootObject | Bind;
         public static item: AttachedNode;
     }
     export declare class TableSection extends XF.TableSectionBase$Generic {
@@ -1788,17 +3472,35 @@ namespace XF {
     export declare class TableSectionBase extends XF.BindableObject {
         public static title: AttachedNode;
         public static textColor: AttachedNode;
+        /**
+        * System.String
+        */
         public title: string | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
     }
     export declare class TableView extends XF.View {
         public static rowHeight: AttachedNode;
         public static hasUnevenRows: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public hasUnevenRows: boolean | null | Bind;
+        /**
+        * Xamarin.Forms.TableIntent
+        */
         public intent: "Menu" | "Settings" | "Form" | "Data" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.TableRoot
+        */
+        public root: any;
         public static root: AttachedNode;
+        /**
+        * System.Int32
+        */
         public rowHeight: number | null | Bind;
-        public model: RootObject;
     }
     export declare class TapGestureRecognizer extends XF.GestureRecognizer {
         public static command: AttachedNode;
@@ -1806,19 +3508,32 @@ namespace XF {
         public static numberOfTapsRequired: AttachedNode;
         public static tappedCallback: AttachedNode;
         public static tappedCallbackParameter: AttachedNode;
-        public command: RootObject /*System.Windows.Input.ICommand*/;
-        public commandParameter: RootObject /*System.Object*/;
+        /**
+        * System.Windows.Input.ICommand
+        */
+        public command: RootObject /*System.Windows.Input.ICommand*/ | Bind;
+        /**
+        * System.Object
+        */
+        public commandParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Int32
+        */
         public numberOfTapsRequired: number | null | Bind;
-        public tappedCallback: RootObject /*System.Action`2[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
-        public tappedCallbackParameter: RootObject /*System.Object*/;
     }
     export declare class TemplatedPage extends XF.Page {
         public static controlTemplate: AttachedNode;
-        public controlTemplate: XF.ControlTemplate;
+        /**
+        * Xamarin.Forms.ControlTemplate
+        */
+        public controlTemplate: XF.ControlTemplate | Bind;
     }
     export declare class TemplatedView extends XF.Layout {
         public static controlTemplate: AttachedNode;
-        public controlTemplate: XF.ControlTemplate;
+        /**
+        * Xamarin.Forms.ControlTemplate
+        */
+        public controlTemplate: XF.ControlTemplate | Bind;
     }
     export declare class TimePicker extends XF.View {
         public static format: AttachedNode;
@@ -1829,39 +3544,96 @@ namespace XF {
         public static fontSize: AttachedNode;
         public static fontAttributes: AttachedNode;
         public static textTransform: AttachedNode;
+        /**
+        * System.String
+        */
         public format: string | null | Bind;
-        public textColor: XF.Color;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public textColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * System.Double
+        */
         public characterSpacing: number | null | Bind;
-        public time: RootObject /*System.TimeSpan*/;
+        /**
+        * System.TimeSpan
+        */
+        public time: RootObject /*System.TimeSpan*/ | Bind;
+        /**
+        * Xamarin.Forms.FontAttributes
+        */
         public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        /**
+        * System.String
+        */
         public fontFamily: string | null | Bind;
+        /**
+        * System.Double
+        */
         public fontSize: number | null | Bind;
+        /**
+        * Xamarin.Forms.TextTransform
+        */
         public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
     }
     export declare class ToolbarItem extends XF.MenuItem {
-        public name: string | null | Bind;
+        /**
+        * Xamarin.Forms.ToolbarItemOrder
+        */
         public order: "Default" | "Primary" | "Secondary" | string | number | null | undefined | Bind;
+        /**
+        * System.Int32
+        */
         public priority: number | null | Bind;
     }
     export declare class UriImageSource extends XF.ImageSource {
         public static uri: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public isEmpty: boolean | null | Bind;
-        public cacheValidity: RootObject /*System.TimeSpan*/;
+        /**
+        * System.TimeSpan
+        */
+        public cacheValidity: RootObject /*System.TimeSpan*/ | Bind;
+        /**
+        * System.Boolean
+        */
         public cachingEnabled: boolean | null | Bind;
-        public uri: RootObject /*System.Uri*/;
+        /**
+        * System.Uri
+        */
+        public uri: RootObject /*System.Uri*/ | Bind;
     }
     export declare class UrlWebViewSource extends XF.WebViewSource {
         public static url: AttachedNode;
+        /**
+        * System.String
+        */
         public url: string | null | Bind;
     }
     export declare class View extends XF.VisualElement {
         public static verticalOptions: AttachedNode;
         public static horizontalOptions: AttachedNode;
         public static margin: AttachedNode;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.IGestureRecognizer, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public gestureRecognizers: any;
         public static gestureRecognizers: AttachedNode;
-        public horizontalOptions: RootObject;
-        public margin: RootObject;
-        public verticalOptions: RootObject;
+        /**
+        * Xamarin.Forms.LayoutOptions
+        */
+        public horizontalOptions: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Thickness
+        */
+        public margin: RootObject | Bind;
+        /**
+        * Xamarin.Forms.LayoutOptions
+        */
+        public verticalOptions: RootObject | Bind;
     }
     export declare class VisualElement extends XF.NavigableElement {
         public static navigation: AttachedNode;
@@ -1899,42 +3671,142 @@ namespace XF {
         public static flowDirection: AttachedNode;
         public static tabIndex: AttachedNode;
         public static isTabStop: AttachedNode;
-        public visual: RootObject;
+        /**
+        * Xamarin.Forms.IVisual
+        */
+        public visual: RootObject | Bind;
+        /**
+        * Xamarin.Forms.FlowDirection
+        */
         public flowDirection: "MatchParent" | "LeftToRight" | "RightToLeft" | string | number | null | undefined | Bind;
+        /**
+        * System.Double
+        */
         public anchorX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public anchorY: number | null | Bind;
-        public backgroundColor: XF.Color;
-        public background: XF.Brush;
-        public bounds: RootObject;
+        /**
+        * Xamarin.Forms.Color
+        */
+        public backgroundColor: XF.Color | ColorItem | string | null | Bind;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public background: XF.Brush | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.Behavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public behaviors: any;
+        /**
+        * Xamarin.Forms.Rectangle
+        */
+        public bounds: RootObject | Bind;
+        /**
+        * System.Double
+        */
         public height: number | null | Bind;
+        /**
+        * System.Double
+        */
         public heightRequest: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public inputTransparent: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isEnabled: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isFocused: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isVisible: boolean | null | Bind;
+        /**
+        * System.Double
+        */
         public minimumHeightRequest: number | null | Bind;
+        /**
+        * System.Double
+        */
         public minimumWidthRequest: number | null | Bind;
+        /**
+        * System.Double
+        */
         public opacity: number | null | Bind;
+        /**
+        * System.Double
+        */
         public rotation: number | null | Bind;
+        /**
+        * System.Double
+        */
         public rotationX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public rotationY: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scale: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scaleX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scaleY: number | null | Bind;
+        /**
+        * System.Int32
+        */
         public tabIndex: number | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isTabStop: boolean | null | Bind;
+        /**
+        * System.Double
+        */
         public translationX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public translationY: number | null | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.TriggerBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public triggers: any;
+        /**
+        * System.Double
+        */
         public width: number | null | Bind;
+        /**
+        * System.Double
+        */
         public widthRequest: number | null | Bind;
+        /**
+        * System.Double
+        */
         public x: number | null | Bind;
+        /**
+        * System.Double
+        */
         public y: number | null | Bind;
-        public clip: XF.Geometry;
-        public batched: boolean | null | Bind;
-        public disableLayout: boolean | null | Bind;
-        public isInNativeLayout: boolean | null | Bind;
-        public isNativeStateConsistent: boolean | null | Bind;
-        public isPlatformEnabled: boolean | null | Bind;
+        /**
+        * Xamarin.Forms.Shapes.Geometry
+        */
+        public clip: XF.Geometry | Bind;
+        /**
+        * Xamarin.Forms.ResourceDictionary
+        */
+        public resources: any;
         public static resources: AttachedNode;
     }
     export declare class VisualStateManager extends RootObject {
@@ -1946,10 +3818,22 @@ namespace XF {
         public static canGoBack: AttachedNode;
         public static canGoForward: AttachedNode;
         public static cookies: AttachedNode;
+        /**
+        * System.Boolean
+        */
         public canGoBack: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public canGoForward: boolean | null | Bind;
-        public cookies: RootObject /*System.Net.CookieContainer*/;
-        public source: XF.WebViewSource;
+        /**
+        * System.Net.CookieContainer
+        */
+        public cookies: RootObject /*System.Net.CookieContainer*/ | Bind;
+        /**
+        * Xamarin.Forms.WebViewSource
+        */
+        public source: XF.WebViewSource | Bind;
     }
     export declare class WebViewSource extends XF.BindableObject {
     }
@@ -1961,19 +3845,43 @@ namespace XF {
         public static rotationAngle: AttachedNode;
         public static sweepDirection: AttachedNode;
         public static isLargeArc: AttachedNode;
-        public point: RootObject;
-        public size: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Size
+        */
+        public size: RootObject | Bind;
+        /**
+        * System.Double
+        */
         public rotationAngle: number | null | Bind;
+        /**
+        * Xamarin.Forms.SweepDirection
+        */
         public sweepDirection: "CounterClockwise" | "Clockwise" | string | number | null | undefined | Bind;
+        /**
+        * System.Boolean
+        */
         public isLargeArc: boolean | null | Bind;
     }
     export declare class BezierSegment extends XF.PathSegment {
         public static point1: AttachedNode;
         public static point2: AttachedNode;
         public static point3: AttachedNode;
-        public point1: RootObject;
-        public point2: RootObject;
-        public point3: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point1: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point2: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point3: RootObject | Bind;
     }
     export declare class CompositeTransform extends XF.Transform {
         public static centerX: AttachedNode;
@@ -1985,14 +3893,41 @@ namespace XF {
         public static rotation: AttachedNode;
         public static translateX: AttachedNode;
         public static translateY: AttachedNode;
+        /**
+        * System.Double
+        */
         public centerX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerY: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scaleX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scaleY: number | null | Bind;
+        /**
+        * System.Double
+        */
         public skewX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public skewY: number | null | Bind;
+        /**
+        * System.Double
+        */
         public rotation: number | null | Bind;
+        /**
+        * System.Double
+        */
         public translateX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public translateY: number | null | Bind;
     }
     export declare class Ellipse extends XF.Shape {
@@ -2001,8 +3936,17 @@ namespace XF {
         public static center: AttachedNode;
         public static radiusX: AttachedNode;
         public static radiusY: AttachedNode;
-        public center: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public center: RootObject | Bind;
+        /**
+        * System.Double
+        */
         public radiusX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public radiusY: number | null | Bind;
     }
     export declare class Geometry extends XF.BindableObject {
@@ -2010,6 +3954,13 @@ namespace XF {
     export declare class GeometryGroup extends XF.Geometry {
         public static children: AttachedNode;
         public static fillRule: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.GeometryCollection
+        */
+        public children: any;
+        /**
+        * Xamarin.Forms.Shapes.FillRule
+        */
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
     }
     export declare class GeometryHelper extends RootObject {
@@ -2020,104 +3971,222 @@ namespace XF {
         public static y1: AttachedNode;
         public static x2: AttachedNode;
         public static y2: AttachedNode;
+        /**
+        * System.Double
+        */
         public x1: number | null | Bind;
+        /**
+        * System.Double
+        */
         public y1: number | null | Bind;
+        /**
+        * System.Double
+        */
         public x2: number | null | Bind;
+        /**
+        * System.Double
+        */
         public y2: number | null | Bind;
     }
     export declare class LineGeometry extends XF.Geometry {
         public static startPoint: AttachedNode;
         public static endPoint: AttachedNode;
-        public startPoint: RootObject;
-        public endPoint: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public startPoint: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public endPoint: RootObject | Bind;
     }
     export declare class LineSegment extends XF.PathSegment {
         public static point: AttachedNode;
-        public point: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point: RootObject | Bind;
     }
     export declare class MatrixTransform extends XF.Transform {
         public static matrix: AttachedNode;
-        public matrix: RootObject;
+        /**
+        * Xamarin.Forms.Shapes.Matrix
+        */
+        public matrix: RootObject | Bind;
     }
     export declare class Path extends XF.Shape {
         public static data: AttachedNode;
         public static renderTransform: AttachedNode;
-        public data: XF.Geometry;
-        public renderTransform: XF.Transform;
+        /**
+        * Xamarin.Forms.Shapes.Geometry
+        */
+        public data: XF.Geometry | Bind;
+        /**
+        * Xamarin.Forms.Shapes.Transform
+        */
+        public renderTransform: XF.Transform | Bind;
     }
     export declare class PathFigure extends XF.BindableObject {
         public static segments: AttachedNode;
         public static startPoint: AttachedNode;
         public static isClosed: AttachedNode;
         public static isFilled: AttachedNode;
-        public startPoint: RootObject;
+        /**
+        * Xamarin.Forms.Shapes.PathSegmentCollection
+        */
+        public segments: any;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public startPoint: RootObject | Bind;
+        /**
+        * System.Boolean
+        */
         public isClosed: boolean | null | Bind;
+        /**
+        * System.Boolean
+        */
         public isFilled: boolean | null | Bind;
     }
     export declare class PathGeometry extends XF.Geometry {
         public static figures: AttachedNode;
         public static fillRule: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.PathFigureCollection
+        */
+        public figures: any;
+        /**
+        * Xamarin.Forms.Shapes.FillRule
+        */
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
     }
     export declare class PathSegment extends XF.BindableObject {
     }
     export declare class PolyBezierSegment extends XF.PathSegment {
         public static points: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.PointCollection
+        */
+        public points: any;
     }
     export declare class Polygon extends XF.Shape {
         public static points: AttachedNode;
         public static fillRule: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.PointCollection
+        */
+        public points: any;
+        /**
+        * Xamarin.Forms.Shapes.FillRule
+        */
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
     }
     export declare class Polyline extends XF.Shape {
         public static points: AttachedNode;
         public static fillRule: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.PointCollection
+        */
+        public points: any;
+        /**
+        * Xamarin.Forms.Shapes.FillRule
+        */
         public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
     }
     export declare class PolyLineSegment extends XF.PathSegment {
         public static points: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.PointCollection
+        */
+        public points: any;
     }
     export declare class PolyQuadraticBezierSegment extends XF.PathSegment {
         public static points: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.PointCollection
+        */
+        public points: any;
     }
     export declare class QuadraticBezierSegment extends XF.PathSegment {
         public static point1: AttachedNode;
         public static point2: AttachedNode;
-        public point1: RootObject;
-        public point2: RootObject;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point1: RootObject | Bind;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public point2: RootObject | Bind;
     }
     export declare class Rectangle extends XF.Shape {
         public static radiusX: AttachedNode;
         public static radiusY: AttachedNode;
+        /**
+        * System.Double
+        */
         public radiusX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public radiusY: number | null | Bind;
     }
     export declare class RectangleGeometry extends XF.Geometry {
         public static rect: AttachedNode;
-        public rect: RootObject;
+        /**
+        * Xamarin.Forms.Rect
+        */
+        public rect: RootObject | Bind;
     }
     export declare class RotateTransform extends XF.Transform {
         public static angle: AttachedNode;
         public static centerX: AttachedNode;
         public static centerY: AttachedNode;
+        /**
+        * System.Double
+        */
         public angle: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerY: number | null | Bind;
     }
     export declare class RoundRectangleGeometry extends XF.GeometryGroup {
         public static rect: AttachedNode;
         public static cornerRadius: AttachedNode;
-        public rect: RootObject;
-        public cornerRadius: RootObject;
+        /**
+        * Xamarin.Forms.Rect
+        */
+        public rect: RootObject | Bind;
+        /**
+        * Xamarin.Forms.CornerRadius
+        */
+        public cornerRadius: RootObject | Bind;
     }
     export declare class ScaleTransform extends XF.Transform {
         public static scaleX: AttachedNode;
         public static scaleY: AttachedNode;
         public static centerX: AttachedNode;
         public static centerY: AttachedNode;
+        /**
+        * System.Double
+        */
         public scaleX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public scaleY: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerY: number | null | Bind;
     }
     export declare class Shape extends XF.View {
@@ -2130,13 +4199,41 @@ namespace XF {
         public static strokeLineJoin: AttachedNode;
         public static strokeMiterLimit: AttachedNode;
         public static aspect: AttachedNode;
-        public fill: XF.Brush;
-        public stroke: XF.Brush;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public fill: XF.Brush | Bind;
+        /**
+        * Xamarin.Forms.Brush
+        */
+        public stroke: XF.Brush | Bind;
+        /**
+        * System.Double
+        */
         public strokeThickness: number | null | Bind;
+        /**
+        * Xamarin.Forms.DoubleCollection
+        */
+        public strokeDashArray: any;
+        /**
+        * System.Double
+        */
         public strokeDashOffset: number | null | Bind;
+        /**
+        * Xamarin.Forms.Shapes.PenLineCap
+        */
         public strokeLineCap: "Flat" | "Square" | "Round" | string | number | null | undefined | Bind;
+        /**
+        * Xamarin.Forms.Shapes.PenLineJoin
+        */
         public strokeLineJoin: "Miter" | "Bevel" | "Round" | string | number | null | undefined | Bind;
+        /**
+        * System.Double
+        */
         public strokeMiterLimit: number | null | Bind;
+        /**
+        * Xamarin.Forms.Stretch
+        */
         public aspect: "None" | "Fill" | "Uniform" | "UniformToFill" | string | number | null | undefined | Bind;
     }
     export declare class SkewTransform extends XF.Transform {
@@ -2144,22 +4241,47 @@ namespace XF {
         public static angleY: AttachedNode;
         public static centerX: AttachedNode;
         public static centerY: AttachedNode;
+        /**
+        * System.Double
+        */
         public angleX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public angleY: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerX: number | null | Bind;
+        /**
+        * System.Double
+        */
         public centerY: number | null | Bind;
     }
     export declare class Transform extends XF.BindableObject {
         public static value: AttachedNode;
-        public value: RootObject;
+        /**
+        * Xamarin.Forms.Shapes.Matrix
+        */
+        public value: RootObject | Bind;
     }
     export declare class TransformGroup extends XF.Transform {
         public static children: AttachedNode;
+        /**
+        * Xamarin.Forms.Shapes.TransformCollection
+        */
+        public children: any;
     }
     export declare class TranslateTransform extends XF.Transform {
         public static x: AttachedNode;
         public static y: AttachedNode;
+        /**
+        * System.Double
+        */
         public x: number | null | Bind;
+        /**
+        * System.Double
+        */
         public y: number | null | Bind;
     }
 }
@@ -2433,23 +4555,69 @@ export namespace Xamarin {
             export declare class TemplatedItemsList$Generic extends XF.BindableObject {
                 public static name: AttachedNode;
                 public static shortName: AttachedNode;
-                public groupDisplayBinding: RootObject;
-                public groupHeaderTemplate: XF.DataTemplate;
+                /**
+                * Xamarin.Forms.BindingBase
+                */
+                public groupDisplayBinding: RootObject | Bind;
+                /**
+                * Xamarin.Forms.DataTemplate
+                */
+                public groupHeaderTemplate: XF.DataTemplate | Bind;
                 public static groupHeaderTemplate: AttachedNode;
-                public groupHeaderTemplateProperty: RootObject;
-                public groupShortNameBinding: RootObject;
-                public headerContent: RootObject;
+                /**
+                * Xamarin.Forms.BindableProperty
+                */
+                public groupHeaderTemplateProperty: RootObject | Bind;
+                /**
+                * Xamarin.Forms.BindingBase
+                */
+                public groupShortNameBinding: RootObject | Bind;
+                /**
+                * 
+                */
+                public headerContent: RootObject | Bind;
                 public static headerContent: AttachedNode;
+                /**
+                * System.Boolean
+                */
                 public isGroupingEnabled: boolean | null | Bind;
-                public isGroupingEnabledProperty: RootObject;
-                public itemsSource: RootObject /*System.Collections.IEnumerable*/;
+                /**
+                * Xamarin.Forms.BindableProperty
+                */
+                public isGroupingEnabledProperty: RootObject | Bind;
+                /**
+                * System.Collections.IEnumerable
+                */
+                public itemsSource: RootObject /*System.Collections.IEnumerable*/ | Bind;
+                /**
+                * System.String
+                */
                 public name: string | null | Bind;
+                /**
+                * Xamarin.Forms.Internals.TemplatedItemsList`2
+                */
+                public parent: any;
                 public static parent: AttachedNode;
-                public progressiveLoadingProperty: RootObject;
+                /**
+                * Xamarin.Forms.BindableProperty
+                */
+                public progressiveLoadingProperty: RootObject | Bind;
+                /**
+                * System.String
+                */
                 public shortName: string | null | Bind;
-                public shortNames: RootObject /*System.Collections.Generic.IReadOnlyList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/;
+                /**
+                * System.Collections.Generic.IReadOnlyList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+                */
+                public shortNames: RootObject /*System.Collections.Generic.IReadOnlyList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]*/ | Bind;
+                /**
+                * System.Int32
+                */
                 public count: number | null | Bind;
-                public item: RootObject;
+                /**
+                * 
+                */
+                public item: RootObject | Bind;
                 public static item: AttachedNode;
             }
         }
