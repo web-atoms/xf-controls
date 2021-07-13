@@ -24,7 +24,7 @@ function create(name: string, ns: string) {
     };
 }
 
-export namespace FFImageLoading {
+namespace FFImageLoading {
     export namespace Forms {
         export declare class CachedImage extends XF.default.View {
             public static fixedOnMeasureBehavior: boolean | null;
@@ -201,6 +201,9 @@ export namespace FFImageLoading {
         }
     }
 }
+
+export default FFImageLoading;
+
 ns = "FFImageLoading.Forms";
 Object.defineProperties(FFImageLoading.Forms as any, {
     CachedImage: create("CachedImage",ns),
