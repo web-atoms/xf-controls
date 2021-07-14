@@ -85,11 +85,11 @@ namespace XF {
         /**
         * Xamarin.Forms.OSAppTheme
         */
-        public userAppTheme: "Unspecified" | "Light" | "Dark" | string | number | null | undefined | Bind;
+        public userAppTheme: "Unspecified" | "Light" | "Dark" | Bind;
         /**
         * Xamarin.Forms.OSAppTheme
         */
-        public requestedTheme: "Unspecified" | "Light" | "Dark" | string | number | null | undefined | Bind;
+        public requestedTheme: "Unspecified" | "Light" | "Dark" | Bind;
     }
     export declare class AppLinkEntry extends XF.Element {
         public static title: AttachedNode;
@@ -384,7 +384,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -396,7 +396,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
     }
     export declare class CarouselPage extends XF.MultiPage$Generic {
     }
@@ -441,11 +441,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public horizontalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public verticalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.Keyboard
         */
@@ -563,7 +563,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ButtonsMask
         */
-        public buttons: "Primary" | "Secondary" | string | number | null | undefined | Bind;
+        public buttons: "Primary" | "Secondary" | Bind;
     }
     export declare class Color extends RootObject /*System.ValueType*/ {
         public static default: XF.Color | ColorItem | string | null;
@@ -822,7 +822,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
         /**
         * System.DateTime
         */
@@ -842,7 +842,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -950,11 +950,11 @@ namespace XF {
         /**
         * Xamarin.Forms.EditorAutoSizeOption
         */
-        public autoSize: "Disabled" | "TextChanges" | string | number | null | undefined | Bind;
+        public autoSize: "Disabled" | "TextChanges" | Bind;
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.Boolean
         */
@@ -1038,11 +1038,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public horizontalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public verticalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * System.Boolean
         */
@@ -1050,7 +1050,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -1066,7 +1066,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ReturnType
         */
-        public returnType: "Default" | "Done" | "Go" | "Next" | "Search" | "Send" | string | number | null | undefined | Bind;
+        public returnType: "Default" | "Done" | "Go" | "Next" | "Search" | "Send" | Bind;
         /**
         * System.Int32
         */
@@ -1086,7 +1086,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ClearButtonVisibility
         */
-        public clearButtonVisibility: "Never" | "WhileEditing" | string | number | null | undefined | Bind;
+        public clearButtonVisibility: "Never" | "WhileEditing" | Bind;
     }
     export declare class FileImageSource extends XF.ImageSource {
         public static file: AttachedNode;
@@ -1114,27 +1114,27 @@ namespace XF {
         /**
         * Xamarin.Forms.FlexDirection
         */
-        public direction: "Row" | "RowReverse" | "Column" | "ColumnReverse" | string | number | null | undefined | Bind;
+        public direction: "Row" | "RowReverse" | "Column" | "ColumnReverse" | Bind;
         /**
         * Xamarin.Forms.FlexJustify
         */
-        public justifyContent: "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | string | number | null | undefined | Bind;
+        public justifyContent: "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
         /**
         * Xamarin.Forms.FlexAlignContent
         */
-        public alignContent: "Stretch" | "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | string | number | null | undefined | Bind;
+        public alignContent: "Stretch" | "Center" | "Start" | "End" | "SpaceBetween" | "SpaceAround" | "SpaceEvenly" | Bind;
         /**
         * Xamarin.Forms.FlexAlignItems
         */
-        public alignItems: "Stretch" | "Center" | "Start" | "End" | string | number | null | undefined | Bind;
+        public alignItems: "Stretch" | "Center" | "Start" | "End" | Bind;
         /**
         * Xamarin.Forms.FlexPosition
         */
-        public position: "Relative" | "Absolute" | string | number | null | undefined | Bind;
+        public position: "Relative" | "Absolute" | Bind;
         /**
         * Xamarin.Forms.FlexWrap
         */
-        public wrap: "NoWrap" | "Wrap" | "Reverse" | string | number | null | undefined | Bind;
+        public wrap: "NoWrap" | "Wrap" | "Reverse" | Bind;
     }
     export declare class FlyoutPage extends XF.Page {
         public static isGestureEnabled: AttachedNode;
@@ -1161,7 +1161,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FlyoutLayoutBehavior
         */
-        public flyoutLayoutBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
+        public flyoutLayoutBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | Bind;
     }
     export declare class MasterDetailPage extends XF.FlyoutPage {
         public static masterBehavior: AttachedNode;
@@ -1173,7 +1173,7 @@ namespace XF {
         /**
         * Xamarin.Forms.MasterBehavior
         */
-        public masterBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | string | number | null | undefined | Bind;
+        public masterBehavior: "Default" | "SplitOnLandscape" | "Split" | "Popover" | "SplitOnPortrait" | Bind;
     }
     export declare class FontImageSource extends XF.ImageSource {
         public static color: AttachedNode;
@@ -1305,7 +1305,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Aspect
         */
-        public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public aspect: "AspectFit" | "AspectFill" | "Fill" | Bind;
         /**
         * System.Boolean
         */
@@ -1350,7 +1350,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Aspect
         */
-        public aspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public aspect: "AspectFit" | "AspectFill" | "Fill" | Bind;
         /**
         * System.Boolean
         */
@@ -1400,7 +1400,7 @@ namespace XF {
         /**
         * Xamarin.Forms.IndicatorShape
         */
-        public indicatorsShape: "Circle" | "Square" | string | number | null | undefined | Bind;
+        public indicatorsShape: "Circle" | "Square" | Bind;
         /**
         * Xamarin.Forms.Layout`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
         */
@@ -1493,7 +1493,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
     }
     export declare class Behavior extends XF.BindableObject {
     }
@@ -1707,15 +1707,15 @@ namespace XF {
         /**
         * Xamarin.Forms.ItemsLayoutOrientation
         */
-        public orientation: "Vertical" | "Horizontal" | string | number | null | undefined | Bind;
+        public orientation: "Vertical" | "Horizontal" | Bind;
         /**
         * Xamarin.Forms.SnapPointsAlignment
         */
-        public snapPointsAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public snapPointsAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.SnapPointsType
         */
-        public snapPointsType: "None" | "Mandatory" | "MandatorySingle" | string | number | null | undefined | Bind;
+        public snapPointsType: "None" | "Mandatory" | "MandatorySingle" | Bind;
     }
     export declare class ItemsView extends XF.View {
         public static emptyView: AttachedNode;
@@ -1751,11 +1751,11 @@ namespace XF {
         /**
         * Xamarin.Forms.ScrollBarVisibility
         */
-        public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | Bind;
         /**
         * Xamarin.Forms.ScrollBarVisibility
         */
-        public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        public verticalScrollBarVisibility: "Default" | "Always" | "Never" | Bind;
         /**
         * System.Int32
         */
@@ -1767,7 +1767,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ItemsUpdatingScrollMode
         */
-        public itemsUpdatingScrollMode: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | string | number | null | undefined | Bind;
+        public itemsUpdatingScrollMode: "KeepItemsInView" | "KeepScrollOffset" | "KeepLastItemInView" | Bind;
     }
     export declare class LinearItemsLayout extends XF.ItemsLayout {
         public static vertical: RootObject;
@@ -1804,7 +1804,7 @@ namespace XF {
         /**
         * Xamarin.Forms.SelectionMode
         */
-        public selectionMode: "None" | "Single" | "Multiple" | string | number | null | undefined | Bind;
+        public selectionMode: "None" | "Single" | "Multiple" | Bind;
     }
     export declare class StructuredItemsView extends XF.ItemsView {
         public static header: AttachedNode;
@@ -1836,7 +1836,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ItemSizingStrategy
         */
-        public itemSizingStrategy: "MeasureAllItems" | "MeasureFirstItem" | string | number | null | undefined | Bind;
+        public itemSizingStrategy: "MeasureAllItems" | "MeasureFirstItem" | Bind;
     }
     export declare class IValueConverter extends RootObject {
     }
@@ -1863,7 +1863,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
         /**
         * Xamarin.Forms.FormattedString
         */
@@ -1871,11 +1871,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public horizontalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.LineBreakMode
         */
-        public lineBreakMode: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | string | number | null | undefined | Bind;
+        public lineBreakMode: "NoWrap" | "WordWrap" | "CharacterWrap" | "HeadTruncation" | "TailTruncation" | "MiddleTruncation" | Bind;
         /**
         * System.String
         */
@@ -1891,15 +1891,15 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public verticalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * Xamarin.Forms.TextDecorations
         */
-        public textDecorations: "None" | "Underline" | "Strikethrough" | string | number | null | undefined | Bind;
+        public textDecorations: "None" | "Underline" | "Strikethrough" | Bind;
         /**
         * System.String
         */
@@ -1923,7 +1923,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextType
         */
-        public textType: "Text" | "Html" | string | number | null | undefined | Bind;
+        public textType: "Text" | "Html" | Bind;
     }
     export declare class Layout$Generic extends XF.Layout {
         /**
@@ -1962,7 +1962,7 @@ namespace XF {
         /**
         * Xamarin.Forms.LayoutAlignment
         */
-        public alignment: "Start" | "Center" | "End" | "Fill" | string | number | null | undefined | Bind;
+        public alignment: "Start" | "Center" | "End" | "Fill" | Bind;
         /**
         * System.Boolean
         */
@@ -2062,7 +2062,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ListViewSelectionMode
         */
-        public selectionMode: "None" | "Single" | string | number | null | undefined | Bind;
+        public selectionMode: "None" | "Single" | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -2074,19 +2074,19 @@ namespace XF {
         /**
         * Xamarin.Forms.SeparatorVisibility
         */
-        public separatorVisibility: "Default" | "None" | string | number | null | undefined | Bind;
+        public separatorVisibility: "Default" | "None" | Bind;
         /**
         * Xamarin.Forms.ScrollBarVisibility
         */
-        public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | Bind;
         /**
         * Xamarin.Forms.ScrollBarVisibility
         */
-        public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        public verticalScrollBarVisibility: "Default" | "Always" | "Never" | Bind;
         /**
         * Xamarin.Forms.ListViewCachingStrategy
         */
-        public cachingStrategy: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | string | number | null | undefined | Bind;
+        public cachingStrategy: "RetainElement" | "RecycleElement" | "RecycleElementAndDataTemplate" | Bind;
     }
     export declare class Menu extends XF.BaseMenuItem {
         /**
@@ -2244,7 +2244,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Internals.DeviceOrientation
         */
-        public orientation: "Portrait" | "Landscape" | "PortraitUp" | "PortraitDown" | "LandscapeLeft" | "LandscapeRight" | "Other" | string | number | null | undefined | Bind;
+        public orientation: "Portrait" | "Landscape" | "PortraitUp" | "PortraitDown" | "LandscapeLeft" | "LandscapeRight" | "Other" | Bind;
     }
     export declare class Page extends XF.VisualElement {
         public static backgroundImageSource: AttachedNode;
@@ -2308,7 +2308,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -2320,7 +2320,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
         /**
         * System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
         */
@@ -2357,11 +2357,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public horizontalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public verticalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.BindingBase
         */
@@ -2469,11 +2469,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -2617,7 +2617,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ScrollOrientation
         */
-        public orientation: "Vertical" | "Horizontal" | "Both" | "Neither" | string | number | null | undefined | Bind;
+        public orientation: "Vertical" | "Horizontal" | "Both" | "Neither" | Bind;
         /**
         * System.Double
         */
@@ -2629,11 +2629,11 @@ namespace XF {
         /**
         * Xamarin.Forms.ScrollBarVisibility
         */
-        public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        public horizontalScrollBarVisibility: "Default" | "Always" | "Never" | Bind;
         /**
         * Xamarin.Forms.ScrollBarVisibility
         */
-        public verticalScrollBarVisibility: "Default" | "Always" | "Never" | string | number | null | undefined | Bind;
+        public verticalScrollBarVisibility: "Default" | "Always" | "Never" | Bind;
     }
     export declare class SearchBar extends XF.InputView {
         public static searchCommand: AttachedNode;
@@ -2656,11 +2656,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public horizontalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public verticalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * System.Windows.Input.ICommand
         */
@@ -2672,7 +2672,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -2830,11 +2830,11 @@ namespace XF {
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public horizontalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public horizontalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.TextAlignment
         */
-        public verticalTextAlignment: "Start" | "Center" | "End" | string | number | null | undefined | Bind;
+        public verticalTextAlignment: "Start" | "Center" | "End" | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -2842,7 +2842,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -2850,7 +2850,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -2954,7 +2954,7 @@ namespace XF {
         /**
         * Xamarin.Forms.SearchBoxVisibility
         */
-        public searchBoxVisibility: "Hidden" | "Collapsible" | "Expanded" | string | number | null | undefined | Bind;
+        public searchBoxVisibility: "Hidden" | "Collapsible" | "Expanded" | Bind;
         /**
         * System.Object
         */
@@ -3015,7 +3015,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ScrollMode
         */
-        public flyoutVerticalScrollMode: "Disabled" | "Enabled" | "Auto" | string | number | null | undefined | Bind;
+        public flyoutVerticalScrollMode: "Disabled" | "Enabled" | "Auto" | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
@@ -3035,7 +3035,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Aspect
         */
-        public flyoutBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | string | number | null | undefined | Bind;
+        public flyoutBackgroundImageAspect: "AspectFit" | "AspectFill" | "Fill" | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -3059,7 +3059,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FlyoutBehavior
         */
-        public flyoutBehavior: "Disabled" | "Flyout" | "Locked" | string | number | null | undefined | Bind;
+        public flyoutBehavior: "Disabled" | "Flyout" | "Locked" | Bind;
         /**
         * System.Object
         */
@@ -3071,7 +3071,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FlyoutHeaderBehavior
         */
-        public flyoutHeaderBehavior: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | string | number | null | undefined | Bind;
+        public flyoutHeaderBehavior: "Default" | "Fixed" | "Scroll" | "CollapseOnScroll" | Bind;
         /**
         * Xamarin.Forms.DataTemplate
         */
@@ -3131,7 +3131,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FlyoutDisplayOptions
         */
-        public flyoutDisplayOptions: "AsSingleItem" | "AsMultipleItems" | string | number | null | undefined | Bind;
+        public flyoutDisplayOptions: "AsSingleItem" | "AsMultipleItems" | Bind;
     }
     export declare class FlyoutItem extends XF.ShellItem {
         public static isVisible: AttachedNode;
@@ -3278,7 +3278,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -3290,7 +3290,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -3302,7 +3302,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TextDecorations
         */
-        public textDecorations: "None" | "Underline" | "Strikethrough" | string | number | null | undefined | Bind;
+        public textDecorations: "None" | "Underline" | "Strikethrough" | Bind;
         /**
         * System.Double
         */
@@ -3314,7 +3314,7 @@ namespace XF {
         /**
         * Xamarin.Forms.StackOrientation
         */
-        public orientation: "Vertical" | "Horizontal" | string | number | null | undefined | Bind;
+        public orientation: "Vertical" | "Horizontal" | Bind;
         /**
         * System.Double
         */
@@ -3429,7 +3429,7 @@ namespace XF {
         /**
         * Xamarin.Forms.SwipeDirection
         */
-        public direction: "Right" | "Left" | "Up" | "Down" | string | number | null | undefined | Bind;
+        public direction: "Right" | "Left" | "Up" | "Down" | Bind;
         /**
         * System.UInt32
         */
@@ -3453,11 +3453,11 @@ namespace XF {
         /**
         * Xamarin.Forms.SwipeMode
         */
-        public mode: "Reveal" | "Execute" | string | number | null | undefined | Bind;
+        public mode: "Reveal" | "Execute" | Bind;
         /**
         * Xamarin.Forms.SwipeBehaviorOnInvoked
         */
-        public swipeBehaviorOnInvoked: "Auto" | "Close" | "RemainOpen" | string | number | null | undefined | Bind;
+        public swipeBehaviorOnInvoked: "Auto" | "Close" | "RemainOpen" | Bind;
         /**
         * Xamarin.Forms.ISwipeItem
         */
@@ -3593,7 +3593,7 @@ namespace XF {
         /**
         * Xamarin.Forms.TableIntent
         */
-        public intent: "Menu" | "Settings" | "Form" | "Data" | string | number | null | undefined | Bind;
+        public intent: "Menu" | "Settings" | "Form" | "Data" | Bind;
         /**
         * Xamarin.Forms.TableRoot
         */
@@ -3665,7 +3665,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FontAttributes
         */
-        public fontAttributes: "None" | "Bold" | "Italic" | string | number | null | undefined | Bind;
+        public fontAttributes: "None" | "Bold" | "Italic" | Bind;
         /**
         * System.String
         */
@@ -3677,13 +3677,13 @@ namespace XF {
         /**
         * Xamarin.Forms.TextTransform
         */
-        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | string | number | null | undefined | Bind;
+        public textTransform: "None" | "Default" | "Lowercase" | "Uppercase" | Bind;
     }
     export declare class ToolbarItem extends XF.MenuItem {
         /**
         * Xamarin.Forms.ToolbarItemOrder
         */
-        public order: "Default" | "Primary" | "Secondary" | string | number | null | undefined | Bind;
+        public order: "Default" | "Primary" | "Secondary" | Bind;
         /**
         * System.Int32
         */
@@ -3780,7 +3780,7 @@ namespace XF {
         /**
         * Xamarin.Forms.FlowDirection
         */
-        public flowDirection: "MatchParent" | "LeftToRight" | "RightToLeft" | string | number | null | undefined | Bind;
+        public flowDirection: "MatchParent" | "LeftToRight" | "RightToLeft" | Bind;
         /**
         * System.Double
         */
@@ -3962,7 +3962,7 @@ namespace XF {
         /**
         * Xamarin.Forms.SweepDirection
         */
-        public sweepDirection: "CounterClockwise" | "Clockwise" | string | number | null | undefined | Bind;
+        public sweepDirection: "CounterClockwise" | "Clockwise" | Bind;
         /**
         * System.Boolean
         */
@@ -4063,7 +4063,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.FillRule
         */
-        public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
+        public fillRule: "EvenOdd" | "Nonzero" | Bind;
     }
     export declare class GeometryHelper extends RootObject {
         public static ttenGeometry: AttachedNode;
@@ -4160,7 +4160,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.FillRule
         */
-        public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
+        public fillRule: "EvenOdd" | "Nonzero" | Bind;
     }
     export declare class PathSegment extends XF.BindableObject {
     }
@@ -4181,7 +4181,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.FillRule
         */
-        public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
+        public fillRule: "EvenOdd" | "Nonzero" | Bind;
     }
     export declare class Polyline extends XF.Shape {
         public static points: AttachedNode;
@@ -4193,7 +4193,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.FillRule
         */
-        public fillRule: "EvenOdd" | "Nonzero" | string | number | null | undefined | Bind;
+        public fillRule: "EvenOdd" | "Nonzero" | Bind;
     }
     export declare class PolyLineSegment extends XF.PathSegment {
         public static points: AttachedNode;
@@ -4324,11 +4324,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.PenLineCap
         */
-        public strokeLineCap: "Flat" | "Square" | "Round" | string | number | null | undefined | Bind;
+        public strokeLineCap: "Flat" | "Square" | "Round" | Bind;
         /**
         * Xamarin.Forms.Shapes.PenLineJoin
         */
-        public strokeLineJoin: "Miter" | "Bevel" | "Round" | string | number | null | undefined | Bind;
+        public strokeLineJoin: "Miter" | "Bevel" | "Round" | Bind;
         /**
         * System.Double
         */
@@ -4336,7 +4336,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Stretch
         */
-        public aspect: "None" | "Fill" | "Uniform" | "UniformToFill" | string | number | null | undefined | Bind;
+        public aspect: "None" | "Fill" | "Uniform" | "UniformToFill" | Bind;
     }
     export declare class SkewTransform extends XF.Transform {
         public static angleX: AttachedNode;
