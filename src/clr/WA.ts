@@ -1,4 +1,6 @@
 //tslint:disable
+import Bind from "@web-atoms/core/dist/core/Bind";
+import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 import XNode, { RootObject, NodeFactory, AttachedNode } from "@web-atoms/core/dist/core/XNode";
 import XF from "./XF";
 
@@ -56,10 +58,10 @@ namespace WA {
     
         public label?: string;
         public isRequired?: boolean;
-        public labelColor?: string;
+        public labelColor?: ColorItem | XF.Color | string | null | Bind;
         public error?: string;
-        public errorColor?: string;
-        public errorBackgroundColor?: string;
+        public errorColor?: ColorItem | XF.Color | string | null | Bind;
+        public errorBackgroundColor?: ColorItem | XF.Color | string | null | Bind;
     }
     
     export declare class AtomTemplateSelector extends RootObject {

@@ -116,7 +116,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public thumbnail: XF.ImageSource | Bind;
+        public thumbnail: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -159,10 +159,10 @@ namespace XF {
         /**
         * Xamarin.Forms.CornerRadius
         */
-        public cornerRadius: RootObject | Bind;
+        public cornerRadius: /*CornerRadius*/ any | Bind;
     }
     export declare class Brush extends XF.Element {
-        public static default: XF.Brush;
+        public static default: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind;
         public static aliceBlue: XF.SolidColorBrush;
         public static antiqueWhite: XF.SolidColorBrush;
         public static aqua: XF.SolidColorBrush;
@@ -332,7 +332,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Thickness
         */
-        public padding: RootObject | Bind;
+        public padding: /*Thickness*/ any | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -348,7 +348,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Button+ButtonContentLayout
         */
-        public contentLayout: RootObject | Bind;
+        public contentLayout: /*ButtonContentLayout*/ any | Bind;
         /**
         * System.Windows.Input.ICommand
         */
@@ -360,11 +360,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Font
         */
-        public font: RootObject | Bind;
+        public font: /*Font*/ any | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
-        public imageSource: XF.ImageSource | Bind;
+        public imageSource: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -449,7 +449,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Keyboard
         */
-        public keyboard: RootObject | Bind;
+        public keyboard: /*Keyboard*/ any | Bind;
         /**
         * System.String
         */
@@ -472,7 +472,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public imageSource: XF.ImageSource | Bind;
+        public imageSource: /*ImageSource*/ any | Bind;
     }
     export declare class SwitchCell extends XF.Cell {
         public static on: AttachedNode;
@@ -744,7 +744,7 @@ namespace XF {
         /**
         * Xamarin.Forms.GridLength
         */
-        public width: RootObject | Bind;
+        public width: "Auto" | number | string | Bind;
     }
     export declare class CompareStateTrigger extends XF.StateTriggerBase {
         public static property: AttachedNode;
@@ -1321,7 +1321,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public source: XF.ImageSource | Bind;
+        public source: /*ImageSource*/ any | Bind;
     }
     export declare class ImageButton extends XF.View {
         public static command: AttachedNode;
@@ -1374,11 +1374,11 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public source: XF.ImageSource | Bind;
+        public source: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.Thickness
         */
-        public padding: RootObject | Bind;
+        public padding: /*Thickness*/ any | Bind;
     }
     export declare class ImageSource extends XF.Element {
         /**
@@ -1465,7 +1465,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Keyboard
         */
-        public keyboard: RootObject | Bind;
+        public keyboard: /*Keyboard*/ any | Bind;
         /**
         * System.Boolean
         */
@@ -1541,7 +1541,7 @@ namespace XF {
         /**
         * Xamarin.Forms.BindableProperty
         */
-        public property: RootObject | Bind;
+        public property: /*BindableProperty*/ any | Bind;
         /**
         * System.Collections.Generic.IList`1[[Xamarin.Forms.Setter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
         */
@@ -1610,7 +1610,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Thickness
         */
-        public peekAreaInsets: RootObject | Bind;
+        public peekAreaInsets: /*Thickness*/ any | Bind;
         /**
         * System.Collections.ObjectModel.ObservableCollection`1[[Xamarin.Forms.View, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
         */
@@ -1832,7 +1832,7 @@ namespace XF {
         /**
         * Xamarin.Forms.IItemsLayout
         */
-        public itemsLayout: RootObject | Bind;
+        public itemsLayout: /*IItemsLayout*/ any | Bind;
         /**
         * Xamarin.Forms.ItemSizingStrategy
         */
@@ -1919,7 +1919,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Thickness
         */
-        public padding: RootObject | Bind;
+        public padding: /*Thickness*/ any | Bind;
         /**
         * Xamarin.Forms.TextType
         */
@@ -1944,11 +1944,29 @@ namespace XF {
         /**
         * Xamarin.Forms.Thickness
         */
-        public padding: RootObject | Bind;
+        public padding: /*Thickness*/ any | Bind;
         /**
         * System.Boolean
         */
         public cascadeInputTransparent: boolean | null | Bind;
+    }
+    export declare class LayoutOptions extends RootObject /*System.ValueType*/ {
+        public static start: XF.LayoutOptions;
+        public static center: XF.LayoutOptions;
+        public static end: XF.LayoutOptions;
+        public static fill: XF.LayoutOptions;
+        public static startAndExpand: XF.LayoutOptions;
+        public static centerAndExpand: XF.LayoutOptions;
+        public static endAndExpand: XF.LayoutOptions;
+        public static fillAndExpand: XF.LayoutOptions;
+        /**
+        * Xamarin.Forms.LayoutAlignment
+        */
+        public alignment: "Start" | "Center" | "End" | "Fill" | string | number | null | undefined | Bind;
+        /**
+        * System.Boolean
+        */
+        public expands: boolean | null | Bind;
     }
     export declare class LinearGradientBrush extends XF.GradientBrush {
         public static startPoint: AttachedNode;
@@ -1960,11 +1978,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public startPoint: RootObject | Bind;
+        public startPoint: "Zero" | XF.Point | Bind | Bind;
         /**
         * Xamarin.Forms.Point
         */
-        public endPoint: RootObject | Bind;
+        public endPoint: "Zero" | XF.Point | Bind | Bind;
     }
     export declare class ListView extends XF.ItemsView$Generic {
         public static isPullToRefreshEnabled: AttachedNode;
@@ -2114,7 +2132,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public iconImageSource: XF.ImageSource | Bind;
+        public iconImageSource: /*ImageSource*/ any | Bind;
         /**
         * System.Boolean
         */
@@ -2194,7 +2212,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Brush
         */
-        public barBackground: XF.Brush | Bind;
+        public barBackground: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -2243,11 +2261,11 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public backgroundImageSource: XF.ImageSource | Bind;
+        public backgroundImageSource: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
-        public iconImageSource: XF.ImageSource | Bind;
+        public iconImageSource: /*ImageSource*/ any | Bind;
         /**
         * System.Boolean
         */
@@ -2255,7 +2273,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Thickness
         */
-        public padding: RootObject | Bind;
+        public padding: /*Thickness*/ any | Bind;
         /**
         * System.String
         */
@@ -2361,6 +2379,21 @@ namespace XF {
         */
         public control: RootObject | Bind;
     }
+    export declare class Point extends RootObject /*System.ValueType*/ {
+        public static zero: XF.Point;
+        /**
+        * System.Double
+        */
+        public x: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public y: number | null | Bind;
+        /**
+        * System.Boolean
+        */
+        public isEmpty: boolean | null | Bind;
+    }
     export declare class ProgressBar extends XF.View {
         public static progressColor: AttachedNode;
         public static progress: AttachedNode;
@@ -2383,7 +2416,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public center: RootObject | Bind;
+        public center: "Zero" | XF.Point | Bind | Bind;
         /**
         * System.Double
         */
@@ -2466,6 +2499,60 @@ namespace XF {
         public static groupName: AttachedNode;
         public static selectedValue: AttachedNode;
     }
+    export declare class Rect extends RootObject /*System.ValueType*/ {
+        public static zero: XF.Rect;
+        /**
+        * System.Double
+        */
+        public x: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public y: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public width: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public height: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public top: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public bottom: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public right: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public left: number | null | Bind;
+        /**
+        * System.Boolean
+        */
+        public isEmpty: boolean | null | Bind;
+        /**
+        * Xamarin.Forms.Size
+        */
+        public size: "Zero" | XF.Size | Bind | Bind;
+        public static size: AttachedNode;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public location: "Zero" | XF.Point | Bind | Bind;
+        public static location: AttachedNode;
+        /**
+        * Xamarin.Forms.Point
+        */
+        public center: "Zero" | XF.Point | Bind | Bind;
+        public static center: AttachedNode;
+    }
     export declare class RefreshView extends XF.ContentView {
         public static isRefreshing: AttachedNode;
         public static command: AttachedNode;
@@ -2509,7 +2596,7 @@ namespace XF {
         /**
         * Xamarin.Forms.GridLength
         */
-        public height: RootObject | Bind;
+        public height: "Auto" | number | string | Bind;
     }
     export declare class ScrollView extends XF.Layout {
         public static orientation: AttachedNode;
@@ -2526,7 +2613,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Size
         */
-        public contentSize: RootObject | Bind;
+        public contentSize: "Zero" | XF.Size | Bind | Bind;
         /**
         * Xamarin.Forms.ScrollOrientation
         */
@@ -2612,7 +2699,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public iconOverride: XF.ImageSource | Bind;
+        public iconOverride: /*ImageSource*/ any | Bind;
         /**
         * System.Boolean
         */
@@ -2634,11 +2721,11 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public flyoutIcon: XF.ImageSource | Bind;
+        public flyoutIcon: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
-        public icon: XF.ImageSource | Bind;
+        public icon: /*ImageSource*/ any | Bind;
         /**
         * System.Boolean
         */
@@ -2739,7 +2826,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Keyboard
         */
-        public keyboard: RootObject | Bind;
+        public keyboard: /*Keyboard*/ any | Bind;
         /**
         * Xamarin.Forms.TextAlignment
         */
@@ -2791,7 +2878,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public clearIcon: XF.ImageSource | Bind;
+        public clearIcon: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -2819,7 +2906,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public clearPlaceholderIcon: XF.ImageSource | Bind;
+        public clearPlaceholderIcon: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -2855,7 +2942,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public queryIcon: XF.ImageSource | Bind;
+        public queryIcon: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -2932,7 +3019,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public flyoutIcon: XF.ImageSource | Bind;
+        public flyoutIcon: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.ShellItem
         */
@@ -2944,7 +3031,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public flyoutBackgroundImage: XF.ImageSource | Bind;
+        public flyoutBackgroundImage: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.Aspect
         */
@@ -2956,11 +3043,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Brush
         */
-        public flyoutBackground: XF.Brush | Bind;
+        public flyoutBackground: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * Xamarin.Forms.Brush
         */
-        public flyoutBackdrop: XF.Brush | Bind;
+        public flyoutBackdrop: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * System.Double
         */
@@ -3084,6 +3171,21 @@ namespace XF {
         */
         public stack: RootObject /*System.Collections.Generic.IReadOnlyList`1[[Xamarin.Forms.Page, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]*/ | Bind;
     }
+    export declare class Size extends RootObject /*System.ValueType*/ {
+        public static zero: XF.Size;
+        /**
+        * System.Boolean
+        */
+        public isZero: boolean | null | Bind;
+        /**
+        * System.Double
+        */
+        public width: number | null | Bind;
+        /**
+        * System.Double
+        */
+        public height: number | null | Bind;
+    }
     export declare class Slider extends XF.View {
         public static minimum: AttachedNode;
         public static maximum: AttachedNode;
@@ -3110,7 +3212,7 @@ namespace XF {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public thumbImageSource: XF.ImageSource | Bind;
+        public thumbImageSource: /*ImageSource*/ any | Bind;
         /**
         * System.Windows.Input.ICommand
         */
@@ -3440,7 +3542,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Brush
         */
-        public barBackground: XF.Brush | Bind;
+        public barBackground: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * Xamarin.Forms.Color
         */
@@ -3625,15 +3727,15 @@ namespace XF {
         /**
         * Xamarin.Forms.LayoutOptions
         */
-        public horizontalOptions: RootObject | Bind;
+        public horizontalOptions: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | XF.LayoutOptions | Bind | Bind;
         /**
         * Xamarin.Forms.Thickness
         */
-        public margin: RootObject | Bind;
+        public margin: /*Thickness*/ any | Bind;
         /**
         * Xamarin.Forms.LayoutOptions
         */
-        public verticalOptions: RootObject | Bind;
+        public verticalOptions: "Start" | "Center" | "End" | "Fill" | "StartAndExpand" | "CenterAndExpand" | "EndAndExpand" | "FillAndExpand" | XF.LayoutOptions | Bind | Bind;
     }
     export declare class VisualElement extends XF.NavigableElement {
         public static navigation: AttachedNode;
@@ -3674,7 +3776,7 @@ namespace XF {
         /**
         * Xamarin.Forms.IVisual
         */
-        public visual: RootObject | Bind;
+        public visual: /*IVisual*/ any | Bind;
         /**
         * Xamarin.Forms.FlowDirection
         */
@@ -3694,7 +3796,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Brush
         */
-        public background: XF.Brush | Bind;
+        public background: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * System.Collections.Generic.IList`1[[Xamarin.Forms.Behavior, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
         */
@@ -3702,7 +3804,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Rectangle
         */
-        public bounds: RootObject | Bind;
+        public bounds: "Zero" | XF.Rectangle | Bind | Bind;
         /**
         * System.Double
         */
@@ -3848,11 +3950,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public point: RootObject | Bind;
+        public point: "Zero" | XF.Point | Bind | Bind;
         /**
         * Xamarin.Forms.Size
         */
-        public size: RootObject | Bind;
+        public size: "Zero" | XF.Size | Bind | Bind;
         /**
         * System.Double
         */
@@ -3873,15 +3975,15 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public point1: RootObject | Bind;
+        public point1: "Zero" | XF.Point | Bind | Bind;
         /**
         * Xamarin.Forms.Point
         */
-        public point2: RootObject | Bind;
+        public point2: "Zero" | XF.Point | Bind | Bind;
         /**
         * Xamarin.Forms.Point
         */
-        public point3: RootObject | Bind;
+        public point3: "Zero" | XF.Point | Bind | Bind;
     }
     export declare class CompositeTransform extends XF.Transform {
         public static centerX: AttachedNode;
@@ -3939,7 +4041,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public center: RootObject | Bind;
+        public center: "Zero" | XF.Point | Bind | Bind;
         /**
         * System.Double
         */
@@ -3994,25 +4096,25 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public startPoint: RootObject | Bind;
+        public startPoint: "Zero" | XF.Point | Bind | Bind;
         /**
         * Xamarin.Forms.Point
         */
-        public endPoint: RootObject | Bind;
+        public endPoint: "Zero" | XF.Point | Bind | Bind;
     }
     export declare class LineSegment extends XF.PathSegment {
         public static point: AttachedNode;
         /**
         * Xamarin.Forms.Point
         */
-        public point: RootObject | Bind;
+        public point: "Zero" | XF.Point | Bind | Bind;
     }
     export declare class MatrixTransform extends XF.Transform {
         public static matrix: AttachedNode;
         /**
         * Xamarin.Forms.Shapes.Matrix
         */
-        public matrix: RootObject | Bind;
+        public matrix: /*Matrix*/ any | Bind;
     }
     export declare class Path extends XF.Shape {
         public static data: AttachedNode;
@@ -4024,7 +4126,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.Transform
         */
-        public renderTransform: XF.Transform | Bind;
+        public renderTransform: /*Transform*/ any | Bind;
     }
     export declare class PathFigure extends XF.BindableObject {
         public static segments: AttachedNode;
@@ -4038,7 +4140,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public startPoint: RootObject | Bind;
+        public startPoint: "Zero" | XF.Point | Bind | Bind;
         /**
         * System.Boolean
         */
@@ -4113,11 +4215,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Point
         */
-        public point1: RootObject | Bind;
+        public point1: "Zero" | XF.Point | Bind | Bind;
         /**
         * Xamarin.Forms.Point
         */
-        public point2: RootObject | Bind;
+        public point2: "Zero" | XF.Point | Bind | Bind;
     }
     export declare class Rectangle extends XF.Shape {
         public static radiusX: AttachedNode;
@@ -4136,7 +4238,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Rect
         */
-        public rect: RootObject | Bind;
+        public rect: "Zero" | XF.Rect | Bind | Bind;
     }
     export declare class RotateTransform extends XF.Transform {
         public static angle: AttachedNode;
@@ -4161,11 +4263,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Rect
         */
-        public rect: RootObject | Bind;
+        public rect: "Zero" | XF.Rect | Bind | Bind;
         /**
         * Xamarin.Forms.CornerRadius
         */
-        public cornerRadius: RootObject | Bind;
+        public cornerRadius: /*CornerRadius*/ any | Bind;
     }
     export declare class ScaleTransform extends XF.Transform {
         public static scaleX: AttachedNode;
@@ -4202,11 +4304,11 @@ namespace XF {
         /**
         * Xamarin.Forms.Brush
         */
-        public fill: XF.Brush | Bind;
+        public fill: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * Xamarin.Forms.Brush
         */
-        public stroke: XF.Brush | Bind;
+        public stroke: "AliceBlue" | "AntiqueWhite" | "Aqua" | "Aquamarine" | "Azure" | "Beige" | "Bisque" | "Black" | "BlanchedAlmond" | "Blue" | "BlueViolet" | "Brown" | "BurlyWood" | "CadetBlue" | "Chartreuse" | "Chocolate" | "Coral" | "CornflowerBlue" | "Cornsilk" | "Crimson" | "Cyan" | "DarkBlue" | "DarkCyan" | "DarkGoldenrod" | "DarkGray" | "DarkGreen" | "DarkKhaki" | "DarkMagenta" | "DarkOliveGreen" | "DarkOrange" | "DarkOrchid" | "DarkRed" | "DarkSalmon" | "DarkSeaGreen" | "DarkSlateBlue" | "DarkSlateGray" | "DarkTurquoise" | "DarkViolet" | "DeepPink" | "DeepSkyBlue" | "DimGray" | "DodgerBlue" | "Firebrick" | "FloralWhite" | "ForestGreen" | "Fuchsia" | "Gainsboro" | "GhostWhite" | "Gold" | "Goldenrod" | "Gray" | "Green" | "GreenYellow" | "Honeydew" | "HotPink" | "IndianRed" | "Indigo" | "Ivory" | "Khaki" | "Lavender" | "LavenderBlush" | "LawnGreen" | "LemonChiffon" | "LightBlue" | "LightCoral" | "LightCyan" | "LightGoldenrodYellow" | "LightGray" | "LightGreen" | "LightPink" | "LightSalmon" | "LightSeaGreen" | "LightSkyBlue" | "LightSlateGray" | "LightSteelBlue" | "LightYellow" | "Lime" | "LimeGreen" | "Linen" | "Magenta" | "Maroon" | "MediumAquamarine" | "MediumBlue" | "MediumOrchid" | "MediumPurple" | "MediumSeaGreen" | "MediumSlateBlue" | "MediumSpringGreen" | "MediumTurquoise" | "MediumVioletRed" | "MidnightBlue" | "MintCream" | "MistyRose" | "Moccasin" | "NavajoWhite" | "Navy" | "OldLace" | "Olive" | "OliveDrab" | "Orange" | "OrangeRed" | "Orchid" | "PaleGoldenrod" | "PaleGreen" | "PaleTurquoise" | "PaleVioletRed" | "PapayaWhip" | "PeachPuff" | "Peru" | "Pink" | "Plum" | "PowderBlue" | "Purple" | "Red" | "RosyBrown" | "RoyalBlue" | "SaddleBrown" | "Salmon" | "SandyBrown" | "SeaGreen" | "SeaShell" | "Sienna" | "Silver" | "SkyBlue" | "SlateBlue" | "SlateGray" | "Snow" | "SpringGreen" | "SteelBlue" | "Tan" | "Teal" | "Thistle" | "Tomato" | "Transparent" | "Turquoise" | "Violet" | "Wheat" | "White" | "WhiteSmoke" | "Yellow" | "YellowGreen" | XF.Brush | Bind | Bind;
         /**
         * System.Double
         */
@@ -4263,7 +4365,7 @@ namespace XF {
         /**
         * Xamarin.Forms.Shapes.Matrix
         */
-        public value: RootObject | Bind;
+        public value: /*Matrix*/ any | Bind;
     }
     export declare class TransformGroup extends XF.Transform {
         public static children: AttachedNode;
@@ -4567,7 +4669,7 @@ export namespace Xamarin {
                 /**
                 * Xamarin.Forms.BindableProperty
                 */
-                public groupHeaderTemplateProperty: RootObject | Bind;
+                public groupHeaderTemplateProperty: /*BindableProperty*/ any | Bind;
                 /**
                 * Xamarin.Forms.BindingBase
                 */
@@ -4584,7 +4686,7 @@ export namespace Xamarin {
                 /**
                 * Xamarin.Forms.BindableProperty
                 */
-                public isGroupingEnabledProperty: RootObject | Bind;
+                public isGroupingEnabledProperty: /*BindableProperty*/ any | Bind;
                 /**
                 * System.Collections.IEnumerable
                 */
@@ -4601,7 +4703,7 @@ export namespace Xamarin {
                 /**
                 * Xamarin.Forms.BindableProperty
                 */
-                public progressiveLoadingProperty: RootObject | Bind;
+                public progressiveLoadingProperty: /*BindableProperty*/ any | Bind;
                 /**
                 * System.String
                 */
@@ -4706,6 +4808,7 @@ Object.defineProperties(XF as any, {
     Label: create("Label","Xamarin.Forms"),
     Layout$Generic: create("Layout`1","Xamarin.Forms"),
     Layout: create("Layout","Xamarin.Forms"),
+    LayoutOptions: create("LayoutOptions","Xamarin.Forms"),
     LinearGradientBrush: create("LinearGradientBrush","Xamarin.Forms"),
     ListView: create("ListView","Xamarin.Forms"),
     Menu: create("Menu","Xamarin.Forms"),
@@ -4721,10 +4824,12 @@ Object.defineProperties(XF as any, {
     Picker: create("Picker","Xamarin.Forms"),
     PinchGestureRecognizer: create("PinchGestureRecognizer","Xamarin.Forms"),
     PlatformEffect$Generic: create("PlatformEffect`2","Xamarin.Forms"),
+    Point: create("Point","Xamarin.Forms"),
     ProgressBar: create("ProgressBar","Xamarin.Forms"),
     RadialGradientBrush: create("RadialGradientBrush","Xamarin.Forms"),
     RadioButton: create("RadioButton","Xamarin.Forms"),
     RadioButtonGroup: create("RadioButtonGroup","Xamarin.Forms"),
+    Rect: create("Rect","Xamarin.Forms"),
     RefreshView: create("RefreshView","Xamarin.Forms"),
     RelativeLayout: create("RelativeLayout","Xamarin.Forms"),
     Routing: create("Routing","Xamarin.Forms"),
@@ -4744,6 +4849,7 @@ Object.defineProperties(XF as any, {
     ShellItem: create("ShellItem","Xamarin.Forms"),
     Tab: create("Tab","Xamarin.Forms"),
     ShellSection: create("ShellSection","Xamarin.Forms"),
+    Size: create("Size","Xamarin.Forms"),
     Slider: create("Slider","Xamarin.Forms"),
     SolidColorBrush: create("SolidColorBrush","Xamarin.Forms"),
     Span: create("Span","Xamarin.Forms"),

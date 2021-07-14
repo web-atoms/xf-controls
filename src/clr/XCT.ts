@@ -61,7 +61,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public source: XF.default.ImageSource | Bind;
+        public source: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -258,11 +258,11 @@ namespace XCT {
         /**
         * Xamarin.Forms.Easing
         */
-        public expandAnimationEasing: XF.default.Easing | Bind;
+        public expandAnimationEasing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         /**
         * Xamarin.Forms.Easing
         */
-        public collapseAnimationEasing: XF.default.Easing | Bind;
+        public collapseAnimationEasing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         /**
         * Xamarin.CommunityToolkit.UI.Views.ExpandState
         */
@@ -869,11 +869,11 @@ namespace XCT {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public icon: XF.default.ImageSource | Bind;
+        public icon: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
-        public iconSelected: XF.default.ImageSource | Bind;
+        public iconSelected: /*ImageSource*/ any | Bind;
         /**
         * System.Boolean
         */
@@ -925,7 +925,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public currentIcon: XF.default.ImageSource | Bind;
+        public currentIcon: /*ImageSource*/ any | Bind;
         /**
         * System.String
         */
@@ -1203,7 +1203,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.Easing
         */
-        public animationEasing: XF.default.Easing | Bind;
+        public animationEasing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         /**
         * System.Int32
         */
@@ -1211,7 +1211,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.Easing
         */
-        public pressedAnimationEasing: XF.default.Easing | Bind;
+        public pressedAnimationEasing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         /**
         * System.Int32
         */
@@ -1219,7 +1219,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.Easing
         */
-        public normalAnimationEasing: XF.default.Easing | Bind;
+        public normalAnimationEasing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         /**
         * System.Int32
         */
@@ -1227,7 +1227,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.Easing
         */
-        public hoveredAnimationEasing: XF.default.Easing | Bind;
+        public hoveredAnimationEasing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         /**
         * System.Int32
         */
@@ -1239,15 +1239,15 @@ namespace XCT {
         /**
         * Xamarin.Forms.ImageSource
         */
-        public normalBackgroundImageSource: XF.default.ImageSource | Bind;
+        public normalBackgroundImageSource: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
-        public hoveredBackgroundImageSource: XF.default.ImageSource | Bind;
+        public hoveredBackgroundImageSource: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.ImageSource
         */
-        public pressedBackgroundImageSource: XF.default.ImageSource | Bind;
+        public pressedBackgroundImageSource: /*ImageSource*/ any | Bind;
         /**
         * Xamarin.Forms.Aspect
         */
@@ -1365,7 +1365,7 @@ namespace XCT {
         /**
         * Xamarin.Forms.Easing
         */
-        public easing: XF.default.Easing | Bind;
+        public easing: "Linear" | "SinOut" | "SinIn" | "SinInOut" | "CubicIn" | "CubicOut" | "CubicInOut" | "BounceOut" | "BounceIn" | "SpringIn" | "SpringOut" | XF.default.Easing | Bind | Bind;
         public static easing: AttachedNode;
     }
     export declare class AnimationBase extends XCT.AnimationBase$Generic {

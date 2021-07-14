@@ -5,7 +5,7 @@ import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 
 import * as XF from "./XF";
 declare var bridge: any;
-const assemblyName = `FFImageLoading.Forms`;
+const assemblyName = `FFImageLoading.Forms, Version=2.4.11.982, Culture=neutral, PublicKeyToken=null`;
 let ns = ``;
 function create(name: string, ns: string) {
     return {
@@ -73,7 +73,7 @@ namespace FFImageLoading {
             /**
             * Xamarin.Forms.ImageSource
             */
-            public source: XF.default.ImageSource | Bind;
+            public source: /*ImageSource*/ any | Bind;
             /**
             * System.Int32
             */
@@ -129,11 +129,11 @@ namespace FFImageLoading {
             /**
             * Xamarin.Forms.ImageSource
             */
-            public loadingPlaceholder: XF.default.ImageSource | Bind;
+            public loadingPlaceholder: /*ImageSource*/ any | Bind;
             /**
             * Xamarin.Forms.ImageSource
             */
-            public errorPlaceholder: XF.default.ImageSource | Bind;
+            public errorPlaceholder: /*ImageSource*/ any | Bind;
             /**
             * System.Nullable`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
             */
