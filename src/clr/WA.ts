@@ -57,6 +57,7 @@ namespace WA {
     export declare class AtomField extends XF.ContentView {
 
         public static description: AttachedNode;
+        public static help: AttachedNode;
     
         public label?: string;
         public isRequired?: boolean;
