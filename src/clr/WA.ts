@@ -62,6 +62,8 @@ namespace WA {
         public error?: string;
         public errorColor?: ColorItem | XF.Color | string | null | Bind;
         public errorBackgroundColor?: ColorItem | XF.Color | string | null | Bind;
+        public help?: any;
+        public helpCommand?: any;
     }
     
     export declare class AtomTemplateSelector extends RootObject {
