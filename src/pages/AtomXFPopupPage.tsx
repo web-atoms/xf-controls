@@ -3,7 +3,7 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import RgPluginsPopup from "../clr/RgPluginsPopup";
+import WA from "../clr/WA";
 import X from "../clr/X";
 import XF from "../clr/XF";
 
@@ -53,14 +53,12 @@ export default class AtomXFPopupPage extends AtomXFControl {
     public title: string;
 
     constructor(a: any, e?: any) {
-        super(a, e || AtomBridge.instance.create(RgPluginsPopup.PopupPage));
+        super(a, e || AtomBridge.instance.create(WA.AtomPopupPage));
     }
 
     protected preCreate() {
         super.preCreate();
-        this.render(<RgPluginsPopup.PopupPage
-            title={Bind.oneWay(() => this.viewModel.title)}
-            controlTemplate={controlTemplate}/>);
+        this.render(<WA.AtomPopupPage
+            title={Bind.oneWay(() => this.viewModel.title)}/>);
     }
-
 }

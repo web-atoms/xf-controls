@@ -2,6 +2,7 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 import XNode, { RootObject, NodeFactory, AttachedNode } from "@web-atoms/core/dist/core/XNode";
+import RgPluginsPopup from "./RgPluginsPopup";
 import XF from "./XF";
 
 const NSAtoms = "WebAtoms.Controls";
@@ -51,6 +52,12 @@ namespace WA {
     
         submitCommand: any;
         fieldStyle: any;
+    }
+
+    export declare class AtomPopupPage extends RgPluginsPopup.PopupPage {
+
+        public cancelCommand: any;
+
     }
     
     
@@ -102,6 +109,7 @@ Object.defineProperties( (WA as any), {
     AtomField: create("AtomField"),
     GroupBy: create("GroupBy"),
     Markdown: create("Markdown"),
+    AtomPopupPage: create("AtomPopupPage")
         // get AtomToolbarItem(): typeof AtomToolbarItem { return this._AtomToolbarItem || (this._AtomToolbarItem = bridge.getClass(`${NSAtoms}.AtomToolbarItem, ${NSAssembly}`)); },
         // get AtomView(): typeof  AtomView { return this._AtomView || (this._AtomView = bridge.getClass(`${NSAtoms}.AtomView, ${NSAssembly}`)); },
         // get AtomViewCell(): typeof  AtomViewCell { return this._AtomViewCell || (this._AtomViewCell = bridge.getClass(`${NSAtoms}.AtomViewCell, ${NSAssembly}`)); },
