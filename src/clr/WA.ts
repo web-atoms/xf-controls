@@ -109,7 +109,8 @@ Object.defineProperties( (WA as any), {
     AtomField: create("AtomField"),
     GroupBy: create("GroupBy"),
     Markdown: create("Markdown"),
-    AtomPopupPage: create("AtomPopupPage")
+    AtomPopupPage: create("AtomPopupPage"),
+    AtomTemplateSelector: create("AtomTemplateSelector")
         // get AtomToolbarItem(): typeof AtomToolbarItem { return this._AtomToolbarItem || (this._AtomToolbarItem = bridge.getClass(`${NSAtoms}.AtomToolbarItem, ${NSAssembly}`)); },
         // get AtomView(): typeof  AtomView { return this._AtomView || (this._AtomView = bridge.getClass(`${NSAtoms}.AtomView, ${NSAssembly}`)); },
         // get AtomViewCell(): typeof  AtomViewCell { return this._AtomViewCell || (this._AtomViewCell = bridge.getClass(`${NSAtoms}.AtomViewCell, ${NSAssembly}`)); },
