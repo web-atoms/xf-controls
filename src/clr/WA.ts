@@ -11,6 +11,42 @@ const NSAssembly = "WebAtoms.XF";
 declare var bridge: any;
 
 namespace WA {
+
+    export class AtomPathButton extends XF.Grid {
+
+        public static close: XF.Geometry;
+
+        public static question: XF.Geometry;
+
+        public static dropDown: XF.Geometry;
+
+        public static dropUp: XF.Geometry;
+
+        public static command: NodeFactory;
+
+        public static commandParameter: NodeFactory;
+
+        public static fill: NodeFactory;
+
+        public static stroke: NodeFactory;
+
+        public static data: NodeFactory;
+
+        public static cornerRadius: NodeFactory;
+
+        public command: any;
+
+        public commandParameter: any;
+
+        public fill: XF.Brush | Bind | null;
+
+        public stroke: XF.Brush | Bind | null;
+
+        public data: XF.Geometry | Bind | null;
+
+        public cornerRadius: number | Bind | null;
+    }
+
     export declare class AtomView extends XF.ContentView {
         public static dataTemplate: NodeFactory;
         public static emptyDataTemplate: NodeFactory;
@@ -101,6 +137,7 @@ function create(name: string) {
 }
 
 Object.defineProperties( (WA as any), {
+    AtomPathButton: create("AtomPathButton"),
     AtomRepeater: create("AtomRepeater"),
     AtomToolbarItem: create("AtomToolbarItem"),
     AtomView: create("AtomView"),

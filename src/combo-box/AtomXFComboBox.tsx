@@ -241,11 +241,11 @@ export default class AtomXFComboBox extends AtomXFControl {
                 dataTemplate={Bind.oneWay(() => this.itemTemplate)}
                 emptyDataTemplate={Bind.oneWay(() => this.promptTemplate)}/>
 
-            <XF.ImageButton
+            <WA.AtomPathButton
                 { ... XF.Grid.column(1) }
                 heightRequest={40}
                 widthRequest={40}
-                source="res://WebAtoms.XF/Images.DropDownImage.png"
+                data={WA.AtomPathButton.dropDown}
                 command={() => this.app.runAsync(() => this.openPopup())}/>
         </XF.Grid>);
     }
