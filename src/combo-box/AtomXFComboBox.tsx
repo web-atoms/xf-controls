@@ -245,6 +245,8 @@ export default class AtomXFComboBox extends AtomXFControl {
                 { ... XF.Grid.column(1) }
                 heightRequest={40}
                 widthRequest={40}
+                fill={XF.SolidColorBrush.transparent}
+                stroke={XF.SolidColorBrush.darkGray}
                 data={WA.AtomPathButton.dropDown}
                 command={() => this.app.runAsync(() => this.openPopup())}/>
         </XF.Grid>);
