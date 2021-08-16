@@ -243,8 +243,8 @@ export default class AtomXFComboBox extends AtomXFControl {
 
             <WA.AtomPathButton
                 { ... XF.Grid.column(1) }
-                heightRequest={40}
-                widthRequest={40}
+                heightRequest={30}
+                widthRequest={30}
                 fill={XF.SolidColorBrush.transparent}
                 stroke={XF.SolidColorBrush.darkGray}
                 data={WA.AtomPathButton.dropDown}
