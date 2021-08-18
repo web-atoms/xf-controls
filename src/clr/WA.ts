@@ -73,6 +73,16 @@ namespace WA {
     export declare class GroupBy {
         public static itemsSource: NodeFactory;
     };
+
+    export declare class AtomPopup {
+
+        /** You can set DataTemplate that contains a view that will be displayed as popup */
+        public static popupTemplate: AttachedNode;
+
+        /** When set to true, the popup will be displayed */
+        public static displayPopup: AttachedNode;
+
+    }
     
     export declare class Markdown {
         public static text: AttachedNode;
