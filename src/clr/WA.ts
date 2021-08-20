@@ -79,6 +79,12 @@ namespace WA {
         /** You can set DataTemplate that contains a view that will be displayed as popup */
         public static popupTemplate: AttachedNode;
 
+        /** You can set ControlTemplate that will render background of the popup*/
+        public static popupControlTemplate: AttachedNode;
+
+        /** You can use it to close the popup by setting displayPopup to false and do some other cleaning */
+        public static popupCloseCommand: AttachedNode;
+
         /** When set to true, the popup will be displayed */
         public static displayPopup: AttachedNode;
 
