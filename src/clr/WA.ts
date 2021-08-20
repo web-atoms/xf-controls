@@ -47,6 +47,30 @@ namespace WA {
         public cornerRadius: number | Bind | null;
     }
 
+    export declare class AtomChips extends XF.ContentView {
+
+        public static itemTemplate: NodeFactory;
+
+        /**'
+         * Default is Input
+         */
+        public entryMode: "Input" | "Search";
+
+        public itemsSource: any[];
+
+        public suggestions: any[];
+
+        public itemTemplate: XF.DataTemplate;
+
+        public search: string;
+
+        public eventSearchChanged: any;
+
+        public separator: string;
+
+
+    }
+
     export declare class AtomView extends XF.ContentView {
         public static dataTemplate: NodeFactory;
         public static emptyDataTemplate: NodeFactory;
@@ -154,6 +178,7 @@ function create(name: string) {
 
 Object.defineProperties( (WA as any), {
     AtomPathButton: create("AtomPathButton"),
+    AtomChips: create("AtomChips"),
     AtomPopup: create("AtomPopup"),
     AtomRepeater: create("AtomRepeater"),
     AtomToolbarItem: create("AtomToolbarItem"),
