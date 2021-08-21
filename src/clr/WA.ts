@@ -56,7 +56,7 @@ namespace WA {
          */
         public entryMode: "Input" | "Search";
 
-        public itemsSource: any[];
+        public selectedItems: any[];
 
         public suggestions: any[];
 
@@ -68,6 +68,39 @@ namespace WA {
 
         public separator: string;
 
+    }
+
+    
+    export declare class AtomChoiceView {
+        
+        public static emptyItemTemplate: NodeFactory;
+
+        public static itemTemplate: NodeFactory;
+
+        public searchEnabled: boolean;
+
+        public search: string;
+
+        public eventSearchChanged: any;
+
+        public eventSelectionStarted: any;
+
+        public eventSelectionEnded: any;
+
+        public itemsSource: any[];
+
+        public itemTemplate: XF.DataTemplate;
+
+        public emptyItemTemplate: XF.DataTemplate;
+
+        public isActive: boolean;
+
+        public selectedItem: any;
+
+        /**
+         * default is Select
+         */
+        public prompt: string;
 
     }
 
