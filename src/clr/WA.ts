@@ -212,6 +212,7 @@ function create(name: string) {
 Object.defineProperties( (WA as any), {
     AtomPathButton: create("AtomPathButton"),
     AtomChips: create("AtomChips"),
+    AtomChoiceView: create("AtomChoiceView"),
     AtomPopup: create("AtomPopup"),
     AtomRepeater: create("AtomRepeater"),
     AtomToolbarItem: create("AtomToolbarItem"),
