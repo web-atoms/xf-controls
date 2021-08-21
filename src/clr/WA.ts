@@ -71,7 +71,7 @@ namespace WA {
     }
 
     
-    export declare class AtomChoiceView {
+    export declare class AtomChoiceView extends XF.ContentView {
         
         public static emptyItemTemplate: NodeFactory;
 
