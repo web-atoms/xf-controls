@@ -77,6 +77,8 @@ namespace WA {
 
         public static itemTemplate: NodeFactory;
 
+        public dropDownHeight: number;
+
         public searchEnabled: boolean;
 
         public search: string;
