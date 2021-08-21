@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/xf-controls",
-  "version": "2.0.38",
+  "version": "2.0.39",
   "description": "Xamarin.Forms controls for web atoms",
   "main": "index.js",
   "scripts": {
