@@ -106,6 +106,10 @@ namespace WA {
 
     }
 
+    export declare class AtomEntry extends XF.Entry {
+
+    }
+
     export declare class AtomExpander extends XF.ContentView {
         public static detailTemplate: NodeFactory;
 
@@ -227,6 +231,7 @@ function create(name: string) {
 
 Object.defineProperties( (WA as any), {
     AtomPathButton: create("AtomPathButton"),
+    AtomEntry: create("AtomEntry"),
     AtomExpander: create("AtomExpander"),
     AtomChips: create("AtomChips"),
     AtomChoiceView: create("AtomChoiceView"),
