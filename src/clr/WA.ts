@@ -2,6 +2,7 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import { ColorItem } from "@web-atoms/core/dist/core/Colors";
 import XNode, { RootObject, NodeFactory, AttachedNode } from "@web-atoms/core/dist/core/XNode";
+import DateTime from "@web-atoms/date-time/dist/DateTime";
 import RgPluginsPopup from "./RgPluginsPopup";
 import XF from "./XF";
 
@@ -45,6 +46,31 @@ namespace WA {
         public data: XF.Geometry | Bind | null;
 
         public cornerRadius: number | Bind | null;
+    }
+
+    export declare class AtomButtonBar extends XF.StackLayout {
+
+        public static itemTemplate: NodeFactory;
+
+        public static itemControlTemplate: NodeFactory;
+
+        public itemSource: any[] | Bind;
+        
+        public itemTemplate: XF.DataTemplate | Bind;
+
+        public selectedItem: any;
+
+        public itemControlTemplate: XF.ControlTemplate | Bind;
+
+        public selectedItemTextColor: XF.Color | Bind;
+
+        public textColor: XF.Color | Bind;
+
+        public selectedItemBackground: XF.Brush | Bind;
+        
+        public minItemWidth: number | Bind;
+
+        public itemTappedCommand: any;
     }
 
     export declare class AtomChips extends XF.ContentView {
@@ -122,6 +148,50 @@ namespace WA {
         public icon: XF.ImageSource;
 
         public isExpanded: boolean;
+    }
+
+    export declare class AtomCalendar extends XF.Grid {
+
+        public static itemTemplate: NodeFactory;
+
+        public static itemControlTemplate: NodeFactory;
+
+        public yearStart: number | Bind;
+
+        public yearEnd: number | Bind;
+
+        public year: number | Bind;
+
+        public month: number | Bind;
+
+        public weekendTextColor: XF.Color | Bind;
+
+        public todayBackground: XF.Brush | Bind;
+
+        public itemBackground: XF.Brush | Bind;
+
+        public selectedItemBackground: XF.Brush | Bind;
+
+        public textColor: XF.Color | Bind;
+
+        public otherMonthBackground: XF.Brush | Bind;
+
+        public selectedItemTextColor: XF.Color | Bind;
+
+        public itemControlTemplate: XF.ControlTemplate | Bind;
+
+        public itemTemplate: XF.DataTemplate | Bind;
+
+        public selectedDate: Date | DateTime | Bind;
+
+        public enableFunc: ((x) => boolean) | Bind;
+
+        public weekHeaderBackground: XF.Brush | Bind;
+
+        public weekHeaderTextColor: XF.Color | Bind;
+
+        public itemTappedCommand: any;
+
     }
 
     export declare class AtomView extends XF.ContentView {
