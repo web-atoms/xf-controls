@@ -84,7 +84,7 @@ namespace WA {
 
         public selectedItems: any[];
 
-        public suggestions: any[];
+        public itemsSource: any[];
 
         public itemTemplate: XF.DataTemplate;
 
