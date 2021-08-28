@@ -150,6 +150,14 @@ namespace WA {
         public isExpanded: boolean;
     }
 
+    export declare class AtomDateField extends XF.ContentView {
+
+        public selectedDate: Date;
+
+        public selectedDateChangedCommand: any;
+        
+    }
+
     export declare class AtomCalendar extends XF.Grid {
 
         public static itemTemplate: NodeFactory;
@@ -301,6 +309,9 @@ function create(name: string) {
 
 Object.defineProperties( (WA as any), {
     AtomPathButton: create("AtomPathButton"),
+    AtomButtonBar: create("AtomButtonBar"),
+    AtomCalendar: create("AtomCalendar"),
+    AtomDateField: create("AtomDateField"),
     AtomEntry: create("AtomEntry"),
     AtomExpander: create("AtomExpander"),
     AtomChips: create("AtomChips"),
