@@ -140,6 +140,32 @@ namespace WA {
         public command: any;
     }
     
+
+    export declare class AtomSuggestions extends XF.Grid {
+
+        public static itemTemplate: NodeFactory;
+
+        public static itemControlTemplate: NodeFactory;
+
+        public static prompt: NodeFactory;
+
+        public static more: NodeFactory;
+
+        public static promptIcon: NodeFactory;
+
+        public itemsSource: any[];
+
+        public itemTemplate: XF.DataTemplate;
+
+        public itemControlTemplate: XF.ControlTemplate;
+
+        public prompt: any;
+
+        public promptIcon: any;
+
+        public itemTappedCommand: any;
+
+    }
     
     export declare class AtomToolbarItem extends XF.ToolbarItem {
     
@@ -242,6 +268,7 @@ Object.defineProperties( (WA as any), {
     AtomViewCell: create("AtomViewCell"),
     AtomForm: create("AtomForm"),
     AtomField: create("AtomField"),
+    AtomSuggestions: create("AtomSuggestions"),
     GroupBy: create("GroupBy"),
     Markdown: create("Markdown"),
     AtomPopupPage: create("AtomPopupPage"),
