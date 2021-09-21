@@ -73,6 +73,22 @@ namespace WA {
         public itemTappedCommand: any;
     }
 
+    export declare class AtomCheckBoxList extends AtomWrapLayout {
+
+        public static itemTemplate: NodeFactory;
+
+        public static itemControlTemplate: NodeFactory;
+
+        public itemTemplate: XF.DataTemplate;
+
+        public itemControlTemplate: XF.ControlTemplate;
+
+        public itemsSource: any[];
+
+        public selectedItems: any[];        
+
+    }
+
     export declare class AtomChips extends XF.ContentView {
 
         public static itemTemplate: NodeFactory;
@@ -199,6 +215,10 @@ namespace WA {
         public weekHeaderTextColor: XF.Color | Bind;
 
         public itemTappedCommand: any;
+
+    }
+
+    export declare class AtomWrapLayout extends XF.Layout {
 
     }
 
@@ -337,6 +357,7 @@ Object.defineProperties( (WA as any), {
     AtomPathButton: create("AtomPathButton"),
     AtomButtonBar: create("AtomButtonBar"),
     AtomCalendar: create("AtomCalendar"),
+    AtomCheckBoxList: create("AtomCheckBoxList"),
     AtomDateField: create("AtomDateField"),
     AtomEntry: create("AtomEntry"),
     AtomExpander: create("AtomExpander"),
@@ -345,6 +366,7 @@ Object.defineProperties( (WA as any), {
     AtomPopup: create("AtomPopup"),
     AtomRepeater: create("AtomRepeater"),
     AtomToolbarItem: create("AtomToolbarItem"),
+    AtomWrapLayout: create("AtomWrapLayout"),
     AtomView: create("AtomView"),
     AtomViewCell: create("AtomViewCell"),
     AtomForm: create("AtomForm"),
