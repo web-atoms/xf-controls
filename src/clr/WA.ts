@@ -153,6 +153,9 @@ namespace WA {
     }
 
     export declare class AtomExpander extends XF.ContentView {
+
+        public static icon: NodeFactory;
+
         public static detailTemplate: NodeFactory;
 
         public static detail: NodeFactory;
