@@ -248,7 +248,7 @@ namespace WA {
 
         public static itemControlTemplate: NodeFactory;
 
-        public static prompt: NodeFactory;
+        public static header: NodeFactory;
 
         public static more: NodeFactory;
 
@@ -260,9 +260,7 @@ namespace WA {
 
         public itemControlTemplate: XF.ControlTemplate;
 
-        public prompt: any;
-
-        public promptIcon: any;
+        public header: any;
 
         public itemTappedCommand: any;
 
