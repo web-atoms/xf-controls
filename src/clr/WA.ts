@@ -280,6 +280,8 @@ namespace WA {
 
     export declare class AtomPopup {
 
+        public static horizontalAlignment: AttachedNode;
+
         /** You can set DataTemplate that contains a view that will be displayed as popup */
         public static popupTemplate: AttachedNode;
 
