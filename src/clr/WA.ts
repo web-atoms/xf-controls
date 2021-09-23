@@ -280,7 +280,8 @@ namespace WA {
 
     export declare class AtomPopup {
 
-        public static horizontalAlignment: AttachedNode;
+        /** Set this to align popup */
+        public static horizontalAlignment(layout: "Start" | "Center" | "End" | "Fill" | Bind): any;
 
         /** You can set DataTemplate that contains a view that will be displayed as popup */
         public static popupTemplate: AttachedNode;
@@ -292,7 +293,7 @@ namespace WA {
         public static popupCloseCommand: AttachedNode;
 
         /** When set to true, the popup will be displayed */
-        public static displayPopup: AttachedNode;
+        public static displayPopup(display: boolean | Bind): any;
 
     }
     
