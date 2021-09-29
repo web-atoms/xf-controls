@@ -4,6 +4,6 @@ import XF from "../clr/XF";
 
 export default class AtomXFGrid extends AtomXFControl {
     constructor(app, e) {
-        super(app, e || AtomBridge.instance.create(XF.Grid));
+        super(app, e ?? new XF.Grid());
     }
 }

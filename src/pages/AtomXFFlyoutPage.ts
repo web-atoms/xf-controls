@@ -5,7 +5,7 @@ import XF from "../clr/XF";
 export default class AtomXFFlyoutPage extends AtomXFControl {
 
     constructor(app: any, e?: any) {
-        super(app, e || AtomBridge.instance.create(XF.FlyoutPage as any));
+        super(app, e ?? new XF.FlyoutPage());
     }
 
 }

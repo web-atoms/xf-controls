@@ -53,7 +53,7 @@ export default class AtomXFPopupPage extends AtomXFControl {
     public title: string;
 
     constructor(a: any, e?: any) {
-        super(a, e ?? AtomBridge.instance.create(WA.AtomPopupPage));
+        super(a, e ?? new WA.AtomPopupPage());
     }
 
     protected preCreate() {

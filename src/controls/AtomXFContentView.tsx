@@ -5,7 +5,7 @@ import XF from "../clr/XF";
 export default class AtomXFContentView extends AtomXFControl {
 
     constructor(app: any, e?: any) {
-        super(app, e || AtomBridge.instance.create(XF.ContentView));
+        super(app, e ?? new XF.ContentView());
     }
 
 }

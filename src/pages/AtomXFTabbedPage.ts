@@ -6,6 +6,6 @@ import XF from "../clr/XF";
 export default class AtomXFTabbedPage extends AtomXFControl {
 
     constructor(app: App, e?: any) {
-        super(app, e || AtomBridge.instance.create(XF.TabbedPage));
+        super(app, e ?? new XF.TabbedPage());
     }
 }

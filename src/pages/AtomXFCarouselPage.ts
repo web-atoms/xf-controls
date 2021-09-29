@@ -6,7 +6,7 @@ import XF from "../clr/XF";
 export default class AtomXFCarouselPage extends AtomXFControl {
 
     constructor(app: App, e?: any) {
-        super(app, e || AtomBridge.instance.create(XF.CarouselPage));
+        super(app, e ?? new XF.CarouselPage());
     }
 
 }

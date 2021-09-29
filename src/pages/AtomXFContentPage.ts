@@ -5,7 +5,7 @@ import XF from "../clr/XF";
 export default class AtomXFContentPage extends AtomXFControl {
 
     constructor(app, e) {
-        super(app, e || AtomBridge.instance.create(XF.ContentPage as any));
+        super(app, e ?? new XF.ContentPage());
     }
 
 }
