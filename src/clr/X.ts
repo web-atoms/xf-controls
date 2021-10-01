@@ -1,5 +1,5 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
-import Bind from "@web-atoms/core/dist/core/Bind";
+import Bind, { bindSymbol } from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "./XF";
 
@@ -31,25 +31,33 @@ const X = {
         source?: any,
         converter?: any,
         converterParameter?: any}) => {
-            const clrBinding = new XF.Binding();
-            clrBinding.path = b.path;
-            if (b.source) {
-                clrBinding.source = b.source;
-            }
-            if (b.converter) {
-                clrBinding.converter = b.converter;
-            }
-            if (b.converterParameter) {
-                clrBinding.converterParameter = b.converterParameter;
-            }
-            return clrBinding;
+            return {
+                [bindSymbol](name: string, control: any, e: any) {
+                    const clrBinding = new XF.Binding();
+                    clrBinding.path = b.path;
+                    if (b.source) {
+                        clrBinding.source = b.source;
+                    }
+                    if (b.converter) {
+                        clrBinding.converter = b.converter;
+                    }
+                    if (b.converterParameter) {
+                        clrBinding.converterParameter = b.converterParameter;
+                    }
+                    e.setBinding(clrBinding);
+                }
+            };
         },
     TemplateBinding: (path: string) => {
-        const clrBinding = new XF.Binding();
-        clrBinding.path = path;
-        clrBinding.source = XF.RelativeBindingSource.templatedParent;
-        return clrBinding;
-    }
+        return {
+            [bindSymbol](name: string, control: any, e: any) {
+                const clrBinding = new XF.Binding();
+                clrBinding.path = path;
+                clrBinding.source = XF.RelativeBindingSource.templatedParent;
+                e.setBinding(clrBinding);
+            }
+        };
+}
     // Key: (n: string) => ({ "WebAtoms.AtomX:Key": n }),
 };
 
