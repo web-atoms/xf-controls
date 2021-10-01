@@ -112,6 +112,10 @@ namespace WA {
 
     }
 
+    export declare class AtomDropDown extends AtomChoiceView {
+        
+    }
+
     
     export declare class AtomChoiceView extends XF.ContentView {
         
