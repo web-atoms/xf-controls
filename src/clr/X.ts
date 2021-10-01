@@ -33,7 +33,7 @@ const X = {
         converterParameter?: any}) => {
             return {
                 [bindSymbol](name: string, control: any, e: any) {
-                    const property = e.prototype.constructor[name + "Property"];
+                    const property = Object.getPrototypeOf(e).constructor[name + "Property"];
                     const clrBinding = new XF.Binding();
                     clrBinding.path = b.path;
                     if (b.source) {
@@ -52,7 +52,7 @@ const X = {
     TemplateBinding: (path: string) => {
         return {
             [bindSymbol](name: string, control: any, e: any) {
-                const property = e.prototype.constructor[name + "Property"];
+                const property = Object.getPrototypeOf(e).constructor[name + "Property"];
                 const clrBinding = new XF.Binding();
                 clrBinding.path = path;
                 clrBinding.source = XF.RelativeBindingSource.templatedParent;
