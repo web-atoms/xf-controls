@@ -221,6 +221,21 @@ namespace WA {
 
     }
 
+    export declare class AtomDuoToneFontImageSource extends XF.FontImageSource {
+        public secondaryColor: XF.Color | string;
+        public secondaryGlyph: string;
+        public secondaryOpacity: number;
+    }
+
+    export declare class AtomDuoToneFontButton extends XF.Grid {
+
+        public static source: NodeFactory;
+
+        public command: any;
+        public commandParameter: any;
+        public source: AtomDuoToneFontImageSource;
+    }
+
     export declare class AtomWrapLayout extends XF.Layout {
 
     }
