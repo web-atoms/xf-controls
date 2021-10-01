@@ -33,6 +33,7 @@ const X = {
         converterParameter?: any}) => {
             return {
                 [bindSymbol](name: string, control: any, e: any) {
+                    const property = e.prototype.constructor[name + "Property"];
                     const clrBinding = new XF.Binding();
                     clrBinding.path = b.path;
                     if (b.source) {
@@ -44,17 +45,18 @@ const X = {
                     if (b.converterParameter) {
                         clrBinding.converterParameter = b.converterParameter;
                     }
-                    e.setBinding(clrBinding);
+                    e.setBinding(property, clrBinding);
                 }
             };
         },
     TemplateBinding: (path: string) => {
         return {
             [bindSymbol](name: string, control: any, e: any) {
+                const property = e.prototype.constructor[name + "Property"];
                 const clrBinding = new XF.Binding();
                 clrBinding.path = path;
                 clrBinding.source = XF.RelativeBindingSource.templatedParent;
-                e.setBinding(clrBinding);
+                e.setBinding(property, clrBinding);
             }
         };
 }
