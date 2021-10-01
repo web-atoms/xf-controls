@@ -44,7 +44,12 @@ const X = {
             }
             return clrBinding;
         },
-    TemplateBinding: (path: string) => X.Binding({path, source: XF.RelativeBindingSource.templatedParent})
+    TemplateBinding: (path: string) => {
+        const clrBinding = new XF.Binding();
+        clrBinding.path = path;
+        clrBinding.source = XF.RelativeBindingSource.templatedParent;
+        return clrBinding;
+    }
     // Key: (n: string) => ({ "WebAtoms.AtomX:Key": n }),
 };
 
