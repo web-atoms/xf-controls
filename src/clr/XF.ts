@@ -149,6 +149,45 @@ namespace XF {
         */
         public bindingContext: RootObject /*System.Object*/ | Bind;
     }
+    export declare class Binding extends XF.BindingBase {
+        public static doNothing: RootObject /*System.Object*/;
+        public static selfPath: string;
+        /**
+        * Xamarin.Forms.IValueConverter
+        */
+        public converter: XF.IValueConverter | Bind;
+        public static converter: AttachedNode;
+        /**
+        * System.Object
+        */
+        public converterParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.String
+        */
+        public path: string | null | Bind;
+        /**
+        * System.Object
+        */
+        public source: RootObject /*System.Object*/ | Bind;
+    }
+    export declare class BindingBase extends RootObject {
+        /**
+        * Xamarin.Forms.BindingMode
+        */
+        public mode: "Default" | "TwoWay" | "OneWay" | "OneWayToSource" | "OneTime" | Bind;
+        /**
+        * System.String
+        */
+        public stringFormat: string | null | Bind;
+        /**
+        * System.Object
+        */
+        public targetNullValue: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Object
+        */
+        public fallbackValue: RootObject /*System.Object*/ | Bind;
+    }
     export declare class BoxView extends XF.View {
         public static color: AttachedNode;
         public static cornerRadius: AttachedNode;
@@ -1499,11 +1538,23 @@ namespace XF {
     }
     export declare class Behavior$Generic extends XF.Behavior {
     }
+    export declare class BindingCondition extends RootObject {
+        /**
+        * Xamarin.Forms.BindingBase
+        */
+        public binding: XF.BindingBase | Bind;
+        public static binding: AttachedNode;
+        /**
+        * System.Object
+        */
+        public value: RootObject /*System.Object*/ | Bind;
+    }
     export declare class DataTrigger extends XF.TriggerBase {
         /**
         * Xamarin.Forms.BindingBase
         */
-        public binding: RootObject | Bind;
+        public binding: XF.BindingBase | Bind;
+        public static binding: AttachedNode;
         /**
         * System.Collections.Generic.IList`1[[Xamarin.Forms.Setter, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
         */
@@ -2014,7 +2065,8 @@ namespace XF {
         /**
         * Xamarin.Forms.BindingBase
         */
-        public groupDisplayBinding: RootObject | Bind;
+        public groupDisplayBinding: XF.BindingBase | Bind;
+        public static groupDisplayBinding: AttachedNode;
         /**
         * Xamarin.Forms.DataTemplate
         */
@@ -2022,7 +2074,8 @@ namespace XF {
         /**
         * Xamarin.Forms.BindingBase
         */
-        public groupShortNameBinding: RootObject | Bind;
+        public groupShortNameBinding: XF.BindingBase | Bind;
+        public static groupShortNameBinding: AttachedNode;
         /**
         * System.Boolean
         */
@@ -2159,6 +2212,21 @@ namespace XF {
         * System.String
         */
         public isEnabledPropertyName: string | null | Bind;
+    }
+    export declare class MultiBinding extends XF.BindingBase {
+        /**
+        * Xamarin.Forms.IMultiValueConverter
+        */
+        public converter: RootObject | Bind;
+        /**
+        * System.Object
+        */
+        public converterParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.Collections.Generic.IList`1[[Xamarin.Forms.BindingBase, Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+        */
+        public bindings: any;
+        public static bindings: AttachedNode;
     }
     export declare class MultiPage$Generic extends XF.Page {
         public static index: AttachedNode;
@@ -2365,7 +2433,8 @@ namespace XF {
         /**
         * Xamarin.Forms.BindingBase
         */
-        public itemDisplayBinding: RootObject | Bind;
+        public itemDisplayBinding: XF.BindingBase | Bind;
+        public static itemDisplayBinding: AttachedNode;
     }
     export declare class PinchGestureRecognizer extends XF.GestureRecognizer {
     }
@@ -2574,6 +2643,29 @@ namespace XF {
         * Xamarin.Forms.Color
         */
         public refreshColor: XF.Color | ColorItem | string | null | Bind;
+    }
+    export declare class RelativeBindingSource extends RootObject {
+        public static self: XF.RelativeBindingSource;
+        public static templatedParent: XF.RelativeBindingSource;
+        /**
+        * Xamarin.Forms.RelativeBindingSourceMode
+        */
+        public mode: "TemplatedParent" | "Self" | "FindAncestor" | "FindAncestorBindingContext" | Bind;
+        public static mode: AttachedNode;
+        /**
+        * System.Type
+        */
+        public ancestorType: RootObject /*System.Type*/ | Bind;
+        /**
+        * System.Int32
+        */
+        public ancestorLevel: number | null | Bind;
+    }
+    export declare class RelativeBindingSourceMode extends RootObject /*System.Enum*/ {
+        public static templatedParent: "TemplatedParent" | "Self" | "FindAncestor" | "FindAncestorBindingContext";
+        public static self: "TemplatedParent" | "Self" | "FindAncestor" | "FindAncestorBindingContext";
+        public static findAncestor: "TemplatedParent" | "Self" | "FindAncestor" | "FindAncestorBindingContext";
+        public static findAncestorBindingContext: "TemplatedParent" | "Self" | "FindAncestor" | "FindAncestorBindingContext";
     }
     export declare class RelativeLayout extends XF.Layout$Generic {
         public static boundsConstraint: AttachedNode;
@@ -3623,6 +3715,21 @@ namespace XF {
         */
         public numberOfTapsRequired: number | null | Bind;
     }
+    export declare class TemplateBinding extends XF.BindingBase {
+        /**
+        * Xamarin.Forms.IValueConverter
+        */
+        public converter: XF.IValueConverter | Bind;
+        public static converter: AttachedNode;
+        /**
+        * System.Object
+        */
+        public converterParameter: RootObject /*System.Object*/ | Bind;
+        /**
+        * System.String
+        */
+        public path: string | null | Bind;
+    }
     export declare class TemplatedPage extends XF.Page {
         public static controlTemplate: AttachedNode;
         /**
@@ -4660,7 +4767,8 @@ export namespace Xamarin {
                 /**
                 * Xamarin.Forms.BindingBase
                 */
-                public groupDisplayBinding: RootObject | Bind;
+                public groupDisplayBinding: XF.BindingBase | Bind;
+                public static groupDisplayBinding: AttachedNode;
                 /**
                 * Xamarin.Forms.DataTemplate
                 */
@@ -4673,7 +4781,8 @@ export namespace Xamarin {
                 /**
                 * Xamarin.Forms.BindingBase
                 */
-                public groupShortNameBinding: RootObject | Bind;
+                public groupShortNameBinding: XF.BindingBase | Bind;
+                public static groupShortNameBinding: AttachedNode;
                 /**
                 * 
                 */
@@ -4722,6 +4831,23 @@ export namespace Xamarin {
                 public item: RootObject | Bind;
                 public static item: AttachedNode;
             }
+            export declare class TypedBindingBase extends XF.BindingBase {
+                /**
+                * Xamarin.Forms.IValueConverter
+                */
+                public converter: XF.IValueConverter | Bind;
+                public static converter: AttachedNode;
+                /**
+                * System.Object
+                */
+                public converterParameter: RootObject /*System.Object*/ | Bind;
+                /**
+                * System.Object
+                */
+                public source: RootObject /*System.Object*/ | Bind;
+            }
+            export declare class TypedBinding$Generic extends RootObject {
+            }
         }
     }
 }
@@ -4736,6 +4862,8 @@ Object.defineProperties(XF as any, {
     BaseMenuItem: create("BaseMenuItem","Xamarin.Forms"),
     BindableLayout: create("BindableLayout","Xamarin.Forms"),
     BindableObject: create("BindableObject","Xamarin.Forms"),
+    Binding: create("Binding","Xamarin.Forms"),
+    BindingBase: create("BindingBase","Xamarin.Forms"),
     BoxView: create("BoxView","Xamarin.Forms"),
     Brush: create("Brush","Xamarin.Forms"),
     Button: create("Button","Xamarin.Forms"),
@@ -4789,6 +4917,7 @@ Object.defineProperties(XF as any, {
     InputView: create("InputView","Xamarin.Forms"),
     Behavior: create("Behavior","Xamarin.Forms"),
     Behavior$Generic: create("Behavior`1","Xamarin.Forms"),
+    BindingCondition: create("BindingCondition","Xamarin.Forms"),
     DataTrigger: create("DataTrigger","Xamarin.Forms"),
     EventTrigger: create("EventTrigger","Xamarin.Forms"),
     MultiTrigger: create("MultiTrigger","Xamarin.Forms"),
@@ -4813,6 +4942,7 @@ Object.defineProperties(XF as any, {
     ListView: create("ListView","Xamarin.Forms"),
     Menu: create("Menu","Xamarin.Forms"),
     MenuItem: create("MenuItem","Xamarin.Forms"),
+    MultiBinding: create("MultiBinding","Xamarin.Forms"),
     MultiPage$Generic: create("MultiPage`1","Xamarin.Forms"),
     NameScopeExtensions: create("NameScopeExtensions","Xamarin.Forms"),
     NavigationPage: create("NavigationPage","Xamarin.Forms"),
@@ -4831,6 +4961,8 @@ Object.defineProperties(XF as any, {
     RadioButtonGroup: create("RadioButtonGroup","Xamarin.Forms"),
     Rect: create("Rect","Xamarin.Forms"),
     RefreshView: create("RefreshView","Xamarin.Forms"),
+    RelativeBindingSource: create("RelativeBindingSource","Xamarin.Forms"),
+    RelativeBindingSourceMode: create("RelativeBindingSourceMode","Xamarin.Forms"),
     RelativeLayout: create("RelativeLayout","Xamarin.Forms"),
     Routing: create("Routing","Xamarin.Forms"),
     RoutingEffect: create("RoutingEffect","Xamarin.Forms"),
@@ -4872,6 +5004,7 @@ Object.defineProperties(XF as any, {
     TableSectionBase: create("TableSectionBase","Xamarin.Forms"),
     TableView: create("TableView","Xamarin.Forms"),
     TapGestureRecognizer: create("TapGestureRecognizer","Xamarin.Forms"),
+    TemplateBinding: create("TemplateBinding","Xamarin.Forms"),
     TemplatedPage: create("TemplatedPage","Xamarin.Forms"),
     TemplatedView: create("TemplatedView","Xamarin.Forms"),
     TimePicker: create("TimePicker","Xamarin.Forms"),
@@ -5003,5 +5136,7 @@ Object.defineProperties(Xamarin.Forms.Internals as any, {
     NameScope: create("NameScope",ns),
     TextTransformUtilites: create("TextTransformUtilites",ns),
     TemplatedItemsList$Generic: create("TemplatedItemsList`2",ns),
+    TypedBindingBase: create("TypedBindingBase",ns),
+    TypedBinding$Generic: create("TypedBinding`2",ns),
 });
 

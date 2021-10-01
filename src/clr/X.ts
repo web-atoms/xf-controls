@@ -1,6 +1,7 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import XF from "./XF";
 
 function RelativeSource(
     mode: "FindAncestor" | "FindAncestorBindingContext",
@@ -30,11 +31,20 @@ const X = {
         source?: any,
         converter?: any,
         converterParameter?: any}) => {
-            return new Bind((n, bx, c, e) => {
-                (AtomBridge.instance as any).setBinding(e, n, b);
-            }, null);
+            const clrBinding = new XF.Binding();
+            clrBinding.path = b.path;
+            if (b.source) {
+                clrBinding.source = b.source;
+            }
+            if (b.converter) {
+                clrBinding.converter = b.converter;
+            }
+            if (b.converterParameter) {
+                clrBinding.converterParameter = b.converterParameter;
+            }
+            return clrBinding;
         },
-    TemplateBinding: (path: string) => X.Binding({path, source: RelativeSource.TemplatedParent})
+    TemplateBinding: (path: string) => X.Binding({path, source: XF.RelativeBindingSource.templatedParent})
     // Key: (n: string) => ({ "WebAtoms.AtomX:Key": n }),
 };
 
