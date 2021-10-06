@@ -366,6 +366,15 @@ namespace WA {
         public errorBackgroundColor?: ColorItem | XF.Color | string | null | Bind;
         public help?: any;
         public helpCommand?: any;
+
+        /**
+         * Enlarge label to cover the content, this is false by default.
+         * It is set to true automatically if, 
+         * 1. Content is an Entry and it is empty and does not have the focus.
+         * 2. Content is an Editor and it is empty and does not have the focus.
+         * 3. Content is a Switch.
+         */
+        public scaleUpLabel: boolean | Bind;
     }
     
     export declare class AtomTemplateSelector extends RootObject {
