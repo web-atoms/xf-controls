@@ -89,6 +89,22 @@ namespace WA {
 
     }
 
+    export declare class AtomRadioButtonList extends AtomWrapLayout {
+
+        public static itemTemplate: NodeFactory;
+
+        public static itemControlTemplate: NodeFactory;
+
+        public itemTemplate: XF.DataTemplate;
+
+        public itemControlTemplate: XF.ControlTemplate;
+
+        public itemsSource: any[];
+
+        public selectedItem: any;
+
+    }    
+
     export declare class AtomChips extends XF.ContentView {
 
         public static itemTemplate: NodeFactory;
@@ -388,6 +404,7 @@ Object.defineProperties( (WA as any), {
     AtomChoiceView: create("AtomChoiceView"),
     AtomPopup: create("AtomPopup"),
     AtomRepeater: create("AtomRepeater"),
+    AtomRadioButtonList: create("AtomRadioButtonList"),
     AtomToolbarItem: create("AtomToolbarItem"),
     AtomWrapLayout: create("AtomWrapLayout"),
     AtomView: create("AtomView"),
