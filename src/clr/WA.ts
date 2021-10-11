@@ -406,6 +406,8 @@ Object.defineProperties( (WA as any), {
     AtomButtonBar: create("AtomButtonBar"),
     AtomCalendar: create("AtomCalendar"),
     AtomCheckBoxList: create("AtomCheckBoxList"),
+    AtomDuoToneFontButton: create("AtomDuoToneFontButton"),
+    AtomDuoToneFontImageSource: create("AtomDuoToneFontImageSource"),
     AtomDateField: create("AtomDateField"),
     AtomEntry: create("AtomEntry"),
     AtomExpander: create("AtomExpander"),
