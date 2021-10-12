@@ -366,6 +366,7 @@ namespace WA {
         public errorBackgroundColor?: ColorItem | XF.Color | string | null | Bind;
         public help?: any;
         public helpCommand?: any;
+        public displayBorder?: boolean | Bind;
 
         /**
          * Enlarge label to cover the content, this is false by default.
