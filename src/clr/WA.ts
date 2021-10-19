@@ -253,7 +253,11 @@ namespace WA {
 
         public command: any;
         public commandParameter: any;
-        public source: AtomDuoToneFontImageSource;
+        public text: string | Bind;
+        public textColor: XF.Color | Bind;
+        public fill: XF.Brush | Bind;
+        public secondaryTextColor: XF.Color | Bind;
+        public secondaryOpacity: number | Bind;
     }
 
     export declare class AtomWrapLayout extends XF.Layout {
@@ -408,7 +412,6 @@ Object.defineProperties( (WA as any), {
     AtomCalendar: create("AtomCalendar"),
     AtomCheckBoxList: create("AtomCheckBoxList"),
     AtomDuoToneFontButton: create("AtomDuoToneFontButton"),
-    AtomDuoToneFontImageSource: create("AtomDuoToneFontImageSource"),
     AtomDateField: create("AtomDateField"),
     AtomEntry: create("AtomEntry"),
     AtomExpander: create("AtomExpander"),
