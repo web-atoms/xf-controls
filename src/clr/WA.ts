@@ -114,17 +114,39 @@ namespace WA {
          */
         public entryMode: "Input" | "Search";
 
+        /** Selected chips */
         public selectedItems: any[];
 
+        /** Suggestions displayed when user types anything */
         public itemsSource: any[];
 
+        /** Item template of the chip */
         public itemTemplate: XF.DataTemplate;
 
+        /** Text added by user */
         public search: string;
 
+        /**
+         * This event will be fired when search text is changed.
+         */
         public eventSearchChanged: any;
 
+        /**
+         * When separator is a character, when user is typing it, it will automatically 
+         * split the text and convert it to the chip. For example, setting it to comma
+         * will add new chip as soon as you type comma.
+         */
         public separator: string;
+
+        /**
+         * This is invoked when user will tap the chip
+         */
+        public itemTappedCommand: any;
+
+        /** 
+         * This is invoked when a new chip is added
+         */
+        public itemAddedCommand: any;
 
     }
 
