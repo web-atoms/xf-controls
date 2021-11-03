@@ -325,6 +325,16 @@ namespace WA {
 
         public itemTappedCommand: any;
 
+        /**
+         * Text entered by user in the search box inside more popup
+         */
+        public search: string;
+
+        /**
+         * Displays search box in the more popup
+         */
+        public showSearch: boolean;
+
     }
     
     export declare class AtomToolbarItem extends XF.ToolbarItem {
