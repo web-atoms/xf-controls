@@ -50,7 +50,7 @@ export default class AtomXFLink extends AtomXFControl {
     public toggle: boolean;
 
     constructor(app: App, e?: any) {
-        super(app, e || AtomBridge.instance.create(XF.Label));
+        super(app, e || new XF.Label());
     }
 
     protected preCreate(): void {
@@ -159,20 +159,20 @@ export default class AtomXFLink extends AtomXFControl {
 
 class ButtonLink extends AtomXFLink {
     constructor(a, e) {
-        super(a, e || AtomBridge.instance.create(XF.Button));
+        super(a, e || new XF.Button());
         this.setLocalValue(this.element, "command", () => this.openPopup());
     }
 }
 
 class ImageButtonLink extends AtomXFLink {
     constructor(a, e) {
-        super(a, e || AtomBridge.instance.create(XF.ImageButton));
+        super(a, e || new XF.ImageButton());
         this.setLocalValue(this.element, "command", () => this.openPopup());
     }
 }
 
 class ContentViewLink extends AtomXFLink {
     constructor(a, e) {
-        super(a, e || AtomBridge.instance.create(XF.ContentView));
+        super(a, e || new XF.ContentView());
     }
 }

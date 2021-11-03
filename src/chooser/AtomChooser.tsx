@@ -96,7 +96,7 @@ export default class AtomChooser extends AtomXFControl {
     private selectableList: AtomSelectableList<any>;
 
     constructor(a: any, e?: any) {
-        super(a, e || AtomBridge.instance.create(XF.Grid));
+        super(a, e || new XF.Grid());
     }
 
     public onPropertyChanged(name: keyof AtomChooser): void {

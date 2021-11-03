@@ -85,7 +85,7 @@ export default class AtomXFComboBox extends AtomXFControl {
     public eventSelectionChanged: any;
 
     constructor(a: any, e?: any) {
-        super(a, e || AtomBridge.instance.create(XF.Grid));
+        super(a, e || new XF.Grid());
     }
 
     public onPropertyChanged(name: keyof AtomXFComboBox): void {

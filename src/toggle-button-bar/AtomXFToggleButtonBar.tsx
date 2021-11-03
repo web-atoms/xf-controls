@@ -29,7 +29,7 @@ export default class AtomXFToggleButtonBar extends AtomXFControl {
     public value: any;
 
     constructor(app: any, e?: any) {
-        super(app, e || AtomBridge.instance.create(XF.Frame));
+        super(app, e || new XF.Frame());
     }
 
     protected preCreate() {
