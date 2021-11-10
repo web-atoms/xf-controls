@@ -364,6 +364,9 @@ namespace WA {
         /** When set to true, the popup will be displayed */
         public static displayPopup(display: boolean | Bind): any;
 
+        /** Scrolls the current page up before displaying popup */
+        public static scrollUp(scrollUp: boolean): any;
+
     }
     
     export declare class Markdown {
