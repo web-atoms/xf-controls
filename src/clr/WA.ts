@@ -372,6 +372,16 @@ namespace WA {
     export declare class Markdown {
         public static text: AttachedNode;
     }
+
+    export declare class AtomIconContentView extends XF.ContentView {
+        public iconFontFamily: string;
+        public iconFontSize: number;
+        public iconGlyph: string;
+        public iconColor: string | XF.Color | ColorItem;
+        public secondaryIconGlyph: string;
+        public secondaryIconColor: string | XF.Color | ColorItem;
+        public isDuoTone: boolean;
+    }
     
     export declare class AtomRepeater extends XF.ListView {
     
@@ -462,6 +472,7 @@ Object.defineProperties( (WA as any), {
     AtomForm: create("AtomForm"),
     AtomField: create("AtomField"),
     AtomSuggestions: create("AtomSuggestions"),
+    AtomIconContentView: create("AtomIconContentView"),
     GroupBy: create("GroupBy"),
     Markdown: create("Markdown"),
     AtomPopupPage: create("AtomPopupPage"),
