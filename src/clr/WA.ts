@@ -280,6 +280,8 @@ namespace WA {
         public fill: XF.Brush | Bind;
         public secondaryTextColor: XF.Color | Bind;
         public secondaryOpacity: number | Bind;
+        public fontSize: number;
+        public fontFamily: string;
     }
 
     export declare class AtomWrapLayout extends XF.Layout {
