@@ -384,6 +384,8 @@ namespace WA {
         public secondaryIconGlyph: string;
         public secondaryIconColor: string | XF.Color | ColorItem;
         public isDuoTone: boolean;
+        public command: any;
+        public commandParameter: any;
     }
     
     export declare class AtomRepeater extends XF.ListView {
