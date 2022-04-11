@@ -45,7 +45,7 @@ export default class AtomXFComboBox extends AtomXFControl {
 
     public prompt: string;
 
-    public element: RgPluginsPopup.PopupPage;
+    // public element: RgPluginsPopup.PopupPage;
 
     public itemTemplate: IClassOf<AtomXFControl>;
 
